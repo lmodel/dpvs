@@ -543,6 +543,9 @@ def main(argv: list[str] | None = None) -> int:
                   file=sys.stderr)
             return 1
         schemas = sorted(args.schema_dir.glob("*.yaml"))
+        modules_dir = args.schema_dir / "modules"
+        if modules_dir.is_dir():
+            schemas = sorted(schemas + list(modules_dir.glob("*.yaml")))
         if not schemas:
             print(f"No YAML schemas in {args.schema_dir}", file=sys.stderr)
             return 1
