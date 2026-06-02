@@ -1,0 +1,8 @@
+has_data_subject: ex:Alice
+has_notice: ex:ExampleNotice
+has_notice_status:
+- _:nffc96bf539734e40aad5b37bff266e4fb4
+- _:nffc96bf539734e40aad5b37bff266e4fb5
+- _:nffc96bf539734e40aad5b37bff266e4fb6
+- _:nffc96bf539734e40aad5b37bff266e4fb7
+id: ex:NoticeLog1

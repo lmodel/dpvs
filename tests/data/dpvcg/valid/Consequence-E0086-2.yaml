@@ -1,0 +1,3 @@
+has_consequence_on: ex:SomeTechnicalSystem
+has_impact: ex:UnwantedEffectOnPerson
+id: ex:UnwantedEffect

@@ -1,0 +1,3 @@
+has_personal_data: ex:VisitorLanguage
+has_processing: dpv:Infer
+id: ex:InferVisitorLanguage

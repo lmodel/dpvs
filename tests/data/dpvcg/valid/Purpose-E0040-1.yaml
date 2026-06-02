@@ -1,0 +1,6 @@
+# __unmapped__:
+#   dct:description: Marketing associated with holiday season
+#   dct:identifier: MH2024-A
+#   dct:title: Holiday Campaign 2024
+#   skos:broader: dpv:DirectMarketing
+id: ex:HolidayCampaign

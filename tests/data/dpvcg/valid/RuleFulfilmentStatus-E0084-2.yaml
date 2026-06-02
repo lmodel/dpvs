@@ -1,0 +1,5 @@
+# __unmapped__:
+#   dct:date: '2025-01-01'
+#   skos:broader: dpv:ObligationUnfulfilled
+has_entity: ex:BetaInc
+id: ex:Log2

@@ -1,0 +1,8 @@
+# __unmapped__:
+#   skos:broader: dpv:Transfer
+has_data_exporter: ex:Acme
+has_data_importer: ex:BetaInc
+has_personal_data: ex:CallLogs
+has_recipient: ex:BetaInc
+id: ex:TransferCallLogs
+is_implemented_by_entity: ex:Acme

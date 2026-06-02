@@ -1,0 +1,3 @@
+has_entity: ex:Acme
+has_location: EU
+id: ex:AcmeEUOrg

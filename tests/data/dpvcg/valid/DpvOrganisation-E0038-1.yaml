@@ -1,0 +1,4 @@
+has_subsidiary:
+- ex:CompanyM
+- ex:CompanyN
+id: ex:CompanyA

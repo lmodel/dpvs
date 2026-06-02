@@ -1,0 +1,7 @@
+has_legal_basis: dpv:LegitimateInterestOfController
+has_personal_data: pd:EmailAddressPersonal
+has_processing:
+- dpv:Collect
+- dpv:Store
+has_purpose: dpv:InternalResourceOptimisation
+id: ex:InternalAnalytics

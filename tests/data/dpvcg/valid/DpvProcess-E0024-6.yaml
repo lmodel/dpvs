@@ -1,0 +1,10 @@
+# __unmapped__:
+#   skos:note: Beta analyses and transfers call statistics to Acme
+has_data_processor: ex:BetaInc
+has_personal_data: ex:CallStatistics
+has_processing:
+- ex:AnalyseCalls
+- ex:TransferStatistics
+has_recipient_data_controller: ex:Acme
+id: ex:BetaProvision
+is_implemented_by_entity: ex:BetaInc

@@ -1,0 +1,5 @@
+has_likelihood: risk:HighLikelihood
+has_risk_level: risk:LowRisk
+has_severity: risk:LowSeverity
+id: ex:R2DB
+is_residual_risk_of: ex:R1DB

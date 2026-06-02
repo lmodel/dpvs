@@ -1,0 +1,31 @@
+# __unmapped__:
+#   dct:created: '2024-01-01'
+#   dct:creator: ex:BetaInc
+#   dct:dateAccepted: '2025-01-01'
+#   dct:format:
+#   - _:nf36103ede25a469ba471f0507e63c556b1
+#   - _:nf36103ede25a469ba471f0507e63c556b2
+#   dct:issued: '2025-01-01'
+#   dct:language: en
+#   dct:provenance: _:nf36103ede25a469ba471f0507e63c556b3
+#   dct:subject: ex:ServiceX
+#   dct:title: Contract for use of Cloud Service X
+#   skos:broader:
+#   - dpv:B2BContract
+#   - dpv:ControllerProcessorAgreement
+#   - dpv:ServiceLevelAgreement
+#   - dpv:StandardFormContract
+has_applicable_law: legal-eu:law-GDPR
+has_contract_control: _:nf36103ede25a469ba471f0507e63c556b8
+has_data_controller: ex:AcmeInc
+has_data_processor: ex:BetaInc
+has_duration:
+- _:nf36103ede25a469ba471f0507e63c556b6
+- _:nf36103ede25a469ba471f0507e63c556b7
+has_entity:
+- ex:AcmeInc
+- ex:BetaInc
+has_identifier: C240101
+has_service_consumer: ex:AcmeInc
+has_service_provider: ex:BetaInc
+id: ex:ServiceContract

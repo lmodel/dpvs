@@ -1,0 +1,8 @@
+has_data_controller: ex:CompanyA
+has_legal_basis: dpv:Contract
+has_process:
+- ex:SS1
+- ex:SS2
+has_service_consumer: ex:Consumers
+has_service_provider: ex:CompanyA
+id: ex:StreamingService

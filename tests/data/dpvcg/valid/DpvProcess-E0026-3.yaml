@@ -1,0 +1,4 @@
+has_context: dpv:Required
+has_personal_data: pd:AccountIdentifier
+has_purpose: dpv:CommunicationForCustomerCare
+id: PDH3

@@ -1,0 +1,4 @@
+has_consent_status: dpv:ConsentGiven
+has_data_subject: ex:User12345
+id: ex:UserConsent
+is_indicated_at_time: '2022-09-06T15:36:07'

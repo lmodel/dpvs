@@ -1,0 +1,7 @@
+has_personal_data:
+- dpv:Location
+- pd:Location
+has_processing: ex:SomeProcessing
+id: ex:SomeProcess
+is_implemented_by_entity: ex:AcmeInc
+is_implemented_using_technology: ex:SomeMethod

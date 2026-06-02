@@ -290,7 +290,7 @@ _test-schema: _merged-schema
   uv run gen-project {{config_yaml}} -d tmp {{merged_schema_path}}
 
 # Run Python unit tests with pytest
-_test-python: gen-python
+_test-python: gen-python _gen-fixtures
   uv run python -m pytest
 
 # Run example tests

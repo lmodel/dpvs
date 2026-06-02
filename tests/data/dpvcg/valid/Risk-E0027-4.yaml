@@ -1,0 +1,4 @@
+has_consequence: risk:UnauthorisedDataAccess
+has_impact: risk:Harm
+id: ex:UnAuthorisedAccess
+is_mitigated_by_measure: ex:RBACCredential

@@ -1,0 +1,4 @@
+has_processing:
+- ex:Collect
+- ex:Use
+id: ex:ActivityA

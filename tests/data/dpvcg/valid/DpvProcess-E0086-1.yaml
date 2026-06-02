@@ -1,0 +1,8 @@
+# __unmapped__:
+#   risk:hasControl:
+#   - _:n87561026f2b144e88dec0a07cc51931ab1
+#   - _:n87561026f2b144e88dec0a07cc51931ab2
+#   - _:n87561026f2b144e88dec0a07cc51931ab3
+#   - _:n87561026f2b144e88dec0a07cc51931ab4
+has_risk: ex:UnwantedEvent
+id: ex:SomeProcess

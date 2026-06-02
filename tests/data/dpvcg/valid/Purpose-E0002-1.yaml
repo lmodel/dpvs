@@ -1,0 +1,5 @@
+# __unmapped__:
+#   http://www.w3.org/2000/01/rdf-schema#subClassOf: ex:MarketingOfNewProducts
+#   skos:broader: ex:MarketingOfNewProducts
+#   skos:prefLabel: Emails about Seasonal Offers
+id: ex:EmailsSeasonalOffers

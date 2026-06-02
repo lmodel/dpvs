@@ -1,0 +1,4 @@
+has_personal_data: pd:EmailAddress
+has_processing: dpv:Use
+has_purpose: dpv:FraudPreventionAndDetection
+id: ex:SS2

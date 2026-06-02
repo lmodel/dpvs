@@ -1,0 +1,3 @@
+has_personal_data: ex:VisitorCountry
+has_processing: dpv:Derive
+id: ex:DeriveVisitorCountry

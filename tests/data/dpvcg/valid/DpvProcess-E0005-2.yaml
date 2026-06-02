@@ -1,0 +1,7 @@
+has_data_controller: ex:Acme
+has_personal_data: pd:EmailAddress
+has_processing:
+- dpv:Collect
+- dpv:Use
+has_purpose: dpv:ServiceProvision
+id: ex:AcmeMarketing

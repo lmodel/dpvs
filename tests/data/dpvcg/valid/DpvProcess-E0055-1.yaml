@@ -1,0 +1,6 @@
+has_compliance_status:
+- _:n9d496371558243dd99add89925539d29b2
+- _:n9d496371558243dd99add89925539d29b3
+- dpv:Compliant
+has_status: _:n9d496371558243dd99add89925539d29b1
+id: ex:PDH1

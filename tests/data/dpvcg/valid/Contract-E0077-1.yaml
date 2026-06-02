@@ -1,0 +1,10 @@
+has_contract_status:
+- _:ne2ba0483f13d435e82d510a6ef45143cb1
+- _:ne2ba0483f13d435e82d510a6ef45143cb2
+- _:ne2ba0483f13d435e82d510a6ef45143cb3
+- _:ne2ba0483f13d435e82d510a6ef45143cb4
+- dpv:ContractFullyExecuted
+has_entity:
+- ex:AcmeInc
+- ex:BetaInc
+id: ex:SomeContract

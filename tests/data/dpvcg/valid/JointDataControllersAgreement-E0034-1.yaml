@@ -1,0 +1,7 @@
+has_data_controller:
+- ex:Company1
+- ex:Company2
+has_personal_data: pd:EmailAddress
+has_processing: dpv:Share
+has_recipient_data_controller: ex:Company1
+id: ex:JC

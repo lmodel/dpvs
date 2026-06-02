@@ -1,0 +1,4 @@
+has_jurisdiction: loc:US
+has_name: CompanyB Inc.
+id: ex:RepB
+is_representative_for: ex:Alpha

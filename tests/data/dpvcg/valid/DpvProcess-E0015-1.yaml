@@ -1,0 +1,5 @@
+has_data_controller: ex:Acme
+has_data_subject: ex:ServiceConsumers
+has_legal_basis: dpv:Consent
+has_personal_data: pd:EmailAddressPersonal
+id: ex:PDH

@@ -1,0 +1,8 @@
+# __unmapped__:
+#   skos:broader:
+#   - dpv:Collect
+#   - dpv:Store
+has_personal_data: dpv:Location
+id: ex:SomeProcessing
+is_implemented_by_entity: ex:AcmeInc
+is_implemented_using_technology: ex:SomeMethod

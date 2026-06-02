@@ -48,6 +48,40 @@ apply-sssom-overlay: gen-linkml dpv-mappings-to-sssom
     --schema-dir src/dpvs/schema \
     --mappings-dir src/dpvs/mappings
 
+# ============== Test fixture recipes ==============
+
+# Extract individual E*.ttl Turtle snippets from the vendored DPV examples HTML
+# (upstream-releases/dpv/examples/dex.html) into the examples/ directory.
+# The upstream release does not ship stand-alone E####.ttl files; they are
+# embedded as <pre> blocks in the HTML documentation page. Idempotent.
+[group('model development')]
+_extract-example-ttls:
+  uv run python scripts/gen_example_ttls.py \
+    -i upstream-releases/dpv/examples/dex.html \
+    -o examples
+
+# Load the upstream DPV example TTL snippets into test fixture directories.
+# Reads examples/E*.ttl (populated by _extract-example-ttls), wraps each in a
+# self-contained Turtle document with the standard DPV prefix preamble, and
+# writes to tests/data/dpvcg/valid/. Idempotent: byte-identical output.
+[group('model development')]
+_load-ttl-fixtures: _extract-example-ttls
+  uv run python scripts/load_examples.py \
+    -i examples \
+    -o tests/data/dpvcg
+
+# Convert the TTL fixtures in tests/data/dpvcg/valid/ to per-subject YAML
+# documents that tests/test_data.py can validate against the dpvs schema.
+# Filename convention: <ClassName>-<stem>-<n>.yaml — the standard
+# `_target_class_for` helper in test_data.py keys on the class-name prefix.
+# Must run after apply-sssom-overlay so the schema class/slot index is current.
+[group('model development')]
+_gen-fixtures: apply-sssom-overlay _load-ttl-fixtures
+  uv run python scripts/ttl_to_yaml.py \
+    -s src/dpvs/schema \
+    -i tests/data/dpvcg/valid \
+    -o tests/data/dpvcg/valid
+
 # ============== Supplemental generator recipes (beyond gen-project defaults) ==============
 # gen-project already covers: graphql, jsonldcontext, jsonld, jsonschema, owl,
 # prefixmap, proto, python, shex, shacl, sqlddl, excel, typescript.

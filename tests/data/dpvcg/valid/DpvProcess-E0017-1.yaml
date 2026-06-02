@@ -1,0 +1,6 @@
+has_legal_basis: dpv:Consent
+has_notice: ex:AcmeConsentNotice
+has_personal_data: ex:SomePersonalData
+has_processing: ex:SomeProcessing
+has_purpose: ex:SomePurpose
+id: ex:PDH

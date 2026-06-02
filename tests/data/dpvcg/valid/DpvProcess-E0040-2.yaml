@@ -1,0 +1,5 @@
+has_purpose:
+- dpv:Personalisation
+- dpv:ProvidePersonalisedRecommendations
+- ex:HolidayCampaign
+id: ex:PDH

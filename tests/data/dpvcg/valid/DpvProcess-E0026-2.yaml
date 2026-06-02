@@ -1,0 +1,4 @@
+has_context: dpv:Optional
+has_personal_data: pd:EmailAddressPersonal
+has_purpose: dpv:CommunicationForCustomerCare
+id: PDH2

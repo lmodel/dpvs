@@ -1,0 +1,5 @@
+# __unmapped__:
+#   risk:hasRiskSource: risk:MalwareAttack
+has_consequence: risk:DataBreach
+has_risk: risk:UnauthorisedDataAccess
+id: ex:ProcessA

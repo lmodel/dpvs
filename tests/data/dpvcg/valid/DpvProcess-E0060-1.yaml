@@ -1,0 +1,11 @@
+has_jurisdiction:
+- loc:EU
+- loc:IE
+has_location: loc:IE
+has_processing:
+- _:n6aed4270aaee431994910ac439f7a0a1b1
+- _:n6aed4270aaee431994910ac439f7a0a1b2
+- _:n6aed4270aaee431994910ac439f7a0a1b3
+- _:n6aed4270aaee431994910ac439f7a0a1b5
+has_storage_condition: _:n6aed4270aaee431994910ac439f7a0a1b4
+id: ex:PDH

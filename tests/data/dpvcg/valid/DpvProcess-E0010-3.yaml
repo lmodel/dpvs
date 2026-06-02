@@ -1,0 +1,4 @@
+has_personal_data:
+- ex:BloodSamples
+- ex:PatientIdentifier
+id: ex:PatientStudy

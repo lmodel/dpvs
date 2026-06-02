@@ -1,0 +1,8 @@
+# __unmapped__:
+#   skos:broader:
+#   - dpv:OptimisationForConsumer
+#   - exB:TVServiceOptimisation
+#   skos:closeMatch: exB:TVServiceOptimisation
+#   skos:exactMatch: exB:TVServiceOptimisation
+#   skos:prefLabel: Optimise Service for Users’ Infrastructure
+id: exA:TVServiceOptimisation

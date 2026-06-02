@@ -1,0 +1,7 @@
+# __unmapped__:
+#   skos:note: Acme transfers call logs to Beta
+has_data_controller: ex:Acme
+has_data_processor: ex:BetaInc
+has_personal_data: ex:CallLogs
+has_processing: ex:TransferCallLogs
+id: ex:AcmeProvision

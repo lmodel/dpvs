@@ -1,0 +1,4 @@
+# __unmapped__:
+#   skos:broader: dpv:AccessControlMethod
+id: ex:RBACCredential
+mitigates_risk: ex:UnAuthorisedAccess

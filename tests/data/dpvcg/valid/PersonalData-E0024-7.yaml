@@ -1,0 +1,4 @@
+# __unmapped__:
+#   skos:broader: pd:CallLog
+has_data_source: ex:Acme
+id: ex:CallLogs

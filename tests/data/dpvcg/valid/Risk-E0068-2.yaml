@@ -1,0 +1,9 @@
+# __unmapped__:
+#   skos:broader: risk:DataBreach
+#   skos:prefLabel: Risk of Data Breach for Process
+has_consequence: _:nee2d743c220f404cad0dda2220a254b8b1
+has_likelihood: risk:HighLikelihood
+has_residual_risk: ex:R2DB
+has_risk_level: risk:HighRisk
+has_severity: risk:HighSeverity
+id: ex:R1DB

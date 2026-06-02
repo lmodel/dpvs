@@ -1,0 +1,6 @@
+has_data_subject: dpv:User
+has_notice: ex:ExampleNotice
+has_notice_status:
+- _:nffc96bf539734e40aad5b37bff266e4fb1
+- dpv:NoticeCommunicated
+id: ex:SampleProcess1

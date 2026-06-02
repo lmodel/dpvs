@@ -93,13 +93,32 @@ checks that every `subject_id` resolves to an element in some schema.
 - [tests/data/](https://github.com/lmodel/dpvs/tree/main/tests/data) contains hand-authored and vendored
   YAML fixtures split into `valid/` and `invalid/` subtrees. The
   `dpvcg/` subtree carries the upstream DPV CG examples converted to
-  LinkML YAML by
-  [scripts/ttl_to_yaml.py](https://github.com/lmodel/dpvs/blob/main/scripts/ttl_to_yaml.py).
+  LinkML YAML by [scripts/ttl_to_yaml.py](https://github.com/lmodel/dpvs/blob/main/scripts/ttl_to_yaml.py).
 - [tests/test_data.py](https://github.com/lmodel/dpvs/blob/main/tests/test_data.py) validates each fixture
   against the schema using `linkml.validator.Validator` with
   `SchemaView(..., merge_imports=True)` so that the relative
   `./dpvs_core` import resolves against the schema directory rather
   than the test working directory.
+- Fixture generation is fully automated: `just test` (via `_test-python`)
+  runs `_gen-fixtures`, which chains three steps:
+  1. `_extract-example-ttls` —
+     [scripts/gen_example_ttls.py](https://github.com/lmodel/dpvs/blob/main/scripts/gen_example_ttls.py)
+     parses `upstream-releases/dpv/examples/dex.html` and writes one
+     `examples/E####.ttl` per embedded `<pre>` block. The upstream
+     release does not ship stand-alone `E*.ttl` files; the Turtle
+     content lives only in the HTML documentation page.
+  2. `_load-ttl-fixtures` —
+     [scripts/load_examples.py](https://github.com/lmodel/dpvs/blob/main/scripts/load_examples.py)
+     wraps each `examples/E*.ttl` in a self-contained Turtle document
+     (prepending the standard DPV prefix preamble) and routes it to
+     `tests/data/dpvcg/valid/` or `problem/` based on rdflib parse
+     success.
+  3. `_gen-fixtures` —
+     [scripts/ttl_to_yaml.py](https://github.com/lmodel/dpvs/blob/main/scripts/ttl_to_yaml.py)
+     converts each typed root subject into a
+     `<ClassName>-<stem>-<n>.yaml` fixture that `test_data.py` picks
+     up automatically via its glob. Idempotent: re-running with
+     unchanged inputs produces byte-identical output.
 - `just _test-examples` runs the same fixtures through
   `linkml-run-examples` for CLI parity.
 
@@ -107,6 +126,9 @@ checks that every `subject_id` resolves to an element in some schema.
 
 - `just` orchestrates everything; common targets include
   `gen-project`, `_test-python`, `_test-examples`, `lint`, `doc`.
+  `_test-python` depends on `_gen-fixtures` → `_load-ttl-fixtures` →
+  `_extract-example-ttls` so the full fixture pipeline (HTML extraction
+  → TTL wrapping → YAML conversion) always runs before pytest.
 - URI imports are resolved at build time via an import map. The
   source-of-truth [`importmap.json`](https://github.com/lmodel/dpvs/blob/main/importmap.json) uses relative
   paths for portability and IDE consumption; the `_importmap` recipe
@@ -140,6 +162,11 @@ This is an early-stage but functional port. Key milestones:
 - ✅ Upstream DPV CG examples round-tripped from TTL into LinkML YAML
   and exercised in CI; unmapped predicates preserved as
   `# __unmapped__:` provenance comments so nothing is silently dropped.
+  The upstream release ships only a monolithic HTML page (`dex.html`);
+  [scripts/gen_example_ttls.py](https://github.com/lmodel/dpvs/blob/main/scripts/gen_example_ttls.py)
+  extracts 88 individual `E####.ttl` snippets from it. The full
+  pipeline (HTML → TTL → wrapped TTL → 176 YAML fixtures) is wired
+  into `just test` via `_gen-fixtures` — no manual step required.
 - ✅ URI-style imports (`dpvs:schema/...`) wired across `dpvs.yaml`
   and all 33 module schemas, with build-time resolution via
   `importmap.json` and post-publication resolution via

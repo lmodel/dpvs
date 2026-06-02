@@ -1,0 +1,5 @@
+has_data_exporter: ex:Acme
+has_data_importer: ex:Beta
+has_organisational_measure: eu-gdpr:SCCByCommission
+has_technical_measure: dpv:Encryption
+id: ex:TransferPolicy

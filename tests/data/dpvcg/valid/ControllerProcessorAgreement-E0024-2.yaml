@@ -1,0 +1,6 @@
+has_data_controller: ex:Acme
+has_data_processor: ex:Beta
+has_process:
+- ex:AcmeProvision
+- ex:BetaProvision
+id: ex:AcmeBetaContract

@@ -1,0 +1,10 @@
+has_applicable_law: legal-eu:law-GDPR
+has_right:
+- _:n168655db1f3b4fcb92de7da66eede7d1b1
+- eu-gdpr:A15
+- eu-gdpr:A16
+- eu-gdpr:A17
+- eu-gdpr:A18
+- eu-gdpr:A20
+- eu-gdpr:A21
+id: ex:PN2024

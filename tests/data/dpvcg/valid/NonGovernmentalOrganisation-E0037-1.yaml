@@ -1,0 +1,5 @@
+has_organisational_unit:
+- ex:HR
+- ex:IT
+- ex:Marketing
+id: ex:CompanyA

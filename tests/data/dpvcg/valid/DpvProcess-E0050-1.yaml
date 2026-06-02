@@ -1,0 +1,12 @@
+has_duration:
+- 1 time
+- '2023-12-31'
+- P6M
+- _:ne88027982d444a8e857425944323d24bb1
+- _:ne88027982d444a8e857425944323d24bb2
+- _:ne88027982d444a8e857425944323d24bb3
+- _:ne88027982d444a8e857425944323d24bb4
+- until account closure
+has_personal_data: pd:Location
+has_processing: dpv:Collect
+id: ex:PDH1

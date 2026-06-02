@@ -1,0 +1,11 @@
+has_address: Dublin, Ireland
+has_contact: acme@example.com
+has_location:
+- IE
+- Ireland
+- loc:IE
+has_name: Acme
+has_representative:
+- ex:AcmeDPO
+- ex:AcmeEUOrg
+id: ex:Acme

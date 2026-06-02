@@ -1,0 +1,4 @@
+has_process:
+- ex:SomeOtherProcess
+- ex:SomeProcess
+id: ex:AnotherProcess
