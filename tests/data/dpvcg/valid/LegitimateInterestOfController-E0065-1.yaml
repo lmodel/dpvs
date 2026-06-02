@@ -4,8 +4,8 @@
 #   - dpv:LegitimateInterestOfController
 has_data_controller: ex:AcmeInc
 has_justification:
-- _:nc1bc3af1f1df4664ac08746224593f0ab3
-- _:nc1bc3af1f1df4664ac08746224593f0ab4
-has_legal_basis: _:nc1bc3af1f1df4664ac08746224593f0ab5
+- _:n0e4e88c41a9645c88a3ac7235a8bfb28b3
+- _:n0e4e88c41a9645c88a3ac7235a8bfb28b4
+has_legal_basis: _:n0e4e88c41a9645c88a3ac7235a8bfb28b5
 has_purpose: dpv:FraudPreventionAndDetection
 id: ex:FraudManagement

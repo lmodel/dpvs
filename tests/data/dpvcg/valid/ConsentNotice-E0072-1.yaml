@@ -2,6 +2,6 @@
 #   dct:hasLocation: https://example.com/service-x
 #   dct:title: Consent Notice for Service X
 has_notice_layer:
-- _:nf9c8729e59a14e1198c3259b51a15b99b1
-- _:nf9c8729e59a14e1198c3259b51a15b99b4
+- _:nb54dbcd72eb1436faaf91a3fc734e514b1
+- _:nb54dbcd72eb1436faaf91a3fc734e514b4
 id: ex:ExampleNotice

@@ -2,10 +2,10 @@ has_duration:
 - 1 time
 - '2023-12-31'
 - P6M
-- _:nf3615b5979d8415d81fd713097f4573fb1
-- _:nf3615b5979d8415d81fd713097f4573fb2
-- _:nf3615b5979d8415d81fd713097f4573fb3
-- _:nf3615b5979d8415d81fd713097f4573fb4
+- _:ne4c1b71372454a27baf1c6057dd6140ab1
+- _:ne4c1b71372454a27baf1c6057dd6140ab2
+- _:ne4c1b71372454a27baf1c6057dd6140ab3
+- _:ne4c1b71372454a27baf1c6057dd6140ab4
 - until account closure
 has_personal_data: pd:Location
 has_processing: dpv:Collect

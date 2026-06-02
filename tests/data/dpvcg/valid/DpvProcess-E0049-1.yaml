@@ -1,11 +1,11 @@
 has_data_subject:
-- _:nb240ccfbc2344d05a0accb80c45efb5bb3
+- _:n4d3037e083314adea0c8f87472253dc8b3
 - dpv:SmallScaleOfDataSubjects
 has_data_volume:
-- _:nb240ccfbc2344d05a0accb80c45efb5bb2
+- _:n4d3037e083314adea0c8f87472253dc8b2
 - dpv:LargeDataVolume
 has_geographic_coverage:
-- _:nb240ccfbc2344d05a0accb80c45efb5bb1
+- _:n4d3037e083314adea0c8f87472253dc8b1
 - dpv:NationalScale
 has_processing: dpv:Use
 has_processing_scale: dpv:SmallScaleProcessing

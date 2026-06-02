@@ -1,6 +1,6 @@
 has_applicable_law: legal-eu:law-GDPR
 has_right:
-- _:n2e54b30bb8f445a0a55af93c6443a026b1
+- _:ne3cdb0c9c67b4fe7b0900209d5b7514cb1
 - eu-gdpr:A15
 - eu-gdpr:A16
 - eu-gdpr:A17
