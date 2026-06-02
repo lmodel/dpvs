@@ -1,0 +1,36 @@
+# mapping_set_id: https://w3id.org/lmodel/dpvs/mappings/dpv-odrl
+# mapping_set_description: DPV ↔ ODRL term alignments (curated upstream).
+# mapping_set_version: 1.0
+# license: https://creativecommons.org/licenses/by/4.0/
+# curie_map:
+#   dpvs: https://w3id.org/lmodel/dpvs/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   iso29100: https://w3id.org/lmodel/iso29100/
+#   odrl: http://www.w3.org/ns/odrl/2/
+#   semapv: https://w3id.org/semapv/vocab/
+
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	mapping_source
+dpvs:Data		skos:broader	odrl:Asset		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:Entity		skos:broader	odrl:Party		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:LegalAgreement		skos:broader	odrl:Policy		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:PersonalData		skos:broader	odrl:Asset		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:Processing		skos:broader	odrl:Action		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:Purpose		skos:broader	odrl:Purpose		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasApplicableLaw		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasContext		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasData		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasDataController		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasDataProcessor		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasDataSubject		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasHumanSubject		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasJurisdiction		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasLegalBasis		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasLocation		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasOrganisationalMeasure		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasPersonalData		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasRecipient		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasRight		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasRisk		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasTechnicalMeasure		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasTechnicalOrganisationalMeasure		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/
+dpvs:hasTechnology		rdf:type	odrl:LeftOperand		semapv:ManualMappingCuration	https://www.w3.org/TR/odrl-vocab/

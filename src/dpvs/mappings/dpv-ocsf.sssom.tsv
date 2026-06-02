@@ -1,0 +1,18 @@
+# mapping_set_id: https://w3id.org/lmodel/dpvs/mappings/dpv-ocsf
+# mapping_set_description: DPV ↔ OCSF (Open Cybersecurity Schema Framework) object alignments. Hand-curated against the lmodel OCSF objects schema (https://w3id.org/lmodel/ocsf/). Links DPVS entity, location, policy, and breach concepts to OCSF observable objects.
+# mapping_set_version: 1.0
+# license: https://creativecommons.org/licenses/by/4.0/
+# curie_map:
+#   dpvs: https://w3id.org/lmodel/dpvs/
+#   ocsf: https://w3id.org/lmodel/ocsf/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	mapping_source
+dpvs:DpvPolicy	Policy	skos:closeMatch	ocsf:Policy	Policy	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)
+dpvs:LegalEntity	Legal Entity	skos:closeMatch	ocsf:Organization	Organization	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)
+dpvs:NaturalPerson	Natural Person	skos:closeMatch	ocsf:User	User	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)
+dpvs:DataBreachRecord	Data Breach Record	skos:relatedMatch	ocsf:FindingInfo	Finding Info	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)
+dpvs:StorageLocation	Storage Location	skos:closeMatch	ocsf:Location	Location	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)
+dpvs:TechnicalMeasure	Technical Measure	skos:relatedMatch	ocsf:DataSecurity	Data Security	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)
+dpvs:ThirdParty	Third Party	skos:relatedMatch	ocsf:Actor	Actor	semapv:ManualMappingCuration	OCSF (Open Cybersecurity Schema Framework)

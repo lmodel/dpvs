@@ -1,0 +1,28 @@
+# Vendored W3C DPV release tree.
+#
+# Only the Turtle (.ttl) files actually consumed by scripts/dpv_to_linkml.py
+# are tracked. All other serialisations (HTML, JSON-LD, N3, OMN, RDF/XML, CSV)
+# carry the same information and are ignored to keep the repo small.
+#
+# Scripts that read from upstream-releases/:
+#   - scripts/dpv_to_linkml.py
+#       dpv/dpv/dpv-owl.ttl       (aggregate OWL ontology — identity)
+#       dpv/dpv/dpv.ttl           (aggregate canonical/SKOS — enrichment)
+#       dpv/dpv/modules/*-owl.ttl (per-module OWL ontology — identity)
+#       dpv/dpv/modules/*.ttl     (per-module canonical/SKOS — enrichment)
+#   - scripts/csv_to_sssom.py
+#       mappings/<source>/dpv-<source>.csv   (kept as-is; sibling tree)
+#   - scripts/gen_dpv_27560.py
+#       ../schema/dpv-27560.ttl   (outside upstream-releases/)
+#
+# Ignore everything under dpv/ by default; re-include only the .ttl files
+# that dpv_to_linkml.py reads. Re-inclusion requires un-ignoring each
+# parent directory along the way (git won't recurse into an ignored dir).
+dpv/*
+!dpv/dpv
+dpv/dpv/*
+!dpv/dpv/dpv-owl.ttl
+!dpv/dpv/dpv.ttl
+!dpv/dpv/modules
+dpv/dpv/modules/*
+!dpv/dpv/modules/*.ttl

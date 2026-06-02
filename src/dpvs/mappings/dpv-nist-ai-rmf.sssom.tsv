@@ -1,0 +1,18 @@
+# mapping_set_id: https://w3id.org/lmodel/dpvs/mappings/dpv-nist-ai-rmf
+# mapping_set_description: DPV ↔ NIST AI Risk Management Framework (AI RMF 1.0) term alignments. Hand-curated against the lmodel nist-ai-rmf LinkML schema (https://w3id.org/lmodel/nist-ai-rmf/). Maps DPVS AI / risk / impact concepts to AI RMF actors, risks, and functions.
+# mapping_set_version: 1.0
+# license: https://creativecommons.org/licenses/by/4.0/
+# curie_map:
+#   dpvs: https://w3id.org/lmodel/dpvs/
+#   nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	mapping_source
+dpvs:AIGovernance	AI Governance	skos:relatedMatch	nist_ai_rmf:Function	Function (Govern)	semapv:ManualMappingCuration	NIST AI RMF 1.0
+dpvs:DataController	Data Controller	skos:relatedMatch	nist_ai_rmf:AiActor	AI Actor	semapv:ManualMappingCuration	NIST AI RMF 1.0
+dpvs:DpvRisk	Risk	skos:closeMatch	nist_ai_rmf:Risk	Risk	semapv:ManualMappingCuration	NIST AI RMF 1.0
+dpvs:ImpactAssessment	Impact Assessment	skos:relatedMatch	nist_ai_rmf:Impact	Impact	semapv:ManualMappingCuration	NIST AI RMF 1.0
+dpvs:ResidualRisk	Residual Risk	skos:exactMatch	nist_ai_rmf:ResidualRisk	Residual Risk	semapv:ManualMappingCuration	NIST AI RMF 1.0
+dpvs:RiskAssessment	Risk Assessment	skos:relatedMatch	nist_ai_rmf:Function	Function (Measure)	semapv:ManualMappingCuration	NIST AI RMF 1.0
+dpvs:RiskMitigationMeasure	Risk Mitigation Measure	skos:relatedMatch	nist_ai_rmf:Function	Function (Manage)	semapv:ManualMappingCuration	NIST AI RMF 1.0
