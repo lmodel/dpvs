@@ -14,6 +14,10 @@
 #       mappings/<source>/dpv-<source>.csv   (kept as-is; sibling tree)
 #   - scripts/gen_dpv_27560.py
 #       ../schema/dpv-27560.ttl   (outside upstream-releases/)
+#   - scripts/gen_example_ttls.py
+#       dpv/examples/dex.html     (DPV examples HTML — Turtle snippets embedded
+#                                  as <pre> blocks; no stand-alone E*.ttl in the
+#                                  upstream release archive)
 #
 # Ignore everything under dpv/ by default; re-include only the .ttl files
 # that dpv_to_linkml.py reads. Re-inclusion requires un-ignoring each
@@ -26,3 +30,6 @@ dpv/dpv/*
 !dpv/dpv/modules
 dpv/dpv/modules/*
 !dpv/dpv/modules/*.ttl
+!dpv/examples
+dpv/examples/*
+!dpv/examples/dex.html
