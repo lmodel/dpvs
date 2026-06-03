@@ -8,7 +8,7 @@ secondary ``SchemaView`` from the already-merged schema *without* propagating
 the ``importmap`` they were given. That secondary view re-reads the merged
 schema's preserved ``imports:`` list and HTTP-fetches every URI entry,
 ignoring the local import map entirely. For canonical URI imports such as
-``dpv:schema/dpv_core`` this manifests as a hard 404 at build time before
+``dpv:schema/dpv_common`` this manifests as a hard 404 at build time before
 the upstream package is published.
 
 The workaround is to flatten the schema once, up-front, and then strip the

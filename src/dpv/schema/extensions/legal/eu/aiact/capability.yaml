@@ -69,7 +69,7 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_processing
   - dpv:schema/extensions/legal/eu/aiact
   - dpv:schema/extensions/ai
   - dpv:schema/extensions/tech

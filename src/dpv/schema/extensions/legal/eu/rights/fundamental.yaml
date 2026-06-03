@@ -68,7 +68,7 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_rights
   - dpv:schema/extensions/legal/eu/rights
   - dpv:schema/extensions/rights/eu
 

@@ -10,9 +10,10 @@ Inputs (default): ``upstream-releases/dpv/dpv/`` (vendored release)
   - ``modules/<module>.ttl``             - per-module canonical/SKOS (enrichment)
 
 Outputs (default): ``src/dpv/schema/``
-  - ``dpv.yaml``                  - top-level schema importing every module
-  - ``dpv_core.yaml``             - content of the aggregate ``dpv-owl.ttl``
-  - ``modules/<module>.yaml``            - one LinkML schema per upstream module
+  - ``dpv.yaml``                  - top-level umbrella re-exporting the groups
+  - ``dpv_<group>.yaml``          - 8 semantic-group schemas covering the
+                                    aggregate ``dpv-owl.ttl`` (1:1 with upstream)
+  - ``modules/<module>.yaml``            - one LinkML subset schema per upstream module
 
 100% coverage / compliance goals:
   - Every ``owl:Class`` in the ``dpv-owl:`` namespace -> LinkML class
@@ -74,6 +75,7 @@ import argparse
 import re
 import sys
 import textwrap
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -232,9 +234,25 @@ _COLLISION_PRONE_SLOTS: frozenset[str] = frozenset({
 # Helpers
 # ---------------------------------------------------------------------------
 
+def ascii_safe_local(local: str) -> str:
+    """Make a URI fragment safe for use as a CURIE local part or NCName.
+
+    Strips Unicode diacritics via NFKD normalisation (so ``ä`` -> ``a``,
+    ``ö`` -> ``o``, ``é`` -> ``e``) and replaces any remaining non-ASCII
+    or non-``[A-Za-z0-9_-]`` character with ``_``. Idempotent for fragments
+    that are already ASCII NCNames. Required because LinkML / CURIE syntax
+    rejects characters outside the ASCII NCName set even though OWL/RDF
+    URI fragments permit them (the upstream DPV legal extensions contain
+    e.g. ``law-SN-SächsDSG``).
+    """
+    folded = unicodedata.normalize("NFKD", local)
+    folded = "".join(c for c in folded if not unicodedata.combining(c))
+    return re.sub(r"[^A-Za-z0-9_-]", "_", folded)
+
+
 def camel_to_snake(name: str) -> str:
     """Convert camelCase/PascalCase to snake_case (hyphens become underscores)."""
-    name = name.replace("-", "_")
+    name = ascii_safe_local(name).replace("-", "_")
     s1 = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1_\2", name)
     return re.sub(r"([a-z\d])([A-Z])", r"\1_\2", s1).lower()
 
@@ -261,7 +279,7 @@ def sanitise_class_name(local: str) -> str:
     helper, ``is_a``, ``mixins``, ``domain``, ``range`` and ``any_of``
     automatically use the renamed form.
     """
-    base = local.replace("-", "")
+    base = ascii_safe_local(local).replace("-", "")
     if base in _COLLISION_PRONE_CLASSES:
         return f"Dpv{base}"
     return base
@@ -295,7 +313,7 @@ def uri_to_curie(uri: URIRef) -> str | None:
     s = str(uri)
     for ns, prefix in _CURIE_PREFIXES:
         if s.startswith(ns):
-            return f"{prefix}:{s[len(ns):]}"
+            return f"{prefix}:{ascii_safe_local(s[len(ns):])}"
     return None
 
 
@@ -884,8 +902,8 @@ def _base_prefixes() -> dict[str, str]:
         # from `exact_mappings` / `close_mappings` etc. added by
         # `scripts/apply_sssom_overlay.py`. We pre-declare them in the
         # base prefix block because the SSSOM overlay only adds them to
-        # the schema whose elements carry the mappings (typically
-        # `dpv_core.yaml`), and `SchemaLoader.merge` does not carry
+        # the schema whose elements carry the mappings (the relevant
+        # semantic-group schema), and `SchemaLoader.merge` does not carry
         # imported-schema prefixes into the merged top-level schema. So
         # without these, `gen-project` warns "Unrecognized prefix: iso..."
         # for every overlay prefix when consuming the merged YAML.
@@ -968,6 +986,21 @@ def _inject_dpv_thing(
         "slots": [_ID_SLOT],
     }
 
+    _wire_dpv_thing_parent(classes)
+
+
+def _wire_dpv_thing_parent(classes: dict[str, dict]) -> None:
+    """Wire every root class (no ``is_a``) to ``is_a: DpvThing``.
+
+    This is the sibling of :func:`_inject_dpv_thing` for the non-``common``
+    semantic groups: ``DpvThing`` and its ``id`` slot are declared once in the
+    ``common`` group, and every other group imports ``dpv_common`` (see each
+    group's ``dependencies``), so the ``is_a`` reference resolves without
+    re-declaring ``DpvThing`` (which would collide on ``from_schema`` when the
+    umbrella merges all groups). Wiring all root classes — not just those in
+    ``common`` — is what gives every concrete DPV class the required ``id``
+    constraint after merge. Mutates ``classes`` in place. Idempotent.
+    """
     for cls_name, entry in classes.items():
         if cls_name == _DPV_THING:
             continue
@@ -1010,7 +1043,11 @@ def build_module_schema(
         "prefixes": _base_prefixes(),
         "default_prefix": "dpv",
         "default_range": "string",
-        "imports": ["linkml:types", "dpv:schema/dpv_core"],
+        # Import the umbrella for the abstract parents (``DpvThing`` and any
+        # cross-module ``is_a`` targets). The old aggregate ``dpv_core`` schema
+        # was replaced by the 8 semantic groups; ``dpv:schema/dpv`` re-exports
+        # all of them, so it is the 1:1 successor for resolution purposes.
+        "imports": ["linkml:types", "dpv:schema/dpv"],
         "subsets": {
             subset_name: {
                 "description": f"Entities from the DPV `{module_name}` module.",
@@ -1024,24 +1061,36 @@ def build_module_schema(
     return _order_keys(schema, _SCHEMA_KEY_ORDER)
 
 
-def build_core_schema(
+def build_semantic_group_schema(
+    group_name: str,
     classes: dict,
     slots: dict,
     version: str,
     source: str | None,
-    module_names: list[str] | None = None,
+    group_info: dict,
     class_membership: dict[str, set[str]] | None = None,
     slot_membership: dict[str, set[str]] | None = None,
 ) -> dict:
-    subset_name = _module_subset_name("core")
+    """Build a semantic group schema (e.g., dpv_legal_basis, dpv_entities).
+    
+    Each semantic group imports only its direct dependencies, not all 965 classes.
+    """
+    subset_name = _module_subset_name(group_name)
+    
+    # Build import list: linkml:types + dependencies
+    imports: list[str] = ["linkml:types"]
+    for dep in group_info.get("dependencies", []):
+        imports.append(f"dpv:schema/dpv_{dep}")
+    
     schema: dict[str, Any] = {
-        "id": f"{LMODEL_BASE}/core",
-        "name": "dpv_core",
-        "title": "DPV Core",
+        "id": f"{LMODEL_BASE}/dpv_{group_name}",
+        "name": f"dpv_{group_name}",
+        "title": f"DPV - {group_name.replace('_', ' ').title()}",
         "description": (
-            f"Aggregate LinkML schema generated from the full DPV {version} "
-            f"OWL release (`dpv-owl.ttl`), enriched with canonical SKOS "
-            f"metadata from `dpv.ttl`."
+            f"LinkML schema for DPV {version} semantic group: "
+            f"{group_info.get('description', group_name)}. "
+            f"This schema imports only its direct upstream module dependencies "
+            f"({', '.join(group_info.get('modules', []))}) rather than all 965 DPV classes."
         ),
         "license": "CC-BY-4.0",
         "see_also": [
@@ -1053,50 +1102,79 @@ def build_core_schema(
     if source:
         schema["source"] = source
 
-    # All subsets are declared here in the core schema so a single import
-    # of `dpv:schema/dpv_core` (or the pre-merged `tmp/dpv.yaml`) is
-    # enough for `gen-doc` and friends to render the full subset index.
-    # The per-module schemas under `modules/` redeclare their own subset
-    # only for standalone use; when consumed via the aggregate they are
-    # redundant.
     subsets: dict[str, dict] = {
         subset_name: {
-            "description": (
-                "All classes and slots from the aggregate DPV OWL release."
-            ),
+            "description": f"Entities from the DPV `{group_name}` semantic group.",
         }
     }
-    for mod in sorted(module_names or []):
-        subsets[_module_subset_name(mod)] = {
-            "description": f"Entities from the DPV `{mod}` module.",
-        }
 
     schema.update({
         "prefixes": _base_prefixes(),
         "default_prefix": "dpv",
         "default_range": "string",
-        "imports": ["linkml:types"],
+        "imports": imports,
         "subsets": subsets,
-        "slots": _order_elements(slots, subset_name, slot_membership),
-        "classes": _order_elements(classes, subset_name, class_membership),
     })
+    
+    # NOTE: ``membership`` is intentionally NOT passed. The membership dicts
+    # (``class_to_groups`` / ``slot_to_groups``) contain raw group names like
+    # ``common``, but only ``common_subset`` (the proper subset name) is
+    # declared in the ``subsets`` block. Passing membership would emit
+    # ``in_subset: [common, common_subset]`` and LinkML's schema loader
+    # would reject the undefined ``common`` subset.
+    if slots:
+        schema["slots"] = _order_elements(slots, subset_name)
+    if classes:
+        schema["classes"] = _order_elements(classes, subset_name)
+    
     return _order_keys(schema, _SCHEMA_KEY_ORDER)
 
 
-def build_top_schema(module_names: list[str], version: str) -> dict:
+def build_top_schema_semantic(
+    module_names: list[str], version: str,
+    emitted_groups: list[str] | None = None,
+) -> dict:
+    """Build top-level dpv.yaml that imports semantic group schemas.
+
+    Only groups for which a file was actually written are imported, so a
+    group that ended up empty does not become a dangling import.
+    """
+    canonical_order = [
+        "common",  # must come first (provides DpvThing)
+        "legal_basis", "entities", "personal_data", "processing",
+        "risk_notice", "rights", "consent",
+    ]
+    if emitted_groups is None:
+        emitted = canonical_order
+    else:
+        emitted_set = set(emitted_groups)
+        emitted = [g for g in canonical_order if g in emitted_set]
+        for g in emitted_groups:
+            if g not in emitted:
+                emitted.append(g)
+    semantic_imports = [f"dpv:schema/dpv_{g}" for g in emitted]
+    
     schema: dict[str, Any] = {
         "id": LMODEL_BASE,
         "name": "dpv",
         "title": "Data Privacy Vocabulary (DPV)",
         "description": (
-            "Top-level LinkML schema for the W3C Data Privacy Vocabulary (DPV) "
-            f"version {version}. Re-exports the aggregate `dpv_core` schema "
-            "which contains every class and slot of the upstream OWL release. "
-            "Per-module schemas (under `./modules/`) are available as "
-            "standalone subset schemas; they are intentionally NOT imported "
-            "here to avoid duplicate class declarations during "
-            "`gen-project` (each shared class would otherwise arrive with "
-            "two conflicting `from_schema` URIs)."
+            "Top-level umbrella LinkML schema for the W3C Data Privacy "
+            f"Vocabulary (DPV) version {version}. Re-exports the eight "
+            f"semantic-group schemas ({', '.join(emitted)}), which together "
+            "provide 1:1 coverage of every class and slot in the upstream "
+            "DPV 2.3 OWL release.\n\n"
+            "Each DPV semantic groups (i.e. `dpv_consent`) imports only its "
+            "direct upstream module dependencies (i.e. `dpv_common`), avoiding "
+            "the load cost of a single monolithic schema.\n\n"
+            "DPV modules (under `./modules/`) remain usable as standalone scheama,"
+            "and are intentionally NOT imported here to avoid duplicate class "
+            "declarations during generation (each shared class would otherwise "
+            "arrive with two conflicting `from_Schema` URIs).\n\n"
+            "DPV extensions (under `./extensions/`, e.g. `ai`, `risk`, `pd`"
+            "`tech`, `legal/*`, `sector/*`) also remain usable as standalone "
+            "schema, and are intentially NOT imported. This design aims to "
+            "help consumers import only what they needed, not everything."
         ),
         "license": "CC-BY-4.0",
         "see_also": [
@@ -1107,14 +1185,20 @@ def build_top_schema(module_names: list[str], version: str) -> dict:
         "prefixes": _base_prefixes(),
         "default_prefix": "dpv",
         "default_range": "string",
-        "imports": ["linkml:types", "dpv:schema/dpv_core"],
+        "imports": ["linkml:types"] + semantic_imports,
     }
-    # Keep the list of module names visible for downstream tooling without
-    # importing them transitively (would cause from_schema collisions).
-    if module_names:
-        schema["annotations"] = {
-            "dpv_modules": ", ".join(module_names),
-        }
+    
+    # Document the semantic groups as annotations for discoverability
+    schema["annotations"] = {
+        "semantic_groups": ", ".join(emitted),
+        "design_note": (
+            "Decomposed into 8 semantic groups rather than a single "
+            "monolithic schema. Each group imports only its direct upstream "
+            "module dependencies, reducing downstream transitive import "
+            "overhead."
+        ),
+    }
+    
     return _order_keys(schema, _SCHEMA_KEY_ORDER)
 
 
@@ -1159,6 +1243,91 @@ def _coverage(label: str, g_owl: Graph, classes: dict, slots: dict) -> str:
     )
 
 
+# ---------------------------------------------------------------------------
+# Semantic grouping (Option B: smart generation of 8 semantic groups)
+# ---------------------------------------------------------------------------
+
+# Mapping of semantic group name to upstream module stems that comprise it.
+# Classes/slots are assigned to groups based on which modules contain them.
+# Each group imports only its direct dependencies, not all 965 classes.
+# Each upstream module must appear in exactly ONE group to guarantee a
+# class/slot lands in exactly one group file (no duplicate class declarations
+# when the umbrella ``dpv.yaml`` imports all groups).
+SEMANTIC_GROUPS: dict[str, dict] = {
+    "common": {
+        "modules": ["status", "TOM", "rules", "context"],
+        "dependencies": [],
+        "description": "Shared metadata and administrative concepts (base layer)",
+    },
+    "legal_basis": {
+        "modules": [
+            "legal_basis", "legal_basis_status", "jurisdiction",
+            "legal_measures",
+            "contract", "contract_clause", "contract_control",
+            "contract_status", "contract_types",
+        ],
+        "dependencies": ["common"],
+        "description": "Legal basis, contracts, and lawfulness concepts",
+    },
+    "entities": {
+        "modules": [
+            "entities", "entities_authority", "entities_datasubject",
+            "entities_legalrole", "entities_organisation",
+        ],
+        "dependencies": ["common"],
+        "description": "Organisational and legal entities",
+    },
+    "personal_data": {
+        "modules": [
+            "personal_data", "physical_measures",
+            "organisational_measures", "technical_measures",
+        ],
+        "dependencies": ["common"],
+        "description": "Data classification, sensitivity, and mitigation measures",
+    },
+    "processing": {
+        "modules": [
+            "processing", "process", "processing_context",
+            "processing_scale", "purposes",
+        ],
+        "dependencies": ["common", "personal_data"],
+        "description": "Processing activities, purposes, and context",
+    },
+    "risk_notice": {
+        "modules": ["risk", "notice"],
+        "dependencies": ["common"],
+        "description": "Risk, notice, and complaint concepts",
+    },
+    "rights": {
+        "modules": ["rights"],
+        "dependencies": ["common"],
+        "description": "Rights, remedies, and requests",
+    },
+    "consent": {
+        "modules": [
+            "consent", "consent_controls", "consent_status", "consent_types",
+        ],
+        "dependencies": ["common"],
+        "description": "Consent lifecycle and management",
+    },
+}
+
+# Build reverse lookup and fail-fast if any module appears in >1 group.
+# Keys are lowercased to match the normalised ``mod_name`` produced by
+# ``_normalise_module_stem``.
+_MODULE_TO_GROUP: dict[str, str] = {}
+for _g, _info in SEMANTIC_GROUPS.items():
+    for _m in _info["modules"]:
+        _m_key = _m.lower()
+        if _m_key in _MODULE_TO_GROUP:
+            raise RuntimeError(
+                f"Module '{_m}' appears in both "
+                f"'{_MODULE_TO_GROUP[_m_key]}' and '{_g}' semantic groups; "
+                f"groups must be mutually exclusive."
+            )
+        _MODULE_TO_GROUP[_m_key] = _g
+
+
 def detect_version(input_dir: Path) -> str | None:
     """Detect DPV version from upstream ``owl:versionInfo``.
 
@@ -1194,10 +1363,12 @@ def generate(
     total_cls = total_slt = 0
     # class_name / slot_name -> set of module names containing it.
     # Populated during the per-module pass and surfaced as ``in_subset``
-    # on the aggregate `dpv_core.yaml` so a single core import exposes
-    # every module subset to `gen-doc` and other downstream consumers.
+    # on semantic group schemas.
     class_to_modules: dict[str, set[str]] = {}
     slot_to_modules: dict[str, set[str]] = {}
+    # class_name / slot_name -> set of semantic group names containing it.
+    class_to_groups: dict[str, set[str]] = {}
+    slot_to_groups: dict[str, set[str]] = {}
 
     for ttl_owl in module_files:
         mod_name = _normalise_module_stem(ttl_owl)
@@ -1225,9 +1396,27 @@ def generate(
             class_to_modules.setdefault(cls_name, set()).add(mod_subset)
         for slot_name in slots:
             slot_to_modules.setdefault(slot_name, set()).add(mod_subset)
-        # Collision-prone slots demoted to attributes still belong to their
-        # owner class (already tracked via class membership above), so no
-        # extra bookkeeping is needed here.
+        
+        # Classify classes/slots to their semantic group via _MODULE_TO_GROUP.
+        # First-seen wins: a class declared in multiple upstream modules (e.g.,
+        # ConsentNotice in both `notice` and `consent`) is assigned to the
+        # FIRST module's group only, so it appears in exactly one group file.
+        # This is essential — otherwise the umbrella ``dpv.yaml`` would import
+        # the same class twice with conflicting ``from_schema`` URIs and
+        # ``merge_linkml_schema.py`` would refuse to merge.
+        group_name = _MODULE_TO_GROUP.get(mod_name)
+        if group_name is None:
+            print(f"   WARNING: module '{mod_name}' is not assigned to any "
+                  f"semantic group; its classes/slots will be missing from "
+                  f"the umbrella dpv.yaml. Add it to SEMANTIC_GROUPS.",
+                  file=sys.stderr)
+        else:
+            for cls_name in classes:
+                if cls_name not in class_to_groups:
+                    class_to_groups[cls_name] = {group_name}
+            for slot_name in slots:
+                if slot_name not in slot_to_groups:
+                    slot_to_groups[slot_name] = {group_name}
 
         schema = build_module_schema(
             mod_name, classes, slots, version,
@@ -1243,44 +1432,94 @@ def generate(
             print(f"   {_coverage(mod_name, g_owl, classes, slots)}",
                   file=sys.stderr)
 
-    # ---- aggregate dpv_core.yaml ----
+    # ---- semantic group schemas (NEW: replaces monolithic dpv_core) ----
+    # Build in dependency order: common first, then others that depend on it.
+    print("\n\nBuilding semantic group schemas...", file=sys.stderr)
     core_owl = input_dir / "dpv-owl.ttl"
+    emitted_groups: list[str] = []
     if core_owl.exists():
-        print(f"\nParsing aggregate {core_owl.name} ...", file=sys.stderr)
+        print(f"Parsing aggregate {core_owl.name} for semantic grouping...", 
+              file=sys.stderr)
         g_owl_core = _parse_ttl(core_owl)
         core_can = input_dir / "dpv.ttl"
         g_can_core = _parse_ttl(core_can) if core_can.exists() else None
-        if g_can_core is not None:
-            print(f"   enriched from canonical {core_can.name}", file=sys.stderr)
 
-        core_classes = extract_classes(g_owl_core, g_can_core)
-        core_slots = extract_slots(g_owl_core, g_can_core)
-        core_slots, moved = _split_collision_slots_to_attributes(
-            core_classes, core_slots,
-        )
-        if moved and report:
-            print(f"   collision-prone slots moved to attributes: {moved}",
+        all_core_classes = extract_classes(g_owl_core, g_can_core)
+        all_core_slots = extract_slots(g_owl_core, g_can_core)
+
+        # Process groups in dependency order (common first).
+        group_order = ["common"] + [k for k in SEMANTIC_GROUPS
+                                     if k != "common"]
+
+        for group_name in group_order:
+            group_info = SEMANTIC_GROUPS[group_name]
+            print(f"\n  Generating semantic group: {group_name}", file=sys.stderr)
+            
+            # Filter classes/slots to this group only
+            group_classes = {
+                k: v for k, v in all_core_classes.items()
+                if group_name in class_to_groups.get(k, set())
+            }
+            group_slots = {
+                k: v for k, v in all_core_slots.items()
+                if group_name in slot_to_groups.get(k, set())
+            }
+            
+            if not group_classes and not group_slots:
+                print(f"    (skipped - no classes/slots in group)", file=sys.stderr)
+                continue
+            
+            # The ``common`` group declares ``DpvThing`` (+ its ``id`` slot) and
+            # wires its own root classes to it. Every other group only wires its
+            # root classes to ``is_a: DpvThing`` (resolved via the imported
+            # ``dpv_common``), so all concrete classes inherit the required
+            # ``id`` after the umbrella merges the groups.
+            if group_name == "common":
+                _inject_dpv_thing(group_classes, group_slots)
+            else:
+                _wire_dpv_thing_parent(group_classes)
+
+            group_slots, moved = _split_collision_slots_to_attributes(
+                group_classes, group_slots,
+            )
+            
+            schema = build_semantic_group_schema(
+                group_name,
+                group_classes,
+                group_slots,
+                version,
+                source=get_ontology_iri(g_owl_core),
+                group_info=group_info,
+                class_membership=class_to_groups,
+                slot_membership=slot_to_groups,
+            )
+            # File is named ``dpv_<group>.yaml`` to match the schema ``name``
+            # and the import URI ``dpv:schema/dpv_<group>`` used by the
+            # umbrella ``dpv.yaml`` (LinkML resolves imports by filename).
+            n_cls, n_slt = _write(schema, output_dir / f"dpv_{group_name}.yaml")
+            emitted_groups.append(group_name)
+            print(f"    dpv_{group_name}: {n_cls} classes, {n_slt} slots",
                   file=sys.stderr)
-        _inject_dpv_thing(core_classes, core_slots)
-        core_schema = build_core_schema(
-            core_classes, core_slots, version,
-            source=get_ontology_iri(g_owl_core),
-            module_names=module_names,
-            class_membership=class_to_modules,
-            slot_membership=slot_to_modules,
-        )
-        _write(core_schema, output_dir / "dpv_core.yaml")
+
         if report:
-            print(f"   {_coverage('CORE', g_owl_core, core_classes, core_slots)}",
+            print(f"\n   {_coverage('ALL GROUPS', g_owl_core, all_core_classes, all_core_slots)}",
                   file=sys.stderr)
 
-    # ---- top-level dpv.yaml ----
+    # ---- top-level dpv.yaml (imports only emitted semantic groups) ----
     print("\nWriting top-level dpv.yaml ...", file=sys.stderr)
-    _write(build_top_schema(module_names, version), output_dir / "dpv.yaml")
+    _write(
+        build_top_schema_semantic(module_names, version, emitted_groups),
+        output_dir / "dpv.yaml",
+    )
 
+    # Compute total classes across all semantic groups
+    total_semantic_classes = sum(len([c for c in class_to_groups.keys() 
+                                       if g in class_to_groups[c]]) 
+                                 for g in SEMANTIC_GROUPS)
+    
     print(
-        f"\nDone. Modules: {len(module_names)}, "
-        f"module classes (sum): {total_cls}, module slots (sum): {total_slt}.",
+        f"\nDone. Modules: {len(module_names)}, semantic groups: {len(SEMANTIC_GROUPS)}, "
+        f"total classes: {total_semantic_classes}, total slots: {total_slt}.",
         file=sys.stderr,
     )
 

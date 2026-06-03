@@ -5,7 +5,7 @@
 # https://github.com/casey/just/issues/2540
 
 # Generate the DPV LinkML schemas from the upstream OWL/Turtle release.
-# Re-creates src/dpv/schema/{dpv.yaml, dpv_core.yaml,
+# Re-creates src/dpv/schema/{dpv.yaml, dpv_<group>.yaml,
 # modules/*.yaml} from upstream-releases/dpv/dpv/*. Deterministic: re-running
 # with unchanged inputs produces byte-identical output. Run before
 # `apply-sssom-overlay`.
@@ -27,7 +27,7 @@ gen-linkml:
 # standards/ieee/7012, etc.) under upstream-releases/dpv/<ext>/<ext>-owl.ttl.
 # Each extension gets its own LinkML schema with id
 # `https://w3id.org/lmodel/dpv/<slug>`, default_prefix `<slug>`, imports
-# linkml:types + dpv:schema/dpv_core (+ any sibling extension it references).
+# linkml:types + dpv:schema/dpv (+ any sibling extension it references).
 # Submodules under `<ext>/modules/` become per-module sub-schemas that import
 # the aggregate. Output: src/dpv/schema/extensions/<slug>.yaml (+ submodules).
 # Idempotent. Run between `gen-linkml` and `apply-sssom-overlay`.
@@ -98,6 +98,67 @@ _gen-fixtures: apply-sssom-overlay _load-ttl-fixtures
     -i tests/data/dpvcg/valid \
     -o tests/data/dpvcg/valid
 
+# Generate gen-doc trees for every top-level DPV extension under
+# src/dpv/schema/extensions/*.yaml (ai, justifications, loc, pd, risk,
+# tech). Each extension is documented in isolation (its own classes /
+# slots only). Sub-extensions under legal/, sector/, standards/ are
+# not generated in v1; add them explicitly as needed by extending the
+# loop below.
+#
+# Why we DON'T pre-merge with merge_linkml_schema.py here:
+#   1. Upstream DPV redeclares some classes across extensions
+#      (e.g. `DataAggregationBias` in both `ai` and `risk`,
+#       `DpvData` in both `ai` and core `dpv_personal_data`),
+#      so SchemaLoader's merge refuses with "Conflicting URIs".
+#   2. Stripping imports to dodge (1) leaves dangling `is_a` slot
+#      references that SchemaLoader refuses to resolve.
+# gen-doc internally uses SchemaView (not SchemaLoader), which
+# tolerates unresolved cross-schema references and renders them as
+# plain text. So we feed it the stripped per-extension schema
+# directly: each page references its own classes only, cross-extension
+# parents become non-clickable strings.
+[group('model development')]
+gen-doc-extensions: _importmap apply-sssom-overlay
+  #!/usr/bin/env bash
+  set -euo pipefail
+  mkdir -p tmp/extensions docs/extensions
+  shopt -s nullglob
+  # Overview page referenced by the mkdocs nav (`extensions/index.md`).
+  # (Re)generated here so it always lists exactly the extension trees built
+  # below - without it `mkdocs build` warns/fails on a missing nav target.
+  index="docs/extensions/index.md"
+  # Friendly labels matching the mkdocs nav; unknown slugs fall back to the
+  # schema title (minus the "DPV - " prefix).
+  declare -A friendly=( [ai]="AI" [justifications]="Justifications" \
+    [loc]="Location" [pd]="Personal Data" [risk]="Risk" [tech]="Tech" )
+  {
+    echo "# DPV Extensions"
+    echo
+    echo "Per-extension documentation for the W3C DPV 2.3 extension family. Each "
+    echo -n "extension is a standalone LinkML schema importing only the core semantic "
+    echo -n "group(s) it specialises; the pages below cover each extension's own "
+    echo -n "classes and slots, with core and cross-extension parents rendered as "
+    echo -n "plain text."
+    echo
+    echo -n 'Per-jurisdiction `legal/` schemas and the `sector/` and `standards/` '
+    echo -n 'trees are intentionally not rendered as separate documentation trees: '
+    echo -n 'they re-slice the same core terms and would multiply build time without '
+    echo -n 'adding distinct semantics. Browse their schemas directly under '
+    echo -n '[`src/dpv/schema/extensions/`](https://github.com/lmodel/dpv/tree/main/src/dpv/schema/extensions).'
+    echo
+  } > "$index"
+  for src in src/dpv/schema/extensions/*.yaml; do
+    slug="$(basename "$src" .yaml)"
+    staged="tmp/extensions/${slug}.yaml"
+    docout="docs/extensions/${slug}"
+    echo ">>> gen-doc-extensions: ${slug}"
+    uv run python scripts/strip_sibling_imports.py "$src" "$staged"
+    mkdir -p "$docout"
+    uv run gen-doc {{import_map}} {{gen_doc_args}} -d "$docout" "$staged"
+    title="${friendly[$slug]:-$(uv run python -c "import yaml; t=yaml.safe_load(open('$src')).get('title') or '$slug'; print(t.removeprefix('DPV - '))")}"
+    echo "- [${title}](${slug}/index.md)" >> "$index"
+  done
+
 # ============== Supplemental generator recipes (beyond gen-project defaults) ==============
 # gen-project already covers: graphql, jsonldcontext, jsonld, jsonschema, owl,
 # prefixmap, proto, python, shex, shacl, sqlddl, excel, typescript.
@@ -125,7 +186,7 @@ gen-merged-schema: _merged-schema
 # Generate resolved YAML schema (patched yamlgen).
 #
 # Feed the pre-merged schema (`tmp/dpv.yaml`) so URI imports like
-# `dpv:schema/dpv_core` are already resolved - `gen-yaml` underneath
+# `dpv:schema/dpv_common` are already resolved - `gen-yaml` underneath
 # `gen_yaml_patched.py` also drops `--importmap` for URI imports and
 # would 404 on the w3id IRI (see ISSUE.md §8/§9).
 [group('model development - extended')]

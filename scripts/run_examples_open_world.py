@@ -216,8 +216,9 @@ def main() -> int:
     # Schema is expected to be the pre-merged, self-contained YAML
     # produced by `scripts/merge_linkml_schema.py` (e.g. `tmp/dpv.yaml`).
     # We deliberately do NOT pass `merge_imports=True` here because the
-    # top-level `src/dpv/schema/dpv.yaml` imports `dpv:schema/dpv_core`
-    # as a URI-style CURIE; `SchemaView` would expand the `dpv:` prefix
+    # top-level `src/dpv/schema/dpv.yaml` imports the semantic-group schemas
+    # (e.g. `dpv:schema/dpv_common`) as URI-style CURIEs; `SchemaView` would
+    # expand the `dpv:` prefix
     # to its w3id IRI and fetch the import over HTTP (404). See
     # ISSUE.md §8/§9 for the upstream gap. The build pipeline
     # (`just _merged-schema`) flattens imports out-of-band.

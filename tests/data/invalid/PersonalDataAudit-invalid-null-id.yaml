@@ -1,0 +1,4 @@
+# Null id fails type check (id must be a uri_or_curie string)
+# (original intent: PersonalData-invalid-null-id — null id for personal data entities)
+id:
+category: dpv:Name

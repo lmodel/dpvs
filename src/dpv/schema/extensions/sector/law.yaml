@@ -4,8 +4,9 @@ title: DPV - Sector - Law
 description: |-
   LinkML schema generated from the DPV 2.3 extension `sector/law`
   (`sector-law-owl.ttl`), enriched with canonical SKOS metadata. Imports
-  the aggregate core schema `dpv:schema/dpv_core` for the abstract parent
-  classes this extension specialises.
+  the semantic-group schema(s) `dpv:schema/dpv_processing` for the
+  abstract parent classes this extension specialises (instead of the full
+  umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/sector/law
@@ -67,7 +68,7 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_processing
   - dpv:schema/extensions/sector/infra
 
 subsets:

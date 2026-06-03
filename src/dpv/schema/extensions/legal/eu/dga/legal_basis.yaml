@@ -64,7 +64,7 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_legal_basis
   - dpv:schema/extensions/legal/eu/dga
 
 subsets:

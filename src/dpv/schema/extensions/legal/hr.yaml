@@ -4,8 +4,9 @@ title: DPV - Legal - Hr
 description: |-
   LinkML schema generated from the DPV 2.3 extension `legal/hr`
   (`legal-hr-owl.ttl`), enriched with canonical SKOS metadata. Imports the
-  aggregate core schema `dpv:schema/dpv_core` for the abstract parent
-  classes this extension specialises.
+  semantic-group schema(s) `dpv:schema/dpv_legal_basis`,
+  `dpv:schema/dpv_entities` for the abstract parent classes this extension
+  specialises (instead of the full umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/legal/hr
@@ -67,7 +68,8 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_legal_basis
+  - dpv:schema/dpv_entities
   - dpv:schema/extensions/legal/eu/gdpr
 
 subsets:

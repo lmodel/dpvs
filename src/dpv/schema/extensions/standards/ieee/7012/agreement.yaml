@@ -63,7 +63,6 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
   - dpv:schema/extensions/standards/ieee/7012
 
 subsets:

@@ -7,8 +7,9 @@ Transform every DPV 2.3 extension (the non-core modules vendored alongside
 This is the complement to ``dpv_core_to_linkml.py`` (which only handles the
 ``dpv/`` core release). It produces one LinkML schema per extension, each
 with its own ``id``, ``name`` and ``default_prefix``, importing only
-``linkml:types`` + ``dpv:schema/dpv_core`` (plus any sibling extensions
-whose classes it specialises).
+``linkml:types`` + ``dpv:schema/dpv`` (the umbrella that re-exports the 8
+semantic-group schemas, for the abstract parents) plus any sibling
+extensions whose classes it specialises.
 
 Layout produced (mirrors the upstream ``2.3/<ext>/`` tree):
 
@@ -358,12 +359,15 @@ def _family_local(uri: URIRef) -> tuple[str, str] | None:
 
 def _uri_to_curie_for(ext: ExtensionSpec, uri: URIRef) -> str | None:
     """Like ``core.uri_to_curie`` but also recognises the extension's own
-    ``dpv_<slug>`` / ``dpv_<slug>_owl`` namespaces."""
+    ``dpv_<slug>`` / ``dpv_<slug>_owl`` namespaces. URI fragments are
+    ASCII-folded (see ``core.ascii_safe_local``) so the resulting CURIE
+    is a valid LinkML element reference even when the upstream fragment
+    contains diacritics."""
     s = str(uri)
     if s.startswith(ext.owl_ns):
-        return f"dpv_{ext.prefix}_owl:{s[len(ext.owl_ns):]}"
+        return f"dpv_{ext.prefix}_owl:{core.ascii_safe_local(s[len(ext.owl_ns):])}"
     if s.startswith(ext.can_ns):
-        return f"dpv_{ext.prefix}:{s[len(ext.can_ns):]}"
+        return f"dpv_{ext.prefix}:{core.ascii_safe_local(s[len(ext.can_ns):])}"
     return core.uri_to_curie(uri)
 
 
@@ -393,6 +397,10 @@ def _extract_classes_ns(
     for cls in sorted(subjects, key=str):
         cls_local = _local_of(cls, ext.owl_ns)
         assert cls_local is not None
+        # ASCII-safe form for use in CURIEs / element names; the raw
+        # ``cls_local`` is retained for canonical-NS URI reconstruction
+        # (RDF graph lookup) and for traceability via ``aliases``.
+        cls_local_safe = core.ascii_safe_local(cls_local)
         cls_name = core.sanitise_class_name(cls_local)
         entry: dict[str, Any] = {}
 
@@ -450,7 +458,7 @@ def _extract_classes_ns(
             entry["mixins"] = dedup_mixins
 
         # ---- identity --------------------------------------------------
-        entry["class_uri"] = f"{ext.prefix}:{cls_local}"
+        entry["class_uri"] = f"{ext.prefix}:{cls_local_safe}"
 
         # ---- aliases ---------------------------------------------------
         aliases: list[str] = []
@@ -491,8 +499,8 @@ def _extract_classes_ns(
                 if curie and curie not in equivs:
                     equivs.append(curie)
         # Canonical upstream identity, both flavours, under ext-specific prefixes.
-        equivs.append(f"dpv_{ext.prefix}:{cls_local}")
-        equivs.append(f"dpv_{ext.prefix}_owl:{cls_local}")
+        equivs.append(f"dpv_{ext.prefix}:{cls_local_safe}")
+        equivs.append(f"dpv_{ext.prefix}_owl:{cls_local_safe}")
         seen_eq: set[str] = set()
         equivs = [e for e in equivs if not (e in seen_eq or seen_eq.add(e))]
         entry["exact_mappings"] = equivs
@@ -556,9 +564,10 @@ def _extract_slots_ns(
     for prop in sorted(subjects, key=str):
         prop_local = _local_of(prop, ext.owl_ns)
         assert prop_local is not None
+        prop_local_safe = core.ascii_safe_local(prop_local)
         sname = core.camel_to_snake(prop_local)
         entry: dict[str, Any] = {
-            "definition_uri": f"{ext.prefix}:{prop_local}",
+            "definition_uri": f"{ext.prefix}:{prop_local_safe}",
         }
 
         defn = core.first_literal(g_owl, prop, SKOS.definition) \
@@ -641,8 +650,8 @@ def _extract_slots_ns(
             if isinstance(o, URIRef):
                 curie = _uri_to_curie_for(ext, o)
                 equivs.append(curie if curie else str(o))
-        equivs.append(f"dpv_{ext.prefix}:{prop_local}")
-        equivs.append(f"dpv_{ext.prefix}_owl:{prop_local}")
+        equivs.append(f"dpv_{ext.prefix}:{prop_local_safe}")
+        equivs.append(f"dpv_{ext.prefix}_owl:{prop_local_safe}")
         seen_eq: set[str] = set()
         equivs = [e for e in equivs if not (e in seen_eq or seen_eq.add(e))]
         entry["exact_mappings"] = equivs
@@ -704,8 +713,81 @@ def _ext_prefixes(ext: ExtensionSpec, foreign: set[str]) -> dict[str, str]:
     return prefixes
 
 
-def _ext_imports(ext: ExtensionSpec, foreign: set[str]) -> list[str]:
-    imports = ["linkml:types", "dpv:schema/dpv_core"]
+# Canonical group order (common first) for deterministic import blocks.
+_GROUP_ORDER: list[str] = (
+    ["common"] + [g for g in core.SEMANTIC_GROUPS if g != "common"]
+)
+
+
+def _build_core_group_index(schema_dir: Path) -> dict[str, str]:
+    """Map each core element name (class or slot) -> its semantic-group slug.
+
+    Read from the generated ``dpv_<group>.yaml`` files (which exist because the
+    extension build runs after ``dpv_core_to_linkml.py``). Lets each extension
+    import only the groups it actually specialises instead of the full umbrella
+    ``dpv:schema/dpv``. First-seen wins; groups are disjoint by construction so
+    there is no real contention.
+    """
+    index: dict[str, str] = {}
+    for group in core.SEMANTIC_GROUPS:
+        f = schema_dir / f"dpv_{group}.yaml"
+        if not f.exists():
+            continue
+        doc = core.yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+        for name in list(doc.get("classes") or {}) + list(doc.get("slots") or {}):
+            index.setdefault(name, group)
+    return index
+
+
+def _referenced_core_groups(
+    classes: dict, slots: dict, core_index: dict[str, str],
+) -> list[str]:
+    """Semantic groups (canonical order) declaring the core elements referenced
+    by these extension classes/slots.
+
+    Scans every reference field that LinkML must resolve to a schema element:
+    class ``is_a``/``mixins`` and slot ``is_a``/``domain``/``range``/``any_of``/
+    ``inverse``. Locally-defined names win, so an extension class that shadows a
+    core name does not drag in that core group. Mapping targets (``*_mappings``)
+    are plain CURIEs, not schema references, so they are deliberately ignored.
+    """
+    local = set(classes) | set(slots)
+    needed: set[str] = set()
+
+    def consider(name: Any) -> None:
+        if not isinstance(name, str) or name in local:
+            return
+        group = core_index.get(name)
+        if group:
+            needed.add(group)
+
+    for entry in classes.values():
+        consider(entry.get("is_a"))
+        for m in entry.get("mixins") or []:
+            consider(m)
+    for entry in slots.values():
+        consider(entry.get("is_a"))
+        consider(entry.get("domain"))
+        consider(entry.get("range"))
+        consider(entry.get("inverse"))
+        for branch in entry.get("any_of") or []:
+            consider(branch.get("range") if isinstance(branch, dict) else None)
+    return [g for g in _GROUP_ORDER if g in needed]
+
+
+def _core_imports(groups: list[str] | None) -> list[str]:
+    """Core-schema imports for an extension. ``groups`` is the list of semantic
+    groups it specialises; ``None`` falls back to the full umbrella (used only
+    when the group schemas are not present yet)."""
+    if groups is None:
+        return ["dpv:schema/dpv"]
+    return [f"dpv:schema/dpv_{g}" for g in groups]
+
+
+def _ext_imports(
+    ext: ExtensionSpec, foreign: set[str], groups: list[str] | None,
+) -> list[str]:
+    imports = ["linkml:types"] + _core_imports(groups)
     for slug in sorted(foreign):
         imports.append(f"dpv:schema/extensions/{slug}")
     return imports
@@ -722,6 +804,7 @@ def build_aggregate_schema(
     submodule_names: list[str],
     version: str,
     foreign: set[str],
+    groups: list[str],
     source: str | None,
 ) -> dict:
     subset_name = core._module_subset_name(ext.prefix)
@@ -746,9 +829,18 @@ def build_aggregate_schema(
         "description": (
             f"LinkML schema generated from the DPV {version} extension "
             f"`{ext.slug}` (`{ext.aggregate_owl.name}`), enriched with "
-            "canonical SKOS metadata. Imports the aggregate core schema "
-            "`dpv:schema/dpv_core` for the abstract parent classes "
-            "this extension specialises."
+            "canonical SKOS metadata. " + (
+                "Imports the semantic-group schema(s) "
+                + ", ".join(f"`dpv:schema/dpv_{g}`" for g in groups)
+                + " for the abstract parent classes this extension "
+                "specialises (instead of the full umbrella `dpv:schema/dpv`)."
+                if groups else
+                "Imports the full umbrella `dpv:schema/dpv` for the abstract "
+                "parent classes this extension specialises."
+                if groups is None else
+                "References no core DPV classes, so it imports only "
+                "`linkml:types` (and any sibling extensions it specialises)."
+            )
         ),
         "license": "CC-BY-4.0",
         "see_also": [
@@ -769,7 +861,7 @@ def build_aggregate_schema(
             f"dpv_{ext.prefix}",
             f"dpv_{ext.prefix}_owl",
         ],
-        "imports": _ext_imports(ext, foreign),
+        "imports": _ext_imports(ext, foreign, groups),
         "subsets": subsets,
     })
     schema["annotations"] = {
@@ -795,6 +887,7 @@ def build_submodule_schema(
     slots: dict,
     version: str,
     foreign: set[str],
+    groups: list[str],
     source: str | None,
 ) -> dict:
     subset_name = core._module_subset_name(f"{ext.prefix}_{sub.name}")
@@ -817,9 +910,10 @@ def build_submodule_schema(
         schema["source"] = source
 
     # Submodule imports the aggregate so we can reference its slots/classes
-    # by local name (LinkML resolves names across the merged tree).
-    sub_imports = ["linkml:types", "dpv:schema/dpv_core",
-                   f"dpv:schema/extensions/{ext.slug}"]
+    # by local name (LinkML resolves names across the merged tree), plus only
+    # the semantic groups its own elements specialise (not the full umbrella).
+    sub_imports = ["linkml:types"] + _core_imports(groups)
+    sub_imports.append(f"dpv:schema/extensions/{ext.slug}")
     for slug in sorted(foreign):
         if slug != ext.slug:
             entry = f"dpv:schema/extensions/{slug}"
@@ -892,56 +986,6 @@ def _write(schema: dict, path: Path) -> tuple[int, int]:
           f"(classes={n_cls}, slots={n_slt})", file=sys.stderr)
     return n_cls, n_slt
 
-
-def _patch_core_subsets(
-    core_schema_path: Path,
-    ext_subsets: dict[str, dict],
-) -> None:
-    """Merge ``ext_subsets`` into the ``subsets:`` block of ``dpv_core.yaml``.
-
-    The core schema is written by ``dpv_core_to_linkml.py`` and already contains
-    the DPV core-module subsets.  This function adds every extension subset
-    so that a single ``import dpv:schema/dpv_core`` is sufficient for
-    ``gen-doc`` and other consumers to resolve the complete subset index.
-
-    Existing entries are preserved; new ones are inserted in sorted order
-    after the last existing entry.  The file is only rewritten when at least
-    one new subset is added.
-    """
-    if not core_schema_path.exists():
-        print(
-            f"WARN: cannot patch subsets - {core_schema_path} does not exist "
-            "(run dpv_core_to_linkml.py first).",
-            file=sys.stderr,
-        )
-        return
-
-    import yaml as _yaml  # noqa: PLC0415 (local import; yaml is already on sys.path via core)
-
-    raw = core_schema_path.read_text(encoding="utf-8")
-    schema = _yaml.safe_load(raw)
-    if not isinstance(schema, dict):
-        print(f"WARN: {core_schema_path} did not parse as a dict; skipping subset patch.",
-              file=sys.stderr)
-        return
-
-    existing: dict[str, dict] = schema.get("subsets") or {}
-    added = {k: v for k, v in sorted(ext_subsets.items()) if k not in existing}
-    if not added:
-        print("\nCore subsets already up-to-date - no changes needed.", file=sys.stderr)
-        return
-
-    merged = dict(existing)
-    merged.update(added)
-    schema["subsets"] = merged
-    core_schema_path.write_text(core.dump_yaml(schema), encoding="utf-8")
-    print(
-        f"\nPatched {core_schema_path.name}: added {len(added)} extension subsets "
-        f"({', '.join(sorted(added)[:5])}{', ...' if len(added) > 5 else ''}).",
-        file=sys.stderr,
-    )
-
-
 # ---------------------------------------------------------------------------
 # Generation
 # ---------------------------------------------------------------------------
@@ -957,10 +1001,16 @@ def generate(
     if not extensions:
         sys.exit(f"No DPV extensions found under {input_dir}")
 
+    # Map every core class/slot name to its semantic group so each extension
+    # imports only the groups it specialises. Built from the group schemas the
+    # core generator emits into the parent of ``output_dir`` (src/dpv/schema).
+    core_index = _build_core_group_index(output_dir.parent)
+    if not core_index:
+        print("   WARNING: no dpv_<group>.yaml schemas found next to "
+              f"{output_dir}; run dpv_core_to_linkml.py first. Extensions will "
+              "fall back to importing the full umbrella.", file=sys.stderr)
+
     total_ext = total_cls = total_slt = 0
-    # Accumulate all extension subsets so they can be patched into
-    # dpv_core.yaml after generation (name -> {description}).
-    all_ext_subsets: dict[str, dict] = {}
 
     for ext in extensions:
         print(f"\n=== Extension: {ext.slug} ({ext.aggregate_owl.name}) ===",
@@ -982,12 +1032,14 @@ def generate(
                   file=sys.stderr)
         # Strip the slug for the *own* extension; only foreign refs matter.
         foreign.discard(ext.slug)
-        foreign.discard("")  # core "dpv" slug is implicit via dpv_core import
+        foreign.discard("")  # core "dpv" slug is implicit via the dpv umbrella import
 
         if not classes and not slots:
             print("   (skipped - aggregate empty)", file=sys.stderr)
             continue
 
+        groups = (_referenced_core_groups(classes, slots, core_index)
+                  if core_index else None)
         agg_schema = build_aggregate_schema(
             ext,
             classes,
@@ -995,12 +1047,9 @@ def generate(
             submodule_names=[s.name for s in ext.submodules],
             version=version,
             foreign=foreign,
+            groups=groups,
             source=core.get_ontology_iri(g_owl),
         )
-        # Collect the subsets declared in this aggregate schema so they can
-        # be patched into dpv_core.yaml later.
-        all_ext_subsets.update(agg_schema.get("subsets") or {})
-
         agg_path = output_dir / ext.out_aggregate
         _write(agg_schema, agg_path)
         total_ext += 1
@@ -1011,7 +1060,9 @@ def generate(
             n_owl = sum(1 for s in g_owl.subjects(RDF.type, OWL.Class)
                         if isinstance(s, URIRef) and _local_of(s, ext.owl_ns))
             print(f"   coverage: owl:Class={n_owl} -> classes={len(classes)} | "
-                  f"slots={len(slots)} | foreign-imports={sorted(foreign)}",
+                  f"slots={len(slots)} | core-groups="
+                  f"{groups if groups is not None else 'umbrella'} | "
+                  f"foreign-imports={sorted(foreign)}",
                   file=sys.stderr)
 
         # --- submodules ---------------------------------------------------
@@ -1028,20 +1079,17 @@ def generate(
             sub_foreign.discard("")
             if not sub_classes and not sub_slots:
                 continue
+            sub_groups = (_referenced_core_groups(sub_classes, sub_slots, core_index)
+                          if core_index else None)
             sub_schema = build_submodule_schema(
                 ext, sub, sub_classes, sub_slots, version,
                 foreign=sub_foreign,
+                groups=sub_groups,
                 source=core.get_ontology_iri(g_owl_s),
             )
             # Collect submodule subsets too.
-            all_ext_subsets.update(sub_schema.get("subsets") or {})
             sub_path = output_dir / ext.out_dir / f"{sub.name}.yaml"
             _write(sub_schema, sub_path)
-
-    # Patch dpv_core.yaml with all collected extension subsets so that a
-    # single import of dpv:schema/dpv_core exposes the full subset index.
-    core_schema_path = output_dir.parent / "dpv_core.yaml"
-    _patch_core_subsets(core_schema_path, all_ext_subsets)
 
     return total_ext, total_cls, total_slt
 

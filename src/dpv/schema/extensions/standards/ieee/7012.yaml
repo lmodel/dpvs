@@ -4,8 +4,11 @@ title: DPV - Standards - Ieee - 7012
 description: |-
   LinkML schema generated from the DPV 2.3 extension `standards/ieee/7012`
   (`ieee-7012-owl.ttl`), enriched with canonical SKOS metadata. Imports
-  the aggregate core schema `dpv:schema/dpv_core` for the abstract parent
-  classes this extension specialises.
+  the semantic-group schema(s) `dpv:schema/dpv_common`,
+  `dpv:schema/dpv_legal_basis`, `dpv:schema/dpv_entities`,
+  `dpv:schema/dpv_personal_data`, `dpv:schema/dpv_processing` for the
+  abstract parent classes this extension specialises (instead of the full
+  umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/standards/ieee/7012
@@ -64,7 +67,11 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_common
+  - dpv:schema/dpv_legal_basis
+  - dpv:schema/dpv_entities
+  - dpv:schema/dpv_personal_data
+  - dpv:schema/dpv_processing
 
 subsets:
 

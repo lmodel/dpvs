@@ -66,7 +66,8 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_legal_basis
+  - dpv:schema/dpv_entities
   - dpv:schema/extensions/legal/de
   - dpv:schema/extensions/legal/eu/gdpr
 
@@ -618,9 +619,9 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/owl#law-SL-SDSG
       dpv_extension_slug: legal/de
 
-  lawSNSächsDSG:
+  lawSNSachsDSG:
     is_a: Law
-    class_uri: legal_de:law-SN-SächsDSG
+    class_uri: legal_de:law-SN-SachsDSG
     aliases:
       - law-SN-SächsDSG
       - |-
@@ -629,23 +630,23 @@ classes:
     in_subset:
       - legal_de_de_subset
     exact_mappings:
-      - dpv_legal_de:law-SN-SächsDSG
-      - dpv_legal_de_owl:law-SN-SächsDSG
+      - dpv_legal_de:law-SN-SachsDSG
+      - dpv_legal_de_owl:law-SN-SachsDSG
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/de/owl#law-SN-SächsDSG
       dpv_extension_slug: legal/de
 
-  lawTHThürDSG:
+  lawTHThurDSG:
     is_a: Law
-    class_uri: legal_de:law-TH-ThürDSG
+    class_uri: legal_de:law-TH-ThurDSG
     aliases:
       - law-TH-ThürDSG
       - Thuringian Data Protection Act (ThürDSG)
     in_subset:
       - legal_de_de_subset
     exact_mappings:
-      - dpv_legal_de:law-TH-ThürDSG
-      - dpv_legal_de_owl:law-TH-ThürDSG
+      - dpv_legal_de:law-TH-ThurDSG
+      - dpv_legal_de_owl:law-TH-ThurDSG
     annotations:
       upstream_iri: https://w3id.org/dpv/legal/de/owl#law-TH-ThürDSG
       dpv_extension_slug: legal/de

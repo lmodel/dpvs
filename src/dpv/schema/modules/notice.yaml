@@ -48,7 +48,7 @@ default_range: string
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv
 
 subsets:
 

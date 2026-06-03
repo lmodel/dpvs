@@ -63,7 +63,10 @@ id_prefixes:
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_common
+  - dpv:schema/dpv_legal_basis
+  - dpv:schema/dpv_entities
+  - dpv:schema/dpv_personal_data
   - dpv:schema/extensions/legal/eu/aiact
 
 subsets:

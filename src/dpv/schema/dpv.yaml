@@ -2,28 +2,26 @@ id: https://w3id.org/lmodel/dpv
 name: dpv
 title: Data Privacy Vocabulary (DPV)
 description: |-
-  Top-level LinkML schema for the W3C Data Privacy Vocabulary (DPV)
-  version 2.3. Re-exports the aggregate `dpv_core` schema which contains
-  every class and slot of the upstream OWL release. Per-module schemas
-  (under `./modules/`) are available as standalone subset schemas; they
-  are intentionally NOT imported here to avoid duplicate class
-  declarations during `gen-project` (each shared class would otherwise
-  arrive with two conflicting `from_schema` URIs).
+  Top-level umbrella LinkML schema for the W3C Data Privacy Vocabulary (DPV) version 2.3. Re-exports the eight semantic-group schemas (common, legal_basis, entities, personal_data, processing, risk_notice, rights, consent), which together provide 1:1 coverage of every class and slot in the upstream DPV 2.3 OWL release.
+
+  Each DPV semantic groups (i.e. `dpv_consent`) imports only its direct upstream module dependencies (i.e. `dpv_common`), avoiding the load cost of a single monolithic schema.
+
+  DPV modules (under `./modules/`) remain usable as standalone scheama,and are intentionally NOT imported here to avoid duplicate class declarations during generation (each shared class would otherwise arrive with two conflicting `from_Schema` URIs).
+
+  DPV extensions (under `./extensions/`, e.g. `ai`, `risk`, `pd``tech`, `legal/*`, `sector/*`) also remain usable as standalone schema, and are intentially NOT imported. This design aims to help consumers import only what they needed, not everything.
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv
   - https://w3c.github.io/dpv/
 version: '2.3'
 annotations:
-  dpv_modules: |-
-    tom, consent, consent_controls, consent_status, consent_types, context,
-    contract, contract_clause, contract_control, contract_status,
-    contract_types, entities, entities_authority, entities_datasubject,
-    entities_legalrole, entities_organisation, jurisdiction, legal_basis,
-    legal_basis_status, legal_measures, notice, organisational_measures,
-    personal_data, physical_measures, process, processing,
-    processing_context, processing_scale, purposes, rights, risk, rules,
-    status, technical_measures
+  semantic_groups: |-
+    common, legal_basis, entities, personal_data, processing, risk_notice,
+    rights, consent
+  design_note: |-
+    Decomposed into 8 semantic groups rather than a single monolithic
+    schema. Each group imports only its direct upstream module dependencies,
+    reducing downstream transitive import overhead.
 
 prefixes:
   dpv: https://github.com/lmodel/dpv/
@@ -62,4 +60,11 @@ default_range: string
 
 imports:
   - linkml:types
-  - dpv:schema/dpv_core
+  - dpv:schema/dpv_common
+  - dpv:schema/dpv_legal_basis
+  - dpv:schema/dpv_entities
+  - dpv:schema/dpv_personal_data
+  - dpv:schema/dpv_processing
+  - dpv:schema/dpv_risk_notice
+  - dpv:schema/dpv_rights
+  - dpv:schema/dpv_consent
