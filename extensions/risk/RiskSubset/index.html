@@ -1,0 +1,2996 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/dpv/extensions/risk/RiskSubset/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Subset: RiskSubset - dpv</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script src="../../../assets/pymdownx-extras/material-extra-theme-2ek1P7jT.js" type="text/javascript"></script>
+<script src="../../../assets/pymdownx-extras/material-extra-3rdparty-BUCF4rjN.js" type="text/javascript"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
+    
+      <link rel="stylesheet" href="../../../assets/pymdownx-extras/extra-c6ab11540a.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#subset-risksubset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="header.title"
+  >
+    <a
+      href="https://lmodel.github.io/dpv/"
+      title="dpv"
+      class="md-header__button md-logo"
+      aria-label="dpv"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dpv
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Subset: RiskSubset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07zm-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13zm-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87zM19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35zm4.33-2.7 1.15-2.77 2.2 2.54zm1.15-4.96-1.14-2.78 3.34.24zM9.63 18.93l2.77 1.15-2.53 2.19z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
+          </a>
+      </div>
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="dpv" class="md-nav__button md-logo" aria-label="dpv" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    dpv
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../justifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Location
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-in-subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes in subset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots-in-subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots in subset
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="subset-risksubset">Subset: RiskSubset</h1>
+<p><em>All entities from the DPV <code>risk</code> extension.</em></p>
+<div>
+<p>URI: <a href="./">RiskSubset</a></p>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: <a href="https://w3id.org/lmodel/dpv/risk">https://w3id.org/lmodel/dpv/risk</a></li>
+</ul>
+<h2 id="classes-in-subset">Classes in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../3LikelihoodLevels/">3LikelihoodLevels</a></td>
+<td>Scale with 3 Likelihood Levels from High to Low</td>
+</tr>
+<tr>
+<td><a href="../3RiskLevels/">3RiskLevels</a></td>
+<td>Scale with 3 Risk Levels from High to Low</td>
+</tr>
+<tr>
+<td><a href="../3SeverityLevels/">3SeverityLevels</a></td>
+<td>Scale with 3 Severity Levels from High to Low</td>
+</tr>
+<tr>
+<td><a href="../5LikelihoodLevels/">5LikelihoodLevels</a></td>
+<td>Scale with 5 Likelihood Levels from Very High to Very Low</td>
+</tr>
+<tr>
+<td><a href="../5RiskLevels/">5RiskLevels</a></td>
+<td>Scale with 5 Risk Levels from Very High to Very Low</td>
+</tr>
+<tr>
+<td><a href="../5SeverityLevels/">5SeverityLevels</a></td>
+<td>Scale with 5 Severity Levels from Very High to Very Low</td>
+</tr>
+<tr>
+<td><a href="../7LikelihoodLevels/">7LikelihoodLevels</a></td>
+<td>Scale with 7 Likelihood Levels from Extremely High to Extremely Low</td>
+</tr>
+<tr>
+<td><a href="../7RiskLevels/">7RiskLevels</a></td>
+<td>Scale with 7 Risk Levels from Extremely High to Extremely Low</td>
+</tr>
+<tr>
+<td><a href="../7SeverityLevels/">7SeverityLevels</a></td>
+<td>Scale with 7 Severity Levels from Extremely High to Extremely Low</td>
+</tr>
+<tr>
+<td><a href="../AccidentalIncident/">AccidentalIncident</a></td>
+<td>Incident caused due to accidental actions arising from human or</td>
+</tr>
+<tr>
+<td><a href="../AccidentalMisuse/">AccidentalMisuse</a></td>
+<td>Concept representing accidental misuse (of something)</td>
+</tr>
+<tr>
+<td><a href="../AccuracyDegraded/">AccuracyDegraded</a></td>
+<td>Concepts representing risks and issues where Accuracy is Degraded</td>
+</tr>
+<tr>
+<td><a href="../AccuracyInconsistent/">AccuracyInconsistent</a></td>
+<td>Concepts representing risks and issues where Accuracy is Inconsistent</td>
+</tr>
+<tr>
+<td><a href="../AccuracyInsufficient/">AccuracyInsufficient</a></td>
+<td>Concepts representing risks and issues where Accuracy is Insufficient</td>
+</tr>
+<tr>
+<td><a href="../AccuracyRisk/">AccuracyRisk</a></td>
+<td>Concepts representing risks and issues where Accuracy is Risk</td>
+</tr>
+<tr>
+<td><a href="../AccuracyUnknown/">AccuracyUnknown</a></td>
+<td>Concepts representing risks and issues where Accuracy is Unknown</td>
+</tr>
+<tr>
+<td><a href="../AccuracyUnverified/">AccuracyUnverified</a></td>
+<td>Concepts representing risks and issues where Accuracy is Unverified</td>
+</tr>
+<tr>
+<td><a href="../AgeDiscrimination/">AgeDiscrimination</a></td>
+<td>Discrimination based on a person's age, often impacting older or younger</td>
+</tr>
+<tr>
+<td><a href="../AuthorisationFailure/">AuthorisationFailure</a></td>
+<td>Concept representing Authorisation Failure</td>
+</tr>
+<tr>
+<td><a href="../AvailabilityBreach/">AvailabilityBreach</a></td>
+<td>Concept representing a breach of availability</td>
+</tr>
+<tr>
+<td><a href="../AvailabilityConcept/">AvailabilityConcept</a></td>
+<td>Indicates a concept is relevant to 'Availability' in CIA InfoSec model</td>
+</tr>
+<tr>
+<td><a href="../AvailabilityIncident/">AvailabilityIncident</a></td>
+<td>Incident where the availability of information or system has been</td>
+</tr>
+<tr>
+<td><a href="../AvoidanceControl/">AvoidanceControl</a></td>
+<td>Control that avoids an event with the goal of removing it completely</td>
+</tr>
+<tr>
+<td><a href="../AvoidConsequence/">AvoidConsequence</a></td>
+<td>Control that proactively avoids the consequence such that it has a</td>
+</tr>
+<tr>
+<td><a href="../AvoidImpact/">AvoidImpact</a></td>
+<td>Control that proactively avoids the impact such that it has a reduced</td>
+</tr>
+<tr>
+<td><a href="../AvoidSource/">AvoidSource</a></td>
+<td>Control that proactively avoids the risk source such that it has a</td>
+</tr>
+<tr>
+<td><a href="../BehaviourDistortion/">BehaviourDistortion</a></td>
+<td>Concept representing distortion of behaviour of individual(s)</td>
+</tr>
+<tr>
+<td><a href="../BelievesDiscrimination/">BelievesDiscrimination</a></td>
+<td>Discrimination based on a person's beliefs or practices</td>
+</tr>
+<tr>
+<td><a href="../Benefit/">Benefit</a></td>
+<td>Concept representing benefits - both material and immaterial</td>
+</tr>
+<tr>
+<td><a href="../Bias/">Bias</a></td>
+<td>Bias is defined as the systematic difference in treatment of certain</td>
+</tr>
+<tr>
+<td><a href="../Blackmail/">Blackmail</a></td>
+<td>Concept representing Blackmail</td>
+</tr>
+<tr>
+<td><a href="../BruteForceAuthorisations/">BruteForceAuthorisations</a></td>
+<td>Concept representing Brute Force Authorisations i</td>
+</tr>
+<tr>
+<td><a href="../CasteDiscrimination/">CasteDiscrimination</a></td>
+<td>Discrimination based on a person's caste, a form of social</td>
+</tr>
+<tr>
+<td><a href="../ChangeConsequence/">ChangeConsequence</a></td>
+<td>Control that proactively changes the consequence event such that one</td>
+</tr>
+<tr>
+<td><a href="../ChangeImpact/">ChangeImpact</a></td>
+<td>Control that proactively changes the impact event such that one event is</td>
+</tr>
+<tr>
+<td><a href="../Coercion/">Coercion</a></td>
+<td>Concept representing Coercion</td>
+</tr>
+<tr>
+<td><a href="../CognitiveBias/">CognitiveBias</a></td>
+<td>Bias that occurs when humans are processing and interpreting information</td>
+</tr>
+<tr>
+<td><a href="../Compensation/">Compensation</a></td>
+<td>Something that acts as or provides compensation - which can be monetary</td>
+</tr>
+<tr>
+<td><a href="../ComponentFailure/">ComponentFailure</a></td>
+<td>Concept representing Component Failure</td>
+</tr>
+<tr>
+<td><a href="../ComponentMalfunction/">ComponentMalfunction</a></td>
+<td>Concept representing Component Malfunction</td>
+</tr>
+<tr>
+<td><a href="../CompromiseAccount/">CompromiseAccount</a></td>
+<td>Concept representing a compromised account that is then used by the</td>
+</tr>
+<tr>
+<td><a href="../CompromiseAccountCredentials/">CompromiseAccountCredentials</a></td>
+<td>Concept representing Account Credentials to be compromised</td>
+</tr>
+<tr>
+<td><a href="../ConfidentialityBreach/">ConfidentialityBreach</a></td>
+<td>Concept representing a breach of confidentiality</td>
+</tr>
+<tr>
+<td><a href="../ConfidentialityConcept/">ConfidentialityConcept</a></td>
+<td>Indicates a concept is relevant to 'Confidentiality' in CIA InfoSec</td>
+</tr>
+<tr>
+<td><a href="../ConfidentialityIncident/">ConfidentialityIncident</a></td>
+<td>Incident where the confidentiality of information or system has been</td>
+</tr>
+<tr>
+<td><a href="../ConfirmationBias/">ConfirmationBias</a></td>
+<td>Bias that occurs when hypotheses, regardless of their veracity, are more</td>
+</tr>
+<tr>
+<td><a href="../ConfoundingVariablesBias/">ConfoundingVariablesBias</a></td>
+<td>Bias that occurs as a confounding variable that influences both the</td>
+</tr>
+<tr>
+<td><a href="../ConsequenceControl/">ConsequenceControl</a></td>
+<td>Risk control for managing consequences</td>
+</tr>
+<tr>
+<td><a href="../ContainmentControl/">ContainmentControl</a></td>
+<td>Control that aims to contain the event in terms of limiting its</td>
+</tr>
+<tr>
+<td><a href="../CopyrightViolation/">CopyrightViolation</a></td>
+<td>Concept representing Copyright Violation</td>
+</tr>
+<tr>
+<td><a href="../CoverageBias/">CoverageBias</a></td>
+<td>Bias that occurs when a population represented in a dataset does not</td>
+</tr>
+<tr>
+<td><a href="../CredibilityLoss/">CredibilityLoss</a></td>
+<td>Concept representing Credibility Loss</td>
+</tr>
+<tr>
+<td><a href="../CrossBorderIncident/">CrossBorderIncident</a></td>
+<td>Incident involving cross-border or multiple jurisdictions</td>
+</tr>
+<tr>
+<td><a href="../Cryptojacking/">Cryptojacking</a></td>
+<td>Concept representing Cryptojacking</td>
+</tr>
+<tr>
+<td><a href="../CustomerConfidenceLoss/">CustomerConfidenceLoss</a></td>
+<td>Concept representing Customer Confidence Loss</td>
+</tr>
+<tr>
+<td><a href="../CustomerSupportLimited/">CustomerSupportLimited</a></td>
+<td>Concept representing customer support to be limited</td>
+</tr>
+<tr>
+<td><a href="../Damage/">Damage</a></td>
+<td>Concept representing Damage</td>
+</tr>
+<tr>
+<td><a href="../DataAggregationBias/">DataAggregationBias</a></td>
+<td>Bias that occurs when aggregating data covering different groups of</td>
+</tr>
+<tr>
+<td><a href="../DataBias/">DataBias</a></td>
+<td>Bias that occurs when data properties that if unaddressed lead to</td>
+</tr>
+<tr>
+<td><a href="../DataBreach/">DataBreach</a></td>
+<td>Concept representing Data Breach</td>
+</tr>
+<tr>
+<td><a href="../DataCollectionError/">DataCollectionError</a></td>
+<td>Concept representing error related to data collection</td>
+</tr>
+<tr>
+<td><a href="../DataCorruption/">DataCorruption</a></td>
+<td>Concept representing Corruption of Data</td>
+</tr>
+<tr>
+<td><a href="../DataErasureError/">DataErasureError</a></td>
+<td>Concept representing error related to data erasure</td>
+</tr>
+<tr>
+<td><a href="../DataInaccurate/">DataInaccurate</a></td>
+<td>Concept representing data being inaccurate</td>
+</tr>
+<tr>
+<td><a href="../DataIncomplete/">DataIncomplete</a></td>
+<td>Concept representing data being incomplete</td>
+</tr>
+<tr>
+<td><a href="../DataInconsistent/">DataInconsistent</a></td>
+<td>Concept representing data being inconsistent</td>
+</tr>
+<tr>
+<td><a href="../DataLoss/">DataLoss</a></td>
+<td>Concept representing data loss (e</td>
+</tr>
+<tr>
+<td><a href="../DataMisclassified/">DataMisclassified</a></td>
+<td>Concept representing data being misclassified</td>
+</tr>
+<tr>
+<td><a href="../DataMisinterpretation/">DataMisinterpretation</a></td>
+<td>Concept representing data being misinterpretation</td>
+</tr>
+<tr>
+<td><a href="../DataNoise/">DataNoise</a></td>
+<td>Concept representing data being noise</td>
+</tr>
+<tr>
+<td><a href="../DataOutdated/">DataOutdated</a></td>
+<td>Concept representing data being outdated</td>
+</tr>
+<tr>
+<td><a href="../DataPreparationError/">DataPreparationError</a></td>
+<td>Concept representing error related to data preparation</td>
+</tr>
+<tr>
+<td><a href="../DataProcessingBias/">DataProcessingBias</a></td>
+<td>Bias that occurs due to pre-processing (or post-processing) of data,</td>
+</tr>
+<tr>
+<td><a href="../DataProcessingError/">DataProcessingError</a></td>
+<td>Concept representing operational error in the processing of data</td>
+</tr>
+<tr>
+<td><a href="../DataRisk/">DataRisk</a></td>
+<td>Risks and risk concepts related to data</td>
+</tr>
+<tr>
+<td><a href="../DataSelectionError/">DataSelectionError</a></td>
+<td>Concept representing an error in data selection</td>
+</tr>
+<tr>
+<td><a href="../DataSparse/">DataSparse</a></td>
+<td>Concept representing data being sparse</td>
+</tr>
+<tr>
+<td><a href="../DataStorageError/">DataStorageError</a></td>
+<td>Concept representing error related to data storage</td>
+</tr>
+<tr>
+<td><a href="../DataTransferError/">DataTransferError</a></td>
+<td>Concept representing error related to data transfer</td>
+</tr>
+<tr>
+<td><a href="../DataUnavailable/">DataUnavailable</a></td>
+<td>Concept representing data being unavailable</td>
+</tr>
+<tr>
+<td><a href="../DataUnrepresentative/">DataUnrepresentative</a></td>
+<td>Concept representing data being unrepresentative</td>
+</tr>
+<tr>
+<td><a href="../DataUnstructured/">DataUnstructured</a></td>
+<td>Concept representing data being unstructured</td>
+</tr>
+<tr>
+<td><a href="../DataUnverified/">DataUnverified</a></td>
+<td>Concept representing data being unverified</td>
+</tr>
+<tr>
+<td><a href="../Deception/">Deception</a></td>
+<td>Concept representing Deception</td>
+</tr>
+<tr>
+<td><a href="../DelayedApplicationProcessing/">DelayedApplicationProcessing</a></td>
+<td>Concept representing delayed processing of applications</td>
+</tr>
+<tr>
+<td><a href="../DeliberateIncident/">DeliberateIncident</a></td>
+<td>Incident caused due to deliberate actions of a human</td>
+</tr>
+<tr>
+<td><a href="../DenialServiceAttack/">DenialServiceAttack</a></td>
+<td>Concept representing Denial of Service Attack (DoS)</td>
+</tr>
+<tr>
+<td><a href="../DetectionControl/">DetectionControl</a></td>
+<td>Control that detects an event</td>
+</tr>
+<tr>
+<td><a href="../Detriment/">Detriment</a></td>
+<td>Concept representing Detriment</td>
+</tr>
+<tr>
+<td><a href="../DirectDiscrimination/">DirectDiscrimination</a></td>
+<td>Occurs when a person is treated less favourably than another in a</td>
+</tr>
+<tr>
+<td><a href="../DisabilityDiscrimination/">DisabilityDiscrimination</a></td>
+<td>Discrimination against individuals based on physical or mental</td>
+</tr>
+<tr>
+<td><a href="../Discrimination/">Discrimination</a></td>
+<td>Discrimination is the treatment of a person or particular group of</td>
+</tr>
+<tr>
+<td><a href="../DisproportionateEnergyConsumption/">DisproportionateEnergyConsumption</a></td>
+<td>The occurrence or potential occurrence of disproportionate energy</td>
+</tr>
+<tr>
+<td><a href="../DistributedDenialServiceAttack/">DistributedDenialServiceAttack</a></td>
+<td>Concept representing Distributed Denial of Service Attack (DDoS)</td>
+</tr>
+<tr>
+<td><a href="../DocumentationIssues/">DocumentationIssues</a></td>
+<td>Concept representing issues with the development and use of</td>
+</tr>
+<tr>
+<td><a href="../Earthquake/">Earthquake</a></td>
+<td>The occurrence or potential occurrence of earthquakes</td>
+</tr>
+<tr>
+<td><a href="../EliminationControl/">EliminationControl</a></td>
+<td>Control that eliminates an event entirely such that the event does not</td>
+</tr>
+<tr>
+<td><a href="../EnvironmentalIncident/">EnvironmentalIncident</a></td>
+<td>Incident caused due to environmental factors outside human controls</td>
+</tr>
+<tr>
+<td><a href="../EnvironmentalRisk/">EnvironmentalRisk</a></td>
+<td>Risks and issues that have their origin in environment or can affect the</td>
+</tr>
+<tr>
+<td><a href="../EquipmentFailure/">EquipmentFailure</a></td>
+<td>Concept representing Equipment Failure</td>
+</tr>
+<tr>
+<td><a href="../EquipmentMalfunction/">EquipmentMalfunction</a></td>
+<td>Concept representing Equipment Malfunction</td>
+</tr>
+<tr>
+<td><a href="../ErroneousUse/">ErroneousUse</a></td>
+<td>Concept representing erroneous use (of something)</td>
+</tr>
+<tr>
+<td><a href="../EthnicDiscrimination/">EthnicDiscrimination</a></td>
+<td>Discrimination against individuals based on their ethnicity or cultural</td>
+</tr>
+<tr>
+<td><a href="../ExcellenceDiscrimination/">ExcellenceDiscrimination</a></td>
+<td>Favouritism towards individuals deemed more competent or superior, often</td>
+</tr>
+<tr>
+<td><a href="../Exploitation/">Exploitation</a></td>
+<td>Concept representing Exploitation</td>
+</tr>
+<tr>
+<td><a href="../ExposureToHarmfulSpeech/">ExposureToHarmfulSpeech</a></td>
+<td>Concept representing Harmful Speech</td>
+</tr>
+<tr>
+<td><a href="../ExternalSecurityThreat/">ExternalSecurityThreat</a></td>
+<td>Concepts associated with security threats that are likely to originate</td>
+</tr>
+<tr>
+<td><a href="../Extortion/">Extortion</a></td>
+<td>Concept representing Extortion</td>
+</tr>
+<tr>
+<td><a href="../ExtremelyHighLikelihood/">ExtremelyHighLikelihood</a></td>
+<td>Level where Likelihood is Extremely High</td>
+</tr>
+<tr>
+<td><a href="../ExtremelyHighRisk/">ExtremelyHighRisk</a></td>
+<td>Level where Risk is Extremely High</td>
+</tr>
+<tr>
+<td><a href="../ExtremelyHighSeverity/">ExtremelyHighSeverity</a></td>
+<td>Level where Severity is Extremely High</td>
+</tr>
+<tr>
+<td><a href="../ExtremelyLowLikelihood/">ExtremelyLowLikelihood</a></td>
+<td>Level where Likelihood is Extremely Low</td>
+</tr>
+<tr>
+<td><a href="../ExtremelyLowRisk/">ExtremelyLowRisk</a></td>
+<td>Level where Risk is Extremely Low</td>
+</tr>
+<tr>
+<td><a href="../ExtremelyLowSeverity/">ExtremelyLowSeverity</a></td>
+<td>Level where Severity is Extremely Low</td>
+</tr>
+<tr>
+<td><a href="../FinancialImpact/">FinancialImpact</a></td>
+<td>Things that cause or have the potential to impact financial resources</td>
+</tr>
+<tr>
+<td><a href="../FinancialLoss/">FinancialLoss</a></td>
+<td>Concept representing Financial Loss which may be actual loss of existing</td>
+</tr>
+<tr>
+<td><a href="../Floods/">Floods</a></td>
+<td>The occurrence or potential occurrence of floods</td>
+</tr>
+<tr>
+<td><a href="../Fraud/">Fraud</a></td>
+<td>Concept representing Fraud</td>
+</tr>
+<tr>
+<td><a href="../GenderDiscrimination/">GenderDiscrimination</a></td>
+<td>Discrimination based on a person's gender identity or gender expression</td>
+</tr>
+<tr>
+<td><a href="../GeographicDiscrimination/">GeographicDiscrimination</a></td>
+<td>Discrimination based on a person's geographical origin or residence</td>
+</tr>
+<tr>
+<td><a href="../GoodwillLoss/">GoodwillLoss</a></td>
+<td>Concept representing Goodwill Loss</td>
+</tr>
+<tr>
+<td><a href="../GroupAttributionBias/">GroupAttributionBias</a></td>
+<td>Bias that occurs when a human assumes that what is true for an</td>
+</tr>
+<tr>
+<td><a href="../GroupHealthSafety/">GroupHealthSafety</a></td>
+<td>Concept representing health &amp; safety of a group or group(s)</td>
+</tr>
+<tr>
+<td><a href="../GroupRisk/">GroupRisk</a></td>
+<td>Risks and issues that affect or have the potential to affect groups in</td>
+</tr>
+<tr>
+<td><a href="../HaltConsequence/">HaltConsequence</a></td>
+<td>Control that halts the (ongoing) consequence event or process such that</td>
+</tr>
+<tr>
+<td><a href="../HaltImpact/">HaltImpact</a></td>
+<td>Control that halts the (ongoing) impact event or process such that it no</td>
+</tr>
+<tr>
+<td><a href="../HaltSource/">HaltSource</a></td>
+<td>Control that halts the (ongoing) risk source event or process such that</td>
+</tr>
+<tr>
+<td><a href="../Harassment/">Harassment</a></td>
+<td>Concept representing harassment of individual(s)</td>
+</tr>
+<tr>
+<td><a href="../Harm/">Harm</a></td>
+<td>Concept representing Harm to humans</td>
+</tr>
+<tr>
+<td><a href="../Health/">Health</a></td>
+<td>Concept representing health of individual(s), or group(s), or society at</td>
+</tr>
+<tr>
+<td><a href="../HealthSafety/">HealthSafety</a></td>
+<td>Concept representing health &amp; safety of individual(s), or group(s), or</td>
+</tr>
+<tr>
+<td><a href="../HighLikelihood/">HighLikelihood</a></td>
+<td>Level where Likelihood is High</td>
+</tr>
+<tr>
+<td><a href="../HighRisk/">HighRisk</a></td>
+<td>Level where Risk is High</td>
+</tr>
+<tr>
+<td><a href="../HighSeverity/">HighSeverity</a></td>
+<td>Level where Severity is High</td>
+</tr>
+<tr>
+<td><a href="../Homophobia/">Homophobia</a></td>
+<td>Hostility or prejudice against individuals who are or are perceived to</td>
+</tr>
+<tr>
+<td><a href="../HumanErrors/">HumanErrors</a></td>
+<td>Concept representing activities that are errors caused by humans without</td>
+</tr>
+<tr>
+<td><a href="../HumanOversightIneffective/">HumanOversightIneffective</a></td>
+<td>Concept representing cases where human oversight is ineffective for the</td>
+</tr>
+<tr>
+<td><a href="../HumanOversightInsufficient/">HumanOversightInsufficient</a></td>
+<td>Concept representing cases where human oversight is insufficient for the</td>
+</tr>
+<tr>
+<td><a href="../IdentificationControl/">IdentificationControl</a></td>
+<td>Control that identifies the characteristics of an event</td>
+</tr>
+<tr>
+<td><a href="../IdentityFraud/">IdentityFraud</a></td>
+<td>Concept representing Identity Fraud</td>
+</tr>
+<tr>
+<td><a href="../IdentityTheft/">IdentityTheft</a></td>
+<td>Concept representing Identity Theft</td>
+</tr>
+<tr>
+<td><a href="../IdentityVerificationFailure/">IdentityVerificationFailure</a></td>
+<td>Concept representing failure to verify identity</td>
+</tr>
+<tr>
+<td><a href="../IllegalDataProcessing/">IllegalDataProcessing</a></td>
+<td>Concept representing Illegal Processing of Data</td>
+</tr>
+<tr>
+<td><a href="../ImpactControl/">ImpactControl</a></td>
+<td>Risk Mitigation Measure that controls Impacts</td>
+</tr>
+<tr>
+<td><a href="../ImpairedDecisionMaking/">ImpairedDecisionMaking</a></td>
+<td>Concept representing Impaired Decision Making</td>
+</tr>
+<tr>
+<td><a href="../ImplicitBias/">ImplicitBias</a></td>
+<td>Bias that occurs when a human makes an association or assumption based</td>
+</tr>
+<tr>
+<td><a href="../InabilityToEnterIntoContract/">InabilityToEnterIntoContract</a></td>
+<td>Concept representing inability to enter into contract</td>
+</tr>
+<tr>
+<td><a href="../InabilityToEstablishLegalClaims/">InabilityToEstablishLegalClaims</a></td>
+<td>Concept representing inability to establish legal claims</td>
+</tr>
+<tr>
+<td><a href="../InabilityToFulfilLegalObligations/">InabilityToFulfilLegalObligations</a></td>
+<td>Concept representing inability to fulfil legal obligations</td>
+</tr>
+<tr>
+<td><a href="../InabilityToProcessPayments/">InabilityToProcessPayments</a></td>
+<td>Concept representing inability to process payments</td>
+</tr>
+<tr>
+<td><a href="../InabilityToProtectVitalInterests/">InabilityToProtectVitalInterests</a></td>
+<td>Concept representing inability to protect vital interests</td>
+</tr>
+<tr>
+<td><a href="../InabilityToProvideHealthCare/">InabilityToProvideHealthCare</a></td>
+<td>Concept representing inability to provide health care</td>
+</tr>
+<tr>
+<td><a href="../Incident/">Incident</a></td>
+<td>An actual or occurred event</td>
+</tr>
+<tr>
+<td><a href="../IncidentAssessmentReport/">IncidentAssessmentReport</a></td>
+<td>A report describing the assessment of an incident in terms of its</td>
+</tr>
+<tr>
+<td><a href="../IncidentConcluded/">IncidentConcluded</a></td>
+<td>The incident has stopped or finished or concluded without any active</td>
+</tr>
+<tr>
+<td><a href="../IncidentConcludingReport/">IncidentConcludingReport</a></td>
+<td>A report describing the conclusion of an investigation regarding an</td>
+</tr>
+<tr>
+<td><a href="../IncidentDetectionReport/">IncidentDetectionReport</a></td>
+<td>A report describing the detection of an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentHalted/">IncidentHalted</a></td>
+<td>The incident has halted or paused with a high likelihood of resuming or</td>
+</tr>
+<tr>
+<td><a href="../IncidentHandlingReport/">IncidentHandlingReport</a></td>
+<td>A report describing the response to or handling of an incident regarding</td>
+</tr>
+<tr>
+<td><a href="../IncidentIdentifier/">IncidentIdentifier</a></td>
+<td>Identifier associated with an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentImpactAssessment/">IncidentImpactAssessment</a></td>
+<td>An impact assessment associated with an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentInvestigationCompleted/">IncidentInvestigationCompleted</a></td>
+<td>Status indicating the investigation has been completed and findings are</td>
+</tr>
+<tr>
+<td><a href="../IncidentInvestigationNotStarted/">IncidentInvestigationNotStarted</a></td>
+<td>Status indicating the investigation has not yet been started</td>
+</tr>
+<tr>
+<td><a href="../IncidentInvestigationOngoing/">IncidentInvestigationOngoing</a></td>
+<td>Status indicating the investigation is ongoing</td>
+</tr>
+<tr>
+<td><a href="../IncidentInvestigationPreliminary/">IncidentInvestigationPreliminary</a></td>
+<td>Status indicating the investigation is at a preliminary stage with</td>
+</tr>
+<tr>
+<td><a href="../IncidentInvestigationStatus/">IncidentInvestigationStatus</a></td>
+<td>Status associated with investigation of an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentMitigated/">IncidentMitigated</a></td>
+<td>The incident has been mitigated against future recurrences i</td>
+</tr>
+<tr>
+<td><a href="../IncidentMitigationMeasure/">IncidentMitigationMeasure</a></td>
+<td>A mitigation measure taken in response specifically to mitigate an</td>
+</tr>
+<tr>
+<td><a href="../IncidentNearMiss/">IncidentNearMiss</a></td>
+<td>The state where an incident was almost successful in taking place i</td>
+</tr>
+<tr>
+<td><a href="../IncidentNotice/">IncidentNotice</a></td>
+<td>Notice associated with an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentOngoing/">IncidentOngoing</a></td>
+<td>The incident is ongoing i</td>
+</tr>
+<tr>
+<td><a href="../IncidentOngoingReport/">IncidentOngoingReport</a></td>
+<td>A report describing on ongoing investigation regarding an incident where</td>
+</tr>
+<tr>
+<td><a href="../IncidentPreliminaryReport/">IncidentPreliminaryReport</a></td>
+<td>A report describing the preliminary investigation regarding an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentRegister/">IncidentRegister</a></td>
+<td>A register recording incidents, their reports, notifications, and other</td>
+</tr>
+<tr>
+<td><a href="../IncidentReport/">IncidentReport</a></td>
+<td>Documented information about an incident, its handling, assessments,and</td>
+</tr>
+<tr>
+<td><a href="../IncidentStatus/">IncidentStatus</a></td>
+<td>Status associated with an incident</td>
+</tr>
+<tr>
+<td><a href="../IncidentStatusUnknown/">IncidentStatusUnknown</a></td>
+<td>The status of a incident is unknown</td>
+</tr>
+<tr>
+<td><a href="../IncidentSuspected/">IncidentSuspected</a></td>
+<td>The state where a incident is suspected, but has not yet been confirmed</td>
+</tr>
+<tr>
+<td><a href="../IncidentSuspectedReport/">IncidentSuspectedReport</a></td>
+<td>A report describing the suspicion of an incident in the past or</td>
+</tr>
+<tr>
+<td><a href="../IncidentTerminated/">IncidentTerminated</a></td>
+<td>The incident has been stopped or terminated through the use of a</td>
+</tr>
+<tr>
+<td><a href="../IndirectDiscrimination/">IndirectDiscrimination</a></td>
+<td>Occurs when an apparently neutral provision, criterion, or practice puts</td>
+</tr>
+<tr>
+<td><a href="../IndividualHealthSafety/">IndividualHealthSafety</a></td>
+<td>Concept representing health &amp; safety of individual(s)</td>
+</tr>
+<tr>
+<td><a href="../IndividualRisk/">IndividualRisk</a></td>
+<td>Risks and issues that affect or have the potential to affect specific</td>
+</tr>
+<tr>
+<td><a href="../InformativenessBias/">InformativenessBias</a></td>
+<td>Bias that occurs when the mapping between inputs present in the data and</td>
+</tr>
+<tr>
+<td><a href="../InGroupBias/">InGroupBias</a></td>
+<td>Bias that occurs when showing partiality to one's own group or own</td>
+</tr>
+<tr>
+<td><a href="../Injury/">Injury</a></td>
+<td>Concept representing Injury</td>
+</tr>
+<tr>
+<td><a href="../InstructionsInaccessible/">InstructionsInaccessible</a></td>
+<td>Concept representing cases wher instructions are inaccessible</td>
+</tr>
+<tr>
+<td><a href="../InstructionsIncorrect/">InstructionsIncorrect</a></td>
+<td>Concept representing cases where instructions are incorrect for</td>
+</tr>
+<tr>
+<td><a href="../InstructionsInsufficient/">InstructionsInsufficient</a></td>
+<td>Concept representing cases where instructions are not sufficient for the</td>
+</tr>
+<tr>
+<td><a href="../InstructionsUnsuitable/">InstructionsUnsuitable</a></td>
+<td>Concept representing cases wher instructions are unsuitable for the</td>
+</tr>
+<tr>
+<td><a href="../IntegrityBreach/">IntegrityBreach</a></td>
+<td>Concept representing a breach of integrity</td>
+</tr>
+<tr>
+<td><a href="../IntegrityConcept/">IntegrityConcept</a></td>
+<td>Indicates a concept is relevant to 'Integrity' in CIA InfoSec model</td>
+</tr>
+<tr>
+<td><a href="../IntegrityIncident/">IntegrityIncident</a></td>
+<td>Incident where the integrity of information or system has been affected</td>
+</tr>
+<tr>
+<td><a href="../IntentionalManipulation/">IntentionalManipulation</a></td>
+<td>Concept representing Intentional Manipulation</td>
+</tr>
+<tr>
+<td><a href="../IntentionalMisuse/">IntentionalMisuse</a></td>
+<td>Concept represent an intentional misuse (of something)</td>
+</tr>
+<tr>
+<td><a href="../InterceptCommunications/">InterceptCommunications</a></td>
+<td>Concept representing Interception of Communications</td>
+</tr>
+<tr>
+<td><a href="../InterruptionControl/">InterruptionControl</a></td>
+<td>Control that interrupts an event without removing the possibility for it</td>
+</tr>
+<tr>
+<td><a href="../InterventionControl/">InterventionControl</a></td>
+<td>Control that intervenes in the operations of the event to change some</td>
+</tr>
+<tr>
+<td><a href="../InvestigationControl/">InvestigationControl</a></td>
+<td>Control that identifies information through an investigative process</td>
+</tr>
+<tr>
+<td><a href="../JudicialCosts/">JudicialCosts</a></td>
+<td>Something that involves or causes judicial costs to be paid</td>
+</tr>
+<tr>
+<td><a href="../JudicialPenalty/">JudicialPenalty</a></td>
+<td>Something that involves or causes judicial penalties to be paid</td>
+</tr>
+<tr>
+<td><a href="../LackOfSystemTransparency/">LackOfSystemTransparency</a></td>
+<td>Concept representing lack of transparency to humans related to the</td>
+</tr>
+<tr>
+<td><a href="../LanguageDiscrimination/">LanguageDiscrimination</a></td>
+<td>Discrimination based on a person's language, often linked to national</td>
+</tr>
+<tr>
+<td><a href="../LegalComplianceRisk/">LegalComplianceRisk</a></td>
+<td>Risks and consequences regarding legal compliance and its violation</td>
+</tr>
+<tr>
+<td><a href="../LegallyRelevantConsequence/">LegallyRelevantConsequence</a></td>
+<td>A consequence that is legally relevant i</td>
+</tr>
+<tr>
+<td><a href="../LegalRiskConcept/">LegalRiskConcept</a></td>
+<td>Risk concepts, including any potential risk sources, consequences, or</td>
+</tr>
+<tr>
+<td><a href="../LegalSupportLimited/">LegalSupportLimited</a></td>
+<td>Concept representing limitation of legal support</td>
+</tr>
+<tr>
+<td><a href="../LoggingControl/">LoggingControl</a></td>
+<td>Control that logs an event</td>
+</tr>
+<tr>
+<td><a href="../LowLikelihood/">LowLikelihood</a></td>
+<td>Level where Likelihood is Low</td>
+</tr>
+<tr>
+<td><a href="../LowRisk/">LowRisk</a></td>
+<td>Level where Risk is Low</td>
+</tr>
+<tr>
+<td><a href="../LowSeverity/">LowSeverity</a></td>
+<td>Level where Severity is Low</td>
+</tr>
+<tr>
+<td><a href="../LoyaltyProgramExclusion/">LoyaltyProgramExclusion</a></td>
+<td>Concept representing exclusion from loyalty program</td>
+</tr>
+<tr>
+<td><a href="../MaliciousActivity/">MaliciousActivity</a></td>
+<td>Intentional actions designed to harm, exploit, manipulate, or disrupt</td>
+</tr>
+<tr>
+<td><a href="../MaliciousCodeAttack/">MaliciousCodeAttack</a></td>
+<td>Concept representing Malicious Code Attack</td>
+</tr>
+<tr>
+<td><a href="../MalwareAttack/">MalwareAttack</a></td>
+<td>Concept representing Malware Attack</td>
+</tr>
+<tr>
+<td><a href="../MaterialDamage/">MaterialDamage</a></td>
+<td>Concept representing Material Damage</td>
+</tr>
+<tr>
+<td><a href="../MentalHealth/">MentalHealth</a></td>
+<td>Concept representing mental health of individual(s), or group(s), or</td>
+</tr>
+<tr>
+<td><a href="../MentalSafety/">MentalSafety</a></td>
+<td>Concept representing mental safety of individual(s), or group(s), or</td>
+</tr>
+<tr>
+<td><a href="../Misandry/">Misandry</a></td>
+<td>Dislike, contempt, or prejudice against men</td>
+</tr>
+<tr>
+<td><a href="../Misogyny/">Misogyny</a></td>
+<td>Dislike, contempt, or prejudice against women</td>
+</tr>
+<tr>
+<td><a href="../Misuse/">Misuse</a></td>
+<td>Concept representing a misuse (of something)</td>
+</tr>
+<tr>
+<td><a href="../MitigationControl/">MitigationControl</a></td>
+<td>Control that aims to reduce the likelihood or effect of an event with</td>
+</tr>
+<tr>
+<td><a href="../ModerateLikelihood/">ModerateLikelihood</a></td>
+<td>Level where Likelihood is Moderate</td>
+</tr>
+<tr>
+<td><a href="../ModerateRisk/">ModerateRisk</a></td>
+<td>Level where Risk is Moderate</td>
+</tr>
+<tr>
+<td><a href="../ModerateSeverity/">ModerateSeverity</a></td>
+<td>Level where Severity is Moderate</td>
+</tr>
+<tr>
+<td><a href="../ModificationControl/">ModificationControl</a></td>
+<td>Control that modifies the context to change the event's characteristics</td>
+</tr>
+<tr>
+<td><a href="../MonitorConsequence/">MonitorConsequence</a></td>
+<td>Control that monitors a Risk Consequence</td>
+</tr>
+<tr>
+<td><a href="../MonitorControl/">MonitorControl</a></td>
+<td>Control that monitors for the occurrence of an event</td>
+</tr>
+<tr>
+<td><a href="../MonitorImpact/">MonitorImpact</a></td>
+<td>Control that monitors a Risk Impact</td>
+</tr>
+<tr>
+<td><a href="../MonitorRisk/">MonitorRisk</a></td>
+<td>Control that monitors a Risk</td>
+</tr>
+<tr>
+<td><a href="../MonitorRiskControl/">MonitorRiskControl</a></td>
+<td>Control that monitors another Control</td>
+</tr>
+<tr>
+<td><a href="../MonitorRiskSource/">MonitorRiskSource</a></td>
+<td>Control that monitors a Risk Source</td>
+</tr>
+<tr>
+<td><a href="../MonitorVulnerabilities/">MonitorVulnerabilities</a></td>
+<td>Control that monitors a Risk Vulnerability</td>
+</tr>
+<tr>
+<td><a href="../NationalityDiscrimination/">NationalityDiscrimination</a></td>
+<td>Discrimination based on a person's nationality or citizenship</td>
+</tr>
+<tr>
+<td><a href="../NegotiatingCapacityLoss/">NegotiatingCapacityLoss</a></td>
+<td>Concept representing Negotiating Capacity Loss</td>
+</tr>
+<tr>
+<td><a href="../NonMaterialDamage/">NonMaterialDamage</a></td>
+<td>Concept representing Non-Material Damage</td>
+</tr>
+<tr>
+<td><a href="../NonNormalityBias/">NonNormalityBias</a></td>
+<td>Bias that occurs when the dataset is subject to a different (i</td>
+</tr>
+<tr>
+<td><a href="../NonResponseBias/">NonResponseBias</a></td>
+<td>Bias that occurs when people from certain groups opt-out of surveys at</td>
+</tr>
+<tr>
+<td><a href="../OperationalSecurityRisk/">OperationalSecurityRisk</a></td>
+<td>Risks and issues that arise during operational processes</td>
+</tr>
+<tr>
+<td><a href="../OpportunityLoss/">OpportunityLoss</a></td>
+<td>Concept representing Opportunity Loss</td>
+</tr>
+<tr>
+<td><a href="../OrganisationalManagementRisk/">OrganisationalManagementRisk</a></td>
+<td>Concept representing issues and risks associated with the management of</td>
+</tr>
+<tr>
+<td><a href="../OrganisationalRiskConcept/">OrganisationalRiskConcept</a></td>
+<td>Risk concepts, including any potential risk sources, consequences, or</td>
+</tr>
+<tr>
+<td><a href="../OutGroupHomogeneityBias/">OutGroupHomogeneityBias</a></td>
+<td>Bias that occurs when seeing out-group members as more alike than</td>
+</tr>
+<tr>
+<td><a href="../OverrideControl/">OverrideControl</a></td>
+<td>Control that aims to override the event with the goal of avoiding its</td>
+</tr>
+<tr>
+<td><a href="../OversightControl/">OversightControl</a></td>
+<td>Control that provides oversight for an event in terms of having</td>
+</tr>
+<tr>
+<td><a href="../Payment/">Payment</a></td>
+<td>Something that acts as or provides payment e</td>
+</tr>
+<tr>
+<td><a href="../PersonalisationDisabled/">PersonalisationDisabled</a></td>
+<td>Concept representing personalisation disabled</td>
+</tr>
+<tr>
+<td><a href="../PersonalisationEnabled/">PersonalisationEnabled</a></td>
+<td>Concept representing personalisation enabled</td>
+</tr>
+<tr>
+<td><a href="../PersonalSafetyEndangerment/">PersonalSafetyEndangerment</a></td>
+<td>Concept representing Personal Safety Endangerment</td>
+</tr>
+<tr>
+<td><a href="../PhishingScam/">PhishingScam</a></td>
+<td>Concept representing Phishing Scam</td>
+</tr>
+<tr>
+<td><a href="../PhysicalAssault/">PhysicalAssault</a></td>
+<td>Concept representing Physical Assault</td>
+</tr>
+<tr>
+<td><a href="../PhysicalHarm/">PhysicalHarm</a></td>
+<td>Concept representing physical harm to an individual or individual(s)</td>
+</tr>
+<tr>
+<td><a href="../PhysicalHealth/">PhysicalHealth</a></td>
+<td>Concept representing physical health of individual(s), or group(s), or</td>
+</tr>
+<tr>
+<td><a href="../PhysicalSafety/">PhysicalSafety</a></td>
+<td>Concept representing physical safety of individual(s), or group(s), or</td>
+</tr>
+<tr>
+<td><a href="../PolicyRisk/">PolicyRisk</a></td>
+<td>Risks and consequences regarding policy and its associated processes</td>
+</tr>
+<tr>
+<td><a href="../PotentialConsequence/">PotentialConsequence</a></td>
+<td>Indicates a concept can potentially be a 'consequence concept within an</td>
+</tr>
+<tr>
+<td><a href="../PotentialImpact/">PotentialImpact</a></td>
+<td>Indicates a concept can potentially be a 'impact' concept within an</td>
+</tr>
+<tr>
+<td><a href="../PotentialRisk/">PotentialRisk</a></td>
+<td>Indicates a concept can potentially be a 'risk' concept within an</td>
+</tr>
+<tr>
+<td><a href="../PotentialRiskSource/">PotentialRiskSource</a></td>
+<td>Indicates a concept can potentially be a 'risk source' concept within an</td>
+</tr>
+<tr>
+<td><a href="../Privacy/">Privacy</a></td>
+<td>Concept representing privacy of humans at an individual, group, or</td>
+</tr>
+<tr>
+<td><a href="../ProactiveControl/">ProactiveControl</a></td>
+<td>Control that is established or functions before an event occurs</td>
+</tr>
+<tr>
+<td><a href="../PsychologicalHarm/">PsychologicalHarm</a></td>
+<td>Concept representing Psychological Harm</td>
+</tr>
+<tr>
+<td><a href="../PublicHealthSafety/">PublicHealthSafety</a></td>
+<td>Concept representing health and safety of the public at large</td>
+</tr>
+<tr>
+<td><a href="../PublicOrderBreach/">PublicOrderBreach</a></td>
+<td>Concept representing Public Order Breach</td>
+</tr>
+<tr>
+<td><a href="../PublicServicesExclusion/">PublicServicesExclusion</a></td>
+<td>Concept representing exclusion from public services</td>
+</tr>
+<tr>
+<td><a href="../QualityDegraded/">QualityDegraded</a></td>
+<td>Concepts representing risks and issues where Quality is Degraded</td>
+</tr>
+<tr>
+<td><a href="../QualityInconsistent/">QualityInconsistent</a></td>
+<td>Concepts representing risks and issues where Quality is Inconsistent</td>
+</tr>
+<tr>
+<td><a href="../QualityInsufficient/">QualityInsufficient</a></td>
+<td>Concepts representing risks and issues where Quality is Insufficient</td>
+</tr>
+<tr>
+<td><a href="../QualityRisk/">QualityRisk</a></td>
+<td>Concept representing risks and issues associated with quality of tasks,</td>
+</tr>
+<tr>
+<td><a href="../QualityUnknown/">QualityUnknown</a></td>
+<td>Concepts representing risks and issues where Quality is Unknown</td>
+</tr>
+<tr>
+<td><a href="../QualityUnverified/">QualityUnverified</a></td>
+<td>Concepts representing risks and issues where Quality is Unverified</td>
+</tr>
+<tr>
+<td><a href="../RacialDiscrimination/">RacialDiscrimination</a></td>
+<td>Discrimination against individuals because of their racial background or</td>
+</tr>
+<tr>
+<td><a href="../Racism/">Racism</a></td>
+<td>Prejudice or discrimination against people based on their race</td>
+</tr>
+<tr>
+<td><a href="../ReactiveControl/">ReactiveControl</a></td>
+<td>Control that is established or functions after an event occurs</td>
+</tr>
+<tr>
+<td><a href="../RecoveryControl/">RecoveryControl</a></td>
+<td>Control that aims to restore the context following an event</td>
+</tr>
+<tr>
+<td><a href="../ReduceLikelihood/">ReduceLikelihood</a></td>
+<td>Control that reduces the likelihood of an event to occur</td>
+</tr>
+<tr>
+<td><a href="../ReduceSeverity/">ReduceSeverity</a></td>
+<td>Control that reduces the severity of an event's effects</td>
+</tr>
+<tr>
+<td><a href="../ReductionControl/">ReductionControl</a></td>
+<td>Control that reduces the effects of an event</td>
+</tr>
+<tr>
+<td><a href="../Reidentification/">Reidentification</a></td>
+<td>Concept representing Re-identification</td>
+</tr>
+<tr>
+<td><a href="../ReligiousDiscrimination/">ReligiousDiscrimination</a></td>
+<td>Discrimination based on a person's religion or religious beliefs or</td>
+</tr>
+<tr>
+<td><a href="../RemediationControl/">RemediationControl</a></td>
+<td>Control that aims to fix or remedy the causes of an event to prevent</td>
+</tr>
+<tr>
+<td><a href="../RemoveConsequence/">RemoveConsequence</a></td>
+<td>Control that proactively removes the consequence event such that the</td>
+</tr>
+<tr>
+<td><a href="../RemoveImpact/">RemoveImpact</a></td>
+<td>Control that proactively removes the impact event such that the event</td>
+</tr>
+<tr>
+<td><a href="../RemoveSource/">RemoveSource</a></td>
+<td>Control that proactively removes the risk source such that it is no</td>
+</tr>
+<tr>
+<td><a href="../Remuneration/">Remuneration</a></td>
+<td>Something that acts as or provides remuneration which is in monetary or</td>
+</tr>
+<tr>
+<td><a href="../ReputationalLoss/">ReputationalLoss</a></td>
+<td>Concept representing Reputational Loss</td>
+</tr>
+<tr>
+<td><a href="../ReputationalRisk/">ReputationalRisk</a></td>
+<td>Risks and issues that affect the reputation of the organisation</td>
+</tr>
+<tr>
+<td><a href="../RequirementsBias/">RequirementsBias</a></td>
+<td>Bias that occurs in or during requirements creation</td>
+</tr>
+<tr>
+<td><a href="../ResilienceDegraded/">ResilienceDegraded</a></td>
+<td>Concepts representing risks and issues where Resilience is Degraded</td>
+</tr>
+<tr>
+<td><a href="../ResilienceInconsistent/">ResilienceInconsistent</a></td>
+<td>Concepts representing risks and issues where Resilience is Inconsistent</td>
+</tr>
+<tr>
+<td><a href="../ResilienceInsufficient/">ResilienceInsufficient</a></td>
+<td>Concepts representing risks and issues where Resilience is Insufficient</td>
+</tr>
+<tr>
+<td><a href="../ResilienceRisk/">ResilienceRisk</a></td>
+<td>Concepts representing risks and issues regarding Resilience</td>
+</tr>
+<tr>
+<td><a href="../ResilienceUnknown/">ResilienceUnknown</a></td>
+<td>Concepts representing risks and issues where Resilience is Unknown</td>
+</tr>
+<tr>
+<td><a href="../ResilienceUnverified/">ResilienceUnverified</a></td>
+<td>Concepts representing risks and issues where Resilience is Unverified</td>
+</tr>
+<tr>
+<td><a href="../ResolutionControl/">ResolutionControl</a></td>
+<td>Control that aims to resolve an event's effects with the goal of fixing</td>
+</tr>
+<tr>
+<td><a href="../ReversalControl/">ReversalControl</a></td>
+<td>Control that aims to reverse or undo the effects of an event</td>
+</tr>
+<tr>
+<td><a href="../ReverseDiscrimination/">ReverseDiscrimination</a></td>
+<td>Discrimination against members of a majority or historically dominant</td>
+</tr>
+<tr>
+<td><a href="../Reward/">Reward</a></td>
+<td>Something that acts as or provides rewards i</td>
+</tr>
+<tr>
+<td><a href="../RightsDenied/">RightsDenied</a></td>
+<td>The refusal or withholding or denial of the existence or applicability</td>
+</tr>
+<tr>
+<td><a href="../RightsEroded/">RightsEroded</a></td>
+<td>The gradual weakening or reduction of the scope and protection of rights</td>
+</tr>
+<tr>
+<td><a href="../RightsExercisePrevented/">RightsExercisePrevented</a></td>
+<td>Actions or measures that prevent an individual or group from exercising</td>
+</tr>
+<tr>
+<td><a href="../RightsImpact/">RightsImpact</a></td>
+<td>Concept representing Impact to Rights</td>
+</tr>
+<tr>
+<td><a href="../RightsLimited/">RightsLimited</a></td>
+<td>A limitation or restrictions on the scope or exercise of rights</td>
+</tr>
+<tr>
+<td><a href="../RightsObstructed/">RightsObstructed</a></td>
+<td>Interference with or blocking of the exercise of rights</td>
+</tr>
+<tr>
+<td><a href="../RightsUnfulfilled/">RightsUnfulfilled</a></td>
+<td>Failure to meet or complete the fulfilment of rights</td>
+</tr>
+<tr>
+<td><a href="../RightsViolated/">RightsViolated</a></td>
+<td>The infringement or breach of rights in a manner that constitutes a</td>
+</tr>
+<tr>
+<td><a href="../RiskAcceptance/">RiskAcceptance</a></td>
+<td>Entity decision to accept or enable a particular risk</td>
+</tr>
+<tr>
+<td><a href="../RiskAnalysis/">RiskAnalysis</a></td>
+<td>A technique or method used to analyse and identify risk levels, sources,</td>
+</tr>
+<tr>
+<td><a href="../RiskAssessment/">RiskAssessment</a></td>
+<td>Assessment of risk involving its identification, analysis, and</td>
+</tr>
+<tr>
+<td><a href="../RiskControl/">RiskControl</a></td>
+<td>Control that modifies risk</td>
+</tr>
+<tr>
+<td><a href="../RiskCriteria/">RiskCriteria</a></td>
+<td>Criteria for determining or evaluating significance of risk</td>
+</tr>
+<tr>
+<td><a href="../RiskEvaluation/">RiskEvaluation</a></td>
+<td>Process determining acceptability or tolerance of risk by comparing risk</td>
+</tr>
+<tr>
+<td><a href="../RiskIdentification/">RiskIdentification</a></td>
+<td>Identification of risks involving identification of risk sources,</td>
+</tr>
+<tr>
+<td><a href="../RiskManagement/">RiskManagement</a></td>
+<td>Systematic application of management policies, procedures, and practices</td>
+</tr>
+<tr>
+<td><a href="../RiskMatrix/">RiskMatrix</a></td>
+<td>Compares individual risks by selecting a consequence/ likelihood pair</td>
+</tr>
+<tr>
+<td><a href="../RiskMatrix3x3/">RiskMatrix3x3</a></td>
+<td>A Risk Matrix with 3 Likelihood, 3 Severity, and 3 Risk Level types</td>
+</tr>
+<tr>
+<td><a href="../RiskMatrix5x5/">RiskMatrix5x5</a></td>
+<td>A Risk Matrix with 5 Likelihood, 5 Severity, and 5 Risk Level types</td>
+</tr>
+<tr>
+<td><a href="../RiskMatrix7x7/">RiskMatrix7x7</a></td>
+<td>A Risk Matrix with 7 Likelihood, 7 Severity, and 7 Risk Level types</td>
+</tr>
+<tr>
+<td><a href="../RiskOwner/">RiskOwner</a></td>
+<td>Entity accountable for managing risk</td>
+</tr>
+<tr>
+<td><a href="../RiskPerception/">RiskPerception</a></td>
+<td>Perception or view on risk</td>
+</tr>
+<tr>
+<td><a href="../RiskSource/">RiskSource</a></td>
+<td>The 'cause' or 'source', which by itself or with another source has the</td>
+</tr>
+<tr>
+<td><a href="../RiskTreatment/">RiskTreatment</a></td>
+<td>Process by which risk is modified and mitigated</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S1L1/">RM3x3S1L1</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: Low; Likelihood: Low; and</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S1L2/">RM3x3S1L2</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: Low; Likelihood: Moderate;</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S1L3/">RM3x3S1L3</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: Low; Likelihood: High; and</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S2L1/">RM3x3S2L1</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: Moderate; Likelihood: Low;</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S2L2/">RM3x3S2L2</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S2L3/">RM3x3S2L3</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S3L1/">RM3x3S3L1</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: High; Likelihood: Low; and</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S3L2/">RM3x3S3L2</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM3x3S3L3/">RM3x3S3L3</a></td>
+<td>Node in a 3x3 Risk Matrix with Risk Severity: High; Likelihood: High;</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S1L1/">RM5x5S1L1</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very Low; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S1L2/">RM5x5S1L2</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very Low; Likelihood: Low;</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S1L3/">RM5x5S1L3</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S1L4/">RM5x5S1L4</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S1L5/">RM5x5S1L5</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very Low; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S2L1/">RM5x5S2L1</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Low; Likelihood: Very Low;</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S2L2/">RM5x5S2L2</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Low; Likelihood: Low; and</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S2L3/">RM5x5S2L3</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Low; Likelihood: Moderate;</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S2L4/">RM5x5S2L4</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Low; Likelihood: High; and</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S2L5/">RM5x5S2L5</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Low; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S3L1/">RM5x5S3L1</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Moderate; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S3L2/">RM5x5S3L2</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Moderate; Likelihood: Low;</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S3L3/">RM5x5S3L3</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S3L4/">RM5x5S3L4</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S3L5/">RM5x5S3L5</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Moderate; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S4L1/">RM5x5S4L1</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: High; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S4L2/">RM5x5S4L2</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: High; Likelihood: Low; and</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S4L3/">RM5x5S4L3</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S4L4/">RM5x5S4L4</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: High; Likelihood: High;</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S4L5/">RM5x5S4L5</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: High; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S5L1/">RM5x5S5L1</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S5L2/">RM5x5S5L2</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S5L3/">RM5x5S5L3</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S5L4/">RM5x5S5L4</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM5x5S5L5/">RM5x5S5L5</a></td>
+<td>Node in a 5x5 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L1/">RM7x7S1L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L2/">RM7x7S1L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L3/">RM7x7S1L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L4/">RM7x7S1L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L5/">RM7x7S1L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L6/">RM7x7S1L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S1L7/">RM7x7S1L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L1/">RM7x7S2L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L2/">RM7x7S2L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L3/">RM7x7S2L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood: Low;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L4/">RM7x7S2L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L5/">RM7x7S2L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L6/">RM7x7S2L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S2L7/">RM7x7S2L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very Low; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L1/">RM7x7S3L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: Extremely</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L2/">RM7x7S3L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: Very Low;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L3/">RM7x7S3L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: Low; and</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L4/">RM7x7S3L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: Moderate;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L5/">RM7x7S3L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: High; and</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L6/">RM7x7S3L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S3L7/">RM7x7S3L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Low; Likelihood: Extremely</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L1/">RM7x7S4L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L2/">RM7x7S4L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L3/">RM7x7S4L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood: Low;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L4/">RM7x7S4L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L5/">RM7x7S4L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L6/">RM7x7S4L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S4L7/">RM7x7S4L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Moderate; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L1/">RM7x7S5L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L2/">RM7x7S5L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L3/">RM7x7S5L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood: Low; and</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L4/">RM7x7S5L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L5/">RM7x7S5L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood: High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L6/">RM7x7S5L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood: Very</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S5L7/">RM7x7S5L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L1/">RM7x7S6L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L2/">RM7x7S6L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L3/">RM7x7S6L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L4/">RM7x7S6L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L5/">RM7x7S6L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L6/">RM7x7S6L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S6L7/">RM7x7S6L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Very High; Likelihood:</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L1/">RM7x7S7L1</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L2/">RM7x7S7L2</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L3/">RM7x7S7L3</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L4/">RM7x7S7L4</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L5/">RM7x7S7L5</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L6/">RM7x7S7L6</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RM7x7S7L7/">RM7x7S7L7</a></td>
+<td>Node in a 7x7 Risk Matrix with Risk Severity: Extremely High;</td>
+</tr>
+<tr>
+<td><a href="../RobustnessDegraded/">RobustnessDegraded</a></td>
+<td>Concepts representing risks and issues where Robustness is Degraded</td>
+</tr>
+<tr>
+<td><a href="../RobustnessInconsistent/">RobustnessInconsistent</a></td>
+<td>Concepts representing risks and issues where Robustness is Inconsistent</td>
+</tr>
+<tr>
+<td><a href="../RobustnessInsufficient/">RobustnessInsufficient</a></td>
+<td>Concepts representing risks and issues where Robustness is Insufficient</td>
+</tr>
+<tr>
+<td><a href="../RobustnessRisk/">RobustnessRisk</a></td>
+<td>Concepts representing risks and issues where Robustness is Risk</td>
+</tr>
+<tr>
+<td><a href="../RobustnessUnknown/">RobustnessUnknown</a></td>
+<td>Concepts representing risks and issues where Robustness is Unknown</td>
+</tr>
+<tr>
+<td><a href="../RobustnessUnverified/">RobustnessUnverified</a></td>
+<td>Concepts representing risks and issues where Robustness is Unverified</td>
+</tr>
+<tr>
+<td><a href="../RuleBasedSystemDesign/">RuleBasedSystemDesign</a></td>
+<td>Bias that occurs due to developer experience and expert advice having a</td>
+</tr>
+<tr>
+<td><a href="../Sabotage/">Sabotage</a></td>
+<td>Concept representing Sabotage</td>
+</tr>
+<tr>
+<td><a href="../Safety/">Safety</a></td>
+<td>Concept representing safety of individual(s), or group(s), or society at</td>
+</tr>
+<tr>
+<td><a href="../SamplingBias/">SamplingBias</a></td>
+<td>Bias that occurs when data records are not collected randomly from the</td>
+</tr>
+<tr>
+<td><a href="../Scam/">Scam</a></td>
+<td>Concept representing Scam</td>
+</tr>
+<tr>
+<td><a href="../SecurityAttack/">SecurityAttack</a></td>
+<td>Concept representing an attack on security with the aim of undermining</td>
+</tr>
+<tr>
+<td><a href="../SecurityBreach/">SecurityBreach</a></td>
+<td>Concept representing Security Breach</td>
+</tr>
+<tr>
+<td><a href="../SecurityQualityDegraded/">SecurityQualityDegraded</a></td>
+<td>Concepts representing risks and issues where Quality of Security is</td>
+</tr>
+<tr>
+<td><a href="../SecurityQualityInconsistent/">SecurityQualityInconsistent</a></td>
+<td>Concepts representing risks and issues where Quality of Security is</td>
+</tr>
+<tr>
+<td><a href="../SecurityQualityInsufficient/">SecurityQualityInsufficient</a></td>
+<td>Concepts representing risks and issues where Quality of Security is</td>
+</tr>
+<tr>
+<td><a href="../SecurityQualityRisk/">SecurityQualityRisk</a></td>
+<td>Concepts representing risks and issues where Quality of Security is Risk</td>
+</tr>
+<tr>
+<td><a href="../SecurityQualityUnknown/">SecurityQualityUnknown</a></td>
+<td>Concepts representing risks and issues where Quality of Security is</td>
+</tr>
+<tr>
+<td><a href="../SecurityQualityUnverified/">SecurityQualityUnverified</a></td>
+<td>Concepts representing risks and issues where Quality of Security is</td>
+</tr>
+<tr>
+<td><a href="../SelectionBias/">SelectionBias</a></td>
+<td>Bias that occurs when a dataset's samples are chosen in a way that is</td>
+</tr>
+<tr>
+<td><a href="../ServiceAlternativeOffered/">ServiceAlternativeOffered</a></td>
+<td>Concept representing service alternative offered</td>
+</tr>
+<tr>
+<td><a href="../ServiceCostIncreased/">ServiceCostIncreased</a></td>
+<td>Concept representing service cost increased</td>
+</tr>
+<tr>
+<td><a href="../ServiceDenied/">ServiceDenied</a></td>
+<td>Concept representing service denied</td>
+</tr>
+<tr>
+<td><a href="../ServiceLimited/">ServiceLimited</a></td>
+<td>Concept representing service limited</td>
+</tr>
+<tr>
+<td><a href="../ServiceNotProvided/">ServiceNotProvided</a></td>
+<td>Concept representing service not provided</td>
+</tr>
+<tr>
+<td><a href="../ServicePartiallyProvided/">ServicePartiallyProvided</a></td>
+<td>Concept representing service partially provided</td>
+</tr>
+<tr>
+<td><a href="../ServiceProvided/">ServiceProvided</a></td>
+<td>Concept representing service provided</td>
+</tr>
+<tr>
+<td><a href="../ServiceProvisionDelayed/">ServiceProvisionDelayed</a></td>
+<td>Concept representing service provision delayed</td>
+</tr>
+<tr>
+<td><a href="../ServiceQualityReduced/">ServiceQualityReduced</a></td>
+<td>Concept representing service quality reduced</td>
+</tr>
+<tr>
+<td><a href="../ServiceRelatedConsequence/">ServiceRelatedConsequence</a></td>
+<td>A consequence related to the provision of a service</td>
+</tr>
+<tr>
+<td><a href="../ServiceSecurityReduced/">ServiceSecurityReduced</a></td>
+<td>Concept representing service security reduced</td>
+</tr>
+<tr>
+<td><a href="../ServiceTermination/">ServiceTermination</a></td>
+<td>Concept representing service termination</td>
+</tr>
+<tr>
+<td><a href="../SexDiscrimination/">SexDiscrimination</a></td>
+<td>Discrimination based on a person's biological sex</td>
+</tr>
+<tr>
+<td><a href="../Sexism/">Sexism</a></td>
+<td>Discrimination based on a person's sex or gender, typically involving</td>
+</tr>
+<tr>
+<td><a href="../SexualHarassment/">SexualHarassment</a></td>
+<td>Concept representing sexual harassment of individual(s)</td>
+</tr>
+<tr>
+<td><a href="../SexualOrientationDiscrimination/">SexualOrientationDiscrimination</a></td>
+<td>Discrimination based on a person's sexual orientation, typically against</td>
+</tr>
+<tr>
+<td><a href="../SexualViolence/">SexualViolence</a></td>
+<td>Concept representing Sexual Violence</td>
+</tr>
+<tr>
+<td><a href="../ShareControl/">ShareControl</a></td>
+<td>Control that aims to share or distribute the event (or risk) with</td>
+</tr>
+<tr>
+<td><a href="../ShareRisk/">ShareRisk</a></td>
+<td>Risk Mitigation Measure that shares Risk e</td>
+</tr>
+<tr>
+<td><a href="../SimpsonsParadoxBias/">SimpsonsParadoxBias</a></td>
+<td>Bias that occurs when a trend that is indicated in individual groups of</td>
+</tr>
+<tr>
+<td><a href="../SocialDisadvantage/">SocialDisadvantage</a></td>
+<td>Concept representing Social Disadvantage</td>
+</tr>
+<tr>
+<td><a href="../SocietalBias/">SocietalBias</a></td>
+<td>Bias that occurs when similar cognitive bias (conscious or unconscious)</td>
+</tr>
+<tr>
+<td><a href="../SocietalHealthSafety/">SocietalHealthSafety</a></td>
+<td>Concept representing health and safety of society at large</td>
+</tr>
+<tr>
+<td><a href="../SocietalRiskConcept/">SocietalRiskConcept</a></td>
+<td>Risk concepts, including any potential risk sources, consequences, or</td>
+</tr>
+<tr>
+<td><a href="../SourceControl/">SourceControl</a></td>
+<td>Risk control for managing risk sources</td>
+</tr>
+<tr>
+<td><a href="../Spoofing/">Spoofing</a></td>
+<td>Concept representing Spoofing</td>
+</tr>
+<tr>
+<td><a href="../StaffIncompetence/">StaffIncompetence</a></td>
+<td>Concept representing incompetence of staff</td>
+</tr>
+<tr>
+<td><a href="../StatisticalBias/">StatisticalBias</a></td>
+<td>Bias that occurs as the type of consistent numerical offset in an</td>
+</tr>
+<tr>
+<td><a href="../SubstitutionControl/">SubstitutionControl</a></td>
+<td>Control that substitutes an event with another such that the initial</td>
+</tr>
+<tr>
+<td><a href="../SystemFailure/">SystemFailure</a></td>
+<td>Concept representing System Failure</td>
+</tr>
+<tr>
+<td><a href="../SystemIntrusion/">SystemIntrusion</a></td>
+<td>Concept representing System Intrusion</td>
+</tr>
+<tr>
+<td><a href="../SystemMalfunction/">SystemMalfunction</a></td>
+<td>Concept representing System Malfunction</td>
+</tr>
+<tr>
+<td><a href="../TaskExecutionIncorrect/">TaskExecutionIncorrect</a></td>
+<td>Concept representing incorrect execution of task(s)</td>
+</tr>
+<tr>
+<td><a href="../TaskExecutionRisk/">TaskExecutionRisk</a></td>
+<td>Concept representing risks and issues associated with execution of</td>
+</tr>
+<tr>
+<td><a href="../TaskOmitted/">TaskOmitted</a></td>
+<td>Concept representing omission of task(s)</td>
+</tr>
+<tr>
+<td><a href="../TaskTimingIncorrect/">TaskTimingIncorrect</a></td>
+<td>Concept representing incorrect timing for task(s) i</td>
+</tr>
+<tr>
+<td><a href="../TechnicalRiskConcept/">TechnicalRiskConcept</a></td>
+<td>Risk concepts, including any potential risk sources, consequences, or</td>
+</tr>
+<tr>
+<td><a href="../TechnologyOverreliance/">TechnologyOverreliance</a></td>
+<td>Concept representing the case where an entity, including individuals,</td>
+</tr>
+<tr>
+<td><a href="../Terrorism/">Terrorism</a></td>
+<td>Concept representing Terrorism</td>
+</tr>
+<tr>
+<td><a href="../Threat/">Threat</a></td>
+<td>Risk source event which causes Risk</td>
+</tr>
+<tr>
+<td><a href="../ThreatSource/">ThreatSource</a></td>
+<td>Source of threat event, including both agent and non-agent sources</td>
+</tr>
+<tr>
+<td><a href="../TransferControl/">TransferControl</a></td>
+<td>Control that aims to transfer the event (or risk) to another context or</td>
+</tr>
+<tr>
+<td><a href="../TransparencyControl/">TransparencyControl</a></td>
+<td>Control that provides information about an event</td>
+</tr>
+<tr>
+<td><a href="../Transphobia/">Transphobia</a></td>
+<td>Hostility or prejudice against transgender people or those perceived as</td>
+</tr>
+<tr>
+<td><a href="../TrustLoss/">TrustLoss</a></td>
+<td>Concept representing Trust Loss</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedAccessToPremises/">UnauthorisedAccessToPremises</a></td>
+<td>Concept representing Unauthorised Access to Premises</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedActivity/">UnauthorisedActivity</a></td>
+<td>Concept representing Unauthorised Activity</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedCodeAccess/">UnauthorisedCodeAccess</a></td>
+<td>Concept representing Unauthorised Code Access</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedCodeDisclosure/">UnauthorisedCodeDisclosure</a></td>
+<td>Concept representing Unauthorised Code Disclosure</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedCodeModification/">UnauthorisedCodeModification</a></td>
+<td>Concept representing Unauthorised Code Modification</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedDataAccess/">UnauthorisedDataAccess</a></td>
+<td>Concept representing Unauthorised Data Access</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedDataDisclosure/">UnauthorisedDataDisclosure</a></td>
+<td>Concept representing Unauthorised Data Disclosure</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedDataModification/">UnauthorisedDataModification</a></td>
+<td>Concept representing Unauthorised Data Modification</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedInformationDisclosure/">UnauthorisedInformationDisclosure</a></td>
+<td>Concept representing Unauthorised Information Disclosure</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedReidentification/">UnauthorisedReidentification</a></td>
+<td>Concept representing Unauthorised Re-Identification</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedResourceUse/">UnauthorisedResourceUse</a></td>
+<td>Concept representing Unauthorised Resource Use</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedSystemAccess/">UnauthorisedSystemAccess</a></td>
+<td>Concept representing Unauthorised System Access</td>
+</tr>
+<tr>
+<td><a href="../UnauthorisedSystemModification/">UnauthorisedSystemModification</a></td>
+<td>Concept representing Unauthorised System Modification</td>
+</tr>
+<tr>
+<td><a href="../UnfavourableTreatment/">UnfavourableTreatment</a></td>
+<td>A treatment is unfavourable when the person(s) is treated poorly or less</td>
+</tr>
+<tr>
+<td><a href="../UnwantedCodeDeletion/">UnwantedCodeDeletion</a></td>
+<td>Concept representing Unwanted Code Deletion</td>
+</tr>
+<tr>
+<td><a href="../UnwantedDataDeletion/">UnwantedDataDeletion</a></td>
+<td>Concept representing Unwanted Data Deletion</td>
+</tr>
+<tr>
+<td><a href="../UnwantedDisclosureData/">UnwantedDisclosureData</a></td>
+<td>Concept representing Unwanted Disclosure of Data</td>
+</tr>
+<tr>
+<td><a href="../UserRisks/">UserRisks</a></td>
+<td>Concepts associated with risks that arise due to User or Human use</td>
+</tr>
+<tr>
+<td><a href="../VeryHighLikelihood/">VeryHighLikelihood</a></td>
+<td>Level where Likelihood is Very High</td>
+</tr>
+<tr>
+<td><a href="../VeryHighRisk/">VeryHighRisk</a></td>
+<td>Level where Risk is Very High</td>
+</tr>
+<tr>
+<td><a href="../VeryHighSeverity/">VeryHighSeverity</a></td>
+<td>Level where Severity is Very High</td>
+</tr>
+<tr>
+<td><a href="../VeryLowLikelihood/">VeryLowLikelihood</a></td>
+<td>Level where Likelihood is Very Low</td>
+</tr>
+<tr>
+<td><a href="../VeryLowRisk/">VeryLowRisk</a></td>
+<td>Level where Risk is Very Low</td>
+</tr>
+<tr>
+<td><a href="../VeryLowSeverity/">VeryLowSeverity</a></td>
+<td>Level where Severity is Very Low</td>
+</tr>
+<tr>
+<td><a href="../ViolatingCodeOfConduct/">ViolatingCodeOfConduct</a></td>
+<td>Concept representing Violation of Code of Conduct</td>
+</tr>
+<tr>
+<td><a href="../ViolatingContractualObligation/">ViolatingContractualObligation</a></td>
+<td>Concept representing Violation of Contractual Obligations</td>
+</tr>
+<tr>
+<td><a href="../ViolatingEthicsCode/">ViolatingEthicsCode</a></td>
+<td>Concept representing Violation of Ethics Code</td>
+</tr>
+<tr>
+<td><a href="../ViolatingLegalObligation/">ViolatingLegalObligation</a></td>
+<td>Concept representing Violation of Legal Obligations</td>
+</tr>
+<tr>
+<td><a href="../ViolatingObligation/">ViolatingObligation</a></td>
+<td>Something that acts as a or violates an obligation - e</td>
+</tr>
+<tr>
+<td><a href="../ViolatingPolicy/">ViolatingPolicy</a></td>
+<td>Concept representing violation of policy which can be either internal or</td>
+</tr>
+<tr>
+<td><a href="../ViolatingProhibition/">ViolatingProhibition</a></td>
+<td>Something that acts as a or violates a prohibition - e</td>
+</tr>
+<tr>
+<td><a href="../ViolatingStatutoryObligations/">ViolatingStatutoryObligations</a></td>
+<td>Concept representing Violation of Statutory Obligations</td>
+</tr>
+<tr>
+<td><a href="../ViolenceAgainstChildren/">ViolenceAgainstChildren</a></td>
+<td>Concept representing Child Violence</td>
+</tr>
+<tr>
+<td><a href="../Vulnerability/">Vulnerability</a></td>
+<td>Intrinsic property of a system or asset that is utilised by the Threat</td>
+</tr>
+<tr>
+<td><a href="../VulnerabilityExploitation/">VulnerabilityExploitation</a></td>
+<td>Concept representing Vulnerability Exploitation</td>
+</tr>
+<tr>
+<td><a href="../Wellbeing/">Wellbeing</a></td>
+<td>Concept representing wellbeing of individual(s)</td>
+</tr>
+<tr>
+<td><a href="../WorkplaceDiscrimination/">WorkplaceDiscrimination</a></td>
+<td>Discrimination occurring at workplace or in the context of work</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots-in-subset">Slots in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../avoids/">avoids</a></td>
+<td>Indicates the event or action is avoided by the specified control</td>
+</tr>
+<tr>
+<td><a href="../caused_by_threat/">caused_by_threat</a></td>
+<td>Indicates the cause of associated context (subject) was the indicated</td>
+</tr>
+<tr>
+<td><a href="../caused_by_vulnerability/">caused_by_vulnerability</a></td>
+<td>Indicates the associated context (subject) is caused by the indicated</td>
+</tr>
+<tr>
+<td><a href="../contains/">contains</a></td>
+<td>Indicates the specified event or action is contained by this control</td>
+</tr>
+<tr>
+<td><a href="../controls/">controls</a></td>
+<td>Indicates this control manages specified risk concept event or action,</td>
+</tr>
+<tr>
+<td><a href="../detects/">detects</a></td>
+<td>Indicates the specified event or action is detected by this control</td>
+</tr>
+<tr>
+<td><a href="../eliminates/">eliminates</a></td>
+<td>Indicates the specified event or action is eliminated by this control</td>
+</tr>
+<tr>
+<td><a href="../exploits_vulnerability/">exploits_vulnerability</a></td>
+<td>Indicates the threat (subject) exploits the indicated vulnerability</td>
+</tr>
+<tr>
+<td><a href="../has_control/">has_control</a></td>
+<td>Indicates the use of specified control</td>
+</tr>
+<tr>
+<td><a href="../has_incident/">has_incident</a></td>
+<td>Indicates an incident is associated with the specified context</td>
+</tr>
+<tr>
+<td><a href="../has_risk_acceptance/">has_risk_acceptance</a></td>
+<td>Associates the risk acceptance plan or process or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_risk_analysis/">has_risk_analysis</a></td>
+<td>Associates the risk analysis</td>
+</tr>
+<tr>
+<td><a href="../has_risk_assessment/">has_risk_assessment</a></td>
+<td>Associates the risk assessment</td>
+</tr>
+<tr>
+<td><a href="../has_risk_criteria/">has_risk_criteria</a></td>
+<td>Associates the risk criteria</td>
+</tr>
+<tr>
+<td><a href="../has_risk_evaluation/">has_risk_evaluation</a></td>
+<td>Associates the risk evaluation plan or process or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_risk_identification/">has_risk_identification</a></td>
+<td>Associates the risk identification plan or process or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_risk_management/">has_risk_management</a></td>
+<td>Associates the risk management plan or process</td>
+</tr>
+<tr>
+<td><a href="../has_risk_owner/">has_risk_owner</a></td>
+<td>Indicates the risk owner</td>
+</tr>
+<tr>
+<td><a href="../has_risk_perception/">has_risk_perception</a></td>
+<td>Associates the risk perception plan or process or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_risk_source/">has_risk_source</a></td>
+<td>Indicates the risk (subject) has the indicated risk source (object)</td>
+</tr>
+<tr>
+<td><a href="../has_risk_treatment/">has_risk_treatment</a></td>
+<td>Associates the risk treatment plan or process or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_threat_source/">has_threat_source</a></td>
+<td>Indicates the threat (subject) has the indicated source (object)</td>
+</tr>
+<tr>
+<td><a href="../has_vulnerability/">has_vulnerability</a></td>
+<td>Indicates the associated context (subject) has indicated vulnerability</td>
+</tr>
+<tr>
+<td><a href="../identifies/">identifies</a></td>
+<td>Indicates the specified event or action is identified by this control</td>
+</tr>
+<tr>
+<td><a href="../interrupts/">interrupts</a></td>
+<td>Indicates the specified event or action is interrupted by this control</td>
+</tr>
+<tr>
+<td><a href="../intervenes/">intervenes</a></td>
+<td>Indicates the specified event or action is intervened by this control</td>
+</tr>
+<tr>
+<td><a href="../investigates/">investigates</a></td>
+<td>Indicates the specified event or action is investigated by this control</td>
+</tr>
+<tr>
+<td><a href="../is_exploited_by/">is_exploited_by</a></td>
+<td>Indicates the vulnerability (subject) is exploited by the indicated</td>
+</tr>
+<tr>
+<td><a href="../is_vulnerability_of/">is_vulnerability_of</a></td>
+<td>Indicates the vulnerability (subject) is associated with indicated</td>
+</tr>
+<tr>
+<td><a href="../logs/">logs</a></td>
+<td>Indicates the specified event or action is logged by this control</td>
+</tr>
+<tr>
+<td><a href="../mitigates/">mitigates</a></td>
+<td>Indicates the specified event or action is mitigated by this control</td>
+</tr>
+<tr>
+<td><a href="../modifies/">modifies</a></td>
+<td>Indicates the specified event or action is modified by this control</td>
+</tr>
+<tr>
+<td><a href="../monitors/">monitors</a></td>
+<td>Indicates the specified event or action is monitored by this control</td>
+</tr>
+<tr>
+<td><a href="../overrides/">overrides</a></td>
+<td>Indicates the specified event or action is overridden by this control</td>
+</tr>
+<tr>
+<td><a href="../recovers/">recovers</a></td>
+<td>Indicates the specified event or action is recovered from by this</td>
+</tr>
+<tr>
+<td><a href="../reduces/">reduces</a></td>
+<td>Indicates the specified event or action is reduced by this control</td>
+</tr>
+<tr>
+<td><a href="../refers_to_risk/">refers_to_risk</a></td>
+<td>Indicates the incident (subject) is a materialisation of the indicated</td>
+</tr>
+<tr>
+<td><a href="../remedies/">remedies</a></td>
+<td>Indicates the specified event or action is remedied by this control</td>
+</tr>
+<tr>
+<td><a href="../resolves/">resolves</a></td>
+<td>Indicates the specified event or action is resolved by this control</td>
+</tr>
+<tr>
+<td><a href="../reverses/">reverses</a></td>
+<td>Indicates the specified event or action is reversed by this control</td>
+</tr>
+<tr>
+<td><a href="../shares/">shares</a></td>
+<td>Indicates the specified event or action is shared with another context</td>
+</tr>
+<tr>
+<td><a href="../substitutes/">substitutes</a></td>
+<td>Indicates the specified event or action is substituted by this control</td>
+</tr>
+<tr>
+<td><a href="../transfers/">transfers</a></td>
+<td>Indicates the specified event or action is transferred to another</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+<div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.tabs.link", "header.autohide", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/pymdownx-extras/extra-loader-B5CKpNQx.js"></script>
+      
+    
+  </body>
+</html>

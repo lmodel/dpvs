@@ -1,0 +1,5118 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/dpv/elements/CommonSubset/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Subset: CommonSubset - dpv</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script src="../../assets/pymdownx-extras/material-extra-theme-2ek1P7jT.js" type="text/javascript"></script>
+<script src="../../assets/pymdownx-extras/material-extra-3rdparty-BUCF4rjN.js" type="text/javascript"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
+    
+      <link rel="stylesheet" href="../../assets/pymdownx-extras/extra-c6ab11540a.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#subset-commonsubset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="header.title"
+  >
+    <a
+      href="https://lmodel.github.io/dpv/"
+      title="dpv"
+      class="md-header__button md-logo"
+      aria-label="dpv"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dpv
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Subset: CommonSubset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07zm-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13zm-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87zM19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35zm4.33-2.7 1.15-2.77 2.2 2.54zm1.15-4.96-1.14-2.78 3.34.24zM9.63 18.93l2.77 1.15-2.53 2.19z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
+          </a>
+      </div>
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="dpv" class="md-nav__button md-logo" aria-label="dpv" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    dpv
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/justifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/loc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Location
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/pd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/risk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-in-subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes in subset
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes in subset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-acceptablerule-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AcceptableRule also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activelyinvolved-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivelyInvolved also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activitycompleted-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityCompleted also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activityhalted-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityHalted also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activitynotcompleted-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityNotCompleted also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activityongoing-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityOngoing also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activityplanned-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityPlanned also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activityproposed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityProposed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-activitystatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ActivityStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-applicability-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Applicability also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditapproved-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditApproved also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditconditionallyapproved-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditConditionallyApproved also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditnotrequired-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditNotRequired also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditrejected-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditRejected also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditrequested-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditRequested also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditrequired-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditRequired also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-auditstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuditStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-authorityinformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuthorityInformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-authorityuninformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from AuthorityUninformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-compatibilityunknown-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from CompatibilityUnknown also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-complianceindeterminate-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ComplianceIndeterminate also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-compliancestatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ComplianceStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-complianceunknown-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ComplianceUnknown also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-complianceviolation-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ComplianceViolation also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-compliant-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Compliant also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-conformancestatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ConformanceStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-conformant-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Conformant also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-context-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Context also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-continuousfrequency-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ContinuousFrequency also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-controllerinformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ControllerInformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-controlleruninformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ControllerUninformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-datasubjectinformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DataSubjectInformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-datasubjectuninformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DataSubjectUninformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-deterrence-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Deterrence also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-deterrencefollowed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DeterrenceFollowed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-deterrencenotfollowed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DeterrenceNotFollowed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-dpvduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DpvDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-dpvoptional-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DpvOptional also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-dpvthing-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from DpvThing also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-endlessduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from EndlessDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-entityinformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from EntityInformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-entityinformedstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from EntityInformedStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-entityuninformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from EntityUninformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-expectationstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ExpectationStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-expected-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Expected also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-feenotrequired-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from FeeNotRequired also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-feerequired-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from FeeRequired also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-feerequirement-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from FeeRequirement also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-fixedoccurrencesduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from FixedOccurrencesDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-frequency-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Frequency also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-importance-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Importance also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-indeterminateduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from IndeterminateDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-intended-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Intended also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-intentionstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from IntentionStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-involvementstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from InvolvementStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-justification-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Justification also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-lawful-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Lawful also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-lawfulness-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Lawfulness also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-lawfulnessunknown-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from LawfulnessUnknown also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-legalmeasure-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from LegalMeasure also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-necessity-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Necessity also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-noncompliant-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NonCompliant also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-nonconformant-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NonConformant also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notapplicable-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotApplicable also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notavailable-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotAvailable also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notificationcompleted-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotificationCompleted also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notificationfailed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotificationFailed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notificationnotneeded-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotificationNotNeeded also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notificationongoing-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotificationOngoing also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notificationplanned-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotificationPlanned also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notificationstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotificationStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notinvolved-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotInvolved also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-notrequired-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from NotRequired also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-obligation-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Obligation also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-obligationfulfilled-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ObligationFulfilled also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-obligationunfulfilled-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ObligationUnfulfilled also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-obligationviolated-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ObligationViolated also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-oftenfrequency-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from OftenFrequency also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-organisationalmeasure-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from OrganisationalMeasure also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-partiallycompliant-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PartiallyCompliant also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-passivelyinvolved-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PassivelyInvolved also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-permission-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Permission also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-permissionnotutilised-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PermissionNotUtilised also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-permissionutilised-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PermissionUtilised also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-physicalmeasure-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PhysicalMeasure also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-primaryimportance-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PrimaryImportance also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-primaryuse-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from PrimaryUse also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-prohibition-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Prohibition also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-prohibitionunviolated-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ProhibitionUnviolated also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-prohibitionviolated-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ProhibitionViolated also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-recipientinformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RecipientInformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-recipientuninformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RecipientUninformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-recommendation-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Recommendation also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-recommendationfollowed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RecommendationFollowed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-recommendationnotfollowed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RecommendationNotFollowed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestaccepted-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestAccepted also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestacknowledged-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestAcknowledged also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestactiondelayed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestActionDelayed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestfulfilled-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestFulfilled also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestinitiated-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestInitiated also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestrejected-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestRejected also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestrequiredactionperformed-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestRequiredActionPerformed also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestrequiresaction-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestRequiresAction also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requeststatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requeststatusquery-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestStatusQuery also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-requestunfulfilled-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RequestUnfulfilled also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-required-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Required also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-reusecompatibility-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from ReuseCompatibility also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-rule-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Rule also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-rulefulfilled-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RuleFulfilled also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-rulefulfilmentstatus-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RuleFulfilmentStatus also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-ruleunfulfilled-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RuleUnfulfilled also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-ruleviolated-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from RuleViolated also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-scope-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Scope also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-secondaryimportance-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from SecondaryImportance also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-secondaryuse-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from SecondaryUse also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-singularfrequency-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from SingularFrequency also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-sporadicfrequency-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from SporadicFrequency also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-status-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Status also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-technicalmeasure-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from TechnicalMeasure also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-technicalorganisationalmeasure-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from TechnicalOrganisationalMeasure also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-temporalduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from TemporalDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-unacceptablerule-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from UnacceptableRule also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-unexpected-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Unexpected also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-unintended-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Unintended also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-unknownapplicability-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from UnknownApplicability also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-unlawful-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from Unlawful also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-untileventduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from UntilEventDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-untiltimeduration-also-in-common_subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots from UntilTimeDuration also in common_subset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots-in-subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots in subset
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="subset-commonsubset">Subset: CommonSubset</h1>
+<p><em>Entities from the DPV <code>common</code> semantic group.</em></p>
+<div>
+<p>URI: <a href="./">CommonSubset</a></p>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: <a href="https://w3id.org/lmodel/dpv">https://w3id.org/lmodel/dpv</a></li>
+</ul>
+<h2 id="classes-in-subset">Classes in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../AcceptableRule/">AcceptableRule</a></td>
+<td>A rule that is acceptable where it is either desirable if it occurs or</td>
+</tr>
+<tr>
+<td><a href="../ActivelyInvolved/">ActivelyInvolved</a></td>
+<td>Status indicating the specified context is 'actively' involved</td>
+</tr>
+<tr>
+<td><a href="../ActivityCompleted/">ActivityCompleted</a></td>
+<td>State of an activity that has completed i</td>
+</tr>
+<tr>
+<td><a href="../ActivityHalted/">ActivityHalted</a></td>
+<td>State of an activity that was occurring in the past, and has been halted</td>
+</tr>
+<tr>
+<td><a href="../ActivityNotCompleted/">ActivityNotCompleted</a></td>
+<td>State of an activity that could not be completed, but has reached some</td>
+</tr>
+<tr>
+<td><a href="../ActivityOngoing/">ActivityOngoing</a></td>
+<td>State of an activity occurring in continuation i</td>
+</tr>
+<tr>
+<td><a href="../ActivityPlanned/">ActivityPlanned</a></td>
+<td>State of an activity being planned with concrete plans for</td>
+</tr>
+<tr>
+<td><a href="../ActivityProposed/">ActivityProposed</a></td>
+<td>State of an activity being proposed without any concrete plans for</td>
+</tr>
+<tr>
+<td><a href="../ActivityStatus/">ActivityStatus</a></td>
+<td>Status associated with activity operations and lifecycles</td>
+</tr>
+<tr>
+<td><a href="../Applicability/">Applicability</a></td>
+<td>Concept provided to represent indication of cases where the information</td>
+</tr>
+<tr>
+<td><a href="../AuditApproved/">AuditApproved</a></td>
+<td>State of being approved through the audit</td>
+</tr>
+<tr>
+<td><a href="../AuditConditionallyApproved/">AuditConditionallyApproved</a></td>
+<td>State of being conditionally approved through the audit</td>
+</tr>
+<tr>
+<td><a href="../AuditNotRequired/">AuditNotRequired</a></td>
+<td>State where an audit is determined as not being required</td>
+</tr>
+<tr>
+<td><a href="../AuditRejected/">AuditRejected</a></td>
+<td>State of not being approved or being rejected through the audit</td>
+</tr>
+<tr>
+<td><a href="../AuditRequested/">AuditRequested</a></td>
+<td>State of an audit being requested whose outcome is not yet known</td>
+</tr>
+<tr>
+<td><a href="../AuditRequired/">AuditRequired</a></td>
+<td>State where an audit is determined as being required but has not been</td>
+</tr>
+<tr>
+<td><a href="../AuditStatus/">AuditStatus</a></td>
+<td>Status associated with Auditing or Investigation</td>
+</tr>
+<tr>
+<td><a href="../AuthorityInformed/">AuthorityInformed</a></td>
+<td>Status indicating Authority has been informed about the specified</td>
+</tr>
+<tr>
+<td><a href="../AuthorityUninformed/">AuthorityUninformed</a></td>
+<td>Status indicating Authority is uninformed i</td>
+</tr>
+<tr>
+<td><a href="../CompatibilityUnknown/">CompatibilityUnknown</a></td>
+<td>Status indicating the compatibility of the context with an earlier</td>
+</tr>
+<tr>
+<td><a href="../ComplianceIndeterminate/">ComplianceIndeterminate</a></td>
+<td>State where the status of compliance has not been fully assessed,</td>
+</tr>
+<tr>
+<td><a href="../ComplianceStatus/">ComplianceStatus</a></td>
+<td>Status associated with Compliance with some norms, objectives, or</td>
+</tr>
+<tr>
+<td><a href="../ComplianceUnknown/">ComplianceUnknown</a></td>
+<td>State where the status of compliance is unknown</td>
+</tr>
+<tr>
+<td><a href="../ComplianceViolation/">ComplianceViolation</a></td>
+<td>State where compliance cannot be achieved due to requirements being</td>
+</tr>
+<tr>
+<td><a href="../Compliant/">Compliant</a></td>
+<td>State of being fully compliant</td>
+</tr>
+<tr>
+<td><a href="../ConformanceStatus/">ConformanceStatus</a></td>
+<td>Status associated with conformance to a standard, guideline, code, or</td>
+</tr>
+<tr>
+<td><a href="../Conformant/">Conformant</a></td>
+<td>State of being conformant</td>
+</tr>
+<tr>
+<td><a href="../Context/">Context</a></td>
+<td>Contextually relevant information</td>
+</tr>
+<tr>
+<td><a href="../ContinuousFrequency/">ContinuousFrequency</a></td>
+<td>Frequency where occurrences are continuous</td>
+</tr>
+<tr>
+<td><a href="../ControllerInformed/">ControllerInformed</a></td>
+<td>Status indicating Controller has been informed about the specified</td>
+</tr>
+<tr>
+<td><a href="../ControllerUninformed/">ControllerUninformed</a></td>
+<td>Status indicating Controller is uninformed i</td>
+</tr>
+<tr>
+<td><a href="../DataSubjectInformed/">DataSubjectInformed</a></td>
+<td>Status indicating DataSubject has been informed about the specified</td>
+</tr>
+<tr>
+<td><a href="../DataSubjectUninformed/">DataSubjectUninformed</a></td>
+<td>Status indicating DataSubject is uninformed i</td>
+</tr>
+<tr>
+<td><a href="../Deterrence/">Deterrence</a></td>
+<td>A rule describing a deterrence for performing an activity</td>
+</tr>
+<tr>
+<td><a href="../DeterrenceFollowed/">DeterrenceFollowed</a></td>
+<td>Status indicating a deterrence has been followed i</td>
+</tr>
+<tr>
+<td><a href="../DeterrenceNotFollowed/">DeterrenceNotFollowed</a></td>
+<td>Status indicating a deterrence has not been followed i</td>
+</tr>
+<tr>
+<td><a href="../DpvDuration/">DpvDuration</a></td>
+<td>The duration or temporal limitation</td>
+</tr>
+<tr>
+<td><a href="../DpvOptional/">DpvOptional</a></td>
+<td>Indication of 'optional' or 'voluntary'</td>
+</tr>
+<tr>
+<td><a href="../DpvThing/">DpvThing</a></td>
+<td>Abstract base class for every DPV entity</td>
+</tr>
+<tr>
+<td><a href="../EndlessDuration/">EndlessDuration</a></td>
+<td>Duration that is (known or intended to be) open ended or without an end</td>
+</tr>
+<tr>
+<td><a href="../EntityInformed/">EntityInformed</a></td>
+<td>Status indicating entity has been informed about specified context</td>
+</tr>
+<tr>
+<td><a href="../EntityInformedStatus/">EntityInformedStatus</a></td>
+<td>Status indicating whether an entity is informed or uninformed about</td>
+</tr>
+<tr>
+<td><a href="../EntityUninformed/">EntityUninformed</a></td>
+<td>Status indicating entity is uninformed i</td>
+</tr>
+<tr>
+<td><a href="../ExpectationStatus/">ExpectationStatus</a></td>
+<td>Status indicating whether the specified context was intended or</td>
+</tr>
+<tr>
+<td><a href="../Expected/">Expected</a></td>
+<td>Status indicating the specified context was expected</td>
+</tr>
+<tr>
+<td><a href="../FeeNotRequired/">FeeNotRequired</a></td>
+<td>Concept indicating a fee is not required</td>
+</tr>
+<tr>
+<td><a href="../FeeRequired/">FeeRequired</a></td>
+<td>Concept indicating a fee is required</td>
+</tr>
+<tr>
+<td><a href="../FeeRequirement/">FeeRequirement</a></td>
+<td>Concept indicating whether a fee is required</td>
+</tr>
+<tr>
+<td><a href="../FixedOccurrencesDuration/">FixedOccurrencesDuration</a></td>
+<td>Duration that takes place a fixed number of times e</td>
+</tr>
+<tr>
+<td><a href="../Frequency/">Frequency</a></td>
+<td>The frequency or information about periods and repetitions in terms of</td>
+</tr>
+<tr>
+<td><a href="../Importance/">Importance</a></td>
+<td>An indication of 'importance' within a context</td>
+</tr>
+<tr>
+<td><a href="../IndeterminateDuration/">IndeterminateDuration</a></td>
+<td>Duration that is indeterminate or cannot be determined</td>
+</tr>
+<tr>
+<td><a href="../Intended/">Intended</a></td>
+<td>Status indicating the specified context was intended</td>
+</tr>
+<tr>
+<td><a href="../IntentionStatus/">IntentionStatus</a></td>
+<td>Status indicating whether the specified context was intended or</td>
+</tr>
+<tr>
+<td><a href="../InvolvementStatus/">InvolvementStatus</a></td>
+<td>Status indicating whether the involvement of specified context</td>
+</tr>
+<tr>
+<td><a href="../Justification/">Justification</a></td>
+<td>A form of documentation providing reasons, explanations, or</td>
+</tr>
+<tr>
+<td><a href="../Lawful/">Lawful</a></td>
+<td>State of being lawful or legally compliant</td>
+</tr>
+<tr>
+<td><a href="../Lawfulness/">Lawfulness</a></td>
+<td>Status associated with expressing lawfulness or legal compliance</td>
+</tr>
+<tr>
+<td><a href="../LawfulnessUnknown/">LawfulnessUnknown</a></td>
+<td>State of the lawfulness not being known</td>
+</tr>
+<tr>
+<td><a href="../LegalMeasure/">LegalMeasure</a></td>
+<td>Legal measures used to safeguard and ensure good practices in connection</td>
+</tr>
+<tr>
+<td><a href="../Necessity/">Necessity</a></td>
+<td>An indication of 'necessity' within a context</td>
+</tr>
+<tr>
+<td><a href="../NonCompliant/">NonCompliant</a></td>
+<td>State of non-compliance where objectives have not been met, but have not</td>
+</tr>
+<tr>
+<td><a href="../NonConformant/">NonConformant</a></td>
+<td>State of being non-conformant</td>
+</tr>
+<tr>
+<td><a href="../NotApplicable/">NotApplicable</a></td>
+<td>Concept indicating the information or context is not applicable</td>
+</tr>
+<tr>
+<td><a href="../NotAvailable/">NotAvailable</a></td>
+<td>Concept indicating the information or context is applicable but</td>
+</tr>
+<tr>
+<td><a href="../NotificationCompleted/">NotificationCompleted</a></td>
+<td>Status indicating notification(s) are completed</td>
+</tr>
+<tr>
+<td><a href="../NotificationFailed/">NotificationFailed</a></td>
+<td>Status indicating notification(s) could not be completed due to a</td>
+</tr>
+<tr>
+<td><a href="../NotificationNotNeeded/">NotificationNotNeeded</a></td>
+<td>Status indicating notification(s) are not needed</td>
+</tr>
+<tr>
+<td><a href="../NotificationOngoing/">NotificationOngoing</a></td>
+<td>Status indicating notification(s) are ongoing</td>
+</tr>
+<tr>
+<td><a href="../NotificationPlanned/">NotificationPlanned</a></td>
+<td>Status indicating notification(s) are planned</td>
+</tr>
+<tr>
+<td><a href="../NotificationStatus/">NotificationStatus</a></td>
+<td>Status indicating whether notification(s) are planned, completed, or</td>
+</tr>
+<tr>
+<td><a href="../NotInvolved/">NotInvolved</a></td>
+<td>Status indicating the specified context is 'not' involved</td>
+</tr>
+<tr>
+<td><a href="../NotRequired/">NotRequired</a></td>
+<td>Indication of neither being required nor optional i</td>
+</tr>
+<tr>
+<td><a href="../Obligation/">Obligation</a></td>
+<td>A rule describing an obligation for performing an activity</td>
+</tr>
+<tr>
+<td><a href="../ObligationFulfilled/">ObligationFulfilled</a></td>
+<td>Status indicating an obligation has been fulfilled i</td>
+</tr>
+<tr>
+<td><a href="../ObligationUnfulfilled/">ObligationUnfulfilled</a></td>
+<td>Status indicating an obligation has not been fulfilled i</td>
+</tr>
+<tr>
+<td><a href="../ObligationViolated/">ObligationViolated</a></td>
+<td>Status indicating an obligation has been violated i</td>
+</tr>
+<tr>
+<td><a href="../OftenFrequency/">OftenFrequency</a></td>
+<td>Frequency where occurrences are often or frequent, but not continuous</td>
+</tr>
+<tr>
+<td><a href="../OrganisationalMeasure/">OrganisationalMeasure</a></td>
+<td>Organisational measures used to safeguard and ensure good practices in</td>
+</tr>
+<tr>
+<td><a href="../PartiallyCompliant/">PartiallyCompliant</a></td>
+<td>State of partially being compliant i</td>
+</tr>
+<tr>
+<td><a href="../PassivelyInvolved/">PassivelyInvolved</a></td>
+<td>Status indicating the specified context is 'passively' involved</td>
+</tr>
+<tr>
+<td><a href="../Permission/">Permission</a></td>
+<td>A rule describing a permission to perform an activity</td>
+</tr>
+<tr>
+<td><a href="../PermissionNotUtilised/">PermissionNotUtilised</a></td>
+<td>Status indicating a permission has not been utilised i</td>
+</tr>
+<tr>
+<td><a href="../PermissionUtilised/">PermissionUtilised</a></td>
+<td>Status indicating a permission has been utilised i</td>
+</tr>
+<tr>
+<td><a href="../PhysicalMeasure/">PhysicalMeasure</a></td>
+<td>Physical measures used to safeguard and ensure good practices in</td>
+</tr>
+<tr>
+<td><a href="../PrimaryImportance/">PrimaryImportance</a></td>
+<td>Indication of 'primary' or 'main' or 'core' importance</td>
+</tr>
+<tr>
+<td><a href="../PrimaryUse/">PrimaryUse</a></td>
+<td>Status indicating compatibility based on the use being either the</td>
+</tr>
+<tr>
+<td><a href="../Prohibition/">Prohibition</a></td>
+<td>A rule describing a prohibition to perform an activity</td>
+</tr>
+<tr>
+<td><a href="../ProhibitionUnviolated/">ProhibitionUnviolated</a></td>
+<td>Status indicating a prohibition has not been violated i</td>
+</tr>
+<tr>
+<td><a href="../ProhibitionViolated/">ProhibitionViolated</a></td>
+<td>Status indicating a prohibition has been violated i</td>
+</tr>
+<tr>
+<td><a href="../RecipientInformed/">RecipientInformed</a></td>
+<td>Status indicating Recipient has been informed about the specified</td>
+</tr>
+<tr>
+<td><a href="../RecipientUninformed/">RecipientUninformed</a></td>
+<td>Status indicating Recipient is uninformed i</td>
+</tr>
+<tr>
+<td><a href="../Recommendation/">Recommendation</a></td>
+<td>A rule describing a recommendation for performing an activity</td>
+</tr>
+<tr>
+<td><a href="../RecommendationFollowed/">RecommendationFollowed</a></td>
+<td>Status indicating a recommendation has been followed i</td>
+</tr>
+<tr>
+<td><a href="../RecommendationNotFollowed/">RecommendationNotFollowed</a></td>
+<td>Status indicating a recommendation has not been followed i</td>
+</tr>
+<tr>
+<td><a href="../RequestAccepted/">RequestAccepted</a></td>
+<td>State of a request being accepted towards fulfilment</td>
+</tr>
+<tr>
+<td><a href="../RequestAcknowledged/">RequestAcknowledged</a></td>
+<td>State of a request being acknowledged</td>
+</tr>
+<tr>
+<td><a href="../RequestActionDelayed/">RequestActionDelayed</a></td>
+<td>State of a request being delayed towards fulfilment</td>
+</tr>
+<tr>
+<td><a href="../RequestFulfilled/">RequestFulfilled</a></td>
+<td>State of a request being fulfilled</td>
+</tr>
+<tr>
+<td><a href="../RequestInitiated/">RequestInitiated</a></td>
+<td>State of a request being initiated</td>
+</tr>
+<tr>
+<td><a href="../RequestRejected/">RequestRejected</a></td>
+<td>State of a request being rejected towards non-fulfilment</td>
+</tr>
+<tr>
+<td><a href="../RequestRequiredActionPerformed/">RequestRequiredActionPerformed</a></td>
+<td>State of a request's required action having been performed by the other</td>
+</tr>
+<tr>
+<td><a href="../RequestRequiresAction/">RequestRequiresAction</a></td>
+<td>State of a request requiring an action to be performed from another</td>
+</tr>
+<tr>
+<td><a href="../RequestStatus/">RequestStatus</a></td>
+<td>Status associated with requests</td>
+</tr>
+<tr>
+<td><a href="../RequestStatusQuery/">RequestStatusQuery</a></td>
+<td>State of a request's status being queried</td>
+</tr>
+<tr>
+<td><a href="../RequestUnfulfilled/">RequestUnfulfilled</a></td>
+<td>State of a request being unfulfilled</td>
+</tr>
+<tr>
+<td><a href="../Required/">Required</a></td>
+<td>Indication of 'required' or 'necessary'</td>
+</tr>
+<tr>
+<td><a href="../ReuseCompatibility/">ReuseCompatibility</a></td>
+<td>Status indicating whether the specified context is compatible with</td>
+</tr>
+<tr>
+<td><a href="../Rule/">Rule</a></td>
+<td>A rule describing a process or control that directs or determines if and</td>
+</tr>
+<tr>
+<td><a href="../RuleFulfilled/">RuleFulfilled</a></td>
+<td>Status indicating a rule has been fulfilled, completed, or satisfied</td>
+</tr>
+<tr>
+<td><a href="../RuleFulfilmentStatus/">RuleFulfilmentStatus</a></td>
+<td>Status associated with a rule for indicating whether it is applicable,</td>
+</tr>
+<tr>
+<td><a href="../RuleUnfulfilled/">RuleUnfulfilled</a></td>
+<td>Status indicating a rule has not been fulfilled nor violated</td>
+</tr>
+<tr>
+<td><a href="../RuleViolated/">RuleViolated</a></td>
+<td>Status indicating a rule has been violated, breached, broken, or</td>
+</tr>
+<tr>
+<td><a href="../Scope/">Scope</a></td>
+<td>Indication of the extent or range or boundaries associated with(in) a</td>
+</tr>
+<tr>
+<td><a href="../SecondaryImportance/">SecondaryImportance</a></td>
+<td>Indication of 'secondary' or 'minor' or 'auxiliary' importance</td>
+</tr>
+<tr>
+<td><a href="../SecondaryUse/">SecondaryUse</a></td>
+<td>Status indicating incompatibility based on the use not being compatible</td>
+</tr>
+<tr>
+<td><a href="../SingularFrequency/">SingularFrequency</a></td>
+<td>Frequency where occurrences are singular i</td>
+</tr>
+<tr>
+<td><a href="../SporadicFrequency/">SporadicFrequency</a></td>
+<td>Frequency where occurrences are sporadic or infrequent or sparse</td>
+</tr>
+<tr>
+<td><a href="../Status/">Status</a></td>
+<td>The status or state of something</td>
+</tr>
+<tr>
+<td><a href="../TechnicalMeasure/">TechnicalMeasure</a></td>
+<td>Technical measures used to safeguard and ensure good practices in</td>
+</tr>
+<tr>
+<td><a href="../TechnicalOrganisationalMeasure/">TechnicalOrganisationalMeasure</a></td>
+<td>Technical and Organisational measures used to safeguard and ensure good</td>
+</tr>
+<tr>
+<td><a href="../TemporalDuration/">TemporalDuration</a></td>
+<td>Duration that has a fixed temporal duration e</td>
+</tr>
+<tr>
+<td><a href="../UnacceptableRule/">UnacceptableRule</a></td>
+<td>A rule that is unacceptable where it is not desirable if it occurs</td>
+</tr>
+<tr>
+<td><a href="../Unexpected/">Unexpected</a></td>
+<td>Status indicating the specified context was unexpected i</td>
+</tr>
+<tr>
+<td><a href="../Unintended/">Unintended</a></td>
+<td>Status indicating the specified context was unintended i</td>
+</tr>
+<tr>
+<td><a href="../UnknownApplicability/">UnknownApplicability</a></td>
+<td>Concept indicating information or context availability is unknown i</td>
+</tr>
+<tr>
+<td><a href="../Unlawful/">Unlawful</a></td>
+<td>State of being unlawful or legally non-compliant</td>
+</tr>
+<tr>
+<td><a href="../UntilEventDuration/">UntilEventDuration</a></td>
+<td>Duration that takes place until a specific event occurs e</td>
+</tr>
+<tr>
+<td><a href="../UntilTimeDuration/">UntilTimeDuration</a></td>
+<td>Duration that has a fixed end date e</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-acceptablerule-also-in-common_subset">Slots from <a href="../AcceptableRule/">AcceptableRule</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activelyinvolved-also-in-common_subset">Slots from <a href="../ActivelyInvolved/">ActivelyInvolved</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activitycompleted-also-in-common_subset">Slots from <a href="../ActivityCompleted/">ActivityCompleted</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activityhalted-also-in-common_subset">Slots from <a href="../ActivityHalted/">ActivityHalted</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activitynotcompleted-also-in-common_subset">Slots from <a href="../ActivityNotCompleted/">ActivityNotCompleted</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activityongoing-also-in-common_subset">Slots from <a href="../ActivityOngoing/">ActivityOngoing</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activityplanned-also-in-common_subset">Slots from <a href="../ActivityPlanned/">ActivityPlanned</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activityproposed-also-in-common_subset">Slots from <a href="../ActivityProposed/">ActivityProposed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-activitystatus-also-in-common_subset">Slots from <a href="../ActivityStatus/">ActivityStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-applicability-also-in-common_subset">Slots from <a href="../Applicability/">Applicability</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditapproved-also-in-common_subset">Slots from <a href="../AuditApproved/">AuditApproved</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditconditionallyapproved-also-in-common_subset">Slots from <a href="../AuditConditionallyApproved/">AuditConditionallyApproved</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditnotrequired-also-in-common_subset">Slots from <a href="../AuditNotRequired/">AuditNotRequired</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditrejected-also-in-common_subset">Slots from <a href="../AuditRejected/">AuditRejected</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditrequested-also-in-common_subset">Slots from <a href="../AuditRequested/">AuditRequested</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditrequired-also-in-common_subset">Slots from <a href="../AuditRequired/">AuditRequired</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-auditstatus-also-in-common_subset">Slots from <a href="../AuditStatus/">AuditStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-authorityinformed-also-in-common_subset">Slots from <a href="../AuthorityInformed/">AuthorityInformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-authorityuninformed-also-in-common_subset">Slots from <a href="../AuthorityUninformed/">AuthorityUninformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-compatibilityunknown-also-in-common_subset">Slots from <a href="../CompatibilityUnknown/">CompatibilityUnknown</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-complianceindeterminate-also-in-common_subset">Slots from <a href="../ComplianceIndeterminate/">ComplianceIndeterminate</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-compliancestatus-also-in-common_subset">Slots from <a href="../ComplianceStatus/">ComplianceStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-complianceunknown-also-in-common_subset">Slots from <a href="../ComplianceUnknown/">ComplianceUnknown</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-complianceviolation-also-in-common_subset">Slots from <a href="../ComplianceViolation/">ComplianceViolation</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-compliant-also-in-common_subset">Slots from <a href="../Compliant/">Compliant</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-conformancestatus-also-in-common_subset">Slots from <a href="../ConformanceStatus/">ConformanceStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-conformant-also-in-common_subset">Slots from <a href="../Conformant/">Conformant</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-context-also-in-common_subset">Slots from <a href="../Context/">Context</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-continuousfrequency-also-in-common_subset">Slots from <a href="../ContinuousFrequency/">ContinuousFrequency</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-controllerinformed-also-in-common_subset">Slots from <a href="../ControllerInformed/">ControllerInformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-controlleruninformed-also-in-common_subset">Slots from <a href="../ControllerUninformed/">ControllerUninformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-datasubjectinformed-also-in-common_subset">Slots from <a href="../DataSubjectInformed/">DataSubjectInformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-datasubjectuninformed-also-in-common_subset">Slots from <a href="../DataSubjectUninformed/">DataSubjectUninformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-deterrence-also-in-common_subset">Slots from <a href="../Deterrence/">Deterrence</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-deterrencefollowed-also-in-common_subset">Slots from <a href="../DeterrenceFollowed/">DeterrenceFollowed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-deterrencenotfollowed-also-in-common_subset">Slots from <a href="../DeterrenceNotFollowed/">DeterrenceNotFollowed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-dpvduration-also-in-common_subset">Slots from <a href="../DpvDuration/">DpvDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-dpvoptional-also-in-common_subset">Slots from <a href="../DpvOptional/">DpvOptional</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-dpvthing-also-in-common_subset">Slots from <a href="../DpvThing/">DpvThing</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-endlessduration-also-in-common_subset">Slots from <a href="../EndlessDuration/">EndlessDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-entityinformed-also-in-common_subset">Slots from <a href="../EntityInformed/">EntityInformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-entityinformedstatus-also-in-common_subset">Slots from <a href="../EntityInformedStatus/">EntityInformedStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-entityuninformed-also-in-common_subset">Slots from <a href="../EntityUninformed/">EntityUninformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-expectationstatus-also-in-common_subset">Slots from <a href="../ExpectationStatus/">ExpectationStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-expected-also-in-common_subset">Slots from <a href="../Expected/">Expected</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-feenotrequired-also-in-common_subset">Slots from <a href="../FeeNotRequired/">FeeNotRequired</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-feerequired-also-in-common_subset">Slots from <a href="../FeeRequired/">FeeRequired</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-feerequirement-also-in-common_subset">Slots from <a href="../FeeRequirement/">FeeRequirement</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-fixedoccurrencesduration-also-in-common_subset">Slots from <a href="../FixedOccurrencesDuration/">FixedOccurrencesDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-frequency-also-in-common_subset">Slots from <a href="../Frequency/">Frequency</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-importance-also-in-common_subset">Slots from <a href="../Importance/">Importance</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-indeterminateduration-also-in-common_subset">Slots from <a href="../IndeterminateDuration/">IndeterminateDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-intended-also-in-common_subset">Slots from <a href="../Intended/">Intended</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-intentionstatus-also-in-common_subset">Slots from <a href="../IntentionStatus/">IntentionStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-involvementstatus-also-in-common_subset">Slots from <a href="../InvolvementStatus/">InvolvementStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-justification-also-in-common_subset">Slots from <a href="../Justification/">Justification</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-lawful-also-in-common_subset">Slots from <a href="../Lawful/">Lawful</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-lawfulness-also-in-common_subset">Slots from <a href="../Lawfulness/">Lawfulness</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-lawfulnessunknown-also-in-common_subset">Slots from <a href="../LawfulnessUnknown/">LawfulnessUnknown</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-legalmeasure-also-in-common_subset">Slots from <a href="../LegalMeasure/">LegalMeasure</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-necessity-also-in-common_subset">Slots from <a href="../Necessity/">Necessity</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-noncompliant-also-in-common_subset">Slots from <a href="../NonCompliant/">NonCompliant</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-nonconformant-also-in-common_subset">Slots from <a href="../NonConformant/">NonConformant</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notapplicable-also-in-common_subset">Slots from <a href="../NotApplicable/">NotApplicable</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notavailable-also-in-common_subset">Slots from <a href="../NotAvailable/">NotAvailable</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notificationcompleted-also-in-common_subset">Slots from <a href="../NotificationCompleted/">NotificationCompleted</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notificationfailed-also-in-common_subset">Slots from <a href="../NotificationFailed/">NotificationFailed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notificationnotneeded-also-in-common_subset">Slots from <a href="../NotificationNotNeeded/">NotificationNotNeeded</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notificationongoing-also-in-common_subset">Slots from <a href="../NotificationOngoing/">NotificationOngoing</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notificationplanned-also-in-common_subset">Slots from <a href="../NotificationPlanned/">NotificationPlanned</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notificationstatus-also-in-common_subset">Slots from <a href="../NotificationStatus/">NotificationStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notinvolved-also-in-common_subset">Slots from <a href="../NotInvolved/">NotInvolved</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-notrequired-also-in-common_subset">Slots from <a href="../NotRequired/">NotRequired</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-obligation-also-in-common_subset">Slots from <a href="../Obligation/">Obligation</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-obligationfulfilled-also-in-common_subset">Slots from <a href="../ObligationFulfilled/">ObligationFulfilled</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-obligationunfulfilled-also-in-common_subset">Slots from <a href="../ObligationUnfulfilled/">ObligationUnfulfilled</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-obligationviolated-also-in-common_subset">Slots from <a href="../ObligationViolated/">ObligationViolated</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-oftenfrequency-also-in-common_subset">Slots from <a href="../OftenFrequency/">OftenFrequency</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-organisationalmeasure-also-in-common_subset">Slots from <a href="../OrganisationalMeasure/">OrganisationalMeasure</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-partiallycompliant-also-in-common_subset">Slots from <a href="../PartiallyCompliant/">PartiallyCompliant</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-passivelyinvolved-also-in-common_subset">Slots from <a href="../PassivelyInvolved/">PassivelyInvolved</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-permission-also-in-common_subset">Slots from <a href="../Permission/">Permission</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-permissionnotutilised-also-in-common_subset">Slots from <a href="../PermissionNotUtilised/">PermissionNotUtilised</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-permissionutilised-also-in-common_subset">Slots from <a href="../PermissionUtilised/">PermissionUtilised</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-physicalmeasure-also-in-common_subset">Slots from <a href="../PhysicalMeasure/">PhysicalMeasure</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-primaryimportance-also-in-common_subset">Slots from <a href="../PrimaryImportance/">PrimaryImportance</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-primaryuse-also-in-common_subset">Slots from <a href="../PrimaryUse/">PrimaryUse</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-prohibition-also-in-common_subset">Slots from <a href="../Prohibition/">Prohibition</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-prohibitionunviolated-also-in-common_subset">Slots from <a href="../ProhibitionUnviolated/">ProhibitionUnviolated</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-prohibitionviolated-also-in-common_subset">Slots from <a href="../ProhibitionViolated/">ProhibitionViolated</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-recipientinformed-also-in-common_subset">Slots from <a href="../RecipientInformed/">RecipientInformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-recipientuninformed-also-in-common_subset">Slots from <a href="../RecipientUninformed/">RecipientUninformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-recommendation-also-in-common_subset">Slots from <a href="../Recommendation/">Recommendation</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-recommendationfollowed-also-in-common_subset">Slots from <a href="../RecommendationFollowed/">RecommendationFollowed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-recommendationnotfollowed-also-in-common_subset">Slots from <a href="../RecommendationNotFollowed/">RecommendationNotFollowed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestaccepted-also-in-common_subset">Slots from <a href="../RequestAccepted/">RequestAccepted</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestacknowledged-also-in-common_subset">Slots from <a href="../RequestAcknowledged/">RequestAcknowledged</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestactiondelayed-also-in-common_subset">Slots from <a href="../RequestActionDelayed/">RequestActionDelayed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestfulfilled-also-in-common_subset">Slots from <a href="../RequestFulfilled/">RequestFulfilled</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestinitiated-also-in-common_subset">Slots from <a href="../RequestInitiated/">RequestInitiated</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestrejected-also-in-common_subset">Slots from <a href="../RequestRejected/">RequestRejected</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestrequiredactionperformed-also-in-common_subset">Slots from <a href="../RequestRequiredActionPerformed/">RequestRequiredActionPerformed</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestrequiresaction-also-in-common_subset">Slots from <a href="../RequestRequiresAction/">RequestRequiresAction</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requeststatus-also-in-common_subset">Slots from <a href="../RequestStatus/">RequestStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requeststatusquery-also-in-common_subset">Slots from <a href="../RequestStatusQuery/">RequestStatusQuery</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-requestunfulfilled-also-in-common_subset">Slots from <a href="../RequestUnfulfilled/">RequestUnfulfilled</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-required-also-in-common_subset">Slots from <a href="../Required/">Required</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-reusecompatibility-also-in-common_subset">Slots from <a href="../ReuseCompatibility/">ReuseCompatibility</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-rule-also-in-common_subset">Slots from <a href="../Rule/">Rule</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-rulefulfilled-also-in-common_subset">Slots from <a href="../RuleFulfilled/">RuleFulfilled</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-rulefulfilmentstatus-also-in-common_subset">Slots from <a href="../RuleFulfilmentStatus/">RuleFulfilmentStatus</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-ruleunfulfilled-also-in-common_subset">Slots from <a href="../RuleUnfulfilled/">RuleUnfulfilled</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-ruleviolated-also-in-common_subset">Slots from <a href="../RuleViolated/">RuleViolated</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-scope-also-in-common_subset">Slots from <a href="../Scope/">Scope</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-secondaryimportance-also-in-common_subset">Slots from <a href="../SecondaryImportance/">SecondaryImportance</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-secondaryuse-also-in-common_subset">Slots from <a href="../SecondaryUse/">SecondaryUse</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-singularfrequency-also-in-common_subset">Slots from <a href="../SingularFrequency/">SingularFrequency</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-sporadicfrequency-also-in-common_subset">Slots from <a href="../SporadicFrequency/">SporadicFrequency</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-status-also-in-common_subset">Slots from <a href="../Status/">Status</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-technicalmeasure-also-in-common_subset">Slots from <a href="../TechnicalMeasure/">TechnicalMeasure</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-technicalorganisationalmeasure-also-in-common_subset">Slots from <a href="../TechnicalOrganisationalMeasure/">TechnicalOrganisationalMeasure</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-temporalduration-also-in-common_subset">Slots from <a href="../TemporalDuration/">TemporalDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-unacceptablerule-also-in-common_subset">Slots from <a href="../UnacceptableRule/">UnacceptableRule</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-unexpected-also-in-common_subset">Slots from <a href="../Unexpected/">Unexpected</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-unintended-also-in-common_subset">Slots from <a href="../Unintended/">Unintended</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-unknownapplicability-also-in-common_subset">Slots from <a href="../UnknownApplicability/">UnknownApplicability</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-unlawful-also-in-common_subset">Slots from <a href="../Unlawful/">Unlawful</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-untileventduration-also-in-common_subset">Slots from <a href="../UntilEventDuration/">UntilEventDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-untiltimeduration-also-in-common_subset">Slots from <a href="../UntilTimeDuration/">UntilTimeDuration</a> also in <em>common_subset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Stable identifier for the instance <strong>identifier</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots-in-subset">Slots in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../has_activity_status/">has_activity_status</a></td>
+<td>Indicates the status of activity of specified concept</td>
+</tr>
+<tr>
+<td><a href="../has_applicability/">has_applicability</a></td>
+<td>Indicates situations where the context is not applicable, information is</td>
+</tr>
+<tr>
+<td><a href="../has_assessment/">has_assessment</a></td>
+<td>Indicates a relevant assessment associated with the specific context</td>
+</tr>
+<tr>
+<td><a href="../has_audit_status/">has_audit_status</a></td>
+<td>Indicates the status of audit associated with specified concept</td>
+</tr>
+<tr>
+<td><a href="../has_compliance_status/">has_compliance_status</a></td>
+<td>Indicates the status of compliance of specified concept</td>
+</tr>
+<tr>
+<td><a href="../has_conformance_status/">has_conformance_status</a></td>
+<td>Indicates the status of being conformant or non-conformant</td>
+</tr>
+<tr>
+<td><a href="../has_context/">has_context</a></td>
+<td>Indicates a purpose is restricted to the specified context(s)</td>
+</tr>
+<tr>
+<td><a href="../has_deterrence/">has_deterrence</a></td>
+<td>Specifies applicability or inclusion of a deterrence rule within</td>
+</tr>
+<tr>
+<td><a href="../has_duration/">has_duration</a></td>
+<td>Indicates information about duration</td>
+</tr>
+<tr>
+<td><a href="../has_entity_control/">has_entity_control</a></td>
+<td>Indicates a control or measure provided for an entity to perform the</td>
+</tr>
+<tr>
+<td><a href="../has_expectation/">has_expectation</a></td>
+<td>Indicates whether the specified context was expected or unexpected</td>
+</tr>
+<tr>
+<td><a href="../has_fee/">has_fee</a></td>
+<td>Indicates whether a fee is required for the specified context</td>
+</tr>
+<tr>
+<td><a href="../has_frequency/">has_frequency</a></td>
+<td>Indicates the frequency with which something takes place</td>
+</tr>
+<tr>
+<td><a href="../has_fulfilment_status/">has_fulfilment_status</a></td>
+<td>Specifies the fulfillment status associated with a rule</td>
+</tr>
+<tr>
+<td><a href="../has_identifier/">has_identifier</a></td>
+<td>Indicates an identifier associated for identification or reference</td>
+</tr>
+<tr>
+<td><a href="../has_importance/">has_importance</a></td>
+<td>Indicates the importance for specified context or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_informed_status/">has_informed_status</a></td>
+<td>Indicates whether an entity was informed or uninformed</td>
+</tr>
+<tr>
+<td><a href="../has_intention/">has_intention</a></td>
+<td>Indicates whether the specified context was intended or unintended</td>
+</tr>
+<tr>
+<td><a href="../has_involvement/">has_involvement</a></td>
+<td>Indicates the involvement status for the specified context</td>
+</tr>
+<tr>
+<td><a href="../has_justification/">has_justification</a></td>
+<td>Indicates a justification for specified concept or context</td>
+</tr>
+<tr>
+<td><a href="../has_lawfulness/">has_lawfulness</a></td>
+<td>Indicates the status of being lawful or legally compliant</td>
+</tr>
+<tr>
+<td><a href="../has_legal_measure/">has_legal_measure</a></td>
+<td>Indicates use or applicability of Legal measure</td>
+</tr>
+<tr>
+<td><a href="../has_necessity/">has_necessity</a></td>
+<td>Indicates the necessity for specified context or criteria</td>
+</tr>
+<tr>
+<td><a href="../has_notification_status/">has_notification_status</a></td>
+<td>Indicates the status associated with a notice</td>
+</tr>
+<tr>
+<td><a href="../has_obligation/">has_obligation</a></td>
+<td>Specifies applicability or inclusion of an obligation rule within</td>
+</tr>
+<tr>
+<td><a href="../has_organisational_measure/">has_organisational_measure</a></td>
+<td>Indicates use or applicability of Organisational measure</td>
+</tr>
+<tr>
+<td><a href="../has_outcome/">has_outcome</a></td>
+<td>Indicates an outcome of specified concept or context</td>
+</tr>
+<tr>
+<td><a href="../has_permission/">has_permission</a></td>
+<td>Specifies applicability or inclusion of a permission rule within</td>
+</tr>
+<tr>
+<td><a href="../has_physical_measure/">has_physical_measure</a></td>
+<td>Indicates use or applicability of Physical measure</td>
+</tr>
+<tr>
+<td><a href="../has_policy/">has_policy</a></td>
+<td>Indicates policy applicable or used</td>
+</tr>
+<tr>
+<td><a href="../has_prohibition/">has_prohibition</a></td>
+<td>Specifies applicability or inclusion of a prohibition rule within</td>
+</tr>
+<tr>
+<td><a href="../has_recommendation/">has_recommendation</a></td>
+<td>Specifies applicability or inclusion of a recommendation rule within</td>
+</tr>
+<tr>
+<td><a href="../has_record_of_activity/">has_record_of_activity</a></td>
+<td>Indicates a relevant record of activity</td>
+</tr>
+<tr>
+<td><a href="../has_request_status/">has_request_status</a></td>
+<td>Indicates the status associated with a request</td>
+</tr>
+<tr>
+<td><a href="../has_reuse_compatibility/">has_reuse_compatibility</a></td>
+<td>Indicates the reuse compatibility for the specified context</td>
+</tr>
+<tr>
+<td><a href="../has_rule/">has_rule</a></td>
+<td>Specifies applicability or inclusion of a rule within specified context</td>
+</tr>
+<tr>
+<td><a href="../has_scope/">has_scope</a></td>
+<td>Indicates the scope of specified concept or context</td>
+</tr>
+<tr>
+<td><a href="../has_technical_measure/">has_technical_measure</a></td>
+<td>Indicates use or applicability of Technical measure</td>
+</tr>
+<tr>
+<td><a href="../has_technical_organisational_measure/">has_technical_organisational_measure</a></td>
+<td>Indicates use or applicability of Technical or Organisational measure</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>Stable identifier for the instance</td>
+</tr>
+<tr>
+<td><a href="../is_after/">is_after</a></td>
+<td>Indicates the specified concepts is 'after' this concept in some context</td>
+</tr>
+<tr>
+<td><a href="../is_applicable_for/">is_applicable_for</a></td>
+<td>Indicates the concept or information is applicable for specified context</td>
+</tr>
+<tr>
+<td><a href="../is_before/">is_before</a></td>
+<td>Indicates the specified concepts is 'before' this concept in some</td>
+</tr>
+<tr>
+<td><a href="../is_during/">is_during</a></td>
+<td>Indicates the specified concepts occur 'during' this concept in some</td>
+</tr>
+<tr>
+<td><a href="../is_not_applicable_for/">is_not_applicable_for</a></td>
+<td>Indicates the concept or information is not applicable for specified</td>
+</tr>
+<tr>
+<td><a href="../is_policy_for/">is_policy_for</a></td>
+<td>Indicates the context or application of policy</td>
+</tr>
+<tr>
+<td><a href="../supports_compliance_with/">supports_compliance_with</a></td>
+<td>Indicate the measure is required for meeting specified requirement or</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+<div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.tabs.link", "header.autohide", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/pymdownx-extras/extra-loader-B5CKpNQx.js"></script>
+      
+    
+  </body>
+</html>

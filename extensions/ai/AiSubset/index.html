@@ -1,0 +1,1760 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/dpv/extensions/ai/AiSubset/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Subset: AiSubset - dpv</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script src="../../../assets/pymdownx-extras/material-extra-theme-2ek1P7jT.js" type="text/javascript"></script>
+<script src="../../../assets/pymdownx-extras/material-extra-3rdparty-BUCF4rjN.js" type="text/javascript"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
+    
+      <link rel="stylesheet" href="../../../assets/pymdownx-extras/extra-c6ab11540a.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#subset-aisubset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="header.title"
+  >
+    <a
+      href="https://lmodel.github.io/dpv/"
+      title="dpv"
+      class="md-header__button md-logo"
+      aria-label="dpv"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dpv
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Subset: AiSubset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07zm-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13zm-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87zM19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35zm4.33-2.7 1.15-2.77 2.2 2.54zm1.15-4.96-1.14-2.78 3.34.24zM9.63 18.93l2.77 1.15-2.53 2.19z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
+          </a>
+      </div>
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="dpv" class="md-nav__button md-logo" aria-label="dpv" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    dpv
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../justifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Location
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../risk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identifier-and-mapping-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identifier and Mapping Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-in-subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes in subset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots-in-subset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots in subset
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="subset-aisubset">Subset: AiSubset</h1>
+<p><em>All entities from the DPV <code>ai</code> extension.</em></p>
+<div>
+<p>URI: <a href="./">AiSubset</a></p>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: <a href="https://w3id.org/lmodel/dpv/ai">https://w3id.org/lmodel/dpv/ai</a></li>
+</ul>
+<h2 id="classes-in-subset">Classes in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../ActionRecognition/">ActionRecognition</a></td>
+<td>Capability to recognise actions</td>
+</tr>
+<tr>
+<td><a href="../AdversarialAttack/">AdversarialAttack</a></td>
+<td>Inputs designed to cause the model to make a mistake</td>
+</tr>
+<tr>
+<td><a href="../AGI/">AGI</a></td>
+<td>Type of AI system that addresses a broad range of tasks with a</td>
+</tr>
+<tr>
+<td><a href="../AI/">AI</a></td>
+<td>A technical and scientific field devoted to the engineered system that</td>
+</tr>
+<tr>
+<td><a href="../AIAgent/">AIAgent</a></td>
+<td>An AI Agent, also known as an 'intelligent agent', is a software agent</td>
+</tr>
+<tr>
+<td><a href="../AIBias/">AIBias</a></td>
+<td>Bias associated with development, use, or other activities involving an</td>
+</tr>
+<tr>
+<td><a href="../AIProcess/">AIProcess</a></td>
+<td>A process involving AI technologies</td>
+</tr>
+<tr>
+<td><a href="../AISystem/">AISystem</a></td>
+<td>An engineered system that generates outputs such as content, forecasts,</td>
+</tr>
+<tr>
+<td><a href="../AISystemRisk/">AISystemRisk</a></td>
+<td>Risks associated with AI Systems</td>
+</tr>
+<tr>
+<td><a href="../AlgorithmSelectionBias/">AlgorithmSelectionBias</a></td>
+<td>Bias that occurs from the selection of machine learning algorithms built</td>
+</tr>
+<tr>
+<td><a href="../AudioCapability/">AudioCapability</a></td>
+<td>Capabilities related to the processing and generation of audio</td>
+</tr>
+<tr>
+<td><a href="../AudioGeneration/">AudioGeneration</a></td>
+<td>Capability to generate audio</td>
+</tr>
+<tr>
+<td><a href="../AudioProcessing/">AudioProcessing</a></td>
+<td>Technique involving processing audio</td>
+</tr>
+<tr>
+<td><a href="../AutomaticSummarisation/">AutomaticSummarisation</a></td>
+<td>Capability for shortening a portion of content such as text while</td>
+</tr>
+<tr>
+<td><a href="../AutomationBias/">AutomationBias</a></td>
+<td>Bias that occurs due to propensity for humans to favour suggestions from</td>
+</tr>
+<tr>
+<td><a href="../BayesianEstimation/">BayesianEstimation</a></td>
+<td>Refers to Bayesian estimation approach</td>
+</tr>
+<tr>
+<td><a href="../BayesianNetwork/">BayesianNetwork</a></td>
+<td>Probabilistic technique that uses Bayesian inference for probability</td>
+</tr>
+<tr>
+<td><a href="../BayesianOptimisation/">BayesianOptimisation</a></td>
+<td>Refers to Bayesian optimisation technique</td>
+</tr>
+<tr>
+<td><a href="../BehaviourAnalysis/">BehaviourAnalysis</a></td>
+<td>Capability of a system in analysing people's behaviour</td>
+</tr>
+<tr>
+<td><a href="../Benchmarking/">Benchmarking</a></td>
+<td>Measure where performance and outputs are compared to best practices,</td>
+</tr>
+<tr>
+<td><a href="../BiasAssessment/">BiasAssessment</a></td>
+<td>Examination of a data set, model, or AI system for bias</td>
+</tr>
+<tr>
+<td><a href="../BiasDetection/">BiasDetection</a></td>
+<td>Indicates measures to detect bias</td>
+</tr>
+<tr>
+<td><a href="../BiasMitigation/">BiasMitigation</a></td>
+<td>Indicates measures to mitigate bias</td>
+</tr>
+<tr>
+<td><a href="../BiasPrevention/">BiasPrevention</a></td>
+<td>Indicates measures to prevent bias</td>
+</tr>
+<tr>
+<td><a href="../BiometricCapability/">BiometricCapability</a></td>
+<td>Capability involving processing of biometric data or related to</td>
+</tr>
+<tr>
+<td><a href="../BiometricCategorisation/">BiometricCategorisation</a></td>
+<td>Capability involving assigning natural persons to specific categories</td>
+</tr>
+<tr>
+<td><a href="../BiometricEmotionRecognition/">BiometricEmotionRecognition</a></td>
+<td>Capability for recognising emotions based on biometrics information</td>
+</tr>
+<tr>
+<td><a href="../BiometricIdentification/">BiometricIdentification</a></td>
+<td>Capability involving automated recognition of physical, physiological</td>
+</tr>
+<tr>
+<td><a href="../Capability/">Capability</a></td>
+<td>Capability or use of AI to achieve a technical goal or objective</td>
+</tr>
+<tr>
+<td><a href="../ChatbotCapability/">ChatbotCapability</a></td>
+<td>Capability to simulate human-like conversation with a user through</td>
+</tr>
+<tr>
+<td><a href="../CognitiveComputing/">CognitiveComputing</a></td>
+<td>Category of AI systems that enables people and machines to interact more</td>
+</tr>
+<tr>
+<td><a href="../ComputationalCreativity/">ComputationalCreativity</a></td>
+<td>computer systems that emulate human creative processes and produce</td>
+</tr>
+<tr>
+<td><a href="../ComputerVision/">ComputerVision</a></td>
+<td>Capability of a functional unit to acquire, process and interpret data</td>
+</tr>
+<tr>
+<td><a href="../ContentBasedRetrieval/">ContentBasedRetrieval</a></td>
+<td>Capability for retrieval of information using the actual content to</td>
+</tr>
+<tr>
+<td><a href="../ContentGeneration/">ContentGeneration</a></td>
+<td>Capability to generate new content that is distinct from merely deriving</td>
+</tr>
+<tr>
+<td><a href="../ContextAwareRetrieval/">ContextAwareRetrieval</a></td>
+<td>Capability for retrieval of information that takes into account the</td>
+</tr>
+<tr>
+<td><a href="../ContinuousValidationStage/">ContinuousValidationStage</a></td>
+<td>The stage in the lifecycle where there is continuous learning within the</td>
+</tr>
+<tr>
+<td><a href="../ConvolutionalNeuralNetwork/">ConvolutionalNeuralNetwork</a></td>
+<td>Feed forward neural network using convolution in at least one of its</td>
+</tr>
+<tr>
+<td><a href="../CyberphysicalSystem/">CyberphysicalSystem</a></td>
+<td>Engineered system built from, and depending upon, the seamless</td>
+</tr>
+<tr>
+<td><a href="../DataAggregation/">DataAggregation</a></td>
+<td>Processing operation where data is aggregated, e</td>
+</tr>
+<tr>
+<td><a href="../DataAggregationBias/">DataAggregationBias</a></td>
+<td>Bias that occurs from aggregating data covering different groups of</td>
+</tr>
+<tr>
+<td><a href="../DataAnnotation/">DataAnnotation</a></td>
+<td>Processing operation where data is annoated, e</td>
+</tr>
+<tr>
+<td><a href="../DataBias/">DataBias</a></td>
+<td>Bias that occurs due to unaddressed data properties that lead to AI</td>
+</tr>
+<tr>
+<td><a href="../DataCleaning/">DataCleaning</a></td>
+<td>Processing operation where data is cleaned, e</td>
+</tr>
+<tr>
+<td><a href="../DataCollection/">DataCollection</a></td>
+<td>Processing operation where data is collected, e</td>
+</tr>
+<tr>
+<td><a href="../DataEnrichment/">DataEnrichment</a></td>
+<td>Processing operation where data is enriced, e</td>
+</tr>
+<tr>
+<td><a href="../DataLabelling/">DataLabelling</a></td>
+<td>Processing operation where data annotation is carried out through</td>
+</tr>
+<tr>
+<td><a href="../DataLabellingProcessBias/">DataLabellingProcessBias</a></td>
+<td>Bias that occurs due to the labelling process itself introducing</td>
+</tr>
+<tr>
+<td><a href="../DataOperation/">DataOperation</a></td>
+<td>Processing of data for the development or use of AI models</td>
+</tr>
+<tr>
+<td><a href="../DataPoisoning/">DataPoisoning</a></td>
+<td>Attack trying to manipulate the training dataset</td>
+</tr>
+<tr>
+<td><a href="../DataPreparation/">DataPreparation</a></td>
+<td>Processing operation where data is prepared, e</td>
+</tr>
+<tr>
+<td><a href="../DataRisk/">DataRisk</a></td>
+<td>Risk associated with data used or produced or otherwise involved in the</td>
+</tr>
+<tr>
+<td><a href="../DataUpdating/">DataUpdating</a></td>
+<td>Processing operation where data is updated, e</td>
+</tr>
+<tr>
+<td><a href="../DecisionTree/">DecisionTree</a></td>
+<td>Technique for which inference is encoded as paths from the root to a</td>
+</tr>
+<tr>
+<td><a href="../DecommissionStage/">DecommissionStage</a></td>
+<td>The stage in the lifecycle where the AI system is being decommissioned</td>
+</tr>
+<tr>
+<td><a href="../DeepLearning/">DeepLearning</a></td>
+<td>Approach to creating rich hierarchical representations through the</td>
+</tr>
+<tr>
+<td><a href="../DeploymentStage/">DeploymentStage</a></td>
+<td>The stage in the lifecycle where the AI system is installed, released or</td>
+</tr>
+<tr>
+<td><a href="../DesignStage/">DesignStage</a></td>
+<td>The stage in the lifecycle where designs are created for the AI system</td>
+</tr>
+<tr>
+<td><a href="../DevelopmentStage/">DevelopmentStage</a></td>
+<td>The stage in the lifecycle where the development and creation of the</td>
+</tr>
+<tr>
+<td><a href="../DialogueManagement/">DialogueManagement</a></td>
+<td>Capability for shortening a portion of content such as text while</td>
+</tr>
+<tr>
+<td><a href="../DiscardStage/">DiscardStage</a></td>
+<td>The stage in the lifecycle where the AI system is being discarded as</td>
+</tr>
+<tr>
+<td><a href="../DistributedTrainingBias/">DistributedTrainingBias</a></td>
+<td>Bias that occurs due to distributed machine having different sources of</td>
+</tr>
+<tr>
+<td><a href="../DpvData/">DpvData</a></td>
+<td>Data involved in the development and use of an AI system or model</td>
+</tr>
+<tr>
+<td><a href="../EdgeAI/">EdgeAI</a></td>
+<td>The deployment and execution of AI and ML models on Edge devices,</td>
+</tr>
+<tr>
+<td><a href="../EmotionRecognition/">EmotionRecognition</a></td>
+<td>Capability for identifying and categorising emotions expressed in a</td>
+</tr>
+<tr>
+<td><a href="../EngineeringDecisionBias/">EngineeringDecisionBias</a></td>
+<td>Bias that occurs due to machine learning model architectures -</td>
+</tr>
+<tr>
+<td><a href="../ExpertSystem/">ExpertSystem</a></td>
+<td>AI system that accumulates, combines and encapsulates knowledge provided</td>
+</tr>
+<tr>
+<td><a href="../ExplainabilityRisk/">ExplainabilityRisk</a></td>
+<td>Risk that an AI's decisions or behaviors cannot be adequately</td>
+</tr>
+<tr>
+<td><a href="../FaceRecognition/">FaceRecognition</a></td>
+<td>Capability involving automatic pattern recognition for comparing stored</td>
+</tr>
+<tr>
+<td><a href="../FeatureEngineeringBias/">FeatureEngineeringBias</a></td>
+<td>Bias that occurs from steps such as encoding, data type conversion,</td>
+</tr>
+<tr>
+<td><a href="../FeedForwardNeuralNetwork/">FeedForwardNeuralNetwork</a></td>
+<td>Neural network where information is fed from the input layer to the</td>
+</tr>
+<tr>
+<td><a href="../FineTunedModel/">FineTunedModel</a></td>
+<td>Model resulting from fine-tuning of a pre-trained model</td>
+</tr>
+<tr>
+<td><a href="../FrugalAISystem/">FrugalAISystem</a></td>
+<td>AI systems intended to be more efficient, cost-effective, and accessible</td>
+</tr>
+<tr>
+<td><a href="../FrugalMachineLearning/">FrugalMachineLearning</a></td>
+<td>Machine learning techniques that aim to make models more efficient,</td>
+</tr>
+<tr>
+<td><a href="../GenAI/">GenAI</a></td>
+<td>Use of artificial intelligence models that can learn from and mimic</td>
+</tr>
+<tr>
+<td><a href="../GeneticAlgorithm/">GeneticAlgorithm</a></td>
+<td>Algorithm which simulates natural selection by creating and evolving a</td>
+</tr>
+<tr>
+<td><a href="../GestureRecognition/">GestureRecognition</a></td>
+<td>Capability for recognising human gestures</td>
+</tr>
+<tr>
+<td><a href="../GPAI/">GPAI</a></td>
+<td>Artificial intelligence system based on a general-purpose model and</td>
+</tr>
+<tr>
+<td><a href="../GPAIModel/">GPAIModel</a></td>
+<td>A model that displays generality in terms of capabilities and potential</td>
+</tr>
+<tr>
+<td><a href="../HeuristicProgramming/">HeuristicProgramming</a></td>
+<td>Programming approach designed to tackle problems for which there lacks a</td>
+</tr>
+<tr>
+<td><a href="../HumanIdentification/">HumanIdentification</a></td>
+<td>Capability of a system that identifies a human whether at an individual</td>
+</tr>
+<tr>
+<td><a href="../HumanOrientedCapability/">HumanOrientedCapability</a></td>
+<td>Capabilities that are inherently about humans or oriented towards human</td>
+</tr>
+<tr>
+<td><a href="../HyperparameterTuningBias/">HyperparameterTuningBias</a></td>
+<td>Bias that occurs from hyperparameters defining how the model is</td>
+</tr>
+<tr>
+<td><a href="../ImageClassification/">ImageClassification</a></td>
+<td>Capability of categorising and labelling groups of pixels or vectors</td>
+</tr>
+<tr>
+<td><a href="../ImageGeneration/">ImageGeneration</a></td>
+<td>Capability to generate image</td>
+</tr>
+<tr>
+<td><a href="../ImageRecognition/">ImageRecognition</a></td>
+<td>Capability for image classification process that classifies object(s),</td>
+</tr>
+<tr>
+<td><a href="../InceptionStage/">InceptionStage</a></td>
+<td>The stage in the lifecycle where inception regarding AI occurs and one</td>
+</tr>
+<tr>
+<td><a href="../IncidentMonitoringStage/">IncidentMonitoringStage</a></td>
+<td>The stage in the lifecycle where an AI system is actively being</td>
+</tr>
+<tr>
+<td><a href="../InductiveProgramming/">InductiveProgramming</a></td>
+<td>An algorithm or program featuring recursive calls or repetition control</td>
+</tr>
+<tr>
+<td><a href="../IndustrialRobot/">IndustrialRobot</a></td>
+<td>A robot or robotic system for use in industrial automation applications</td>
+</tr>
+<tr>
+<td><a href="../InformationRetrieval/">InformationRetrieval</a></td>
+<td>Capability for retrieving relevant documents or parts of documents from</td>
+</tr>
+<tr>
+<td><a href="../InformativenessBias/">InformativenessBias</a></td>
+<td>Bias that occurs or some groups, the mapping between inputs present in</td>
+</tr>
+<tr>
+<td><a href="../InputDataBias/">InputDataBias</a></td>
+<td>Concept representing input data containing or potentially containing</td>
+</tr>
+<tr>
+<td><a href="../InputDataInaccurate/">InputDataInaccurate</a></td>
+<td>Concept representing input data being inaccurate</td>
+</tr>
+<tr>
+<td><a href="../InputDataInappropriate/">InputDataInappropriate</a></td>
+<td>Concept representing input data being inappropriate</td>
+</tr>
+<tr>
+<td><a href="../InputDataIncomplete/">InputDataIncomplete</a></td>
+<td>Concept representing input data being incomplete</td>
+</tr>
+<tr>
+<td><a href="../InputDataInconsistent/">InputDataInconsistent</a></td>
+<td>Concept representing input data being inconsistent</td>
+</tr>
+<tr>
+<td><a href="../InputDataMisclassified/">InputDataMisclassified</a></td>
+<td>Concept representing input data being misclassified</td>
+</tr>
+<tr>
+<td><a href="../InputDataMisinterpretation/">InputDataMisinterpretation</a></td>
+<td>Concept representing input data being misinterpreted</td>
+</tr>
+<tr>
+<td><a href="../InputDataNoise/">InputDataNoise</a></td>
+<td>Concept representing input data being noisy</td>
+</tr>
+<tr>
+<td><a href="../InputDataOutdated/">InputDataOutdated</a></td>
+<td>Concept representing input data being outdated</td>
+</tr>
+<tr>
+<td><a href="../InputDataRisk/">InputDataRisk</a></td>
+<td>Risks and risk concepts related to input data</td>
+</tr>
+<tr>
+<td><a href="../InputDataSelectionError/">InputDataSelectionError</a></td>
+<td>Concept representing an error in input data selection</td>
+</tr>
+<tr>
+<td><a href="../InputDataSparse/">InputDataSparse</a></td>
+<td>Concept representing input data being sparse</td>
+</tr>
+<tr>
+<td><a href="../InputDataUnrepresentative/">InputDataUnrepresentative</a></td>
+<td>Concept representing input data being unrepresentative</td>
+</tr>
+<tr>
+<td><a href="../InputDataUnstructured/">InputDataUnstructured</a></td>
+<td>Concept representing input data being unstructured</td>
+</tr>
+<tr>
+<td><a href="../InputDataUnverified/">InputDataUnverified</a></td>
+<td>Concept representing input data being unverified</td>
+</tr>
+<tr>
+<td><a href="../IntelligentControlSystem/">IntelligentControlSystem</a></td>
+<td>Category of AI systems which implement intelligent control principles</td>
+</tr>
+<tr>
+<td><a href="../KnowledgeRepresentation/">KnowledgeRepresentation</a></td>
+<td>Encoding knowledge in a formal language or in a form that can be used</td>
+</tr>
+<tr>
+<td><a href="../KnowledgeTechnique/">KnowledgeTechnique</a></td>
+<td>Techniques based on the use of knowledge bases</td>
+</tr>
+<tr>
+<td><a href="../LanguageCapability/">LanguageCapability</a></td>
+<td>Capabilities related to languages</td>
+</tr>
+<tr>
+<td><a href="../LieDetection/">LieDetection</a></td>
+<td>Capability to detect lies in the context of human speech, behaviour,</td>
+</tr>
+<tr>
+<td><a href="../LifecycleStage/">LifecycleStage</a></td>
+<td>A stage in the lifecycle of AI</td>
+</tr>
+<tr>
+<td><a href="../LLM/">LLM</a></td>
+<td>Deep learning model that uses artificial neural networks trained on vast</td>
+</tr>
+<tr>
+<td><a href="../LocalBiometricIdentification/">LocalBiometricIdentification</a></td>
+<td>Capability involving biometric identification carried out locally</td>
+</tr>
+<tr>
+<td><a href="../LogicTechnique/">LogicTechnique</a></td>
+<td>Refers to logic based techniques</td>
+</tr>
+<tr>
+<td><a href="../LongShortTermMemory/">LongShortTermMemory</a></td>
+<td>Type of recurrent neural network that processes sequential data with a</td>
+</tr>
+<tr>
+<td><a href="../MachineLearning/">MachineLearning</a></td>
+<td>Process of optimising model parameters through computational techniques,</td>
+</tr>
+<tr>
+<td><a href="../MachineLearningModel/">MachineLearningModel</a></td>
+<td>Mathematical construct that generates an inference or prediction based</td>
+</tr>
+<tr>
+<td><a href="../MachineLearningPlatform/">MachineLearningPlatform</a></td>
+<td>Technology platform for developing, deploying, and managing machine</td>
+</tr>
+<tr>
+<td><a href="../MachineTranslation/">MachineTranslation</a></td>
+<td>Capability for automated translation of text or speech from one natural</td>
+</tr>
+<tr>
+<td><a href="../MissingFeaturesBias/">MissingFeaturesBias</a></td>
+<td>Bias that occurs when features are missing from individual training</td>
+</tr>
+<tr>
+<td><a href="../Model/">Model</a></td>
+<td>Physical, mathematical or otherwise logical representation of a system,</td>
+</tr>
+<tr>
+<td><a href="../ModelBias/">ModelBias</a></td>
+<td>Bias that occurs when ML uses functions like a maximum likelihood</td>
+</tr>
+<tr>
+<td><a href="../ModelEvasion/">ModelEvasion</a></td>
+<td>An input, which seems normal for a human but is wrongly classified by ML</td>
+</tr>
+<tr>
+<td><a href="../ModelExpressivenessBias/">ModelExpressivenessBias</a></td>
+<td>Bias that occurs from the number and nature of parameters in a model as</td>
+</tr>
+<tr>
+<td><a href="../ModelFineTuning/">ModelFineTuning</a></td>
+<td>Process where a pre-trained model is further refined through the use of</td>
+</tr>
+<tr>
+<td><a href="../ModelInteractionBias/">ModelInteractionBias</a></td>
+<td>Bias that occurs from the structure of a model to create biased</td>
+</tr>
+<tr>
+<td><a href="../ModelInversion/">ModelInversion</a></td>
+<td>A type of attack to AI models, in which the access to a model is abused</td>
+</tr>
+<tr>
+<td><a href="../ModelRisk/">ModelRisk</a></td>
+<td>Risks associated with AI Models</td>
+</tr>
+<tr>
+<td><a href="../ModelTraining/">ModelTraining</a></td>
+<td>Process to determine or to improve the parameters of a machine learning</td>
+</tr>
+<tr>
+<td><a href="../MotionAnalysis/">MotionAnalysis</a></td>
+<td>Capability of deriving meaningful information about motion from visual</td>
+</tr>
+<tr>
+<td><a href="../MultiModalRetrieval/">MultiModalRetrieval</a></td>
+<td>Capability for retrieval of information using multiple modalities such</td>
+</tr>
+<tr>
+<td><a href="../MusicInformationRetrieval/">MusicInformationRetrieval</a></td>
+<td>Capability for retrieving, analysing, and categorising music-related</td>
+</tr>
+<tr>
+<td><a href="../NamedEntityRecognition/">NamedEntityRecognition</a></td>
+<td>Capability for recognising and labelling the denotational names of</td>
+</tr>
+<tr>
+<td><a href="../NarrowAI/">NarrowAI</a></td>
+<td>Type of AI system that is focused on defined tasks to address a specific</td>
+</tr>
+<tr>
+<td><a href="../NaturalLanguageGeneration/">NaturalLanguageGeneration</a></td>
+<td>Converting data carrying semantics into natural language</td>
+</tr>
+<tr>
+<td><a href="../NaturalLanguageProcessing/">NaturalLanguageProcessing</a></td>
+<td>Capability enabling computers to understand and communicate with human</td>
+</tr>
+<tr>
+<td><a href="../NeuralNetwork/">NeuralNetwork</a></td>
+<td>Network of one or more layers of neurons connected by weighted links</td>
+</tr>
+<tr>
+<td><a href="../NonRepresentativeSamplingBias/">NonRepresentativeSamplingBias</a></td>
+<td>Bias that occurs if a dataset is not representative of the intended</td>
+</tr>
+<tr>
+<td><a href="../ObjectDetection/">ObjectDetection</a></td>
+<td>computer vision technology that detects instances of semantic objects in</td>
+</tr>
+<tr>
+<td><a href="../ObjectRecognition/">ObjectRecognition</a></td>
+<td>Capability to recognise objects</td>
+</tr>
+<tr>
+<td><a href="../OperationStage/">OperationStage</a></td>
+<td>The stage in the lifecycle where an AI system is running and generally</td>
+</tr>
+<tr>
+<td><a href="../OptimisationMethod/">OptimisationMethod</a></td>
+<td>Refers to optimisation Method</td>
+</tr>
+<tr>
+<td><a href="../PartOfSpeechTagging/">PartOfSpeechTagging</a></td>
+<td>Capability for assigning a category (e</td>
+</tr>
+<tr>
+<td><a href="../PatternRecognition/">PatternRecognition</a></td>
+<td>Capability for automated identification of patterns and regularities in</td>
+</tr>
+<tr>
+<td><a href="../PerceptionBasedAI/">PerceptionBasedAI</a></td>
+<td>Capability of using agents to interpret and understand information from</td>
+</tr>
+<tr>
+<td><a href="../PersonalityTraitAnalysis/">PersonalityTraitAnalysis</a></td>
+<td>Capability for determining and analysing people's personality traits</td>
+</tr>
+<tr>
+<td><a href="../PostTimeBiometricIdentification/">PostTimeBiometricIdentification</a></td>
+<td>Capability involving biometric identification carried out later or not</td>
+</tr>
+<tr>
+<td><a href="../Profiling/">Profiling</a></td>
+<td>Capability where AI is used to construct a profile of an individual</td>
+</tr>
+<tr>
+<td><a href="../QuestionAnswering/">QuestionAnswering</a></td>
+<td>Capability for determining the most appropriate answer to a question</td>
+</tr>
+<tr>
+<td><a href="../RealTimeBiometricIdentification/">RealTimeBiometricIdentification</a></td>
+<td>Capability involving biometric identification carried out in real-time</td>
+</tr>
+<tr>
+<td><a href="../ReasoningSystem/">ReasoningSystem</a></td>
+<td>Artificial intelligence systems that uses available information to</td>
+</tr>
+<tr>
+<td><a href="../ReasoningTechnique/">ReasoningTechnique</a></td>
+<td>Refers to reasoning techniques</td>
+</tr>
+<tr>
+<td><a href="../RecurrentNeuralNetwork/">RecurrentNeuralNetwork</a></td>
+<td>Neural network in which outputs from both the previous layer and the</td>
+</tr>
+<tr>
+<td><a href="../ReevaluationStage/">ReevaluationStage</a></td>
+<td>The stage in the lifecycle where the AI system is reevaluated after the</td>
+</tr>
+<tr>
+<td><a href="../ReinforcementLearning/">ReinforcementLearning</a></td>
+<td>Learning of an optimal sequence of actions to maximise a reward through</td>
+</tr>
+<tr>
+<td><a href="../RelationshipExtraction/">RelationshipExtraction</a></td>
+<td>Capability for identifying relationships among entities mentioned in a</td>
+</tr>
+<tr>
+<td><a href="../RemoteBiometricIdentification/">RemoteBiometricIdentification</a></td>
+<td>Capability involving biometric identification carried out remotely</td>
+</tr>
+<tr>
+<td><a href="../RemoteSensing/">RemoteSensing</a></td>
+<td>Capability for acquisition of information about an object or phenomenon</td>
+</tr>
+<tr>
+<td><a href="../RepairStage/">RepairStage</a></td>
+<td>The stage in the lifecycle where an AI system is being repaired due to</td>
+</tr>
+<tr>
+<td><a href="../ReplaceStage/">ReplaceStage</a></td>
+<td>The stage in the lifecycle where the AI system is being replaced as part</td>
+</tr>
+<tr>
+<td><a href="../RetirementStage/">RetirementStage</a></td>
+<td>The stage in the lifecycle where the AI system is retired and becomes</td>
+</tr>
+<tr>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+<td>Risk concepts such as risk sources, risks, consequences, and impacts</td>
+</tr>
+<tr>
+<td><a href="../Robot/">Robot</a></td>
+<td>An automation system with actuators that performs intended tasks in the</td>
+</tr>
+<tr>
+<td><a href="../RoboticProcessAutomation/">RoboticProcessAutomation</a></td>
+<td>Technology focused on automation of repetitive, routine, rule-based</td>
+</tr>
+<tr>
+<td><a href="../Robotics/">Robotics</a></td>
+<td>The science of designing, engineering and using robots, i</td>
+</tr>
+<tr>
+<td><a href="../RuleBasedTechnique/">RuleBasedTechnique</a></td>
+<td>Artificial intelligence approach governed by human-defined rules that</td>
+</tr>
+<tr>
+<td><a href="../SearchMethod/">SearchMethod</a></td>
+<td>Refers to statistical-based search Methods</td>
+</tr>
+<tr>
+<td><a href="../SecurityAttack/">SecurityAttack</a></td>
+<td>Risks or issues associated with security attacks related to AI</td>
+</tr>
+<tr>
+<td><a href="../SelfSupervisedLearning/">SelfSupervisedLearning</a></td>
+<td>Machine learning approach that uses unsupervised learning for tasks that</td>
+</tr>
+<tr>
+<td><a href="../SemiSupervisedLearning/">SemiSupervisedLearning</a></td>
+<td>Machine learning that makes use of both labelled and unlabelled data</td>
+</tr>
+<tr>
+<td><a href="../SentimentAnalysis/">SentimentAnalysis</a></td>
+<td>Capability for computationally identifying and categorising opinions</td>
+</tr>
+<tr>
+<td><a href="../ServiceRobot/">ServiceRobot</a></td>
+<td>A robot or robotic system in personal use or professional use that</td>
+</tr>
+<tr>
+<td><a href="../SocialRobot/">SocialRobot</a></td>
+<td>A robot or robotic system with social interaction functions</td>
+</tr>
+<tr>
+<td><a href="../SoundSourceSeparation/">SoundSourceSeparation</a></td>
+<td>Capability for extracting individual sound from audio recordings</td>
+</tr>
+<tr>
+<td><a href="../SoundSynthesis/">SoundSynthesis</a></td>
+<td>Capability for generation of artificial sound</td>
+</tr>
+<tr>
+<td><a href="../SpeakerRecognition/">SpeakerRecognition</a></td>
+<td>Capability of recognising speaker(s) in audio recordings</td>
+</tr>
+<tr>
+<td><a href="../SpeechRecognition/">SpeechRecognition</a></td>
+<td>Capability of converting a speech signal to a representation of the</td>
+</tr>
+<tr>
+<td><a href="../SpeechSynthesis/">SpeechSynthesis</a></td>
+<td>Capability for generation of artificial speech</td>
+</tr>
+<tr>
+<td><a href="../StatisticalTechnique/">StatisticalTechnique</a></td>
+<td>Refers to techniques that are based on statistics</td>
+</tr>
+<tr>
+<td><a href="../SupervisedLearning/">SupervisedLearning</a></td>
+<td>Machine learning that makes only use of labelled data during training</td>
+</tr>
+<tr>
+<td><a href="../SupportVectorMachine/">SupportVectorMachine</a></td>
+<td>A machine learning algorithm that finds decision boundaries with maximal</td>
+</tr>
+<tr>
+<td><a href="../SymbolicReasoning/">SymbolicReasoning</a></td>
+<td>Reasoning based on the knowledge encoded in a formal language</td>
+</tr>
+<tr>
+<td><a href="../Technique/">Technique</a></td>
+<td>The underlying technological algorithm, method, or process that forms</td>
+</tr>
+<tr>
+<td><a href="../TestingData/">TestingData</a></td>
+<td>Data involved in the testing of an AI system or model</td>
+</tr>
+<tr>
+<td><a href="../TestingDataBias/">TestingDataBias</a></td>
+<td>Concept representing testing data containing or potentially containing</td>
+</tr>
+<tr>
+<td><a href="../TestingDataInaccurate/">TestingDataInaccurate</a></td>
+<td>Concept representing testing data being inaccurate</td>
+</tr>
+<tr>
+<td><a href="../TestingDataInappropriate/">TestingDataInappropriate</a></td>
+<td>Concept representing testing data being inappropriate</td>
+</tr>
+<tr>
+<td><a href="../TestingDataIncomplete/">TestingDataIncomplete</a></td>
+<td>Concept representing testing data being incomplete</td>
+</tr>
+<tr>
+<td><a href="../TestingDataInconsistent/">TestingDataInconsistent</a></td>
+<td>Concept representing testing data being inconsistent</td>
+</tr>
+<tr>
+<td><a href="../TestingDataMisclassified/">TestingDataMisclassified</a></td>
+<td>Concept representing testing data being misclassified</td>
+</tr>
+<tr>
+<td><a href="../TestingDataMisinterpretation/">TestingDataMisinterpretation</a></td>
+<td>Concept representing testing data being misinterpreted</td>
+</tr>
+<tr>
+<td><a href="../TestingDataNoise/">TestingDataNoise</a></td>
+<td>Concept representing testing data being noisy</td>
+</tr>
+<tr>
+<td><a href="../TestingDataOutdated/">TestingDataOutdated</a></td>
+<td>Concept representing testing data being outdated</td>
+</tr>
+<tr>
+<td><a href="../TestingDataRisk/">TestingDataRisk</a></td>
+<td>Risks and risk concepts related to testing data</td>
+</tr>
+<tr>
+<td><a href="../TestingDataSelectionError/">TestingDataSelectionError</a></td>
+<td>Concept representing an error in testing data selection</td>
+</tr>
+<tr>
+<td><a href="../TestingDataSparse/">TestingDataSparse</a></td>
+<td>Concept representing testing data being sparse</td>
+</tr>
+<tr>
+<td><a href="../TestingDataUnrepresentative/">TestingDataUnrepresentative</a></td>
+<td>Concept representing testing data being unrepresentative</td>
+</tr>
+<tr>
+<td><a href="../TestingDataUnstructured/">TestingDataUnstructured</a></td>
+<td>Concept representing testing data being unstructured</td>
+</tr>
+<tr>
+<td><a href="../TestingDataUnverified/">TestingDataUnverified</a></td>
+<td>Concept representing testing data being unverified</td>
+</tr>
+<tr>
+<td><a href="../TextClassification/">TextClassification</a></td>
+<td>Capability of assigning predefined labels to text data in order to</td>
+</tr>
+<tr>
+<td><a href="../TextDataMining/">TextDataMining</a></td>
+<td>Capability of selecting and analysing large amounts of text or data</td>
+</tr>
+<tr>
+<td><a href="../TrainedModel/">TrainedModel</a></td>
+<td>Model resulted from model training</td>
+</tr>
+<tr>
+<td><a href="../TrainingData/">TrainingData</a></td>
+<td>Data involved in the training of an AI system or model</td>
+</tr>
+<tr>
+<td><a href="../TrainingTechnique/">TrainingTechnique</a></td>
+<td>Process to determine or to improve the parameters of a machine learning</td>
+</tr>
+<tr>
+<td><a href="../TransferLearning/">TransferLearning</a></td>
+<td>a technique in machine learning in which knowledge learned from a task</td>
+</tr>
+<tr>
+<td><a href="../TransparencyRisk/">TransparencyRisk</a></td>
+<td>Risk that an AI's design, performance, outputs, or other characteristics</td>
+</tr>
+<tr>
+<td><a href="../UnsupervisedLearning/">UnsupervisedLearning</a></td>
+<td>Machine learning that makes only use of unlabelled data during training</td>
+</tr>
+<tr>
+<td><a href="../UpdateStage/">UpdateStage</a></td>
+<td>The stage in the lifecycle where an AI system is being or has been</td>
+</tr>
+<tr>
+<td><a href="../UserRisk/">UserRisk</a></td>
+<td>Risks associated with Users of AI Systems</td>
+</tr>
+<tr>
+<td><a href="../ValidationData/">ValidationData</a></td>
+<td>Data involved in the validation of an AI system or model</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataBias/">ValidationDataBias</a></td>
+<td>Concept representing validation data containing or potentially</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataInaccurate/">ValidationDataInaccurate</a></td>
+<td>Concept representing validation data being inaccurate</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataInappropriate/">ValidationDataInappropriate</a></td>
+<td>Concept representing validation data being inappropriate</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataIncomplete/">ValidationDataIncomplete</a></td>
+<td>Concept representing validation data being incomplete</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataInconsistent/">ValidationDataInconsistent</a></td>
+<td>Concept representing validation data being inconsistent</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataMisclassified/">ValidationDataMisclassified</a></td>
+<td>Concept representing validation data being misclassified</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataMisinterpretation/">ValidationDataMisinterpretation</a></td>
+<td>Concept representing validation data being misinterpreted</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataNoise/">ValidationDataNoise</a></td>
+<td>Concept representing validation data being noisy</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataOutdated/">ValidationDataOutdated</a></td>
+<td>Concept representing validation data being outdated</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataRisk/">ValidationDataRisk</a></td>
+<td>Risks and risk concepts related to validation data</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataSelectionError/">ValidationDataSelectionError</a></td>
+<td>Concept representing an error in validation data selection</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataSparse/">ValidationDataSparse</a></td>
+<td>Concept representing validation data being sparse</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataUnrepresentative/">ValidationDataUnrepresentative</a></td>
+<td>Concept representing validation data being unrepresentative</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataUnstructured/">ValidationDataUnstructured</a></td>
+<td>Concept representing validation data being unstructured</td>
+</tr>
+<tr>
+<td><a href="../ValidationDataUnverified/">ValidationDataUnverified</a></td>
+<td>Concept representing validation data being unverified</td>
+</tr>
+<tr>
+<td><a href="../ValidationStage/">ValidationStage</a></td>
+<td>The stage in the lifecycle where the AI system is validated for</td>
+</tr>
+<tr>
+<td><a href="../VerificationStage/">VerificationStage</a></td>
+<td>The stage in the lifecycle where the AI system is being verified to</td>
+</tr>
+<tr>
+<td><a href="../VideoGeneration/">VideoGeneration</a></td>
+<td>Capability to generate video</td>
+</tr>
+<tr>
+<td><a href="../VisualRecognition/">VisualRecognition</a></td>
+<td>Capability that identifies and categorises objects, scenes, activities,</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots-in-subset">Slots in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../has_ai/">has_ai</a></td>
+<td>Indicates the use of AI for the associated context</td>
+</tr>
+<tr>
+<td><a href="../has_ai_system/">has_ai_system</a></td>
+<td>Indicates the use of AI system for the associated context</td>
+</tr>
+<tr>
+<td><a href="../has_capability/">has_capability</a></td>
+<td>Indicates the use of AI capability for the associated context</td>
+</tr>
+<tr>
+<td><a href="../has_data/">has_data</a></td>
+<td>Associates data with an AI system or model or implementation</td>
+</tr>
+<tr>
+<td><a href="../has_gpai_model/">has_gpai_model</a></td>
+<td>Indicates the use of an GPAI model for the associated context</td>
+</tr>
+<tr>
+<td><a href="../has_model/">has_model</a></td>
+<td>Indicates the use of an AI model for the associated context</td>
+</tr>
+<tr>
+<td><a href="../has_technique/">has_technique</a></td>
+<td>Indicates the use of AI technique for the associated context</td>
+</tr>
+<tr>
+<td><a href="../has_testing_data/">has_testing_data</a></td>
+<td>Associates the data used for testing AI</td>
+</tr>
+<tr>
+<td><a href="../has_training_data/">has_training_data</a></td>
+<td>Associates the data used for training AI</td>
+</tr>
+<tr>
+<td><a href="../has_validation_data/">has_validation_data</a></td>
+<td>Associates the data used for validating AI</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+<div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.tabs.link", "header.autohide", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/pymdownx-extras/extra-loader-B5CKpNQx.js"></script>
+      
+    
+  </body>
+</html>

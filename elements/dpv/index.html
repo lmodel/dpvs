@@ -317,6 +317,258 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/justifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/loc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Location
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/pd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/risk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../about/" class="md-nav__link">
         
@@ -378,13 +630,10 @@
 
 
 <h1 id="dpv">dpv</h1>
-<p>Top-level LinkML schema for the W3C Data Privacy Vocabulary (DPV)
-version 2.3. Re-exports the aggregate <code>dpv_core</code> schema which contains
-every class and slot of the upstream OWL release. Per-module schemas
-(under <code>./modules/</code>) are available as standalone subset schemas; they
-are intentionally NOT imported here to avoid duplicate class
-declarations during <code>gen-project</code> (each shared class would otherwise
-arrive with two conflicting <code>from_schema</code> URIs).</p>
+<p>Top-level umbrella LinkML schema for the W3C Data Privacy Vocabulary (DPV) version 2.3. Re-exports the eight semantic-group schemas (common, legal_basis, entities, personal_data, processing, risk_notice, rights, consent), which together provide 1:1 coverage of every class and slot in the upstream DPV 2.3 OWL release.</p>
+<p>Each DPV semantic groups (i.e. <code>dpv_consent</code>) imports only its direct upstream module dependencies (i.e. <code>dpv_common</code>), avoiding the load cost of a single monolithic schema.</p>
+<p>DPV modules (under <code>./modules/</code>) remain usable as standalone scheama,and are intentionally NOT imported here to avoid duplicate class declarations during generation (each shared class would otherwise arrive with two conflicting <code>from_Schema</code> URIs).</p>
+<p>DPV extensions (under <code>./extensions/</code>, e.g. <code>ai</code>, <code>risk</code>, <code>pd``tech</code>, <code>legal/*</code>, <code>sector/*</code>) also remain usable as standalone schema, and are intentially NOT imported. This design aims to help consumers import only what they needed, not everything.</p>
 <p>URI: <a href="https://w3id.org/lmodel/dpv">https://w3id.org/lmodel/dpv</a></p>
 
 

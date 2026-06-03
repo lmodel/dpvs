@@ -1,0 +1,1825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/dpv/extensions/tech/">
+      
+      
+        <link rel="prev" href="../risk/">
+      
+      
+        <link rel="next" href="../../about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Tech - dpv</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script src="../../assets/pymdownx-extras/material-extra-theme-2ek1P7jT.js" type="text/javascript"></script>
+<script src="../../assets/pymdownx-extras/material-extra-3rdparty-BUCF4rjN.js" type="text/javascript"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
+    
+      <link rel="stylesheet" href="../../assets/pymdownx-extras/extra-c6ab11540a.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dpv-tech" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="header.title"
+  >
+    <a
+      href="https://lmodel.github.io/dpv/"
+      title="dpv"
+      class="md-header__button md-logo"
+      aria-label="dpv"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dpv
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tech
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07zm-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13zm-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87zM19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35zm4.33-2.7 1.15-2.77 2.2 2.54zm1.15-4.96-1.14-2.78 3.34.24zM9.63 18.93l2.77 1.15-2.53 2.19z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
+          </a>
+      </div>
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="dpv" class="md-nav__button md-logo" aria-label="dpv" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    dpv
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/dpv" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../justifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Location
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subsets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subsets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="dpv-tech">DPV - Tech</h1>
+<p>LinkML schema generated from the DPV 2.3 extension <code>tech</code>
+(<code>tech-owl.ttl</code>), enriched with canonical SKOS metadata. Imports the
+semantic-group schema(s) <code>dpv:schema/dpv_common</code>,
+<code>dpv:schema/dpv_legal_basis</code>, <code>dpv:schema/dpv_entities</code>,
+<code>dpv:schema/dpv_personal_data</code>, <code>dpv:schema/dpv_processing</code>,
+<code>dpv:schema/dpv_rights</code> for the abstract parent classes this extension
+specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
+<p>URI: <a href="https://w3id.org/lmodel/dpv/tech">https://w3id.org/lmodel/dpv/tech</a></p>
+<p>Name: dpv_tech</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Actor/">Actor</a></td>
+<td>Actors and Entities involved in provision, use, and management of</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Deployer/">Deployer</a></td>
+<td>Actor that deploys Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Designer/">Designer</a></td>
+<td>Actor that designs Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Distributor/">Distributor</a></td>
+<td>Actor that distributes the Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvCustomer/">DpvCustomer</a></td>
+<td>Actor that uses Technology directly or indirectly by providing it to</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvUser/">DpvUser</a></td>
+<td>Actor that uses Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvOperator/">DpvOperator</a></td>
+<td>Actor that operates the Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvProducer/">DpvProducer</a></td>
+<td>Actor that produces Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Developer/">Developer</a></td>
+<td>Actor that develops Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvProvider/">DpvProvider</a></td>
+<td>Actor that provides Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvSubject/">DpvSubject</a></td>
+<td>Actor that is subjected to the use or impact of Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Importer/">Importer</a></td>
+<td>Actor that imports the Technology within a jurisdiction</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Installer/">Installer</a></td>
+<td>Actor that installs Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Maintainer/">Maintainer</a></td>
+<td>Actor that maintains Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Manufacturer/">Manufacturer</a></td>
+<td>Actor that manufactures Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Owner/">Owner</a></td>
+<td>Actor that owns Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Partner/">Partner</a></td>
+<td>Actor that provides services in the context of Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvAuditor/">DpvAuditor</a></td>
+<td>Actor that audits Technology for conformance to policies, standards, or</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Evaluator/">Evaluator</a></td>
+<td>Actor that evaluates the performance of Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SystemIntegrator/">SystemIntegrator</a></td>
+<td>Actor that integrates Technology in to (larger) systems</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Purchaser/">Purchaser</a></td>
+<td>Actor that purchases Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Supplier/">Supplier</a></td>
+<td>Actor that supplies Technology</td>
+</tr>
+<tr>
+<td><a href="Algorithm/">Algorithm</a></td>
+<td>A step-by-step set of instructions used to solve a problem or perform a</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="API/">API</a></td>
+<td>A set of rules and protocols to communicate and exchange data between</td>
+</tr>
+<tr>
+<td><a href="Capability/">Capability</a></td>
+<td>Expression of what the technology is capable of achieving or providing</td>
+</tr>
+<tr>
+<td><a href="CloudService/">CloudService</a></td>
+<td>A remotely accessible service delivered over the internet for providing</td>
+</tr>
+<tr>
+<td><a href="CloudStorage/">CloudStorage</a></td>
+<td>Storage utilising cloud technologies</td>
+</tr>
+<tr>
+<td><a href="CommunicationMechanism/">CommunicationMechanism</a></td>
+<td>Communication mechanism used or provided by Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GPS/">GPS</a></td>
+<td>Technology utilising GPS</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Networking/">Networking</a></td>
+<td>Technology utilising networking</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Bluetooth/">Bluetooth</a></td>
+<td>Technology utilising bluetooth</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="CellularNetwork/">CellularNetwork</a></td>
+<td>Technology utilising cellular networking</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Internet/">Internet</a></td>
+<td>Technology utilising internet</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LocalNetwork/">LocalNetwork</a></td>
+<td>Technology utilising local networking</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="WiFi/">WiFi</a></td>
+<td>Technology utilising Wi-Fi wireless networking</td>
+</tr>
+<tr>
+<td><a href="Content/">Content</a></td>
+<td>Data or information in a particular form and structure</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AudioContent/">AudioContent</a></td>
+<td>Content that is or has an audio component</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ImageContent/">ImageContent</a></td>
+<td>Content that is or has an image component</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TextualContent/">TextualContent</a></td>
+<td>Content that is or has a textual component</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="VideoContent/">VideoContent</a></td>
+<td>Content that is or has a video component</td>
+</tr>
+<tr>
+<td><a href="Cookie/">Cookie</a></td>
+<td>A HTTP or web or internet cookie</td>
+</tr>
+<tr>
+<td><a href="Database/">Database</a></td>
+<td>A database, database management system (DBMS), or application database</td>
+</tr>
+<tr>
+<td><a href="DataStorage/">DataStorage</a></td>
+<td>Technology associated with storage of data</td>
+</tr>
+<tr>
+<td><a href="DeploymentLocation/">DeploymentLocation</a></td>
+<td>Location for where technology is deployed and used</td>
+</tr>
+<tr>
+<td><a href="DesktopPC/">DesktopPC</a></td>
+<td>A non-portable or fixed personal computer</td>
+</tr>
+<tr>
+<td><a href="Device/">Device</a></td>
+<td>Device or computing device</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Telephone/">Telephone</a></td>
+<td>Telephone</td>
+</tr>
+<tr>
+<td><a href="Documentation/">Documentation</a></td>
+<td>Information describing use, functionality, design, or other technical</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Guide/">Guide</a></td>
+<td>Documentation that provides guidance regarding the technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Instructions/">Instructions</a></td>
+<td>Instructions related to technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Manual/">Manual</a></td>
+<td>Documentation that provides instructions for using, maintaining,</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Plan/">Plan</a></td>
+<td>Plan associated with using, maintaining, developing, or performing other</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DevelopmentPlan/">DevelopmentPlan</a></td>
+<td>Plan associated with developing technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TestingPlan/">TestingPlan</a></td>
+<td>Plan associated with testing technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Specification/">Specification</a></td>
+<td>Documentation that specifies requirements that must be satisfied by the</td>
+</tr>
+<tr>
+<td><a href="DpvApplication/">DpvApplication</a></td>
+<td>Application or Application Software</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AppStore/">AppStore</a></td>
+<td>An application or platform for distribution of other applications</td>
+</tr>
+<tr>
+<td><a href="DpvComponent/">DpvComponent</a></td>
+<td>A self-contained part of a system that performs a specific function and</td>
+</tr>
+<tr>
+<td><a href="DpvFunction/">DpvFunction</a></td>
+<td>Expression of what goals or purposes the technology's capabilities are</td>
+</tr>
+<tr>
+<td><a href="DpvService/">DpvService</a></td>
+<td>The carrying out of a specific task or set of tasks as a service</td>
+</tr>
+<tr>
+<td><a href="DpvSystem/">DpvSystem</a></td>
+<td>A collection of components that interact to achieve a specific goal or</td>
+</tr>
+<tr>
+<td><a href="Hardware/">Hardware</a></td>
+<td>Physical parts or components of the technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IntegratedCircuit/">IntegratedCircuit</a></td>
+<td>A integrated electronic chip containing interconnected components to</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ApplicationSpecificIntegratedCircuit/">ApplicationSpecificIntegratedCircuit</a></td>
+<td>A custom-designed integrated circuit optimised for a specific task</td>
+</tr>
+<tr>
+<td><a href="Infrastructure/">Infrastructure</a></td>
+<td>The foundational hardware, software, and other resources to support the</td>
+</tr>
+<tr>
+<td><a href="InputData/">InputData</a></td>
+<td>Data that is provided an input to a technology</td>
+</tr>
+<tr>
+<td><a href="InputOutput/">InputOutput</a></td>
+<td>Forms of inputs and outputs associated with a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvAction/">DpvAction</a></td>
+<td>A process or activity, which could be physical or virtual</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="InputAction/">InputAction</a></td>
+<td>Action provided as an input to a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="OutputAction/">OutputAction</a></td>
+<td>Action produced as an output from a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvDecision/">DpvDecision</a></td>
+<td>A conclusion or determination of an action or choice in the context of</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Input/">Input</a></td>
+<td>Input to a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Output/">Output</a></td>
+<td>Output from a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Prediction/">Prediction</a></td>
+<td>An inference or prediction of an action or data or decision in the</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Recommendation/">Recommendation</a></td>
+<td>A recommendation or suggestion of an action or decision or choice in the</td>
+</tr>
+<tr>
+<td><a href="IntendedUse/">IntendedUse</a></td>
+<td>Describes the 'intended' use of the technology</td>
+</tr>
+<tr>
+<td><a href="IoT/">IoT</a></td>
+<td>IoT is the infrastructure of interconnected entities, people, systems</td>
+</tr>
+<tr>
+<td><a href="IoTDevice/">IoTDevice</a></td>
+<td>An entity of an IoT system that interacts and communicates with the</td>
+</tr>
+<tr>
+<td><a href="IoTSystem/">IoTSystem</a></td>
+<td>A specific system that is an implementation or application of the IoT</td>
+</tr>
+<tr>
+<td><a href="LaptopPC/">LaptopPC</a></td>
+<td>A portal personal computer</td>
+</tr>
+<tr>
+<td><a href="License/">License</a></td>
+<td>A legal agreement that allows or provides a license for the use or other</td>
+</tr>
+<tr>
+<td><a href="LifecycleStage/">LifecycleStage</a></td>
+<td>A stage within the lifecycle of technology</td>
+</tr>
+<tr>
+<td><a href="LocalStorage/">LocalStorage</a></td>
+<td>Storage that is local (e</td>
+</tr>
+<tr>
+<td><a href="MobilePhone/">MobilePhone</a></td>
+<td>Mobile telephone</td>
+</tr>
+<tr>
+<td><a href="Model/">Model</a></td>
+<td>A simplified representation or abstraction of a system, process, or</td>
+</tr>
+<tr>
+<td><a href="OperatingEnvironment/">OperatingEnvironment</a></td>
+<td>The environment within which the technology operates</td>
+</tr>
+<tr>
+<td><a href="OperatingFactor/">OperatingFactor</a></td>
+<td>A 'factor' affecting the operation and outcomes of the technology</td>
+</tr>
+<tr>
+<td><a href="OutputData/">OutputData</a></td>
+<td>Data that is produced as an output from a technology</td>
+</tr>
+<tr>
+<td><a href="PersonalComputer/">PersonalComputer</a></td>
+<td>A computing device intended for individual use</td>
+</tr>
+<tr>
+<td><a href="Platform/">Platform</a></td>
+<td>A digital environment that provides tools, infrastructure, and services</td>
+</tr>
+<tr>
+<td><a href="ProvisionMethod/">ProvisionMethod</a></td>
+<td>Method associated with provision or use of technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsAlgorithmic/">ProvidedAsAlgorithmic</a></td>
+<td>Technology provided as an algorithm or method</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsComponent/">ProvidedAsComponent</a></td>
+<td>Technology provided as a component</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsFixedUse/">ProvidedAsFixedUse</a></td>
+<td>Technology provided for using a fixed number of times</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsGoods/">ProvidedAsGoods</a></td>
+<td>Technology provided or used as goods</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsProduct/">ProvidedAsProduct</a></td>
+<td>Technology provided as a product</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsService/">ProvidedAsService</a></td>
+<td>Technology provided or used as service(s)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsCloudService/">ProvidedAsCloudService</a></td>
+<td>Technology provided as a cloud service</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsCaaS/">ProvidedAsCaaS</a></td>
+<td>Technology provided as a cloud service consisting of managed compute</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsIaaS/">ProvidedAsIaaS</a></td>
+<td>Technology provided as a cloud service consisting of managed</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsMBaaS/">ProvidedAsMBaaS</a></td>
+<td>Technology provided as a cloud service consisting of managed 'backend'</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsPaaS/">ProvidedAsPaaS</a></td>
+<td>Technology provided as a cloud service consisting of managed platform</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsPrivateCloudService/">ProvidedAsPrivateCloudService</a></td>
+<td>Technology provided as a cloud service that is private</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsHybridCloudService/">ProvidedAsHybridCloudService</a></td>
+<td>Technology provided as a cloud service that is both private and public</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsPublicCloudService/">ProvidedAsPublicCloudService</a></td>
+<td>Technology provided as a cloud service that is public</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsSaaS/">ProvidedAsSaaS</a></td>
+<td>Technology provided as a cloud service consisting of managed software</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsServerlessComputing/">ProvidedAsServerlessComputing</a></td>
+<td>Technology provided as a cloud service consisting of fully managed</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsSubscription/">ProvidedAsSubscription</a></td>
+<td>Technology that is provided or used as a periodic subscription</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvidedAsSystem/">ProvidedAsSystem</a></td>
+<td>Technology provided as a system</td>
+</tr>
+<tr>
+<td><a href="Smartphone/">Smartphone</a></td>
+<td>A combination of a mobile phone with computing capabilities similar to a</td>
+</tr>
+<tr>
+<td><a href="SmartphoneApplication/">SmartphoneApplication</a></td>
+<td>A computing or digital program on a smartphone device</td>
+</tr>
+<tr>
+<td><a href="Software/">Software</a></td>
+<td>Virtual parts or components of the technology such as programs and data</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="OS/">OS</a></td>
+<td>Software for managing hardware and other software</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Android/">Android</a></td>
+<td>Android operating system</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="GNULinux/">GNULinux</a></td>
+<td>GNU/Linux operating system</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IOS/">IOS</a></td>
+<td>iOS operating system</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MSWindows/">MSWindows</a></td>
+<td>Microsoft Windows operating system</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SoftwareFramework/">SoftwareFramework</a></td>
+<td>An opinionated collection of functions and architecture design choices</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SoftwareLibrary/">SoftwareLibrary</a></td>
+<td>A collection of pre-built and reusable functions for use in development</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="WebScraper/">WebScraper</a></td>
+<td>Software that extracts data from websites to implement collection</td>
+</tr>
+<tr>
+<td><a href="SoftwareAgent/">SoftwareAgent</a></td>
+<td>A software that acts on behalf of another Entity or technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="UserAgent/">UserAgent</a></td>
+<td>A software agent that represents a person (i</td>
+</tr>
+<tr>
+<td><a href="TechnologyStatus/">TechnologyStatus</a></td>
+<td>Status associated with development, deployment, and use of technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MarketAvailabilityStatus/">MarketAvailabilityStatus</a></td>
+<td>Status indicating whether Technology is available on the market</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MarketAvailable/">MarketAvailable</a></td>
+<td>Status indicating Technology is available on the market</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MarketUnavailable/">MarketUnavailable</a></td>
+<td>Status indicating Technology is unavailable on the market</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ProvisionStatus/">ProvisionStatus</a></td>
+<td>Status indicating whether Technology has been provided</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="NotProvided/">NotProvided</a></td>
+<td>Status indicating Technology has not been provided</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Provided/">Provided</a></td>
+<td>Status indicating Technology has been provided</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechnologyReadinessLevel/">TechnologyReadinessLevel</a></td>
+<td>Indication of maturity of Technology (ISO 16290:2013)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="has_actor/">has_actor</a></td>
+<td>Indicates an actor associated with technology</td>
+</tr>
+<tr>
+<td><a href="has_algorithm/">has_algorithm</a></td>
+<td>Indicates the technology has or uses the associated algorithm</td>
+</tr>
+<tr>
+<td><a href="has_api/">has_api</a></td>
+<td>Indicates the technology has or uses the associated api</td>
+</tr>
+<tr>
+<td><a href="has_application/">has_application</a></td>
+<td>Indicates the technology has or uses the associated application</td>
+</tr>
+<tr>
+<td><a href="has_auditor/">has_auditor</a></td>
+<td>Indicates technology auditor</td>
+</tr>
+<tr>
+<td><a href="has_capability/">has_capability</a></td>
+<td>Indicates the capability of the technology</td>
+</tr>
+<tr>
+<td><a href="has_communication_mechanism/">has_communication_mechanism</a></td>
+<td>Indicates communication mechanisms used or provided by technology</td>
+</tr>
+<tr>
+<td><a href="has_component/">has_component</a></td>
+<td>Indicates the system has or uses the associated component</td>
+</tr>
+<tr>
+<td><a href="has_customer/">has_customer</a></td>
+<td>Indicates technology customer</td>
+</tr>
+<tr>
+<td><a href="has_deployer/">has_deployer</a></td>
+<td>Indicates technology deployer</td>
+</tr>
+<tr>
+<td><a href="has_deployment_location/">has_deployment_location</a></td>
+<td>Specifies the location of technology deployment and use</td>
+</tr>
+<tr>
+<td><a href="has_designer/">has_designer</a></td>
+<td>Indicates technology designer</td>
+</tr>
+<tr>
+<td><a href="has_developer/">has_developer</a></td>
+<td>Indicates technology developer</td>
+</tr>
+<tr>
+<td><a href="has_device/">has_device</a></td>
+<td>Indicates the technology has or uses the associated device</td>
+</tr>
+<tr>
+<td><a href="has_documentation/">has_documentation</a></td>
+<td>Indicates documentation associated with technology</td>
+</tr>
+<tr>
+<td><a href="has_evaluator/">has_evaluator</a></td>
+<td>Indicates technology evaluator</td>
+</tr>
+<tr>
+<td><a href="has_function/">has_function</a></td>
+<td>Indicates the function of the technology</td>
+</tr>
+<tr>
+<td><a href="has_hardware/">has_hardware</a></td>
+<td>Indicates the technology has or uses the associated hardware</td>
+</tr>
+<tr>
+<td><a href="has_infrastructure/">has_infrastructure</a></td>
+<td>Indicates the technology has or uses the associated infrastructure</td>
+</tr>
+<tr>
+<td><a href="has_input/">has_input</a></td>
+<td>Indicates the input associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_input_action/">has_input_action</a></td>
+<td>Indicates the input action associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_input_data/">has_input_data</a></td>
+<td>Indicates the input data associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_installer/">has_installer</a></td>
+<td>Indicates technology installer</td>
+</tr>
+<tr>
+<td><a href="has_intended_use/">has_intended_use</a></td>
+<td>Indicates the intended use of technology</td>
+</tr>
+<tr>
+<td><a href="has_license/">has_license</a></td>
+<td>Indicates the license associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_lifecycle_stage/">has_lifecycle_stage</a></td>
+<td>Indicates the lifecycle stage associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_maintainer/">has_maintainer</a></td>
+<td>Indicates technology maintainer</td>
+</tr>
+<tr>
+<td><a href="has_manufacturer/">has_manufacturer</a></td>
+<td>Indicates technology manufacturer</td>
+</tr>
+<tr>
+<td><a href="has_market_availability_status/">has_market_availability_status</a></td>
+<td>Indicates whether the technology is available on the market</td>
+</tr>
+<tr>
+<td><a href="has_model/">has_model</a></td>
+<td>Indicates the technology has or uses the associated model</td>
+</tr>
+<tr>
+<td><a href="has_operating_environment/">has_operating_environment</a></td>
+<td>Indicates the operating environment for the technology</td>
+</tr>
+<tr>
+<td><a href="has_operating_factor/">has_operating_factor</a></td>
+<td>Indicates the operating factor for the technology</td>
+</tr>
+<tr>
+<td><a href="has_output/">has_output</a></td>
+<td>Indicates the output associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_output_action/">has_output_action</a></td>
+<td>Indicates the output action associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_output_data/">has_output_data</a></td>
+<td>Indicates the output data associated with the technology</td>
+</tr>
+<tr>
+<td><a href="has_owner/">has_owner</a></td>
+<td>Indicates technology owner</td>
+</tr>
+<tr>
+<td><a href="has_partner/">has_partner</a></td>
+<td>Indicates technology partner</td>
+</tr>
+<tr>
+<td><a href="has_platform/">has_platform</a></td>
+<td>Indicates the technology has or uses the associated platform</td>
+</tr>
+<tr>
+<td><a href="has_producer/">has_producer</a></td>
+<td>Indicates technology producer</td>
+</tr>
+<tr>
+<td><a href="has_provider/">has_provider</a></td>
+<td>Indicates technology provider</td>
+</tr>
+<tr>
+<td><a href="has_provision_method/">has_provision_method</a></td>
+<td>Specifies the provision or usage method of technology</td>
+</tr>
+<tr>
+<td><a href="has_provision_status/">has_provision_status</a></td>
+<td>Indicates whether the technology has been provided</td>
+</tr>
+<tr>
+<td><a href="has_purchaser/">has_purchaser</a></td>
+<td>Indicates technology purchaser</td>
+</tr>
+<tr>
+<td><a href="has_service/">has_service</a></td>
+<td>Indicates the technology has or uses the associated service</td>
+</tr>
+<tr>
+<td><a href="has_software/">has_software</a></td>
+<td>Indicates the technology has or uses the associated software</td>
+</tr>
+<tr>
+<td><a href="has_subject/">has_subject</a></td>
+<td>Indicates technology subject</td>
+</tr>
+<tr>
+<td><a href="has_supplier/">has_supplier</a></td>
+<td>Indicates technology supplier</td>
+</tr>
+<tr>
+<td><a href="has_system/">has_system</a></td>
+<td>Indicates the technology has or uses the associated system</td>
+</tr>
+<tr>
+<td><a href="has_system_integrator/">has_system_integrator</a></td>
+<td>Indicates technology system integrator</td>
+</tr>
+<tr>
+<td><a href="has_trl/">has_trl</a></td>
+<td>Indicates technology maturity level</td>
+</tr>
+<tr>
+<td><a href="has_user/">has_user</a></td>
+<td>Indicates technology user</td>
+</tr>
+<tr>
+<td><a href="is_component_of/">is_component_of</a></td>
+<td>Indicates the component is part of the associated system</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Boolean/">Boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Curie/">Curie</a></td>
+<td>a compact URI</td>
+</tr>
+<tr>
+<td><a href="Date/">Date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="DateOrDatetime/">DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="Datetime/">Datetime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="Decimal/">Decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="Double/">Double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="Float/">Float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="Integer/">Integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
+<td><a href="Ncname/">Ncname</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="Nodeidentifier/">Nodeidentifier</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="Objectidentifier/">Objectidentifier</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
+</tr>
+<tr>
+<td><a href="String/">String</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="Time/">Time</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="Uri/">Uri</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="Uriorcurie/">Uriorcurie</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="TechActorsSubset/">TechActorsSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/actors</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechCommsSubset/">TechCommsSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/comms</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechCoreSubset/">TechCoreSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/core</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechDocsSubset/">TechDocsSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/docs</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechIoSubset/">TechIoSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/io</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechProvisionSubset/">TechProvisionSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/provision</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechStatusSubset/">TechStatusSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/status</code> submodule</td>
+</tr>
+<tr>
+<td><a href="TechSubset/">TechSubset</a></td>
+<td>All entities from the DPV <code>tech</code> extension</td>
+</tr>
+<tr>
+<td><a href="TechToolsSubset/">TechToolsSubset</a></td>
+<td>Entities from the DPV <code>tech/modules/tools</code> submodule</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+
+<footer class="md-footer">
+  
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="footer.title"
+    >
+      
+        <a
+          href="../risk/"
+          class="md-footer__link md-footer__link--prev"
+          rel="prev"
+        >
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Risk
+            </div>
+          </div>
+        </a>
+      
+      
+        <a
+          href="../../about/"
+          class="md-footer__link md-footer__link--next"
+          rel="next"
+        >
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+<div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.tabs.link", "header.autohide", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/pymdownx-extras/extra-loader-B5CKpNQx.js"></script>
+      
+    
+  </body>
+</html>
