@@ -728,21 +728,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hand-authored-valid-fixtures-64" class="md-nav__link">
+  <a href="#static-fixtures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hand-authored valid fixtures (64)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hand-authored-invalid-fixtures-48" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hand-authored invalid fixtures (48)
+        Static fixtures
       
     </span>
   </a>
@@ -934,21 +923,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hand-authored-valid-fixtures-64" class="md-nav__link">
+  <a href="#static-fixtures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hand-authored valid fixtures (64)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hand-authored-invalid-fixtures-48" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hand-authored invalid fixtures (48)
+        Static fixtures
       
     </span>
   </a>
@@ -1376,283 +1354,11 @@ landing page notes this and points readers to the source YAML.</p>
 <li><a href="https://github.com/lmodel/dpv/tree/main/tests/data">tests/data/</a> contains hand-authored and vendored YAML fixtures split into <code>valid/</code> and <code>invalid/</code> subtrees. The <code>dpvcg/</code> subtree carries the upstream DPV CG examples converted to LinkML YAML by <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_turtle_to_yaml.py">scripts/dpvcg_turtle_to_yaml.py</a>.</li>
 <li><a href="https://github.com/lmodel/dpv/blob/main/tests/test_data.py">tests/test_data.py</a> validates each fixture against the pre-merged schema at <code>tmp/dpv.yaml</code> using <code>linkml.validator.Validator</code> with <code>JsonschemaValidationPlugin</code> (explicit; the linkml <code>Validator</code> performs no validation at all when <code>validation_plugins</code> is omitted). The merged schema is used so no import-map is needed at test time.</li>
 </ul>
-<h4 id="hand-authored-valid-fixtures-64">Hand-authored valid fixtures (64)</h4>
-<p><a href="https://github.com/lmodel/dpv/tree/main/tests/data/valid">tests/data/valid/</a> exercises the following classes across core, extension, and legal modules:</p>
-<table>
-<thead>
-<tr>
-<th>Class</th>
-<th>Fixtures</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>AIActRisk</code></td>
-<td><code>valid-high</code></td>
-<td>EU AI Act high-risk classification</td>
-</tr>
-<tr>
-<td><code>AICapability</code></td>
-<td><code>valid-vision</code></td>
-<td>Computer-vision capability</td>
-</tr>
-<tr>
-<td><code>AISystem</code></td>
-<td><code>valid-nlp</code></td>
-<td>NLP system declaration</td>
-</tr>
-<tr>
-<td><code>Algorithm</code></td>
-<td><code>valid-ml</code></td>
-<td>Machine-learning algorithm</td>
-</tr>
-<tr>
-<td><code>Anonymisation</code></td>
-<td><code>valid-measure</code></td>
-<td>TOM anonymisation measure</td>
-</tr>
-<tr>
-<td><code>Authority</code></td>
-<td><code>valid-dpa</code></td>
-<td>Data-protection authority</td>
-</tr>
-<tr>
-<td><code>Consent</code></td>
-<td><code>valid-basic</code>, <code>valid-basis</code>, <code>valid-explicit</code>, <code>valid-with-justification</code></td>
-<td>Consent with and without justification</td>
-</tr>
-<tr>
-<td><code>ConsentJustification</code></td>
-<td><code>valid-explicit</code></td>
-<td>Justification for explicit consent</td>
-</tr>
-<tr>
-<td><code>ConsentRecord</code></td>
-<td><code>valid-basic</code></td>
-<td>Consent audit record</td>
-</tr>
-<tr>
-<td><code>Contract</code></td>
-<td><code>valid-basic</code>, <code>valid-no-optional-fields</code>, <code>valid-with-clause</code></td>
-<td>Minimal and fully-populated contracts</td>
-</tr>
-<tr>
-<td><code>ContractClause</code></td>
-<td><code>valid-processor</code></td>
-<td>Processor-specific contract clause</td>
-</tr>
-<tr>
-<td><code>ContractPerformance</code></td>
-<td><code>valid-basis</code></td>
-<td>Contract-performance legal basis</td>
-</tr>
-<tr>
-<td><code>DataBreach</code></td>
-<td><code>valid-incident</code></td>
-<td>Incident report (risk extension)</td>
-</tr>
-<tr>
-<td><code>DataMinimisation</code></td>
-<td><code>valid-measure</code></td>
-<td>TOM data-minimisation measure</td>
-</tr>
-<tr>
-<td><code>DataProcessRecord</code></td>
-<td><code>valid-ieee</code></td>
-<td>IEEE 7012-aligned processing record</td>
-</tr>
-<tr>
-<td><code>DataProcessor</code></td>
-<td><code>valid-org</code></td>
-<td>Controller/processor role assignment</td>
-</tr>
-<tr>
-<td><code>DataProtectionAuthority</code></td>
-<td><code>valid-gdpr</code></td>
-<td>GDPR supervisory authority</td>
-</tr>
-<tr>
-<td><code>DataSubject</code></td>
-<td><code>valid-natural</code></td>
-<td>Natural-person data-subject</td>
-</tr>
-<tr>
-<td><code>Developer</code></td>
-<td><code>valid-org</code></td>
-<td>AI system developer (AI Act role)</td>
-</tr>
-<tr>
-<td><code>DGARole</code></td>
-<td><code>valid-holder</code></td>
-<td>EU Data Governance Act data holder</td>
-</tr>
-<tr>
-<td><code>EHDSHealthData</code></td>
-<td><code>valid-genomic</code></td>
-<td>European Health Data Space genomic data</td>
-</tr>
-<tr>
-<td><code>Encryption</code></td>
-<td><code>valid-aes</code></td>
-<td>AES encryption TOM</td>
-</tr>
-<tr>
-<td><code>EURight</code></td>
-<td><code>valid-dignity</code></td>
-<td>CFREU Article 1 fundamental right</td>
-</tr>
-<tr>
-<td><code>ExplicitConsent</code></td>
-<td><code>valid-written</code></td>
-<td>Written explicit consent</td>
-</tr>
-<tr>
-<td><code>GDPRPrinciple</code></td>
-<td><code>valid-lawfulness</code></td>
-<td>Article 5 lawfulness principle</td>
-</tr>
-<tr>
-<td><code>HighRisk</code></td>
-<td><code>valid-processing</code></td>
-<td>High-risk processing flag</td>
-</tr>
-<tr>
-<td><code>ImplicitConsent</code></td>
-<td><code>valid-cookie</code></td>
-<td>Cookie-banner implied consent</td>
-</tr>
-<tr>
-<td><code>LawfulnessBasis</code></td>
-<td><code>valid-consent</code></td>
-<td>GDPR Article 6(1)(a) legal basis</td>
-</tr>
-<tr>
-<td><code>Location</code></td>
-<td><code>valid-de</code>, <code>valid-france</code>, <code>valid-japan</code>, <code>valid-us</code></td>
-<td>Country-level location individuals</td>
-</tr>
-<tr>
-<td><code>Marketing</code></td>
-<td><code>valid-direct</code></td>
-<td>Direct-marketing purpose</td>
-</tr>
-<tr>
-<td><code>Model</code></td>
-<td><code>valid-nlp</code></td>
-<td>AI model declaration</td>
-</tr>
-<tr>
-<td><code>NIS2Incident</code></td>
-<td><code>valid-significant</code></td>
-<td>NIS2 significant incident notification</td>
-</tr>
-<tr>
-<td><code>Notice</code></td>
-<td><code>valid-basic</code>, <code>valid-privacy</code></td>
-<td>Privacy notice with and without optional fields</td>
-</tr>
-<tr>
-<td><code>Organisation</code></td>
-<td><code>valid-controller</code></td>
-<td>Data-controller organisation</td>
-</tr>
-<tr>
-<td><code>PersonalData</code></td>
-<td><code>valid-basic</code></td>
-<td>Personal data category reference</td>
-</tr>
-<tr>
-<td><code>PersonalDataCategory</code></td>
-<td><code>valid-biometric</code></td>
-<td>Biometric data category</td>
-</tr>
-<tr>
-<td><code>Processing</code></td>
-<td><code>valid-basic</code>, <code>valid-gdpr</code>, <code>valid-multiple-purposes</code></td>
-<td>Processing activities under different bases</td>
-</tr>
-<tr>
-<td><code>ProcessingActivity</code></td>
-<td><code>valid-automated</code></td>
-<td>Automated decision-making activity</td>
-</tr>
-<tr>
-<td><code>ProcessingStatus</code></td>
-<td><code>valid-ongoing</code></td>
-<td>Ongoing processing status</td>
-</tr>
-<tr>
-<td><code>Purpose</code></td>
-<td><code>valid-marketing</code></td>
-<td>Purpose declaration</td>
-</tr>
-<tr>
-<td><code>Recipient</code></td>
-<td><code>valid-basic</code></td>
-<td>Third-party recipient</td>
-</tr>
-<tr>
-<td><code>Right</code></td>
-<td><code>valid-access</code>, <code>valid-basic</code></td>
-<td>Data-subject access right</td>
-</tr>
-<tr>
-<td><code>RightExercise</code></td>
-<td><code>valid-access</code></td>
-<td>Right-exercise request</td>
-</tr>
-<tr>
-<td><code>RightExerciseStatus</code></td>
-<td><code>valid-fulfilled</code></td>
-<td>Fulfilled right-exercise status</td>
-</tr>
-<tr>
-<td><code>Risk</code></td>
-<td><code>valid-data-breach</code></td>
-<td>Data-breach risk entry</td>
-</tr>
-<tr>
-<td><code>RiskAssessment</code></td>
-<td><code>valid-preliminary</code></td>
-<td>Preliminary DPIA-style risk assessment</td>
-</tr>
-<tr>
-<td><code>RiskMitigationMeasure</code></td>
-<td><code>valid-encryption</code></td>
-<td>Encryption as a risk mitigant</td>
-</tr>
-<tr>
-<td><code>RiskSource</code></td>
-<td><code>valid-infrastructure</code></td>
-<td>Infrastructure risk source</td>
-</tr>
-<tr>
-<td><code>Service</code></td>
-<td><code>valid-delivery</code></td>
-<td>Service declaration</td>
-</tr>
-<tr>
-<td><code>SmallScale</code></td>
-<td><code>valid-context</code></td>
-<td>Small-scale processing context</td>
-</tr>
-<tr>
-<td><code>StandardContractualClauses</code></td>
-<td><code>valid-scc</code></td>
-<td>Standard contractual clauses (SCCs)</td>
-</tr>
-<tr>
-<td><code>Technology</code></td>
-<td><code>valid-basic</code></td>
-<td>Technology component reference</td>
-</tr>
-</tbody>
-</table>
-<h4 id="hand-authored-invalid-fixtures-48">Hand-authored invalid fixtures (48)</h4>
-<p><a href="https://github.com/lmodel/dpv/tree/main/tests/data/invalid">tests/data/invalid/</a> asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".</p>
+<h4 id="static-fixtures">Static fixtures</h4>
+<p>64 <a href="https://github.com/lmodel/dpv/tree/main/tests/data/valid">tests/data/valid/</a> exercises classes across core, extension, and legal modules.</p>
+<p>48 <a href="https://github.com/lmodel/dpv/tree/main/tests/data/invalid">tests/data/invalid/</a> asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".</p>
 <blockquote>
-<p><strong>Note</strong>: The current schema enforces only one constraint: <code>id</code> is a required string (<code>uriorcurie</code>). All other DPV properties are domainless open-world slots. Fixtures that were originally designed to test enum, date-format, cardinality, or referential constraints were rewritten to test <code>id</code>-type violations; their original intent is captured in fixture comments as a roadmap for schema tightening.</p>
+<p><strong>Note</strong>: The dpv schema enforces only one constraint: <code>id</code> is a required string (<code>uriorcurie</code>). All other DPV properties are domainless open-world slots. Fixtures that were originally designed to test enum, date-format, cardinality, or referential constraints were rewritten to test <code>id</code>-type violations; their original intent is captured in fixture comments as a roadmap for schema tightening.</p>
 </blockquote>
 <h3 id="generated-fixtures-from-dpvcg-examples">Generated fixtures (from DPVCG examples)</h3>
 <ul>
