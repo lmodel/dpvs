@@ -1,0 +1,7231 @@
+id: https://w3id.org/lmodel/dpv/loc/inverse
+name: dpv_loc_inverse
+title: DPV - Loc / Inverse
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `loc/modules/inverse-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/loc
+  - https://w3c.github.io/dpv/2.3/loc/
+source: https://w3id.org/dpv/loc/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: loc
+  dpv_submodule: inverse
+  source_ttl: upstream-releases/dpv/loc/modules/inverse-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/loc/modules/inverse.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/loc/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/loc#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  loc: https://w3id.org/lmodel/dpv/loc/
+  dpv_loc: https://w3id.org/dpv/loc#
+  dpv_loc_owl: https://w3id.org/dpv/loc/owl#
+
+  iso3166: 'https://www.iso.org/obp/ui/#iso:code:3166:'
+default_prefix: loc
+default_range: string
+id_prefixes:
+  - loc
+  - dpv_loc
+  - dpv_loc_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/loc
+
+subsets:
+
+  loc_inverse_subset:
+    description: Entities from the DPV `loc/modules/inverse` submodule.
+
+classes:
+
+  AD:
+    is_a: DpvCountry
+    class_uri: loc:AD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AD
+      - dpv_loc_owl:AD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AD
+      dpv_extension_slug: loc
+
+  AE:
+    is_a: DpvCountry
+    class_uri: loc:AE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AE
+      - dpv_loc_owl:AE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AE
+      dpv_extension_slug: loc
+
+  AF:
+    is_a: DpvCountry
+    class_uri: loc:AF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AF
+      - dpv_loc_owl:AF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AF
+      dpv_extension_slug: loc
+
+  AG:
+    is_a: DpvCountry
+    class_uri: loc:AG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AG
+      - dpv_loc_owl:AG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AG
+      dpv_extension_slug: loc
+
+  AI:
+    is_a: DpvCountry
+    class_uri: loc:AI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AI
+      - dpv_loc_owl:AI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AI
+      dpv_extension_slug: loc
+
+  AL:
+    is_a: DpvCountry
+    class_uri: loc:AL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AL
+      - dpv_loc_owl:AL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AL
+      dpv_extension_slug: loc
+
+  AM:
+    is_a: DpvCountry
+    class_uri: loc:AM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AM
+      - dpv_loc_owl:AM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AM
+      dpv_extension_slug: loc
+
+  AO:
+    is_a: DpvCountry
+    class_uri: loc:AO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AO
+      - dpv_loc_owl:AO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AO
+      dpv_extension_slug: loc
+
+  AQ:
+    is_a: DpvCountry
+    class_uri: loc:AQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AQ
+      - dpv_loc_owl:AQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AQ
+      dpv_extension_slug: loc
+
+  AR:
+    is_a: DpvCountry
+    class_uri: loc:AR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AR
+      - dpv_loc_owl:AR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AR
+      dpv_extension_slug: loc
+
+  AS:
+    is_a: DpvCountry
+    class_uri: loc:AS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AS
+      - dpv_loc_owl:AS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AS
+      dpv_extension_slug: loc
+
+  AT:
+    is_a: DpvCountry
+    class_uri: loc:AT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AT
+      - dpv_loc_owl:AT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AT
+      dpv_extension_slug: loc
+
+  AU:
+    is_a: DpvCountry
+    class_uri: loc:AU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AU
+      - dpv_loc_owl:AU
+      - iso3166:AU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AU
+      dpv_extension_slug: loc
+
+  AW:
+    is_a: DpvCountry
+    class_uri: loc:AW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AW
+      - dpv_loc_owl:AW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AW
+      dpv_extension_slug: loc
+
+  AX:
+    is_a: DpvCountry
+    class_uri: loc:AX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AX
+      - dpv_loc_owl:AX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AX
+      dpv_extension_slug: loc
+
+  AZ:
+    is_a: DpvCountry
+    class_uri: loc:AZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:AZ
+      - dpv_loc_owl:AZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#AZ
+      dpv_extension_slug: loc
+
+  BA:
+    is_a: DpvCountry
+    class_uri: loc:BA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BA
+      - dpv_loc_owl:BA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BA
+      dpv_extension_slug: loc
+
+  BB:
+    is_a: DpvCountry
+    class_uri: loc:BB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BB
+      - dpv_loc_owl:BB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BB
+      dpv_extension_slug: loc
+
+  BD:
+    is_a: DpvCountry
+    class_uri: loc:BD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BD
+      - dpv_loc_owl:BD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BD
+      dpv_extension_slug: loc
+
+  BE:
+    is_a: DpvCountry
+    class_uri: loc:BE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BE
+      - dpv_loc_owl:BE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BE
+      dpv_extension_slug: loc
+
+  BF:
+    is_a: DpvCountry
+    class_uri: loc:BF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BF
+      - dpv_loc_owl:BF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BF
+      dpv_extension_slug: loc
+
+  BG:
+    is_a: DpvCountry
+    class_uri: loc:BG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BG
+      - dpv_loc_owl:BG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BG
+      dpv_extension_slug: loc
+
+  BH:
+    is_a: DpvCountry
+    class_uri: loc:BH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BH
+      - dpv_loc_owl:BH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BH
+      dpv_extension_slug: loc
+
+  BI:
+    is_a: DpvCountry
+    class_uri: loc:BI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BI
+      - dpv_loc_owl:BI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BI
+      dpv_extension_slug: loc
+
+  BJ:
+    is_a: DpvCountry
+    class_uri: loc:BJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BJ
+      - dpv_loc_owl:BJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BJ
+      dpv_extension_slug: loc
+
+  BL:
+    is_a: DpvCountry
+    class_uri: loc:BL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BL
+      - dpv_loc_owl:BL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BL
+      dpv_extension_slug: loc
+
+  BM:
+    is_a: DpvCountry
+    class_uri: loc:BM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BM
+      - dpv_loc_owl:BM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BM
+      dpv_extension_slug: loc
+
+  BN:
+    is_a: DpvCountry
+    class_uri: loc:BN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BN
+      - dpv_loc_owl:BN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BN
+      dpv_extension_slug: loc
+
+  BO:
+    is_a: DpvCountry
+    class_uri: loc:BO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BO
+      - dpv_loc_owl:BO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BO
+      dpv_extension_slug: loc
+
+  BQ:
+    is_a: DpvCountry
+    class_uri: loc:BQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BQ
+      - dpv_loc_owl:BQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BQ
+      dpv_extension_slug: loc
+
+  BR:
+    is_a: DpvCountry
+    class_uri: loc:BR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BR
+      - dpv_loc_owl:BR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BR
+      dpv_extension_slug: loc
+
+  BS:
+    is_a: DpvCountry
+    class_uri: loc:BS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BS
+      - dpv_loc_owl:BS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BS
+      dpv_extension_slug: loc
+
+  BT:
+    is_a: DpvCountry
+    class_uri: loc:BT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BT
+      - dpv_loc_owl:BT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BT
+      dpv_extension_slug: loc
+
+  BV:
+    is_a: DpvCountry
+    class_uri: loc:BV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BV
+      - dpv_loc_owl:BV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BV
+      dpv_extension_slug: loc
+
+  BW:
+    is_a: DpvCountry
+    class_uri: loc:BW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BW
+      - dpv_loc_owl:BW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BW
+      dpv_extension_slug: loc
+
+  BY:
+    is_a: DpvCountry
+    class_uri: loc:BY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BY
+      - dpv_loc_owl:BY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BY
+      dpv_extension_slug: loc
+
+  BZ:
+    is_a: DpvCountry
+    class_uri: loc:BZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:BZ
+      - dpv_loc_owl:BZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#BZ
+      dpv_extension_slug: loc
+
+  CA:
+    is_a: DpvCountry
+    class_uri: loc:CA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CA
+      - dpv_loc_owl:CA
+      - iso3166:CA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CA
+      dpv_extension_slug: loc
+
+  CC:
+    is_a: DpvCountry
+    class_uri: loc:CC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CC
+      - dpv_loc_owl:CC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CC
+      dpv_extension_slug: loc
+
+  CD:
+    is_a: DpvCountry
+    class_uri: loc:CD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CD
+      - dpv_loc_owl:CD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CD
+      dpv_extension_slug: loc
+
+  CF:
+    is_a: DpvCountry
+    class_uri: loc:CF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CF
+      - dpv_loc_owl:CF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CF
+      dpv_extension_slug: loc
+
+  CG:
+    is_a: DpvCountry
+    class_uri: loc:CG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CG
+      - dpv_loc_owl:CG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CG
+      dpv_extension_slug: loc
+
+  CH:
+    is_a: DpvCountry
+    class_uri: loc:CH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CH
+      - dpv_loc_owl:CH
+      - iso3166:CH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CH
+      dpv_extension_slug: loc
+
+  CI:
+    is_a: DpvCountry
+    class_uri: loc:CI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CI
+      - dpv_loc_owl:CI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CI
+      dpv_extension_slug: loc
+
+  CK:
+    is_a: DpvCountry
+    class_uri: loc:CK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CK
+      - dpv_loc_owl:CK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CK
+      dpv_extension_slug: loc
+
+  CL:
+    is_a: DpvCountry
+    class_uri: loc:CL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CL
+      - dpv_loc_owl:CL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CL
+      dpv_extension_slug: loc
+
+  CM:
+    is_a: DpvCountry
+    class_uri: loc:CM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CM
+      - dpv_loc_owl:CM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CM
+      dpv_extension_slug: loc
+
+  CN:
+    is_a: DpvCountry
+    class_uri: loc:CN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CN
+      - dpv_loc_owl:CN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CN
+      dpv_extension_slug: loc
+
+  CO:
+    is_a: DpvCountry
+    class_uri: loc:CO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CO
+      - dpv_loc_owl:CO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CO
+      dpv_extension_slug: loc
+
+  CR:
+    is_a: DpvCountry
+    class_uri: loc:CR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CR
+      - dpv_loc_owl:CR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CR
+      dpv_extension_slug: loc
+
+  CU:
+    is_a: DpvCountry
+    class_uri: loc:CU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CU
+      - dpv_loc_owl:CU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CU
+      dpv_extension_slug: loc
+
+  CV:
+    is_a: DpvCountry
+    class_uri: loc:CV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CV
+      - dpv_loc_owl:CV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CV
+      dpv_extension_slug: loc
+
+  CW:
+    is_a: DpvCountry
+    class_uri: loc:CW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CW
+      - dpv_loc_owl:CW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CW
+      dpv_extension_slug: loc
+
+  CX:
+    is_a: DpvCountry
+    class_uri: loc:CX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CX
+      - dpv_loc_owl:CX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CX
+      dpv_extension_slug: loc
+
+  CY:
+    is_a: DpvCountry
+    class_uri: loc:CY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CY
+      - dpv_loc_owl:CY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CY
+      dpv_extension_slug: loc
+
+  CZ:
+    is_a: DpvCountry
+    class_uri: loc:CZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:CZ
+      - dpv_loc_owl:CZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#CZ
+      dpv_extension_slug: loc
+
+  DE:
+    is_a: DpvCountry
+    class_uri: loc:DE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:DE
+      - dpv_loc_owl:DE
+      - iso3166:DE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#DE
+      dpv_extension_slug: loc
+
+  DJ:
+    is_a: DpvCountry
+    class_uri: loc:DJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:DJ
+      - dpv_loc_owl:DJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#DJ
+      dpv_extension_slug: loc
+
+  DK:
+    is_a: DpvCountry
+    class_uri: loc:DK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:DK
+      - dpv_loc_owl:DK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#DK
+      dpv_extension_slug: loc
+
+  DM:
+    is_a: DpvCountry
+    class_uri: loc:DM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:DM
+      - dpv_loc_owl:DM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#DM
+      dpv_extension_slug: loc
+
+  DO:
+    is_a: DpvCountry
+    class_uri: loc:DO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:DO
+      - dpv_loc_owl:DO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#DO
+      dpv_extension_slug: loc
+
+  DZ:
+    is_a: DpvCountry
+    class_uri: loc:DZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:DZ
+      - dpv_loc_owl:DZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#DZ
+      dpv_extension_slug: loc
+
+  EC:
+    is_a: DpvCountry
+    class_uri: loc:EC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EC
+      - dpv_loc_owl:EC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EC
+      dpv_extension_slug: loc
+
+  EE:
+    is_a: DpvCountry
+    class_uri: loc:EE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EE
+      - dpv_loc_owl:EE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EE
+      dpv_extension_slug: loc
+
+  EEA:
+    is_a: SupraNationalUnion
+    class_uri: loc:EEA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EEA
+      - dpv_loc_owl:EEA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EEA
+      dpv_extension_slug: loc
+
+  EEA30:
+    is_a: SupraNationalUnion
+    class_uri: loc:EEA30
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EEA30
+      - dpv_loc_owl:EEA30
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EEA30
+      dpv_extension_slug: loc
+
+  EEA31:
+    is_a: SupraNationalUnion
+    class_uri: loc:EEA31
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EEA31
+      - dpv_loc_owl:EEA31
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EEA31
+      dpv_extension_slug: loc
+
+  EG:
+    is_a: DpvCountry
+    class_uri: loc:EG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EG
+      - dpv_loc_owl:EG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EG
+      dpv_extension_slug: loc
+
+  EH:
+    is_a: DpvCountry
+    class_uri: loc:EH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EH
+      - dpv_loc_owl:EH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EH
+      dpv_extension_slug: loc
+
+  ER:
+    is_a: DpvCountry
+    class_uri: loc:ER
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ER
+      - dpv_loc_owl:ER
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ER
+      dpv_extension_slug: loc
+
+  ES:
+    is_a: DpvCountry
+    class_uri: loc:ES
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ES
+      - dpv_loc_owl:ES
+      - iso3166:ES
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ES
+      dpv_extension_slug: loc
+
+  ET:
+    is_a: DpvCountry
+    class_uri: loc:ET
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ET
+      - dpv_loc_owl:ET
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ET
+      dpv_extension_slug: loc
+
+  EU:
+    is_a: SupraNationalUnion
+    class_uri: loc:EU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EU
+      - dpv_loc_owl:EU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EU
+      dpv_extension_slug: loc
+
+  EU27:
+    is_a: SupraNationalUnion
+    class_uri: loc:EU27
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EU27
+      - dpv_loc_owl:EU27
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EU27
+      dpv_extension_slug: loc
+
+  EU28:
+    is_a: SupraNationalUnion
+    class_uri: loc:EU28
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:EU28
+      - dpv_loc_owl:EU28
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EU28
+      dpv_extension_slug: loc
+
+  FI:
+    is_a: DpvCountry
+    class_uri: loc:FI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:FI
+      - dpv_loc_owl:FI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#FI
+      dpv_extension_slug: loc
+
+  FJ:
+    is_a: DpvCountry
+    class_uri: loc:FJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:FJ
+      - dpv_loc_owl:FJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#FJ
+      dpv_extension_slug: loc
+
+  FK:
+    is_a: DpvCountry
+    class_uri: loc:FK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:FK
+      - dpv_loc_owl:FK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#FK
+      dpv_extension_slug: loc
+
+  FM:
+    is_a: DpvCountry
+    class_uri: loc:FM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:FM
+      - dpv_loc_owl:FM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#FM
+      dpv_extension_slug: loc
+
+  FO:
+    is_a: DpvCountry
+    class_uri: loc:FO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:FO
+      - dpv_loc_owl:FO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#FO
+      dpv_extension_slug: loc
+
+  FR:
+    is_a: DpvCountry
+    class_uri: loc:FR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:FR
+      - dpv_loc_owl:FR
+      - iso3166:FR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#FR
+      dpv_extension_slug: loc
+
+  GA:
+    is_a: DpvCountry
+    class_uri: loc:GA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GA
+      - dpv_loc_owl:GA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GA
+      dpv_extension_slug: loc
+
+  GB:
+    is_a: DpvCountry
+    class_uri: loc:GB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GB
+      - dpv_loc_owl:GB
+      - iso3166:GB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GB
+      dpv_extension_slug: loc
+
+  GD:
+    is_a: DpvCountry
+    class_uri: loc:GD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GD
+      - dpv_loc_owl:GD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GD
+      dpv_extension_slug: loc
+
+  GE:
+    is_a: DpvCountry
+    class_uri: loc:GE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GE
+      - dpv_loc_owl:GE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GE
+      dpv_extension_slug: loc
+
+  GF:
+    is_a: DpvCountry
+    class_uri: loc:GF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GF
+      - dpv_loc_owl:GF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GF
+      dpv_extension_slug: loc
+
+  GG:
+    is_a: DpvCountry
+    class_uri: loc:GG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GG
+      - dpv_loc_owl:GG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GG
+      dpv_extension_slug: loc
+
+  GH:
+    is_a: DpvCountry
+    class_uri: loc:GH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GH
+      - dpv_loc_owl:GH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GH
+      dpv_extension_slug: loc
+
+  GI:
+    is_a: DpvCountry
+    class_uri: loc:GI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GI
+      - dpv_loc_owl:GI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GI
+      dpv_extension_slug: loc
+
+  GL:
+    is_a: DpvCountry
+    class_uri: loc:GL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GL
+      - dpv_loc_owl:GL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GL
+      dpv_extension_slug: loc
+
+  GM:
+    is_a: DpvCountry
+    class_uri: loc:GM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GM
+      - dpv_loc_owl:GM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GM
+      dpv_extension_slug: loc
+
+  GN:
+    is_a: DpvCountry
+    class_uri: loc:GN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GN
+      - dpv_loc_owl:GN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GN
+      dpv_extension_slug: loc
+
+  GP:
+    is_a: DpvCountry
+    class_uri: loc:GP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GP
+      - dpv_loc_owl:GP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GP
+      dpv_extension_slug: loc
+
+  GQ:
+    is_a: DpvCountry
+    class_uri: loc:GQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GQ
+      - dpv_loc_owl:GQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GQ
+      dpv_extension_slug: loc
+
+  GR:
+    is_a: DpvCountry
+    class_uri: loc:GR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GR
+      - dpv_loc_owl:GR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GR
+      dpv_extension_slug: loc
+
+  GS:
+    is_a: DpvCountry
+    class_uri: loc:GS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GS
+      - dpv_loc_owl:GS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GS
+      dpv_extension_slug: loc
+
+  GT:
+    is_a: DpvCountry
+    class_uri: loc:GT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GT
+      - dpv_loc_owl:GT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GT
+      dpv_extension_slug: loc
+
+  GU:
+    is_a: DpvCountry
+    class_uri: loc:GU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GU
+      - dpv_loc_owl:GU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GU
+      dpv_extension_slug: loc
+
+  GW:
+    is_a: DpvCountry
+    class_uri: loc:GW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GW
+      - dpv_loc_owl:GW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GW
+      dpv_extension_slug: loc
+
+  GY:
+    is_a: DpvCountry
+    class_uri: loc:GY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:GY
+      - dpv_loc_owl:GY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#GY
+      dpv_extension_slug: loc
+
+  HK:
+    is_a: DpvCountry
+    class_uri: loc:HK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:HK
+      - dpv_loc_owl:HK
+      - iso3166:HK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#HK
+      dpv_extension_slug: loc
+
+  HM:
+    is_a: DpvCountry
+    class_uri: loc:HM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:HM
+      - dpv_loc_owl:HM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#HM
+      dpv_extension_slug: loc
+
+  HN:
+    is_a: DpvCountry
+    class_uri: loc:HN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:HN
+      - dpv_loc_owl:HN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#HN
+      dpv_extension_slug: loc
+
+  HR:
+    is_a: DpvCountry
+    class_uri: loc:HR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:HR
+      - dpv_loc_owl:HR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#HR
+      dpv_extension_slug: loc
+
+  HT:
+    is_a: DpvCountry
+    class_uri: loc:HT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:HT
+      - dpv_loc_owl:HT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#HT
+      dpv_extension_slug: loc
+
+  HU:
+    is_a: DpvCountry
+    class_uri: loc:HU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:HU
+      - dpv_loc_owl:HU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#HU
+      dpv_extension_slug: loc
+
+  ID:
+    is_a: DpvCountry
+    class_uri: loc:ID
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ID
+      - dpv_loc_owl:ID
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ID
+      dpv_extension_slug: loc
+
+  IE:
+    is_a: DpvCountry
+    class_uri: loc:IE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IE
+      - dpv_loc_owl:IE
+      - iso3166:IE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IE
+      dpv_extension_slug: loc
+
+  IL:
+    is_a: DpvCountry
+    class_uri: loc:IL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IL
+      - dpv_loc_owl:IL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IL
+      dpv_extension_slug: loc
+
+  IM:
+    is_a: DpvCountry
+    class_uri: loc:IM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IM
+      - dpv_loc_owl:IM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IM
+      dpv_extension_slug: loc
+
+  IN:
+    is_a: DpvCountry
+    class_uri: loc:IN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IN
+      - dpv_loc_owl:IN
+      - iso3166:IN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IN
+      dpv_extension_slug: loc
+
+  IO:
+    is_a: DpvCountry
+    class_uri: loc:IO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IO
+      - dpv_loc_owl:IO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IO
+      dpv_extension_slug: loc
+
+  IQ:
+    is_a: DpvCountry
+    class_uri: loc:IQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IQ
+      - dpv_loc_owl:IQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IQ
+      dpv_extension_slug: loc
+
+  IR:
+    is_a: DpvCountry
+    class_uri: loc:IR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IR
+      - dpv_loc_owl:IR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IR
+      dpv_extension_slug: loc
+
+  IS:
+    is_a: DpvCountry
+    class_uri: loc:IS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IS
+      - dpv_loc_owl:IS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IS
+      dpv_extension_slug: loc
+
+  IT:
+    is_a: DpvCountry
+    class_uri: loc:IT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:IT
+      - dpv_loc_owl:IT
+      - iso3166:IT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#IT
+      dpv_extension_slug: loc
+
+  JE:
+    is_a: DpvCountry
+    class_uri: loc:JE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:JE
+      - dpv_loc_owl:JE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#JE
+      dpv_extension_slug: loc
+
+  JM:
+    is_a: DpvCountry
+    class_uri: loc:JM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:JM
+      - dpv_loc_owl:JM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#JM
+      dpv_extension_slug: loc
+
+  JO:
+    is_a: DpvCountry
+    class_uri: loc:JO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:JO
+      - dpv_loc_owl:JO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#JO
+      dpv_extension_slug: loc
+
+  JP:
+    is_a: DpvCountry
+    class_uri: loc:JP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:JP
+      - dpv_loc_owl:JP
+      - iso3166:JP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#JP
+      dpv_extension_slug: loc
+
+  KE:
+    is_a: DpvCountry
+    class_uri: loc:KE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KE
+      - dpv_loc_owl:KE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KE
+      dpv_extension_slug: loc
+
+  KG:
+    is_a: DpvCountry
+    class_uri: loc:KG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KG
+      - dpv_loc_owl:KG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KG
+      dpv_extension_slug: loc
+
+  KH:
+    is_a: DpvCountry
+    class_uri: loc:KH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KH
+      - dpv_loc_owl:KH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KH
+      dpv_extension_slug: loc
+
+  KI:
+    is_a: DpvCountry
+    class_uri: loc:KI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KI
+      - dpv_loc_owl:KI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KI
+      dpv_extension_slug: loc
+
+  KM:
+    is_a: DpvCountry
+    class_uri: loc:KM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KM
+      - dpv_loc_owl:KM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KM
+      dpv_extension_slug: loc
+
+  KN:
+    is_a: DpvCountry
+    class_uri: loc:KN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KN
+      - dpv_loc_owl:KN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KN
+      dpv_extension_slug: loc
+
+  KP:
+    is_a: DpvCountry
+    class_uri: loc:KP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KP
+      - dpv_loc_owl:KP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KP
+      dpv_extension_slug: loc
+
+  KR:
+    is_a: DpvCountry
+    class_uri: loc:KR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KR
+      - dpv_loc_owl:KR
+      - iso3166:KR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KR
+      dpv_extension_slug: loc
+
+  KW:
+    is_a: DpvCountry
+    class_uri: loc:KW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KW
+      - dpv_loc_owl:KW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KW
+      dpv_extension_slug: loc
+
+  KY:
+    is_a: DpvCountry
+    class_uri: loc:KY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KY
+      - dpv_loc_owl:KY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KY
+      dpv_extension_slug: loc
+
+  KZ:
+    is_a: DpvCountry
+    class_uri: loc:KZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:KZ
+      - dpv_loc_owl:KZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#KZ
+      dpv_extension_slug: loc
+
+  LA:
+    is_a: DpvCountry
+    class_uri: loc:LA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LA
+      - dpv_loc_owl:LA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LA
+      dpv_extension_slug: loc
+
+  LB:
+    is_a: DpvCountry
+    class_uri: loc:LB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LB
+      - dpv_loc_owl:LB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LB
+      dpv_extension_slug: loc
+
+  LC:
+    is_a: DpvCountry
+    class_uri: loc:LC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LC
+      - dpv_loc_owl:LC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LC
+      dpv_extension_slug: loc
+
+  LI:
+    is_a: DpvCountry
+    class_uri: loc:LI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LI
+      - dpv_loc_owl:LI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LI
+      dpv_extension_slug: loc
+
+  LK:
+    is_a: DpvCountry
+    class_uri: loc:LK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LK
+      - dpv_loc_owl:LK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LK
+      dpv_extension_slug: loc
+
+  LR:
+    is_a: DpvCountry
+    class_uri: loc:LR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LR
+      - dpv_loc_owl:LR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LR
+      dpv_extension_slug: loc
+
+  LS:
+    is_a: DpvCountry
+    class_uri: loc:LS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LS
+      - dpv_loc_owl:LS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LS
+      dpv_extension_slug: loc
+
+  LT:
+    is_a: DpvCountry
+    class_uri: loc:LT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LT
+      - dpv_loc_owl:LT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LT
+      dpv_extension_slug: loc
+
+  LU:
+    is_a: DpvCountry
+    class_uri: loc:LU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LU
+      - dpv_loc_owl:LU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LU
+      dpv_extension_slug: loc
+
+  LV:
+    is_a: DpvCountry
+    class_uri: loc:LV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LV
+      - dpv_loc_owl:LV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LV
+      dpv_extension_slug: loc
+
+  LY:
+    is_a: DpvCountry
+    class_uri: loc:LY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:LY
+      - dpv_loc_owl:LY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#LY
+      dpv_extension_slug: loc
+
+  MA:
+    is_a: DpvCountry
+    class_uri: loc:MA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MA
+      - dpv_loc_owl:MA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MA
+      dpv_extension_slug: loc
+
+  MC:
+    is_a: DpvCountry
+    class_uri: loc:MC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MC
+      - dpv_loc_owl:MC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MC
+      dpv_extension_slug: loc
+
+  MD:
+    is_a: DpvCountry
+    class_uri: loc:MD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MD
+      - dpv_loc_owl:MD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MD
+      dpv_extension_slug: loc
+
+  ME:
+    is_a: DpvCountry
+    class_uri: loc:ME
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ME
+      - dpv_loc_owl:ME
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ME
+      dpv_extension_slug: loc
+
+  MF:
+    is_a: DpvCountry
+    class_uri: loc:MF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MF
+      - dpv_loc_owl:MF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MF
+      dpv_extension_slug: loc
+
+  MG:
+    is_a: DpvCountry
+    class_uri: loc:MG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MG
+      - dpv_loc_owl:MG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MG
+      dpv_extension_slug: loc
+
+  MH:
+    is_a: DpvCountry
+    class_uri: loc:MH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MH
+      - dpv_loc_owl:MH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MH
+      dpv_extension_slug: loc
+
+  MK:
+    is_a: DpvCountry
+    class_uri: loc:MK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MK
+      - dpv_loc_owl:MK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MK
+      dpv_extension_slug: loc
+
+  ML:
+    is_a: DpvCountry
+    class_uri: loc:ML
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ML
+      - dpv_loc_owl:ML
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ML
+      dpv_extension_slug: loc
+
+  MM:
+    is_a: DpvCountry
+    class_uri: loc:MM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MM
+      - dpv_loc_owl:MM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MM
+      dpv_extension_slug: loc
+
+  MN:
+    is_a: DpvCountry
+    class_uri: loc:MN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MN
+      - dpv_loc_owl:MN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MN
+      dpv_extension_slug: loc
+
+  MO:
+    is_a: DpvCountry
+    class_uri: loc:MO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MO
+      - dpv_loc_owl:MO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MO
+      dpv_extension_slug: loc
+
+  MP:
+    is_a: DpvCountry
+    class_uri: loc:MP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MP
+      - dpv_loc_owl:MP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MP
+      dpv_extension_slug: loc
+
+  MQ:
+    is_a: DpvCountry
+    class_uri: loc:MQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MQ
+      - dpv_loc_owl:MQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MQ
+      dpv_extension_slug: loc
+
+  MR:
+    is_a: DpvCountry
+    class_uri: loc:MR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MR
+      - dpv_loc_owl:MR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MR
+      dpv_extension_slug: loc
+
+  MS:
+    is_a: DpvCountry
+    class_uri: loc:MS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MS
+      - dpv_loc_owl:MS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MS
+      dpv_extension_slug: loc
+
+  MT:
+    is_a: DpvCountry
+    class_uri: loc:MT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MT
+      - dpv_loc_owl:MT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MT
+      dpv_extension_slug: loc
+
+  MU:
+    is_a: DpvCountry
+    class_uri: loc:MU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MU
+      - dpv_loc_owl:MU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MU
+      dpv_extension_slug: loc
+
+  MV:
+    is_a: DpvCountry
+    class_uri: loc:MV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MV
+      - dpv_loc_owl:MV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MV
+      dpv_extension_slug: loc
+
+  MW:
+    is_a: DpvCountry
+    class_uri: loc:MW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MW
+      - dpv_loc_owl:MW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MW
+      dpv_extension_slug: loc
+
+  MX:
+    is_a: DpvCountry
+    class_uri: loc:MX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MX
+      - dpv_loc_owl:MX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MX
+      dpv_extension_slug: loc
+
+  MY:
+    is_a: DpvCountry
+    class_uri: loc:MY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MY
+      - dpv_loc_owl:MY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MY
+      dpv_extension_slug: loc
+
+  MZ:
+    is_a: DpvCountry
+    class_uri: loc:MZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:MZ
+      - dpv_loc_owl:MZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#MZ
+      dpv_extension_slug: loc
+
+  NA:
+    is_a: DpvCountry
+    class_uri: loc:NA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NA
+      - dpv_loc_owl:NA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NA
+      dpv_extension_slug: loc
+
+  NC:
+    is_a: DpvCountry
+    class_uri: loc:NC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NC
+      - dpv_loc_owl:NC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NC
+      dpv_extension_slug: loc
+
+  NE:
+    is_a: DpvCountry
+    class_uri: loc:NE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NE
+      - dpv_loc_owl:NE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NE
+      dpv_extension_slug: loc
+
+  NF:
+    is_a: DpvCountry
+    class_uri: loc:NF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NF
+      - dpv_loc_owl:NF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NF
+      dpv_extension_slug: loc
+
+  NG:
+    is_a: DpvCountry
+    class_uri: loc:NG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NG
+      - dpv_loc_owl:NG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NG
+      dpv_extension_slug: loc
+
+  NI:
+    is_a: DpvCountry
+    class_uri: loc:NI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NI
+      - dpv_loc_owl:NI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NI
+      dpv_extension_slug: loc
+
+  NL:
+    is_a: DpvCountry
+    class_uri: loc:NL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NL
+      - dpv_loc_owl:NL
+      - iso3166:NL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NL
+      dpv_extension_slug: loc
+
+  'NO':
+    is_a: DpvCountry
+    class_uri: loc:NO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NO
+      - dpv_loc_owl:NO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NO
+      dpv_extension_slug: loc
+
+  NP:
+    is_a: DpvCountry
+    class_uri: loc:NP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NP
+      - dpv_loc_owl:NP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NP
+      dpv_extension_slug: loc
+
+  NR:
+    is_a: DpvCountry
+    class_uri: loc:NR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NR
+      - dpv_loc_owl:NR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NR
+      dpv_extension_slug: loc
+
+  NU:
+    is_a: DpvCountry
+    class_uri: loc:NU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NU
+      - dpv_loc_owl:NU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NU
+      dpv_extension_slug: loc
+
+  NZ:
+    is_a: DpvCountry
+    class_uri: loc:NZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:NZ
+      - dpv_loc_owl:NZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#NZ
+      dpv_extension_slug: loc
+
+  OM:
+    is_a: DpvCountry
+    class_uri: loc:OM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:OM
+      - dpv_loc_owl:OM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#OM
+      dpv_extension_slug: loc
+
+  PA:
+    is_a: DpvCountry
+    class_uri: loc:PA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PA
+      - dpv_loc_owl:PA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PA
+      dpv_extension_slug: loc
+
+  PE:
+    is_a: DpvCountry
+    class_uri: loc:PE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PE
+      - dpv_loc_owl:PE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PE
+      dpv_extension_slug: loc
+
+  PF:
+    is_a: DpvCountry
+    class_uri: loc:PF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PF
+      - dpv_loc_owl:PF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PF
+      dpv_extension_slug: loc
+
+  PG:
+    is_a: DpvCountry
+    class_uri: loc:PG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PG
+      - dpv_loc_owl:PG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PG
+      dpv_extension_slug: loc
+
+  PH:
+    is_a: DpvCountry
+    class_uri: loc:PH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PH
+      - dpv_loc_owl:PH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PH
+      dpv_extension_slug: loc
+
+  PK:
+    is_a: DpvCountry
+    class_uri: loc:PK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PK
+      - dpv_loc_owl:PK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PK
+      dpv_extension_slug: loc
+
+  PL:
+    is_a: DpvCountry
+    class_uri: loc:PL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PL
+      - dpv_loc_owl:PL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PL
+      dpv_extension_slug: loc
+
+  PM:
+    is_a: DpvCountry
+    class_uri: loc:PM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PM
+      - dpv_loc_owl:PM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PM
+      dpv_extension_slug: loc
+
+  PN:
+    is_a: DpvCountry
+    class_uri: loc:PN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PN
+      - dpv_loc_owl:PN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PN
+      dpv_extension_slug: loc
+
+  PR:
+    is_a: DpvCountry
+    class_uri: loc:PR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PR
+      - dpv_loc_owl:PR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PR
+      dpv_extension_slug: loc
+
+  PS:
+    is_a: DpvCountry
+    class_uri: loc:PS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PS
+      - dpv_loc_owl:PS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PS
+      dpv_extension_slug: loc
+
+  PT:
+    is_a: DpvCountry
+    class_uri: loc:PT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PT
+      - dpv_loc_owl:PT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PT
+      dpv_extension_slug: loc
+
+  PW:
+    is_a: DpvCountry
+    class_uri: loc:PW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PW
+      - dpv_loc_owl:PW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PW
+      dpv_extension_slug: loc
+
+  PY:
+    is_a: DpvCountry
+    class_uri: loc:PY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:PY
+      - dpv_loc_owl:PY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#PY
+      dpv_extension_slug: loc
+
+  QA:
+    is_a: DpvCountry
+    class_uri: loc:QA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:QA
+      - dpv_loc_owl:QA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#QA
+      dpv_extension_slug: loc
+
+  RE:
+    is_a: DpvCountry
+    class_uri: loc:RE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:RE
+      - dpv_loc_owl:RE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#RE
+      dpv_extension_slug: loc
+
+  RO:
+    is_a: DpvCountry
+    class_uri: loc:RO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:RO
+      - dpv_loc_owl:RO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#RO
+      dpv_extension_slug: loc
+
+  RS:
+    is_a: DpvCountry
+    class_uri: loc:RS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:RS
+      - dpv_loc_owl:RS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#RS
+      dpv_extension_slug: loc
+
+  RU:
+    is_a: DpvCountry
+    class_uri: loc:RU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:RU
+      - dpv_loc_owl:RU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#RU
+      dpv_extension_slug: loc
+
+  RW:
+    is_a: DpvCountry
+    class_uri: loc:RW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:RW
+      - dpv_loc_owl:RW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#RW
+      dpv_extension_slug: loc
+
+  SA:
+    is_a: DpvCountry
+    class_uri: loc:SA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SA
+      - dpv_loc_owl:SA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SA
+      dpv_extension_slug: loc
+
+  SB:
+    is_a: DpvCountry
+    class_uri: loc:SB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SB
+      - dpv_loc_owl:SB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SB
+      dpv_extension_slug: loc
+
+  SC:
+    is_a: DpvCountry
+    class_uri: loc:SC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SC
+      - dpv_loc_owl:SC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SC
+      dpv_extension_slug: loc
+
+  SD:
+    is_a: DpvCountry
+    class_uri: loc:SD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SD
+      - dpv_loc_owl:SD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SD
+      dpv_extension_slug: loc
+
+  SE:
+    is_a: DpvCountry
+    class_uri: loc:SE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SE
+      - dpv_loc_owl:SE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SE
+      dpv_extension_slug: loc
+
+  SG:
+    is_a: DpvCountry
+    class_uri: loc:SG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SG
+      - dpv_loc_owl:SG
+      - iso3166:SG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SG
+      dpv_extension_slug: loc
+
+  SH:
+    is_a: DpvCountry
+    class_uri: loc:SH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SH
+      - dpv_loc_owl:SH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SH
+      dpv_extension_slug: loc
+
+  SI:
+    is_a: DpvCountry
+    class_uri: loc:SI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SI
+      - dpv_loc_owl:SI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SI
+      dpv_extension_slug: loc
+
+  SJ:
+    is_a: DpvCountry
+    class_uri: loc:SJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SJ
+      - dpv_loc_owl:SJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SJ
+      dpv_extension_slug: loc
+
+  SK:
+    is_a: DpvCountry
+    class_uri: loc:SK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SK
+      - dpv_loc_owl:SK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SK
+      dpv_extension_slug: loc
+
+  SL:
+    is_a: DpvCountry
+    class_uri: loc:SL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SL
+      - dpv_loc_owl:SL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SL
+      dpv_extension_slug: loc
+
+  SM:
+    is_a: DpvCountry
+    class_uri: loc:SM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SM
+      - dpv_loc_owl:SM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SM
+      dpv_extension_slug: loc
+
+  SN:
+    is_a: DpvCountry
+    class_uri: loc:SN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SN
+      - dpv_loc_owl:SN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SN
+      dpv_extension_slug: loc
+
+  SO:
+    is_a: DpvCountry
+    class_uri: loc:SO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SO
+      - dpv_loc_owl:SO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SO
+      dpv_extension_slug: loc
+
+  SR:
+    is_a: DpvCountry
+    class_uri: loc:SR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SR
+      - dpv_loc_owl:SR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SR
+      dpv_extension_slug: loc
+
+  SS:
+    is_a: DpvCountry
+    class_uri: loc:SS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SS
+      - dpv_loc_owl:SS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SS
+      dpv_extension_slug: loc
+
+  ST:
+    is_a: DpvCountry
+    class_uri: loc:ST
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ST
+      - dpv_loc_owl:ST
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ST
+      dpv_extension_slug: loc
+
+  SV:
+    is_a: DpvCountry
+    class_uri: loc:SV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SV
+      - dpv_loc_owl:SV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SV
+      dpv_extension_slug: loc
+
+  SX:
+    is_a: DpvCountry
+    class_uri: loc:SX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SX
+      - dpv_loc_owl:SX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SX
+      dpv_extension_slug: loc
+
+  SY:
+    is_a: DpvCountry
+    class_uri: loc:SY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SY
+      - dpv_loc_owl:SY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SY
+      dpv_extension_slug: loc
+
+  SZ:
+    is_a: DpvCountry
+    class_uri: loc:SZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:SZ
+      - dpv_loc_owl:SZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#SZ
+      dpv_extension_slug: loc
+
+  TC:
+    is_a: DpvCountry
+    class_uri: loc:TC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TC
+      - dpv_loc_owl:TC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TC
+      dpv_extension_slug: loc
+
+  TD:
+    is_a: DpvCountry
+    class_uri: loc:TD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TD
+      - dpv_loc_owl:TD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TD
+      dpv_extension_slug: loc
+
+  TF:
+    is_a: DpvCountry
+    class_uri: loc:TF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TF
+      - dpv_loc_owl:TF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TF
+      dpv_extension_slug: loc
+
+  TG:
+    is_a: DpvCountry
+    class_uri: loc:TG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TG
+      - dpv_loc_owl:TG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TG
+      dpv_extension_slug: loc
+
+  TH:
+    is_a: DpvCountry
+    class_uri: loc:TH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TH
+      - dpv_loc_owl:TH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TH
+      dpv_extension_slug: loc
+
+  TJ:
+    is_a: DpvCountry
+    class_uri: loc:TJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TJ
+      - dpv_loc_owl:TJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TJ
+      dpv_extension_slug: loc
+
+  TK:
+    is_a: DpvCountry
+    class_uri: loc:TK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TK
+      - dpv_loc_owl:TK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TK
+      dpv_extension_slug: loc
+
+  TL:
+    is_a: DpvCountry
+    class_uri: loc:TL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TL
+      - dpv_loc_owl:TL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TL
+      dpv_extension_slug: loc
+
+  TM:
+    is_a: DpvCountry
+    class_uri: loc:TM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TM
+      - dpv_loc_owl:TM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TM
+      dpv_extension_slug: loc
+
+  TN:
+    is_a: DpvCountry
+    class_uri: loc:TN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TN
+      - dpv_loc_owl:TN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TN
+      dpv_extension_slug: loc
+
+  TO:
+    is_a: DpvCountry
+    class_uri: loc:TO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TO
+      - dpv_loc_owl:TO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TO
+      dpv_extension_slug: loc
+
+  TR:
+    is_a: DpvCountry
+    class_uri: loc:TR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TR
+      - dpv_loc_owl:TR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TR
+      dpv_extension_slug: loc
+
+  TT:
+    is_a: DpvCountry
+    class_uri: loc:TT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TT
+      - dpv_loc_owl:TT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TT
+      dpv_extension_slug: loc
+
+  TV:
+    is_a: DpvCountry
+    class_uri: loc:TV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TV
+      - dpv_loc_owl:TV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TV
+      dpv_extension_slug: loc
+
+  TW:
+    is_a: DpvCountry
+    class_uri: loc:TW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TW
+      - dpv_loc_owl:TW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TW
+      dpv_extension_slug: loc
+
+  TZ:
+    is_a: DpvCountry
+    class_uri: loc:TZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:TZ
+      - dpv_loc_owl:TZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#TZ
+      dpv_extension_slug: loc
+
+  UA:
+    is_a: DpvCountry
+    class_uri: loc:UA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:UA
+      - dpv_loc_owl:UA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#UA
+      dpv_extension_slug: loc
+
+  UG:
+    is_a: DpvCountry
+    class_uri: loc:UG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:UG
+      - dpv_loc_owl:UG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#UG
+      dpv_extension_slug: loc
+
+  UM:
+    is_a: DpvCountry
+    class_uri: loc:UM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:UM
+      - dpv_loc_owl:UM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#UM
+      dpv_extension_slug: loc
+
+  US:
+    is_a: DpvCountry
+    class_uri: loc:US
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:US
+      - dpv_loc_owl:US
+      - iso3166:US
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#US
+      dpv_extension_slug: loc
+
+  UY:
+    is_a: DpvCountry
+    class_uri: loc:UY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:UY
+      - dpv_loc_owl:UY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#UY
+      dpv_extension_slug: loc
+
+  UZ:
+    is_a: DpvCountry
+    class_uri: loc:UZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:UZ
+      - dpv_loc_owl:UZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#UZ
+      dpv_extension_slug: loc
+
+  VA:
+    is_a: DpvCountry
+    class_uri: loc:VA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VA
+      - dpv_loc_owl:VA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VA
+      dpv_extension_slug: loc
+
+  VC:
+    is_a: DpvCountry
+    class_uri: loc:VC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VC
+      - dpv_loc_owl:VC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VC
+      dpv_extension_slug: loc
+
+  VE:
+    is_a: DpvCountry
+    class_uri: loc:VE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VE
+      - dpv_loc_owl:VE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VE
+      dpv_extension_slug: loc
+
+  VG:
+    is_a: DpvCountry
+    class_uri: loc:VG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VG
+      - dpv_loc_owl:VG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VG
+      dpv_extension_slug: loc
+
+  VI:
+    is_a: DpvCountry
+    class_uri: loc:VI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VI
+      - dpv_loc_owl:VI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VI
+      dpv_extension_slug: loc
+
+  VN:
+    is_a: DpvCountry
+    class_uri: loc:VN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VN
+      - dpv_loc_owl:VN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VN
+      dpv_extension_slug: loc
+
+  VU:
+    is_a: DpvCountry
+    class_uri: loc:VU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:VU
+      - dpv_loc_owl:VU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#VU
+      dpv_extension_slug: loc
+
+  WF:
+    is_a: DpvCountry
+    class_uri: loc:WF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:WF
+      - dpv_loc_owl:WF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#WF
+      dpv_extension_slug: loc
+
+  WS:
+    is_a: DpvCountry
+    class_uri: loc:WS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:WS
+      - dpv_loc_owl:WS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#WS
+      dpv_extension_slug: loc
+
+  YE:
+    is_a: DpvCountry
+    class_uri: loc:YE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:YE
+      - dpv_loc_owl:YE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#YE
+      dpv_extension_slug: loc
+
+  YT:
+    is_a: DpvCountry
+    class_uri: loc:YT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:YT
+      - dpv_loc_owl:YT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#YT
+      dpv_extension_slug: loc
+
+  ZA:
+    is_a: DpvCountry
+    class_uri: loc:ZA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ZA
+      - dpv_loc_owl:ZA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ZA
+      dpv_extension_slug: loc
+
+  ZM:
+    is_a: DpvCountry
+    class_uri: loc:ZM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ZM
+      - dpv_loc_owl:ZM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ZM
+      dpv_extension_slug: loc
+
+  ZW:
+    is_a: DpvCountry
+    class_uri: loc:ZW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:ZW
+      - dpv_loc_owl:ZW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#ZW
+      dpv_extension_slug: loc
+
+  nonAD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AD
+    description: Set of jurisdictions that are not in AD
+    aliases:
+      - non-AD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AD
+      - dpv_loc_owl:non-AD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AD
+      dpv_extension_slug: loc
+
+  nonAE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AE
+    description: Set of jurisdictions that are not in AE
+    aliases:
+      - non-AE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AE
+      - dpv_loc_owl:non-AE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AE
+      dpv_extension_slug: loc
+
+  nonAF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AF
+    description: Set of jurisdictions that are not in AF
+    aliases:
+      - non-AF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AF
+      - dpv_loc_owl:non-AF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AF
+      dpv_extension_slug: loc
+
+  nonAG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AG
+    description: Set of jurisdictions that are not in AG
+    aliases:
+      - non-AG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AG
+      - dpv_loc_owl:non-AG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AG
+      dpv_extension_slug: loc
+
+  nonAI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AI
+    description: Set of jurisdictions that are not in AI
+    aliases:
+      - non-AI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AI
+      - dpv_loc_owl:non-AI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AI
+      dpv_extension_slug: loc
+
+  nonAL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AL
+    description: Set of jurisdictions that are not in AL
+    aliases:
+      - non-AL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AL
+      - dpv_loc_owl:non-AL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AL
+      dpv_extension_slug: loc
+
+  nonAM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AM
+    description: Set of jurisdictions that are not in AM
+    aliases:
+      - non-AM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AM
+      - dpv_loc_owl:non-AM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AM
+      dpv_extension_slug: loc
+
+  nonAO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AO
+    description: Set of jurisdictions that are not in AO
+    aliases:
+      - non-AO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AO
+      - dpv_loc_owl:non-AO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AO
+      dpv_extension_slug: loc
+
+  nonAQ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AQ
+    description: Set of jurisdictions that are not in AQ
+    aliases:
+      - non-AQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AQ
+      - dpv_loc_owl:non-AQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AQ
+      dpv_extension_slug: loc
+
+  nonAR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AR
+    description: Set of jurisdictions that are not in AR
+    aliases:
+      - non-AR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AR
+      - dpv_loc_owl:non-AR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AR
+      dpv_extension_slug: loc
+
+  nonAS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AS
+    description: Set of jurisdictions that are not in AS
+    aliases:
+      - non-AS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AS
+      - dpv_loc_owl:non-AS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AS
+      dpv_extension_slug: loc
+
+  nonAT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AT
+    description: Set of jurisdictions that are not in AT
+    aliases:
+      - non-AT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AT
+      - dpv_loc_owl:non-AT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AT
+      dpv_extension_slug: loc
+
+  nonAU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AU
+    description: Set of jurisdictions that are not in AU
+    aliases:
+      - non-AU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AU
+      - dpv_loc_owl:non-AU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AU
+      dpv_extension_slug: loc
+
+  nonAW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AW
+    description: Set of jurisdictions that are not in AW
+    aliases:
+      - non-AW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AW
+      - dpv_loc_owl:non-AW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AW
+      dpv_extension_slug: loc
+
+  nonAX:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AX
+    description: Set of jurisdictions that are not in AX
+    aliases:
+      - non-AX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AX
+      - dpv_loc_owl:non-AX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AX
+      dpv_extension_slug: loc
+
+  nonAZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-AZ
+    description: Set of jurisdictions that are not in AZ
+    aliases:
+      - non-AZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-AZ
+      - dpv_loc_owl:non-AZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-AZ
+      dpv_extension_slug: loc
+
+  nonBA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BA
+    description: Set of jurisdictions that are not in BA
+    aliases:
+      - non-BA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BA
+      - dpv_loc_owl:non-BA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BA
+      dpv_extension_slug: loc
+
+  nonBB:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BB
+    description: Set of jurisdictions that are not in BB
+    aliases:
+      - non-BB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BB
+      - dpv_loc_owl:non-BB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BB
+      dpv_extension_slug: loc
+
+  nonBD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BD
+    description: Set of jurisdictions that are not in BD
+    aliases:
+      - non-BD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BD
+      - dpv_loc_owl:non-BD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BD
+      dpv_extension_slug: loc
+
+  nonBE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BE
+    description: Set of jurisdictions that are not in BE
+    aliases:
+      - non-BE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BE
+      - dpv_loc_owl:non-BE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BE
+      dpv_extension_slug: loc
+
+  nonBF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BF
+    description: Set of jurisdictions that are not in BF
+    aliases:
+      - non-BF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BF
+      - dpv_loc_owl:non-BF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BF
+      dpv_extension_slug: loc
+
+  nonBG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BG
+    description: Set of jurisdictions that are not in BG
+    aliases:
+      - non-BG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BG
+      - dpv_loc_owl:non-BG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BG
+      dpv_extension_slug: loc
+
+  nonBH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BH
+    description: Set of jurisdictions that are not in BH
+    aliases:
+      - non-BH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BH
+      - dpv_loc_owl:non-BH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BH
+      dpv_extension_slug: loc
+
+  nonBI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BI
+    description: Set of jurisdictions that are not in BI
+    aliases:
+      - non-BI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BI
+      - dpv_loc_owl:non-BI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BI
+      dpv_extension_slug: loc
+
+  nonBJ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BJ
+    description: Set of jurisdictions that are not in BJ
+    aliases:
+      - non-BJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BJ
+      - dpv_loc_owl:non-BJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BJ
+      dpv_extension_slug: loc
+
+  nonBL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BL
+    description: Set of jurisdictions that are not in BL
+    aliases:
+      - non-BL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BL
+      - dpv_loc_owl:non-BL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BL
+      dpv_extension_slug: loc
+
+  nonBM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BM
+    description: Set of jurisdictions that are not in BM
+    aliases:
+      - non-BM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BM
+      - dpv_loc_owl:non-BM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BM
+      dpv_extension_slug: loc
+
+  nonBN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BN
+    description: Set of jurisdictions that are not in BN
+    aliases:
+      - non-BN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BN
+      - dpv_loc_owl:non-BN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BN
+      dpv_extension_slug: loc
+
+  nonBO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BO
+    description: Set of jurisdictions that are not in BO
+    aliases:
+      - non-BO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BO
+      - dpv_loc_owl:non-BO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BO
+      dpv_extension_slug: loc
+
+  nonBQ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BQ
+    description: Set of jurisdictions that are not in BQ
+    aliases:
+      - non-BQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BQ
+      - dpv_loc_owl:non-BQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BQ
+      dpv_extension_slug: loc
+
+  nonBR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BR
+    description: Set of jurisdictions that are not in BR
+    aliases:
+      - non-BR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BR
+      - dpv_loc_owl:non-BR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BR
+      dpv_extension_slug: loc
+
+  nonBS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BS
+    description: Set of jurisdictions that are not in BS
+    aliases:
+      - non-BS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BS
+      - dpv_loc_owl:non-BS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BS
+      dpv_extension_slug: loc
+
+  nonBT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BT
+    description: Set of jurisdictions that are not in BT
+    aliases:
+      - non-BT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BT
+      - dpv_loc_owl:non-BT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BT
+      dpv_extension_slug: loc
+
+  nonBV:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BV
+    description: Set of jurisdictions that are not in BV
+    aliases:
+      - non-BV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BV
+      - dpv_loc_owl:non-BV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BV
+      dpv_extension_slug: loc
+
+  nonBW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BW
+    description: Set of jurisdictions that are not in BW
+    aliases:
+      - non-BW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BW
+      - dpv_loc_owl:non-BW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BW
+      dpv_extension_slug: loc
+
+  nonBY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BY
+    description: Set of jurisdictions that are not in BY
+    aliases:
+      - non-BY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BY
+      - dpv_loc_owl:non-BY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BY
+      dpv_extension_slug: loc
+
+  nonBZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-BZ
+    description: Set of jurisdictions that are not in BZ
+    aliases:
+      - non-BZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-BZ
+      - dpv_loc_owl:non-BZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-BZ
+      dpv_extension_slug: loc
+
+  nonCA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CA
+    description: Set of jurisdictions that are not in CA
+    aliases:
+      - non-CA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CA
+      - dpv_loc_owl:non-CA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CA
+      dpv_extension_slug: loc
+
+  nonCC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CC
+    description: Set of jurisdictions that are not in CC
+    aliases:
+      - non-CC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CC
+      - dpv_loc_owl:non-CC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CC
+      dpv_extension_slug: loc
+
+  nonCD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CD
+    description: Set of jurisdictions that are not in CD
+    aliases:
+      - non-CD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CD
+      - dpv_loc_owl:non-CD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CD
+      dpv_extension_slug: loc
+
+  nonCF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CF
+    description: Set of jurisdictions that are not in CF
+    aliases:
+      - non-CF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CF
+      - dpv_loc_owl:non-CF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CF
+      dpv_extension_slug: loc
+
+  nonCG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CG
+    description: Set of jurisdictions that are not in CG
+    aliases:
+      - non-CG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CG
+      - dpv_loc_owl:non-CG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CG
+      dpv_extension_slug: loc
+
+  nonCH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CH
+    description: Set of jurisdictions that are not in CH
+    aliases:
+      - non-CH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CH
+      - dpv_loc_owl:non-CH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CH
+      dpv_extension_slug: loc
+
+  nonCI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CI
+    description: Set of jurisdictions that are not in CI
+    aliases:
+      - non-CI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CI
+      - dpv_loc_owl:non-CI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CI
+      dpv_extension_slug: loc
+
+  nonCK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CK
+    description: Set of jurisdictions that are not in CK
+    aliases:
+      - non-CK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CK
+      - dpv_loc_owl:non-CK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CK
+      dpv_extension_slug: loc
+
+  nonCL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CL
+    description: Set of jurisdictions that are not in CL
+    aliases:
+      - non-CL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CL
+      - dpv_loc_owl:non-CL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CL
+      dpv_extension_slug: loc
+
+  nonCM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CM
+    description: Set of jurisdictions that are not in CM
+    aliases:
+      - non-CM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CM
+      - dpv_loc_owl:non-CM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CM
+      dpv_extension_slug: loc
+
+  nonCN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CN
+    description: Set of jurisdictions that are not in CN
+    aliases:
+      - non-CN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CN
+      - dpv_loc_owl:non-CN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CN
+      dpv_extension_slug: loc
+
+  nonCO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CO
+    description: Set of jurisdictions that are not in CO
+    aliases:
+      - non-CO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CO
+      - dpv_loc_owl:non-CO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CO
+      dpv_extension_slug: loc
+
+  nonCR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CR
+    description: Set of jurisdictions that are not in CR
+    aliases:
+      - non-CR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CR
+      - dpv_loc_owl:non-CR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CR
+      dpv_extension_slug: loc
+
+  nonCU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CU
+    description: Set of jurisdictions that are not in CU
+    aliases:
+      - non-CU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CU
+      - dpv_loc_owl:non-CU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CU
+      dpv_extension_slug: loc
+
+  nonCV:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CV
+    description: Set of jurisdictions that are not in CV
+    aliases:
+      - non-CV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CV
+      - dpv_loc_owl:non-CV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CV
+      dpv_extension_slug: loc
+
+  nonCW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CW
+    description: Set of jurisdictions that are not in CW
+    aliases:
+      - non-CW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CW
+      - dpv_loc_owl:non-CW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CW
+      dpv_extension_slug: loc
+
+  nonCX:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CX
+    description: Set of jurisdictions that are not in CX
+    aliases:
+      - non-CX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CX
+      - dpv_loc_owl:non-CX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CX
+      dpv_extension_slug: loc
+
+  nonCY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CY
+    description: Set of jurisdictions that are not in CY
+    aliases:
+      - non-CY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CY
+      - dpv_loc_owl:non-CY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CY
+      dpv_extension_slug: loc
+
+  nonCZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-CZ
+    description: Set of jurisdictions that are not in CZ
+    aliases:
+      - non-CZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-CZ
+      - dpv_loc_owl:non-CZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-CZ
+      dpv_extension_slug: loc
+
+  nonDE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-DE
+    description: Set of jurisdictions that are not in DE
+    aliases:
+      - non-DE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-DE
+      - dpv_loc_owl:non-DE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-DE
+      dpv_extension_slug: loc
+
+  nonDJ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-DJ
+    description: Set of jurisdictions that are not in DJ
+    aliases:
+      - non-DJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-DJ
+      - dpv_loc_owl:non-DJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-DJ
+      dpv_extension_slug: loc
+
+  nonDK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-DK
+    description: Set of jurisdictions that are not in DK
+    aliases:
+      - non-DK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-DK
+      - dpv_loc_owl:non-DK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-DK
+      dpv_extension_slug: loc
+
+  nonDM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-DM
+    description: Set of jurisdictions that are not in DM
+    aliases:
+      - non-DM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-DM
+      - dpv_loc_owl:non-DM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-DM
+      dpv_extension_slug: loc
+
+  nonDO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-DO
+    description: Set of jurisdictions that are not in DO
+    aliases:
+      - non-DO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-DO
+      - dpv_loc_owl:non-DO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-DO
+      dpv_extension_slug: loc
+
+  nonDZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-DZ
+    description: Set of jurisdictions that are not in DZ
+    aliases:
+      - non-DZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-DZ
+      - dpv_loc_owl:non-DZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-DZ
+      dpv_extension_slug: loc
+
+  nonEC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EC
+    description: Set of jurisdictions that are not in EC
+    aliases:
+      - non-EC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EC
+      - dpv_loc_owl:non-EC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EC
+      dpv_extension_slug: loc
+
+  nonEE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EE
+    description: Set of jurisdictions that are not in EE
+    aliases:
+      - non-EE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EE
+      - dpv_loc_owl:non-EE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EE
+      dpv_extension_slug: loc
+
+  nonEEA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EEA
+    description: Set of jurisdictions that are not in EEA
+    aliases:
+      - non-EEA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EEA
+      - dpv_loc_owl:non-EEA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EEA
+      dpv_extension_slug: loc
+
+  nonEEA30:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EEA30
+    description: Set of jurisdictions that are not in EEA30
+    aliases:
+      - non-EEA30
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EEA30
+      - dpv_loc_owl:non-EEA30
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EEA30
+      dpv_extension_slug: loc
+
+  nonEEA31:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EEA31
+    description: Set of jurisdictions that are not in EEA31
+    aliases:
+      - non-EEA31
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EEA31
+      - dpv_loc_owl:non-EEA31
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EEA31
+      dpv_extension_slug: loc
+
+  nonEG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EG
+    description: Set of jurisdictions that are not in EG
+    aliases:
+      - non-EG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EG
+      - dpv_loc_owl:non-EG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EG
+      dpv_extension_slug: loc
+
+  nonEH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EH
+    description: Set of jurisdictions that are not in EH
+    aliases:
+      - non-EH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EH
+      - dpv_loc_owl:non-EH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EH
+      dpv_extension_slug: loc
+
+  nonER:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ER
+    description: Set of jurisdictions that are not in ER
+    aliases:
+      - non-ER
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ER
+      - dpv_loc_owl:non-ER
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ER
+      dpv_extension_slug: loc
+
+  nonES:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ES
+    description: Set of jurisdictions that are not in ES
+    aliases:
+      - non-ES
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ES
+      - dpv_loc_owl:non-ES
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ES
+      dpv_extension_slug: loc
+
+  nonET:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ET
+    description: Set of jurisdictions that are not in ET
+    aliases:
+      - non-ET
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ET
+      - dpv_loc_owl:non-ET
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ET
+      dpv_extension_slug: loc
+
+  nonEU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EU
+    description: Set of jurisdictions that are not in EU
+    aliases:
+      - non-EU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EU
+      - dpv_loc_owl:non-EU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EU
+      dpv_extension_slug: loc
+
+  nonEU27:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EU27
+    description: Set of jurisdictions that are not in EU27
+    aliases:
+      - non-EU27
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EU27
+      - dpv_loc_owl:non-EU27
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EU27
+      dpv_extension_slug: loc
+
+  nonEU28:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-EU28
+    description: Set of jurisdictions that are not in EU28
+    aliases:
+      - non-EU28
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-EU28
+      - dpv_loc_owl:non-EU28
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-EU28
+      dpv_extension_slug: loc
+
+  nonFI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-FI
+    description: Set of jurisdictions that are not in FI
+    aliases:
+      - non-FI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-FI
+      - dpv_loc_owl:non-FI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-FI
+      dpv_extension_slug: loc
+
+  nonFJ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-FJ
+    description: Set of jurisdictions that are not in FJ
+    aliases:
+      - non-FJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-FJ
+      - dpv_loc_owl:non-FJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-FJ
+      dpv_extension_slug: loc
+
+  nonFK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-FK
+    description: Set of jurisdictions that are not in FK
+    aliases:
+      - non-FK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-FK
+      - dpv_loc_owl:non-FK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-FK
+      dpv_extension_slug: loc
+
+  nonFM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-FM
+    description: Set of jurisdictions that are not in FM
+    aliases:
+      - non-FM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-FM
+      - dpv_loc_owl:non-FM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-FM
+      dpv_extension_slug: loc
+
+  nonFO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-FO
+    description: Set of jurisdictions that are not in FO
+    aliases:
+      - non-FO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-FO
+      - dpv_loc_owl:non-FO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-FO
+      dpv_extension_slug: loc
+
+  nonFR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-FR
+    description: Set of jurisdictions that are not in FR
+    aliases:
+      - non-FR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-FR
+      - dpv_loc_owl:non-FR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-FR
+      dpv_extension_slug: loc
+
+  nonGA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GA
+    description: Set of jurisdictions that are not in GA
+    aliases:
+      - non-GA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GA
+      - dpv_loc_owl:non-GA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GA
+      dpv_extension_slug: loc
+
+  nonGB:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GB
+    description: Set of jurisdictions that are not in GB
+    aliases:
+      - non-GB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GB
+      - dpv_loc_owl:non-GB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GB
+      dpv_extension_slug: loc
+
+  nonGD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GD
+    description: Set of jurisdictions that are not in GD
+    aliases:
+      - non-GD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GD
+      - dpv_loc_owl:non-GD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GD
+      dpv_extension_slug: loc
+
+  nonGE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GE
+    description: Set of jurisdictions that are not in GE
+    aliases:
+      - non-GE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GE
+      - dpv_loc_owl:non-GE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GE
+      dpv_extension_slug: loc
+
+  nonGF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GF
+    description: Set of jurisdictions that are not in GF
+    aliases:
+      - non-GF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GF
+      - dpv_loc_owl:non-GF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GF
+      dpv_extension_slug: loc
+
+  nonGG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GG
+    description: Set of jurisdictions that are not in GG
+    aliases:
+      - non-GG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GG
+      - dpv_loc_owl:non-GG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GG
+      dpv_extension_slug: loc
+
+  nonGH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GH
+    description: Set of jurisdictions that are not in GH
+    aliases:
+      - non-GH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GH
+      - dpv_loc_owl:non-GH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GH
+      dpv_extension_slug: loc
+
+  nonGI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GI
+    description: Set of jurisdictions that are not in GI
+    aliases:
+      - non-GI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GI
+      - dpv_loc_owl:non-GI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GI
+      dpv_extension_slug: loc
+
+  nonGL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GL
+    description: Set of jurisdictions that are not in GL
+    aliases:
+      - non-GL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GL
+      - dpv_loc_owl:non-GL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GL
+      dpv_extension_slug: loc
+
+  nonGM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GM
+    description: Set of jurisdictions that are not in GM
+    aliases:
+      - non-GM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GM
+      - dpv_loc_owl:non-GM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GM
+      dpv_extension_slug: loc
+
+  nonGN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GN
+    description: Set of jurisdictions that are not in GN
+    aliases:
+      - non-GN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GN
+      - dpv_loc_owl:non-GN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GN
+      dpv_extension_slug: loc
+
+  nonGP:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GP
+    description: Set of jurisdictions that are not in GP
+    aliases:
+      - non-GP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GP
+      - dpv_loc_owl:non-GP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GP
+      dpv_extension_slug: loc
+
+  nonGQ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GQ
+    description: Set of jurisdictions that are not in GQ
+    aliases:
+      - non-GQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GQ
+      - dpv_loc_owl:non-GQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GQ
+      dpv_extension_slug: loc
+
+  nonGR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GR
+    description: Set of jurisdictions that are not in GR
+    aliases:
+      - non-GR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GR
+      - dpv_loc_owl:non-GR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GR
+      dpv_extension_slug: loc
+
+  nonGS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GS
+    description: Set of jurisdictions that are not in GS
+    aliases:
+      - non-GS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GS
+      - dpv_loc_owl:non-GS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GS
+      dpv_extension_slug: loc
+
+  nonGT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GT
+    description: Set of jurisdictions that are not in GT
+    aliases:
+      - non-GT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GT
+      - dpv_loc_owl:non-GT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GT
+      dpv_extension_slug: loc
+
+  nonGU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GU
+    description: Set of jurisdictions that are not in GU
+    aliases:
+      - non-GU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GU
+      - dpv_loc_owl:non-GU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GU
+      dpv_extension_slug: loc
+
+  nonGW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GW
+    description: Set of jurisdictions that are not in GW
+    aliases:
+      - non-GW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GW
+      - dpv_loc_owl:non-GW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GW
+      dpv_extension_slug: loc
+
+  nonGY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-GY
+    description: Set of jurisdictions that are not in GY
+    aliases:
+      - non-GY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-GY
+      - dpv_loc_owl:non-GY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-GY
+      dpv_extension_slug: loc
+
+  nonHK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-HK
+    description: Set of jurisdictions that are not in HK
+    aliases:
+      - non-HK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-HK
+      - dpv_loc_owl:non-HK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-HK
+      dpv_extension_slug: loc
+
+  nonHM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-HM
+    description: Set of jurisdictions that are not in HM
+    aliases:
+      - non-HM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-HM
+      - dpv_loc_owl:non-HM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-HM
+      dpv_extension_slug: loc
+
+  nonHN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-HN
+    description: Set of jurisdictions that are not in HN
+    aliases:
+      - non-HN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-HN
+      - dpv_loc_owl:non-HN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-HN
+      dpv_extension_slug: loc
+
+  nonHR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-HR
+    description: Set of jurisdictions that are not in HR
+    aliases:
+      - non-HR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-HR
+      - dpv_loc_owl:non-HR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-HR
+      dpv_extension_slug: loc
+
+  nonHT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-HT
+    description: Set of jurisdictions that are not in HT
+    aliases:
+      - non-HT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-HT
+      - dpv_loc_owl:non-HT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-HT
+      dpv_extension_slug: loc
+
+  nonHU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-HU
+    description: Set of jurisdictions that are not in HU
+    aliases:
+      - non-HU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-HU
+      - dpv_loc_owl:non-HU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-HU
+      dpv_extension_slug: loc
+
+  nonID:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ID
+    description: Set of jurisdictions that are not in ID
+    aliases:
+      - non-ID
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ID
+      - dpv_loc_owl:non-ID
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ID
+      dpv_extension_slug: loc
+
+  nonIE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IE
+    description: Set of jurisdictions that are not in IE
+    aliases:
+      - non-IE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IE
+      - dpv_loc_owl:non-IE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IE
+      dpv_extension_slug: loc
+
+  nonIL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IL
+    description: Set of jurisdictions that are not in IL
+    aliases:
+      - non-IL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IL
+      - dpv_loc_owl:non-IL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IL
+      dpv_extension_slug: loc
+
+  nonIM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IM
+    description: Set of jurisdictions that are not in IM
+    aliases:
+      - non-IM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IM
+      - dpv_loc_owl:non-IM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IM
+      dpv_extension_slug: loc
+
+  nonIN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IN
+    description: Set of jurisdictions that are not in IN
+    aliases:
+      - non-IN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IN
+      - dpv_loc_owl:non-IN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IN
+      dpv_extension_slug: loc
+
+  nonIO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IO
+    description: Set of jurisdictions that are not in IO
+    aliases:
+      - non-IO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IO
+      - dpv_loc_owl:non-IO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IO
+      dpv_extension_slug: loc
+
+  nonIQ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IQ
+    description: Set of jurisdictions that are not in IQ
+    aliases:
+      - non-IQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IQ
+      - dpv_loc_owl:non-IQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IQ
+      dpv_extension_slug: loc
+
+  nonIR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IR
+    description: Set of jurisdictions that are not in IR
+    aliases:
+      - non-IR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IR
+      - dpv_loc_owl:non-IR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IR
+      dpv_extension_slug: loc
+
+  nonIS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IS
+    description: Set of jurisdictions that are not in IS
+    aliases:
+      - non-IS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IS
+      - dpv_loc_owl:non-IS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IS
+      dpv_extension_slug: loc
+
+  nonIT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-IT
+    description: Set of jurisdictions that are not in IT
+    aliases:
+      - non-IT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-IT
+      - dpv_loc_owl:non-IT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-IT
+      dpv_extension_slug: loc
+
+  nonJE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-JE
+    description: Set of jurisdictions that are not in JE
+    aliases:
+      - non-JE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-JE
+      - dpv_loc_owl:non-JE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-JE
+      dpv_extension_slug: loc
+
+  nonJM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-JM
+    description: Set of jurisdictions that are not in JM
+    aliases:
+      - non-JM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-JM
+      - dpv_loc_owl:non-JM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-JM
+      dpv_extension_slug: loc
+
+  nonJO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-JO
+    description: Set of jurisdictions that are not in JO
+    aliases:
+      - non-JO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-JO
+      - dpv_loc_owl:non-JO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-JO
+      dpv_extension_slug: loc
+
+  nonJP:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-JP
+    description: Set of jurisdictions that are not in JP
+    aliases:
+      - non-JP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-JP
+      - dpv_loc_owl:non-JP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-JP
+      dpv_extension_slug: loc
+
+  nonKE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KE
+    description: Set of jurisdictions that are not in KE
+    aliases:
+      - non-KE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KE
+      - dpv_loc_owl:non-KE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KE
+      dpv_extension_slug: loc
+
+  nonKG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KG
+    description: Set of jurisdictions that are not in KG
+    aliases:
+      - non-KG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KG
+      - dpv_loc_owl:non-KG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KG
+      dpv_extension_slug: loc
+
+  nonKH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KH
+    description: Set of jurisdictions that are not in KH
+    aliases:
+      - non-KH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KH
+      - dpv_loc_owl:non-KH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KH
+      dpv_extension_slug: loc
+
+  nonKI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KI
+    description: Set of jurisdictions that are not in KI
+    aliases:
+      - non-KI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KI
+      - dpv_loc_owl:non-KI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KI
+      dpv_extension_slug: loc
+
+  nonKM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KM
+    description: Set of jurisdictions that are not in KM
+    aliases:
+      - non-KM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KM
+      - dpv_loc_owl:non-KM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KM
+      dpv_extension_slug: loc
+
+  nonKN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KN
+    description: Set of jurisdictions that are not in KN
+    aliases:
+      - non-KN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KN
+      - dpv_loc_owl:non-KN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KN
+      dpv_extension_slug: loc
+
+  nonKP:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KP
+    description: Set of jurisdictions that are not in KP
+    aliases:
+      - non-KP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KP
+      - dpv_loc_owl:non-KP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KP
+      dpv_extension_slug: loc
+
+  nonKR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KR
+    description: Set of jurisdictions that are not in KR
+    aliases:
+      - non-KR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KR
+      - dpv_loc_owl:non-KR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KR
+      dpv_extension_slug: loc
+
+  nonKW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KW
+    description: Set of jurisdictions that are not in KW
+    aliases:
+      - non-KW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KW
+      - dpv_loc_owl:non-KW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KW
+      dpv_extension_slug: loc
+
+  nonKY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KY
+    description: Set of jurisdictions that are not in KY
+    aliases:
+      - non-KY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KY
+      - dpv_loc_owl:non-KY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KY
+      dpv_extension_slug: loc
+
+  nonKZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-KZ
+    description: Set of jurisdictions that are not in KZ
+    aliases:
+      - non-KZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-KZ
+      - dpv_loc_owl:non-KZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-KZ
+      dpv_extension_slug: loc
+
+  nonLA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LA
+    description: Set of jurisdictions that are not in LA
+    aliases:
+      - non-LA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LA
+      - dpv_loc_owl:non-LA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LA
+      dpv_extension_slug: loc
+
+  nonLB:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LB
+    description: Set of jurisdictions that are not in LB
+    aliases:
+      - non-LB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LB
+      - dpv_loc_owl:non-LB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LB
+      dpv_extension_slug: loc
+
+  nonLC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LC
+    description: Set of jurisdictions that are not in LC
+    aliases:
+      - non-LC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LC
+      - dpv_loc_owl:non-LC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LC
+      dpv_extension_slug: loc
+
+  nonLI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LI
+    description: Set of jurisdictions that are not in LI
+    aliases:
+      - non-LI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LI
+      - dpv_loc_owl:non-LI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LI
+      dpv_extension_slug: loc
+
+  nonLK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LK
+    description: Set of jurisdictions that are not in LK
+    aliases:
+      - non-LK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LK
+      - dpv_loc_owl:non-LK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LK
+      dpv_extension_slug: loc
+
+  nonLR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LR
+    description: Set of jurisdictions that are not in LR
+    aliases:
+      - non-LR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LR
+      - dpv_loc_owl:non-LR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LR
+      dpv_extension_slug: loc
+
+  nonLS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LS
+    description: Set of jurisdictions that are not in LS
+    aliases:
+      - non-LS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LS
+      - dpv_loc_owl:non-LS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LS
+      dpv_extension_slug: loc
+
+  nonLT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LT
+    description: Set of jurisdictions that are not in LT
+    aliases:
+      - non-LT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LT
+      - dpv_loc_owl:non-LT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LT
+      dpv_extension_slug: loc
+
+  nonLU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LU
+    description: Set of jurisdictions that are not in LU
+    aliases:
+      - non-LU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LU
+      - dpv_loc_owl:non-LU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LU
+      dpv_extension_slug: loc
+
+  nonLV:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LV
+    description: Set of jurisdictions that are not in LV
+    aliases:
+      - non-LV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LV
+      - dpv_loc_owl:non-LV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LV
+      dpv_extension_slug: loc
+
+  nonLY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-LY
+    description: Set of jurisdictions that are not in LY
+    aliases:
+      - non-LY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-LY
+      - dpv_loc_owl:non-LY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-LY
+      dpv_extension_slug: loc
+
+  nonMA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MA
+    description: Set of jurisdictions that are not in MA
+    aliases:
+      - non-MA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MA
+      - dpv_loc_owl:non-MA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MA
+      dpv_extension_slug: loc
+
+  nonMC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MC
+    description: Set of jurisdictions that are not in MC
+    aliases:
+      - non-MC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MC
+      - dpv_loc_owl:non-MC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MC
+      dpv_extension_slug: loc
+
+  nonMD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MD
+    description: Set of jurisdictions that are not in MD
+    aliases:
+      - non-MD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MD
+      - dpv_loc_owl:non-MD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MD
+      dpv_extension_slug: loc
+
+  nonME:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ME
+    description: Set of jurisdictions that are not in ME
+    aliases:
+      - non-ME
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ME
+      - dpv_loc_owl:non-ME
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ME
+      dpv_extension_slug: loc
+
+  nonMF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MF
+    description: Set of jurisdictions that are not in MF
+    aliases:
+      - non-MF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MF
+      - dpv_loc_owl:non-MF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MF
+      dpv_extension_slug: loc
+
+  nonMG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MG
+    description: Set of jurisdictions that are not in MG
+    aliases:
+      - non-MG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MG
+      - dpv_loc_owl:non-MG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MG
+      dpv_extension_slug: loc
+
+  nonMH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MH
+    description: Set of jurisdictions that are not in MH
+    aliases:
+      - non-MH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MH
+      - dpv_loc_owl:non-MH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MH
+      dpv_extension_slug: loc
+
+  nonMK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MK
+    description: Set of jurisdictions that are not in MK
+    aliases:
+      - non-MK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MK
+      - dpv_loc_owl:non-MK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MK
+      dpv_extension_slug: loc
+
+  nonML:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ML
+    description: Set of jurisdictions that are not in ML
+    aliases:
+      - non-ML
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ML
+      - dpv_loc_owl:non-ML
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ML
+      dpv_extension_slug: loc
+
+  nonMM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MM
+    description: Set of jurisdictions that are not in MM
+    aliases:
+      - non-MM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MM
+      - dpv_loc_owl:non-MM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MM
+      dpv_extension_slug: loc
+
+  nonMN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MN
+    description: Set of jurisdictions that are not in MN
+    aliases:
+      - non-MN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MN
+      - dpv_loc_owl:non-MN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MN
+      dpv_extension_slug: loc
+
+  nonMO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MO
+    description: Set of jurisdictions that are not in MO
+    aliases:
+      - non-MO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MO
+      - dpv_loc_owl:non-MO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MO
+      dpv_extension_slug: loc
+
+  nonMP:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MP
+    description: Set of jurisdictions that are not in MP
+    aliases:
+      - non-MP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MP
+      - dpv_loc_owl:non-MP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MP
+      dpv_extension_slug: loc
+
+  nonMQ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MQ
+    description: Set of jurisdictions that are not in MQ
+    aliases:
+      - non-MQ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MQ
+      - dpv_loc_owl:non-MQ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MQ
+      dpv_extension_slug: loc
+
+  nonMR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MR
+    description: Set of jurisdictions that are not in MR
+    aliases:
+      - non-MR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MR
+      - dpv_loc_owl:non-MR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MR
+      dpv_extension_slug: loc
+
+  nonMS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MS
+    description: Set of jurisdictions that are not in MS
+    aliases:
+      - non-MS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MS
+      - dpv_loc_owl:non-MS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MS
+      dpv_extension_slug: loc
+
+  nonMT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MT
+    description: Set of jurisdictions that are not in MT
+    aliases:
+      - non-MT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MT
+      - dpv_loc_owl:non-MT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MT
+      dpv_extension_slug: loc
+
+  nonMU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MU
+    description: Set of jurisdictions that are not in MU
+    aliases:
+      - non-MU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MU
+      - dpv_loc_owl:non-MU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MU
+      dpv_extension_slug: loc
+
+  nonMV:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MV
+    description: Set of jurisdictions that are not in MV
+    aliases:
+      - non-MV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MV
+      - dpv_loc_owl:non-MV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MV
+      dpv_extension_slug: loc
+
+  nonMW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MW
+    description: Set of jurisdictions that are not in MW
+    aliases:
+      - non-MW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MW
+      - dpv_loc_owl:non-MW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MW
+      dpv_extension_slug: loc
+
+  nonMX:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MX
+    description: Set of jurisdictions that are not in MX
+    aliases:
+      - non-MX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MX
+      - dpv_loc_owl:non-MX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MX
+      dpv_extension_slug: loc
+
+  nonMY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MY
+    description: Set of jurisdictions that are not in MY
+    aliases:
+      - non-MY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MY
+      - dpv_loc_owl:non-MY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MY
+      dpv_extension_slug: loc
+
+  nonMZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-MZ
+    description: Set of jurisdictions that are not in MZ
+    aliases:
+      - non-MZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-MZ
+      - dpv_loc_owl:non-MZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-MZ
+      dpv_extension_slug: loc
+
+  nonNA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NA
+    description: Set of jurisdictions that are not in NA
+    aliases:
+      - non-NA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NA
+      - dpv_loc_owl:non-NA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NA
+      dpv_extension_slug: loc
+
+  nonNC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NC
+    description: Set of jurisdictions that are not in NC
+    aliases:
+      - non-NC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NC
+      - dpv_loc_owl:non-NC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NC
+      dpv_extension_slug: loc
+
+  nonNE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NE
+    description: Set of jurisdictions that are not in NE
+    aliases:
+      - non-NE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NE
+      - dpv_loc_owl:non-NE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NE
+      dpv_extension_slug: loc
+
+  nonNF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NF
+    description: Set of jurisdictions that are not in NF
+    aliases:
+      - non-NF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NF
+      - dpv_loc_owl:non-NF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NF
+      dpv_extension_slug: loc
+
+  nonNG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NG
+    description: Set of jurisdictions that are not in NG
+    aliases:
+      - non-NG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NG
+      - dpv_loc_owl:non-NG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NG
+      dpv_extension_slug: loc
+
+  nonNI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NI
+    description: Set of jurisdictions that are not in NI
+    aliases:
+      - non-NI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NI
+      - dpv_loc_owl:non-NI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NI
+      dpv_extension_slug: loc
+
+  nonNL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NL
+    description: Set of jurisdictions that are not in NL
+    aliases:
+      - non-NL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NL
+      - dpv_loc_owl:non-NL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NL
+      dpv_extension_slug: loc
+
+  nonNO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NO
+    description: Set of jurisdictions that are not in NO
+    aliases:
+      - non-NO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NO
+      - dpv_loc_owl:non-NO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NO
+      dpv_extension_slug: loc
+
+  nonNP:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NP
+    description: Set of jurisdictions that are not in NP
+    aliases:
+      - non-NP
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NP
+      - dpv_loc_owl:non-NP
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NP
+      dpv_extension_slug: loc
+
+  nonNR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NR
+    description: Set of jurisdictions that are not in NR
+    aliases:
+      - non-NR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NR
+      - dpv_loc_owl:non-NR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NR
+      dpv_extension_slug: loc
+
+  nonNU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NU
+    description: Set of jurisdictions that are not in NU
+    aliases:
+      - non-NU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NU
+      - dpv_loc_owl:non-NU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NU
+      dpv_extension_slug: loc
+
+  nonNZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-NZ
+    description: Set of jurisdictions that are not in NZ
+    aliases:
+      - non-NZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-NZ
+      - dpv_loc_owl:non-NZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-NZ
+      dpv_extension_slug: loc
+
+  nonOM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-OM
+    description: Set of jurisdictions that are not in OM
+    aliases:
+      - non-OM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-OM
+      - dpv_loc_owl:non-OM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-OM
+      dpv_extension_slug: loc
+
+  nonPA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PA
+    description: Set of jurisdictions that are not in PA
+    aliases:
+      - non-PA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PA
+      - dpv_loc_owl:non-PA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PA
+      dpv_extension_slug: loc
+
+  nonPE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PE
+    description: Set of jurisdictions that are not in PE
+    aliases:
+      - non-PE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PE
+      - dpv_loc_owl:non-PE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PE
+      dpv_extension_slug: loc
+
+  nonPF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PF
+    description: Set of jurisdictions that are not in PF
+    aliases:
+      - non-PF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PF
+      - dpv_loc_owl:non-PF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PF
+      dpv_extension_slug: loc
+
+  nonPG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PG
+    description: Set of jurisdictions that are not in PG
+    aliases:
+      - non-PG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PG
+      - dpv_loc_owl:non-PG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PG
+      dpv_extension_slug: loc
+
+  nonPH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PH
+    description: Set of jurisdictions that are not in PH
+    aliases:
+      - non-PH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PH
+      - dpv_loc_owl:non-PH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PH
+      dpv_extension_slug: loc
+
+  nonPK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PK
+    description: Set of jurisdictions that are not in PK
+    aliases:
+      - non-PK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PK
+      - dpv_loc_owl:non-PK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PK
+      dpv_extension_slug: loc
+
+  nonPL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PL
+    description: Set of jurisdictions that are not in PL
+    aliases:
+      - non-PL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PL
+      - dpv_loc_owl:non-PL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PL
+      dpv_extension_slug: loc
+
+  nonPM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PM
+    description: Set of jurisdictions that are not in PM
+    aliases:
+      - non-PM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PM
+      - dpv_loc_owl:non-PM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PM
+      dpv_extension_slug: loc
+
+  nonPN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PN
+    description: Set of jurisdictions that are not in PN
+    aliases:
+      - non-PN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PN
+      - dpv_loc_owl:non-PN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PN
+      dpv_extension_slug: loc
+
+  nonPR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PR
+    description: Set of jurisdictions that are not in PR
+    aliases:
+      - non-PR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PR
+      - dpv_loc_owl:non-PR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PR
+      dpv_extension_slug: loc
+
+  nonPS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PS
+    description: Set of jurisdictions that are not in PS
+    aliases:
+      - non-PS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PS
+      - dpv_loc_owl:non-PS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PS
+      dpv_extension_slug: loc
+
+  nonPT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PT
+    description: Set of jurisdictions that are not in PT
+    aliases:
+      - non-PT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PT
+      - dpv_loc_owl:non-PT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PT
+      dpv_extension_slug: loc
+
+  nonPW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PW
+    description: Set of jurisdictions that are not in PW
+    aliases:
+      - non-PW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PW
+      - dpv_loc_owl:non-PW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PW
+      dpv_extension_slug: loc
+
+  nonPY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-PY
+    description: Set of jurisdictions that are not in PY
+    aliases:
+      - non-PY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-PY
+      - dpv_loc_owl:non-PY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-PY
+      dpv_extension_slug: loc
+
+  nonQA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-QA
+    description: Set of jurisdictions that are not in QA
+    aliases:
+      - non-QA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-QA
+      - dpv_loc_owl:non-QA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-QA
+      dpv_extension_slug: loc
+
+  nonRE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-RE
+    description: Set of jurisdictions that are not in RE
+    aliases:
+      - non-RE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-RE
+      - dpv_loc_owl:non-RE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-RE
+      dpv_extension_slug: loc
+
+  nonRO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-RO
+    description: Set of jurisdictions that are not in RO
+    aliases:
+      - non-RO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-RO
+      - dpv_loc_owl:non-RO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-RO
+      dpv_extension_slug: loc
+
+  nonRS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-RS
+    description: Set of jurisdictions that are not in RS
+    aliases:
+      - non-RS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-RS
+      - dpv_loc_owl:non-RS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-RS
+      dpv_extension_slug: loc
+
+  nonRU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-RU
+    description: Set of jurisdictions that are not in RU
+    aliases:
+      - non-RU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-RU
+      - dpv_loc_owl:non-RU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-RU
+      dpv_extension_slug: loc
+
+  nonRW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-RW
+    description: Set of jurisdictions that are not in RW
+    aliases:
+      - non-RW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-RW
+      - dpv_loc_owl:non-RW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-RW
+      dpv_extension_slug: loc
+
+  nonSA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SA
+    description: Set of jurisdictions that are not in SA
+    aliases:
+      - non-SA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SA
+      - dpv_loc_owl:non-SA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SA
+      dpv_extension_slug: loc
+
+  nonSB:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SB
+    description: Set of jurisdictions that are not in SB
+    aliases:
+      - non-SB
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SB
+      - dpv_loc_owl:non-SB
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SB
+      dpv_extension_slug: loc
+
+  nonSC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SC
+    description: Set of jurisdictions that are not in SC
+    aliases:
+      - non-SC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SC
+      - dpv_loc_owl:non-SC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SC
+      dpv_extension_slug: loc
+
+  nonSD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SD
+    description: Set of jurisdictions that are not in SD
+    aliases:
+      - non-SD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SD
+      - dpv_loc_owl:non-SD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SD
+      dpv_extension_slug: loc
+
+  nonSE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SE
+    description: Set of jurisdictions that are not in SE
+    aliases:
+      - non-SE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SE
+      - dpv_loc_owl:non-SE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SE
+      dpv_extension_slug: loc
+
+  nonSG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SG
+    description: Set of jurisdictions that are not in SG
+    aliases:
+      - non-SG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SG
+      - dpv_loc_owl:non-SG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SG
+      dpv_extension_slug: loc
+
+  nonSH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SH
+    description: Set of jurisdictions that are not in SH
+    aliases:
+      - non-SH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SH
+      - dpv_loc_owl:non-SH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SH
+      dpv_extension_slug: loc
+
+  nonSI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SI
+    description: Set of jurisdictions that are not in SI
+    aliases:
+      - non-SI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SI
+      - dpv_loc_owl:non-SI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SI
+      dpv_extension_slug: loc
+
+  nonSJ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SJ
+    description: Set of jurisdictions that are not in SJ
+    aliases:
+      - non-SJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SJ
+      - dpv_loc_owl:non-SJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SJ
+      dpv_extension_slug: loc
+
+  nonSK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SK
+    description: Set of jurisdictions that are not in SK
+    aliases:
+      - non-SK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SK
+      - dpv_loc_owl:non-SK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SK
+      dpv_extension_slug: loc
+
+  nonSL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SL
+    description: Set of jurisdictions that are not in SL
+    aliases:
+      - non-SL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SL
+      - dpv_loc_owl:non-SL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SL
+      dpv_extension_slug: loc
+
+  nonSM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SM
+    description: Set of jurisdictions that are not in SM
+    aliases:
+      - non-SM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SM
+      - dpv_loc_owl:non-SM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SM
+      dpv_extension_slug: loc
+
+  nonSN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SN
+    description: Set of jurisdictions that are not in SN
+    aliases:
+      - non-SN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SN
+      - dpv_loc_owl:non-SN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SN
+      dpv_extension_slug: loc
+
+  nonSO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SO
+    description: Set of jurisdictions that are not in SO
+    aliases:
+      - non-SO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SO
+      - dpv_loc_owl:non-SO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SO
+      dpv_extension_slug: loc
+
+  nonSR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SR
+    description: Set of jurisdictions that are not in SR
+    aliases:
+      - non-SR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SR
+      - dpv_loc_owl:non-SR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SR
+      dpv_extension_slug: loc
+
+  nonSS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SS
+    description: Set of jurisdictions that are not in SS
+    aliases:
+      - non-SS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SS
+      - dpv_loc_owl:non-SS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SS
+      dpv_extension_slug: loc
+
+  nonST:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ST
+    description: Set of jurisdictions that are not in ST
+    aliases:
+      - non-ST
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ST
+      - dpv_loc_owl:non-ST
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ST
+      dpv_extension_slug: loc
+
+  nonSV:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SV
+    description: Set of jurisdictions that are not in SV
+    aliases:
+      - non-SV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SV
+      - dpv_loc_owl:non-SV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SV
+      dpv_extension_slug: loc
+
+  nonSX:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SX
+    description: Set of jurisdictions that are not in SX
+    aliases:
+      - non-SX
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SX
+      - dpv_loc_owl:non-SX
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SX
+      dpv_extension_slug: loc
+
+  nonSY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SY
+    description: Set of jurisdictions that are not in SY
+    aliases:
+      - non-SY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SY
+      - dpv_loc_owl:non-SY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SY
+      dpv_extension_slug: loc
+
+  nonSZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-SZ
+    description: Set of jurisdictions that are not in SZ
+    aliases:
+      - non-SZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-SZ
+      - dpv_loc_owl:non-SZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-SZ
+      dpv_extension_slug: loc
+
+  nonTC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TC
+    description: Set of jurisdictions that are not in TC
+    aliases:
+      - non-TC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TC
+      - dpv_loc_owl:non-TC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TC
+      dpv_extension_slug: loc
+
+  nonTD:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TD
+    description: Set of jurisdictions that are not in TD
+    aliases:
+      - non-TD
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TD
+      - dpv_loc_owl:non-TD
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TD
+      dpv_extension_slug: loc
+
+  nonTF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TF
+    description: Set of jurisdictions that are not in TF
+    aliases:
+      - non-TF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TF
+      - dpv_loc_owl:non-TF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TF
+      dpv_extension_slug: loc
+
+  nonTG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TG
+    description: Set of jurisdictions that are not in TG
+    aliases:
+      - non-TG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TG
+      - dpv_loc_owl:non-TG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TG
+      dpv_extension_slug: loc
+
+  nonTH:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TH
+    description: Set of jurisdictions that are not in TH
+    aliases:
+      - non-TH
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TH
+      - dpv_loc_owl:non-TH
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TH
+      dpv_extension_slug: loc
+
+  nonTJ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TJ
+    description: Set of jurisdictions that are not in TJ
+    aliases:
+      - non-TJ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TJ
+      - dpv_loc_owl:non-TJ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TJ
+      dpv_extension_slug: loc
+
+  nonTK:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TK
+    description: Set of jurisdictions that are not in TK
+    aliases:
+      - non-TK
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TK
+      - dpv_loc_owl:non-TK
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TK
+      dpv_extension_slug: loc
+
+  nonTL:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TL
+    description: Set of jurisdictions that are not in TL
+    aliases:
+      - non-TL
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TL
+      - dpv_loc_owl:non-TL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TL
+      dpv_extension_slug: loc
+
+  nonTM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TM
+    description: Set of jurisdictions that are not in TM
+    aliases:
+      - non-TM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TM
+      - dpv_loc_owl:non-TM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TM
+      dpv_extension_slug: loc
+
+  nonTN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TN
+    description: Set of jurisdictions that are not in TN
+    aliases:
+      - non-TN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TN
+      - dpv_loc_owl:non-TN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TN
+      dpv_extension_slug: loc
+
+  nonTO:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TO
+    description: Set of jurisdictions that are not in TO
+    aliases:
+      - non-TO
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TO
+      - dpv_loc_owl:non-TO
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TO
+      dpv_extension_slug: loc
+
+  nonTR:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TR
+    description: Set of jurisdictions that are not in TR
+    aliases:
+      - non-TR
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TR
+      - dpv_loc_owl:non-TR
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TR
+      dpv_extension_slug: loc
+
+  nonTT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TT
+    description: Set of jurisdictions that are not in TT
+    aliases:
+      - non-TT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TT
+      - dpv_loc_owl:non-TT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TT
+      dpv_extension_slug: loc
+
+  nonTV:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TV
+    description: Set of jurisdictions that are not in TV
+    aliases:
+      - non-TV
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TV
+      - dpv_loc_owl:non-TV
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TV
+      dpv_extension_slug: loc
+
+  nonTW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TW
+    description: Set of jurisdictions that are not in TW
+    aliases:
+      - non-TW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TW
+      - dpv_loc_owl:non-TW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TW
+      dpv_extension_slug: loc
+
+  nonTZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-TZ
+    description: Set of jurisdictions that are not in TZ
+    aliases:
+      - non-TZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-TZ
+      - dpv_loc_owl:non-TZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-TZ
+      dpv_extension_slug: loc
+
+  nonUA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-UA
+    description: Set of jurisdictions that are not in UA
+    aliases:
+      - non-UA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-UA
+      - dpv_loc_owl:non-UA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-UA
+      dpv_extension_slug: loc
+
+  nonUG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-UG
+    description: Set of jurisdictions that are not in UG
+    aliases:
+      - non-UG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-UG
+      - dpv_loc_owl:non-UG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-UG
+      dpv_extension_slug: loc
+
+  nonUM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-UM
+    description: Set of jurisdictions that are not in UM
+    aliases:
+      - non-UM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-UM
+      - dpv_loc_owl:non-UM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-UM
+      dpv_extension_slug: loc
+
+  nonUS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-US
+    description: Set of jurisdictions that are not in US
+    aliases:
+      - non-US
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-US
+      - dpv_loc_owl:non-US
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-US
+      dpv_extension_slug: loc
+
+  nonUY:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-UY
+    description: Set of jurisdictions that are not in UY
+    aliases:
+      - non-UY
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-UY
+      - dpv_loc_owl:non-UY
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-UY
+      dpv_extension_slug: loc
+
+  nonUZ:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-UZ
+    description: Set of jurisdictions that are not in UZ
+    aliases:
+      - non-UZ
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-UZ
+      - dpv_loc_owl:non-UZ
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-UZ
+      dpv_extension_slug: loc
+
+  nonVA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VA
+    description: Set of jurisdictions that are not in VA
+    aliases:
+      - non-VA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VA
+      - dpv_loc_owl:non-VA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VA
+      dpv_extension_slug: loc
+
+  nonVC:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VC
+    description: Set of jurisdictions that are not in VC
+    aliases:
+      - non-VC
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VC
+      - dpv_loc_owl:non-VC
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VC
+      dpv_extension_slug: loc
+
+  nonVE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VE
+    description: Set of jurisdictions that are not in VE
+    aliases:
+      - non-VE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VE
+      - dpv_loc_owl:non-VE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VE
+      dpv_extension_slug: loc
+
+  nonVG:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VG
+    description: Set of jurisdictions that are not in VG
+    aliases:
+      - non-VG
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VG
+      - dpv_loc_owl:non-VG
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VG
+      dpv_extension_slug: loc
+
+  nonVI:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VI
+    description: Set of jurisdictions that are not in VI
+    aliases:
+      - non-VI
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VI
+      - dpv_loc_owl:non-VI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VI
+      dpv_extension_slug: loc
+
+  nonVN:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VN
+    description: Set of jurisdictions that are not in VN
+    aliases:
+      - non-VN
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VN
+      - dpv_loc_owl:non-VN
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VN
+      dpv_extension_slug: loc
+
+  nonVU:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-VU
+    description: Set of jurisdictions that are not in VU
+    aliases:
+      - non-VU
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-VU
+      - dpv_loc_owl:non-VU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-VU
+      dpv_extension_slug: loc
+
+  nonWF:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-WF
+    description: Set of jurisdictions that are not in WF
+    aliases:
+      - non-WF
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-WF
+      - dpv_loc_owl:non-WF
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-WF
+      dpv_extension_slug: loc
+
+  nonWS:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-WS
+    description: Set of jurisdictions that are not in WS
+    aliases:
+      - non-WS
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-WS
+      - dpv_loc_owl:non-WS
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-WS
+      dpv_extension_slug: loc
+
+  nonYE:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-YE
+    description: Set of jurisdictions that are not in YE
+    aliases:
+      - non-YE
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-YE
+      - dpv_loc_owl:non-YE
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-YE
+      dpv_extension_slug: loc
+
+  nonYT:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-YT
+    description: Set of jurisdictions that are not in YT
+    aliases:
+      - non-YT
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-YT
+      - dpv_loc_owl:non-YT
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-YT
+      dpv_extension_slug: loc
+
+  nonZA:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ZA
+    description: Set of jurisdictions that are not in ZA
+    aliases:
+      - non-ZA
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ZA
+      - dpv_loc_owl:non-ZA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ZA
+      dpv_extension_slug: loc
+
+  nonZM:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ZM
+    description: Set of jurisdictions that are not in ZM
+    aliases:
+      - non-ZM
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ZM
+      - dpv_loc_owl:non-ZM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ZM
+      dpv_extension_slug: loc
+
+  nonZW:
+    mixins:
+      - InverseJurisdiction
+    class_uri: loc:non-ZW
+    description: Set of jurisdictions that are not in ZW
+    aliases:
+      - non-ZW
+    in_subset:
+      - loc_inverse_subset
+    exact_mappings:
+      - dpv_loc:non-ZW
+      - dpv_loc_owl:non-ZW
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#non-ZW
+      dpv_extension_slug: loc

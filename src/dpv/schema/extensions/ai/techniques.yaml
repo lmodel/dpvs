@@ -1,0 +1,692 @@
+id: https://w3id.org/lmodel/dpv/ai/techniques
+name: dpv_ai_techniques
+title: DPV - Ai / Techniques
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `ai/modules/techniques-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/ai
+  - https://w3c.github.io/dpv/2.3/ai/
+source: https://w3id.org/dpv/ai/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: ai
+  dpv_submodule: techniques
+  source_ttl: upstream-releases/dpv/ai/modules/techniques-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/ai/modules/techniques.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/ai/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/ai#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  ai: https://w3id.org/lmodel/dpv/ai/
+  dpv_ai: https://w3id.org/dpv/ai#
+  dpv_ai_owl: https://w3id.org/dpv/ai/owl#
+
+default_prefix: ai
+default_range: string
+id_prefixes:
+  - ai
+  - dpv_ai
+  - dpv_ai_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/ai
+
+subsets:
+
+  ai_techniques_subset:
+    description: Entities from the DPV `ai/modules/techniques` submodule.
+
+classes:
+
+  AudioProcessing:
+    is_a: Technique
+    class_uri: ai:AudioProcessing
+    description: Technique involving processing audio
+    aliases:
+      - Audio Processing
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:AudioProcessing
+      - dpv_ai_owl:AudioProcessing
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#AudioProcessing
+      dpv_extension_slug: ai
+
+  BayesianEstimation:
+    is_a: StatisticalTechnique
+    mixins:
+      - Technique
+    class_uri: ai:BayesianEstimation
+    description: Refers to Bayesian estimation approach
+    aliases:
+      - Bayesian Estimation
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:BayesianEstimation
+      - dpv_ai_owl:BayesianEstimation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#BayesianEstimation
+      dpv_extension_slug: ai
+
+  BayesianNetwork:
+    is_a: StatisticalTechnique
+    mixins:
+      - Technique
+    class_uri: ai:BayesianNetwork
+    description: |-
+      Probabilistic technique that uses Bayesian inference for probability
+      computations using a directed acyclic graph
+    aliases:
+      - Bayesian Network
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:BayesianNetwork
+      - dpv_ai_owl:BayesianNetwork
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.1
+      upstream_iri: https://w3id.org/dpv/ai/owl#BayesianNetwork
+      dpv_extension_slug: ai
+
+  BayesianOptimisation:
+    is_a: StatisticalTechnique
+    mixins:
+      - Technique
+    class_uri: ai:BayesianOptimisation
+    description: Refers to Bayesian optimisation technique
+    aliases:
+      - Bayesian Optimisation
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:BayesianOptimisation
+      - dpv_ai_owl:BayesianOptimisation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#BayesianOptimisation
+      dpv_extension_slug: ai
+
+  ConvolutionalNeuralNetwork:
+    is_a: NeuralNetwork
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:ConvolutionalNeuralNetwork
+    description: |-
+      Feed forward neural network using convolution in at least one of its
+      layers
+    aliases:
+      - Convolutional Neural Network (CNN)
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:ConvolutionalNeuralNetwork
+      - dpv_ai_owl:ConvolutionalNeuralNetwork
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.4.2
+      upstream_iri: https://w3id.org/dpv/ai/owl#ConvolutionalNeuralNetwork
+      dpv_extension_slug: ai
+
+  DecisionTree:
+    is_a: MachineLearning
+    mixins:
+      - Technique
+    class_uri: ai:DecisionTree
+    description: |-
+      Technique for which inference is encoded as paths from the root to a
+      leaf node in a tree structure
+    aliases:
+      - Decision Tree
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:DecisionTree
+      - dpv_ai_owl:DecisionTree
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.2
+      upstream_iri: https://w3id.org/dpv/ai/owl#DecisionTree
+      dpv_extension_slug: ai
+
+  DeepLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:DeepLearning
+    description: |-
+      Approach to creating rich hierarchical representations through the
+      training of neural networks with many hidden layers
+    aliases:
+      - Deep Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:DeepLearning
+      - dpv_ai_owl:DeepLearning
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.4.4
+      upstream_iri: https://w3id.org/dpv/ai/owl#DeepLearning
+      dpv_extension_slug: ai
+
+  FeedForwardNeuralNetwork:
+    is_a: NeuralNetwork
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:FeedForwardNeuralNetwork
+    description: |-
+      Neural network where information is fed from the input layer to the
+      output layer in one direction only
+    aliases:
+      - Feed Forward Neural Network
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:FeedForwardNeuralNetwork
+      - dpv_ai_owl:FeedForwardNeuralNetwork
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.4.6
+      upstream_iri: https://w3id.org/dpv/ai/owl#FeedForwardNeuralNetwork
+      dpv_extension_slug: ai
+
+  FrugalMachineLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:FrugalMachineLearning
+    description: |-
+      Machine learning techniques that aim to make models more efficient,
+      cost-effective, and accessible while maintaining or even improving their
+      performance
+    aliases:
+      - Frugal Machine Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:FrugalMachineLearning
+      - dpv_ai_owl:FrugalMachineLearning
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#FrugalMachineLearning
+      dpv_extension_slug: ai
+
+  GeneticAlgorithm:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:GeneticAlgorithm
+    description: |-
+      Algorithm which simulates natural selection by creating and evolving a
+      population of individuals (solutions) for optimization problems
+    aliases:
+      - Genetic Algorithm
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:GeneticAlgorithm
+      - dpv_ai_owl:GeneticAlgorithm
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.1.15
+      upstream_iri: https://w3id.org/dpv/ai/owl#GeneticAlgorithm
+      dpv_extension_slug: ai
+
+  HeuristicProgramming:
+    is_a: RuleBasedTechnique
+    mixins:
+      - Technique
+    class_uri: ai:HeuristicProgramming
+    description: |-
+      Programming approach designed to tackle problems for which there lacks a
+      systematic or optimized approach, frequently used in expert systems
+    aliases:
+      - Heuristic Programming
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:HeuristicProgramming
+      - dpv_ai_owl:HeuristicProgramming
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#HeuristicProgramming
+      dpv_extension_slug: ai
+
+  InductiveProgramming:
+    is_a: KnowledgeTechnique
+    mixins:
+      - Technique
+    class_uri: ai:InductiveProgramming
+    description: |-
+      An algorithm or program featuring recursive calls or repetition control
+      structures
+    aliases:
+      - Inductive Programming
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:InductiveProgramming
+      - dpv_ai_owl:InductiveProgramming
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InductiveProgramming
+      dpv_extension_slug: ai
+
+  KnowledgeRepresentation:
+    is_a: KnowledgeTechnique
+    mixins:
+      - Technique
+    class_uri: ai:KnowledgeRepresentation
+    description: |-
+      Encoding knowledge in a formal language or in a form that can be used
+      for computer-based problem solving
+    aliases:
+      - Knowledge Representation
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:KnowledgeRepresentation
+      - dpv_ai_owl:KnowledgeRepresentation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#KnowledgeRepresentation
+      dpv_extension_slug: ai
+
+  KnowledgeTechnique:
+    is_a: Technique
+    class_uri: ai:KnowledgeTechnique
+    description: Techniques based on the use of knowledge bases
+    aliases:
+      - Knowledge Technique
+    comments:
+      - |-
+        Also known as Knowledge-based AI in the EU Vocabularies' AI Taxonomy
+        http://data.europa.eu/8s8/ai-taxonomy
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:KnowledgeTechnique
+      - dpv_ai_owl:KnowledgeTechnique
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#KnowledgeTechnique
+      dpv_extension_slug: ai
+
+  LogicTechnique:
+    is_a: Technique
+    class_uri: ai:LogicTechnique
+    description: Refers to logic based techniques
+    aliases:
+      - Logic Technique
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:LogicTechnique
+      - dpv_ai_owl:LogicTechnique
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#LogicTechnique
+      dpv_extension_slug: ai
+
+  LongShortTermMemory:
+    is_a: NeuralNetwork
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:LongShortTermMemory
+    description: |-
+      Type of recurrent neural network that processes sequential data with a
+      satisfactory performance for both long and short span dependencies
+    aliases:
+      - Long Short-Term Memory (LSTM)
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:LongShortTermMemory
+      - dpv_ai_owl:LongShortTermMemory
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.4.7
+      upstream_iri: https://w3id.org/dpv/ai/owl#LongShortTermMemory
+      dpv_extension_slug: ai
+
+  MachineLearning:
+    is_a: Technique
+    class_uri: ai:MachineLearning
+    description: |-
+      Process of optimising model parameters through computational techniques,
+      such that the model's behaviour reflects the data or experience
+    aliases:
+      - Machine Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:MachineLearning
+      - dpv_ai_owl:MachineLearning
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.5
+      upstream_iri: https://w3id.org/dpv/ai/owl#MachineLearning
+      dpv_extension_slug: ai
+
+  NeuralNetwork:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:NeuralNetwork
+    description: |-
+      Network of one or more layers of neurons connected by weighted links
+      with adjustable weights, which takes input data and produces an output
+    aliases:
+      - Neural Network
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:NeuralNetwork
+      - dpv_ai_owl:NeuralNetwork
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.4.8
+      upstream_iri: https://w3id.org/dpv/ai/owl#NeuralNetwork
+      dpv_extension_slug: ai
+
+  OptimisationMethod:
+    is_a: StatisticalTechnique
+    mixins:
+      - Technique
+    class_uri: ai:OptimisationMethod
+    description: Refers to optimisation Method
+    aliases:
+      - Optimisation Method
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:OptimisationMethod
+      - dpv_ai_owl:OptimisationMethod
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#OptimisationMethod
+      dpv_extension_slug: ai
+
+  ReasoningTechnique:
+    is_a: Technique
+    class_uri: ai:ReasoningTechnique
+    description: Refers to reasoning techniques
+    aliases:
+      - Reasoning Technique
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:ReasoningTechnique
+      - dpv_ai_owl:ReasoningTechnique
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ReasoningTechnique
+      dpv_extension_slug: ai
+
+  RecurrentNeuralNetwork:
+    is_a: NeuralNetwork
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:RecurrentNeuralNetwork
+    description: |-
+      Neural network in which outputs from both the previous layer and the
+      previous processing step are fed into the current layer
+    aliases:
+      - Recurrent Neural Network (RNN)
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:RecurrentNeuralNetwork
+      - dpv_ai_owl:RecurrentNeuralNetwork
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.4.10
+      upstream_iri: https://w3id.org/dpv/ai/owl#RecurrentNeuralNetwork
+      dpv_extension_slug: ai
+
+  ReinforcementLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:ReinforcementLearning
+    description: |-
+      Learning of an optimal sequence of actions to maximise a reward through
+      interaction with an environment
+    aliases:
+      - Reinforcement Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:ReinforcementLearning
+      - dpv_ai_owl:ReinforcementLearning
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.9
+      upstream_iri: https://w3id.org/dpv/ai/owl#ReinforcementLearning
+      dpv_extension_slug: ai
+
+  RuleBasedTechnique:
+    is_a: KnowledgeTechnique
+    mixins:
+      - Technique
+    class_uri: ai:RuleBasedTechnique
+    description: |-
+      Artificial intelligence approach governed by human-defined rules that
+      explicitly dictate behaviour, relying on logical statements (rules) to
+      determine actions in specific situations
+    aliases:
+      - Rule Technique
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:RuleBasedTechnique
+      - dpv_ai_owl:RuleBasedTechnique
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#RuleBasedTechnique
+      dpv_extension_slug: ai
+
+  SearchMethod:
+    is_a: StatisticalTechnique
+    mixins:
+      - Technique
+    class_uri: ai:SearchMethod
+    description: Refers to statistical-based search Methods
+    aliases:
+      - Search Method
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:SearchMethod
+      - dpv_ai_owl:SearchMethod
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#SearchMethod
+      dpv_extension_slug: ai
+
+  SelfSupervisedLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:SelfSupervisedLearning
+    description: |-
+      Machine learning approach that uses unsupervised learning for tasks that
+      typically require supervision, generating implicit labels from
+      unstructured data, where models are trained on a task using the data
+      itself to provide supervisory signals, often used in neural networks to
+      exploit inherent structures or relationships within input data to
+      generate training signals
+    aliases:
+      - Self-Supervised Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:SelfSupervisedLearning
+      - dpv_ai_owl:SelfSupervisedLearning
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#SelfSupervisedLearning
+      dpv_extension_slug: ai
+
+  SemiSupervisedLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:SemiSupervisedLearning
+    description: |-
+      Machine learning that makes use of both labelled and unlabelled data
+      during training
+    aliases:
+      - Semi Supervised Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:SemiSupervisedLearning
+      - dpv_ai_owl:SemiSupervisedLearning
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.11
+      upstream_iri: https://w3id.org/dpv/ai/owl#SemiSupervisedLearning
+      dpv_extension_slug: ai
+
+  StatisticalTechnique:
+    is_a: Technique
+    class_uri: ai:StatisticalTechnique
+    description: Refers to techniques that are based on statistics
+    aliases:
+      - Statistical Technique
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:StatisticalTechnique
+      - dpv_ai_owl:StatisticalTechnique
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#StatisticalTechnique
+      dpv_extension_slug: ai
+
+  SupervisedLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:SupervisedLearning
+    description: Machine learning that makes only use of labelled data during training
+    aliases:
+      - Supervised Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:SupervisedLearning
+      - dpv_ai_owl:SupervisedLearning
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.11
+      upstream_iri: https://w3id.org/dpv/ai/owl#SupervisedLearning
+      dpv_extension_slug: ai
+
+  SupportVectorMachine:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:SupportVectorMachine
+    description: |-
+      A machine learning algorithm that finds decision boundaries with maximal
+      margins
+    aliases:
+      - Support Vector Machine
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:SupportVectorMachine
+      - dpv_ai_owl:SupportVectorMachine
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.13
+      upstream_iri: https://w3id.org/dpv/ai/owl#SupportVectorMachine
+      dpv_extension_slug: ai
+
+  SymbolicReasoning:
+    is_a: KnowledgeTechnique
+    mixins:
+      - Technique
+    class_uri: ai:SymbolicReasoning
+    description: Reasoning based on the knowledge encoded in a formal language
+    aliases:
+      - Symbolic Reasoning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:SymbolicReasoning
+      - dpv_ai_owl:SymbolicReasoning
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#SymbolicReasoning
+      dpv_extension_slug: ai
+
+  TrainingTechnique:
+    is_a: Use
+    mixins:
+      - Processing
+    class_uri: ai:TrainingTechnique
+    description: |-
+      Process to determine or to improve the parameters of a machine learning
+      model based on a machine learning algorithm by using training data
+    aliases:
+      - Training Technique
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:TrainingTechnique
+      - dpv_ai_owl:TrainingTechnique
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.15
+      upstream_iri: https://w3id.org/dpv/ai/owl#TrainingTechnique
+      dpv_extension_slug: ai
+
+  TransferLearning:
+    is_a: DeepLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:TransferLearning
+    description: |-
+      a technique in machine learning in which knowledge learned from a task
+      is re-used in order to boost performance on a related task
+    aliases:
+      - TransferLearning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:TransferLearning
+      - dpv_ai_owl:TransferLearning
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TransferLearning
+      dpv_extension_slug: ai
+
+  UnsupervisedLearning:
+    is_a: MachineLearning
+    mixins:
+      - TrainingTechnique
+    class_uri: ai:UnsupervisedLearning
+    description: |-
+      Machine learning that makes only use of unlabelled data during training
+    aliases:
+      - Unsupervised Learning
+    in_subset:
+      - ai_techniques_subset
+    exact_mappings:
+      - dpv_ai:UnsupervisedLearning
+      - dpv_ai_owl:UnsupervisedLearning
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.17
+      upstream_iri: https://w3id.org/dpv/ai/owl#UnsupervisedLearning
+      dpv_extension_slug: ai

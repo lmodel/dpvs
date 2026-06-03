@@ -1,7 +1,0 @@
-has_legal_basis: dpv:LegitimateInterest
-has_personal_data:
-- pd:EmailAddress
-- pd:Location
-has_processing: dpv:Use
-has_purpose: dpv:FraudPreventionAndDetection
-id: ex:FraudManagement

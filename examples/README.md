@@ -1,4 +1,4 @@
-# Examples of using dpvs
+# Examples of using dpv
 
 This folder contains examples using the datamodel.
 

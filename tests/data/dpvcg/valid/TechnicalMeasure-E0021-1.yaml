@@ -1,5 +1,0 @@
-# __unmapped__:
-#   skos:definition: An access control mechanism around roles and privileges
-#   skos:prefLabel: Role-Based Access Control
-has_organisational_measure: ex:StaffCredentialTraining
-id: ex:RBACCredential

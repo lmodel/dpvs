@@ -1,7 +1,0 @@
-has_data_controller: ex:CompanyA
-has_data_processor: ex:CompanyB
-has_personal_data: pd:EmailAddress
-has_processing: dpv:Collect
-has_purpose: dpv:ServiceRegistration
-has_recipient: ex:CompanyB
-id: ex:PDH1

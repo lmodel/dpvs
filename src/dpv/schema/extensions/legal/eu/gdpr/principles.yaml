@@ -1,0 +1,291 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/gdpr/principles
+name: dpv_legal_eu_gdpr_principles
+title: DPV - Legal - Eu - Gdpr / Principles
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/gdpr/modules/principles-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/gdpr
+  - https://w3c.github.io/dpv/2.3/legal/eu/gdpr/
+source: https://w3id.org/dpv/legal/eu/gdpr/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/gdpr
+  dpv_submodule: principles
+  source_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/principles-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/principles.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/gdpr/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/gdpr#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_gdpr: https://w3id.org/lmodel/dpv/legal/eu/gdpr/
+  dpv_legal_eu_gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  dpv_legal_eu_gdpr_owl: https://w3id.org/dpv/legal/eu/gdpr/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_gdpr
+default_range: string
+id_prefixes:
+  - legal_eu_gdpr
+  - dpv_legal_eu_gdpr
+  - dpv_legal_eu_gdpr_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/gdpr
+
+subsets:
+
+  legal_eu_gdpr_principles_subset:
+    description: Entities from the DPV `legal/eu/gdpr/modules/principles` submodule.
+
+classes:
+
+  AccountabilityPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:AccountabilityPrinciple
+    description: |-
+      Principle stating the controller shall be responsible for, and be able
+      to demonstrate compliance with the other principles (from Art.5-1)
+    aliases:
+      - Accountability Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:AccountabilityPrinciple
+      - dpv_legal_eu_gdpr_owl:AccountabilityPrinciple
+    close_mappings:
+      - iso27701:Clause_5_1
+    annotations:
+      dct_source: GDPR Art.5-2
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#AccountabilityPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  AccuracyPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:AccuracyPrinciple
+    description: |-
+      Principle stating personal data must be accurate and, where necessary,
+      kept up to date; every reasonable step must be taken to ensure that
+      personal data that are inaccurate, having regard to the purposes for
+      which they are processed, are erased or rectified without delay used for
+    aliases:
+      - Accuracy Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:AccuracyPrinciple
+      - dpv_legal_eu_gdpr_owl:AccuracyPrinciple
+    close_mappings:
+      - iso27701:Clause_7_4_3
+    annotations:
+      dct_source: GDPR Art.5-1d
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#AccuracyPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  DataMinimisationPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:DataMinimisationPrinciple
+    description: |-
+      Principle stating personal data must be processed adequate, relevant and
+      limited to what is necessary in relation to the purposes for which they
+      are processed
+    aliases:
+      - Data Minimisation Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataMinimisationPrinciple
+      - dpv_legal_eu_gdpr_owl:DataMinimisationPrinciple
+    close_mappings:
+      - iso27701:Clause_7_4_1
+    annotations:
+      dct_source: GDPR Art.5-1c
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataMinimisationPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  FairnessPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:FairnessPrinciple
+    description: |-
+      Principle stating personal data must be processed processed fairly in
+      relation to the data subject
+    aliases:
+      - Fairness Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:FairnessPrinciple
+      - dpv_legal_eu_gdpr_owl:FairnessPrinciple
+    close_mappings:
+      - iso27701:Clause_7_2_1
+    annotations:
+      dct_source: GDPR Art.5-1a
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#FairnessPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  IntegrityConfidentialityPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:IntegrityConfidentialityPrinciple
+    description: |-
+      Principle stating personal data must be processed in a manner that
+      ensures appropriate security of the personal data, including protection
+      against unauthorised or unlawful processing and against accidental loss,
+      destruction or damage, using appropriate technical or organisational
+      measures
+    aliases:
+      - Integrity Confidentiality Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:IntegrityConfidentialityPrinciple
+      - dpv_legal_eu_gdpr_owl:IntegrityConfidentialityPrinciple
+    close_mappings:
+      - iso27701:Clause_6_5
+    annotations:
+      dct_source: GDPR Art.5-1f
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#IntegrityConfidentialityPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  LawfulnessPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:LawfulnessPrinciple
+    description: |-
+      Principle stating personal data must be processed processed in a lawful
+      manner in relation to the data subject
+    aliases:
+      - Lawfulness Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:LawfulnessPrinciple
+      - dpv_legal_eu_gdpr_owl:LawfulnessPrinciple
+    close_mappings:
+      - iso27701:Clause_5_2
+    annotations:
+      dct_source: GDPR Art.5-1a
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#LawfulnessPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  PurposeLimitationPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:PurposeLimitationPrinciple
+    description: |-
+      Principle stating personal data collected for specified, explicit and
+      legitimate purposes and not further processed in a manner that is
+      incompatible with those purposes; further processing for archiving
+      purposes in the public interest, scientific or historical research
+      purposes or statistical purposes shall, in accordance with Article
+      89(1), not be considered to be incompatible with the initial purposes
+    aliases:
+      - Purpose Limitation Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:PurposeLimitationPrinciple
+      - dpv_legal_eu_gdpr_owl:PurposeLimitationPrinciple
+    close_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      dct_source: GDPR Art.5-1b
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#PurposeLimitationPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  StorageLimitationPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:StorageLimitationPrinciple
+    description: |-
+      Principle stating personal data must be kept in a form which permits
+      identification of data subjects for no longer than is necessary for the
+      purposes for which the personal data are processed; personal data may be
+      stored for longer periods insofar as the personal data will be processed
+      solely for archiving purposes in the public interest, scientific or
+      historical research purposes or statistical purposes in accordance with
+      Article 89(1) subject to implementation of the appropriate technical and
+      organisational measures required by this Regulation in order to
+      safeguard the rights and freedoms of the data subject
+    aliases:
+      - Storage Limitation Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:StorageLimitationPrinciple
+      - dpv_legal_eu_gdpr_owl:StorageLimitationPrinciple
+    close_mappings:
+      - iso27701:Clause_7_4_7
+    annotations:
+      dct_source: GDPR Art.5-1e
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#StorageLimitationPrinciple
+      dpv_extension_slug: legal/eu/gdpr
+
+  TransparencyPrinciple:
+    is_a: Principle
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:TransparencyPrinciple
+    description: |-
+      Principle stating personal data must be processed processed in a
+      transparent manner in relation to the data subject
+    aliases:
+      - Transparency Principle
+    in_subset:
+      - legal_eu_gdpr_principles_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:TransparencyPrinciple
+      - dpv_legal_eu_gdpr_owl:TransparencyPrinciple
+    close_mappings:
+      - iso27701:Clause_7_3_2
+    annotations:
+      dct_source: GDPR Art.5-1a
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#TransparencyPrinciple
+      dpv_extension_slug: legal/eu/gdpr

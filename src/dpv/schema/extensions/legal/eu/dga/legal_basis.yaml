@@ -1,0 +1,208 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/dga/legal_basis
+name: dpv_legal_eu_dga_legal_basis
+title: DPV - Legal - Eu - Dga / Legal Basis
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/dga/modules/legal_basis-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/dga
+  - https://w3c.github.io/dpv/2.3/legal/eu/dga/
+source: https://w3id.org/dpv/legal/eu/dga/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/dga
+  dpv_submodule: legal_basis
+  source_ttl: upstream-releases/dpv/legal/eu/dga/modules/legal_basis-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/dga/modules/legal_basis.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/dga/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/dga#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_dga: https://w3id.org/lmodel/dpv/legal/eu/dga/
+  dpv_legal_eu_dga: https://w3id.org/dpv/legal/eu/dga#
+  dpv_legal_eu_dga_owl: https://w3id.org/dpv/legal/eu/dga/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_dga
+default_range: string
+id_prefixes:
+  - legal_eu_dga
+  - dpv_legal_eu_dga
+  - dpv_legal_eu_dga_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/dga
+
+subsets:
+
+  legal_eu_dga_legal_basis_subset:
+    description: Entities from the DPV `legal/eu/dga/modules/legal_basis` submodule.
+
+classes:
+
+  A12eExchangeApproval:
+    is_a: LegalBasis
+    class_uri: legal_eu_dga:A12-e-Exchange-Approval
+    description: |-
+      Explicit request or approval of the data subject or data holder to
+      utilise additional specific tools for the purposes of facilitating
+      exchange of data
+    aliases:
+      - A12-e-Exchange-Approval
+      - Art 12(e) Data Exchange Approval
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A12-e-Exchange-Approval
+      - dpv_legal_eu_dga_owl:A12-e-Exchange-Approval
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A12-e-Exchange-Approval
+      dpv_extension_slug: legal/eu/dga
+
+  A26Permission:
+    is_a: LegalBasis
+    class_uri: legal_eu_dga:A2-6-Permission
+    description: |-
+      The legal basis justifying processing of non-personal data based on the
+      permission of an entity
+    aliases:
+      - A2-6-Permission
+      - Art 2(6) Permission
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A2-6-Permission
+      - dpv_legal_eu_dga_owl:A2-6-Permission
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A2-6-Permission
+      dpv_extension_slug: legal/eu/dga
+
+  A312TransferAgreement:
+    is_a: DataTransferLegalBasis
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_dga:A31-2-Transfer-Agreement
+    description: Data Transfer International Agreement
+    aliases:
+      - A31-2-Transfer-Agreement
+      - Art 31(2) Data Transfer International Agreement
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A31-2-Transfer-Agreement
+      - dpv_legal_eu_dga_owl:A31-2-Transfer-Agreement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A31-2-Transfer-Agreement
+      dpv_extension_slug: legal/eu/dga
+
+  A313ThirdCountryJudgement:
+    is_a: DataTransferLegalBasis
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_dga:A31-3-Third-Country-Judgement
+    description: Data Transfer Third Country Judgement
+    aliases:
+      - A31-3-Third-Country-Judgement
+      - Art 31(3) Data Transfer Third Country Judgement
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A31-3-Third-Country-Judgement
+      - dpv_legal_eu_dga_owl:A31-3-Third-Country-Judgement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A31-3-Third-Country-Judgement
+      dpv_extension_slug: legal/eu/dga
+
+  A511MCC:
+    is_a: DataTransferLegalBasis
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_dga:A5-11-MCC
+    description: Model Contractual Clauses
+    aliases:
+      - A5-11-MCC
+      - Art 5(11) Model Contractual Clauses
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A5-11-MCC
+      - dpv_legal_eu_dga_owl:A5-11-MCC
+    related_mappings:
+      - iso27701:Clause_7_5_2
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A5-11-MCC
+      dpv_extension_slug: legal/eu/dga
+
+  A512AdequacyDecision:
+    is_a: DataTransferLegalBasis
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_dga:A5-12-Adequacy-Decision
+    description: Adequacy Decision permitting the transfer of data
+    aliases:
+      - A5-12-Adequacy-Decision
+      - Art 5(12) Adequacy Decision
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A5-12-Adequacy-Decision
+      - dpv_legal_eu_dga_owl:A5-12-Adequacy-Decision
+    related_mappings:
+      - iso27701:Clause_7_5_1
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A5-12-Adequacy-Decision
+      dpv_extension_slug: legal/eu/dga
+
+  A59TransferPermission:
+    is_a: DataTransferLegalBasis
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_dga:A5-9-Transfer-Permission
+    description: |-
+      The legal basis justifying processing of non-personal data based on the
+      permission of an entity to transfer data
+    aliases:
+      - A5-9-Transfer-Permission
+      - Art 5(9) Permission for Transfer
+    in_subset:
+      - legal_eu_dga_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_dga:A5-9-Transfer-Permission
+      - dpv_legal_eu_dga_owl:A5-9-Transfer-Permission
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/dga/owl#A5-9-Transfer-Permission
+      dpv_extension_slug: legal/eu/dga

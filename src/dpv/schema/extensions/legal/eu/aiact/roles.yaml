@@ -1,0 +1,400 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/aiact/roles
+name: dpv_legal_eu_aiact_roles
+title: DPV - Legal - Eu - Aiact / Roles
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/aiact/modules/roles-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/aiact
+  - https://w3c.github.io/dpv/2.3/legal/eu/aiact/
+source: https://w3id.org/dpv/legal/eu/aiact/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/aiact
+  dpv_submodule: roles
+  source_ttl: upstream-releases/dpv/legal/eu/aiact/modules/roles-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/aiact/modules/roles.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/aiact/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/aiact#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_aiact: https://w3id.org/lmodel/dpv/legal/eu/aiact/
+  dpv_legal_eu_aiact: https://w3id.org/dpv/legal/eu/aiact#
+  dpv_legal_eu_aiact_owl: https://w3id.org/dpv/legal/eu/aiact/owl#
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: legal_eu_aiact
+default_range: string
+id_prefixes:
+  - legal_eu_aiact
+  - dpv_legal_eu_aiact
+  - dpv_legal_eu_aiact_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/aiact
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  legal_eu_aiact_roles_subset:
+    description: Entities from the DPV `legal/eu/aiact/modules/roles` submodule.
+
+classes:
+
+  AIDeployer:
+    is_a: AIOperator
+    mixins:
+      - Deployer
+    class_uri: legal_eu_aiact:AIDeployer
+    description: |-
+      A natural or legal person, public authority, agency or other body using
+      an AI system under its authority except where the AI system is used in
+      the course of a personal non-professional activity
+    aliases:
+      - AI Deployer
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIDeployer
+      - dpv_legal_eu_aiact_owl:AIDeployer
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: AIA (Art. 3(4))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIDeployer
+      dpv_extension_slug: legal/eu/aiact
+
+  AIDistributor:
+    is_a: AIOperator
+    mixins:
+      - Distributor
+    class_uri: legal_eu_aiact:AIDistributor
+    description: |-
+      A natural or legal person in the supply chain, other than the provider
+      or the importer, that makes an AI system available on the Union market
+    aliases:
+      - AI Distributor
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIDistributor
+      - dpv_legal_eu_aiact_owl:AIDistributor
+    related_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: AIA (Art. 3(7))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIDistributor
+      dpv_extension_slug: legal/eu/aiact
+
+  AIImporter:
+    is_a: AIOperator
+    mixins:
+      - Importer
+    class_uri: legal_eu_aiact:AIImporter
+    description: |-
+      A natural or legal person located or established in the Union that
+      places on the market an AI system that bears the name or trademark of a
+      natural or legal person established in a third country
+    aliases:
+      - AI Importer
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIImporter
+      - dpv_legal_eu_aiact_owl:AIImporter
+    related_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: AIA (Art. 3(6))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIImporter
+      dpv_extension_slug: legal/eu/aiact
+
+  AIOffice:
+    is_a: DpvAuthority
+    class_uri: legal_eu_aiact:AIOffice
+    description: |-
+      the Commission’s function of contributing to the implementation,
+      monitoring and supervision of AI systems and general-purpose AI models,
+      and AI governance, provided for in Commission Decision of 24 January
+      2024; references in the AI Act to the AI Office shall be construed as
+      references to the Commission
+    aliases:
+      - Artificial Intelligence Office
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIOffice
+      - dpv_legal_eu_aiact_owl:AIOffice
+    related_mappings:
+      - iso42001:AIManagementSystem
+    annotations:
+      dct_source: AIA(Art. 3(47))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIOffice
+      dpv_extension_slug: legal/eu/aiact
+
+  AIOperator:
+    is_a: DpvOperator
+    class_uri: legal_eu_aiact:AIOperator
+    description: |-
+      A provider, product manufacturer, deployer, authorised representative,
+      importer or distributor
+    aliases:
+      - AI Operator
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIOperator
+      - dpv_legal_eu_aiact_owl:AIOperator
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: AIA (Art. 3(8))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIOperator
+      dpv_extension_slug: legal/eu/aiact
+
+  AIProductManufacturer:
+    is_a: AIOperator
+    mixins:
+      - Manufacturer
+    class_uri: legal_eu_aiact:AIProductManufacturer
+    description: Entity that manufactures an AI Product
+    aliases:
+      - AI Product Manufacturer
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIProductManufacturer
+      - dpv_legal_eu_aiact_owl:AIProductManufacturer
+    related_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIProductManufacturer
+      dpv_extension_slug: legal/eu/aiact
+
+  AIProvider:
+    is_a: AIOperator
+    mixins:
+      - DpvProvider
+    class_uri: legal_eu_aiact:AIProvider
+    description: |-
+      A natural or legal person, public authority, agency or other body that
+      develops an AI system or a general-purpose AI model or that has an AI
+      system or a general-purpose AI model developed and places it on the
+      market or puts the AI system into service under its own name or
+      trademark, whether for payment or free of charge
+    aliases:
+      - AI Provider
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AIProvider
+      - dpv_legal_eu_aiact_owl:AIProvider
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: AIA (Art. 3(3))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AIProvider
+      dpv_extension_slug: legal/eu/aiact
+
+  AuthorisedRepresentative:
+    is_a: AIOperator
+    mixins:
+      - Representative
+    class_uri: legal_eu_aiact:AuthorisedRepresentative
+    description: |-
+      A natural or legal person located or established in the Union who has
+      received and accepted a written mandate from a provider of an AI system
+      or a general-purpose AI model to, respectively, perform and carry out on
+      its behalf the obligations and procedures established by the AI Act
+    aliases:
+      - Authorised Representative
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AuthorisedRepresentative
+      - dpv_legal_eu_aiact_owl:AuthorisedRepresentative
+    related_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: AIA (Art. 3(5))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AuthorisedRepresentative
+      dpv_extension_slug: legal/eu/aiact
+
+  ConformityAssessmentBody:
+    is_a: DpvAuditor
+    class_uri: legal_eu_aiact:ConformityAssessmentBody
+    description: |-
+      A body that performs third-party conformity assessment activities,
+      including testing, certification and inspection
+    aliases:
+      - Conformity Assessment Body
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:ConformityAssessmentBody
+      - dpv_legal_eu_aiact_owl:ConformityAssessmentBody
+    related_mappings:
+      - iso42001:AIManagementSystem
+    annotations:
+      dct_source: AIA(Art. 3(21))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#ConformityAssessmentBody
+      dpv_extension_slug: legal/eu/aiact
+
+  DownstreamAIProvider:
+    is_a: AIProvider
+    class_uri: legal_eu_aiact:DownstreamAIProvider
+    description: |-
+      A provider of an AI system, including a general-purpose AI system, which
+      integrates an AI model, regardless of whether the AI model is provided
+      by themselves and vertically integrated or provided by another entity
+      based on contractual relations.
+    aliases:
+      - Downstream AI Provider
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:DownstreamAIProvider
+      - dpv_legal_eu_aiact_owl:DownstreamAIProvider
+    annotations:
+      dct_source: AIA(Art. 3(68))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#DownstreamAIProvider
+      dpv_extension_slug: legal/eu/aiact
+
+  HumanOverseer:
+    is_a: NaturalPerson
+    mixins:
+      - Actor
+    class_uri: legal_eu_aiact:HumanOverseer
+    description: The natural person to whom human oversight is assigned
+    aliases:
+      - Human Overseer
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:HumanOverseer
+      - dpv_legal_eu_aiact_owl:HumanOverseer
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#HumanOverseer
+      dpv_extension_slug: legal/eu/aiact
+
+  MarketSurveillanceAuthority:
+    is_a: NationalCompetentAuthority
+    class_uri: legal_eu_aiact:MarketSurveillanceAuthority
+    description: |-
+      The national authority carrying out the activities and taking the
+      measures pursuant to Regulation (EU) 2019/1020
+    aliases:
+      - Market Surveillance Authority
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:MarketSurveillanceAuthority
+      - dpv_legal_eu_aiact_owl:MarketSurveillanceAuthority
+    related_mappings:
+      - iso42001:AIManagementSystem
+    annotations:
+      dct_source: AIA(Art. 3(26))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#MarketSurveillanceAuthority
+      dpv_extension_slug: legal/eu/aiact
+
+  NationalCompetentAuthority:
+    is_a: DpvAuthority
+    class_uri: legal_eu_aiact:NationalCompetentAuthority
+    description: |-
+      A notifying authority or a market surveillance authority; as regards AI
+      systems put into service or used by Union institutions, agencies,
+      offices and bodies, references to national competent authorities or
+      market surveillance authorities in the AI Act shall be construed as
+      references to the European Data Protection Supervisor
+    aliases:
+      - National Competent Authority
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:NationalCompetentAuthority
+      - dpv_legal_eu_aiact_owl:NationalCompetentAuthority
+    related_mappings:
+      - iso42001:AIManagementSystem
+    annotations:
+      dct_source: AIA(Art. 3(48))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#NationalCompetentAuthority
+      dpv_extension_slug: legal/eu/aiact
+
+  NotifiedBody:
+    is_a: ConformityAssessmentBody
+    class_uri: legal_eu_aiact:NotifiedBody
+    description: |-
+      A conformity assessment body notified in accordance with the AI Act and
+      other relevant Union harmonisation legislation
+    aliases:
+      - Notified Body
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:NotifiedBody
+      - dpv_legal_eu_aiact_owl:NotifiedBody
+    related_mappings:
+      - iso42001:AIManagementSystem
+    annotations:
+      dct_source: AIA(Art. 3(22))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#NotifiedBody
+      dpv_extension_slug: legal/eu/aiact
+
+  NotifyingAuthority:
+    is_a: NationalCompetentAuthority
+    class_uri: legal_eu_aiact:NotifyingAuthority
+    description: |-
+      The national authority responsible for setting up and carrying out the
+      necessary procedures for the assessment, designation and notification of
+      conformity assessment bodies and for their monitoring
+    aliases:
+      - Notifying Authority
+    in_subset:
+      - legal_eu_aiact_roles_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:NotifyingAuthority
+      - dpv_legal_eu_aiact_owl:NotifyingAuthority
+    related_mappings:
+      - iso42001:AIManagementSystem
+    annotations:
+      dct_source: AIA(Art. 3(19))
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#NotifyingAuthority
+      dpv_extension_slug: legal/eu/aiact

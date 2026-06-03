@@ -1,8 +1,0 @@
-has_personal_data:
-- pd:AccountIdentifier
-- pd:EmailAddressPersonal
-has_process:
-- PDH2
-- PDH3
-has_purpose: dpv:CommunicationForCustomerCare
-id: PDH1

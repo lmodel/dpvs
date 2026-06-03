@@ -1,0 +1,244 @@
+id: https://w3id.org/lmodel/dpv/tech/status
+name: dpv_tech_status
+title: DPV - Tech / Status
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `tech/modules/status-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/tech
+  - https://w3c.github.io/dpv/2.3/tech/
+source: https://w3id.org/dpv/tech/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: tech
+  dpv_submodule: status
+  source_ttl: upstream-releases/dpv/tech/modules/status-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/tech/modules/status.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/tech/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/tech#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: tech
+default_range: string
+id_prefixes:
+  - tech
+  - dpv_tech
+  - dpv_tech_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  tech_status_subset:
+    description: Entities from the DPV `tech/modules/status` submodule.
+
+slots:
+
+  has_market_availability_status:
+    is_a: has_status
+    definition_uri: tech:hasMarketAvailabilityStatus
+    description: Indicates whether the technology is available on the market
+    aliases:
+      - has market availability status
+    multivalued: true
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:hasMarketAvailabilityStatus
+      - dpv_tech_owl:hasMarketAvailabilityStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasMarketAvailabilityStatus
+      dpv_extension_slug: tech
+
+  has_provision_status:
+    is_a: has_status
+    definition_uri: tech:hasProvisionStatus
+    description: Indicates whether the technology has been provided
+    aliases:
+      - has provision status
+    multivalued: true
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:hasProvisionStatus
+      - dpv_tech_owl:hasProvisionStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasProvisionStatus
+      dpv_extension_slug: tech
+
+  has_trl:
+    is_a: has_status
+    definition_uri: tech:hasTRL
+    description: Indicates technology maturity level
+    aliases:
+      - has TRL
+    multivalued: true
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:hasTRL
+      - dpv_tech_owl:hasTRL
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasTRL
+      dpv_extension_slug: tech
+
+classes:
+
+  MarketAvailabilityStatus:
+    is_a: TechnologyStatus
+    class_uri: tech:MarketAvailabilityStatus
+    description: Status indicating whether Technology is available on the market
+    aliases:
+      - Market Availability Status
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:MarketAvailabilityStatus
+      - dpv_tech_owl:MarketAvailabilityStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#MarketAvailabilityStatus
+      dpv_extension_slug: tech
+
+  MarketAvailable:
+    is_a: MarketAvailabilityStatus
+    class_uri: tech:MarketAvailable
+    description: Status indicating Technology is available on the market
+    aliases:
+      - Market Available
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:MarketAvailable
+      - dpv_tech_owl:MarketAvailable
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#MarketAvailable
+      dpv_extension_slug: tech
+
+  MarketUnavailable:
+    is_a: MarketAvailabilityStatus
+    class_uri: tech:MarketUnavailable
+    description: Status indicating Technology is unavailable on the market
+    aliases:
+      - Market Unavailable
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:MarketUnavailable
+      - dpv_tech_owl:MarketUnavailable
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#MarketUnavailable
+      dpv_extension_slug: tech
+
+  NotProvided:
+    is_a: ProvisionStatus
+    class_uri: tech:NotProvided
+    description: Status indicating Technology has not been provided
+    aliases:
+      - Not Provided
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:NotProvided
+      - dpv_tech_owl:NotProvided
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#NotProvided
+      dpv_extension_slug: tech
+
+  Provided:
+    is_a: ProvisionStatus
+    class_uri: tech:Provided
+    description: Status indicating Technology has been provided
+    aliases:
+      - Provided
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:Provided
+      - dpv_tech_owl:Provided
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Provided
+      dpv_extension_slug: tech
+
+  ProvisionStatus:
+    is_a: TechnologyStatus
+    class_uri: tech:ProvisionStatus
+    description: Status indicating whether Technology has been provided
+    aliases:
+      - Provision Status
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:ProvisionStatus
+      - dpv_tech_owl:ProvisionStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#ProvisionStatus
+      dpv_extension_slug: tech
+
+  TechnologyReadinessLevel:
+    is_a: TechnologyStatus
+    class_uri: tech:TechnologyReadinessLevel
+    description: Indication of maturity of Technology (ISO 16290:2013)
+    aliases:
+      - Technology Readiness Level (TRL)
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:TechnologyReadinessLevel
+      - dpv_tech_owl:TechnologyReadinessLevel
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#TechnologyReadinessLevel
+      dpv_extension_slug: tech
+
+  TechnologyStatus:
+    is_a: Status
+    class_uri: tech:TechnologyStatus
+    description: Status associated with development, deployment, and use of technology
+    aliases:
+      - Technology Status
+    in_subset:
+      - tech_status_subset
+    exact_mappings:
+      - dpv_tech:TechnologyStatus
+      - dpv_tech_owl:TechnologyStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#TechnologyStatus
+      dpv_extension_slug: tech

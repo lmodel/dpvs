@@ -5,35 +5,51 @@
 # https://github.com/casey/just/issues/2540
 
 # Generate the DPV LinkML schemas from the upstream OWL/Turtle release.
-# Re-creates src/dpvs/schema/{dpvs.yaml, dpvs_core.yaml,
+# Re-creates src/dpv/schema/{dpv.yaml, dpv_core.yaml,
 # modules/*.yaml} from upstream-releases/dpv/dpv/*. Deterministic: re-running
 # with unchanged inputs produces byte-identical output. Run before
 # `apply-sssom-overlay`.
 #
 # The DPV version is auto-detected from the upstream owl:versionInfo triple
-# in dpv-owl.ttl and embedded in the generated schemas — bump the vendored
+# in dpv-owl.ttl and embedded in the generated schemas - bump the vendored
 # release under upstream-releases/dpv/ and the version will follow.
 #
 # Generate DPV LinkML schemas from upstream OWL (version auto-detected).
 [group('model development')]
 gen-linkml:
-  uv run python scripts/dpv_to_linkml.py \
+  uv run python scripts/dpv_core_to_linkml.py \
     -i upstream-releases/dpv/dpv \
-    -o src/dpvs/schema \
+    -o src/dpv/schema \
+    --report
+
+# Generate per-extension LinkML schemas from the vendored DPV 2.3 extensions
+# (ai, pd, loc, tech, risk, justifications, legal/<jurisdiction>, sector/*,
+# standards/ieee/7012, etc.) under upstream-releases/dpv/<ext>/<ext>-owl.ttl.
+# Each extension gets its own LinkML schema with id
+# `https://w3id.org/lmodel/dpv/<slug>`, default_prefix `<slug>`, imports
+# linkml:types + dpv:schema/dpv_core (+ any sibling extension it references).
+# Submodules under `<ext>/modules/` become per-module sub-schemas that import
+# the aggregate. Output: src/dpv/schema/extensions/<slug>.yaml (+ submodules).
+# Idempotent. Run between `gen-linkml` and `apply-sssom-overlay`.
+[group('model development')]
+gen-linkml-extensions:
+  uv run python scripts/dpv_extensions_to_linkml.py \
+    -i upstream-releases/dpv \
+    -o src/dpv/schema/extensions \
     --report
 
 # Convert the upstream DPV mapping CSVs under upstream-releases/mappings/
-# into SSSOM-compliant TSVs in src/dpvs/mappings/. Discovery is data-driven:
+# into SSSOM-compliant TSVs in src/dpv/mappings/. Discovery is data-driven:
 # any <source>/dpv-<source>.csv with a registered converter in
-# scripts/csv_to_sssom.py is processed. Idempotent: byte-identical output
+# scripts/dpv_csv_to_sssom.py is processed. Idempotent: byte-identical output
 # when inputs are unchanged. Run before `apply-sssom-overlay`.
 #
 # Convert upstream DPV mapping CSVs to SSSOM TSVs.
 [group('model development')]
 dpv-mappings-to-sssom:
-  uv run python scripts/csv_to_sssom.py \
+  uv run python scripts/dpv_csv_to_sssom.py \
     -i upstream-releases/mappings \
-    -o src/dpvs/mappings
+    -o src/dpv/mappings
 
 # Apply curated SSSOM mapping TSVs to the generated LinkML schema YAMLs.
 # Merges SKOS exact/close/broad/narrow/related matches into the matching
@@ -43,10 +59,10 @@ dpv-mappings-to-sssom:
 #
 # Merge curated SSSOM mappings into the generated LinkML schemas.
 [group('model development')]
-apply-sssom-overlay: gen-linkml dpv-mappings-to-sssom
+apply-sssom-overlay: gen-linkml gen-linkml-extensions dpv-mappings-to-sssom
   uv run python scripts/apply_sssom_overlay.py \
-    --schema-dir src/dpvs/schema \
-    --mappings-dir src/dpvs/mappings
+    --schema-dir src/dpv/schema \
+    --mappings-dir src/dpv/mappings
 
 # ============== Test fixture recipes ==============
 
@@ -56,7 +72,7 @@ apply-sssom-overlay: gen-linkml dpv-mappings-to-sssom
 # embedded as <pre> blocks in the HTML documentation page. Idempotent.
 [group('model development')]
 _extract-example-ttls:
-  uv run python scripts/gen_example_ttls.py \
+  uv run python scripts/gen_dpvcg_turtle.py \
     -i upstream-releases/dpv/examples/dex.html \
     -o examples
 
@@ -66,26 +82,26 @@ _extract-example-ttls:
 # writes to tests/data/dpvcg/valid/. Idempotent: byte-identical output.
 [group('model development')]
 _load-ttl-fixtures: _extract-example-ttls
-  uv run python scripts/load_examples.py \
+  uv run python scripts/load_dpvcg_turtle.py \
     -i examples \
     -o tests/data/dpvcg
 
 # Convert the TTL fixtures in tests/data/dpvcg/valid/ to per-subject YAML
-# documents that tests/test_data.py can validate against the dpvs schema.
-# Filename convention: <ClassName>-<stem>-<n>.yaml — the standard
+# documents that tests/test_data.py can validate against the dpv schema.
+# Filename convention: <ClassName>-<stem>-<n>.yaml - the standard
 # `_target_class_for` helper in test_data.py keys on the class-name prefix.
 # Must run after apply-sssom-overlay so the schema class/slot index is current.
 [group('model development')]
 _gen-fixtures: apply-sssom-overlay _load-ttl-fixtures
-  uv run python scripts/ttl_to_yaml.py \
-    -s src/dpvs/schema \
+  uv run python scripts/dpvcg_turtle_to_yaml.py \
+    -s src/dpv/schema \
     -i tests/data/dpvcg/valid \
     -o tests/data/dpvcg/valid
 
 # ============== Supplemental generator recipes (beyond gen-project defaults) ==============
 # gen-project already covers: graphql, jsonldcontext, jsonld, jsonschema, owl,
 # prefixmap, proto, python, shex, shacl, sqlddl, excel, typescript.
-# Explicit in main justfile: java, typescript (dup), owl (dup), pydantic (→ datamodel/).
+# Explicit in main justfile: java, typescript (dup), owl (dup), pydantic (-> datamodel/).
 # The recipes below cover the remaining available generators.
 # Run all at once with: just gen-project-extended
 
@@ -94,10 +110,10 @@ _gen-fixtures: apply-sssom-overlay _load-ttl-fixtures
 # NOTE: recipe named gen-merged-schema to avoid conflict with CDM's gen-linkml recipe
 # Generate a single self-contained merged LinkML YAML with all imports resolved.
 #
-# We feed `gen-linkml` the pre-merged schema (`tmp/dpvs.yaml`) rather than
-# the source `src/dpvs/schema/dpvs.yaml` because `gen-linkml` builds an
+# We feed `gen-linkml` the pre-merged schema (`tmp/dpv.yaml`) rather than
+# the source `src/dpv/schema/dpv.yaml` because `gen-linkml` builds an
 # internal `SchemaView` without honouring `--importmap` for URI-style
-# imports (see ISSUE.md §8/§9 — same upstream bug as `gen-doc`). Feeding
+# imports (see ISSUE.md §8/§9 - same upstream bug as `gen-doc`). Feeding
 # the merged YAML sidesteps the broken import resolution entirely.
 [group('model development - extended')]
 gen-merged-schema: _merged-schema
@@ -108,8 +124,8 @@ gen-merged-schema: _merged-schema
 # Use the same patched script as _gen-yaml until linkml-runtime > 1.11.0 lands.
 # Generate resolved YAML schema (patched yamlgen).
 #
-# Feed the pre-merged schema (`tmp/dpvs.yaml`) so URI imports like
-# `dpvs:schema/dpvs_core` are already resolved — `gen-yaml` underneath
+# Feed the pre-merged schema (`tmp/dpv.yaml`) so URI imports like
+# `dpv:schema/dpv_core` are already resolved - `gen-yaml` underneath
 # `gen_yaml_patched.py` also drops `--importmap` for URI imports and
 # would 404 on the w3id IRI (see ISSUE.md §8/§9).
 [group('model development - extended')]
@@ -155,7 +171,7 @@ gen-erdiagram-artifact: _merged-schema
   mkdir -p {{dest}}/erdiagram
   uv run gen-erdiagram --mergeimports -f mermaid {{merged_schema_path}} > {{dest}}/erdiagram/{{schema_name}}.er.md
 
-# Generate PlantUML diagram (stdout → single file)
+# Generate PlantUML diagram (stdout -> single file)
 [group('model development - extended')]
 gen-plantuml-artifact: _merged-schema
   mkdir -p {{dest}}/plantuml
@@ -218,7 +234,7 @@ gen-typedb-artifact: _merged-schema
 
 # ---- Language bindings ----
 
-# Generate Go structs (stdout → single file)
+# Generate Go structs (stdout -> single file)
 [group('model development - extended')]
 gen-golang-artifact: _merged-schema
   mkdir -p {{dest}}/golang

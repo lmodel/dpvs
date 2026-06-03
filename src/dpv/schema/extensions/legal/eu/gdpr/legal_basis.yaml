@@ -1,0 +1,473 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/gdpr/legal_basis
+name: dpv_legal_eu_gdpr_legal_basis
+title: DPV - Legal - Eu - Gdpr / Legal Basis
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/gdpr/modules/legal_basis-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/gdpr
+  - https://w3c.github.io/dpv/2.3/legal/eu/gdpr/
+source: https://w3id.org/dpv/legal/eu/gdpr/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/gdpr
+  dpv_submodule: legal_basis
+  source_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/legal_basis-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/legal_basis.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/gdpr/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/gdpr#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_gdpr: https://w3id.org/lmodel/dpv/legal/eu/gdpr/
+  dpv_legal_eu_gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  dpv_legal_eu_gdpr_owl: https://w3id.org/dpv/legal/eu/gdpr/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_gdpr
+default_range: string
+id_prefixes:
+  - legal_eu_gdpr
+  - dpv_legal_eu_gdpr
+  - dpv_legal_eu_gdpr_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/gdpr
+
+subsets:
+
+  legal_eu_gdpr_legal_basis_subset:
+    description: Entities from the DPV `legal/eu/gdpr/modules/legal_basis` submodule.
+
+classes:
+
+  A61a:
+    is_a: Consent
+    mixins:
+      - LegalBasis
+      - ExpressedConsent
+    class_uri: legal_eu_gdpr:A6-1-a
+    description: |-
+      Legal basis based on data subject's given consent to the processing of
+      his or her personal data for one or more specific purposes
+    aliases:
+      - A6-1-a
+      - Art.6(1-a) consent
+    comments:
+      - |-
+        Consent can be explicit or non-explicit. To express these specifically,
+        see the explicit and non-explicit variations provided for Art.6-1a.
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-a
+      - dpv_legal_eu_gdpr_owl:A6-1-a
+    close_mappings:
+      - iso27701:Clause_7_2_3
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-a
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61aexplicitconsent:
+    is_a: A61a
+    mixins:
+      - LegalBasis
+      - Consent
+      - ExplicitlyExpressedConsent
+    class_uri: legal_eu_gdpr:A6-1-a-explicit-consent
+    description: |-
+      Legal basis based on data subject's given explicit consent to the
+      processing of his or her personal data for one or more specific purposes
+    aliases:
+      - A6-1-a-explicit-consent
+      - Art 6(1-a) explicit consent
+    comments:
+      - |-
+        Valid consent in this case would have requirements for being 'explicit'
+        in addition to requirements defined by A4-11. This is also mentioned in
+        the Article 29 Working Party document "Guidelines on Consent under
+        Regulation 2016/679 (wp259rev.01)"
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-a-explicit-consent
+      - dpv_legal_eu_gdpr_owl:A6-1-a-explicit-consent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-a-explicit-consent
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61anonexplicitconsent:
+    is_a: A61a
+    mixins:
+      - LegalBasis
+      - Consent
+      - ExpressedConsent
+    class_uri: legal_eu_gdpr:A6-1-a-non-explicit-consent
+    description: |-
+      Legal basis based on data subject's given non-explicit express consent
+      to the processing of his or her personal data for one or more specific
+      purposes
+    aliases:
+      - A6-1-a-non-explicit-consent
+      - Art.6(1-a) regular consent
+    comments:
+      - |-
+        Definition of consent: A data subject's unambiguous/clear affirmative
+        action that signifies an agreement to process their personal data (Rigo
+        Wenning) . What is referred to as 'non-explicit consent' here is also
+        termed as 'regular' consent in the Article 29 Working Party document
+        "Guidelines on Consent under Regulation 2016/679 (wp259rev.01)". This is
+        the legal basis that requires consent but not at the level of being
+        'explicit'.
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-a-non-explicit-consent
+      - dpv_legal_eu_gdpr_owl:A6-1-a-non-explicit-consent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-a-non-explicit-consent
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61b:
+    is_a: Contract
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_gdpr:A6-1-b
+    description: |-
+      Legal basis based on performance of a contract to which the data subject
+      is party or in order to take steps at the request of the data subject
+      prior to entering into a contract
+    aliases:
+      - A6-1-b
+      - Art 6(1-b) contract
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-b
+      - dpv_legal_eu_gdpr_owl:A6-1-b
+    related_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-b
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61bcontractperformance:
+    is_a: A61b
+    mixins:
+      - LegalBasis
+      - ContractPerformance
+    class_uri: legal_eu_gdpr:A6-1-b-contract-performance
+    description: |-
+      Legal basis based on performance of a contract to which the data subject
+      is party
+    aliases:
+      - A6-1-b-contract-performance
+      - Art 6(1-b) contract performance
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-b-contract-performance
+      - dpv_legal_eu_gdpr_owl:A6-1-b-contract-performance
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-b-contract-performance
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61benterintocontract:
+    is_a: A61b
+    mixins:
+      - LegalBasis
+      - EnterIntoContract
+    class_uri: legal_eu_gdpr:A6-1-b-enter-into-contract
+    description: |-
+      Legal basis based on taking steps at the request of the data subject
+      prior to entering into a contract
+    aliases:
+      - A6-1-b-enter-into-contract
+      - Art 6(1-b) enter into contract
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-b-enter-into-contract
+      - dpv_legal_eu_gdpr_owl:A6-1-b-enter-into-contract
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-b-enter-into-contract
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61c:
+    is_a: LegalObligation
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_gdpr:A6-1-c
+    description: |-
+      Legal basis based on compliance with a legal obligation to which the
+      controller is subject
+    aliases:
+      - A6-1-c
+      - Art 6(1-c) legal obligation
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-c
+      - dpv_legal_eu_gdpr_owl:A6-1-c
+    related_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-c
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61d:
+    is_a: VitalInterest
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_gdpr:A6-1-d
+    description: |-
+      Legal basis based on protecting the vital interests of the data subject
+      or of another natural person
+    aliases:
+      - A6-1-d
+      - Art 6(1-d) protect vital interests
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-d
+      - dpv_legal_eu_gdpr_owl:A6-1-d
+    related_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-d
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61ddatasubject:
+    is_a: A61d
+    mixins:
+      - LegalBasis
+      - VitalInterestOfDataSubject
+    class_uri: legal_eu_gdpr:A6-1-d-data-subject
+    description: |-
+      Legal basis based on protecting the vital interests of the data subject
+    aliases:
+      - A6-1-d-data-subject
+      - Art 6(1-d) protect vital interests of data subject
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-d-data-subject
+      - dpv_legal_eu_gdpr_owl:A6-1-d-data-subject
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-d-data-subject
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61dnaturalperson:
+    is_a: A61d
+    mixins:
+      - LegalBasis
+      - VitalInterestOfNaturalPerson
+    class_uri: legal_eu_gdpr:A6-1-d-natural-person
+    description: |-
+      Legal basis based on protecting the vital interests of another natural
+      person that is not the data subject
+    aliases:
+      - A6-1-d-natural-person
+      - Art 6(1-d) protect vital interests of natural person
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-d-natural-person
+      - dpv_legal_eu_gdpr_owl:A6-1-d-natural-person
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-d-natural-person
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61e:
+    is_a: OfficialAuthorityOfController
+    mixins:
+      - LegalBasis
+      - PublicInterest
+    class_uri: legal_eu_gdpr:A6-1-e
+    description: |-
+      Legal basis based on performance of a task carried out in the public
+      interest or in the exercise of official authority vested in the
+      controller
+    aliases:
+      - A6-1-e
+      - Art 6(1-e) public interest or official authority
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-e
+      - dpv_legal_eu_gdpr_owl:A6-1-e
+    related_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-e
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61eofficialauthority:
+    is_a: A61e
+    mixins:
+      - LegalBasis
+      - OfficialAuthorityOfController
+    class_uri: legal_eu_gdpr:A6-1-e-official-authority
+    description: |-
+      Legal basis based on the exercise of official authority vested in the
+      controller
+    aliases:
+      - A6-1-e-official-authority
+      - Art 6(1-e) official authority
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-e-official-authority
+      - dpv_legal_eu_gdpr_owl:A6-1-e-official-authority
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-e-official-authority
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61epublicinterest:
+    is_a: A61e
+    mixins:
+      - LegalBasis
+      - PublicInterest
+    class_uri: legal_eu_gdpr:A6-1-e-public-interest
+    description: |-
+      Legal basis based on performance of a task carried out in the public
+      interest
+    aliases:
+      - A6-1-e-public-interest
+      - Art 6(1-e) public interest
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-e-public-interest
+      - dpv_legal_eu_gdpr_owl:A6-1-e-public-interest
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-e-public-interest
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61f:
+    is_a: LegitimateInterest
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_gdpr:A6-1-f
+    description: |-
+      Legal basis based on the purposes of the legitimate interests pursued by
+      the controller or by a third party, except where such interests are
+      overridden by the interests or fundamental rights and freedoms of the
+      data subject which require protection of personal data, in particular
+      where the data subject is a child
+    aliases:
+      - A6-1-f
+      - Art 6(1-f) legitimate interest
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-f
+      - dpv_legal_eu_gdpr_owl:A6-1-f
+    related_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-f
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61fcontroller:
+    is_a: A61f
+    mixins:
+      - LegalBasis
+      - LegitimateInterestOfController
+    class_uri: legal_eu_gdpr:A6-1-f-controller
+    description: |-
+      Legal basis based on the purposes of the legitimate interests pursued by
+      the controller, except where such interests are overridden by the
+      interests or fundamental rights and freedoms of the data subject which
+      require protection of personal data, in particular where the data
+      subject is a child
+    aliases:
+      - A6-1-f-controller
+      - Art 6(1-f) legitimate interest of controller
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-f-controller
+      - dpv_legal_eu_gdpr_owl:A6-1-f-controller
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-f-controller
+      dpv_extension_slug: legal/eu/gdpr
+
+  A61fthirdparty:
+    is_a: A61f
+    mixins:
+      - LegalBasis
+      - LegitimateInterestOfThirdParty
+    class_uri: legal_eu_gdpr:A6-1-f-third-party
+    description: |-
+      Legal basis based on the purposes of the legitimate interests pursued by
+      a third party, except where such interests are overridden by the
+      interests or fundamental rights and freedoms of the data subject which
+      require protection of personal data, in particular where the data
+      subject is a child
+    aliases:
+      - A6-1-f-third-party
+      - Art 6(1-f) legitimate interest of third party
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:A6-1-f-third-party
+      - dpv_legal_eu_gdpr_owl:A6-1-f-third-party
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#A6-1-f-third-party
+      dpv_extension_slug: legal/eu/gdpr
+
+  Consent:
+    mixins:
+      - LegalBasis
+    class_uri: legal_eu_gdpr:Consent
+    description: |-
+      Consent’ of the data subject means any freely given, specific, informed
+      and unambiguous indication of the data subject’s wishes by which he or
+      she, by a statement or by a clear affirmative action, signifies
+      agreement to the processing of personal data relating to him or her
+    aliases:
+      - Consent
+    in_subset:
+      - legal_eu_gdpr_legal_basis_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Consent
+      - dpv_legal_eu_gdpr_owl:Consent
+    close_mappings:
+      - iso27701:Clause_7_2_3
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Consent
+      dpv_extension_slug: legal/eu/gdpr

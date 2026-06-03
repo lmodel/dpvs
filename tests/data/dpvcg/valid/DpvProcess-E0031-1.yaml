@@ -1,9 +1,0 @@
-has_personal_data: pd:EmailAddress
-has_processing:
-- dpv:Collect
-- dpv:Store
-- dpv:Use
-has_purpose:
-- dpv:ServiceProvision
-- dpv:ServiceRegistration
-id: ex:SS1

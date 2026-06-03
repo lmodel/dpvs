@@ -1,5 +1,5 @@
 ---
-site_name: "dpvs"
+site_name: "dpv"
 theme:
   # https://www.mkdocs.org/user-guide/configuration/#theme
   name: material
@@ -57,7 +57,7 @@ markdown_extensions:
   - md_in_html
 
 watch:
-  - src/dpvs/schema
+  - src/dpv/schema
 
 nav:
   - Home: index.md
@@ -67,8 +67,8 @@ nav:
 exclude_docs: |
   /templates-linkml/
 
-site_url: https://lmodel.github.io/dpvs
-repo_url: https://github.com/lmodel/dpvs
+site_url: https://lmodel.github.io/dpv
+repo_url: https://github.com/lmodel/dpv
 
 # Uncomment this block to enable use of Google Analytics.
 # Replace the property value with your own ID.

@@ -1,0 +1,230 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/aiact/capability
+name: dpv_legal_eu_aiact_capability
+title: DPV - Legal - Eu - Aiact / Capability
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/aiact/modules/capability-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/aiact
+  - https://w3c.github.io/dpv/2.3/legal/eu/aiact/
+source: https://w3id.org/dpv/legal/eu/aiact/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/aiact
+  dpv_submodule: capability
+  source_ttl: upstream-releases/dpv/legal/eu/aiact/modules/capability-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/aiact/modules/capability.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/aiact/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/aiact#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_aiact: https://w3id.org/lmodel/dpv/legal/eu/aiact/
+  dpv_legal_eu_aiact: https://w3id.org/dpv/legal/eu/aiact#
+  dpv_legal_eu_aiact_owl: https://w3id.org/dpv/legal/eu/aiact/owl#
+  ai: https://w3id.org/lmodel/dpv/ai/
+  dpv_ai: https://w3id.org/dpv/ai#
+  dpv_ai_owl: https://w3id.org/dpv/ai/owl#
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: legal_eu_aiact
+default_range: string
+id_prefixes:
+  - legal_eu_aiact
+  - dpv_legal_eu_aiact
+  - dpv_legal_eu_aiact_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/aiact
+  - dpv:schema/extensions/ai
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  legal_eu_aiact_capability_subset:
+    description: Entities from the DPV `legal/eu/aiact/modules/capability` submodule.
+
+classes:
+
+  BiometricCategorisation:
+    mixins:
+      - Capability
+    class_uri: legal_eu_aiact:BiometricCategorisation
+    description: |-
+      Capability where assigning natural persons to specific categories
+      happens on the basis of their biometric data unless ancillary to another
+      commercial service and strictly necessary for objective technical
+      reasons
+    aliases:
+      - Biometric Categorisation
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:BiometricCategorisation
+      - dpv_legal_eu_aiact_owl:BiometricCategorisation
+    annotations:
+      dct_source: AIA Art. 3(40)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#BiometricCategorisation
+      dpv_extension_slug: legal/eu/aiact
+
+  BiometricIdentification:
+    mixins:
+      - Capability
+    class_uri: legal_eu_aiact:BiometricIdentification
+    description: |-
+      Capability where the automated recognition of physical, physiological,
+      behavioural, and psychological human features are used for the purpose
+      of establishing the identity of a natural person by comparing biometric
+      data of that individual to to biometric data of individuals stored in a
+      database
+    aliases:
+      - Biometric Identification
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:BiometricIdentification
+      - dpv_legal_eu_aiact_owl:BiometricIdentification
+    annotations:
+      dct_source: AIA Art. 3(35)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#BiometricIdentification
+      dpv_extension_slug: legal/eu/aiact
+
+  BiometricVerification:
+    is_a: IdentityVerification
+    mixins:
+      - Capability
+    class_uri: legal_eu_aiact:BiometricVerification
+    description: |-
+      The automated, one-to-one verification, including authentication, of the
+      identity of natural persons by comparing their biometric data to
+      previously provided biometric data
+    aliases:
+      - Biometric Verification
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:BiometricVerification
+      - dpv_legal_eu_aiact_owl:BiometricVerification
+    annotations:
+      dct_source: AIA Art.3 (36)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#BiometricVerification
+      dpv_extension_slug: legal/eu/aiact
+
+  DeepFakeGeneration:
+    is_a: BiometricIdentification
+    mixins:
+      - Capability
+    class_uri: legal_eu_aiact:DeepFakeGeneration
+    description: |-
+      Capability to generate or manipulate image, audio or video content that
+      resembles existing persons, objects, places, entities or events and
+      would falsely appear to a person to be authentic or truthful;l
+    aliases:
+      - Deep Fake Generation
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:DeepFakeGeneration
+      - dpv_legal_eu_aiact_owl:DeepFakeGeneration
+    related_mappings:
+      - iso42001:AIRisk
+    annotations:
+      dct_source: AIA Art. 3(60)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#DeepFakeGeneration
+      dpv_extension_slug: legal/eu/aiact
+
+  EmotionRecognition:
+    mixins:
+      - Capability
+    class_uri: legal_eu_aiact:EmotionRecognition
+    description: |-
+      Capability of a technology to identify or infer emotions or intentions
+      of natural persons (on the basis of their biometric data)
+    aliases:
+      - Emotion Recognition
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:EmotionRecognition
+      - dpv_legal_eu_aiact_owl:EmotionRecognition
+    annotations:
+      dct_source: AIA Art. 3(39)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#EmotionRecognition
+      dpv_extension_slug: legal/eu/aiact
+
+  HighImpactCapabilityGPAIModel:
+    is_a: Capability
+    class_uri: legal_eu_aiact:HighImpactCapabilityGPAIModel
+    description: |-
+      ‘High-impact Capabilities’ in general purpose AI models means
+      capabilities that match or exceed the capabilities recorded in the most
+      advanced general purpose AI models
+    aliases:
+      - High-Impact Capability in General Purpose AI Models
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:HighImpactCapabilityGPAIModel
+      - dpv_legal_eu_aiact_owl:HighImpactCapabilityGPAIModel
+    close_mappings:
+      - iso42001:AISystem
+    annotations:
+      dct_source: AIA Art. 3(64)
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#HighImpactCapabilityGPAIModel
+      dpv_extension_slug: legal/eu/aiact
+
+  SubliminalCapability:
+    is_a: HumanOrientedCapability
+    mixins:
+      - Capability
+    class_uri: legal_eu_aiact:SubliminalCapability
+    description: |-
+      Capability that operates beyond (below or above) the threshold of
+      conscious awareness
+    aliases:
+      - Subliminal Capability
+    in_subset:
+      - legal_eu_aiact_capability_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:SubliminalCapability
+      - dpv_legal_eu_aiact_owl:SubliminalCapability
+    annotations:
+      dct_source: |2-
+         Commission guidelines on prohibited AI practices established by AI Act
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#SubliminalCapability
+      dpv_extension_slug: legal/eu/aiact

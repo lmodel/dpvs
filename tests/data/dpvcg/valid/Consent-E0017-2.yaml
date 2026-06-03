@@ -1,7 +1,0 @@
-has_data_subject: ex:User12345
-has_notice:
-- Notice-v3.456
-- ex:AcmeConsentNotice
-- https://example.com/AcmeConsentNotice
-has_process: ex:PDH
-id: ex:UserConsent

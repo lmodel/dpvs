@@ -100,7 +100,11 @@ _POST_MAPPING_ANCHORS = (
 
 
 def _parse_sssom_metadata(path: Path) -> dict:
-    """Parse the leading ``#`` metadata block of an SSSOM TSV as YAML."""
+    """Parse the leading ``#`` metadata block of an SSSOM TSV as YAML.
+
+    Falls back to a line-by-line extraction of the ``curie_map:`` block when
+    the full metadata is not valid YAML (e.g. unquoted colons in URI values).
+    """
     buf: list[str] = []
     with open(path, "r", encoding="utf-8") as fh:
         for line in fh:
@@ -111,9 +115,44 @@ def _parse_sssom_metadata(path: Path) -> dict:
         return {}
     try:
         meta = _pyyaml.safe_load("".join(buf))
-    except _pyyaml.YAMLError:
-        return {}
-    return meta if isinstance(meta, dict) else {}
+        return meta if isinstance(meta, dict) else {}
+    except _pyyaml.YAMLError as exc:
+        print(
+            f"WARN: {path.name} metadata block is not valid YAML "
+            f"({exc.problem!r} at line {exc.problem_mark.line + 1 if exc.problem_mark else '?'}); "
+            f"falling back to line-by-line curie_map extraction. "
+            f"Fix the metadata block to eliminate this warning.",
+            file=sys.stderr,
+        )
+
+    # Fallback: extract only the curie_map block via simple line scanning.
+    curie_map: dict[str, str] = {}
+    in_curie_map = False
+    for raw_line in buf:
+        line = raw_line.rstrip()
+        stripped = line.lstrip()
+        indent = len(line) - len(stripped)
+        if stripped == "curie_map:":
+            in_curie_map = True
+            curie_map_indent: int | None = None
+            continue
+        if in_curie_map:
+            if not stripped or (curie_map_indent is not None and indent <= 0):
+                # Blank line or back to top level — end of block.
+                if indent == 0 and stripped:
+                    break
+                if not stripped:
+                    continue
+            if curie_map_indent is None:
+                curie_map_indent = indent
+            if indent < curie_map_indent:
+                break  # dedented past the block
+            if ":" in stripped:
+                key, _, val = stripped.partition(":")
+                val = val.strip().strip('"').strip("'")
+                if key and val:
+                    curie_map[key.strip()] = val
+    return {"curie_map": curie_map} if curie_map else {}
 
 
 def _parse_sssom_rows(path: Path) -> tuple[list[str], list[list[str]]]:
@@ -546,6 +585,10 @@ def main(argv: list[str] | None = None) -> int:
         modules_dir = args.schema_dir / "modules"
         if modules_dir.is_dir():
             schemas = sorted(schemas + list(modules_dir.glob("*.yaml")))
+        extensions_dir = args.schema_dir / "extensions"
+        if extensions_dir.is_dir():
+            # Extension schemas can live at any depth (e.g. legal/eu/gdpr.yaml)
+            schemas = sorted(schemas + list(extensions_dir.rglob("*.yaml")))
         if not schemas:
             print(f"No YAML schemas in {args.schema_dir}", file=sys.stderr)
             return 1

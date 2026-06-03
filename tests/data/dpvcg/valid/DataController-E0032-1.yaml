@@ -1,7 +1,0 @@
-has_address: Somewhere, somewhere, somewhere
-has_contact: email@example.com
-has_name: Alpha
-has_representative:
-- ex:RepA
-- ex:RepB
-id: ex:Alpha

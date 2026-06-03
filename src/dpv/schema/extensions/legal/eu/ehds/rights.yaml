@@ -1,0 +1,307 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/ehds/rights
+name: dpv_legal_eu_ehds_rights
+title: DPV - Legal - Eu - Ehds / Rights
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/ehds/modules/rights-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/ehds
+  - https://w3c.github.io/dpv/2.3/legal/eu/ehds/
+source: https://w3id.org/dpv/legal/eu/ehds/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/ehds
+  dpv_submodule: rights
+  source_ttl: upstream-releases/dpv/legal/eu/ehds/modules/rights-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/ehds/modules/rights.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/ehds/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/ehds#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_ehds: https://w3id.org/lmodel/dpv/legal/eu/ehds/
+  dpv_legal_eu_ehds: https://w3id.org/dpv/legal/eu/ehds#
+  dpv_legal_eu_ehds_owl: https://w3id.org/dpv/legal/eu/ehds/owl#
+
+default_prefix: legal_eu_ehds
+default_range: string
+id_prefixes:
+  - legal_eu_ehds
+  - dpv_legal_eu_ehds
+  - dpv_legal_eu_ehds_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/ehds
+
+subsets:
+
+  legal_eu_ehds_rights_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/rights` submodule.
+
+classes:
+
+  A10:
+    is_a: Right
+    class_uri: legal_eu_ehds:A10
+    description: |-
+      Right of natural persons to opt out from the access to their personal
+      electronic health data registered in an EHR system through the
+      electronic health data access services
+    aliases:
+      - A10 Right of natural persons to opt out from primary use
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A10
+      - dpv_legal_eu_ehds_owl:A10
+    annotations:
+      dct_source: EHDS Art.10
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A10
+      dpv_extension_slug: legal/eu/ehds
+
+  A100:
+    is_a: Right
+    class_uri: legal_eu_ehds:A100
+    description: |-
+      Right of natural and legal persons to receive compensation in accordance
+      with EU and national law in case that they have suffered material or
+      non-material damage as a result of an infringement of the EHDS
+      Regulation
+    aliases:
+      - A100 Right to receive compensation
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A100
+      - dpv_legal_eu_ehds_owl:A100
+    annotations:
+      dct_source: EHDS Art.100
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A100
+      dpv_extension_slug: legal/eu/ehds
+
+  A161:
+    is_a: Right
+    class_uri: legal_eu_ehds:A16-1
+    description: |-
+      Right of natural persons to identify themselves electronically using any
+      electronic identification means which are recognised pursuant to Article
+      6 of Regulation (EU) No 910/2014
+    aliases:
+      - A16-1
+      - A16-1 Right of identification management
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A16-1
+      - dpv_legal_eu_ehds_owl:A16-1
+    annotations:
+      dct_source: EHDS Art.16.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A16-1
+      dpv_extension_slug: legal/eu/ehds
+
+  A21:
+    is_a: Right
+    class_uri: legal_eu_ehds:A21
+    description: |-
+      Right of natural and legal persons to lodge a complaint with the
+      competent digital health authority
+    aliases:
+      - A21 Right to lodge a complaint with a digital health authority
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A21
+      - dpv_legal_eu_ehds_owl:A21
+    annotations:
+      dct_source: EHDS Art.21
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A21
+      dpv_extension_slug: legal/eu/ehds
+
+  A3:
+    is_a: Right
+    class_uri: legal_eu_ehds:A3
+    description: |-
+      Right of natural persons to access personal electronic health data
+      relating to them that belong to the priority categories referred to in
+      Article 14 and are processed for the provision of healthcare through the
+      electronic health data access services referred to in Article 4
+    aliases:
+      - |-
+        A3 Right of natural persons to access their personal electronic health
+        data
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A3
+      - dpv_legal_eu_ehds_owl:A3
+    annotations:
+      dct_source: EHDS Art.3
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A3
+      dpv_extension_slug: legal/eu/ehds
+
+  A5:
+    is_a: Right
+    class_uri: legal_eu_ehds:A5
+    description: |-
+      Right of natural persons to insert information in their EHR through
+      electronic health data access services or applications linked to those
+      services
+    aliases:
+      - A5 Right of natural persons to insert information in their own EHR
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A5
+      - dpv_legal_eu_ehds_owl:A5
+    annotations:
+      dct_source: EHDS Art.5
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A5
+      dpv_extension_slug: legal/eu/ehds
+
+  A6:
+    is_a: Right
+    class_uri: legal_eu_ehds:A6
+    description: |-
+      Right of natural persons to request online the rectification of their
+      personal electronic health data
+    aliases:
+      - A6 Right of natural persons to rectification
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A6
+      - dpv_legal_eu_ehds_owl:A6
+    annotations:
+      dct_source: EHDS Art.6
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A6
+      dpv_extension_slug: legal/eu/ehds
+
+  A6811:
+    is_a: Right
+    class_uri: legal_eu_ehds:A68-11
+    description: |-
+      Right of health data users to access and process the electronic health
+      data in a secure processing environment in accordance with the data
+      permit issued to them
+    aliases:
+      - A68-11
+      - A68-11 Right to process in a secure processing environment
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A68-11
+      - dpv_legal_eu_ehds_owl:A68-11
+    annotations:
+      dct_source: EHDS Art.68.11
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A68-11
+      dpv_extension_slug: legal/eu/ehds
+
+  A7:
+    is_a: Right
+    class_uri: legal_eu_ehds:A7
+    description: |-
+      Right of natural persons to give access to, or to request a healthcare
+      provider to transmit, all or part of their personal electronic health
+      data to another healthcare provider of their choice
+    aliases:
+      - A7 Right to data portability for natural persons
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A7
+      - dpv_legal_eu_ehds_owl:A7
+    annotations:
+      dct_source: EHDS Art.7
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A7
+      dpv_extension_slug: legal/eu/ehds
+
+  A71:
+    is_a: Right
+    class_uri: legal_eu_ehds:A71
+    description: |-
+      Right of natural persons to opt out at any time, and without providing
+      any reason, from the processing of personal electronic health data
+      relating to them for secondary use
+    aliases:
+      - A71 Right of natural persons to opt out from secondary use
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A71
+      - dpv_legal_eu_ehds_owl:A71
+    annotations:
+      dct_source: EHDS Art.71
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A71
+      dpv_extension_slug: legal/eu/ehds
+
+  A8:
+    is_a: Right
+    class_uri: legal_eu_ehds:A8
+    description: |-
+      Right of natural persons to restrict the access of health professionals
+      and healthcare providers to all or parts of their personal electronic
+      health data
+    aliases:
+      - A8 Right to restrict access
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A8
+      - dpv_legal_eu_ehds_owl:A8
+    annotations:
+      dct_source: EHDS Art.8
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A8
+      dpv_extension_slug: legal/eu/ehds
+
+  A9:
+    is_a: Right
+    class_uri: legal_eu_ehds:A9
+    description: |-
+      Right of natural persons to obtain information, including through
+      automatic notifications, on any access to their personal electronic
+      health data through the health professional access service obtained in
+      the context of healthcare
+    aliases:
+      - A9 Right to obtain information on accessing data
+    in_subset:
+      - legal_eu_ehds_rights_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A9
+      - dpv_legal_eu_ehds_owl:A9
+    annotations:
+      dct_source: EHDS Art.9
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A9
+      dpv_extension_slug: legal/eu/ehds

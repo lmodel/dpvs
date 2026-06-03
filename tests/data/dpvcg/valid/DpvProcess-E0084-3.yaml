@@ -1,6 +1,0 @@
-has_rule:
-- _:nf61201930fad4c3bb4e0502e8164adf3b1
-- _:nf61201930fad4c3bb4e0502e8164adf3b2
-- dpv:Obligation
-has_status: dpv:ObligationFulfilled
-id: ex:SomeProcess

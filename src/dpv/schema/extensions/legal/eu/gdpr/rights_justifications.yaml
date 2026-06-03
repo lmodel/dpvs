@@ -1,0 +1,801 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/gdpr/rights_justifications
+name: dpv_legal_eu_gdpr_rights_justifications
+title: DPV - Legal - Eu - Gdpr / Rights Justifications
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/gdpr/modules/rights_justifications-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/gdpr
+  - https://w3c.github.io/dpv/2.3/legal/eu/gdpr/
+source: https://w3id.org/dpv/legal/eu/gdpr/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/gdpr
+  dpv_submodule: rights_justifications
+  source_ttl: |-
+    upstream-releases/dpv/legal/eu/gdpr/modules/rights_justifications-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/rights_justifications.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/gdpr/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/gdpr#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_gdpr: https://w3id.org/lmodel/dpv/legal/eu/gdpr/
+  dpv_legal_eu_gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  dpv_legal_eu_gdpr_owl: https://w3id.org/dpv/legal/eu/gdpr/owl#
+  justifications: https://w3id.org/lmodel/dpv/justifications/
+  dpv_justifications: https://w3id.org/dpv/justifications#
+  dpv_justifications_owl: https://w3id.org/dpv/justifications/owl#
+
+default_prefix: legal_eu_gdpr
+default_range: string
+id_prefixes:
+  - legal_eu_gdpr
+  - dpv_legal_eu_gdpr
+  - dpv_legal_eu_gdpr_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/gdpr
+  - dpv:schema/extensions/justifications
+
+subsets:
+
+  legal_eu_gdpr_rights_justifications_subset:
+    description: |-
+      Entities from the DPV `legal/eu/gdpr/modules/rights_justifications`
+      submodule.
+
+classes:
+
+  JustificationA12Complexity:
+    is_a: ComplexityOfProcess
+    mixins:
+      - Justification
+      - JustificationA12Delay
+    class_uri: legal_eu_gdpr:JustificationA12Complexity
+    description: |-
+      Justification that the request under A15-A22 is delayed due to
+      complexity in fulfilling it
+    aliases:
+      - Justification A12 - Complexity
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12Complexity
+      - dpv_legal_eu_gdpr_owl:JustificationA12Complexity
+    annotations:
+      dct_source: GDPR Art.12-3
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12Complexity
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12Delay:
+    is_a: DelayJustification
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA12Delay
+    description: Justification that the request under A15-A22 is delayed
+    aliases:
+      - Justification A12 - Delay
+    comments:
+      - |-
+        The justification is for when the initial process, which is to be
+        completed within one month of receipt of the request, is delayed with
+        Art.12-3 stating a duration of two further months where necessary taking
+        into account the complexity and number of the requests. In such cases,
+        the controller is needed to inform the data subject of the extension
+        within one month of receipt of the request together with the reasons for
+        the delay - which is done through this extension. Information about
+        expected duration of response can be provided through use of
+        dpv:hasDuration. The specific nature of delay can be expressed through
+        use of eu-gdpr:A12ComplexityOfRequest or eu-gdpr:A12HighVolumeOfRequest
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12Delay
+      - dpv_legal_eu_gdpr_owl:JustificationA12Delay
+    annotations:
+      dct_source: GDPR Art.12-3
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12Delay
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12HighVolume:
+    is_a: HighVolumeOfProcesses
+    mixins:
+      - Justification
+      - JustificationA12Delay
+    class_uri: legal_eu_gdpr:JustificationA12HighVolume
+    description: |-
+      Justification that the request under A15-A22 is delayed due to high
+      volume of similar requestes required to be fulfilled
+    aliases:
+      - Justification A12 - High Volume
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12HighVolume
+      - dpv_legal_eu_gdpr_owl:JustificationA12HighVolume
+    annotations:
+      dct_source: GDPR Art.12-3
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12HighVolume
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12IdentityFailure:
+    is_a: IdentityVerificationFailure
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA12IdentityFailure
+    description: |-
+      Justification that a request under A14-21 could not be fulfilled due to
+      lack of identity verification
+    aliases:
+      - Justification A12 - Identity Failure
+    comments:
+      - |-
+        For justifications where identity cannot be verified and requires
+        additional information, eu-gdpr:A12IdentityVerificationRequired should
+        be used
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12IdentityFailure
+      - dpv_legal_eu_gdpr_owl:JustificationA12IdentityFailure
+    annotations:
+      dct_source: GDPR Art.12-6
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12IdentityFailure
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12IdentityRequired:
+    is_a: IdentityVerificationRequired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA12IdentityRequired
+    description: |-
+      Justification that a request under A14-21 could not be fulfilled due to
+      lack of identity verification, and therefore requires additional
+      information to complete the identity verification request
+    aliases:
+      - Justification A12 - Identity Required
+    comments:
+      - |-
+        If the purpose of this justification is to ask for identity
+        verification, then it requires information on what information is
+        considered as an acceptable form of identity, which can ideally be
+        expressed through dpv:Process and relevant dpv:PersonalData categories,
+        or through a comment or description for the justification
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12IdentityRequired
+      - dpv_legal_eu_gdpr_owl:JustificationA12IdentityRequired
+    annotations:
+      dct_source: GDPR Art.12-6
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12IdentityRequired
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12InformationRequired:
+    is_a: InformationRequired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA12InformationRequired
+    description: |-
+      Justification that the request under A14-21 could not be fulfilled due
+      to additional information being required
+    aliases:
+      - Justification A12 - Information Required
+    comments:
+      - |-
+        If the purpose of this justification is to ask for identity
+        verification, then eu-gdpr:A12IdentityVerificationRequired should be
+        used. The information required can be expressed using dpv:Process, which
+        allows also expressing the purpose for why it is required and relevant
+        dpv:PersonalData categories, or through a comment or description for the
+        justification
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12InformationRequired
+      - dpv_legal_eu_gdpr_owl:JustificationA12InformationRequired
+    annotations:
+      dct_source: GDPR Art.12-6
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12InformationRequired
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12LackOfIntent:
+    is_a: LackOfIntent
+    mixins:
+      - Justification
+      - JustificationA12ManifestlyUnfounded
+    class_uri: legal_eu_gdpr:JustificationA12LackOfIntent
+    description: |-
+      Justification that a request under A13-A22 and A34 is manifestly
+      unfounded - in particular due to a lack of intent - and therefore is
+      being charged a fee or is being refused
+    aliases:
+      - Justification A12 - Lack Of Intent
+    comments:
+      - |-
+        This justification requires information on why or how the lack of intent
+        was assessed, which can be provided as a description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12LackOfIntent
+      - dpv_legal_eu_gdpr_owl:JustificationA12LackOfIntent
+    annotations:
+      dct_source: GDPR Art.12-5
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12LackOfIntent
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12MaliciousIntent:
+    is_a: ProcessMalicious
+    mixins:
+      - Justification
+      - JustificationA12ManifestlyUnfounded
+    class_uri: legal_eu_gdpr:JustificationA12MaliciousIntent
+    description: |-
+      Justification that a request under A13-A22 and A34 is manifestly
+      unfounded - in particular due to malicious intent - and therefore is
+      being charged a fee or is being refused
+    aliases:
+      - Justification A12 - Malicious Intent
+    comments:
+      - |-
+        This justification requires information on why or how the malicious
+        intent was assessed, which can be provided as a description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12MaliciousIntent
+      - dpv_legal_eu_gdpr_owl:JustificationA12MaliciousIntent
+    annotations:
+      dct_source: GDPR Art.12-5
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12MaliciousIntent
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12ManifestlyExcessive:
+    is_a: ProcessExcessive
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA12ManifestlyExcessive
+    description: |-
+      Justification that a request under A13-A22 and A34 is manifestly
+      excessive and therefore is being charged a fee or is being refused
+    aliases:
+      - Justification A12 - Manifestly Excessive
+    comments:
+      - |-
+        This justification requires information on why or how the assessment of
+        manifestly excessive was made, which can be provided as a description of
+        comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12ManifestlyExcessive
+      - dpv_legal_eu_gdpr_owl:JustificationA12ManifestlyExcessive
+    annotations:
+      dct_source: GDPR Art.12-5
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12ManifestlyExcessive
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA12ManifestlyUnfounded:
+    is_a: ProcessUnfounded
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA12ManifestlyUnfounded
+    description: |-
+      Justification that a process under A13-A22 and A34 is manifestly
+      unfounded and therefore is being charged a fee or is being refused
+    aliases:
+      - Justification A12 - Manifestly Unfounded
+    comments:
+      - |-
+        This justification requires information on why the process was
+        considered manifestly unfounded which can be expressed through the
+        additional concepts provided such as eu-gdpr:A12LackOfIntent or
+        eu-gdpr:A12MaliciousIntent, or which can be provided as a description of
+        comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA12ManifestlyUnfounded
+      - dpv_legal_eu_gdpr_owl:JustificationA12ManifestlyUnfounded
+    annotations:
+      dct_source: GDPR Art.12-5
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA12ManifestlyUnfounded
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA13EntityAlreadyInformed:
+    is_a: EntityAlreadyInformed
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA13EntityAlreadyInformed
+    description: |-
+      Justification that A13 obligations for providing information do not
+      apply as the data subject already has the information
+    aliases:
+      - Justification A13 - Entity Already Informed
+    comments:
+      - |-
+        This justification requires information on how the data subject was
+        provided the information to satisfy the assertion, which can be provided
+        as a description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA13EntityAlreadyInformed
+      - dpv_legal_eu_gdpr_owl:JustificationA13EntityAlreadyInformed
+    annotations:
+      dct_source: GDPR Art.13-4
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA13EntityAlreadyInformed
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA14ConfidentialityCompromised:
+    is_a: ConfidentialityObligationCompromised
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA14ConfidentialityCompromised
+    description: |-
+      Justification that A14 obligations for providing information cannot be
+      fulfilled as the personal data must remain confidential subject to an
+      obligation of professional secrecy regulated by Union or Member State
+      law, including a statutory obligation of secrecy
+    aliases:
+      - Justification A14 - Confidentiality Compromised
+    comments:
+      - |-
+        This justification requires information on which legal provision
+        provides the confidentiality obligation, which can be provided as a
+        description of comment, or ideally through dpv:hasApplicableLaw to refer
+        to the specific law or through dpv:hasLegalBasis to refer to the
+        specific legal basis enabling this justification
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA14ConfidentialityCompromised
+      - dpv_legal_eu_gdpr_owl:JustificationA14ConfidentialityCompromised
+    annotations:
+      dct_source: GDPR Art.14-5d
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA14ConfidentialityCompromised
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA14DisproportionateEffort:
+    is_a: DisproportionateEffortRequired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA14DisproportionateEffort
+    description: |-
+      Justification that A14 obligations for providing information will
+      require a disproportionate effort to fulfill
+    aliases:
+      - Justification A14 - Disproportionate Effort
+    comments:
+      - |-
+        This justification requires information on why the effort is considered
+        disproportionate, such as the amount of time or resources required,
+        which can be provided as a description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA14DisproportionateEffort
+      - dpv_legal_eu_gdpr_owl:JustificationA14DisproportionateEffort
+    annotations:
+      dct_source: GDPR Art.14-5b
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA14DisproportionateEffort
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA14EntityAlreadyInformed:
+    is_a: EntityAlreadyInformed
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA14EntityAlreadyInformed
+    description: |-
+      Justification that A14 obligations for providing information do not
+      apply as the data subject already has the information
+    aliases:
+      - Justification A14 - Entity Already Informed
+    comments:
+      - |-
+        This justification requires information on how the data subject was
+        provided the information to satisfy the assertion, which can be provided
+        as a description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA14EntityAlreadyInformed
+      - dpv_legal_eu_gdpr_owl:JustificationA14EntityAlreadyInformed
+    annotations:
+      dct_source: GDPR Art.14-5a
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA14EntityAlreadyInformed
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA14FulfilmentImpossible:
+    is_a: FulfilmentImpossible
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA14FulfilmentImpossible
+    description: |-
+      Justification that A14 obligations for providing information are
+      impossible to fulfill
+    aliases:
+      - Justification A14 - Fulfilment Impossible
+    comments:
+      - |-
+        This justification requires information for why the fulfilment is
+        impossible, such as technical impossibility, which can be provided as a
+        description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA14FulfilmentImpossible
+      - dpv_legal_eu_gdpr_owl:JustificationA14FulfilmentImpossible
+    annotations:
+      dct_source: GDPR Art.14-5b
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA14FulfilmentImpossible
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA14LegallyExempted:
+    is_a: LegallyExempted
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA14LegallyExempted
+    description: |-
+      Justification that A14 obligations for providing information is legally
+      exempted
+    aliases:
+      - Justification A14 - Legally Exempted
+    comments:
+      - |-
+        This justification requires information on which legal provision
+        provides the exemption, which can be provided as a description of
+        comment, or ideally through dpv:hasApplicableLaw to refer to the
+        specific law or through dpv:hasLegalBasis to refer to the specific legal
+        basis enabling this justification
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA14LegallyExempted
+      - dpv_legal_eu_gdpr_owl:JustificationA14LegallyExempted
+    annotations:
+      dct_source: GDPR Art.14-5c
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA14LegallyExempted
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA14ObjectivesImpaired:
+    is_a: ObjectivesImpaired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA14ObjectivesImpaired
+    description: |-
+      Justification that A14 obligations for providing information will
+      (seriously) impair the objectives of the processing
+    aliases:
+      - Justification A14 - Objectives Impaired
+    comments:
+      - |-
+        This justification requires information on what objectives are being
+        impaired and the nature of impairment, which can be provided as a
+        description of comment
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA14ObjectivesImpaired
+      - dpv_legal_eu_gdpr_owl:JustificationA14ObjectivesImpaired
+    annotations:
+      dct_source: GDPR Art.14-5b
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA14ObjectivesImpaired
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17Archiving:
+    is_a: PublicInterestArchivingImpaired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17Archiving
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed due to
+    aliases:
+      - Justification A17 - Archiving
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17Archiving
+      - dpv_legal_eu_gdpr_owl:JustificationA17Archiving
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17Archiving
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17ChildData:
+    is_a: InformationSocietyServicesOffer
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17ChildData
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten is being
+      exercised as the personal data of a child have been collected for
+      information society services referred to in A8(1)
+    aliases:
+      - Justification A17 - Child Data
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17ChildData
+      - dpv_legal_eu_gdpr_owl:JustificationA17ChildData
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17ChildData
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17FreedomOfExpression:
+    is_a: FreedomOfExpressionImpaired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17FreedomOfExpression
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed as the processing is necessary for exercising the right of
+      freedom of expression and information
+    aliases:
+      - Justification A17 - Freedom Of Expression
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17FreedomOfExpression
+      - dpv_legal_eu_gdpr_owl:JustificationA17FreedomOfExpression
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17FreedomOfExpression
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17LegalClaims:
+    is_a: LegalClaimImpaired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17LegalClaims
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed due to
+    aliases:
+      - Justification A17 - Legal Claims
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17LegalClaims
+      - dpv_legal_eu_gdpr_owl:JustificationA17LegalClaims
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17LegalClaims
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17LegalErasure:
+    is_a: LegalObligation
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17LegalErasure
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten is being
+      exercised as the personal data have to be erased for compliance with a
+      legal obligation in Union or Member State law to which the controller is
+      subject
+    aliases:
+      - Justification A17 - Legal Erasure
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17LegalErasure
+      - dpv_legal_eu_gdpr_owl:JustificationA17LegalErasure
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17LegalErasure
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17LegallyRequired:
+    is_a: LegalObligationImpaired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17LegallyRequired
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed as the processing is required for compliance with a legal
+      obligation
+    aliases:
+      - Justification A17 - Legally Required
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17LegallyRequired
+      - dpv_legal_eu_gdpr_owl:JustificationA17LegallyRequired
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17LegallyRequired
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17NoLegalBasis:
+    is_a: LegalityLackingObjection
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17NoLegalBasis
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten is being
+      exercised as the corresponding consent has been withdrawn and there is
+      no other legal basis for the processing
+    aliases:
+      - Justification A17 - No Legal Basis
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17NoLegalBasis
+      - dpv_legal_eu_gdpr_owl:JustificationA17NoLegalBasis
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17NoLegalBasis
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17NonNecessity:
+    is_a: NonNecessityObjection
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17NonNecessity
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten is being
+      exercised as the personal data are no longer necessary in relation to
+      the purposes for which they were collected or otherwise processed
+    aliases:
+      - Justification A17 - Non-Necessity
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17NonNecessity
+      - dpv_legal_eu_gdpr_owl:JustificationA17NonNecessity
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17NonNecessity
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17ObjectA21:
+    is_a: Objection
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17ObjectA21
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten is being
+      exercised through A21 right to object where there are no overriding
+      legitimate grounds for the processing (A21-1) or as an objection to
+      direct marketing (A21-2)
+    aliases:
+      - Justification A17 - Object A21
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17ObjectA21
+      - dpv_legal_eu_gdpr_owl:JustificationA17ObjectA21
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17ObjectA21
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17OfficialAuthority:
+    is_a: OfficialAuthorityExerciseImpaired
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17OfficialAuthority
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed due to
+    aliases:
+      - Justification A17 - Official Authority
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17OfficialAuthority
+      - dpv_legal_eu_gdpr_owl:JustificationA17OfficialAuthority
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17OfficialAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17PublicHealth:
+    is_a: PublicHealthCompromised
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17PublicHealth
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed due to
+    aliases:
+      - Justification A17 - Public Health
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17PublicHealth
+      - dpv_legal_eu_gdpr_owl:JustificationA17PublicHealth
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17PublicHealth
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17PublicInterest:
+    is_a: PublicInterestCompromised
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17PublicInterest
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten could not
+      be completed due to
+    aliases:
+      - Justification A17 - Public Interest
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17PublicInterest
+      - dpv_legal_eu_gdpr_owl:JustificationA17PublicInterest
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17PublicInterest
+      dpv_extension_slug: legal/eu/gdpr
+
+  JustificationA17UnlawfulProcessing:
+    is_a: UnlawfulActivityObjection
+    mixins:
+      - Justification
+    class_uri: legal_eu_gdpr:JustificationA17UnlawfulProcessing
+    description: |-
+      Justification that the A17 right to erasure or to be forgotten is being
+      exercised as the personal data have been unlawfully processed
+    aliases:
+      - Justification A17 - Unlawful Processing
+    in_subset:
+      - legal_eu_gdpr_rights_justifications_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:JustificationA17UnlawfulProcessing
+      - dpv_legal_eu_gdpr_owl:JustificationA17UnlawfulProcessing
+    annotations:
+      dct_source: GDPR Art.17-
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#JustificationA17UnlawfulProcessing
+      dpv_extension_slug: legal/eu/gdpr

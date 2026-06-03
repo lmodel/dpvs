@@ -1,5 +1,0 @@
-# __unmapped__:
-#   skos:broader: dpv:AccessControlMethod
-#   skos:definition: An access control mechanism around roles and privileges
-#   skos:prefLabel: Role-Based Access Control
-id: ex:RBACCredential

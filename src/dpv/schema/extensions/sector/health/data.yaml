@@ -1,0 +1,947 @@
+id: https://w3id.org/lmodel/dpv/sector/health/data
+name: dpv_sector_health_data
+title: DPV - Sector - Health / Data
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `sector/health/modules/data-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/sector/health
+  - https://w3c.github.io/dpv/2.3/sector/health/
+source: https://w3id.org/dpv/sector/health/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: sector/health
+  dpv_submodule: data
+  source_ttl: upstream-releases/dpv/sector/health/modules/data-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/sector/health/modules/data.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/sector/health/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/sector/health#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  sector_health: https://w3id.org/lmodel/dpv/sector/health/
+  dpv_sector_health: https://w3id.org/dpv/sector/health#
+  dpv_sector_health_owl: https://w3id.org/dpv/sector/health/owl#
+  pd: https://w3id.org/lmodel/dpv/pd/
+  dpv_pd: https://w3id.org/dpv/pd#
+  dpv_pd_owl: https://w3id.org/dpv/pd/owl#
+
+default_prefix: sector_health
+default_range: string
+id_prefixes:
+  - sector_health
+  - dpv_sector_health
+  - dpv_sector_health_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/sector/health
+  - dpv:schema/extensions/pd
+
+subsets:
+
+  sector_health_data_subset:
+    description: Entities from the DPV `sector/health/modules/data` submodule.
+
+classes:
+
+  BehaviouralHealthDeterminant:
+    is_a: Health
+    mixins:
+      - PersonalData
+    class_uri: sector_health:BehaviouralHealthDeterminant
+    description: Information about behavioural data impacting on health
+    aliases:
+      - Behavioural Health Determinant
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:BehaviouralHealthDeterminant
+      - dpv_sector_health_owl:BehaviouralHealthDeterminant
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#BehaviouralHealthDeterminant
+      dpv_extension_slug: sector/health
+
+  BiobankData:
+    is_a: MedicalHealth
+    mixins:
+      - PersonalData
+    class_uri: sector_health:BiobankData
+    description: |-
+      Information about electronic health data from biobanks and associated
+      databases
+    aliases:
+      - Biobank Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:BiobankData
+      - dpv_sector_health_owl:BiobankData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#BiobankData
+      dpv_extension_slug: sector/health
+
+  ClaimAdminData:
+    is_a: HealthAdminData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ClaimAdminData
+    description: Information about health-related administrative data on claims
+    aliases:
+      - Health-related Administrative Data on Claims
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ClaimAdminData
+      - dpv_sector_health_owl:ClaimAdminData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ClaimAdminData
+      dpv_extension_slug: sector/health
+
+  ClinicalInvestigationsData:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ClinicalInvestigationsData
+    description: Information about health data from clinical investigations
+    aliases:
+      - Clinical Investigations Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ClinicalInvestigationsData
+      - dpv_sector_health_owl:ClinicalInvestigationsData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ClinicalInvestigationsData
+      dpv_extension_slug: sector/health
+
+  ClinicalStudiesData:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ClinicalStudiesData
+    description: Information about health data from clinical studies
+    aliases:
+      - Clinical Studies Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ClinicalStudiesData
+      - dpv_sector_health_owl:ClinicalStudiesData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ClinicalStudiesData
+      dpv_extension_slug: sector/health
+
+  ClinicalTrialsData:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ClinicalTrialsData
+    description: Information about health data from clinical trials
+    aliases:
+      - Clinical Trials Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ClinicalTrialsData
+      - dpv_sector_health_owl:ClinicalTrialsData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ClinicalTrialsData
+      dpv_extension_slug: sector/health
+
+  DischargeReport:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:DischargeReport
+    description: Information about discharge reports
+    aliases:
+      - Discharge Report
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:DischargeReport
+      - dpv_sector_health_owl:DischargeReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#DischargeReport
+      dpv_extension_slug: sector/health
+
+  DiseaseRegistryData:
+    is_a: MedicalRegistryData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:DiseaseRegistryData
+    description: |-
+      Information about electronic health data from medical registries for
+      specific diseases
+    aliases:
+      - Disease Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:DiseaseRegistryData
+      - dpv_sector_health_owl:DiseaseRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#DiseaseRegistryData
+      dpv_extension_slug: sector/health
+
+  DispensationAdminData:
+    is_a: HealthAdminData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:DispensationAdminData
+    description: Information about health-related administrative data on dispensations
+    aliases:
+      - Health-related Administrative Data on Dispensations
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:DispensationAdminData
+      - dpv_sector_health_owl:DispensationAdminData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#DispensationAdminData
+      dpv_extension_slug: sector/health
+
+  EHRData:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:EHRData
+    description: Information about electronic health record data
+    aliases:
+      - Electronic Health Record (EHR) Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:EHRData
+      - dpv_sector_health_owl:EHRData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#EHRData
+      dpv_extension_slug: sector/health
+
+  ElectronicDispensation:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ElectronicDispensation
+    description: Information about electronic dispensations
+    aliases:
+      - Electronic Dispensation
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ElectronicDispensation
+      - dpv_sector_health_owl:ElectronicDispensation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ElectronicDispensation
+      dpv_extension_slug: sector/health
+
+  ElectronicHealthData:
+    is_a: PersonalData
+    class_uri: sector_health:ElectronicHealthData
+    description: |-
+      Information about electronic health data, including personal and
+      non-personal data
+    aliases:
+      - Electronic Health Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ElectronicHealthData
+      - dpv_sector_health_owl:ElectronicHealthData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ElectronicHealthData
+      dpv_extension_slug: sector/health
+
+  ElectronicPrescription:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ElectronicPrescription
+    description: Information about electronic prescriptions
+    aliases:
+      - Electronic Prescription
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ElectronicPrescription
+      - dpv_sector_health_owl:ElectronicPrescription
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ElectronicPrescription
+      dpv_extension_slug: sector/health
+
+  EnvironmentalHealthDeterminant:
+    is_a: Health
+    mixins:
+      - PersonalData
+    class_uri: sector_health:EnvironmentalHealthDeterminant
+    description: Information about environmental data impacting on health
+    aliases:
+      - Environmental Health Determinant
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:EnvironmentalHealthDeterminant
+      - dpv_sector_health_owl:EnvironmentalHealthDeterminant
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#EnvironmentalHealthDeterminant
+      dpv_extension_slug: sector/health
+
+  EpigenomicData:
+    is_a: Genetic
+    mixins:
+      - PersonalData
+    class_uri: sector_health:EpigenomicData
+    description: Information about epigenomic data
+    aliases:
+      - Epigenomic Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:EpigenomicData
+      - dpv_sector_health_owl:EpigenomicData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#EpigenomicData
+      dpv_extension_slug: sector/health
+
+  GenomicData:
+    is_a: Genetic
+    mixins:
+      - PersonalData
+    class_uri: sector_health:GenomicData
+    description: Information about genomic data
+    aliases:
+      - Genomic Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:GenomicData
+      - dpv_sector_health_owl:GenomicData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#GenomicData
+      dpv_extension_slug: sector/health
+
+  HealthAdminData:
+    is_a: MedicalHealth
+    mixins:
+      - PersonalData
+    class_uri: sector_health:HealthAdminData
+    description: Information about health-related administrative data
+    aliases:
+      - Health-related Administrative Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:HealthAdminData
+      - dpv_sector_health_owl:HealthAdminData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#HealthAdminData
+      dpv_extension_slug: sector/health
+
+  HealthAggregatedData:
+    is_a: Health
+    mixins:
+      - AggregatedData
+    class_uri: sector_health:HealthAggregatedData
+    description: Information about aggregated data related to health and healthcare
+    aliases:
+      - Health Aggregated Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:HealthAggregatedData
+      - dpv_sector_health_owl:HealthAggregatedData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#HealthAggregatedData
+      dpv_extension_slug: sector/health
+
+  HealthProfessionalData:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:HealthProfessionalData
+    description: |-
+      Information about the status of the health professionals involved in the
+      treatment of the person, including information on their specialisation
+      and institution
+    aliases:
+      - Health Professional Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:HealthProfessionalData
+      - dpv_sector_health_owl:HealthProfessionalData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#HealthProfessionalData
+      dpv_extension_slug: sector/health
+
+  HealthQuestionnaire:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:HealthQuestionnaire
+    description: Information about health data from questionnaires
+    aliases:
+      - Health Questionnaire
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:HealthQuestionnaire
+      - dpv_sector_health_owl:HealthQuestionnaire
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#HealthQuestionnaire
+      dpv_extension_slug: sector/health
+
+  HealthRegistryData:
+    is_a: MedicalHealth
+    mixins:
+      - PersonalData
+    class_uri: sector_health:HealthRegistryData
+    description: Information about registries of health data
+    aliases:
+      - Health Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:HealthRegistryData
+      - dpv_sector_health_owl:HealthRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#HealthRegistryData
+      dpv_extension_slug: sector/health
+
+  HealthSurvey:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:HealthSurvey
+    description: Information about health data from surveys
+    aliases:
+      - Health Survey
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:HealthSurvey
+      - dpv_sector_health_owl:HealthSurvey
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#HealthSurvey
+      dpv_extension_slug: sector/health
+
+  InferredHealthData:
+    is_a: InferredPersonalData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:InferredHealthData
+    description: |-
+      Information about inferred health data, including improvements such as
+      correction, annotation, or enrichment based on authorised processing
+      operations
+    aliases:
+      - Inferred Health Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:InferredHealthData
+      - dpv_sector_health_owl:InferredHealthData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#InferredHealthData
+      dpv_extension_slug: sector/health
+
+  LifestyleData:
+    is_a: Behavioural
+    mixins:
+      - PersonalData
+    class_uri: sector_health:LifestyleData
+    description: Information about lifestyle
+    aliases:
+      - Lifestyle Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:LifestyleData
+      - dpv_sector_health_owl:LifestyleData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#LifestyleData
+      dpv_extension_slug: sector/health
+
+  LipidomicData:
+    is_a: Molecular
+    mixins:
+      - PersonalData
+    class_uri: sector_health:LipidomicData
+    description: Information about lipidomic data
+    aliases:
+      - Lipidomic Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:LipidomicData
+      - dpv_sector_health_owl:LipidomicData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#LipidomicData
+      dpv_extension_slug: sector/health
+
+  MedicalDevicesData:
+    is_a: MedicalHealth
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MedicalDevicesData
+    description: Information about electronic health data from medical devices
+    aliases:
+      - Medical Devices Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MedicalDevicesData
+      - dpv_sector_health_owl:MedicalDevicesData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MedicalDevicesData
+      dpv_extension_slug: sector/health
+
+  MedicalDevicesRegistryData:
+    is_a: HealthRegistryData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MedicalDevicesRegistryData
+    description: |-
+      Information about electronic health data from registries for medical
+      devices
+    aliases:
+      - Medical Devices Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MedicalDevicesRegistryData
+      - dpv_sector_health_owl:MedicalDevicesRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MedicalDevicesRegistryData
+      dpv_extension_slug: sector/health
+
+  MedicalImaging:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MedicalImaging
+    description: Information about medical imaging studies and related imaging reports
+    aliases:
+      - Medical Imaging
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MedicalImaging
+      - dpv_sector_health_owl:MedicalImaging
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MedicalImaging
+      dpv_extension_slug: sector/health
+
+  MedicalRegistryData:
+    is_a: HealthRegistryData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MedicalRegistryData
+    description: Information about electronic health data from medical registries
+    aliases:
+      - Medical Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MedicalRegistryData
+      - dpv_sector_health_owl:MedicalRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MedicalRegistryData
+      dpv_extension_slug: sector/health
+
+  MedicalTestResult:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MedicalTestResult
+    description: Information about medical test results
+    aliases:
+      - Medical Test Result
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MedicalTestResult
+      - dpv_sector_health_owl:MedicalTestResult
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MedicalTestResult
+      dpv_extension_slug: sector/health
+
+  MedicinalProductsRegistryData:
+    is_a: HealthRegistryData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MedicinalProductsRegistryData
+    description: |-
+      Information about electronic health data from registries for medicinal
+      products
+    aliases:
+      - Medicinal Products Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MedicinalProductsRegistryData
+      - dpv_sector_health_owl:MedicinalProductsRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MedicinalProductsRegistryData
+      dpv_extension_slug: sector/health
+
+  MetabolomicData:
+    is_a: Molecular
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MetabolomicData
+    description: Information about metabolomic data
+    aliases:
+      - Metabolomic Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MetabolomicData
+      - dpv_sector_health_owl:MetabolomicData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MetabolomicData
+      dpv_extension_slug: sector/health
+
+  MortalityRegistryData:
+    is_a: HealthRegistryData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:MortalityRegistryData
+    description: Information about electronic health data from mortality registries
+    aliases:
+      - Mortality Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:MortalityRegistryData
+      - dpv_sector_health_owl:MortalityRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#MortalityRegistryData
+      dpv_extension_slug: sector/health
+
+  NonPersonalElectronicHealthData:
+    is_a: ElectronicHealthData
+    mixins:
+      - NonPersonalData
+    class_uri: sector_health:NonPersonalElectronicHealthData
+    description: |-
+      Information about electronic health data that is not personal data,
+      including anonymised data
+    aliases:
+      - Non-Personal Electronic Health Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:NonPersonalElectronicHealthData
+      - dpv_sector_health_owl:NonPersonalElectronicHealthData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#NonPersonalElectronicHealthData
+      dpv_extension_slug: sector/health
+
+  PathogenData:
+    is_a: NonPersonalData
+    class_uri: sector_health:PathogenData
+    description: Information about relevant pathogen data, impacting on human health
+    aliases:
+      - Pathogen Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PathogenData
+      - dpv_sector_health_owl:PathogenData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PathogenData
+      dpv_extension_slug: sector/health
+
+  PatientSummary:
+    is_a: HealthRecord
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PatientSummary
+    description: Information about patient summaries
+    aliases:
+      - Patient Summary
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PatientSummary
+      - dpv_sector_health_owl:PatientSummary
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PatientSummary
+      dpv_extension_slug: sector/health
+
+  PerformanceStudiesData:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PerformanceStudiesData
+    description: Information about health data from performance studies
+    aliases:
+      - Performance Studies Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PerformanceStudiesData
+      - dpv_sector_health_owl:PerformanceStudiesData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PerformanceStudiesData
+      dpv_extension_slug: sector/health
+
+  PersonGeneratedHealthAppData:
+    is_a: PersonGeneratedHealthData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PersonGeneratedHealthAppData
+    description: Information about person generated digital health applications data
+    aliases:
+      - Person Generated Health Application Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PersonGeneratedHealthAppData
+      - dpv_sector_health_owl:PersonGeneratedHealthAppData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PersonGeneratedHealthAppData
+      dpv_extension_slug: sector/health
+
+  PersonGeneratedHealthData:
+    is_a: MedicalHealth
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PersonGeneratedHealthData
+    description: Information about person generated electronic health data
+    aliases:
+      - Person Generated Health Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PersonGeneratedHealthData
+      - dpv_sector_health_owl:PersonGeneratedHealthData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PersonGeneratedHealthData
+      dpv_extension_slug: sector/health
+
+  PersonGeneratedMedicalDeviceData:
+    is_a: PersonGeneratedHealthData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PersonGeneratedMedicalDeviceData
+    description: Information about person generated medical devices data
+    aliases:
+      - Person Generated Medical Devices Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PersonGeneratedMedicalDeviceData
+      - dpv_sector_health_owl:PersonGeneratedMedicalDeviceData
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/sector/health/owl#PersonGeneratedMedicalDeviceData
+      dpv_extension_slug: sector/health
+
+  PersonGeneratedWellnessAppData:
+    is_a: PersonGeneratedHealthAppData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PersonGeneratedWellnessAppData
+    description: Information about person generated wellness applications data
+    aliases:
+      - Person Generated Wellness Application Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PersonGeneratedWellnessAppData
+      - dpv_sector_health_owl:PersonGeneratedWellnessAppData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PersonGeneratedWellnessAppData
+      dpv_extension_slug: sector/health
+
+  PersonalElectronicHealthData:
+    is_a: ElectronicHealthData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PersonalElectronicHealthData
+    description: |-
+      Information about personal health data, including genetic data,
+      processed in an electronic form
+    aliases:
+      - Personal Electronic Health Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PersonalElectronicHealthData
+      - dpv_sector_health_owl:PersonalElectronicHealthData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PersonalElectronicHealthData
+      dpv_extension_slug: sector/health
+
+  ProteomicData:
+    is_a: Molecular
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ProteomicData
+    description: Information about proteomic data
+    aliases:
+      - Proteomic Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ProteomicData
+      - dpv_sector_health_owl:ProteomicData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ProteomicData
+      dpv_extension_slug: sector/health
+
+  PublicHealthRegistryData:
+    is_a: HealthRegistryData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:PublicHealthRegistryData
+    description: Information about registries of public health data
+    aliases:
+      - Public Health Registry Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:PublicHealthRegistryData
+      - dpv_sector_health_owl:PublicHealthRegistryData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#PublicHealthRegistryData
+      dpv_extension_slug: sector/health
+
+  ReimbursementAdminData:
+    is_a: HealthAdminData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ReimbursementAdminData
+    description: Information about health-related administrative data on reimbursements
+    aliases:
+      - Health-related Administrative Data on Reimbursements
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ReimbursementAdminData
+      - dpv_sector_health_owl:ReimbursementAdminData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ReimbursementAdminData
+      dpv_extension_slug: sector/health
+
+  ResearchCohortData:
+    is_a: StudyData
+    mixins:
+      - PersonalData
+    class_uri: sector_health:ResearchCohortData
+    description: Information about health data from research cohorts
+    aliases:
+      - Research Cohort Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:ResearchCohortData
+      - dpv_sector_health_owl:ResearchCohortData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#ResearchCohortData
+      dpv_extension_slug: sector/health
+
+  SocioeconomicHealthDeterminant:
+    is_a: Health
+    mixins:
+      - PersonalData
+    class_uri: sector_health:SocioeconomicHealthDeterminant
+    description: Information about socioeconomic data impacting on health
+    aliases:
+      - Socioeconomic Health Determinant
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:SocioeconomicHealthDeterminant
+      - dpv_sector_health_owl:SocioeconomicHealthDeterminant
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#SocioeconomicHealthDeterminant
+      dpv_extension_slug: sector/health
+
+  StudyData:
+    is_a: MedicalHealth
+    mixins:
+      - PersonalData
+    class_uri: sector_health:StudyData
+    description: |-
+      Information about health data from studies, e.g. clinical trials,
+      research cohorts, ...
+    aliases:
+      - Study Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:StudyData
+      - dpv_sector_health_owl:StudyData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#StudyData
+      dpv_extension_slug: sector/health
+
+  TranscriptomicData:
+    is_a: Molecular
+    mixins:
+      - PersonalData
+    class_uri: sector_health:TranscriptomicData
+    description: Information about transcriptomic data
+    aliases:
+      - Transcriptomic Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:TranscriptomicData
+      - dpv_sector_health_owl:TranscriptomicData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#TranscriptomicData
+      dpv_extension_slug: sector/health
+
+  WellnessData:
+    is_a: Behavioural
+    mixins:
+      - PersonalData
+    class_uri: sector_health:WellnessData
+    description: Information about wellness
+    aliases:
+      - Wellness Data
+    in_subset:
+      - sector_health_data_subset
+    exact_mappings:
+      - dpv_sector_health:WellnessData
+      - dpv_sector_health_owl:WellnessData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#WellnessData
+      dpv_extension_slug: sector/health

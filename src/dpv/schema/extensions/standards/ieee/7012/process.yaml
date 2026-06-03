@@ -1,0 +1,302 @@
+id: https://w3id.org/lmodel/dpv/standards/ieee/7012/process
+name: dpv_standards_ieee_7012_process
+title: DPV - Standards - Ieee - 7012 / Process
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `standards/ieee/7012/modules/process-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/standards/ieee/7012
+  - https://w3c.github.io/dpv/2.3/standards/ieee/7012/
+source: https://w3id.org/dpv/standards/ieee/7012/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: standards/ieee/7012
+  dpv_submodule: process
+  source_ttl: upstream-releases/dpv/standards/ieee/7012/modules/process-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/standards/ieee/7012/modules/process.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/standards/ieee/7012/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/standards/ieee/7012#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  standards_ieee_7012: https://w3id.org/lmodel/dpv/standards/ieee/7012/
+  dpv_standards_ieee_7012: https://w3id.org/dpv/standards/ieee/7012#
+  dpv_standards_ieee_7012_owl: https://w3id.org/dpv/standards/ieee/7012/owl#
+
+default_prefix: standards_ieee_7012
+default_range: string
+id_prefixes:
+  - standards_ieee_7012
+  - dpv_standards_ieee_7012
+  - dpv_standards_ieee_7012_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/standards/ieee/7012
+
+subsets:
+
+  standards_ieee_7012_process_subset:
+    description: Entities from the DPV `standards/ieee/7012/modules/process` submodule.
+
+slots:
+
+  has_agreement:
+    definition_uri: standards_ieee_7012:hasAgreement
+    description: Indicates the inclusion or applicability of the specified Privacy Term
+    aliases:
+      - has agreement
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasAgreement
+      - dpv_standards_ieee_7012_owl:hasAgreement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasAgreement
+      dpv_extension_slug: standards/ieee/7012
+
+  has_agreement_preference:
+    definition_uri: standards_ieee_7012:hasAgreementPreference
+    description: |-
+      Indicates the inclusion or applicability of the specified Privacy
+      Preference
+    aliases:
+      - has privacy preference
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasAgreementPreference
+      - dpv_standards_ieee_7012_owl:hasAgreementPreference
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasAgreementPreference
+      dpv_extension_slug: standards/ieee/7012
+
+  has_agreement_registry:
+    definition_uri: standards_ieee_7012:hasAgreementRegistry
+    description: |-
+      Indicates the inclusion or applicability of the specified Privacy Term
+      Registry
+    aliases:
+      - has agreement registry
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasAgreementRegistry
+      - dpv_standards_ieee_7012_owl:hasAgreementRegistry
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasAgreementRegistry
+      dpv_extension_slug: standards/ieee/7012
+
+  has_endpoint:
+    definition_uri: standards_ieee_7012:hasEndpoint
+    description: |-
+      Indicates the endpoint, such as a URL or an address, where 7012 related
+      communications and interactions can be made
+    aliases:
+      - has endpoint
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasEndpoint
+      - dpv_standards_ieee_7012_owl:hasEndpoint
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasEndpoint
+      dpv_extension_slug: standards/ieee/7012
+
+  has_human_readable_format:
+    definition_uri: standards_ieee_7012:hasHumanReadableFormat
+    description: |-
+      Indicates the specified resource is a human readable format of the
+      subject
+    aliases:
+      - has human readable format
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasHumanReadableFormat
+      - dpv_standards_ieee_7012_owl:hasHumanReadableFormat
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasHumanReadableFormat
+      dpv_extension_slug: standards/ieee/7012
+
+  has_machine_readable_format:
+    definition_uri: standards_ieee_7012:hasMachineReadableFormat
+    description: |-
+      Indicates the specified resource is a machine readable format of the
+      subject
+    aliases:
+      - has machine readable format
+    comments:
+      - |-
+        To assist in interpreting the resource, we strongly suggest using
+        dct:conformsTo with an appropriate URI to indicate the specific standard
+        or specification used to express the resource
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasMachineReadableFormat
+      - dpv_standards_ieee_7012_owl:hasMachineReadableFormat
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasMachineReadableFormat
+      dpv_extension_slug: standards/ieee/7012
+
+classes:
+
+  Agreement:
+    is_a: ContractualClause
+    class_uri: standards_ieee_7012:Agreement
+    description: |-
+      A compound set of terms or clauses, proposed and offered before a formal
+      contract between parties, and also referred to as a "proposal" pr
+      "proposed agreement"
+    aliases:
+      - Agreement
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Agreement
+      - dpv_standards_ieee_7012_owl:Agreement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Agreement
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementInteractionRecord:
+    is_a: RecordsOfActivities
+    class_uri: standards_ieee_7012:AgreementInteractionRecord
+    description: |-
+      A record of a interactions conducted in the course of establishing and
+      negotiating agreements, including failed attempts, creation of
+      contracts, and subsequent interactions
+    aliases:
+      - Agreement Interaction Record
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementInteractionRecord
+      - dpv_standards_ieee_7012_owl:AgreementInteractionRecord
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementInteractionRecord
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiation:
+    is_a: DpvProcess
+    class_uri: standards_ieee_7012:AgreementNegotiation
+    description: A negotiation between parties regarding an agreement
+    aliases:
+      - Agreement Negotiation
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiation
+      - dpv_standards_ieee_7012_owl:AgreementNegotiation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiation
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationRequest:
+    is_a: DpvProcess
+    class_uri: standards_ieee_7012:AgreementNegotiationRequest
+    description: |-
+      A request to initiate negotiation with the goal of finding an acceptable
+      agreement
+    aliases:
+      - Agreement Negotiation Request
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationRequest
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationRequest
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationRequest
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementPreference:
+    is_a: Rule
+    class_uri: standards_ieee_7012:AgreementPreference
+    description: |-
+      A preference regarding agreements, such as to indicate which terms are
+      acceptable or unacceptable
+    aliases:
+      - Agreement Preference
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementPreference
+      - dpv_standards_ieee_7012_owl:AgreementPreference
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#AgreementPreference
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementRegistry:
+    class_uri: standards_ieee_7012:AgreementRegistry
+    description: |-
+      A registry hosting agreements that acts as a common repository for
+      parties to utilise as a reference within requests and for negotiating
+      acceptable terms
+    aliases:
+      - Agreement Term Registry
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementRegistry
+      - dpv_standards_ieee_7012_owl:AgreementRegistry
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#AgreementRegistry
+      dpv_extension_slug: standards/ieee/7012
+
+  Endpoint:
+    is_a: DpvLocation
+    class_uri: standards_ieee_7012:Endpoint
+    description: |-
+      A location that acts as an endpoint, such as a URL, for carrying out
+      communications and interactions between parties as defined in IEEE 7012
+    aliases:
+      - Endpoint
+    in_subset:
+      - standards_ieee_7012_process_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Endpoint
+      - dpv_standards_ieee_7012_owl:Endpoint
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Endpoint
+      dpv_extension_slug: standards/ieee/7012

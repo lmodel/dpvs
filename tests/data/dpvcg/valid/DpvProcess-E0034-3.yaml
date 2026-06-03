@@ -1,5 +1,0 @@
-has_personal_data: pd:EmailAddress
-has_processing: dpv:Share
-has_purpose: dpv:FraudPreventionAndDetection
-has_recipient_third_party: ex:CompanyC
-id: ex:PDH2

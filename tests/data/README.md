@@ -1,4 +1,4 @@
-# Example data for dpvs
+# Example data for dpv
 
 This folder contains example data for testing and demonstrating the datamodel`
 sorted in subfolders:

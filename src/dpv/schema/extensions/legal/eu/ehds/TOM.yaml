@@ -1,0 +1,247 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/ehds/TOM
+name: dpv_legal_eu_ehds_TOM
+title: DPV - Legal - Eu - Ehds / Tom
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/ehds/modules/TOM-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/ehds
+  - https://w3c.github.io/dpv/2.3/legal/eu/ehds/
+source: https://w3id.org/dpv/legal/eu/ehds/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/ehds
+  dpv_submodule: TOM
+  source_ttl: upstream-releases/dpv/legal/eu/ehds/modules/TOM-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/ehds/modules/TOM.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/ehds/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/ehds#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_ehds: https://w3id.org/lmodel/dpv/legal/eu/ehds/
+  dpv_legal_eu_ehds: https://w3id.org/dpv/legal/eu/ehds#
+  dpv_legal_eu_ehds_owl: https://w3id.org/dpv/legal/eu/ehds/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_ehds
+default_range: string
+id_prefixes:
+  - legal_eu_ehds
+  - dpv_legal_eu_ehds
+  - dpv_legal_eu_ehds_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/ehds
+
+subsets:
+
+  legal_eu_ehds_TOM_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/TOM` submodule.
+
+classes:
+
+  DigitalHealthAuthorityActivityReport:
+    is_a: RecordsOfActivities
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:DigitalHealthAuthorityActivityReport
+    description: |-
+      Document containing an overview of activities reported by a digital
+      health authority
+    aliases:
+      - Digital Health Authority Activity Report
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DigitalHealthAuthorityActivityReport
+      - dpv_legal_eu_ehds_owl:DigitalHealthAuthorityActivityReport
+    close_mappings:
+      - iso27701:Clause_7_2_8
+    annotations:
+      dct_source: EHDS Art.20
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#DigitalHealthAuthorityActivityReport
+      dpv_extension_slug: legal/eu/ehds
+
+  EHRSystemInformationSheet:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EHRSystemInformationSheet
+    description: |-
+      Technical documentation with information related to the EHR system,
+      including its manufacturer, intended purpose and supported standards
+    aliases:
+      - EHR System Information Sheet
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHRSystemInformationSheet
+      - dpv_legal_eu_ehds_owl:EHRSystemInformationSheet
+    close_mappings:
+      - iso27701:Clause_7_3_2
+    annotations:
+      dct_source: EHDS Art.38
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHRSystemInformationSheet
+      dpv_extension_slug: legal/eu/ehds
+
+  EHRSystemTechnicalDocumentation:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EHRSystemTechnicalDocumentation
+    description: |-
+      Technical documentation that demonstrates that the EHR system
+      manufacturers comply with the requirements laid down in Annex II
+    aliases:
+      - EHR System Technical Documentation
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHRSystemTechnicalDocumentation
+      - dpv_legal_eu_ehds_owl:EHRSystemTechnicalDocumentation
+    close_mappings:
+      - iso27701:Clause_7_2_8
+    annotations:
+      dct_source: EHDS Art.37
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHRSystemTechnicalDocumentation
+      dpv_extension_slug: legal/eu/ehds
+
+  EUDatabaseForRegistrationOfEHRSystems:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EUDatabaseForRegistrationOfEHRSystems
+    description: |-
+      Publicly available database established by the European Commission to
+      maintain data on EHR systems for which an EU declaration of conformity
+      has been issued according to EHDS Article 39
+    aliases:
+      - EU Database for Registration of EHR Systems
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EUDatabaseForRegistrationOfEHRSystems
+      - dpv_legal_eu_ehds_owl:EUDatabaseForRegistrationOfEHRSystems
+    annotations:
+      dct_source: EHDS Art.49
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EUDatabaseForRegistrationOfEHRSystems
+      dpv_extension_slug: legal/eu/ehds
+
+  EUDatabaseForRegistrationOfWellnessApplications:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EUDatabaseForRegistrationOfWellnessApplications
+    description: |-
+      Publicly available database established by the European Commission to
+      maintain data on wellness applications for which a label has been issued
+      pursuant to EHDS Article 47
+    aliases:
+      - EU Database for Registration of Wellness Applications
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EUDatabaseForRegistrationOfWellnessApplications
+      - dpv_legal_eu_ehds_owl:EUDatabaseForRegistrationOfWellnessApplications
+    annotations:
+      dct_source: EHDS Art.49
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EUDatabaseForRegistrationOfWellnessApplications
+      dpv_extension_slug: legal/eu/ehds
+
+  EUDeclarationOfConformity:
+    is_a: CertificationSeal
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:EUDeclarationOfConformity
+    description: |-
+      Declaration of conformity by the EU stating that the manufacturer of an
+      EHR system has demonstrated that the essential requirements laid down in
+      EHDS Annex II have been fulfilled
+    aliases:
+      - EU Declaration of Conformity
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EUDeclarationOfConformity
+      - dpv_legal_eu_ehds_owl:EUDeclarationOfConformity
+    related_mappings:
+      - iso27701:Clause_5_1
+    annotations:
+      dct_source: EHDS Art.39
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EUDeclarationOfConformity
+      dpv_extension_slug: legal/eu/ehds
+
+  EuropeanDigitalTestingEnvironment:
+    is_a: SecureProcessingEnvironment
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:EuropeanDigitalTestingEnvironment
+    description: |-
+      Data processing environment for the assessment of harmonised software
+      components of EHR systems
+    aliases:
+      - European Digital Testing Environment
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EuropeanDigitalTestingEnvironment
+      - dpv_legal_eu_ehds_owl:EuropeanDigitalTestingEnvironment
+    related_mappings:
+      - iso27701:Clause_6_5
+    annotations:
+      dct_source: EHDS Art.40
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EuropeanDigitalTestingEnvironment
+      dpv_extension_slug: legal/eu/ehds
+
+  WellnessApplicationLabel:
+    is_a: CertificationSeal
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:WellnessApplicationLabel
+    description: |-
+      Label issued by the manufacturer of the wellness application that
+      indicating its compliance with the common specifications referred to in
+      EHDS Article 36 and the requirements laid down in EHDS Annex II
+    aliases:
+      - Wellness Application Label
+    in_subset:
+      - legal_eu_ehds_TOM_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:WellnessApplicationLabel
+      - dpv_legal_eu_ehds_owl:WellnessApplicationLabel
+    related_mappings:
+      - iso27701:Clause_7_3_2
+    annotations:
+      dct_source: EHDS Art.47
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#WellnessApplicationLabel
+      dpv_extension_slug: legal/eu/ehds

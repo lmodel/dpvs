@@ -1,7 +1,0 @@
-# __unmapped__:
-#   dct:hasLocation: https://example.com/service-x
-#   dct:title: Consent Notice for Service X
-has_notice_layer:
-- _:nb54dbcd72eb1436faaf91a3fc734e514b1
-- _:nb54dbcd72eb1436faaf91a3fc734e514b4
-id: ex:ExampleNotice

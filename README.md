@@ -1,12 +1,14 @@
 <a href="https://github.com/linkml/linkml-project-copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json" alt="Copier Badge" style="max-width:100%;"/></a>
 
-# dpvs
+# dpv
 
 Data Privacy Vocabulary (DPV) - LinkML Schema
 
+See [solution description](./docs/about.md).
+
 ## Documentation Website
 
-[https://lmodel.github.io/dpvs](https://lmodel.github.io/dpvs)
+[https://lmodel.github.io/dpv](https://lmodel.github.io/dpv)
 
 ## Repository Structure
 
@@ -15,10 +17,10 @@ Data Privacy Vocabulary (DPV) - LinkML Schema
 * [examples/](examples/) - Examples of using the schema
 * [project/](project/) - project files (these files are auto-generated, do not edit)
 * [src/](src/) - source files (edit these)
-  * [dpvs](src/dpvs)
-    * [schema/](src/dpvs/schema) -- LinkML schema
+  * [dpv](src/dpv)
+    * [schema/](src/dpv/schema) -- LinkML schema
       (edit this)
-    * [datamodel/](src/dpvs/datamodel) -- generated
+    * [datamodel/](src/dpv/datamodel) -- generated
       Python datamodel
 * [tests/](tests/) - Python tests
   * [data/](tests/data) - Example data

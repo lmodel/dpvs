@@ -1,0 +1,351 @@
+id: https://w3id.org/lmodel/dpv/tech/io
+name: dpv_tech_io
+title: DPV - Tech / Io
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `tech/modules/io-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/tech
+  - https://w3c.github.io/dpv/2.3/tech/
+source: https://w3id.org/dpv/tech/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: tech
+  dpv_submodule: io
+  source_ttl: upstream-releases/dpv/tech/modules/io-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/tech/modules/io.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/tech/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/tech#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: tech
+default_range: string
+id_prefixes:
+  - tech
+  - dpv_tech
+  - dpv_tech_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  tech_io_subset:
+    description: Entities from the DPV `tech/modules/io` submodule.
+
+classes:
+
+  AudioContent:
+    is_a: Content
+    class_uri: tech:AudioContent
+    description: Content that is or has an audio component
+    aliases:
+      - Audio Content
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:AudioContent
+      - dpv_tech_owl:AudioContent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#AudioContent
+      dpv_extension_slug: tech
+
+  Content:
+    is_a: DpvData
+    mixins:
+      - InputOutput
+    class_uri: tech:Content
+    description: Data or information in a particular form and structure
+    aliases:
+      - Content
+    comments:
+      - |-
+        Content is a concept referring to information used in the context of
+        technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Content
+      - dpv_tech_owl:Content
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Content
+      dpv_extension_slug: tech
+
+  DpvAction:
+    is_a: InputOutput
+    class_uri: tech:Action
+    description: A process or activity, which could be physical or virtual
+    aliases:
+      - Action
+    comments:
+      - |-
+        Action is a concept referring to activities or tasks in the context of
+        technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Action
+      - dpv_tech_owl:Action
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Action
+      dpv_extension_slug: tech
+
+  DpvDecision:
+    is_a: InputOutput
+    class_uri: tech:Decision
+    description: |-
+      A conclusion or determination of an action or choice in the context of
+      technologies
+    aliases:
+      - Decision
+    comments:
+      - |-
+        Decision is a concept referring to activities or tasks in the context of
+        technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Decision
+      - dpv_tech_owl:Decision
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Decision
+      dpv_extension_slug: tech
+
+  ImageContent:
+    is_a: Content
+    class_uri: tech:ImageContent
+    description: Content that is or has an image component
+    aliases:
+      - Image Content
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:ImageContent
+      - dpv_tech_owl:ImageContent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#ImageContent
+      dpv_extension_slug: tech
+
+  Input:
+    is_a: InputOutput
+    class_uri: tech:Input
+    description: Input to a technology
+    aliases:
+      - Input
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Input
+      - dpv_tech_owl:Input
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Input
+      dpv_extension_slug: tech
+
+  InputAction:
+    is_a: DpvAction
+    mixins:
+      - Input
+    class_uri: tech:InputAction
+    description: Action provided as an input to a technology
+    aliases:
+      - Input Action
+    comments:
+      - |-
+        Action can mean a physical action, such as the movements involved in
+        robotics
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:InputAction
+      - dpv_tech_owl:InputAction
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#InputAction
+      dpv_extension_slug: tech
+
+  InputData:
+    is_a: DpvData
+    mixins:
+      - Input
+    class_uri: tech:InputData
+    description: Data that is provided an input to a technology
+    aliases:
+      - Input Data
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:InputData
+      - dpv_tech_owl:InputData
+    close_mappings:
+      - iso22989:Data
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#InputData
+      dpv_extension_slug: tech
+
+  Output:
+    is_a: InputOutput
+    class_uri: tech:Output
+    description: Output from a technology
+    aliases:
+      - Output
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Output
+      - dpv_tech_owl:Output
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Output
+      dpv_extension_slug: tech
+
+  OutputAction:
+    is_a: DpvAction
+    mixins:
+      - Output
+    class_uri: tech:OutputAction
+    description: Action produced as an output from a technology
+    aliases:
+      - Output Action
+    comments:
+      - |-
+        Action can mean a physical action, such as the movements involved in
+        robotics
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:OutputAction
+      - dpv_tech_owl:OutputAction
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#OutputAction
+      dpv_extension_slug: tech
+
+  OutputData:
+    is_a: DpvData
+    mixins:
+      - Output
+    class_uri: tech:OutputData
+    description: Data that is produced as an output from a technology
+    aliases:
+      - Output Data
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:OutputData
+      - dpv_tech_owl:OutputData
+    close_mappings:
+      - iso22989:Data
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#OutputData
+      dpv_extension_slug: tech
+
+  Prediction:
+    is_a: InputOutput
+    class_uri: tech:Prediction
+    description: |-
+      An inference or prediction of an action or data or decision in the
+      context of technologies
+    aliases:
+      - Prediction
+    comments:
+      - |-
+        Prediction is a concept referring to activities or tasks in the context
+        of technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Prediction
+      - dpv_tech_owl:Prediction
+    close_mappings:
+      - iso22989:Prediction
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Prediction
+      dpv_extension_slug: tech
+
+  Recommendation:
+    is_a: InputOutput
+    class_uri: tech:Recommendation
+    description: |-
+      A recommendation or suggestion of an action or decision or choice in the
+      context of technologies
+    aliases:
+      - Recommendation
+    comments:
+      - |-
+        Recommendation is a concept referring to activities or tasks in the
+        context of technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:Recommendation
+      - dpv_tech_owl:Recommendation
+    close_mappings:
+      - iso22989:Recommendation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Recommendation
+      dpv_extension_slug: tech
+
+  TextualContent:
+    is_a: Content
+    class_uri: tech:TextualContent
+    description: Content that is or has a textual component
+    aliases:
+      - Textual Content
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:TextualContent
+      - dpv_tech_owl:TextualContent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#TextualContent
+      dpv_extension_slug: tech
+
+  VideoContent:
+    is_a: Content
+    class_uri: tech:VideoContent
+    description: Content that is or has a video component
+    aliases:
+      - Video Content
+    in_subset:
+      - tech_io_subset
+    exact_mappings:
+      - dpv_tech:VideoContent
+      - dpv_tech_owl:VideoContent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#VideoContent
+      dpv_extension_slug: tech

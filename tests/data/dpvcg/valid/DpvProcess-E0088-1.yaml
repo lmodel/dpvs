@@ -1,6 +1,0 @@
-# __unmapped__:
-#   dct:subject: ex:SubmittedComplaint
-has_impact:
-- _:nfa057dbac1ce431ab60fd920324255eeb1
-- _:nfa057dbac1ce431ab60fd920324255eeb2
-id: ex:InvestigatedComplaint

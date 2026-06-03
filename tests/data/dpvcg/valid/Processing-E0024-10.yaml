@@ -1,6 +1,0 @@
-# __unmapped__:
-#   skos:broader: dpv:Transfer
-has_data_exporter: ex:BetaInc
-has_data_importer: ex:Acme
-has_personal_data: ex:CallStatistics
-id: ex:TransferStatistics

@@ -1,9 +1,0 @@
-# __unmapped__:
-#   dct:title: Acme's Privacy Policy
-#   foaf:page: https://example.com/
-has_location: https://example.com
-has_personal_data: pd:EmailAddressPersonal
-has_process: ex:Service
-has_processing: dpv:Collect
-has_purpose: dpv:ServiceProvision
-id: ex:AcmePrivacyPolicy

@@ -1,0 +1,243 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/nis2/notice
+name: dpv_legal_eu_nis2_notice
+title: DPV - Legal - Eu - Nis2 / Notice
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/nis2/modules/notice-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/nis2
+  - https://w3c.github.io/dpv/2.3/legal/eu/nis2/
+source: https://w3id.org/dpv/legal/eu/nis2/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/nis2
+  dpv_submodule: notice
+  source_ttl: upstream-releases/dpv/legal/eu/nis2/modules/notice-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/nis2/modules/notice.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/nis2/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/nis2#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_nis2: https://w3id.org/lmodel/dpv/legal/eu/nis2/
+  dpv_legal_eu_nis2: https://w3id.org/dpv/legal/eu/nis2#
+  dpv_legal_eu_nis2_owl: https://w3id.org/dpv/legal/eu/nis2/owl#
+  risk: https://w3id.org/lmodel/dpv/risk/
+  dpv_risk: https://w3id.org/dpv/risk#
+  dpv_risk_owl: https://w3id.org/dpv/risk/owl#
+
+default_prefix: legal_eu_nis2
+default_range: string
+id_prefixes:
+  - legal_eu_nis2
+  - dpv_legal_eu_nis2
+  - dpv_legal_eu_nis2_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/nis2
+  - dpv:schema/extensions/risk
+
+subsets:
+
+  legal_eu_nis2_notice_subset:
+    description: Entities from the DPV `legal/eu/nis2/modules/notice` submodule.
+
+classes:
+
+  EarlyWarningReport:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:EarlyWarningReport
+    description: |-
+      Report sent within 24 hours of detection containing cause of the
+      incident and whether it was unlawful or malicious and whether there is
+      cross-border impact
+    aliases:
+      - Early Warning Report
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:EarlyWarningReport
+      - dpv_legal_eu_nis2_owl:EarlyWarningReport
+    close_mappings:
+      - nist_csf_v2:RS_CO
+    annotations:
+      dct_source: NIS2 Article 23(4)(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#EarlyWarningReport
+      dpv_extension_slug: legal/eu/nis2
+
+  FinalReport:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:FinalReport
+    description: |-
+      Report sent within 1 month of incident handling i.e. completing the
+      incident recovery and containing the applied/ongoing measures, and
+      containing a 'detailed description' of the incident including its
+      severity and impact, threat type and root cause that are likely to have
+      triggered the incident, applied and ongoing measures, and - if
+      applicable - cross-border impacts
+    aliases:
+      - Final Report
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:FinalReport
+      - dpv_legal_eu_nis2_owl:FinalReport
+    close_mappings:
+      - nist_csf_v2:RC_CO
+    annotations:
+      dct_source: NIS2 Article 23(4)(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#FinalReport
+      dpv_extension_slug: legal/eu/nis2
+
+  IncidentAssessmentReport:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:IncidentAssessmentReport
+    description: |-
+      Report sent within 72 hours of detection containing updates on the
+      earlier information as well as initial assessment of severity and impact
+      of the incident as well as any 'indicators of compromise'
+    aliases:
+      - Incident Assessment Report
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:IncidentAssessmentReport
+      - dpv_legal_eu_nis2_owl:IncidentAssessmentReport
+    close_mappings:
+      - nist_csf_v2:RS_AN
+    annotations:
+      dct_source: NIS2 Article 23(4)(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#IncidentAssessmentReport
+      dpv_extension_slug: legal/eu/nis2
+
+  InitialFeedbackOnIncident:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:InitialFeedbackOnIncident
+    description: |-
+      Notification from authority to organisation (upon request, within 24
+      hours or early warning) containing "initial feedback" and guidelines on
+      measures that can be taken in response to a breach
+    aliases:
+      - Initial Feedback on Incident
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:InitialFeedbackOnIncident
+      - dpv_legal_eu_nis2_owl:InitialFeedbackOnIncident
+    close_mappings:
+      - nist_csf_v2:RS_CO
+    annotations:
+      dct_source: NIS2 Article 23(5)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#InitialFeedbackOnIncident
+      dpv_extension_slug: legal/eu/nis2
+
+  IntermediateReport:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:IntermediateReport
+    description: |-
+      Report sent upon request which provides updates, if any, to previous
+      information
+    aliases:
+      - Intermediate Report
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:IntermediateReport
+      - dpv_legal_eu_nis2_owl:IntermediateReport
+    close_mappings:
+      - nist_csf_v2:RS_AN
+    annotations:
+      dct_source: NIS2 Article 23(4)(c)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#IntermediateReport
+      dpv_extension_slug: legal/eu/nis2
+
+  ProgressReport:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:ProgressReport
+    description: |-
+      Report sent within 1 month of detection if the incident handling has not
+      been completed by then, with updates to previous information
+    aliases:
+      - Progress Report
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:ProgressReport
+      - dpv_legal_eu_nis2_owl:ProgressReport
+    close_mappings:
+      - nist_csf_v2:RS_MA
+    annotations:
+      dct_source: NIS2 Article 23(4)(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#ProgressReport
+      dpv_extension_slug: legal/eu/nis2
+
+  RiskMitigationAdvice:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:RiskMitigationAdvice
+    description: |-
+      Notification from organisation to stakeholders regarding risk
+      mitigations to be applied and existence of threats
+    aliases:
+      - Risk Mitigation Advice
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:RiskMitigationAdvice
+      - dpv_legal_eu_nis2_owl:RiskMitigationAdvice
+    close_mappings:
+      - nist_csf_v2:RS_MI
+    annotations:
+      dct_source: NIS2 Article 23(5)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#RiskMitigationAdvice
+      dpv_extension_slug: legal/eu/nis2
+
+  SignificantIncidentNotice:
+    is_a: IncidentNotice
+    class_uri: legal_eu_nis2:SignificantIncidentNotice
+    description: Notice sent for reporting significant incidents
+    aliases:
+      - Significant Incident Notice
+    in_subset:
+      - legal_eu_nis2_notice_subset
+    exact_mappings:
+      - dpv_legal_eu_nis2:SignificantIncidentNotice
+      - dpv_legal_eu_nis2_owl:SignificantIncidentNotice
+    close_mappings:
+      - nist_csf_v2:RS_CO
+    annotations:
+      dct_source: NIS2 Article 23(3)
+      upstream_iri: https://w3id.org/dpv/legal/eu/nis2/owl#SignificantIncidentNotice
+      dpv_extension_slug: legal/eu/nis2

@@ -1,0 +1,1581 @@
+id: https://w3id.org/lmodel/dpv/ai/risks
+name: dpv_ai_risks
+title: DPV - Ai / Risks
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `ai/modules/risks-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/ai
+  - https://w3c.github.io/dpv/2.3/ai/
+source: https://w3id.org/dpv/ai/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: ai
+  dpv_submodule: risks
+  source_ttl: upstream-releases/dpv/ai/modules/risks-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/ai/modules/risks.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/ai/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/ai#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  ai: https://w3id.org/lmodel/dpv/ai/
+  dpv_ai: https://w3id.org/dpv/ai#
+  dpv_ai_owl: https://w3id.org/dpv/ai/owl#
+  risk: https://w3id.org/lmodel/dpv/risk/
+  dpv_risk: https://w3id.org/dpv/risk#
+  dpv_risk_owl: https://w3id.org/dpv/risk/owl#
+
+default_prefix: ai
+default_range: string
+id_prefixes:
+  - ai
+  - dpv_ai
+  - dpv_ai_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/ai
+  - dpv:schema/extensions/risk
+
+subsets:
+
+  ai_risks_subset:
+    description: Entities from the DPV `ai/modules/risks` submodule.
+
+classes:
+
+  AIBias:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+      - Bias
+    class_uri: ai:AIBias
+    description: |-
+      Bias associated with development, use, or other activities involving an
+      AI technology or system
+    aliases:
+      - AI Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:AIBias
+      - dpv_ai_owl:AIBias
+    close_mappings:
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#AIBias
+      dpv_extension_slug: ai
+
+  AISystemRisk:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:AISystemRisk
+    description: Risks associated with AI Systems
+    aliases:
+      - AI System Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:AISystemRisk
+      - dpv_ai_owl:AISystemRisk
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#AISystemRisk
+      dpv_extension_slug: ai
+
+  AdversarialAttack:
+    is_a: SecurityAttack
+    mixins:
+      - RiskConcept
+      - IntegrityConcept
+      - PotentialConsequence
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:AdversarialAttack
+    description: Inputs designed to cause the model to make a mistake
+    aliases:
+      - Adversarial Attack
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:AdversarialAttack
+      - dpv_ai_owl:AdversarialAttack
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#AdversarialAttack
+      dpv_extension_slug: ai
+
+  AlgorithmSelectionBias:
+    is_a: EngineeringDecisionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:AlgorithmSelectionBias
+    description: |-
+      Bias that occurs from the selection of machine learning algorithms built
+      into the AI system which introduce unwanted bias in predictions made by
+      the system because the type of algorithm used introduces a variation in
+      the performance of the ML model
+    aliases:
+      - Algorithm Selection Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:AlgorithmSelectionBias
+      - dpv_ai_owl:AlgorithmSelectionBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#AlgorithmSelectionBias
+      dpv_extension_slug: ai
+
+  AutomationBias:
+    is_a: AIBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+      - CognitiveBias
+    class_uri: ai:AutomationBias
+    description: |-
+      Bias that occurs due to propensity for humans to favour suggestions from
+      automated decision-making systems and to ignore contradictory
+      information made without automation, even if it is correct
+    aliases:
+      - Automation Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:AutomationBias
+      - dpv_ai_owl:AutomationBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#AutomationBias
+      dpv_extension_slug: ai
+
+  DataAggregationBias:
+    is_a: DataBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:DataAggregationBias
+    description: |-
+      Bias that occurs from aggregating data covering different groups of
+      objects that might have different statistical distributions which
+      introduce bias into the data used to train AI systems
+    aliases:
+      - Data Aggregation Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:DataAggregationBias
+      - dpv_ai_owl:DataAggregationBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#DataAggregationBias
+      dpv_extension_slug: ai
+
+  DataBias:
+    is_a: AIBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:DataBias
+    description: |-
+      Bias that occurs due to unaddressed data properties that lead to AI
+      systems that perform better or worse for different groups
+    aliases:
+      - Data Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:DataBias
+      - dpv_ai_owl:DataBias
+    related_mappings:
+      - iso42001:AIRisk
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#DataBias
+      dpv_extension_slug: ai
+
+  DataLabellingProcessBias:
+    is_a: DataBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:DataLabellingProcessBias
+    description: |-
+      Bias that occurs due to the labelling process itself introducing
+      societal or cognitive biases
+    aliases:
+      - Data Labelling Process Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:DataLabellingProcessBias
+      - dpv_ai_owl:DataLabellingProcessBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#DataLabellingProcessBias
+      dpv_extension_slug: ai
+
+  DataPoisoning:
+    is_a: SecurityAttack
+    mixins:
+      - RiskConcept
+      - IntegrityConcept
+      - PotentialConsequence
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:DataPoisoning
+    description: Attack trying to manipulate the training dataset
+    aliases:
+      - Data Poisoning
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:DataPoisoning
+      - dpv_ai_owl:DataPoisoning
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#DataPoisoning
+      dpv_extension_slug: ai
+
+  DataRisk:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:DataRisk
+    description: |-
+      Risk associated with data used or produced or otherwise involved in the
+      context of AI
+    aliases:
+      - Data Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:DataRisk
+      - dpv_ai_owl:DataRisk
+    related_mappings:
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#DataRisk
+      dpv_extension_slug: ai
+
+  DistributedTrainingBias:
+    is_a: DataBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:DistributedTrainingBias
+    description: |-
+      Bias that occurs due to distributed machine having different sources of
+      data that do not have the same distribution of feature space
+    aliases:
+      - Distributed Training Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:DistributedTrainingBias
+      - dpv_ai_owl:DistributedTrainingBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#DistributedTrainingBias
+      dpv_extension_slug: ai
+
+  EngineeringDecisionBias:
+    is_a: AIBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:EngineeringDecisionBias
+    description: |-
+      Bias that occurs due to machine learning model architectures -
+      encompassing all model specifications, parameters and manually designed
+      features
+    aliases:
+      - Engineering Decision Bias
+    comments:
+      - Data bias and human cognitive bias can contribute to such bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:EngineeringDecisionBias
+      - dpv_ai_owl:EngineeringDecisionBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#EngineeringDecisionBias
+      dpv_extension_slug: ai
+
+  ExplainabilityRisk:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ExplainabilityRisk
+    description: |-
+      Risk that an AI's decisions or behaviors cannot be adequately
+      understood, interpreted, or justified by relevant stakeholders.
+    aliases:
+      - Explainability Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ExplainabilityRisk
+      - dpv_ai_owl:ExplainabilityRisk
+    close_mappings:
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ExplainabilityRisk
+      dpv_extension_slug: ai
+
+  FeatureEngineeringBias:
+    is_a: EngineeringDecisionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:FeatureEngineeringBias
+    description: |-
+      Bias that occurs from steps such as encoding, data type conversion,
+      dimensionality reduction and feature selection which are subject to
+      choices made by the AI developer and introduce bias in the ML model
+    aliases:
+      - Feature Engineering Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:FeatureEngineeringBias
+      - dpv_ai_owl:FeatureEngineeringBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#FeatureEngineeringBias
+      dpv_extension_slug: ai
+
+  HyperparameterTuningBias:
+    is_a: EngineeringDecisionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:HyperparameterTuningBias
+    description: |-
+      Bias that occurs from hyperparameters defining how the model is
+      structured and which cannot be directly trained from the data like model
+      parameters, where hyperparameters affect the model functioning and
+      accuracy of the model
+    aliases:
+      - Hyperparameter Tuning Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:HyperparameterTuningBias
+      - dpv_ai_owl:HyperparameterTuningBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#HyperparameterTuningBias
+      dpv_extension_slug: ai
+
+  InformativenessBias:
+    is_a: EngineeringDecisionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InformativenessBias
+    description: |-
+      Bias that occurs or some groups, the mapping between inputs present in
+      the data and outputs are more difficult to learn and where a model that
+      only has one feature set available, can be biased against the group
+      whose relationships are difficult to learn from available data
+    aliases:
+      - Informativeness Bias
+    comments:
+      - |-
+        This can happen when some features are highly informative about one
+        group, while a different set of features is highly informative about
+        another group. If this is the case, then a model that only has one
+        feature set available, can be biased against the group whose
+        relationships are difficult to learn from available data
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InformativenessBias
+      - dpv_ai_owl:InformativenessBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#InformativenessBias
+      dpv_extension_slug: ai
+
+  InputDataBias:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataBias
+    description: |-
+      Concept representing input data containing or potentially containing
+      bias
+    aliases:
+      - Input Data Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataBias
+      - dpv_ai_owl:InputDataBias
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataBias
+      dpv_extension_slug: ai
+
+  InputDataInaccurate:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataInaccurate
+    description: Concept representing input data being inaccurate
+    aliases:
+      - Input Data Inaccurate
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataInaccurate
+      - dpv_ai_owl:InputDataInaccurate
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataInaccurate
+      dpv_extension_slug: ai
+
+  InputDataInappropriate:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataInappropriate
+    description: Concept representing input data being inappropriate
+    aliases:
+      - Input Data Inappropriate
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataInappropriate
+      - dpv_ai_owl:InputDataInappropriate
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataInappropriate
+      dpv_extension_slug: ai
+
+  InputDataIncomplete:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataIncomplete
+    description: Concept representing input data being incomplete
+    aliases:
+      - Input Data Incomplete
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataIncomplete
+      - dpv_ai_owl:InputDataIncomplete
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataIncomplete
+      dpv_extension_slug: ai
+
+  InputDataInconsistent:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataInconsistent
+    description: Concept representing input data being inconsistent
+    aliases:
+      - Input Data Inconsistent
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataInconsistent
+      - dpv_ai_owl:InputDataInconsistent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataInconsistent
+      dpv_extension_slug: ai
+
+  InputDataMisclassified:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataMisclassified
+    description: Concept representing input data being misclassified
+    aliases:
+      - Input Data Misclassified
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataMisclassified
+      - dpv_ai_owl:InputDataMisclassified
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataMisclassified
+      dpv_extension_slug: ai
+
+  InputDataMisinterpretation:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataMisinterpretation
+    description: Concept representing input data being misinterpreted
+    aliases:
+      - Input Data Misinterpretation
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataMisinterpretation
+      - dpv_ai_owl:InputDataMisinterpretation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataMisinterpretation
+      dpv_extension_slug: ai
+
+  InputDataNoise:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataNoise
+    description: Concept representing input data being noisy
+    aliases:
+      - Input Data Noise
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataNoise
+      - dpv_ai_owl:InputDataNoise
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataNoise
+      dpv_extension_slug: ai
+
+  InputDataOutdated:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataOutdated
+    description: Concept representing input data being outdated
+    aliases:
+      - Input Data Outdated
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataOutdated
+      - dpv_ai_owl:InputDataOutdated
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataOutdated
+      dpv_extension_slug: ai
+
+  InputDataRisk:
+    is_a: DataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataRisk
+    description: Risks and risk concepts related to input data
+    aliases:
+      - Input Data Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataRisk
+      - dpv_ai_owl:InputDataRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataRisk
+      dpv_extension_slug: ai
+
+  InputDataSelectionError:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataSelectionError
+    description: Concept representing an error in input data selection
+    aliases:
+      - Input Data Selection Error
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataSelectionError
+      - dpv_ai_owl:InputDataSelectionError
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataSelectionError
+      dpv_extension_slug: ai
+
+  InputDataSparse:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataSparse
+    description: Concept representing input data being sparse
+    aliases:
+      - Input Data Sparse
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataSparse
+      - dpv_ai_owl:InputDataSparse
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataSparse
+      dpv_extension_slug: ai
+
+  InputDataUnrepresentative:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataUnrepresentative
+    description: Concept representing input data being unrepresentative
+    aliases:
+      - Input Data Unrepresentative
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataUnrepresentative
+      - dpv_ai_owl:InputDataUnrepresentative
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataUnrepresentative
+      dpv_extension_slug: ai
+
+  InputDataUnstructured:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataUnstructured
+    description: Concept representing input data being unstructured
+    aliases:
+      - Input Data Unstructured
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataUnstructured
+      - dpv_ai_owl:InputDataUnstructured
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataUnstructured
+      dpv_extension_slug: ai
+
+  InputDataUnverified:
+    is_a: InputDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:InputDataUnverified
+    description: Concept representing input data being unverified
+    aliases:
+      - Input Data Unverified
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:InputDataUnverified
+      - dpv_ai_owl:InputDataUnverified
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#InputDataUnverified
+      dpv_extension_slug: ai
+
+  MissingFeaturesBias:
+    is_a: DataBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:MissingFeaturesBias
+    description: |-
+      Bias that occurs when features are missing from individual training
+      samples
+    aliases:
+      - Missing Features Bias
+    comments:
+      - |-
+        If the frequency of missing features is higher for one group than
+        another then this presents another vector for bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:MissingFeaturesBias
+      - dpv_ai_owl:MissingFeaturesBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#MissingFeaturesBias
+      dpv_extension_slug: ai
+
+  ModelBias:
+    is_a: EngineeringDecisionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ModelBias
+    description: |-
+      Bias that occurs when ML uses functions like a maximum likelihood
+      estimator to determine parameters, and there is data skew or
+      under-representation present in the data, where the maximum likelihood
+      estimation tends to amplify any underlying bias in the distribution
+    aliases:
+      - Model Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ModelBias
+      - dpv_ai_owl:ModelBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#ModelBias
+      dpv_extension_slug: ai
+
+  ModelEvasion:
+    is_a: SecurityAttack
+    mixins:
+      - RiskConcept
+      - IntegrityConcept
+      - PotentialConsequence
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ModelEvasion
+    description: |-
+      An input, which seems normal for a human but is wrongly classified by ML
+      models
+    aliases:
+      - Model Evasion
+    comments:
+      - |-
+        (The EU Assessment List for Trustworthy AI
+        (ALTAI),https://data.europa.eu/doi/10.2759/002360)
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ModelEvasion
+      - dpv_ai_owl:ModelEvasion
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ModelEvasion
+      dpv_extension_slug: ai
+
+  ModelExpressivenessBias:
+    is_a: ModelInteractionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ModelExpressivenessBias
+    description: |-
+      Bias that occurs from the number and nature of parameters in a model as
+      well as the neural network topology which affect the expressiveness of
+      the model and any feature that affects model expressiveness differently
+      across groups
+    aliases:
+      - Model Expressiveness Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ModelExpressivenessBias
+      - dpv_ai_owl:ModelExpressivenessBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#ModelExpressivenessBias
+      dpv_extension_slug: ai
+
+  ModelInteractionBias:
+    is_a: EngineeringDecisionBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ModelInteractionBias
+    description: |-
+      Bias that occurs from the structure of a model to create biased
+      predictions
+    aliases:
+      - Model Interaction Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ModelInteractionBias
+      - dpv_ai_owl:ModelInteractionBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#ModelInteractionBias
+      dpv_extension_slug: ai
+
+  ModelInversion:
+    is_a: SecurityAttack
+    mixins:
+      - RiskConcept
+      - ConfidentialityConcept
+      - PotentialConsequence
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ModelInversion
+    description: |-
+      A type of attack to AI models, in which the access to a model is abused
+      to infer information about the training data
+    aliases:
+      - Model Inversion
+    comments:
+      - |-
+        (HLEG Assessment List for Trustworthy Artificial Intelligence
+        (ALTAI),https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment)
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ModelInversion
+      - dpv_ai_owl:ModelInversion
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ModelInversion
+      dpv_extension_slug: ai
+
+  ModelRisk:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ModelRisk
+    description: Risks associated with AI Models
+    aliases:
+      - Model Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ModelRisk
+      - dpv_ai_owl:ModelRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ModelRisk
+      dpv_extension_slug: ai
+
+  NonRepresentativeSamplingBias:
+    is_a: DataBias
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:NonRepresentativeSamplingBias
+    description: |-
+      Bias that occurs if a dataset is not representative of the intended
+      deployment environment, where the model learns biases based on the ways
+      in which the data is non-representative
+    aliases:
+      - Non-Representative Sampling Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:NonRepresentativeSamplingBias
+      - dpv_ai_owl:NonRepresentativeSamplingBias
+    annotations:
+      dct_source: ISO/IEC 24027:2021
+      upstream_iri: https://w3id.org/dpv/ai/owl#NonRepresentativeSamplingBias
+      dpv_extension_slug: ai
+
+  RiskConcept:
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:RiskConcept
+    description: |-
+      Risk concepts such as risk sources, risks, consequences, and impacts
+      associated specifically with development, use, or operation of AI
+    aliases:
+      - RiskConcept
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:RiskConcept
+      - dpv_ai_owl:RiskConcept
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#RiskConcept
+      dpv_extension_slug: ai
+
+  SecurityAttack:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:SecurityAttack
+    description: |-
+      Risks or issues associated with security attacks related to AI
+      technologies, models, and systems
+    aliases:
+      - Security Attack
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:SecurityAttack
+      - dpv_ai_owl:SecurityAttack
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#SecurityAttack
+      dpv_extension_slug: ai
+
+  TestingDataBias:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataBias
+    description: |-
+      Concept representing testing data containing or potentially containing
+      bias
+    aliases:
+      - Testing Data Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataBias
+      - dpv_ai_owl:TestingDataBias
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataBias
+      dpv_extension_slug: ai
+
+  TestingDataInaccurate:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataInaccurate
+    description: Concept representing testing data being inaccurate
+    aliases:
+      - Testing Data Inaccurate
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataInaccurate
+      - dpv_ai_owl:TestingDataInaccurate
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataInaccurate
+      dpv_extension_slug: ai
+
+  TestingDataInappropriate:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataInappropriate
+    description: Concept representing testing data being inappropriate
+    aliases:
+      - Testing Data Inappropriate
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataInappropriate
+      - dpv_ai_owl:TestingDataInappropriate
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataInappropriate
+      dpv_extension_slug: ai
+
+  TestingDataIncomplete:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataIncomplete
+    description: Concept representing testing data being incomplete
+    aliases:
+      - Testing Data Incomplete
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataIncomplete
+      - dpv_ai_owl:TestingDataIncomplete
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataIncomplete
+      dpv_extension_slug: ai
+
+  TestingDataInconsistent:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataInconsistent
+    description: Concept representing testing data being inconsistent
+    aliases:
+      - Testing Data Inconsistent
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataInconsistent
+      - dpv_ai_owl:TestingDataInconsistent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataInconsistent
+      dpv_extension_slug: ai
+
+  TestingDataMisclassified:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataMisclassified
+    description: Concept representing testing data being misclassified
+    aliases:
+      - Testing Data Misclassified
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataMisclassified
+      - dpv_ai_owl:TestingDataMisclassified
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataMisclassified
+      dpv_extension_slug: ai
+
+  TestingDataMisinterpretation:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataMisinterpretation
+    description: Concept representing testing data being misinterpreted
+    aliases:
+      - Testing Data Misinterpretation
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataMisinterpretation
+      - dpv_ai_owl:TestingDataMisinterpretation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataMisinterpretation
+      dpv_extension_slug: ai
+
+  TestingDataNoise:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataNoise
+    description: Concept representing testing data being noisy
+    aliases:
+      - Testing Data Noise
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataNoise
+      - dpv_ai_owl:TestingDataNoise
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataNoise
+      dpv_extension_slug: ai
+
+  TestingDataOutdated:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataOutdated
+    description: Concept representing testing data being outdated
+    aliases:
+      - Testing Data Outdated
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataOutdated
+      - dpv_ai_owl:TestingDataOutdated
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataOutdated
+      dpv_extension_slug: ai
+
+  TestingDataRisk:
+    is_a: DataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataRisk
+    description: Risks and risk concepts related to testing data
+    aliases:
+      - Testing Data Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataRisk
+      - dpv_ai_owl:TestingDataRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataRisk
+      dpv_extension_slug: ai
+
+  TestingDataSelectionError:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataSelectionError
+    description: Concept representing an error in testing data selection
+    aliases:
+      - Testing Data Selection Error
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataSelectionError
+      - dpv_ai_owl:TestingDataSelectionError
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataSelectionError
+      dpv_extension_slug: ai
+
+  TestingDataSparse:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataSparse
+    description: Concept representing testing data being sparse
+    aliases:
+      - Testing Data Sparse
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataSparse
+      - dpv_ai_owl:TestingDataSparse
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataSparse
+      dpv_extension_slug: ai
+
+  TestingDataUnrepresentative:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataUnrepresentative
+    description: Concept representing testing data being unrepresentative
+    aliases:
+      - Testing Data Unrepresentative
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataUnrepresentative
+      - dpv_ai_owl:TestingDataUnrepresentative
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataUnrepresentative
+      dpv_extension_slug: ai
+
+  TestingDataUnstructured:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataUnstructured
+    description: Concept representing testing data being unstructured
+    aliases:
+      - Testing Data Unstructured
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataUnstructured
+      - dpv_ai_owl:TestingDataUnstructured
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataUnstructured
+      dpv_extension_slug: ai
+
+  TestingDataUnverified:
+    is_a: TestingDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TestingDataUnverified
+    description: Concept representing testing data being unverified
+    aliases:
+      - Testing Data Unverified
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TestingDataUnverified
+      - dpv_ai_owl:TestingDataUnverified
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TestingDataUnverified
+      dpv_extension_slug: ai
+
+  TransparencyRisk:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:TransparencyRisk
+    description: |-
+      Risk that an AI's design, performance, outputs, or other characteristics
+      are not sufficiently transparent
+    aliases:
+      - Transparency Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:TransparencyRisk
+      - dpv_ai_owl:TransparencyRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#TransparencyRisk
+      dpv_extension_slug: ai
+
+  UserRisk:
+    is_a: RiskConcept
+    mixins:
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:UserRisk
+    description: Risks associated with Users of AI Systems
+    aliases:
+      - User Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:UserRisk
+      - dpv_ai_owl:UserRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#UserRisk
+      dpv_extension_slug: ai
+
+  ValidationDataBias:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataBias
+    description: |-
+      Concept representing validation data containing or potentially
+      containing bias
+    aliases:
+      - Validation Data Bias
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataBias
+      - dpv_ai_owl:ValidationDataBias
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataBias
+      dpv_extension_slug: ai
+
+  ValidationDataInaccurate:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataInaccurate
+    description: Concept representing validation data being inaccurate
+    aliases:
+      - Validation Data Inaccurate
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataInaccurate
+      - dpv_ai_owl:ValidationDataInaccurate
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataInaccurate
+      dpv_extension_slug: ai
+
+  ValidationDataInappropriate:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataInappropriate
+    description: Concept representing validation data being inappropriate
+    aliases:
+      - Validation Data Inappropriate
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataInappropriate
+      - dpv_ai_owl:ValidationDataInappropriate
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataInappropriate
+      dpv_extension_slug: ai
+
+  ValidationDataIncomplete:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataIncomplete
+    description: Concept representing validation data being incomplete
+    aliases:
+      - Validation Data Incomplete
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataIncomplete
+      - dpv_ai_owl:ValidationDataIncomplete
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataIncomplete
+      dpv_extension_slug: ai
+
+  ValidationDataInconsistent:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataInconsistent
+    description: Concept representing validation data being inconsistent
+    aliases:
+      - Validation Data Inconsistent
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataInconsistent
+      - dpv_ai_owl:ValidationDataInconsistent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataInconsistent
+      dpv_extension_slug: ai
+
+  ValidationDataMisclassified:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataMisclassified
+    description: Concept representing validation data being misclassified
+    aliases:
+      - Validation Data Misclassified
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataMisclassified
+      - dpv_ai_owl:ValidationDataMisclassified
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataMisclassified
+      dpv_extension_slug: ai
+
+  ValidationDataMisinterpretation:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataMisinterpretation
+    description: Concept representing validation data being misinterpreted
+    aliases:
+      - Validation Data Misinterpretation
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataMisinterpretation
+      - dpv_ai_owl:ValidationDataMisinterpretation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataMisinterpretation
+      dpv_extension_slug: ai
+
+  ValidationDataNoise:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataNoise
+    description: Concept representing validation data being noisy
+    aliases:
+      - Validation Data Noise
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataNoise
+      - dpv_ai_owl:ValidationDataNoise
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataNoise
+      dpv_extension_slug: ai
+
+  ValidationDataOutdated:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataOutdated
+    description: Concept representing validation data being outdated
+    aliases:
+      - Validation Data Outdated
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataOutdated
+      - dpv_ai_owl:ValidationDataOutdated
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataOutdated
+      dpv_extension_slug: ai
+
+  ValidationDataRisk:
+    is_a: DataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataRisk
+    description: Risks and risk concepts related to validation data
+    aliases:
+      - Validation Data Risk
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataRisk
+      - dpv_ai_owl:ValidationDataRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataRisk
+      dpv_extension_slug: ai
+
+  ValidationDataSelectionError:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataSelectionError
+    description: Concept representing an error in validation data selection
+    aliases:
+      - Validation Data Selection Error
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataSelectionError
+      - dpv_ai_owl:ValidationDataSelectionError
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataSelectionError
+      dpv_extension_slug: ai
+
+  ValidationDataSparse:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataSparse
+    description: Concept representing validation data being sparse
+    aliases:
+      - Validation Data Sparse
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataSparse
+      - dpv_ai_owl:ValidationDataSparse
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataSparse
+      dpv_extension_slug: ai
+
+  ValidationDataUnrepresentative:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataUnrepresentative
+    description: Concept representing validation data being unrepresentative
+    aliases:
+      - Validation Data Unrepresentative
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataUnrepresentative
+      - dpv_ai_owl:ValidationDataUnrepresentative
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataUnrepresentative
+      dpv_extension_slug: ai
+
+  ValidationDataUnstructured:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataUnstructured
+    description: Concept representing validation data being unstructured
+    aliases:
+      - Validation Data Unstructured
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataUnstructured
+      - dpv_ai_owl:ValidationDataUnstructured
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataUnstructured
+      dpv_extension_slug: ai
+
+  ValidationDataUnverified:
+    is_a: ValidationDataRisk
+    mixins:
+      - RiskConcept
+      - PotentialRisk
+      - PotentialRiskSource
+    class_uri: ai:ValidationDataUnverified
+    description: Concept representing validation data being unverified
+    aliases:
+      - Validation Data Unverified
+    in_subset:
+      - ai_risks_subset
+    exact_mappings:
+      - dpv_ai:ValidationDataUnverified
+      - dpv_ai_owl:ValidationDataUnverified
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationDataUnverified
+      dpv_extension_slug: ai

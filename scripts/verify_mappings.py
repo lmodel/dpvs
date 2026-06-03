@@ -34,8 +34,8 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SCHEMA_DIR = REPO_ROOT / "src" / "dpvs" / "schema"
-DEFAULT_MAPPINGS_DIR = REPO_ROOT / "src" / "dpvs" / "mappings"
+DEFAULT_SCHEMA_DIR = REPO_ROOT / "src" / "dpv" / "schema"
+DEFAULT_MAPPINGS_DIR = REPO_ROOT / "src" / "dpv" / "mappings"
 
 PREDICATE_TO_FIELD: dict[str, str] = {
     "skos:exactMatch": "exact_mappings",
@@ -139,11 +139,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"ERROR: mappings dir not found: {args.mappings_dir}", file=sys.stderr)
         return 2
 
-    # Load every top-level schema yaml under schema-dir (non-recursive, to
-    # match apply_sssom_overlay which only touches the top-level files);
-    # group by default_prefix.
+    # Load every schema yaml under schema-dir (recursively so per-extension
+    # sub-schemas with their own default_prefix - e.g. ``extensions/loc.yaml``
+    # with default_prefix ``loc`` - are discoverable).
     schemas_by_prefix: dict[str, list[tuple[Path, dict]]] = defaultdict(list)
-    schema_files: list[Path] = sorted(args.schema_dir.glob("*.yaml"))
+    schema_files: list[Path] = sorted(args.schema_dir.rglob("*.yaml"))
     for path in schema_files:
         try:
             doc = yaml.safe_load(path.read_text())

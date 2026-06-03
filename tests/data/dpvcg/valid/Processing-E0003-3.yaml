@@ -1,9 +1,0 @@
-# __unmapped__:
-#   http://www.w3.org/2000/01/rdf-schema#subClassOf:
-#   - dpv:Collect
-#   - dpv:Use
-#   skos:broader:
-#   - ex:Collect
-#   - ex:Use
-#   skos:prefLabel: Collect and Use data using User Device
-id: ex:CollectAndUse

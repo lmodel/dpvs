@@ -1,0 +1,1515 @@
+id: https://w3id.org/lmodel/dpv/risk/risk_controls
+name: dpv_risk_risk_controls
+title: DPV - Risk / Risk Controls
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `risk/modules/risk_controls-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/risk
+  - https://w3c.github.io/dpv/2.3/risk/
+source: https://w3id.org/dpv/risk/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: risk
+  dpv_submodule: risk_controls
+  source_ttl: upstream-releases/dpv/risk/modules/risk_controls-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/risk/modules/risk_controls.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/risk/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/risk#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  risk: https://w3id.org/lmodel/dpv/risk/
+  dpv_risk: https://w3id.org/dpv/risk#
+  dpv_risk_owl: https://w3id.org/dpv/risk/owl#
+
+default_prefix: risk
+default_range: string
+id_prefixes:
+  - risk
+  - dpv_risk
+  - dpv_risk_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/risk
+
+subsets:
+
+  risk_risk_controls_subset:
+    description: Entities from the DPV `risk/modules/risk_controls` submodule.
+
+slots:
+
+  avoids:
+    is_a: reduces
+    definition_uri: risk:avoids
+    description: Indicates the event or action is avoided by the specified control
+    aliases:
+      - avoids
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:avoids
+      - dpv_risk_owl:avoids
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#avoids
+      dpv_extension_slug: risk
+
+  contains:
+    is_a: controls
+    definition_uri: risk:contains
+    description: Indicates the specified event or action is contained by this control
+    aliases:
+      - contains
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:contains
+      - dpv_risk_owl:contains
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#contains
+      dpv_extension_slug: risk
+
+  controls:
+    definition_uri: risk:controls
+    description: |-
+      Indicates this control manages specified risk concept event or action,
+      such as for risk sources, risks, consequences, and impacts
+    aliases:
+      - control
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:controls
+      - dpv_risk_owl:controls
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#controls
+      dpv_extension_slug: risk
+
+  detects:
+    is_a: monitors
+    definition_uri: risk:detects
+    description: Indicates the specified event or action is detected by this control
+    aliases:
+      - detects
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:detects
+      - dpv_risk_owl:detects
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#detects
+      dpv_extension_slug: risk
+
+  eliminates:
+    is_a: avoids
+    definition_uri: risk:eliminates
+    description: Indicates the specified event or action is eliminated by this control
+    aliases:
+      - eliminates
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:eliminates
+      - dpv_risk_owl:eliminates
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#eliminates
+      dpv_extension_slug: risk
+
+  has_control:
+    definition_uri: risk:hasControl
+    description: Indicates the use of specified control
+    aliases:
+      - has control
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:hasControl
+      - dpv_risk_owl:hasControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#hasControl
+      dpv_extension_slug: risk
+
+  identifies:
+    is_a: monitors
+    definition_uri: risk:identifies
+    description: Indicates the specified event or action is identified by this control
+    aliases:
+      - identifies
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:identifies
+      - dpv_risk_owl:identifies
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#identifies
+      dpv_extension_slug: risk
+
+  interrupts:
+    is_a: reduces
+    definition_uri: risk:interrupts
+    description: Indicates the specified event or action is interrupted by this control
+    aliases:
+      - interrupts
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:interrupts
+      - dpv_risk_owl:interrupts
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#interrupts
+      dpv_extension_slug: risk
+
+  intervenes:
+    is_a: reduces
+    definition_uri: risk:intervenes
+    description: Indicates the specified event or action is intervened by this control
+    aliases:
+      - intervenes
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:intervenes
+      - dpv_risk_owl:intervenes
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#intervenes
+      dpv_extension_slug: risk
+
+  investigates:
+    is_a: controls
+    definition_uri: risk:investigates
+    description: |-
+      Indicates the specified event or action is investigated by this control
+    aliases:
+      - investigates
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:investigates
+      - dpv_risk_owl:investigates
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#investigates
+      dpv_extension_slug: risk
+
+  logs:
+    is_a: monitors
+    definition_uri: risk:logs
+    description: Indicates the specified event or action is logged by this control
+    aliases:
+      - logs
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:logs
+      - dpv_risk_owl:logs
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#logs
+      dpv_extension_slug: risk
+
+  mitigates:
+    is_a: avoids
+    definition_uri: risk:mitigates
+    description: Indicates the specified event or action is mitigated by this control
+    aliases:
+      - mitigates
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:mitigates
+      - dpv_risk_owl:mitigates
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#mitigates
+      dpv_extension_slug: risk
+
+  modifies:
+    is_a: avoids
+    definition_uri: risk:modifies
+    description: Indicates the specified event or action is modified by this control
+    aliases:
+      - modifies
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:modifies
+      - dpv_risk_owl:modifies
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#modifies
+      dpv_extension_slug: risk
+
+  monitors:
+    is_a: controls
+    definition_uri: risk:monitors
+    description: Indicates the specified event or action is monitored by this control
+    aliases:
+      - monitors
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:monitors
+      - dpv_risk_owl:monitors
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#monitors
+      dpv_extension_slug: risk
+
+  overrides:
+    is_a: controls
+    definition_uri: risk:overrides
+    description: Indicates the specified event or action is overridden by this control
+    aliases:
+      - overrides
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:overrides
+      - dpv_risk_owl:overrides
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#overrides
+      dpv_extension_slug: risk
+
+  recovers:
+    is_a: resolves
+    definition_uri: risk:recovers
+    description: |-
+      Indicates the specified event or action is recovered from by this
+      control
+    aliases:
+      - recovers
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:recovers
+      - dpv_risk_owl:recovers
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#recovers
+      dpv_extension_slug: risk
+
+  reduces:
+    is_a: controls
+    definition_uri: risk:reduces
+    description: Indicates the specified event or action is reduced by this control
+    aliases:
+      - reduces
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:reduces
+      - dpv_risk_owl:reduces
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#reduces
+      dpv_extension_slug: risk
+
+  remedies:
+    is_a: resolves
+    definition_uri: risk:remedies
+    description: Indicates the specified event or action is remedied by this control
+    aliases:
+      - remedies
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:remedies
+      - dpv_risk_owl:remedies
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#remedies
+      dpv_extension_slug: risk
+
+  resolves:
+    is_a: controls
+    definition_uri: risk:resolves
+    description: Indicates the specified event or action is resolved by this control
+    aliases:
+      - resolves
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:resolves
+      - dpv_risk_owl:resolves
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#resolves
+      dpv_extension_slug: risk
+
+  reverses:
+    is_a: resolves
+    definition_uri: risk:reverses
+    description: Indicates the specified event or action is reversed by this control
+    aliases:
+      - reverses
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:reverses
+      - dpv_risk_owl:reverses
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#reverses
+      dpv_extension_slug: risk
+
+  shares:
+    is_a: controls
+    definition_uri: risk:shares
+    description: |-
+      Indicates the specified event or action is shared with another context
+      or entity by this control
+    aliases:
+      - shares
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:shares
+      - dpv_risk_owl:shares
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#shares
+      dpv_extension_slug: risk
+
+  substitutes:
+    is_a: avoids
+    definition_uri: risk:substitutes
+    description: Indicates the specified event or action is substituted by this control
+    aliases:
+      - substitutes
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:substitutes
+      - dpv_risk_owl:substitutes
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#substitutes
+      dpv_extension_slug: risk
+
+  transfers:
+    is_a: controls
+    definition_uri: risk:transfers
+    description: |-
+      Indicates the specified event or action is transferred to another
+      context or entity by this control
+    aliases:
+      - transfers
+    multivalued: true
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:transfers
+      - dpv_risk_owl:transfers
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#transfers
+      dpv_extension_slug: risk
+
+classes:
+
+  AvoidConsequence:
+    is_a: AvoidanceControl
+    mixins:
+      - RiskControl
+      - ConsequenceControl
+    class_uri: risk:AvoidConsequence
+    description: |-
+      Control that proactively avoids the consequence such that it has a
+      reduced exposure or applicability in the context
+    aliases:
+      - Avoid Consequence
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:AvoidConsequence
+      - dpv_risk_owl:AvoidConsequence
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#AvoidConsequence
+      dpv_extension_slug: risk
+
+  AvoidImpact:
+    is_a: AvoidanceControl
+    mixins:
+      - RiskControl
+      - ImpactControl
+    class_uri: risk:AvoidImpact
+    description: |-
+      Control that proactively avoids the impact such that it has a reduced
+      exposure or applicability in the context
+    aliases:
+      - Avoid Impact
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:AvoidImpact
+      - dpv_risk_owl:AvoidImpact
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#AvoidImpact
+      dpv_extension_slug: risk
+
+  AvoidSource:
+    is_a: AvoidanceControl
+    mixins:
+      - RiskControl
+      - SourceControl
+    class_uri: risk:AvoidSource
+    description: |-
+      Control that proactively avoids the risk source such that it has a
+      reduced exposure or applicability in the context
+    aliases:
+      - Avoid Source
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:AvoidSource
+      - dpv_risk_owl:AvoidSource
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#AvoidSource
+      dpv_extension_slug: risk
+
+  AvoidanceControl:
+    is_a: ProactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:AvoidanceControl
+    description: Control that avoids an event with the goal of removing it completely
+    aliases:
+      - Avoidance Control
+    comments:
+      - |-
+        Avoiding is distinct from Mitigation and Modification as the goal to
+        avoid an event is to prevent it from occurring at all, whereas
+        mitigation and modification accept an event will occur and focus on
+        managing it
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:AvoidanceControl
+      - dpv_risk_owl:AvoidanceControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#AvoidanceControl
+      dpv_extension_slug: risk
+
+  ChangeConsequence:
+    is_a: ConsequenceControl
+    mixins:
+      - RiskControl
+      - SubstitutionControl
+    class_uri: risk:ChangeConsequence
+    description: |-
+      Control that proactively changes the consequence event such that one
+      event is replaced with the occurrence or applicability of another event
+      in the context
+    aliases:
+      - Change Consequence
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ChangeConsequence
+      - dpv_risk_owl:ChangeConsequence
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ChangeConsequence
+      dpv_extension_slug: risk
+
+  ChangeImpact:
+    is_a: ImpactControl
+    mixins:
+      - RiskControl
+      - SubstitutionControl
+    class_uri: risk:ChangeImpact
+    description: |-
+      Control that proactively changes the impact event such that one event is
+      replaced with the occurrence or applicability of another event in the
+      context
+    aliases:
+      - Change Impact
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ChangeImpact
+      - dpv_risk_owl:ChangeImpact
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ChangeImpact
+      dpv_extension_slug: risk
+
+  ConsequenceControl:
+    is_a: RiskControl
+    class_uri: risk:ConsequenceControl
+    description: Risk control for managing consequences
+    aliases:
+      - Consequence Control
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ConsequenceControl
+      - dpv_risk_owl:ConsequenceControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ConsequenceControl
+      dpv_extension_slug: risk
+
+  ContainmentControl:
+    is_a: ReductionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ContainmentControl
+    description: |-
+      Control that aims to contain the event in terms of limiting its
+      occurrence or effects
+    aliases:
+      - Containment Control
+    comments:
+      - |-
+        Containment implies either changing the event or the context such that
+        the event's effects are restricted, such as by establishing a physical
+        or digital boundary within which the effects can occur or to prevent the
+        effects from affecting things inside the boundary
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ContainmentControl
+      - dpv_risk_owl:ContainmentControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ContainmentControl
+      dpv_extension_slug: risk
+
+  DetectionControl:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:DetectionControl
+    description: Control that detects an event
+    aliases:
+      - Detection Control
+    comments:
+      - |-
+        Detection refers to the observation, derivation, inference, or any other
+        method for drawing conclusions that an event has occurred or is likely
+        to occur with a given certainty. For controls that identify information
+        about the event in terms of metrics or characteristics, see
+        risk:IdentificationControl
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:DetectionControl
+      - dpv_risk_owl:DetectionControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#DetectionControl
+      dpv_extension_slug: risk
+
+  EliminationControl:
+    is_a: AvoidanceControl
+    mixins:
+      - RiskControl
+    class_uri: risk:EliminationControl
+    description: |-
+      Control that eliminates an event entirely such that the event does not
+      occur
+    aliases:
+      - Elimination Control
+    comments:
+      - |-
+        Elimination requires the event's likelihood to be reduced to zero such
+        that the event cannot occur in the context. This can be done by
+        establishing methods to prevent the event from occurring (e.g.
+        gatekeeping filters) or by changing the underlying context (e.g.
+        replacing faulty device). The difference between
+        risk:ModificationControl and risk:EliminationControl is that
+        modification works to change the event characteristics whereas
+        elimination works on the context to prevent the event
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:EliminationControl
+      - dpv_risk_owl:EliminationControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#EliminationControl
+      dpv_extension_slug: risk
+
+  HaltConsequence:
+    is_a: ConsequenceControl
+    mixins:
+      - RiskControl
+      - InterruptionControl
+    class_uri: risk:HaltConsequence
+    description: |-
+      Control that halts the (ongoing) consequence event or process such that
+      it no longer takes place or is applicable in the context
+    aliases:
+      - Halt Consequence
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:HaltConsequence
+      - dpv_risk_owl:HaltConsequence
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#HaltConsequence
+      dpv_extension_slug: risk
+
+  HaltImpact:
+    is_a: ImpactControl
+    mixins:
+      - RiskControl
+      - InterruptionControl
+    class_uri: risk:HaltImpact
+    description: |-
+      Control that halts the (ongoing) impact event or process such that it no
+      longer takes place or is applicable in the context
+    aliases:
+      - Halt Impact
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:HaltImpact
+      - dpv_risk_owl:HaltImpact
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#HaltImpact
+      dpv_extension_slug: risk
+
+  HaltSource:
+    is_a: InterruptionControl
+    mixins:
+      - RiskControl
+      - SourceControl
+    class_uri: risk:HaltSource
+    description: |-
+      Control that halts the (ongoing) risk source event or process such that
+      it no longer takes place or is applicable in the context
+    aliases:
+      - Halt Source
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:HaltSource
+      - dpv_risk_owl:HaltSource
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#HaltSource
+      dpv_extension_slug: risk
+
+  IdentificationControl:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:IdentificationControl
+    description: Control that identifies the characteristics of an event
+    aliases:
+      - Identification Control
+    comments:
+      - |-
+        Identification in the context of an event refers to its characteristics
+        such as likelihood, severity, as well as contextual metrics such as
+        amount of data or power being used, or affected entities or things, and
+        which can be used to categorise the event in terms of risk level or
+        other contextual groupings
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:IdentificationControl
+      - dpv_risk_owl:IdentificationControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IdentificationControl
+      dpv_extension_slug: risk
+
+  ImpactControl:
+    is_a: RiskControl
+    class_uri: risk:ImpactControl
+    description: Risk Mitigation Measure that controls Impacts
+    aliases:
+      - Impact Control
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ImpactControl
+      - dpv_risk_owl:ImpactControl
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ImpactControl
+      dpv_extension_slug: risk
+
+  InterruptionControl:
+    is_a: ReductionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:InterruptionControl
+    description: |-
+      Control that interrupts an event without removing the possibility for it
+      to be resumed and where the aim is to stop the event
+    aliases:
+      - Interruption Control
+    comments:
+      - |-
+        Interruption refers to the event being temporarily halted, such as an
+        emergency measure while further suitable measures are identified and put
+        in place. To indicate stopping the event completely rather than a
+        temporary interruption, see risk:RemediationControl which fixes the
+        underlying issue and risk:EliminationControl which prevents the event
+        from occurring
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:InterruptionControl
+      - dpv_risk_owl:InterruptionControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#InterruptionControl
+      dpv_extension_slug: risk
+
+  InterventionControl:
+    is_a: ReductionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:InterventionControl
+    description: |-
+      Control that intervenes in the operations of the event to change some
+      context with the aim of changing the event or the effects
+    aliases:
+      - Intervention Control
+    comments:
+      - |-
+        Intervention implies taking steps to resolve the effects or to prevent
+        further escalation while the event is still ongoing. For halting the
+        event, see risk:InterruptionControl, for recovering and undoing the
+        effects, see risk:RecoveryControl and risk:ReversalControl. Intervention
+        is a temporary or stop-gap measure which is used while the event is
+        ongoing to prevent it from escalating or creating additional issues
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:InterventionControl
+      - dpv_risk_owl:InterventionControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#InterventionControl
+      dpv_extension_slug: risk
+
+  InvestigationControl:
+    is_a: ReactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:InvestigationControl
+    description: |-
+      Control that identifies information through an investigative process
+      about an event and its effects after it has occurred
+    aliases:
+      - Investigation Control
+    comments:
+      - |-
+        Investigative controls are used to identify information about an event
+        and its effects which can be used to identify further effective measures
+        to address them, and to identify processes to remedy and recover from
+        it. Investigation control therefore is focused on analysis of an event
+        after its occurrence with the goal of identifying applicability and
+        effectiveness of other controls to address it
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:InvestigationControl
+      - dpv_risk_owl:InvestigationControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#InvestigationControl
+      dpv_extension_slug: risk
+
+  LoggingControl:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:LoggingControl
+    description: Control that logs an event
+    aliases:
+      - Logging Control
+    comments:
+      - |-
+        Log refers to a record of information regarding the event, including
+        whether it has occurred, was prevented from occurring, and any actions
+        or processes taken in response to it or resulting from it
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:LoggingControl
+      - dpv_risk_owl:LoggingControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#LoggingControl
+      dpv_extension_slug: risk
+
+  MitigationControl:
+    is_a: ProactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MitigationControl
+    description: |-
+      Control that aims to reduce the likelihood or effect of an event with
+      the goal of managing an event accepted to occur
+    aliases:
+      - Mitigation Control
+    comments:
+      - |-
+        Mitigation requires accepting that an event will occur, and thereby
+        focusing on managing it by reducing its likelihood or effects by adding
+        additional processes to specifically address the event or its effects
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MitigationControl
+      - dpv_risk_owl:MitigationControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MitigationControl
+      dpv_extension_slug: risk
+
+  ModificationControl:
+    is_a: ProactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ModificationControl
+    description: |-
+      Control that modifies the context to change the event's characteristics
+      such that the event still occurs but with the modified characteristics
+      with the goal of managing an event that is accepted to occur
+    aliases:
+      - Modification Control
+    comments:
+      - |-
+        Modification necessitates a change in the context to result in a change
+        in the event's characteristics. Where such changes reduce the likelihood
+        or effects of the event, the modification also works as a mitigation for
+        the event
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ModificationControl
+      - dpv_risk_owl:ModificationControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ModificationControl
+      dpv_extension_slug: risk
+
+  MonitorConsequence:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorConsequence
+    description: Control that monitors a Risk Consequence
+    aliases:
+      - Monitor Consequence
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorConsequence
+      - dpv_risk_owl:MonitorConsequence
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorConsequence
+      dpv_extension_slug: risk
+
+  MonitorControl:
+    is_a: ProactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorControl
+    description: Control that monitors for the occurrence of an event
+    aliases:
+      - Monitor Control
+    comments:
+      - |-
+        Monitoring is a broad term that refers to identifying information about
+        an event, including its occurrence, characteristics such as severity or
+        specific contextual metrics, affected things and entities, and having
+        the ability to obtain and use this information to address the event.
+        Monitoring is also used to refer to the activities associated with
+        ensuring controls are active and effective. For this reason, specific
+        concepts are defined which extend this control to express explicit
+        actions included in the general use of 'monitoring' in risk management
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorControl
+      - dpv_risk_owl:MonitorControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorControl
+      dpv_extension_slug: risk
+
+  MonitorImpact:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorImpact
+    description: Control that monitors a Risk Impact
+    aliases:
+      - Monitor Impact
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorImpact
+      - dpv_risk_owl:MonitorImpact
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorImpact
+      dpv_extension_slug: risk
+
+  MonitorRisk:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorRisk
+    description: Control that monitors a Risk
+    aliases:
+      - Monitor Risk
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorRisk
+      - dpv_risk_owl:MonitorRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorRisk
+      dpv_extension_slug: risk
+
+  MonitorRiskControl:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorRiskControl
+    description: Control that monitors another Control
+    aliases:
+      - Monitor Control
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorRiskControl
+      - dpv_risk_owl:MonitorRiskControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorRiskControl
+      dpv_extension_slug: risk
+
+  MonitorRiskSource:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorRiskSource
+    description: Control that monitors a Risk Source
+    aliases:
+      - Monitor Risk Source
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorRiskSource
+      - dpv_risk_owl:MonitorRiskSource
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorRiskSource
+      dpv_extension_slug: risk
+
+  MonitorVulnerabilities:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:MonitorVulnerabilities
+    description: Control that monitors a Risk Vulnerability
+    aliases:
+      - Monitor Vulnerabilities
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:MonitorVulnerabilities
+      - dpv_risk_owl:MonitorVulnerabilities
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#MonitorVulnerabilities
+      dpv_extension_slug: risk
+
+  OverrideControl:
+    is_a: ReactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:OverrideControl
+    description: |-
+      Control that aims to override the event with the goal of avoiding its
+      further effects
+    aliases:
+      - Override Control
+    comments:
+      - |-
+        Override indicates a (temporary) change or bypassing of usual processes,
+        controls, and measures in response to an event
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:OverrideControl
+      - dpv_risk_owl:OverrideControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#OverrideControl
+      dpv_extension_slug: risk
+
+  OversightControl:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:OversightControl
+    description: |-
+      Control that provides oversight for an event in terms of having
+      information about it and being able to supervise or manage it
+    aliases:
+      - Oversight Control
+    comments:
+      - |-
+        Oversight can be ambiguously used in terms of having knowledge about an
+        event (see risk:TransparencyControl instead), or being able to identify
+        when it occurs (see risk:DetectionControl instead). The control defined
+        by this concept includes the ability to act on the event as part of the
+        'oversight' term used in management
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:OversightControl
+      - dpv_risk_owl:OversightControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#OversightControl
+      dpv_extension_slug: risk
+
+  ProactiveControl:
+    is_a: RiskControl
+    class_uri: risk:ProactiveControl
+    description: Control that is established or functions before an event occurs
+    aliases:
+      - Proactive Control
+    comments:
+      - |-
+        The use of 'proactive' here refers to this control being established to
+        address events before they occur. It does not indicate putting in place
+        controls before the event such as planning ahead for potential use of
+        controls to respond to an incident
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ProactiveControl
+      - dpv_risk_owl:ProactiveControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ProactiveControl
+      dpv_extension_slug: risk
+
+  ReactiveControl:
+    is_a: RiskControl
+    class_uri: risk:ReactiveControl
+    description: Control that is established or functions after an event occurs
+    aliases:
+      - Reactive Control
+    comments:
+      - |-
+        The use of 'reactive' here refers to this control being established i.e.
+        becoming active to address the effects of an event after they occur. It
+        does not imply that the controls are put in place after the event or
+        that there is no planned procedure for handling an incident
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ReactiveControl
+      - dpv_risk_owl:ReactiveControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ReactiveControl
+      dpv_extension_slug: risk
+
+  RecoveryControl:
+    is_a: ResolutionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:RecoveryControl
+    description: Control that aims to restore the context following an event
+    aliases:
+      - Recovery Control
+    comments:
+      - |-
+        Recovery implies taking steps to correct the effects which may not be
+        the same as the initial conditions before the event, whereas
+        risk:ReversalControl refers to undoing the effects such that the initial
+        condition is restored
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:RecoveryControl
+      - dpv_risk_owl:RecoveryControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#RecoveryControl
+      dpv_extension_slug: risk
+
+  ReduceLikelihood:
+    is_a: ReductionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ReduceLikelihood
+    description: Control that reduces the likelihood of an event to occur
+    aliases:
+      - Reduce Likelihood
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ReduceLikelihood
+      - dpv_risk_owl:ReduceLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ReduceLikelihood
+      dpv_extension_slug: risk
+
+  ReduceSeverity:
+    is_a: ReductionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ReduceSeverity
+    description: Control that reduces the severity of an event's effects
+    aliases:
+      - Reduce Severity
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ReduceSeverity
+      - dpv_risk_owl:ReduceSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ReduceSeverity
+      dpv_extension_slug: risk
+
+  ReductionControl:
+    is_a: ReactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ReductionControl
+    description: Control that reduces the effects of an event
+    aliases:
+      - Reduction Control
+    comments:
+      - |-
+        Reduction here refers to a lessening of the effects after the event has
+        occurred by either reducing their likelihood or their severity in the
+        context. This can involve changing the underlying context such that the
+        effects have a reduced chance of occurring, or to create additional
+        measures such that the effects do not have the initial severity for an
+        entity
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ReductionControl
+      - dpv_risk_owl:ReductionControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ReductionControl
+      dpv_extension_slug: risk
+
+  RemediationControl:
+    is_a: ResolutionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:RemediationControl
+    description: |-
+      Control that aims to fix or remedy the causes of an event to prevent
+      further occurrences
+    aliases:
+      - Remediation Control
+    comments:
+      - |-
+        Remediation involves making changes in the context to avoid further
+        events and effects, which may be for the specific event or for other
+        similar events and effects. As such, remediation can also be undertaken
+        as a proactive measure in the risk management lifecycle following an
+        incident
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:RemediationControl
+      - dpv_risk_owl:RemediationControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#RemediationControl
+      dpv_extension_slug: risk
+
+  RemoveConsequence:
+    is_a: ConsequenceControl
+    mixins:
+      - RiskControl
+      - EliminationControl
+    class_uri: risk:RemoveConsequence
+    description: |-
+      Control that proactively removes the consequence event such that the
+      event does not occur in the context
+    aliases:
+      - Remove Consequence
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:RemoveConsequence
+      - dpv_risk_owl:RemoveConsequence
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#RemoveConsequence
+      dpv_extension_slug: risk
+
+  RemoveImpact:
+    is_a: EliminationControl
+    mixins:
+      - RiskControl
+      - ImpactControl
+    class_uri: risk:RemoveImpact
+    description: |-
+      Control that proactively removes the impact event such that the event
+      does not occur in the context
+    aliases:
+      - Remove Impact
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:RemoveImpact
+      - dpv_risk_owl:RemoveImpact
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#RemoveImpact
+      dpv_extension_slug: risk
+
+  RemoveSource:
+    is_a: EliminationControl
+    mixins:
+      - RiskControl
+      - SourceControl
+    class_uri: risk:RemoveSource
+    description: |-
+      Control that proactively removes the risk source such that it is no
+      longer present or applicable in the context
+    aliases:
+      - Remove Source
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:RemoveSource
+      - dpv_risk_owl:RemoveSource
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#RemoveSource
+      dpv_extension_slug: risk
+
+  ResolutionControl:
+    is_a: ReactiveControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ResolutionControl
+    description: |-
+      Control that aims to resolve an event's effects with the goal of fixing
+      or recovering from it
+    aliases:
+      - Resolution Control
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ResolutionControl
+      - dpv_risk_owl:ResolutionControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ResolutionControl
+      dpv_extension_slug: risk
+
+  ReversalControl:
+    is_a: ResolutionControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ReversalControl
+    description: Control that aims to reverse or undo the effects of an event
+    aliases:
+      - Reversal Control
+    comments:
+      - |-
+        Reversal can be achieved through measures such as restoring information
+        from a backup or replacing things such that the initial context not
+        containing the event's effects is restored
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ReversalControl
+      - dpv_risk_owl:ReversalControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ReversalControl
+      dpv_extension_slug: risk
+
+  RiskControl:
+    is_a: RiskMitigationMeasure
+    class_uri: risk:RiskControl
+    description: Control that modifies risk
+    aliases:
+      - Risk Control
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:RiskControl
+      - dpv_risk_owl:RiskControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#RiskControl
+      dpv_extension_slug: risk
+
+  ShareControl:
+    is_a: TransferControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ShareControl
+    description: |-
+      Control that aims to share or distribute the event (or risk) with
+      another context or entity
+    aliases:
+      - Share Control
+    comments:
+      - |-
+        Sharing implies a combined responsibility or sharing of effects from an
+        event - which can be between entities or processes (or other contexts).
+        The use of 'event' here broadly refers to any event, which may be a risk
+        event or could also be specific measures being adopted in response to an
+        event. For specifically indicating sharing of risk per typical risk
+        management processes, see risk:ShareRisk
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ShareControl
+      - dpv_risk_owl:ShareControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ShareControl
+      dpv_extension_slug: risk
+
+  ShareRisk:
+    is_a: ShareControl
+    mixins:
+      - RiskControl
+    class_uri: risk:ShareRisk
+    description: Risk Mitigation Measure that shares Risk e.g. amongst stakeholders
+    aliases:
+      - Share Risk
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:ShareRisk
+      - dpv_risk_owl:ShareRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ShareRisk
+      dpv_extension_slug: risk
+
+  SourceControl:
+    is_a: RiskControl
+    class_uri: risk:SourceControl
+    description: Risk control for managing risk sources
+    aliases:
+      - Source Control
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:SourceControl
+      - dpv_risk_owl:SourceControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#SourceControl
+      dpv_extension_slug: risk
+
+  SubstitutionControl:
+    is_a: AvoidanceControl
+    mixins:
+      - RiskControl
+    class_uri: risk:SubstitutionControl
+    description: |-
+      Control that substitutes an event with another such that the initial
+      event no longer takes place while the substituted event takes place in
+      place of it
+    aliases:
+      - Substitution Control
+    comments:
+      - |-
+        Substitution implies that the replacement event is less risky or is more
+        safe than the replaced event, which is distinct from elimination where
+        no event occurs and thus there is an elimination of risk entirely
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:SubstitutionControl
+      - dpv_risk_owl:SubstitutionControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#SubstitutionControl
+      dpv_extension_slug: risk
+
+  TransferControl:
+    is_a: RiskControl
+    class_uri: risk:TransferControl
+    description: |-
+      Control that aims to transfer the event (or risk) to another context or
+      entity
+    aliases:
+      - Transfer Control
+    comments:
+      - |-
+        Transfer implies moving (physically or logically) the event to another
+        context or entity. While Risk Management methods indicate risk transfer
+        as occurring between entities, this concept is defined more broadly by
+        including 'context or entity' so as to enable modelling cases where the
+        transfer takes place between processes - which may be managed by the
+        same or different entity. Additionally, typical use of 'Transfer'
+        implies a formal mechanism such as an agreement, which is absent from
+        this concept. If only partial responsibility is transferred, such as for
+        a specific measure, then this can be considered as an instance of
+        sharing the risk - for which risk:ShareControl is provided
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:TransferControl
+      - dpv_risk_owl:TransferControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#TransferControl
+      dpv_extension_slug: risk
+
+  TransparencyControl:
+    is_a: MonitorControl
+    mixins:
+      - RiskControl
+    class_uri: risk:TransparencyControl
+    description: Control that provides information about an event
+    aliases:
+      - Transparency Control
+    comments:
+      - |-
+        Transparency refers to the availability of information, whether for the
+        same or different entity in relation to who establishes and operates the
+        control, and where transparency implies having the means to obtain and
+        use information about an event
+    in_subset:
+      - risk_risk_controls_subset
+    exact_mappings:
+      - dpv_risk:TransparencyControl
+      - dpv_risk_owl:TransparencyControl
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#TransparencyControl
+      dpv_extension_slug: risk

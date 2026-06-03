@@ -13,7 +13,7 @@ generated JSON Schema for every class carries
 domain-less (i.e. on no specific class) is rejected on every instance
 even though the schema deliberately permits it.
 
-That hardcoded ``closed=True`` is incompatible with the dpvs design
+That hardcoded ``closed=True`` is incompatible with the dpv design
 (see ``docs/about.md`` -> "Open-world modelling"): DPV properties are
 intentionally attached to ``DpvThing`` rather than to a specific class
 so that any instance can carry any DPV property that makes sense for
@@ -66,18 +66,84 @@ def _target_class_for(path: Path) -> str:
     return path.stem.split("-")[0]
 
 
-def _validate_one(validator: Validator, path: Path) -> CaseResult:
-    target = _target_class_for(path)
+def _normalize_target(value: str) -> str:
+    return "".join(ch.lower() for ch in value if ch.isalnum())
+
+
+def _iter_candidate_names(value: str) -> list[str]:
+    candidates = {value}
+    if ":" in value:
+        candidates.add(value.split(":", 1)[1])
+    if "#" in value:
+        candidates.add(value.rsplit("#", 1)[1])
+    if "/" in value:
+        candidates.add(value.rstrip("/").rsplit("/", 1)[1])
+    return [c for c in candidates if c]
+
+
+def _build_target_index(schema) -> dict[str, str]:
+    index: dict[str, str] = {}
+    for class_name, class_def in schema.classes.items():
+        raw_names: list[str] = [class_name]
+        if getattr(class_def, "name", None):
+            raw_names.append(class_def.name)
+        if getattr(class_def, "class_uri", None):
+            raw_names.append(class_def.class_uri)
+        raw_names.extend(getattr(class_def, "aliases", []) or [])
+        for raw in raw_names:
+            for candidate in _iter_candidate_names(str(raw)):
+                index.setdefault(_normalize_target(candidate), class_name)
+    return index
+
+
+def _resolve_target_class(
+    requested: str,
+    schema,
+    target_index: dict[str, str],
+    fallback_class: str = "DpvThing",
+) -> tuple[str, str | None]:
+    if requested in schema.classes:
+        return requested, None
+    resolved = target_index.get(_normalize_target(requested))
+    if resolved:
+        return resolved, f'target class "{requested}" resolved to "{resolved}"'
+    if fallback_class in schema.classes:
+        return (
+            fallback_class,
+            (
+                f'target class "{requested}" not found in schema; '
+                f'validated against fallback "{fallback_class}"'
+            ),
+        )
+    return requested, f'target class "{requested}" not found in schema'
+
+
+def _validate_one(
+    validator: Validator,
+    schema,
+    target_index: dict[str, str],
+    path: Path,
+) -> CaseResult:
+    requested_target = _target_class_for(path)
+    target, resolution_note = _resolve_target_class(requested_target, schema, target_index)
     try:
         report = validator.validate_source(YamlLoader(str(path)), target_class=target)
     except Exception as exc:  # pragma: no cover - defensive
-        return CaseResult(path.name, target, ok=False, messages=[f"loader error: {exc}"])
+        return CaseResult(
+            path.name,
+            target,
+            ok=False,
+            messages=[f"loader error: {exc}"],
+        )
     errors = [
         f"{r.severity}: {r.message}"
         for r in report.results
         if r.severity in (Severity.ERROR, Severity.FATAL)
     ]
-    return CaseResult(path.name, target, ok=not errors, messages=errors)
+    messages = list(errors)
+    if messages and resolution_note:
+        messages.insert(0, f"note: {resolution_note}")
+    return CaseResult(path.name, target, ok=not errors, messages=messages)
 
 
 def _write_roundtrips(src: Path, out_dir: Path) -> None:
@@ -141,31 +207,32 @@ def main() -> int:
         action="store_true",
         help=(
             "Use closed-world JSON Schema validation (matches stock "
-            "`linkml-run-examples`). Off by default because the dpvs "
+            "`linkml-run-examples`). Off by default because the dpv "
             "schema is intentionally open-world."
         ),
     )
     args = parser.parse_args()
 
     # Schema is expected to be the pre-merged, self-contained YAML
-    # produced by `scripts/merge_schema.py` (e.g. `tmp/dpvs.yaml`).
+    # produced by `scripts/merge_linkml_schema.py` (e.g. `tmp/dpv.yaml`).
     # We deliberately do NOT pass `merge_imports=True` here because the
-    # top-level `src/dpvs/schema/dpvs.yaml` imports `dpvs:schema/dpvs_core`
-    # as a URI-style CURIE; `SchemaView` would expand the `dpvs:` prefix
+    # top-level `src/dpv/schema/dpv.yaml` imports `dpv:schema/dpv_core`
+    # as a URI-style CURIE; `SchemaView` would expand the `dpv:` prefix
     # to its w3id IRI and fetch the import over HTTP (404). See
     # ISSUE.md §8/§9 for the upstream gap. The build pipeline
     # (`just _merged-schema`) flattens imports out-of-band.
     schema = SchemaView(str(args.schema)).schema
+    target_index = _build_target_index(schema)
     validator = Validator(
         schema, validation_plugins=[JsonschemaValidationPlugin(closed=args.closed)]
     )
 
     positives = [
-        _validate_one(validator, p)
+        _validate_one(validator, schema, target_index, p)
         for p in sorted(args.input_directory.glob("*.yaml"))
     ]
     negatives = [
-        _validate_one(validator, p)
+        _validate_one(validator, schema, target_index, p)
         for p in sorted(args.counter_example_input_directory.glob("*.yaml"))
     ]
 

@@ -1,0 +1,256 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/aiact/sector
+name: dpv_legal_eu_aiact_sector
+title: DPV - Legal - Eu - Aiact / Sector
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/aiact/modules/sector-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/aiact
+  - https://w3c.github.io/dpv/2.3/legal/eu/aiact/
+source: https://w3id.org/dpv/legal/eu/aiact/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/aiact
+  dpv_submodule: sector
+  source_ttl: upstream-releases/dpv/legal/eu/aiact/modules/sector-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/aiact/modules/sector.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/aiact/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/aiact#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_aiact: https://w3id.org/lmodel/dpv/legal/eu/aiact/
+  dpv_legal_eu_aiact: https://w3id.org/dpv/legal/eu/aiact#
+  dpv_legal_eu_aiact_owl: https://w3id.org/dpv/legal/eu/aiact/owl#
+
+default_prefix: legal_eu_aiact
+default_range: string
+id_prefixes:
+  - legal_eu_aiact
+  - dpv_legal_eu_aiact
+  - dpv_legal_eu_aiact_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/aiact
+
+subsets:
+
+  legal_eu_aiact_sector_subset:
+    description: Entities from the DPV `legal/eu/aiact/modules/sector` submodule.
+
+classes:
+
+  AsylumSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:AsylumSector
+    description: Sector related to asylum management
+    aliases:
+      - Asylum Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:AsylumSector
+      - dpv_legal_eu_aiact_owl:AsylumSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AsylumSector
+      dpv_extension_slug: legal/eu/aiact
+
+  BorderControlSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:BorderControlSector
+    description: Sector related to border control management
+    aliases:
+      - Border Control Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:BorderControlSector
+      - dpv_legal_eu_aiact_owl:BorderControlSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#BorderControlSector
+      dpv_extension_slug: legal/eu/aiact
+
+  CriticalInfrastructureSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:CriticalInfrastructureSector
+    description: Sector related to provision and maintenance of critical services
+    aliases:
+      - Critical Infrastructure Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:CriticalInfrastructureSector
+      - dpv_legal_eu_aiact_owl:CriticalInfrastructureSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#CriticalInfrastructureSector
+      dpv_extension_slug: legal/eu/aiact
+
+  DemocraticProcessSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:DemocraticProcessSector
+    description: Sector related to administration of democratic processes
+    aliases:
+      - Democratic Process Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:DemocraticProcessSector
+      - dpv_legal_eu_aiact_owl:DemocraticProcessSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#DemocraticProcessSector
+      dpv_extension_slug: legal/eu/aiact
+
+  EducationSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:EducationSector
+    description: |-
+      Sector related to education and vocational training at any level and for
+      any profession
+    aliases:
+      - Education Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:EducationSector
+      - dpv_legal_eu_aiact_owl:EducationSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#EducationSector
+      dpv_extension_slug: legal/eu/aiact
+
+  EmploymentSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:EmploymentSector
+    description: |-
+      Sector related to employment including workforce management and
+      self-employment
+    aliases:
+      - Employment Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:EmploymentSector
+      - dpv_legal_eu_aiact_owl:EmploymentSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#EmploymentSector
+      dpv_extension_slug: legal/eu/aiact
+
+  JusticeSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:JusticeSector
+    description: Sector related to administration of justice
+    aliases:
+      - Justice Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:JusticeSector
+      - dpv_legal_eu_aiact_owl:JusticeSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#JusticeSector
+      dpv_extension_slug: legal/eu/aiact
+
+  LawEnforcementSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:LawEnforcementSector
+    description: Sector related to law enforcement
+    aliases:
+      - Law Enforcement Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:LawEnforcementSector
+      - dpv_legal_eu_aiact_owl:LawEnforcementSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#LawEnforcementSector
+      dpv_extension_slug: legal/eu/aiact
+
+  MigrationSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:MigrationSector
+    description: Sector related to migration management
+    aliases:
+      - Migration Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:MigrationSector
+      - dpv_legal_eu_aiact_owl:MigrationSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#MigrationSector
+      dpv_extension_slug: legal/eu/aiact
+
+  PrivateSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:PrivateSector
+    description: Sector comprising of entities that are privately owned
+    aliases:
+      - Private Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:PrivateSector
+      - dpv_legal_eu_aiact_owl:PrivateSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#PrivateSector
+      dpv_extension_slug: legal/eu/aiact
+
+  PublicSector:
+    is_a: Sector
+    class_uri: legal_eu_aiact:PublicSector
+    description: |-
+      Sector comprising of entities that are publicly owned e.g. by the
+      government
+    aliases:
+      - Public Sector
+    in_subset:
+      - legal_eu_aiact_sector_subset
+    exact_mappings:
+      - dpv_legal_eu_aiact:PublicSector
+      - dpv_legal_eu_aiact_owl:PublicSector
+    annotations:
+      dct_source: ' Annex III'
+      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#PublicSector
+      dpv_extension_slug: legal/eu/aiact

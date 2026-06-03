@@ -1,6 +1,0 @@
-# __unmapped__:
-#   dct:description: 'Customer complaint: GDPR rights have been violated'
-has_impact:
-- eu-gdpr:GDPRRightsImpact
-- risk:RightsViolated
-id: ex:SubmittedComplaint

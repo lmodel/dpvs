@@ -1,7 +1,0 @@
-has_data_controller: ex:Alpha
-has_data_processor: ex:Beta
-has_processing:
-- dpv:Collect
-- dpv:Store
-id: ex:PDH
-is_implemented_by_entity: ex:Beta

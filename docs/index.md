@@ -1,4 +1,4 @@
-# dpvs
+# dpv
 
 Data Privacy Vocabulary (DPV) - LinkML Schema
 

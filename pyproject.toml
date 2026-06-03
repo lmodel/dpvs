@@ -3,7 +3,7 @@ requires = ["hatchling", "uv-dynamic-versioning"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dpvs"
+name = "dpv"
 description = "Data Privacy Vocabulary (DPV) - LinkML Schema"
 authors = [
   {name = "Noel McLoughlin", email = "noel.mcloughlin@gmail.com"},
@@ -48,7 +48,7 @@ testpaths = ["tests"]
 # https://docs.astral.sh/ruff/configuration/
 [tool.ruff]
 exclude = [
-    "src/dpvs/_version.py",
+    "src/dpv/_version.py",
 ]
 # Set oldest supported Python version
 target-version = "py310"
@@ -60,8 +60,8 @@ skip = [
   "pyproject.toml",
   "uv.lock",
   "project/*",
-  "src/dpvs/datamodel/dpvs_pydantic.py",
-  "src/dpvs/datamodel/dpvs.py",
+  "src/dpv/datamodel/dpv_pydantic.py",
+  "src/dpv/datamodel/dpv.py",
 ]
 
 # Reminder: words have to be lowercased for the ignore-words-list
@@ -78,6 +78,6 @@ extend-exclude = [
   "uv.lock",
   "pyproject.toml",
   "project/*",
-  "src/dpvs/datamodel/dpvs_pydantic.py",
-  "src/dpvs/datamodel/dpvs.py",
+  "src/dpv/datamodel/dpv_pydantic.py",
+  "src/dpv/datamodel/dpv.py",
 ]

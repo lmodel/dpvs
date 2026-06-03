@@ -1,6 +1,0 @@
-# __unmapped__:
-#   risk:hasRiskSource: risk:DataBreach
-has_consequence: risk:IntentionalMisuse
-has_impact: risk:RightsImpact
-has_risk: risk:IdentityFraud
-id: ex:ProcessB

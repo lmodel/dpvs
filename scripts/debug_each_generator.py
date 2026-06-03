@@ -281,7 +281,7 @@ def main():
         # Stop at first timeout so the user isn't waiting for all timed-out generators
         if status == "timeout":
             print(
-                f"\n⚠  {gen_name} timed out — stopping here. "
+                f"\n⚠  {gen_name} timed out - stopping here. "
                 f"Inspect stack traces:\n   {stack_path}"
             )
             break

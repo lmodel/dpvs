@@ -1,4 +1,0 @@
-has_activity_status: dpv:ActivityProposed
-has_personal_data: pd:Biometric
-has_purpose: dpv:IdentityVerification
-id: ex:PDH2

@@ -1,7 +1,0 @@
-# __unmapped__:
-#   dct:title: My Product Streaming Service
-has_process:
-- ex:FraudManagement
-- ex:Register
-- ex:Service
-id: ex:MyProduct

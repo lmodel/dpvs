@@ -1,6 +1,0 @@
-has_data_processor: ex:FooTech
-has_legal_basis: dpv:Consent
-has_personal_data: pd:EmailAddressPersonal
-has_processing: dpv:Share
-has_purpose: dpv:Marketing
-id: ex:SendingNewsletters

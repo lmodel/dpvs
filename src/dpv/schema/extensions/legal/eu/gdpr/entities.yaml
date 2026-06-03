@@ -1,0 +1,491 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/gdpr/entities
+name: dpv_legal_eu_gdpr_entities
+title: DPV - Legal - Eu - Gdpr / Entities
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/gdpr/modules/entities-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/gdpr
+  - https://w3c.github.io/dpv/2.3/legal/eu/gdpr/
+source: https://w3id.org/dpv/legal/eu/gdpr/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/gdpr
+  dpv_submodule: entities
+  source_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/entities-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/entities.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/gdpr/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/gdpr#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_gdpr: https://w3id.org/lmodel/dpv/legal/eu/gdpr/
+  dpv_legal_eu_gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  dpv_legal_eu_gdpr_owl: https://w3id.org/dpv/legal/eu/gdpr/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_gdpr
+default_range: string
+id_prefixes:
+  - legal_eu_gdpr
+  - dpv_legal_eu_gdpr
+  - dpv_legal_eu_gdpr_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/gdpr
+
+subsets:
+
+  legal_eu_gdpr_entities_subset:
+    description: Entities from the DPV `legal/eu/gdpr/modules/entities` submodule.
+
+slots:
+
+  has_concerned_sa:
+    is_a: has_entity
+    definition_uri: legal_eu_gdpr:hasConcernedSA
+    description: Indicates a concerned supervisory authority
+    aliases:
+      - has concerned supervisory authority
+    multivalued: true
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:hasConcernedSA
+      - dpv_legal_eu_gdpr_owl:hasConcernedSA
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#hasConcernedSA
+      dpv_extension_slug: legal/eu/gdpr
+
+  has_establishment:
+    is_a: has_entity
+    definition_uri: legal_eu_gdpr:hasEstablishment
+    description: Indicates an establishment associated with a legal entity
+    aliases:
+      - has establishment
+    multivalued: true
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:hasEstablishment
+      - dpv_legal_eu_gdpr_owl:hasEstablishment
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#hasEstablishment
+      dpv_extension_slug: legal/eu/gdpr
+
+  has_lead_sa:
+    is_a: has_entity
+    definition_uri: legal_eu_gdpr:hasLeadSA
+    description: Indicates the lead supervisory authority
+    aliases:
+      - has lead supervisory authority
+    multivalued: true
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:hasLeadSA
+      - dpv_legal_eu_gdpr_owl:hasLeadSA
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#hasLeadSA
+      dpv_extension_slug: legal/eu/gdpr
+
+  has_local_sa:
+    is_a: has_entity
+    definition_uri: legal_eu_gdpr:hasLocalSA
+    description: Indicates the local supervisory authority
+    aliases:
+      - has local supervisory authority
+    multivalued: true
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:hasLocalSA
+      - dpv_legal_eu_gdpr_owl:hasLocalSA
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#hasLocalSA
+      dpv_extension_slug: legal/eu/gdpr
+
+  has_main_establishment:
+    is_a: has_entity
+    definition_uri: legal_eu_gdpr:hasMainEstablishment
+    description: |-
+      Indicates the legal entity has specified establishment as its main
+      establishment
+    aliases:
+      - has main establishment
+    multivalued: true
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:hasMainEstablishment
+      - dpv_legal_eu_gdpr_owl:hasMainEstablishment
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#hasMainEstablishment
+      dpv_extension_slug: legal/eu/gdpr
+
+  is_main_establishment_for:
+    is_a: has_entity
+    definition_uri: legal_eu_gdpr:isMainEstablishmentFor
+    description: Indicates the main establishment for specific legal entity
+    aliases:
+      - is main establishment for
+    multivalued: true
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:isMainEstablishmentFor
+      - dpv_legal_eu_gdpr_owl:isMainEstablishmentFor
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#isMainEstablishmentFor
+      dpv_extension_slug: legal/eu/gdpr
+
+classes:
+
+  ConcernedSupervisoryAuthority:
+    is_a: DataProtectionAuthority
+    class_uri: legal_eu_gdpr:ConcernedSupervisoryAuthority
+    description: |-
+      Concerned Supervisory Authority' or 'supervisory authority concerned’
+      means a supervisory authority which is concerned by the processing of
+      personal data because: (a) the controller or processor is established on
+      the territory of the Member State of that supervisory authority; (b)
+      data subjects residing in the Member State of that supervisory authority
+      are substantially affected or likely to be substantially affected by the
+      processing; or (c) a complaint has been lodged with that supervisory
+      authority
+    aliases:
+      - Concerned Supervisory Authority
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:ConcernedSupervisoryAuthority
+      - dpv_legal_eu_gdpr_owl:ConcernedSupervisoryAuthority
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ConcernedSupervisoryAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  DataProtectionAuthority:
+    class_uri: legal_eu_gdpr:DataProtectionAuthority
+    description: |-
+      ‘Supervisory Authority’ or 'Data Protection Authority' means an
+      independent public authority which is established by a Member State
+      pursuant to Article 51
+    aliases:
+      - Data Protection Authority
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataProtectionAuthority
+      - dpv_legal_eu_gdpr_owl:DataProtectionAuthority
+    close_mappings:
+      - iso27701:SupervisoryAuthority
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataProtectionAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  DataSubject:
+    class_uri: legal_eu_gdpr:DataSubject
+    description: |-
+      Data Subject' means a natural person who can be identified, directly or
+      indirectly, in particular by reference to an identifier such as a name,
+      an identification number, location data, an online identifier or to one
+      or more factors specific to the physical, physiological, genetic,
+      mental, economic, cultural or social identity of that natural person
+    aliases:
+      - Data Subject
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DataSubject
+      - dpv_legal_eu_gdpr_owl:DataSubject
+    close_mappings:
+      - iso27701:PIIPrincipal
+    annotations:
+      dct_source: GDPR Art.4-1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataSubject
+      dpv_extension_slug: legal/eu/gdpr
+
+  DpvController:
+    is_a: DataController
+    class_uri: legal_eu_gdpr:Controller
+    description: |-
+      ‘Controller’ means the natural or legal person, public authority, agency
+      or other body which, alone or jointly with others, determines the
+      purposes and means of the processing of personal data; where the
+      purposes and means of such processing are determined by Union or Member
+      State law, the controller or the specific criteria for its nomination
+      may be provided for by Union or Member State law
+    aliases:
+      - Controller
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Controller
+      - dpv_legal_eu_gdpr_owl:Controller
+    close_mappings:
+      - iso27701:PIIController
+    annotations:
+      dct_source: GDPR Art.4-7
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Controller
+      dpv_extension_slug: legal/eu/gdpr
+
+  DpvProcessor:
+    is_a: DataProcessor
+    class_uri: legal_eu_gdpr:Processor
+    description: |-
+      ‘Processor’ means a natural or legal person, public authority, agency or
+      other body which processes personal data on behalf of the controller
+    aliases:
+      - Processor
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Processor
+      - dpv_legal_eu_gdpr_owl:Processor
+    close_mappings:
+      - iso27701:PIIProcessor
+    annotations:
+      dct_source: GDPR Art.4-8
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processor
+      dpv_extension_slug: legal/eu/gdpr
+
+  DpvRecipient:
+    class_uri: legal_eu_gdpr:Recipient
+    description: |-
+      ‘Recipient’ means a natural or legal person, public authority, agency or
+      another body, to which the personal data are disclosed, whether a third
+      party or not
+    aliases:
+      - Recipient
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Recipient
+      - dpv_legal_eu_gdpr_owl:Recipient
+    related_mappings:
+      - iso27701:ThirdParty
+    annotations:
+      dct_source: GDPR Art.4-9
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Recipient
+      dpv_extension_slug: legal/eu/gdpr
+
+  Establishment:
+    is_a: DpvOrganisation
+    class_uri: legal_eu_gdpr:Establishment
+    description: |-
+      Establishment is a Legal Entity which implies the effective and real
+      exercise of activities through stable arrangements (with a presumed
+      parent or primary establishment)
+    aliases:
+      - Establishment
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Establishment
+      - dpv_legal_eu_gdpr_owl:Establishment
+    annotations:
+      dct_source: ' GDPR Art.56'
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Establishment
+      dpv_extension_slug: legal/eu/gdpr
+
+  InternationalOrganisation:
+    class_uri: legal_eu_gdpr:InternationalOrganisation
+    description: |-
+      ‘International Organisation’ means an organisation and its subordinate
+      bodies governed by public international law, or any other body which is
+      set up by, or on the basis of, an agreement between two or more
+      countries
+    aliases:
+      - International Organisation
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:InternationalOrganisation
+      - dpv_legal_eu_gdpr_owl:InternationalOrganisation
+    annotations:
+      dct_source: GDPR Art.4-26
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#InternationalOrganisation
+      dpv_extension_slug: legal/eu/gdpr
+
+  LeadSupervisoryAuthority:
+    is_a: DataProtectionAuthority
+    class_uri: legal_eu_gdpr:LeadSupervisoryAuthority
+    description: |-
+      Authority with the primary responsibility for dealing with a
+      cross-border data processing activity
+    aliases:
+      - Lead Supervisory Authority
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:LeadSupervisoryAuthority
+      - dpv_legal_eu_gdpr_owl:LeadSupervisoryAuthority
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#LeadSupervisoryAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  LocalSupervisoryAuthority:
+    is_a: DataProtectionAuthority
+    class_uri: legal_eu_gdpr:LocalSupervisoryAuthority
+    description: |-
+      Authority associated with the main or local establishment of an
+      organisation
+    aliases:
+      - Local Supervisory Authority
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:LocalSupervisoryAuthority
+      - dpv_legal_eu_gdpr_owl:LocalSupervisoryAuthority
+    annotations:
+      dct_source: |2-
+         Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
+        Version 2.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#LocalSupervisoryAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  MainEstablishment:
+    is_a: Establishment
+    class_uri: legal_eu_gdpr:MainEstablishment
+    description: |-
+      Main Establishment' means as regards a controller with establishments in
+      more than one Member State, the place of its central administration in
+      the Union, unless the decisions on the purposes and means of the
+      processing of personal data are taken in another establishment of the
+      controller in the Union and the latter establishment has the power to
+      have such decisions implemented, in which case the establishment having
+      taken such decisions is to be considered to be the main establishment;
+      as regards a processor with establishments in more than one Member
+      State, the place of its central administration in the Union, or, if the
+      processor has no central administration in the Union, the establishment
+      of the processor in the Union where the main processing activities in
+      the context of the activities of an establishment of the processor take
+      place to the extent that the processor is subject to specific
+      obligations under this Regulation;
+    aliases:
+      - Main Establishment
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:MainEstablishment
+      - dpv_legal_eu_gdpr_owl:MainEstablishment
+    annotations:
+      dct_source: ' GDPR Art.56'
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#MainEstablishment
+      dpv_extension_slug: legal/eu/gdpr
+
+  Representative:
+    class_uri: legal_eu_gdpr:Representative
+    description: |-
+      Representative’ means a natural or legal person established in the Union
+      who, designated by the controller or processor in writing pursuant to
+      Article 27, represents the controller or processor with regard to their
+      respective obligations under this Regulation
+    aliases:
+      - Representative
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Representative
+      - dpv_legal_eu_gdpr_owl:Representative
+    annotations:
+      dct_source: GDPR Art.4-17
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Representative
+      dpv_extension_slug: legal/eu/gdpr
+
+  SingleEstablishment:
+    is_a: Establishment
+    class_uri: legal_eu_gdpr:SingleEstablishment
+    description: A legal entity that is established in only one Member State
+    aliases:
+      - Single Establishment
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:SingleEstablishment
+      - dpv_legal_eu_gdpr_owl:SingleEstablishment
+    annotations:
+      dct_source: GDPR Art.23
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#SingleEstablishment
+      dpv_extension_slug: legal/eu/gdpr
+
+  ThirdParty:
+    class_uri: legal_eu_gdpr:ThirdParty
+    description: |-
+      ‘Third Party’ means a natural or legal person, public authority, agency
+      or body other than the data subject, controller, processor and persons
+      who, under the direct authority of the controller or processor, are
+      authorised to process personal data
+    aliases:
+      - Third Party
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:ThirdParty
+      - dpv_legal_eu_gdpr_owl:ThirdParty
+    close_mappings:
+      - iso27701:ThirdParty
+    annotations:
+      dct_source: GDPR Art.4-10
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#ThirdParty
+      dpv_extension_slug: legal/eu/gdpr

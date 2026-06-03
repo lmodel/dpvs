@@ -1,0 +1,477 @@
+id: https://w3id.org/lmodel/dpv/ai/systems
+name: dpv_ai_systems
+title: DPV - Ai / Systems
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `ai/modules/systems-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/ai
+  - https://w3c.github.io/dpv/2.3/ai/
+source: https://w3id.org/dpv/ai/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: ai
+  dpv_submodule: systems
+  source_ttl: upstream-releases/dpv/ai/modules/systems-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/ai/modules/systems.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/ai/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/ai#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  ai: https://w3id.org/lmodel/dpv/ai/
+  dpv_ai: https://w3id.org/dpv/ai#
+  dpv_ai_owl: https://w3id.org/dpv/ai/owl#
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: ai
+default_range: string
+id_prefixes:
+  - ai
+  - dpv_ai
+  - dpv_ai_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/ai
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  ai_systems_subset:
+    description: Entities from the DPV `ai/modules/systems` submodule.
+
+classes:
+
+  AGI:
+    is_a: AISystem
+    class_uri: ai:AGI
+    description: |-
+      Type of AI system that addresses a broad range of tasks with a
+      satisfactory level of performance
+    aliases:
+      - Artificial General Intelligence (AGI)
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:AGI
+      - dpv_ai_owl:AGI
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#AGI
+      dpv_extension_slug: ai
+
+  CognitiveComputing:
+    is_a: AISystem
+    class_uri: ai:CognitiveComputing
+    description: |-
+      Category of AI systems that enables people and machines to interact more
+      naturally
+    aliases:
+      - Cognitive Computing
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:CognitiveComputing
+      - dpv_ai_owl:CognitiveComputing
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.1.8
+      upstream_iri: https://w3id.org/dpv/ai/owl#CognitiveComputing
+      dpv_extension_slug: ai
+
+  CyberphysicalSystem:
+    is_a: AISystem
+    class_uri: ai:CyberphysicalSystem
+    description: |-
+      Engineered system built from, and depending upon, the seamless
+      integration of computation and physical components
+    aliases:
+      - Cyber-physical System
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:CyberphysicalSystem
+      - dpv_ai_owl:CyberphysicalSystem
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#CyberphysicalSystem
+      dpv_extension_slug: ai
+
+  EdgeAI:
+    is_a: AISystem
+    class_uri: ai:EdgeAI
+    description: |-
+      The deployment and execution of AI and ML models on Edge devices,
+      including smartphones, IoT sensors, industrial controllers, and other
+      resource-constrained devices located at the Edge of the network and
+      closer to the data sources
+    aliases:
+      - Edge AI
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:EdgeAI
+      - dpv_ai_owl:EdgeAI
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#EdgeAI
+      dpv_extension_slug: ai
+
+  ExpertSystem:
+    is_a: AISystem
+    class_uri: ai:ExpertSystem
+    description: |-
+      AI system that accumulates, combines and encapsulates knowledge provided
+      by a human expert or experts in a specific domain to infer solutions to
+      problems (ISO/IEC 22989:2022 definition); Artificial intelligence system
+      emulating human expert decision-making abilities, addressing complex
+      problems through reasoning across knowledge bases primarily represented
+      as if-then rules, and comprising two sub-systems: an inference engine
+      for applying rules to known facts and deducing new facts, and a
+      knowledge base containing facts and rules; potentially featuring
+      explanation and debugging capabilities (EU Vocabularies' AI Taxonomy
+      definition)
+    aliases:
+      - Expert System
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:ExpertSystem
+      - dpv_ai_owl:ExpertSystem
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ExpertSystem
+      dpv_extension_slug: ai
+
+  FineTunedModel:
+    is_a: TrainedModel
+    class_uri: ai:FineTunedModel
+    description: Model resulting from fine-tuning of a pre-trained model
+    aliases:
+      - Fine-tuned Model
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:FineTunedModel
+      - dpv_ai_owl:FineTunedModel
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#FineTunedModel
+      dpv_extension_slug: ai
+
+  FrugalAISystem:
+    is_a: AISystem
+    class_uri: ai:FrugalAISystem
+    description: |-
+      AI systems intended to be more efficient, cost-effective, and accessible
+      while maintaining or even improving their performance
+    aliases:
+      - Frugal AI System
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:FrugalAISystem
+      - dpv_ai_owl:FrugalAISystem
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#FrugalAISystem
+      dpv_extension_slug: ai
+
+  GPAI:
+    is_a: AISystem
+    class_uri: ai:GPAI
+    description: |-
+      Artificial intelligence system based on a general-purpose model and
+      capable of serving a variety of purposes, either in direct use or
+      integrated with other AI systems
+    aliases:
+      - General-Purpose AI System (GPAI)
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:GPAI
+      - dpv_ai_owl:GPAI
+    close_mappings:
+      - iso42001:AISystem
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#GPAI
+      dpv_extension_slug: ai
+
+  GPAIModel:
+    is_a: Model
+    class_uri: ai:GPAIModel
+    description: |-
+      A model that displays generality in terms of capabilities and potential
+      applications
+    aliases:
+      - General Purpose AI Model
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:GPAIModel
+      - dpv_ai_owl:GPAIModel
+    close_mappings:
+      - iso42001:AISystem
+    annotations:
+      dct_source: EU AI Act
+      upstream_iri: https://w3id.org/dpv/ai/owl#GPAIModel
+      dpv_extension_slug: ai
+
+  IndustrialRobot:
+    is_a: Robot
+    class_uri: ai:IndustrialRobot
+    description: |-
+      A robot or robotic system for use in industrial automation applications
+    aliases:
+      - Industrial Robot
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:IndustrialRobot
+      - dpv_ai_owl:IndustrialRobot
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.1.29
+      upstream_iri: https://w3id.org/dpv/ai/owl#IndustrialRobot
+      dpv_extension_slug: ai
+
+  IntelligentControlSystem:
+    is_a: AISystem
+    class_uri: ai:IntelligentControlSystem
+    description: |-
+      Category of AI systems which implement intelligent control principles
+      for real-world applications by using AI capabilities and techniques
+    aliases:
+      - Intelligent Control System
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:IntelligentControlSystem
+      - dpv_ai_owl:IntelligentControlSystem
+    annotations:
+      dct_source: ' Defining Artificial Intelligence 2.0'
+      upstream_iri: https://w3id.org/dpv/ai/owl#IntelligentControlSystem
+      dpv_extension_slug: ai
+
+  LLM:
+    is_a: Model
+    class_uri: ai:LLM
+    description: |-
+      Deep learning model that uses artificial neural networks trained on vast
+      amounts of data to understand and generate natural language and other
+      types of content to perform a wide range of tasks
+    aliases:
+      - Large Language Model (LLM)
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:LLM
+      - dpv_ai_owl:LLM
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#LLM
+      dpv_extension_slug: ai
+
+  MachineLearningModel:
+    is_a: Model
+    class_uri: ai:MachineLearningModel
+    description: |-
+      Mathematical construct that generates an inference or prediction based
+      on input data or information
+    aliases:
+      - Machine Learning Model
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:MachineLearningModel
+      - dpv_ai_owl:MachineLearningModel
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.3.7
+      upstream_iri: https://w3id.org/dpv/ai/owl#MachineLearningModel
+      dpv_extension_slug: ai
+
+  MachineLearningPlatform:
+    is_a: Platform
+    mixins:
+      - Technology
+    class_uri: ai:MachineLearningPlatform
+    description: |-
+      Technology platform for developing, deploying, and managing machine
+      learning models and resources
+    aliases:
+      - Machine Learning Platform
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:MachineLearningPlatform
+      - dpv_ai_owl:MachineLearningPlatform
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#MachineLearningPlatform
+      dpv_extension_slug: ai
+
+  NarrowAI:
+    is_a: AISystem
+    class_uri: ai:NarrowAI
+    description: |-
+      Type of AI system that is focused on defined tasks to address a specific
+      problem i.e. it addresses a narrow scope of tasks and problems
+    aliases:
+      - Narrow AI
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:NarrowAI
+      - dpv_ai_owl:NarrowAI
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.1.24
+      upstream_iri: https://w3id.org/dpv/ai/owl#NarrowAI
+      dpv_extension_slug: ai
+
+  ReasoningSystem:
+    is_a: AISystem
+    class_uri: ai:ReasoningSystem
+    description: |-
+      Artificial intelligence systems that uses available information to
+      generate predictions, make inferences and draw conclusions, involving
+      the representation of data in machine-processable form and application
+      of logic to arrive at decisions
+    aliases:
+      - Reasoning System
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:ReasoningSystem
+      - dpv_ai_owl:ReasoningSystem
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#ReasoningSystem
+      dpv_extension_slug: ai
+
+  Robot:
+    is_a: AISystem
+    class_uri: ai:Robot
+    description: |-
+      An automation system with actuators that performs intended tasks in the
+      physical world, by means of sensing its environment and a software
+      control system
+    aliases:
+      - Robot
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:Robot
+      - dpv_ai_owl:Robot
+    annotations:
+      dct_source: ISO/IEC 22989:2022 3.1.29
+      upstream_iri: https://w3id.org/dpv/ai/owl#Robot
+      dpv_extension_slug: ai
+
+  RoboticProcessAutomation:
+    is_a: AISystem
+    class_uri: ai:RoboticProcessAutomation
+    description: |-
+      Technology focused on automation of repetitive, routine, rule-based
+      human tasks
+    aliases:
+      - Robotic Process Automation
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:RoboticProcessAutomation
+      - dpv_ai_owl:RoboticProcessAutomation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#RoboticProcessAutomation
+      dpv_extension_slug: ai
+
+  Robotics:
+    is_a: AISystem
+    class_uri: ai:Robotics
+    description: |-
+      The science of designing, engineering and using robots, i.e. machines
+      controlled by computers which perform jobs automatically
+    aliases:
+      - Robotics
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:Robotics
+      - dpv_ai_owl:Robotics
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#Robotics
+      dpv_extension_slug: ai
+
+  ServiceRobot:
+    is_a: Robot
+    class_uri: ai:ServiceRobot
+    description: |-
+      A robot or robotic system in personal use or professional use that
+      performs useful tasks for humans or equipment
+    aliases:
+      - Service Robot
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:ServiceRobot
+      - dpv_ai_owl:ServiceRobot
+    annotations:
+      dct_source: ' ISO 8373:2021 3.7'
+      upstream_iri: https://w3id.org/dpv/ai/owl#ServiceRobot
+      dpv_extension_slug: ai
+
+  SocialRobot:
+    is_a: Robot
+    class_uri: ai:SocialRobot
+    description: A robot or robotic system with social interaction functions
+    aliases:
+      - Social Robot
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:SocialRobot
+      - dpv_ai_owl:SocialRobot
+    annotations:
+      dct_source: ' Defining Artificial Intelligence 2.0'
+      upstream_iri: https://w3id.org/dpv/ai/owl#SocialRobot
+      dpv_extension_slug: ai
+
+  TrainedModel:
+    is_a: Model
+    class_uri: ai:TrainedModel
+    description: Model resulted from model training
+    aliases:
+      - Trained Model
+    in_subset:
+      - ai_systems_subset
+    exact_mappings:
+      - dpv_ai:TrainedModel
+      - dpv_ai_owl:TrainedModel
+    annotations:
+      dct_source: ' ISO 8373:2021 3.7'
+      upstream_iri: https://w3id.org/dpv/ai/owl#TrainedModel
+      dpv_extension_slug: ai

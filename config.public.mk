@@ -6,10 +6,10 @@
 
 # Note:
 # - just works fine with quoted variables of dot-env files like this one
-LINKML_SCHEMA_NAME="dpvs"
+LINKML_SCHEMA_NAME="dpv"
 LINKML_SCHEMA_AUTHOR="Noel McLoughlin <noel.mcloughlin@gmail.com>"
 LINKML_SCHEMA_DESCRIPTION="Data Privacy Vocabularies (DPV) - LinkML Schema"
-LINKML_SCHEMA_SOURCE_DIR="src/dpvs/schema"
+LINKML_SCHEMA_SOURCE_DIR="src/dpv/schema"
 
 ###### linkml generator variables, used by justfile
 
@@ -17,8 +17,8 @@ LINKML_SCHEMA_SOURCE_DIR="src/dpvs/schema"
 LINKML_GENERATORS_CONFIG_YAML=config.yaml
 
 ## LinkML import map (relative to repo root). Maps canonical URI prefixes
-## (e.g. `dpvs:`) to local source directories so that URI-style imports such
-## as `dpvs:schema/dpvs_core` resolve to files in this repo during build.
+## (e.g. `dpv:`) to local source directories so that URI-style imports such
+## as `dpv:schema/dpv_core` resolve to files in this repo during build.
 ## The committed `importmap.json` is the source of truth (relative paths);
 ## the justfile materialises an absolute-path copy at `tmp/importmap.json`
 ## because SchemaLoader joins importmap values with the importing schema's

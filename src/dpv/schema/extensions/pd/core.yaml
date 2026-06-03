@@ -1,0 +1,222 @@
+id: https://w3id.org/lmodel/dpv/pd/core
+name: dpv_pd_core
+title: DPV - Pd / Core
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `pd/modules/core-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/pd
+  - https://w3c.github.io/dpv/2.3/pd/
+source: https://w3id.org/dpv/pd/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: pd
+  dpv_submodule: core
+  source_ttl: upstream-releases/dpv/pd/modules/core-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/pd/modules/core.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/pd/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/pd#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  pd: https://w3id.org/lmodel/dpv/pd/
+  dpv_pd: https://w3id.org/dpv/pd#
+  dpv_pd_owl: https://w3id.org/dpv/pd/owl#
+
+default_prefix: pd
+default_range: string
+id_prefixes:
+  - pd
+  - dpv_pd
+  - dpv_pd_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/pd
+
+subsets:
+
+  pd_core_subset:
+    description: Entities from the DPV `pd/modules/core` submodule.
+
+classes:
+
+  External:
+    is_a: PersonalData
+    class_uri: pd:External
+    description: Information about external characteristics that can be observed
+    aliases:
+      - External
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:External
+      - dpv_pd_owl:External
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#External
+      dpv_extension_slug: pd
+
+  Financial:
+    is_a: PersonalData
+    class_uri: pd:Financial
+    description: |-
+      Information about finance including monetary characteristics and
+      transactions
+    aliases:
+      - Financial
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Financial
+      - dpv_pd_owl:Financial
+    related_mappings:
+      - svd:Financial
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Financial
+      dpv_extension_slug: pd
+
+  Historical:
+    is_a: PersonalData
+    class_uri: pd:Historical
+    description: |-
+      Information about historical data related to or relevant regarding
+      history or past events
+    aliases:
+      - Historical
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Historical
+      - dpv_pd_owl:Historical
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Historical
+      dpv_extension_slug: pd
+
+  Household:
+    is_a: PersonalData
+    class_uri: pd:Household
+    description: Information about personal or household activities
+    aliases:
+      - Household
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Household
+      - dpv_pd_owl:Household
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Household
+      dpv_extension_slug: pd
+
+  Internal:
+    is_a: PersonalData
+    class_uri: pd:Internal
+    description: |-
+      Information about internal characteristics that cannot be seen or
+      observed
+    aliases:
+      - Internal
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Internal
+      - dpv_pd_owl:Internal
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Internal
+      dpv_extension_slug: pd
+
+  Profile:
+    is_a: PersonalData
+    class_uri: pd:Profile
+    description: |-
+      Profile or user profile is information and representation of
+      characteristics associated with person(s) or group(s)
+    aliases:
+      - Profile
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Profile
+      - dpv_pd_owl:Profile
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Profile
+      dpv_extension_slug: pd
+
+  Social:
+    is_a: PersonalData
+    class_uri: pd:Social
+    description: |-
+      Information about social aspects such as family, public life, or
+      professional networks
+    aliases:
+      - Social
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Social
+      - dpv_pd_owl:Social
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Social
+      dpv_extension_slug: pd
+
+  Tracking:
+    is_a: PersonalData
+    class_uri: pd:Tracking
+    description: |-
+      Information used to track an individual or group e.g. location or email
+    aliases:
+      - Tracking
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Tracking
+      - dpv_pd_owl:Tracking
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Tracking
+      dpv_extension_slug: pd
+
+  Vulnerability:
+    is_a: SensitivePersonalData
+    class_uri: pd:Vulnerability
+    description: Information about vulnerability of a person or group
+    aliases:
+      - Vulnerability
+    in_subset:
+      - pd_core_subset
+    exact_mappings:
+      - dpv_pd:Vulnerability
+      - dpv_pd_owl:Vulnerability
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Vulnerability
+      dpv_extension_slug: pd

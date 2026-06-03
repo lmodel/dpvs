@@ -1,0 +1,453 @@
+id: https://w3id.org/lmodel/dpv/risk/incident
+name: dpv_risk_incident
+title: DPV - Risk / Incident
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `risk/modules/incident-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/risk
+  - https://w3c.github.io/dpv/2.3/risk/
+source: https://w3id.org/dpv/risk/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: risk
+  dpv_submodule: incident
+  source_ttl: upstream-releases/dpv/risk/modules/incident-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/risk/modules/incident.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/risk/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/risk#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  risk: https://w3id.org/lmodel/dpv/risk/
+  dpv_risk: https://w3id.org/dpv/risk#
+  dpv_risk_owl: https://w3id.org/dpv/risk/owl#
+
+default_prefix: risk
+default_range: string
+id_prefixes:
+  - risk
+  - dpv_risk
+  - dpv_risk_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/risk
+
+subsets:
+
+  risk_incident_subset:
+    description: Entities from the DPV `risk/modules/incident` submodule.
+
+slots:
+
+  has_incident:
+    definition_uri: risk:hasIncident
+    description: Indicates an incident is associated with the specified context
+    aliases:
+      - has incident
+    multivalued: true
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:hasIncident
+      - dpv_risk_owl:hasIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#hasIncident
+      dpv_extension_slug: risk
+
+classes:
+
+  AccidentalIncident:
+    is_a: Incident
+    class_uri: risk:AccidentalIncident
+    description: |-
+      Incident caused due to accidental actions arising from human or
+      human-controlled situations
+    aliases:
+      - Accidental Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:AccidentalIncident
+      - dpv_risk_owl:AccidentalIncident
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#AccidentalIncident
+      dpv_extension_slug: risk
+
+  AvailabilityIncident:
+    is_a: Incident
+    class_uri: risk:AvailabilityIncident
+    description: |-
+      Incident where the availability of information or system has been
+      affected
+    aliases:
+      - Availability Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:AvailabilityIncident
+      - dpv_risk_owl:AvailabilityIncident
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#AvailabilityIncident
+      dpv_extension_slug: risk
+
+  ConfidentialityIncident:
+    is_a: Incident
+    class_uri: risk:ConfidentialityIncident
+    description: |-
+      Incident where the confidentiality of information or system has been
+      affected
+    aliases:
+      - Confidentiality Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:ConfidentialityIncident
+      - dpv_risk_owl:ConfidentialityIncident
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ConfidentialityIncident
+      dpv_extension_slug: risk
+
+  CrossBorderIncident:
+    is_a: Incident
+    class_uri: risk:CrossBorderIncident
+    description: Incident involving cross-border or multiple jurisdictions
+    aliases:
+      - Cross-Border Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:CrossBorderIncident
+      - dpv_risk_owl:CrossBorderIncident
+    related_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#CrossBorderIncident
+      dpv_extension_slug: risk
+
+  DeliberateIncident:
+    is_a: Incident
+    class_uri: risk:DeliberateIncident
+    description: Incident caused due to deliberate actions of a human
+    aliases:
+      - Deliberate Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:DeliberateIncident
+      - dpv_risk_owl:DeliberateIncident
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#DeliberateIncident
+      dpv_extension_slug: risk
+
+  EnvironmentalIncident:
+    is_a: Incident
+    class_uri: risk:EnvironmentalIncident
+    description: Incident caused due to environmental factors outside human controls
+    aliases:
+      - Environmental Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:EnvironmentalIncident
+      - dpv_risk_owl:EnvironmentalIncident
+    close_mappings:
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#EnvironmentalIncident
+      dpv_extension_slug: risk
+
+  Incident:
+    is_a: RiskConcept
+    class_uri: risk:Incident
+    description: An actual or occurred event
+    aliases:
+      - Incident
+    comments:
+      - Incident is realised or materialised risk
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:Incident
+      - dpv_risk_owl:Incident
+      - iso42001:AIIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#Incident
+      dpv_extension_slug: risk
+
+  IncidentAssessmentReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentAssessmentReport
+    description: |-
+      A report describing the assessment of an incident in terms of its
+      effects or impacts
+    aliases:
+      - Incident Assessment Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentAssessmentReport
+      - dpv_risk_owl:IncidentAssessmentReport
+    related_mappings:
+      - iso42001:AISystemImpactAssessment
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentAssessmentReport
+      dpv_extension_slug: risk
+
+  IncidentConcludingReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentConcludingReport
+    description: |-
+      A report describing the conclusion of an investigation regarding an
+      incident where all relevant facts are known
+    aliases:
+      - Incident Concluding Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentConcludingReport
+      - dpv_risk_owl:IncidentConcludingReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentConcludingReport
+      dpv_extension_slug: risk
+
+  IncidentDetectionReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentDetectionReport
+    description: A report describing the detection of an incident
+    aliases:
+      - Incident Detection Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentDetectionReport
+      - dpv_risk_owl:IncidentDetectionReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentDetectionReport
+      dpv_extension_slug: risk
+
+  IncidentHandlingReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentHandlingReport
+    description: |-
+      A report describing the response to or handling of an incident regarding
+      the mitigation of its effects and the prevention of its recurrence
+    aliases:
+      - Incident Handling Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentHandlingReport
+      - dpv_risk_owl:IncidentHandlingReport
+    related_mappings:
+      - iso42001:AIRiskTreatmentPlan
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentHandlingReport
+      dpv_extension_slug: risk
+
+  IncidentIdentifier:
+    class_uri: risk:IncidentIdentifier
+    description: Identifier associated with an incident
+    aliases:
+      - Incident Identifier
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentIdentifier
+      - dpv_risk_owl:IncidentIdentifier
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentIdentifier
+      dpv_extension_slug: risk
+
+  IncidentImpactAssessment:
+    is_a: ImpactAssessment
+    class_uri: risk:IncidentImpactAssessment
+    description: An impact assessment associated with an incident
+    aliases:
+      - Incident Impact Assessment
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentImpactAssessment
+      - dpv_risk_owl:IncidentImpactAssessment
+    close_mappings:
+      - iso42001:AISystemImpactAssessment
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentImpactAssessment
+      dpv_extension_slug: risk
+
+  IncidentMitigationMeasure:
+    is_a: RiskMitigationMeasure
+    class_uri: risk:IncidentMitigationMeasure
+    description: |-
+      A mitigation measure taken in response specifically to mitigate an
+      incident and prevent it from occurring again
+    aliases:
+      - Incident Mitigation Measure
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentMitigationMeasure
+      - dpv_risk_owl:IncidentMitigationMeasure
+    close_mappings:
+      - iso42001:AIRiskTreatmentPlan
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentMitigationMeasure
+      dpv_extension_slug: risk
+
+  IncidentNotice:
+    is_a: Notice
+    class_uri: risk:IncidentNotice
+    description: Notice associated with an incident
+    aliases:
+      - Incident Notice
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentNotice
+      - dpv_risk_owl:IncidentNotice
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentNotice
+      dpv_extension_slug: risk
+
+  IncidentOngoingReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentOngoingReport
+    description: |-
+      A report describing on ongoing investigation regarding an incident where
+      facts and extent of the investigation are being investigated
+    aliases:
+      - Incident Ongoing Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentOngoingReport
+      - dpv_risk_owl:IncidentOngoingReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentOngoingReport
+      dpv_extension_slug: risk
+
+  IncidentPreliminaryReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentPreliminaryReport
+    description: |-
+      A report describing the preliminary investigation regarding an incident
+      where the complete facts or extent of the incident may not be known
+    aliases:
+      - Incident Preliminary Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentPreliminaryReport
+      - dpv_risk_owl:IncidentPreliminaryReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentPreliminaryReport
+      dpv_extension_slug: risk
+
+  IncidentRegister:
+    is_a: RecordsOfActivities
+    class_uri: risk:IncidentRegister
+    description: |-
+      A register recording incidents, their reports, notifications, and other
+      related activities
+    aliases:
+      - Incident Register
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentRegister
+      - dpv_risk_owl:IncidentRegister
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentRegister
+      dpv_extension_slug: risk
+
+  IncidentReport:
+    is_a: RecordsOfActivities
+    class_uri: risk:IncidentReport
+    description: |-
+      Documented information about an incident, its handling, assessments,and
+      notifications
+    aliases:
+      - Incident Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentReport
+      - dpv_risk_owl:IncidentReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentReport
+      dpv_extension_slug: risk
+
+  IncidentSuspectedReport:
+    is_a: IncidentReport
+    class_uri: risk:IncidentSuspectedReport
+    description: |-
+      A report describing the suspicion of an incident in the past or
+      occurring
+    aliases:
+      - Incident Suspected Report
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IncidentSuspectedReport
+      - dpv_risk_owl:IncidentSuspectedReport
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IncidentSuspectedReport
+      dpv_extension_slug: risk
+
+  IntegrityIncident:
+    is_a: Incident
+    class_uri: risk:IntegrityIncident
+    description: |-
+      Incident where the integrity of information or system has been affected
+    aliases:
+      - Integrity Incident
+    in_subset:
+      - risk_incident_subset
+    exact_mappings:
+      - dpv_risk:IntegrityIncident
+      - dpv_risk_owl:IntegrityIncident
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#IntegrityIncident
+      dpv_extension_slug: risk

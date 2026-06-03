@@ -1,0 +1,680 @@
+id: https://w3id.org/lmodel/dpv/risk/risk_levels
+name: dpv_risk_risk_levels
+title: DPV - Risk / Risk Levels
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `risk/modules/risk_levels-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/risk
+  - https://w3c.github.io/dpv/2.3/risk/
+source: https://w3id.org/dpv/risk/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: risk
+  dpv_submodule: risk_levels
+  source_ttl: upstream-releases/dpv/risk/modules/risk_levels-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/risk/modules/risk_levels.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/risk/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/risk#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  risk: https://w3id.org/lmodel/dpv/risk/
+  dpv_risk: https://w3id.org/dpv/risk#
+  dpv_risk_owl: https://w3id.org/dpv/risk/owl#
+
+default_prefix: risk
+default_range: string
+id_prefixes:
+  - risk
+  - dpv_risk
+  - dpv_risk_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/risk
+
+subsets:
+
+  risk_risk_levels_subset:
+    description: Entities from the DPV `risk/modules/risk_levels` submodule.
+
+classes:
+
+  3LikelihoodLevels:
+    is_a: Likelihood
+    class_uri: risk:3LikelihoodLevels
+    description: Scale with 3 Likelihood Levels from High to Low
+    aliases:
+      - 3 Likelihood Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:3LikelihoodLevels
+      - dpv_risk_owl:3LikelihoodLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#3LikelihoodLevels
+      dpv_extension_slug: risk
+
+  3RiskLevels:
+    is_a: RiskLevel
+    class_uri: risk:3RiskLevels
+    description: Scale with 3 Risk Levels from High to Low
+    aliases:
+      - 3 Risk Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:3RiskLevels
+      - dpv_risk_owl:3RiskLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#3RiskLevels
+      dpv_extension_slug: risk
+
+  3SeverityLevels:
+    is_a: Severity
+    class_uri: risk:3SeverityLevels
+    description: Scale with 3 Severity Levels from High to Low
+    aliases:
+      - 3 Severity Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:3SeverityLevels
+      - dpv_risk_owl:3SeverityLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#3SeverityLevels
+      dpv_extension_slug: risk
+
+  5LikelihoodLevels:
+    is_a: Likelihood
+    class_uri: risk:5LikelihoodLevels
+    description: Scale with 5 Likelihood Levels from Very High to Very Low
+    aliases:
+      - 5 Likelihood Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:5LikelihoodLevels
+      - dpv_risk_owl:5LikelihoodLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#5LikelihoodLevels
+      dpv_extension_slug: risk
+
+  5RiskLevels:
+    is_a: RiskLevel
+    class_uri: risk:5RiskLevels
+    description: Scale with 5 Risk Levels from Very High to Very Low
+    aliases:
+      - 5 Risk Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:5RiskLevels
+      - dpv_risk_owl:5RiskLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#5RiskLevels
+      dpv_extension_slug: risk
+
+  5SeverityLevels:
+    is_a: Severity
+    class_uri: risk:5SeverityLevels
+    description: Scale with 5 Severity Levels from Very High to Very Low
+    aliases:
+      - 5 Severity Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:5SeverityLevels
+      - dpv_risk_owl:5SeverityLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#5SeverityLevels
+      dpv_extension_slug: risk
+
+  7LikelihoodLevels:
+    is_a: Likelihood
+    class_uri: risk:7LikelihoodLevels
+    description: Scale with 7 Likelihood Levels from Extremely High to Extremely Low
+    aliases:
+      - 7 Likelihood Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:7LikelihoodLevels
+      - dpv_risk_owl:7LikelihoodLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#7LikelihoodLevels
+      dpv_extension_slug: risk
+
+  7RiskLevels:
+    is_a: RiskLevel
+    class_uri: risk:7RiskLevels
+    description: Scale with 7 Risk Levels from Extremely High to Extremely Low
+    aliases:
+      - 7 Risk Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:7RiskLevels
+      - dpv_risk_owl:7RiskLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#7RiskLevels
+      dpv_extension_slug: risk
+
+  7SeverityLevels:
+    is_a: Severity
+    class_uri: risk:7SeverityLevels
+    description: Scale with 7 Severity Levels from Extremely High to Extremely Low
+    aliases:
+      - 7 Severity Levels
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:7SeverityLevels
+      - dpv_risk_owl:7SeverityLevels
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#7SeverityLevels
+      dpv_extension_slug: risk
+
+  ExtremelyHighLikelihood:
+    is_a: 7LikelihoodLevels
+    mixins:
+      - Likelihood
+    class_uri: risk:ExtremelyHighLikelihood
+    description: Level where Likelihood is Extremely High
+    aliases:
+      - Extremely High Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.99 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ExtremelyHighLikelihood
+      - dpv_risk_owl:ExtremelyHighLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ExtremelyHighLikelihood
+      dpv_extension_slug: risk
+
+  ExtremelyHighRisk:
+    is_a: 7RiskLevels
+    mixins:
+      - RiskLevel
+    class_uri: risk:ExtremelyHighRisk
+    description: Level where Risk is Extremely High
+    aliases:
+      - Extremely High Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.99 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ExtremelyHighRisk
+      - dpv_risk_owl:ExtremelyHighRisk
+    close_mappings:
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ExtremelyHighRisk
+      dpv_extension_slug: risk
+
+  ExtremelyHighSeverity:
+    is_a: 7SeverityLevels
+    mixins:
+      - Severity
+    class_uri: risk:ExtremelyHighSeverity
+    description: Level where Severity is Extremely High
+    aliases:
+      - Extremely High Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.99 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ExtremelyHighSeverity
+      - dpv_risk_owl:ExtremelyHighSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ExtremelyHighSeverity
+      dpv_extension_slug: risk
+
+  ExtremelyLowLikelihood:
+    is_a: 7LikelihoodLevels
+    mixins:
+      - Likelihood
+    class_uri: risk:ExtremelyLowLikelihood
+    description: Level where Likelihood is Extremely Low
+    aliases:
+      - Extremely Low Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.01 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ExtremelyLowLikelihood
+      - dpv_risk_owl:ExtremelyLowLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ExtremelyLowLikelihood
+      dpv_extension_slug: risk
+
+  ExtremelyLowRisk:
+    is_a: 7RiskLevels
+    mixins:
+      - RiskLevel
+    class_uri: risk:ExtremelyLowRisk
+    description: Level where Risk is Extremely Low
+    aliases:
+      - Extremely Low Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.01 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ExtremelyLowRisk
+      - dpv_risk_owl:ExtremelyLowRisk
+    close_mappings:
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ExtremelyLowRisk
+      dpv_extension_slug: risk
+
+  ExtremelyLowSeverity:
+    is_a: 7SeverityLevels
+    mixins:
+      - Severity
+    class_uri: risk:ExtremelyLowSeverity
+    description: Level where Severity is Extremely Low
+    aliases:
+      - Extremely Low Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.01 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ExtremelyLowSeverity
+      - dpv_risk_owl:ExtremelyLowSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ExtremelyLowSeverity
+      dpv_extension_slug: risk
+
+  HighLikelihood:
+    is_a: 3LikelihoodLevels
+    mixins:
+      - Likelihood
+      - 5LikelihoodLevels
+      - 7LikelihoodLevels
+    class_uri: risk:HighLikelihood
+    description: Level where Likelihood is High
+    aliases:
+      - High Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.75 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:HighLikelihood
+      - dpv_risk_owl:HighLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#HighLikelihood
+      dpv_extension_slug: risk
+
+  HighRisk:
+    is_a: 3RiskLevels
+    mixins:
+      - RiskLevel
+      - 5RiskLevels
+      - 7RiskLevels
+    class_uri: risk:HighRisk
+    description: Level where Risk is High
+    aliases:
+      - High Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.75 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:HighRisk
+      - dpv_risk_owl:HighRisk
+    close_mappings:
+      - iso42001:AIRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#HighRisk
+      dpv_extension_slug: risk
+
+  HighSeverity:
+    is_a: 3SeverityLevels
+    mixins:
+      - Severity
+      - 5SeverityLevels
+      - 7SeverityLevels
+    class_uri: risk:HighSeverity
+    description: Level where Severity is High
+    aliases:
+      - High Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.75 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:HighSeverity
+      - dpv_risk_owl:HighSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#HighSeverity
+      dpv_extension_slug: risk
+
+  LowLikelihood:
+    is_a: 3LikelihoodLevels
+    mixins:
+      - Likelihood
+      - 5LikelihoodLevels
+      - 7LikelihoodLevels
+    class_uri: risk:LowLikelihood
+    description: Level where Likelihood is Low
+    aliases:
+      - Low Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.25 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:LowLikelihood
+      - dpv_risk_owl:LowLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#LowLikelihood
+      dpv_extension_slug: risk
+
+  LowRisk:
+    is_a: 3RiskLevels
+    mixins:
+      - RiskLevel
+      - 5RiskLevels
+      - 7RiskLevels
+    class_uri: risk:LowRisk
+    description: Level where Risk is Low
+    aliases:
+      - Low Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.25 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:LowRisk
+      - dpv_risk_owl:LowRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#LowRisk
+      dpv_extension_slug: risk
+
+  LowSeverity:
+    is_a: 3SeverityLevels
+    mixins:
+      - Severity
+      - 5SeverityLevels
+      - 7SeverityLevels
+    class_uri: risk:LowSeverity
+    description: Level where Severity is Low
+    aliases:
+      - Low Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.25 on a scale of
+        0 to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:LowSeverity
+      - dpv_risk_owl:LowSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#LowSeverity
+      dpv_extension_slug: risk
+
+  ModerateLikelihood:
+    is_a: 3LikelihoodLevels
+    mixins:
+      - Likelihood
+      - 5LikelihoodLevels
+      - 7LikelihoodLevels
+    class_uri: risk:ModerateLikelihood
+    description: Level where Likelihood is Moderate
+    aliases:
+      - Moderate Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.5 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ModerateLikelihood
+      - dpv_risk_owl:ModerateLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ModerateLikelihood
+      dpv_extension_slug: risk
+
+  ModerateRisk:
+    is_a: 3RiskLevels
+    mixins:
+      - RiskLevel
+      - 5RiskLevels
+      - 7RiskLevels
+    class_uri: risk:ModerateRisk
+    description: Level where Risk is Moderate
+    aliases:
+      - Moderate Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.5 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ModerateRisk
+      - dpv_risk_owl:ModerateRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ModerateRisk
+      dpv_extension_slug: risk
+
+  ModerateSeverity:
+    is_a: 3SeverityLevels
+    mixins:
+      - Severity
+      - 5SeverityLevels
+      - 7SeverityLevels
+    class_uri: risk:ModerateSeverity
+    description: Level where Severity is Moderate
+    aliases:
+      - Moderate Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.5 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:ModerateSeverity
+      - dpv_risk_owl:ModerateSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#ModerateSeverity
+      dpv_extension_slug: risk
+
+  VeryHighLikelihood:
+    is_a: 5LikelihoodLevels
+    mixins:
+      - Likelihood
+      - 7LikelihoodLevels
+    class_uri: risk:VeryHighLikelihood
+    description: Level where Likelihood is Very High
+    aliases:
+      - Very High Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.9 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:VeryHighLikelihood
+      - dpv_risk_owl:VeryHighLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#VeryHighLikelihood
+      dpv_extension_slug: risk
+
+  VeryHighRisk:
+    is_a: 5RiskLevels
+    mixins:
+      - RiskLevel
+      - 7RiskLevels
+    class_uri: risk:VeryHighRisk
+    description: Level where Risk is Very High
+    aliases:
+      - Very High Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.9 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:VeryHighRisk
+      - dpv_risk_owl:VeryHighRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#VeryHighRisk
+      dpv_extension_slug: risk
+
+  VeryHighSeverity:
+    is_a: 5SeverityLevels
+    mixins:
+      - Severity
+      - 7SeverityLevels
+    class_uri: risk:VeryHighSeverity
+    description: Level where Severity is Very High
+    aliases:
+      - Very High Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.9 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:VeryHighSeverity
+      - dpv_risk_owl:VeryHighSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#VeryHighSeverity
+      dpv_extension_slug: risk
+
+  VeryLowLikelihood:
+    is_a: 5LikelihoodLevels
+    mixins:
+      - Likelihood
+      - 7LikelihoodLevels
+    class_uri: risk:VeryLowLikelihood
+    description: Level where Likelihood is Very Low
+    aliases:
+      - Very Low Likelihood
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.1 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:VeryLowLikelihood
+      - dpv_risk_owl:VeryLowLikelihood
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#VeryLowLikelihood
+      dpv_extension_slug: risk
+
+  VeryLowRisk:
+    is_a: 5RiskLevels
+    mixins:
+      - RiskLevel
+      - 7RiskLevels
+    class_uri: risk:VeryLowRisk
+    description: Level where Risk is Very Low
+    aliases:
+      - Very Low Risk
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.1 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:VeryLowRisk
+      - dpv_risk_owl:VeryLowRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#VeryLowRisk
+      dpv_extension_slug: risk
+
+  VeryLowSeverity:
+    is_a: 5SeverityLevels
+    mixins:
+      - Severity
+      - 7SeverityLevels
+    class_uri: risk:VeryLowSeverity
+    description: Level where Severity is Very Low
+    aliases:
+      - Very Low Severity
+    comments:
+      - |-
+        The suggested quantitative value for this concept is 0.1 on a scale of 0
+        to 1
+    in_subset:
+      - risk_risk_levels_subset
+    exact_mappings:
+      - dpv_risk:VeryLowSeverity
+      - dpv_risk_owl:VeryLowSeverity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/risk/owl#VeryLowSeverity
+      dpv_extension_slug: risk

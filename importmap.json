@@ -1,4 +1,4 @@
 {
-  "dpvs": "src/dpvs/",
-  "dpvs:": "src/dpvs/"
+  "dpv": "src/dpv/",
+  "dpv:": "src/dpv/"
 }

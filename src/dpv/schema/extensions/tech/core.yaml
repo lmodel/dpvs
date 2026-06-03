@@ -1,0 +1,594 @@
+id: https://w3id.org/lmodel/dpv/tech/core
+name: dpv_tech_core
+title: DPV - Tech / Core
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `tech/modules/core-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/tech
+  - https://w3c.github.io/dpv/2.3/tech/
+source: https://w3id.org/dpv/tech/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: tech
+  dpv_submodule: core
+  source_ttl: upstream-releases/dpv/tech/modules/core-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/tech/modules/core.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/tech/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/tech#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: tech
+default_range: string
+id_prefixes:
+  - tech
+  - dpv_tech
+  - dpv_tech_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  tech_core_subset:
+    description: Entities from the DPV `tech/modules/core` submodule.
+
+slots:
+
+  has_actor:
+    definition_uri: tech:hasActor
+    description: Indicates an actor associated with technology
+    aliases:
+      - has actor
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasActor
+      - dpv_tech_owl:hasActor
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasActor
+      dpv_extension_slug: tech
+
+  has_capability:
+    definition_uri: tech:hasCapability
+    description: Indicates the capability of the technology
+    aliases:
+      - has capability
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasCapability
+      - dpv_tech_owl:hasCapability
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasCapability
+      dpv_extension_slug: tech
+
+  has_communication_mechanism:
+    definition_uri: tech:hasCommunicationMechanism
+    description: Indicates communication mechanisms used or provided by technology
+    aliases:
+      - has communication mechanism
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasCommunicationMechanism
+      - dpv_tech_owl:hasCommunicationMechanism
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasCommunicationMechanism
+      dpv_extension_slug: tech
+
+  has_deployment_location:
+    definition_uri: tech:hasDeploymentLocation
+    description: Specifies the location of technology deployment and use
+    aliases:
+      - has deployment location
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasDeploymentLocation
+      - dpv_tech_owl:hasDeploymentLocation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasDeploymentLocation
+      dpv_extension_slug: tech
+
+  has_documentation:
+    definition_uri: tech:hasDocumentation
+    description: Indicates documentation associated with technology
+    aliases:
+      - has documentation
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasDocumentation
+      - dpv_tech_owl:hasDocumentation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasDocumentation
+      dpv_extension_slug: tech
+
+  has_function:
+    definition_uri: tech:hasFunction
+    description: Indicates the function of the technology
+    aliases:
+      - has function
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasFunction
+      - dpv_tech_owl:hasFunction
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasFunction
+      dpv_extension_slug: tech
+
+  has_input:
+    definition_uri: tech:hasInput
+    description: Indicates the input associated with the technology
+    aliases:
+      - has input
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasInput
+      - dpv_tech_owl:hasInput
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasInput
+      dpv_extension_slug: tech
+
+  has_input_action:
+    is_a: has_input
+    definition_uri: tech:hasInputAction
+    description: Indicates the input action associated with the technology
+    aliases:
+      - has input action
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasInputAction
+      - dpv_tech_owl:hasInputAction
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasInputAction
+      dpv_extension_slug: tech
+
+  has_input_data:
+    is_a: has_data
+    definition_uri: tech:hasInputData
+    description: Indicates the input data associated with the technology
+    aliases:
+      - has input data
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasInputData
+      - dpv_tech_owl:hasInputData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasInputData
+      dpv_extension_slug: tech
+
+  has_intended_use:
+    definition_uri: tech:hasIntendedUse
+    description: Indicates the intended use of technology
+    aliases:
+      - has intended use
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasIntendedUse
+      - dpv_tech_owl:hasIntendedUse
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasIntendedUse
+      dpv_extension_slug: tech
+
+  has_license:
+    is_a: has_legal_basis
+    definition_uri: tech:hasLicense
+    description: Indicates the license associated with the technology
+    aliases:
+      - has license
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasLicense
+      - dpv_tech_owl:hasLicense
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasLicense
+      dpv_extension_slug: tech
+
+  has_lifecycle_stage:
+    definition_uri: tech:hasLifecycleStage
+    description: Indicates the lifecycle stage associated with the technology
+    aliases:
+      - has lifecycle stage
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasLifecycleStage
+      - dpv_tech_owl:hasLifecycleStage
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasLifecycleStage
+      dpv_extension_slug: tech
+
+  has_operating_environment:
+    definition_uri: tech:hasOperatingEnvironment
+    description: Indicates the operating environment for the technology
+    aliases:
+      - has operating environment
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasOperatingEnvironment
+      - dpv_tech_owl:hasOperatingEnvironment
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasOperatingEnvironment
+      dpv_extension_slug: tech
+
+  has_operating_factor:
+    definition_uri: tech:hasOperatingFactor
+    description: Indicates the operating factor for the technology
+    aliases:
+      - has operating factor
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasOperatingFactor
+      - dpv_tech_owl:hasOperatingFactor
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasOperatingFactor
+      dpv_extension_slug: tech
+
+  has_output:
+    definition_uri: tech:hasOutput
+    description: Indicates the output associated with the technology
+    aliases:
+      - has output
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasOutput
+      - dpv_tech_owl:hasOutput
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasOutput
+      dpv_extension_slug: tech
+
+  has_output_action:
+    is_a: has_output
+    definition_uri: tech:hasOutputAction
+    description: Indicates the output action associated with the technology
+    aliases:
+      - has output action
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasOutputAction
+      - dpv_tech_owl:hasOutputAction
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasOutputAction
+      dpv_extension_slug: tech
+
+  has_output_data:
+    is_a: has_data
+    definition_uri: tech:hasOutputData
+    description: Indicates the output data associated with the technology
+    aliases:
+      - has output data
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasOutputData
+      - dpv_tech_owl:hasOutputData
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasOutputData
+      dpv_extension_slug: tech
+
+  has_provision_method:
+    definition_uri: tech:hasProvisionMethod
+    description: Specifies the provision or usage method of technology
+    aliases:
+      - has provision method
+    multivalued: true
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:hasProvisionMethod
+      - dpv_tech_owl:hasProvisionMethod
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasProvisionMethod
+      dpv_extension_slug: tech
+
+classes:
+
+  Actor:
+    is_a: DpvEntity
+    class_uri: tech:Actor
+    description: |-
+      Actors and Entities involved in provision, use, and management of
+      Technology
+    aliases:
+      - Actor
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:Actor
+      - dpv_tech_owl:Actor
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Actor
+      dpv_extension_slug: tech
+
+  Capability:
+    class_uri: tech:Capability
+    description: Expression of what the technology is capable of achieving or providing
+    aliases:
+      - Capability
+    comments:
+      - |-
+        Examples of capabilities are image recognition, sentiment analysis,
+        machine translation
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:Capability
+      - dpv_tech_owl:Capability
+    related_mappings:
+      - iso22989:AICapability
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Capability
+      dpv_extension_slug: tech
+
+  CommunicationMechanism:
+    is_a: Technology
+    class_uri: tech:CommunicationMechanism
+    description: Communication mechanism used or provided by Technology
+    aliases:
+      - Communication Mechanism
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:CommunicationMechanism
+      - dpv_tech_owl:CommunicationMechanism
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#CommunicationMechanism
+      dpv_extension_slug: tech
+
+  DeploymentLocation:
+    is_a: DpvLocation
+    class_uri: tech:DeploymentLocation
+    description: Location for where technology is deployed and used
+    aliases:
+      - Deployment Location
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:DeploymentLocation
+      - dpv_tech_owl:DeploymentLocation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#DeploymentLocation
+      dpv_extension_slug: tech
+
+  Documentation:
+    class_uri: tech:Documentation
+    description: |-
+      Information describing use, functionality, design, or other technical
+      aspects of the Technology
+    aliases:
+      - Documentation
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:Documentation
+      - dpv_tech_owl:Documentation
+    close_mappings:
+      - iso22989:Documentation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Documentation
+      dpv_extension_slug: tech
+
+  DpvFunction:
+    class_uri: tech:Function
+    description: |-
+      Expression of what goals or purposes the technology's capabilities are
+      being used towards or developed for
+    aliases:
+      - Function
+    comments:
+      - |-
+        Function is a broad concept that can include purposes such as identify
+        verification, capability such as image recognition, or specific security
+        measures such as encryption
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:Function
+      - dpv_tech_owl:Function
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Function
+      dpv_extension_slug: tech
+
+  InputOutput:
+    class_uri: tech:InputOutput
+    description: Forms of inputs and outputs associated with a technology
+    aliases:
+      - Input/Output
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:InputOutput
+      - dpv_tech_owl:InputOutput
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#InputOutput
+      dpv_extension_slug: tech
+
+  IntendedUse:
+    class_uri: tech:IntendedUse
+    description: Describes the 'intended' use of the technology
+    aliases:
+      - Intended Use
+    comments:
+      - |-
+        Intended use can be used to describe how the developer or provider of
+        technology intends it to be used e.g. use a database to store data, and
+        to describe the plan or 'intent' to use the technology by a user or
+        operator e.g. use a database to store and analyse data. Intended Use can
+        involve any concept e.g. DPV's purpose, processing, tech/org measures,
+        and can be low-level purely technical uses such as store data or
+        high-level goals such as legal compliance. Intended Use only describes
+        the intent or ex-ante intention, and may be different from how the
+        technology is being actually used - which is indicated by using
+        isImplementedUsingTechnology in a process or other relevant context.
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:IntendedUse
+      - dpv_tech_owl:IntendedUse
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#IntendedUse
+      dpv_extension_slug: tech
+
+  License:
+    is_a: LicenseAgreement
+    class_uri: tech:License
+    description: |-
+      A legal agreement that allows or provides a license for the use or other
+      operations involving a technology
+    aliases:
+      - License
+    comments:
+      - |-
+        This concept is derived from license agreements and contracts which are
+        legal bases, and therefore can also be used as a legal basis
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:License
+      - dpv_tech_owl:License
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#License
+      dpv_extension_slug: tech
+
+  LifecycleStage:
+    class_uri: tech:LifecycleStage
+    description: A stage within the lifecycle of technology
+    aliases:
+      - Lifecycle Stage
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:LifecycleStage
+      - dpv_tech_owl:LifecycleStage
+    close_mappings:
+      - iso22989:AISystemLifecycle
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#LifecycleStage
+      dpv_extension_slug: tech
+
+  OperatingEnvironment:
+    class_uri: tech:OperatingEnvironment
+    description: The environment within which the technology operates
+    aliases:
+      - Operating Environment
+    comments:
+      - |-
+        Environment here is a broad term used to refer to the immediate
+        surroundings and parts of it that form the context of where the
+        technology operates, for example a room or in open air where specific
+        machines are set up. This helps describe the expectations and set up of
+        systems and, to specify and compare them against ideal conditions or
+        environments
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:OperatingEnvironment
+      - dpv_tech_owl:OperatingEnvironment
+    annotations:
+      dct_source: Model Cards by Mitchell et al. (2019)
+      upstream_iri: https://w3id.org/dpv/tech/owl#OperatingEnvironment
+      dpv_extension_slug: tech
+
+  OperatingFactor:
+    class_uri: tech:OperatingFactor
+    description: A 'factor' affecting the operation and outcomes of the technology
+    aliases:
+      - Operating Factor
+    comments:
+      - |-
+        Examples of operating factor could be equipment characteristics,
+        lighting conditions for camera operations, connectivity for
+        communications. This helps indicate whether specific factors are ideal
+        i.e. they will give the best performance, or are problematic i.e. they
+        will cause issues
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:OperatingFactor
+      - dpv_tech_owl:OperatingFactor
+    annotations:
+      dct_source: Model Cards by Mitchell et al. (2019)
+      upstream_iri: https://w3id.org/dpv/tech/owl#OperatingFactor
+      dpv_extension_slug: tech
+
+  ProvisionMethod:
+    is_a: Technology
+    class_uri: tech:ProvisionMethod
+    description: Method associated with provision or use of technology
+    aliases:
+      - Provision Method
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:ProvisionMethod
+      - dpv_tech_owl:ProvisionMethod
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#ProvisionMethod
+      dpv_extension_slug: tech

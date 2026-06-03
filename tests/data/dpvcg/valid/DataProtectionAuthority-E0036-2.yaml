@@ -1,8 +1,0 @@
-# __unmapped__:
-#   foaf:homepage: https://www.dataprotection.ie/
-#   skos:prefLabel: Data Protection Commission (DPC)
-has_applicable_law:
-- legal-eu:law-GDPR
-- legal-ie:law-DPA
-has_jurisdiction: loc:IE
-id: legal-ie:DPA-IE

@@ -1,0 +1,406 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/gdpr/dpia
+name: dpv_legal_eu_gdpr_dpia
+title: DPV - Legal - Eu - Gdpr / Dpia
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `legal/eu/gdpr/modules/dpia-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/gdpr
+  - https://w3c.github.io/dpv/2.3/legal/eu/gdpr/
+source: https://w3id.org/dpv/legal/eu/gdpr/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/gdpr
+  dpv_submodule: dpia
+  source_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/dpia-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/gdpr/modules/dpia.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/gdpr/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/gdpr#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_gdpr: https://w3id.org/lmodel/dpv/legal/eu/gdpr/
+  dpv_legal_eu_gdpr: https://w3id.org/dpv/legal/eu/gdpr#
+  dpv_legal_eu_gdpr_owl: https://w3id.org/dpv/legal/eu/gdpr/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_gdpr
+default_range: string
+id_prefixes:
+  - legal_eu_gdpr
+  - dpv_legal_eu_gdpr
+  - dpv_legal_eu_gdpr_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/legal/eu/gdpr
+
+subsets:
+
+  legal_eu_gdpr_dpia_subset:
+    description: Entities from the DPV `legal/eu/gdpr/modules/dpia` submodule.
+
+classes:
+
+  DPIAConformant:
+    is_a: DPIAConformity
+    class_uri: legal_eu_gdpr:DPIAConformant
+    description: Expressing the specified process is conformant with a DPIA
+    aliases:
+      - DPIA Conformant
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAConformant
+      - dpv_legal_eu_gdpr_owl:DPIAConformant
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAConformant
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAConformity:
+    is_a: ConformanceStatus
+    class_uri: legal_eu_gdpr:DPIAConformity
+    description: Conformity of a process with a DPIA
+    aliases:
+      - DPIA Conformity
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAConformity
+      - dpv_legal_eu_gdpr_owl:DPIAConformity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAConformity
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAIndicatesHighRisk:
+    is_a: DPIARiskStatus
+    class_uri: legal_eu_gdpr:DPIAIndicatesHighRisk
+    description: DPIA identifying high risk levels
+    aliases:
+      - DPIA Indicates High Risk
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAIndicatesHighRisk
+      - dpv_legal_eu_gdpr_owl:DPIAIndicatesHighRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAIndicatesHighRisk
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAIndicatesLowRisk:
+    is_a: DPIARiskStatus
+    class_uri: legal_eu_gdpr:DPIAIndicatesLowRisk
+    description: DPIA identifying low risk levels
+    aliases:
+      - DPIA Indicates Low Risk
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAIndicatesLowRisk
+      - dpv_legal_eu_gdpr_owl:DPIAIndicatesLowRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAIndicatesLowRisk
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAIndicatesNoRisk:
+    is_a: DPIARiskStatus
+    class_uri: legal_eu_gdpr:DPIAIndicatesNoRisk
+    description: DPIA identifying no risk is present
+    aliases:
+      - DPIA Indicates No Risk
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAIndicatesNoRisk
+      - dpv_legal_eu_gdpr_owl:DPIAIndicatesNoRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAIndicatesNoRisk
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIANecessityAssessment:
+    is_a: DPIA
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:DPIANecessityAssessment
+    description: Process that determines whether a DPIA is necessary
+    aliases:
+      - DPIA Necessity Assessment
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIANecessityAssessment
+      - dpv_legal_eu_gdpr_owl:DPIANecessityAssessment
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANecessityAssessment
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIANecessityStatus:
+    is_a: AuditStatus
+    class_uri: legal_eu_gdpr:DPIANecessityStatus
+    description: Status reflecting whether a DPIA is necessary
+    aliases:
+      - DPIA Necessity Status
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIANecessityStatus
+      - dpv_legal_eu_gdpr_owl:DPIANecessityStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANecessityStatus
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIANonConformant:
+    is_a: DPIAConformity
+    class_uri: legal_eu_gdpr:DPIANonConformant
+    description: Expressing the specified process is not conformant with a DPIA
+    aliases:
+      - DPIA Non-Conformant
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIANonConformant
+      - dpv_legal_eu_gdpr_owl:DPIANonConformant
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANonConformant
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIANotRequired:
+    is_a: DPIANecessityStatus
+    class_uri: legal_eu_gdpr:DPIANotRequired
+    description: Condition where a DPIA is not required
+    aliases:
+      - DPIA Not Required
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIANotRequired
+      - dpv_legal_eu_gdpr_owl:DPIANotRequired
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANotRequired
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAOutcome:
+    is_a: DPIA
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:DPIAOutcome
+    description: Process representing determining outcome of a DPIA
+    aliases:
+      - DPIA Outcome
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAOutcome
+      - dpv_legal_eu_gdpr_owl:DPIAOutcome
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcome
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAOutcomeDPAConsultation:
+    is_a: DPIAOutcomeStatus
+    class_uri: legal_eu_gdpr:DPIAOutcomeDPAConsultation
+    description: DPIA outcome status indicating a DPA consultation is required
+    aliases:
+      - DPIA Outcome DPA Consultation
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAOutcomeDPAConsultation
+      - dpv_legal_eu_gdpr_owl:DPIAOutcomeDPAConsultation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcomeDPAConsultation
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAOutcomeHighResidualRisk:
+    is_a: DPIAOutcomeStatus
+    class_uri: legal_eu_gdpr:DPIAOutcomeHighResidualRisk
+    description: |-
+      DPIA outcome status indicating high residual risk which are not
+      acceptable for continuation
+    aliases:
+      - DPIA Outcome High Residual Risk
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAOutcomeHighResidualRisk
+      - dpv_legal_eu_gdpr_owl:DPIAOutcomeHighResidualRisk
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcomeHighResidualRisk
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAOutcomeRisksAcceptable:
+    is_a: DPIAOutcomeStatus
+    class_uri: legal_eu_gdpr:DPIAOutcomeRisksAcceptable
+    description: |-
+      DPIA outcome status indicating residual risks remain and are acceptable
+      for continuation
+    aliases:
+      - DPIA Outcome Risks Acceptable
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAOutcomeRisksAcceptable
+      - dpv_legal_eu_gdpr_owl:DPIAOutcomeRisksAcceptable
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcomeRisksAcceptable
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAOutcomeRisksMitigated:
+    is_a: DPIAOutcomeStatus
+    class_uri: legal_eu_gdpr:DPIAOutcomeRisksMitigated
+    description: DPIA outcome status indicating (all) risks have been mitigated
+    aliases:
+      - DPIA Outcome Risks Mitigated
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAOutcomeRisksMitigated
+      - dpv_legal_eu_gdpr_owl:DPIAOutcomeRisksMitigated
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcomeRisksMitigated
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAOutcomeStatus:
+    is_a: AuditStatus
+    class_uri: legal_eu_gdpr:DPIAOutcomeStatus
+    description: Status reflecting the outcomes of a DPIA
+    aliases:
+      - DPIA Outcome Status
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAOutcomeStatus
+      - dpv_legal_eu_gdpr_owl:DPIAOutcomeStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcomeStatus
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAProcedure:
+    is_a: DPIA
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_gdpr:DPIAProcedure
+    description: Process representing carrying out a DPIA
+    aliases:
+      - DPIA Procedure
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAProcedure
+      - dpv_legal_eu_gdpr_owl:DPIAProcedure
+    close_mappings:
+      - iso27701:Clause_7_2_5
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAProcedure
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIAProcessingRecommendation:
+    is_a: AuditStatus
+    class_uri: legal_eu_gdpr:DPIAProcessingRecommendation
+    description: Recommendation from the DPIA regarding processing
+    aliases:
+      - DPIA Processing Recommendation
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIAProcessingRecommendation
+      - dpv_legal_eu_gdpr_owl:DPIAProcessingRecommendation
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAProcessingRecommendation
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIARecommendsProcessingContinue:
+    is_a: DPIAProcessingRecommendation
+    class_uri: legal_eu_gdpr:DPIARecommendsProcessingContinue
+    description: Recommendation from a DPIA that the processing may continue
+    aliases:
+      - DPIA Recommends Processing Continue
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIARecommendsProcessingContinue
+      - dpv_legal_eu_gdpr_owl:DPIARecommendsProcessingContinue
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#DPIARecommendsProcessingContinue
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIARecommendsProcessingNotContinue:
+    is_a: DPIAProcessingRecommendation
+    class_uri: legal_eu_gdpr:DPIARecommendsProcessingNotContinue
+    description: Recommendation from a DPIA that the processing should not continue
+    aliases:
+      - DPIA Recommends Processing Not Continue
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIARecommendsProcessingNotContinue
+      - dpv_legal_eu_gdpr_owl:DPIARecommendsProcessingNotContinue
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/gdpr/owl#DPIARecommendsProcessingNotContinue
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIARequired:
+    is_a: DPIANecessityStatus
+    class_uri: legal_eu_gdpr:DPIARequired
+    description: Condition where a DPIA is required
+    aliases:
+      - DPIA Required
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIARequired
+      - dpv_legal_eu_gdpr_owl:DPIARequired
+    close_mappings:
+      - iso27701:Clause_7_2_5
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIARequired
+      dpv_extension_slug: legal/eu/gdpr
+
+  DPIARiskStatus:
+    is_a: AuditStatus
+    class_uri: legal_eu_gdpr:DPIARiskStatus
+    description: Status reflecting the status of risk associated with a DPIA
+    aliases:
+      - DPIA Risk Status
+    in_subset:
+      - legal_eu_gdpr_dpia_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:DPIARiskStatus
+      - dpv_legal_eu_gdpr_owl:DPIARiskStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DPIARiskStatus
+      dpv_extension_slug: legal/eu/gdpr

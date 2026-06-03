@@ -1,5 +1,0 @@
-# __unmapped__:
-#   skos:broader: dpv:Policy
-has_organisational_measure: dpv:StaffTraining
-id: ex:SecurityPolicy
-mitigates_risk: ex:UnAuthorisedAccess

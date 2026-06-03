@@ -1,0 +1,274 @@
+id: https://w3id.org/lmodel/dpv/standards/ieee/7012/entities
+name: dpv_standards_ieee_7012_entities
+title: DPV - Standards - Ieee - 7012 / Entities
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `standards/ieee/7012/modules/entities-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/standards/ieee/7012
+  - https://w3c.github.io/dpv/2.3/standards/ieee/7012/
+source: https://w3id.org/dpv/standards/ieee/7012/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: standards/ieee/7012
+  dpv_submodule: entities
+  source_ttl: upstream-releases/dpv/standards/ieee/7012/modules/entities-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/standards/ieee/7012/modules/entities.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/standards/ieee/7012/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/standards/ieee/7012#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  standards_ieee_7012: https://w3id.org/lmodel/dpv/standards/ieee/7012/
+  dpv_standards_ieee_7012: https://w3id.org/dpv/standards/ieee/7012#
+  dpv_standards_ieee_7012_owl: https://w3id.org/dpv/standards/ieee/7012/owl#
+
+default_prefix: standards_ieee_7012
+default_range: string
+id_prefixes:
+  - standards_ieee_7012
+  - dpv_standards_ieee_7012
+  - dpv_standards_ieee_7012_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/standards/ieee/7012
+
+subsets:
+
+  standards_ieee_7012_entities_subset:
+    description: |-
+      Entities from the DPV `standards/ieee/7012/modules/entities` submodule.
+
+slots:
+
+  has_agent:
+    is_a: has_entity
+    definition_uri: standards_ieee_7012:hasAgent
+    description: Specifies the agent that represents a party and can act on behalf
+    aliases:
+      - has agent
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasAgent
+      - dpv_standards_ieee_7012_owl:hasAgent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasAgent
+      dpv_extension_slug: standards/ieee/7012
+
+  has_first_party:
+    is_a: has_entity
+    definition_uri: standards_ieee_7012:hasFirstParty
+    description: Specifies the human individual or Person involved as the first party
+    aliases:
+      - has first party
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasFirstParty
+      - dpv_standards_ieee_7012_owl:hasFirstParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasFirstParty
+      dpv_extension_slug: standards/ieee/7012
+
+  has_human_description:
+    definition_uri: standards_ieee_7012:hasHumanDescription
+    description: A description intended for humans
+    aliases:
+      - has human description
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasHumanDescription
+      - dpv_standards_ieee_7012_owl:hasHumanDescription
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasHumanDescription
+      dpv_extension_slug: standards/ieee/7012
+
+  has_party:
+    is_a: has_entity
+    definition_uri: standards_ieee_7012:hasParty
+    description: |-
+      Specifies that an entity is a party to the context i.e. it has decision
+      making abilities or has obligations and responsibilities
+    aliases:
+      - has party
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasParty
+      - dpv_standards_ieee_7012_owl:hasParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasParty
+      dpv_extension_slug: standards/ieee/7012
+
+  has_second_party:
+    is_a: has_entity
+    definition_uri: standards_ieee_7012:hasSecondParty
+    description: Specifies the entity organisation involved as the second party
+    aliases:
+      - has second party
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasSecondParty
+      - dpv_standards_ieee_7012_owl:hasSecondParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasSecondParty
+      dpv_extension_slug: standards/ieee/7012
+
+  has_third_party:
+    definition_uri: standards_ieee_7012:hasThirdParty
+    description: Specifies the a party other than the person or Entity that is involved
+    aliases:
+      - has third party
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasThirdParty
+      - dpv_standards_ieee_7012_owl:hasThirdParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasThirdParty
+      dpv_extension_slug: standards/ieee/7012
+
+classes:
+
+  DpvAgent:
+    is_a: DpvEntity
+    class_uri: standards_ieee_7012:Agent
+    description: |-
+      An Agent is any software or a combination of software and hardware that
+      works exclusively for its party, and which may be provided by a third
+      party but must be controlled and be responsible to the party it
+      represents
+    aliases:
+      - Agent
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Agent
+      - dpv_standards_ieee_7012_owl:Agent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Agent
+      dpv_extension_slug: standards/ieee/7012
+
+  DpvEntity:
+    is_a: DpvOrganisation
+    class_uri: standards_ieee_7012:Entity
+    description: |-
+      An entity is any organisation with which a person makes or intends to
+      make a contractual agreement, and which is the second party in a
+      contract
+    aliases:
+      - Entity
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Entity
+      - dpv_standards_ieee_7012_owl:Entity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Entity
+      dpv_extension_slug: standards/ieee/7012
+
+  DpvPerson:
+    is_a: NaturalPerson
+    class_uri: standards_ieee_7012:Person
+    description: |-
+      The human individual or person whose personal data or privacy is
+      involved, and which is the first party in a contract
+    aliases:
+      - Person
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Person
+      - dpv_standards_ieee_7012_owl:Person
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Person
+      dpv_extension_slug: standards/ieee/7012
+
+  EntityAgent:
+    is_a: DpvAgent
+    class_uri: standards_ieee_7012:EntityAgent
+    description: An Agent that represents the Entity
+    aliases:
+      - Entity Agent
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:EntityAgent
+      - dpv_standards_ieee_7012_owl:EntityAgent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#EntityAgent
+      dpv_extension_slug: standards/ieee/7012
+
+  PersonAgent:
+    is_a: DpvAgent
+    class_uri: standards_ieee_7012:PersonAgent
+    description: An Agent that represents the Person
+    aliases:
+      - Person Agent
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:PersonAgent
+      - dpv_standards_ieee_7012_owl:PersonAgent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#PersonAgent
+      dpv_extension_slug: standards/ieee/7012
+
+  ThirdParty:
+    is_a: LegalEntity
+    class_uri: standards_ieee_7012:ThirdParty
+    description: |-
+      A party other than the Person and Entity as first and second parties
+      respectively in the contractual interaction
+    aliases:
+      - Third Party
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:ThirdParty
+      - dpv_standards_ieee_7012_owl:ThirdParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ThirdParty
+      dpv_extension_slug: standards/ieee/7012

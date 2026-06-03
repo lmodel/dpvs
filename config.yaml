@@ -16,7 +16,7 @@ excludes:
 # Set the arguments for the generators (no matter if they run or not)
 #
 # NOTE: Every generator block sets `importmap: tmp/importmap.json` so that the
-# canonical URI-style imports (e.g. `dpvs:schema/dpvs_core`) used inside the
+# canonical URI-style imports (e.g. `dpv:schema/dpv_core`) used inside the
 # schema YAMLs are resolved to local files during build. `gen-project` does
 # not accept `--importmap` directly; it forwards each block below as kwargs
 # to the per-generator `Generator.__init__`, which does accept it.

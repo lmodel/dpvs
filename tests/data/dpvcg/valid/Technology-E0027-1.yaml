@@ -1,3 +1,0 @@
-has_risk: ex:UnAuthorisedAccess
-has_technical_measure: ex:RBACCredential
-id: ex:DataStore

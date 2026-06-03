@@ -1,0 +1,194 @@
+id: https://w3id.org/lmodel/dpv/loc/memberships
+name: dpv_loc_memberships
+title: DPV - Loc / Memberships
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `loc/modules/memberships-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/loc
+  - https://w3c.github.io/dpv/2.3/loc/
+source: https://w3id.org/dpv/loc/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: loc
+  dpv_submodule: memberships
+  source_ttl: upstream-releases/dpv/loc/modules/memberships-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/loc/modules/memberships.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/loc/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/loc#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  loc: https://w3id.org/lmodel/dpv/loc/
+  dpv_loc: https://w3id.org/dpv/loc#
+  dpv_loc_owl: https://w3id.org/dpv/loc/owl#
+
+default_prefix: loc
+default_range: string
+id_prefixes:
+  - loc
+  - dpv_loc
+  - dpv_loc_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/loc
+
+subsets:
+
+  loc_memberships_subset:
+    description: Entities from the DPV `loc/modules/memberships` submodule.
+
+classes:
+
+  EEA:
+    is_a: SupraNationalUnion
+    class_uri: loc:EEA
+    description: |-
+      Concept representing the latest membership of European Economic Area
+      (EEA)
+    aliases:
+      - European Economic Area (EEA)
+    in_subset:
+      - loc_memberships_subset
+    exact_mappings:
+      - dpv_loc:EEA
+      - dpv_loc_owl:EEA
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EEA
+      dpv_extension_slug: loc
+
+  EEA30:
+    is_a: EEA
+    mixins:
+      - SupraNationalUnion
+    class_uri: loc:EEA30
+    description: |-
+      Concept representing current EEA with 30 Member States that became
+      active from 2020 with exit of UK from EEA31 after Brexit
+    aliases:
+      - EEA 30 Member States
+    comments:
+      - European Economic Area (EEA-31) with 30 Member States post Brexit
+    in_subset:
+      - loc_memberships_subset
+    exact_mappings:
+      - dpv_loc:EEA30
+      - dpv_loc_owl:EEA30
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EEA30
+      dpv_extension_slug: loc
+
+  EEA31:
+    is_a: EEA
+    mixins:
+      - SupraNationalUnion
+    class_uri: loc:EEA31
+    description: |-
+      Concept representing previous EEA with 31 Member States that was active
+      from 2014 and concluded with the exit of UK in 2022 after Brexit
+    aliases:
+      - EEA 31 Member States
+    comments:
+      - European Economic Area (EEA-31) with 30 Member States pre Brexit
+    in_subset:
+      - loc_memberships_subset
+    exact_mappings:
+      - dpv_loc:EEA31
+      - dpv_loc_owl:EEA31
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EEA31
+      dpv_extension_slug: loc
+
+  EU:
+    is_a: SupraNationalUnion
+    class_uri: loc:EU
+    description: Concept representing the latest membership of European Union (EU)
+    aliases:
+      - European Union (EU)
+    in_subset:
+      - loc_memberships_subset
+    exact_mappings:
+      - dpv_loc:EU
+      - dpv_loc_owl:EU
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EU
+      dpv_extension_slug: loc
+
+  EU27:
+    is_a: EU
+    mixins:
+      - SupraNationalUnion
+    class_uri: loc:EU27
+    description: |-
+      Concept representing current EU with 27 Member States that became active
+      from 2020 with exit of UK from EU28 after Brexit
+    aliases:
+      - EU 27 Member States
+    comments:
+      - |-
+        European Union (EU-27) with 27 Member States post Brexit. Note that EU27
+        is also applicable to the 27 Member States in the EU from 2007 to 2013,
+        which is not represented in the LOC extension. If this concept should
+        exist, please submit an issue or proposal
+    in_subset:
+      - loc_memberships_subset
+    exact_mappings:
+      - dpv_loc:EU27
+      - dpv_loc_owl:EU27
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EU27
+      dpv_extension_slug: loc
+
+  EU28:
+    is_a: EU
+    mixins:
+      - SupraNationalUnion
+    class_uri: loc:EU28
+    description: |-
+      Concept representing previous EU with 28 Member States that was active
+      from 2014 and concluded with the exit of UK in 2022 after Brexit
+    aliases:
+      - EU 28 Member States
+    comments:
+      - European Union (EU-28) with 28 Member States pre Brexit
+    in_subset:
+      - loc_memberships_subset
+    exact_mappings:
+      - dpv_loc:EU28
+      - dpv_loc_owl:EU28
+    annotations:
+      upstream_iri: https://w3id.org/dpv/loc/owl#EU28
+      dpv_extension_slug: loc

@@ -1,0 +1,2222 @@
+id: https://w3id.org/lmodel/dpv/legal/eu/ehds
+name: dpv_legal_eu_ehds
+title: DPV - Legal - Eu - Ehds
+description: |-
+  LinkML schema generated from the DPV 2.3 extension `legal/eu/ehds`
+  (`eu-ehds-owl.ttl`), enriched with canonical SKOS metadata. Imports the
+  aggregate core schema `dpv:schema/dpv_core` for the abstract parent
+  classes this extension specialises.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/legal/eu/ehds
+  - https://w3c.github.io/dpv/2.3/legal/eu/ehds/
+source: https://w3id.org/dpv/legal/eu/ehds/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: legal/eu/ehds
+  source_ttl: upstream-releases/dpv/legal/eu/ehds/eu-ehds-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/legal/eu/ehds/eu-ehds.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/legal/eu/ehds/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/legal/eu/ehds#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  legal_eu_ehds: https://w3id.org/lmodel/dpv/legal/eu/ehds/
+  dpv_legal_eu_ehds: https://w3id.org/dpv/legal/eu/ehds#
+  dpv_legal_eu_ehds_owl: https://w3id.org/dpv/legal/eu/ehds/owl#
+  sector_health: https://w3id.org/lmodel/dpv/sector/health/
+  dpv_sector_health: https://w3id.org/dpv/sector/health#
+  dpv_sector_health_owl: https://w3id.org/dpv/sector/health/owl#
+
+  iso27701: https://w3id.org/lmodel/iso27701/
+default_prefix: legal_eu_ehds
+default_range: string
+id_prefixes:
+  - legal_eu_ehds
+  - dpv_legal_eu_ehds
+  - dpv_legal_eu_ehds_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/sector/health
+
+subsets:
+
+  legal_eu_ehds_subset:
+    description: All entities from the DPV `legal/eu/ehds` extension.
+
+  legal_eu_ehds_TOM_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/TOM` submodule.
+
+  legal_eu_ehds_data_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/data` submodule.
+
+  legal_eu_ehds_entities_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/entities` submodule.
+
+  legal_eu_ehds_process_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/process` submodule.
+
+  legal_eu_ehds_purposes_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/purposes` submodule.
+
+  legal_eu_ehds_rights_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/rights` submodule.
+
+  legal_eu_ehds_technology_subset:
+    description: Entities from the DPV `legal/eu/ehds/modules/technology` submodule.
+
+classes:
+
+  A10:
+    is_a: Right
+    class_uri: legal_eu_ehds:A10
+    description: |-
+      Right of natural persons to opt out from the access to their personal
+      electronic health data registered in an EHR system through the
+      electronic health data access services
+    aliases:
+      - A10 Right of natural persons to opt out from primary use
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A10
+      - dpv_legal_eu_ehds_owl:A10
+    annotations:
+      dct_source: EHDS Art.10
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A10
+      dpv_extension_slug: legal/eu/ehds
+
+  A100:
+    is_a: Right
+    class_uri: legal_eu_ehds:A100
+    description: |-
+      Right of natural and legal persons to receive compensation in accordance
+      with EU and national law in case that they have suffered material or
+      non-material damage as a result of an infringement of the EHDS
+      Regulation
+    aliases:
+      - A100 Right to receive compensation
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A100
+      - dpv_legal_eu_ehds_owl:A100
+    annotations:
+      dct_source: EHDS Art.100
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A100
+      dpv_extension_slug: legal/eu/ehds
+
+  A161:
+    is_a: Right
+    class_uri: legal_eu_ehds:A16-1
+    description: |-
+      Right of natural persons to identify themselves electronically using any
+      electronic identification means which are recognised pursuant to Article
+      6 of Regulation (EU) No 910/2014
+    aliases:
+      - A16-1
+      - A16-1 Right of identification management
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A16-1
+      - dpv_legal_eu_ehds_owl:A16-1
+    annotations:
+      dct_source: EHDS Art.16.1
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A16-1
+      dpv_extension_slug: legal/eu/ehds
+
+  A21:
+    is_a: Right
+    class_uri: legal_eu_ehds:A21
+    description: |-
+      Right of natural and legal persons to lodge a complaint with the
+      competent digital health authority
+    aliases:
+      - A21 Right to lodge a complaint with a digital health authority
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A21
+      - dpv_legal_eu_ehds_owl:A21
+    annotations:
+      dct_source: EHDS Art.21
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A21
+      dpv_extension_slug: legal/eu/ehds
+
+  A3:
+    is_a: Right
+    class_uri: legal_eu_ehds:A3
+    description: |-
+      Right of natural persons to access personal electronic health data
+      relating to them that belong to the priority categories referred to in
+      Article 14 and are processed for the provision of healthcare through the
+      electronic health data access services referred to in Article 4
+    aliases:
+      - |-
+        A3 Right of natural persons to access their personal electronic health
+        data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A3
+      - dpv_legal_eu_ehds_owl:A3
+    annotations:
+      dct_source: EHDS Art.3
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A3
+      dpv_extension_slug: legal/eu/ehds
+
+  A5:
+    is_a: Right
+    class_uri: legal_eu_ehds:A5
+    description: |-
+      Right of natural persons to insert information in their EHR through
+      electronic health data access services or applications linked to those
+      services
+    aliases:
+      - A5 Right of natural persons to insert information in their own EHR
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A5
+      - dpv_legal_eu_ehds_owl:A5
+    annotations:
+      dct_source: EHDS Art.5
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A5
+      dpv_extension_slug: legal/eu/ehds
+
+  A6:
+    is_a: Right
+    class_uri: legal_eu_ehds:A6
+    description: |-
+      Right of natural persons to request online the rectification of their
+      personal electronic health data
+    aliases:
+      - A6 Right of natural persons to rectification
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A6
+      - dpv_legal_eu_ehds_owl:A6
+    annotations:
+      dct_source: EHDS Art.6
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A6
+      dpv_extension_slug: legal/eu/ehds
+
+  A6811:
+    is_a: Right
+    class_uri: legal_eu_ehds:A68-11
+    description: |-
+      Right of health data users to access and process the electronic health
+      data in a secure processing environment in accordance with the data
+      permit issued to them
+    aliases:
+      - A68-11
+      - A68-11 Right to process in a secure processing environment
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A68-11
+      - dpv_legal_eu_ehds_owl:A68-11
+    annotations:
+      dct_source: EHDS Art.68.11
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A68-11
+      dpv_extension_slug: legal/eu/ehds
+
+  A7:
+    is_a: Right
+    class_uri: legal_eu_ehds:A7
+    description: |-
+      Right of natural persons to give access to, or to request a healthcare
+      provider to transmit, all or part of their personal electronic health
+      data to another healthcare provider of their choice
+    aliases:
+      - A7 Right to data portability for natural persons
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A7
+      - dpv_legal_eu_ehds_owl:A7
+    annotations:
+      dct_source: EHDS Art.7
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A7
+      dpv_extension_slug: legal/eu/ehds
+
+  A71:
+    is_a: Right
+    class_uri: legal_eu_ehds:A71
+    description: |-
+      Right of natural persons to opt out at any time, and without providing
+      any reason, from the processing of personal electronic health data
+      relating to them for secondary use
+    aliases:
+      - A71 Right of natural persons to opt out from secondary use
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A71
+      - dpv_legal_eu_ehds_owl:A71
+    annotations:
+      dct_source: EHDS Art.71
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A71
+      dpv_extension_slug: legal/eu/ehds
+
+  A8:
+    is_a: Right
+    class_uri: legal_eu_ehds:A8
+    description: |-
+      Right of natural persons to restrict the access of health professionals
+      and healthcare providers to all or parts of their personal electronic
+      health data
+    aliases:
+      - A8 Right to restrict access
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A8
+      - dpv_legal_eu_ehds_owl:A8
+    annotations:
+      dct_source: EHDS Art.8
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A8
+      dpv_extension_slug: legal/eu/ehds
+
+  A9:
+    is_a: Right
+    class_uri: legal_eu_ehds:A9
+    description: |-
+      Right of natural persons to obtain information, including through
+      automatic notifications, on any access to their personal electronic
+      health data through the health professional access service obtained in
+      the context of healthcare
+    aliases:
+      - A9 Right to obtain information on accessing data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:A9
+      - dpv_legal_eu_ehds_owl:A9
+    annotations:
+      dct_source: EHDS Art.9
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#A9
+      dpv_extension_slug: legal/eu/ehds
+
+  AdministrativeServicesProvision:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:AdministrativeServicesProvision
+    description: |-
+      Purposes associated with the provision of administrative services
+      related to healthcare
+    aliases:
+      - Administrative Services Provision
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:AdministrativeServicesProvision
+      - dpv_legal_eu_ehds_owl:AdministrativeServicesProvision
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#AdministrativeServicesProvision
+      dpv_extension_slug: legal/eu/ehds
+
+  AuthorisedRepresentative:
+    is_a: Representative
+    mixins:
+      - LegalEntity
+    class_uri: legal_eu_ehds:AuthorisedRepresentative
+    description: |-
+      Legal representative established in the EU of a manufacturer of an EHR
+      system established outside of the EU
+    aliases:
+      - Authorised Representative
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:AuthorisedRepresentative
+      - dpv_legal_eu_ehds_owl:AuthorisedRepresentative
+    close_mappings:
+      - iso27701:Clause_7_2_4
+    annotations:
+      dct_source: EHDS Art.31
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#AuthorisedRepresentative
+      dpv_extension_slug: legal/eu/ehds
+
+  BehaviouralHealthDeterminant:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:BehaviouralHealthDeterminant
+    description: Information about behavioural data impacting on health
+    aliases:
+      - Behavioural Health Determinant
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:BehaviouralHealthDeterminant
+      - dpv_legal_eu_ehds_owl:BehaviouralHealthDeterminant
+    annotations:
+      dct_source: EHDS Art.51.1(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#BehaviouralHealthDeterminant
+      dpv_extension_slug: legal/eu/ehds
+
+  BiobankData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:BiobankData
+    description: |-
+      Information about electronic health data from biobanks and associated
+      databases
+    aliases:
+      - Biobank Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:BiobankData
+      - dpv_legal_eu_ehds_owl:BiobankData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(q)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#BiobankData
+      dpv_extension_slug: legal/eu/ehds
+
+  ClaimAdminData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ClaimAdminData
+    description: Information about health-related administrative data on claims
+    aliases:
+      - Health-related Administrative Data on Claims
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ClaimAdminData
+      - dpv_legal_eu_ehds_owl:ClaimAdminData
+    annotations:
+      dct_source: EHDS Art.51.1(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ClaimAdminData
+      dpv_extension_slug: legal/eu/ehds
+
+  ClinicalInvestigationsData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ClinicalInvestigationsData
+    description: Information about health data from clinical investigations
+    aliases:
+      - Clinical Investigations Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ClinicalInvestigationsData
+      - dpv_legal_eu_ehds_owl:ClinicalInvestigationsData
+    annotations:
+      dct_source: EHDS Art.51.1(m)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ClinicalInvestigationsData
+      dpv_extension_slug: legal/eu/ehds
+
+  ClinicalStudiesData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ClinicalStudiesData
+    description: Information about health data from clinical studies
+    aliases:
+      - Clinical Studies Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ClinicalStudiesData
+      - dpv_legal_eu_ehds_owl:ClinicalStudiesData
+    annotations:
+      dct_source: EHDS Art.51.1(m)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ClinicalStudiesData
+      dpv_extension_slug: legal/eu/ehds
+
+  ClinicalTrialsData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ClinicalTrialsData
+    description: Information about health data from clinical trials
+    aliases:
+      - Clinical Trials Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ClinicalTrialsData
+      - dpv_legal_eu_ehds_owl:ClinicalTrialsData
+    annotations:
+      dct_source: EHDS Art.51.1(m)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ClinicalTrialsData
+      dpv_extension_slug: legal/eu/ehds
+
+  DataPermit:
+    is_a: Policy
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:DataPermit
+    description: |-
+      Permit issued by health data access bodies to health data applicants
+      regarding health data access applications
+    aliases:
+      - Data Permit
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DataPermit
+      - dpv_legal_eu_ehds_owl:DataPermit
+    close_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      dct_source: EHDS Art.68
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#DataPermit
+      dpv_extension_slug: legal/eu/ehds
+
+  DevelopPublicHealthProductsAndServices:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:DevelopPublicHealthProductsAndServices
+    description: |-
+      Purposes associated with developing products and services that
+      contribute to public health
+    aliases:
+      - Develop Public Health Products and Services
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DevelopPublicHealthProductsAndServices
+      - dpv_legal_eu_ehds_owl:DevelopPublicHealthProductsAndServices
+    related_mappings:
+      - iso27701:Clause_7_2_1
+    annotations:
+      dct_source: EHDS Art.53.1(e)(i)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#DevelopPublicHealthProductsAndServices
+      dpv_extension_slug: legal/eu/ehds
+
+  DigitalHealthAuthorityActivityReport:
+    is_a: RecordsOfActivities
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:DigitalHealthAuthorityActivityReport
+    description: |-
+      Document containing an overview of activities reported by a digital
+      health authority
+    aliases:
+      - Digital Health Authority Activity Report
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DigitalHealthAuthorityActivityReport
+      - dpv_legal_eu_ehds_owl:DigitalHealthAuthorityActivityReport
+    close_mappings:
+      - iso27701:Clause_7_2_8
+    annotations:
+      dct_source: EHDS Art.20
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#DigitalHealthAuthorityActivityReport
+      dpv_extension_slug: legal/eu/ehds
+
+  DischargeReport:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:DischargeReport
+    description: Information about discharge reports
+    aliases:
+      - Discharge Report
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DischargeReport
+      - dpv_legal_eu_ehds_owl:DischargeReport
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.14.1(f)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#DischargeReport
+      dpv_extension_slug: legal/eu/ehds
+
+  DiseaseRegistryData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:DiseaseRegistryData
+    description: |-
+      Information about electronic health data from medical registries for
+      specific diseases
+    aliases:
+      - Disease Registry Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DiseaseRegistryData
+      - dpv_legal_eu_ehds_owl:DiseaseRegistryData
+    annotations:
+      dct_source: EHDS Recital 56
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#DiseaseRegistryData
+      dpv_extension_slug: legal/eu/ehds
+
+  DispensationAdminData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:DispensationAdminData
+    description: Information about health-related administrative data on dispensations
+    aliases:
+      - Health-related Administrative Data on Dispensations
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:DispensationAdminData
+      - dpv_legal_eu_ehds_owl:DispensationAdminData
+    annotations:
+      dct_source: EHDS Art.51.1(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#DispensationAdminData
+      dpv_extension_slug: legal/eu/ehds
+
+  EHDSBoard:
+    is_a: SupraNationalAuthority
+    mixins:
+      - LegalEntity
+    class_uri: legal_eu_ehds:EHDSBoard
+    description: |-
+      An authority tasked with facilitating the cooperation and the exchange
+      of information among Member States and the Commission for primary and
+      secondary use
+    aliases:
+      - European Health Data Space Board
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHDSBoard
+      - dpv_legal_eu_ehds_owl:EHDSBoard
+    related_mappings:
+      - iso27701:SupervisoryAuthority
+    annotations:
+      dct_source: EHDS Art.92
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHDSBoard
+      dpv_extension_slug: legal/eu/ehds
+
+  EHR:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:EHR
+    description: |-
+      Electronic health record (EHR) means a collection of electronic health
+      data related to a natural person and collected in the health system,
+      processed for the purpose of the provision of healthcare
+    aliases:
+      - Electronic Health Record (EHR)
+    comments:
+      - |-
+        This concept represents the EHR itself with EHRData referring to data
+        within it
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHR
+      - dpv_legal_eu_ehds_owl:EHR
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.2.2(j)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHR
+      dpv_extension_slug: legal/eu/ehds
+
+  EHRData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:EHRData
+    description: Information about data from electronic health records
+    aliases:
+      - Electronic Health Record (EHR) Data
+    comments:
+      - This concept represents the data within EHR and not the EHR itself
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHRData
+      - dpv_legal_eu_ehds_owl:EHRData
+    annotations:
+      dct_source: EHDS Art.51.1(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHRData
+      dpv_extension_slug: legal/eu/ehds
+
+  EHRSystem:
+    mixins:
+      - Technology
+    class_uri: legal_eu_ehds:EHRSystem
+    description: |-
+      A system whereby the software and/or hardware allows personal electronic
+      health data to be collected and processed, to be used by healthcare
+      providers when providing patient care or by patients when accessing
+      their electronic health data
+    aliases:
+      - Electronic Health Record System
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHRSystem
+      - dpv_legal_eu_ehds_owl:EHRSystem
+    related_mappings:
+      - iso27701:Clause_6_5
+    annotations:
+      dct_source: EHDS Art.2.2(i)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHRSystem
+      dpv_extension_slug: legal/eu/ehds
+
+  EHRSystemInformationSheet:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EHRSystemInformationSheet
+    description: |-
+      Technical documentation with information related to the EHR system,
+      including its manufacturer, intended purpose and supported standards
+    aliases:
+      - EHR System Information Sheet
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHRSystemInformationSheet
+      - dpv_legal_eu_ehds_owl:EHRSystemInformationSheet
+    close_mappings:
+      - iso27701:Clause_7_3_2
+    annotations:
+      dct_source: EHDS Art.38
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHRSystemInformationSheet
+      dpv_extension_slug: legal/eu/ehds
+
+  EHRSystemTechnicalDocumentation:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EHRSystemTechnicalDocumentation
+    description: |-
+      Technical documentation that demonstrates that the EHR system
+      manufacturers comply with the requirements laid down in Annex II
+    aliases:
+      - EHR System Technical Documentation
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EHRSystemTechnicalDocumentation
+      - dpv_legal_eu_ehds_owl:EHRSystemTechnicalDocumentation
+    close_mappings:
+      - iso27701:Clause_7_2_8
+    annotations:
+      dct_source: EHDS Art.37
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EHRSystemTechnicalDocumentation
+      dpv_extension_slug: legal/eu/ehds
+
+  EUDatabaseForRegistrationOfEHRSystems:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EUDatabaseForRegistrationOfEHRSystems
+    description: |-
+      Publicly available database established by the European Commission to
+      maintain data on EHR systems for which an EU declaration of conformity
+      has been issued according to EHDS Article 39
+    aliases:
+      - EU Database for Registration of EHR Systems
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EUDatabaseForRegistrationOfEHRSystems
+      - dpv_legal_eu_ehds_owl:EUDatabaseForRegistrationOfEHRSystems
+    annotations:
+      dct_source: EHDS Art.49
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EUDatabaseForRegistrationOfEHRSystems
+      dpv_extension_slug: legal/eu/ehds
+
+  EUDatabaseForRegistrationOfWellnessApplications:
+    is_a: OrganisationalMeasure
+    class_uri: legal_eu_ehds:EUDatabaseForRegistrationOfWellnessApplications
+    description: |-
+      Publicly available database established by the European Commission to
+      maintain data on wellness applications for which a label has been issued
+      pursuant to EHDS Article 47
+    aliases:
+      - EU Database for Registration of Wellness Applications
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EUDatabaseForRegistrationOfWellnessApplications
+      - dpv_legal_eu_ehds_owl:EUDatabaseForRegistrationOfWellnessApplications
+    annotations:
+      dct_source: EHDS Art.49
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EUDatabaseForRegistrationOfWellnessApplications
+      dpv_extension_slug: legal/eu/ehds
+
+  EUDeclarationOfConformity:
+    is_a: CertificationSeal
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:EUDeclarationOfConformity
+    description: |-
+      Declaration of conformity by the EU stating that the manufacturer of an
+      EHR system has demonstrated that the essential requirements laid down in
+      EHDS Annex II have been fulfilled
+    aliases:
+      - EU Declaration of Conformity
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EUDeclarationOfConformity
+      - dpv_legal_eu_ehds_owl:EUDeclarationOfConformity
+    related_mappings:
+      - iso27701:Clause_5_1
+    annotations:
+      dct_source: EHDS Art.39
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EUDeclarationOfConformity
+      dpv_extension_slug: legal/eu/ehds
+
+  ElectronicDispensation:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ElectronicDispensation
+    description: Information about electronic dispensations
+    aliases:
+      - Electronic Dispensation
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ElectronicDispensation
+      - dpv_legal_eu_ehds_owl:ElectronicDispensation
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.14.1(c)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ElectronicDispensation
+      dpv_extension_slug: legal/eu/ehds
+
+  ElectronicHealthData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ElectronicHealthData
+    description: |-
+      Information about electronic health data, including personal and
+      non-personal data
+    aliases:
+      - Electronic Health Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ElectronicHealthData
+      - dpv_legal_eu_ehds_owl:ElectronicHealthData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.2.2(c)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ElectronicHealthData
+      dpv_extension_slug: legal/eu/ehds
+
+  ElectronicHealthDataAccessService:
+    mixins:
+      - Technology
+    class_uri: legal_eu_ehds:ElectronicHealthDataAccessService
+    description: |-
+      Technical service, such as an online portal or application, that allows
+      data subjects to access their electronic health data or the electronic
+      health data of those natural persons whose electronic health data they
+      are legally authorised to access
+    aliases:
+      - Electronic Health Data Access Service
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ElectronicHealthDataAccessService
+      - dpv_legal_eu_ehds_owl:ElectronicHealthDataAccessService
+    close_mappings:
+      - iso27701:Clause_7_3_8
+    annotations:
+      dct_source: EHDS Art.2.2(h)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#ElectronicHealthDataAccessService
+      dpv_extension_slug: legal/eu/ehds
+
+  ElectronicPrescription:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ElectronicPrescription
+    description: Information about electronic prescriptions
+    aliases:
+      - Electronic Prescription
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ElectronicPrescription
+      - dpv_legal_eu_ehds_owl:ElectronicPrescription
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.14.1(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ElectronicPrescription
+      dpv_extension_slug: legal/eu/ehds
+
+  EnsureQualitySafetyHealthcare:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:EnsureQualitySafetyHealthcare
+    description: |-
+      Purposes associated with ensuring high levels of quality and safety of
+      healthcare, including patients safety
+    aliases:
+      - Ensure Quality and Safety of Healthcare
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EnsureQualitySafetyHealthcare
+      - dpv_legal_eu_ehds_owl:EnsureQualitySafetyHealthcare
+    annotations:
+      dct_source: EHDS Art.53.1(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EnsureQualitySafetyHealthcare
+      dpv_extension_slug: legal/eu/ehds
+
+  EnsureQualitySafetyMedicalDevices:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:EnsureQualitySafetyMedicalDevices
+    description: |-
+      Purposes associated with ensuring high levels of quality and safety of
+      medical devices
+    aliases:
+      - Ensure Quality and Safety of Medical Devices
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EnsureQualitySafetyMedicalDevices
+      - dpv_legal_eu_ehds_owl:EnsureQualitySafetyMedicalDevices
+    annotations:
+      dct_source: EHDS Art.53.1(a)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EnsureQualitySafetyMedicalDevices
+      dpv_extension_slug: legal/eu/ehds
+
+  EnsureQualitySafetyMedicinalProducts:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:EnsureQualitySafetyMedicinalProducts
+    description: |-
+      Purposes associated with ensuring high levels of quality and safety of
+      medicinal products
+    aliases:
+      - Ensure Quality and Safety of Medicinal Products
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EnsureQualitySafetyMedicinalProducts
+      - dpv_legal_eu_ehds_owl:EnsureQualitySafetyMedicinalProducts
+    annotations:
+      dct_source: EHDS Art.53.1(a)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EnsureQualitySafetyMedicinalProducts
+      dpv_extension_slug: legal/eu/ehds
+
+  EnvironmentalHealthDeterminant:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:EnvironmentalHealthDeterminant
+    description: Information about environmental data impacting on health
+    aliases:
+      - Environmental Health Determinant
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EnvironmentalHealthDeterminant
+      - dpv_legal_eu_ehds_owl:EnvironmentalHealthDeterminant
+    annotations:
+      dct_source: EHDS Art.51.1(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EnvironmentalHealthDeterminant
+      dpv_extension_slug: legal/eu/ehds
+
+  EpigenomicData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:EpigenomicData
+    description: Information about epigenomic data
+    aliases:
+      - Epigenomic Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EpigenomicData
+      - dpv_legal_eu_ehds_owl:EpigenomicData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(f)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#EpigenomicData
+      dpv_extension_slug: legal/eu/ehds
+
+  EuropeanDigitalTestingEnvironment:
+    is_a: SecureProcessingEnvironment
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:EuropeanDigitalTestingEnvironment
+    description: |-
+      Data processing environment for the assessment of harmonised software
+      components of EHR systems
+    aliases:
+      - European Digital Testing Environment
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:EuropeanDigitalTestingEnvironment
+      - dpv_legal_eu_ehds_owl:EuropeanDigitalTestingEnvironment
+    related_mappings:
+      - iso27701:Clause_6_5
+    annotations:
+      dct_source: EHDS Art.40
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#EuropeanDigitalTestingEnvironment
+      dpv_extension_slug: legal/eu/ehds
+
+  GenomicData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:GenomicData
+    description: Information about genomic data
+    aliases:
+      - Genomic Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:GenomicData
+      - dpv_legal_eu_ehds_owl:GenomicData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(f)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#GenomicData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthAdminData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:HealthAdminData
+    description: Information about health-related administrative data
+    aliases:
+      - Health-related Administrative Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthAdminData
+      - dpv_legal_eu_ehds_owl:HealthAdminData
+    annotations:
+      dct_source: EHDS Art.51.1(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthAdminData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthDataAccessApplication:
+    class_uri: legal_eu_ehds:HealthDataAccessApplication
+    description: |-
+      Application sent by a natural or legal person to health data access
+      bodies, seeking access to electronic health data for secondary use
+    aliases:
+      - Health Data Access Application
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthDataAccessApplication
+      - dpv_legal_eu_ehds_owl:HealthDataAccessApplication
+    close_mappings:
+      - iso27701:Clause_7_3_8
+    annotations:
+      dct_source: EHDS Art.67
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthDataAccessApplication
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthDataAccessBody:
+    mixins:
+      - LegalEntity
+    class_uri: legal_eu_ehds:HealthDataAccessBody
+    description: |-
+      An entity governed by public law responsible for granting access to
+      electronic health data for secondary use
+    aliases:
+      - Health Data Access Body
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthDataAccessBody
+      - dpv_legal_eu_ehds_owl:HealthDataAccessBody
+    close_mappings:
+      - iso27701:SupervisoryAuthority
+    annotations:
+      dct_source: EHDS Art.55
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthDataAccessBody
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthDataHolder:
+    mixins:
+      - LegalEntity
+    class_uri: legal_eu_ehds:HealthDataHolder
+    description: |-
+      An entity in the healthcare sector who has the right to process personal
+      electronic health data or make available non-personal electronic health
+      data
+    aliases:
+      - Health Data Holder
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthDataHolder
+      - dpv_legal_eu_ehds_owl:HealthDataHolder
+    close_mappings:
+      - iso27701:PIIController
+    annotations:
+      dct_source: EHDS Art.2.2(t)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthDataHolder
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthDataRequest:
+    is_a: Policy
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:HealthDataRequest
+    description: |-
+      Request sent by health data applicants to health data access bodies,
+      seeking access to statistically anonymised electronic health data for
+      secondary use
+    aliases:
+      - Health Data Request
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthDataRequest
+      - dpv_legal_eu_ehds_owl:HealthDataRequest
+    close_mappings:
+      - iso27701:Clause_7_5_4
+    annotations:
+      dct_source: EHDS Art.69
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthDataRequest
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthDataUser:
+    mixins:
+      - LegalEntity
+    class_uri: legal_eu_ehds:HealthDataUser
+    description: |-
+      An entity in the healthcare sector who was granted access to electronic
+      health data for secondary use
+    aliases:
+      - Health Data User
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthDataUser
+      - dpv_legal_eu_ehds_owl:HealthDataUser
+    close_mappings:
+      - iso27701:ThirdParty
+    annotations:
+      dct_source: EHDS Art.2.2(u)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthDataUser
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthProfessionalAccessService:
+    mixins:
+      - Technology
+    class_uri: legal_eu_ehds:HealthProfessionalAccessService
+    description: |-
+      Technical service, supported by an EHR system, that enables health
+      professionals to access data of natural persons under their care
+    aliases:
+      - Health Professional Access Service
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthProfessionalAccessService
+      - dpv_legal_eu_ehds_owl:HealthProfessionalAccessService
+    close_mappings:
+      - iso27701:Clause_7_3_8
+    annotations:
+      dct_source: EHDS Art.2.2(h)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthProfessionalAccessService
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthProfessionalData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:HealthProfessionalData
+    description: |-
+      Information about the status of the health professionals involved in the
+      treatment of the person, including information on their specialisation
+      and institution
+    aliases:
+      - Health Professional Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthProfessionalData
+      - dpv_legal_eu_ehds_owl:HealthProfessionalData
+    annotations:
+      dct_source: EHDS Art.51.1(j)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthProfessionalData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthQuestionnaire:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:HealthQuestionnaire
+    description: Information about health data from questionnaires
+    aliases:
+      - Health Questionnaire
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthQuestionnaire
+      - dpv_legal_eu_ehds_owl:HealthQuestionnaire
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(p)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthQuestionnaire
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthSurvey:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:HealthSurvey
+    description: Information about health data from surveys
+    aliases:
+      - Health Survey
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthSurvey
+      - dpv_legal_eu_ehds_owl:HealthSurvey
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(p)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthSurvey
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthcareFinancingAggregatedData:
+    is_a: HealthAggregatedData
+    mixins:
+      - AggregatedData
+    class_uri: legal_eu_ehds:HealthcareFinancingAggregatedData
+    description: |-
+      Information about aggregated data on healthcare expenditure and
+      financing
+    aliases:
+      - Healthcare Financing Aggregated Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthcareFinancingAggregatedData
+      - dpv_legal_eu_ehds_owl:HealthcareFinancingAggregatedData
+    annotations:
+      dct_source: EHDS Art.51.1(c)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#HealthcareFinancingAggregatedData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthcareNeedsAggregatedData:
+    is_a: HealthAggregatedData
+    mixins:
+      - AggregatedData
+    class_uri: legal_eu_ehds:HealthcareNeedsAggregatedData
+    description: Information about aggregated data on healthcare needs
+    aliases:
+      - Healthcare Needs Aggregated Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthcareNeedsAggregatedData
+      - dpv_legal_eu_ehds_owl:HealthcareNeedsAggregatedData
+    annotations:
+      dct_source: EHDS Art.51.1(c)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthcareNeedsAggregatedData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthcareProvisionAggregatedData:
+    is_a: HealthAggregatedData
+    mixins:
+      - AggregatedData
+    class_uri: legal_eu_ehds:HealthcareProvisionAggregatedData
+    description: |-
+      Information about aggregated data on the provision of and access to
+      healthcare
+    aliases:
+      - Healthcare Provision Aggregated Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthcareProvisionAggregatedData
+      - dpv_legal_eu_ehds_owl:HealthcareProvisionAggregatedData
+    annotations:
+      dct_source: EHDS Art.51.1(c)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#HealthcareProvisionAggregatedData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthcareResourcesAggregatedData:
+    is_a: HealthAggregatedData
+    mixins:
+      - AggregatedData
+    class_uri: legal_eu_ehds:HealthcareResourcesAggregatedData
+    description: Information about aggregated data on resources allocated to healthcare
+    aliases:
+      - Healthcare Resources Aggregated Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthcareResourcesAggregatedData
+      - dpv_legal_eu_ehds_owl:HealthcareResourcesAggregatedData
+    annotations:
+      dct_source: EHDS Art.51.1(c)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#HealthcareResourcesAggregatedData
+      dpv_extension_slug: legal/eu/ehds
+
+  HealthcareScientificResearch:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:HealthcareScientificResearch
+    description: Purposes associated with healthcare scientific research
+    aliases:
+      - Healthcare Scientific Research
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:HealthcareScientificResearch
+      - dpv_legal_eu_ehds_owl:HealthcareScientificResearch
+    related_mappings:
+      - iso27701:Clause_7_2_2
+    annotations:
+      dct_source: EHDS Art.53.1(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#HealthcareScientificResearch
+      dpv_extension_slug: legal/eu/ehds
+
+  ImproveHealthcare:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:ImproveHealthcare
+    description: |-
+      Purposes associated with improving healthcare systems, including the
+      delivery of care and the provision and optimisation of treatment
+    aliases:
+      - Improve Healthcare
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ImproveHealthcare
+      - dpv_legal_eu_ehds_owl:ImproveHealthcare
+    annotations:
+      dct_source: EHDS Art.53.1(f)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ImproveHealthcare
+      dpv_extension_slug: legal/eu/ehds
+
+  ImproveHealthcareEducation:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:ImproveHealthcareEducation
+    description: |-
+      Purposes associated with improving the provision of healthcare education
+    aliases:
+      - Improve Healthcare Education
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ImproveHealthcareEducation
+      - dpv_legal_eu_ehds_owl:ImproveHealthcareEducation
+    annotations:
+      dct_source: EHDS Art.53.1(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ImproveHealthcareEducation
+      dpv_extension_slug: legal/eu/ehds
+
+  InferredHealthData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:InferredHealthData
+    description: |-
+      Information about inferred health data, including improvements such as
+      correction, annotation, or enrichment based on authorised processing
+      operations
+    aliases:
+      - Inferred Health Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:InferredHealthData
+      - dpv_legal_eu_ehds_owl:InferredHealthData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Recital 6
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#InferredHealthData
+      dpv_extension_slug: legal/eu/ehds
+
+  InteroperabilitySoftwareForEHRSystem:
+    mixins:
+      - Technology
+    class_uri: legal_eu_ehds:InteroperabilitySoftwareForEHRSystem
+    description: |-
+      Software component of the EHR system which provides and receives
+      personal electronic health data under a priority category for primary
+      use established under the EHDS Regulation in the European electronic
+      health record exchange format
+    aliases:
+      - Interoperability Software for EHR System
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:InteroperabilitySoftwareForEHRSystem
+      - dpv_legal_eu_ehds_owl:InteroperabilitySoftwareForEHRSystem
+    annotations:
+      dct_source: EHDS Art.2.2(n)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#InteroperabilitySoftwareForEHRSystem
+      dpv_extension_slug: legal/eu/ehds
+
+  LipidomicData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:LipidomicData
+    description: Information about lipidomic data
+    aliases:
+      - Lipidomic Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:LipidomicData
+      - dpv_legal_eu_ehds_owl:LipidomicData
+    annotations:
+      dct_source: EHDS Art.51.1(g)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#LipidomicData
+      dpv_extension_slug: legal/eu/ehds
+
+  LoggingSoftwareForEHRSystem:
+    mixins:
+      - Technology
+    class_uri: legal_eu_ehds:LoggingSoftwareForEHRSystem
+    description: |-
+      Software component of the EHR system which provides logging information
+      related to access by health professionals or other individuals to
+      priority categories of personal electronic health data
+    aliases:
+      - Logging Software for EHR System
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:LoggingSoftwareForEHRSystem
+      - dpv_legal_eu_ehds_owl:LoggingSoftwareForEHRSystem
+    annotations:
+      dct_source: EHDS Art.2.2(o)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#LoggingSoftwareForEHRSystem
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalDevicesData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MedicalDevicesData
+    description: Information about electronic health data from medical devices
+    aliases:
+      - Medical Devices Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalDevicesData
+      - dpv_legal_eu_ehds_owl:MedicalDevicesData
+    annotations:
+      dct_source: EHDS Art.51.1(n)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalDevicesData
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalDevicesDispensation:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:MedicalDevicesDispensation
+    description: Purposes associated with the dispensation of medical devices
+    aliases:
+      - Medical Devices Dispensation
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalDevicesDispensation
+      - dpv_legal_eu_ehds_owl:MedicalDevicesDispensation
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalDevicesDispensation
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalDevicesPrescription:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:MedicalDevicesPrescription
+    description: Purposes associated with prescription of medical devices
+    aliases:
+      - Medical Devices Prescription
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalDevicesPrescription
+      - dpv_legal_eu_ehds_owl:MedicalDevicesPrescription
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalDevicesPrescription
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalDevicesProvision:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:MedicalDevicesProvision
+    description: Purposes associated with the provision of medical devices
+    aliases:
+      - Medical Devices Provision
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalDevicesProvision
+      - dpv_legal_eu_ehds_owl:MedicalDevicesProvision
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalDevicesProvision
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalDevicesRegistryData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MedicalDevicesRegistryData
+    description: |-
+      Information about electronic health data from registries for medical
+      devices
+    aliases:
+      - Medical Devices Registry Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalDevicesRegistryData
+      - dpv_legal_eu_ehds_owl:MedicalDevicesRegistryData
+    annotations:
+      dct_source: EHDS Art.51.1(o)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalDevicesRegistryData
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalImaging:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MedicalImaging
+    description: Information about medical imaging studies and related imaging reports
+    aliases:
+      - Medical Imaging
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalImaging
+      - dpv_legal_eu_ehds_owl:MedicalImaging
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.14.1(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalImaging
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalRegistryData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MedicalRegistryData
+    description: Information about electronic health data from medical registries
+    aliases:
+      - Medical Registry Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalRegistryData
+      - dpv_legal_eu_ehds_owl:MedicalRegistryData
+    annotations:
+      dct_source: EHDS Art.51.1(l)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalRegistryData
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicalTestResult:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MedicalTestResult
+    description: Information about medical test results
+    aliases:
+      - Medical Test Result
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicalTestResult
+      - dpv_legal_eu_ehds_owl:MedicalTestResult
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.14.1(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicalTestResult
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicinalProductsDispensation:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:MedicinalProductsDispensation
+    description: Purposes associated with the dispensation of medicinal products
+    aliases:
+      - Medicinal Products Dispensation
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicinalProductsDispensation
+      - dpv_legal_eu_ehds_owl:MedicinalProductsDispensation
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicinalProductsDispensation
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicinalProductsPrescription:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:MedicinalProductsPrescription
+    description: Purposes associated with prescription of medicinal products
+    aliases:
+      - Medicinal Products Prescription
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicinalProductsPrescription
+      - dpv_legal_eu_ehds_owl:MedicinalProductsPrescription
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicinalProductsPrescription
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicinalProductsProvision:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:MedicinalProductsProvision
+    description: Purposes associated with the provision of medicinal products
+    aliases:
+      - Medicinal Products Provision
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicinalProductsProvision
+      - dpv_legal_eu_ehds_owl:MedicinalProductsProvision
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicinalProductsProvision
+      dpv_extension_slug: legal/eu/ehds
+
+  MedicinalProductsRegistryData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MedicinalProductsRegistryData
+    description: |-
+      Information about electronic health data from registries for medicinal
+      products
+    aliases:
+      - Medicinal Products Registry Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MedicinalProductsRegistryData
+      - dpv_legal_eu_ehds_owl:MedicinalProductsRegistryData
+    annotations:
+      dct_source: EHDS Art.51.1(o)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MedicinalProductsRegistryData
+      dpv_extension_slug: legal/eu/ehds
+
+  MetabolomicData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MetabolomicData
+    description: Information about metabolomic data
+    aliases:
+      - Metabolomic Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MetabolomicData
+      - dpv_legal_eu_ehds_owl:MetabolomicData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(g)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MetabolomicData
+      dpv_extension_slug: legal/eu/ehds
+
+  MortalityRegistryData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:MortalityRegistryData
+    description: Information about electronic health data from mortality registries
+    aliases:
+      - Mortality Registry Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:MortalityRegistryData
+      - dpv_legal_eu_ehds_owl:MortalityRegistryData
+    annotations:
+      dct_source: EHDS Art.51.1(l)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#MortalityRegistryData
+      dpv_extension_slug: legal/eu/ehds
+
+  NonPersonalElectronicHealthData:
+    mixins:
+      - NonPersonalData
+    class_uri: legal_eu_ehds:NonPersonalElectronicHealthData
+    description: |-
+      Information about electronic health data that is not personal data,
+      including anonymised data
+    aliases:
+      - Non-Personal Electronic Health Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:NonPersonalElectronicHealthData
+      - dpv_legal_eu_ehds_owl:NonPersonalElectronicHealthData
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.2.2(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#NonPersonalElectronicHealthData
+      dpv_extension_slug: legal/eu/ehds
+
+  PathogenData:
+    mixins:
+      - NonPersonalData
+    class_uri: legal_eu_ehds:PathogenData
+    description: Information about relevant pathogen data, impacting on human health
+    aliases:
+      - Pathogen Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PathogenData
+      - dpv_legal_eu_ehds_owl:PathogenData
+    annotations:
+      dct_source: EHDS Art.51.1(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PathogenData
+      dpv_extension_slug: legal/eu/ehds
+
+  PatientSummary:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:PatientSummary
+    description: Information about patient summaries
+    aliases:
+      - Patient Summary
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PatientSummary
+      - dpv_legal_eu_ehds_owl:PatientSummary
+    related_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.14.1(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PatientSummary
+      dpv_extension_slug: legal/eu/ehds
+
+  PerformanceStudiesData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:PerformanceStudiesData
+    description: Information about health data from performance studies
+    aliases:
+      - Performance Studies Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PerformanceStudiesData
+      - dpv_legal_eu_ehds_owl:PerformanceStudiesData
+    annotations:
+      dct_source: EHDS Art.51.1(m)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PerformanceStudiesData
+      dpv_extension_slug: legal/eu/ehds
+
+  PersonGeneratedMedicalDeviceData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:PersonGeneratedMedicalDeviceData
+    description: Information about person generated medical devices data
+    aliases:
+      - Person Generated Medical Devices Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PersonGeneratedMedicalDeviceData
+      - dpv_legal_eu_ehds_owl:PersonGeneratedMedicalDeviceData
+    annotations:
+      dct_source: EHDS Art.51.1(h)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#PersonGeneratedMedicalDeviceData
+      dpv_extension_slug: legal/eu/ehds
+
+  PersonGeneratedWellnessAppData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:PersonGeneratedWellnessAppData
+    description: Information about person generated wellness applications data
+    aliases:
+      - Person Generated Wellness Application Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PersonGeneratedWellnessAppData
+      - dpv_legal_eu_ehds_owl:PersonGeneratedWellnessAppData
+    annotations:
+      dct_source: EHDS Art.51.1(i)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PersonGeneratedWellnessAppData
+      dpv_extension_slug: legal/eu/ehds
+
+  PersonalElectronicHealthData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:PersonalElectronicHealthData
+    description: |-
+      Information about personal health data, including genetic data,
+      processed in an electronic form
+    aliases:
+      - Personal Electronic Health Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PersonalElectronicHealthData
+      - dpv_legal_eu_ehds_owl:PersonalElectronicHealthData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.2.2(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PersonalElectronicHealthData
+      dpv_extension_slug: legal/eu/ehds
+
+  ProtectAgainstCrossBorderThreatsToHealth:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:ProtectAgainstCrossBorderThreatsToHealth
+    description: |-
+      Purposes associated with the protection against serious cross-border
+      threats to health
+    aliases:
+      - Protect against Cross-border Threats to Health
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ProtectAgainstCrossBorderThreatsToHealth
+      - dpv_legal_eu_ehds_owl:ProtectAgainstCrossBorderThreatsToHealth
+    annotations:
+      dct_source: EHDS Art.53.1(a)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#ProtectAgainstCrossBorderThreatsToHealth
+      dpv_extension_slug: legal/eu/ehds
+
+  ProteomicData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ProteomicData
+    description: Information about proteomic data
+    aliases:
+      - Proteomic Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ProteomicData
+      - dpv_legal_eu_ehds_owl:ProteomicData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(g)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ProteomicData
+      dpv_extension_slug: legal/eu/ehds
+
+  ProvideHealthcareOfficialStatistics:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:ProvideHealthcareOfficialStatistics
+    description: |-
+      Purposes associated with facilitating the development, production and
+      dissemination of reliable official statistics related to health or care
+      sectors
+    aliases:
+      - Provide Healthcare Official Statistics
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ProvideHealthcareOfficialStatistics
+      - dpv_legal_eu_ehds_owl:ProvideHealthcareOfficialStatistics
+    annotations:
+      dct_source: EHDS Art.53.1(c)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#ProvideHealthcareOfficialStatistics
+      dpv_extension_slug: legal/eu/ehds
+
+  PublicHealthRegistryData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:PublicHealthRegistryData
+    description: Information about registries of public health data
+    aliases:
+      - Public Health Registry Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PublicHealthRegistryData
+      - dpv_legal_eu_ehds_owl:PublicHealthRegistryData
+    annotations:
+      dct_source: EHDS Art.51.1(k)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicHealthRegistryData
+      dpv_extension_slug: legal/eu/ehds
+
+  PublicHealthSurveillance:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:PublicHealthSurveillance
+    description: Purposes associated with public health surveillance
+    aliases:
+      - Public Health Surveillance
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PublicHealthSurveillance
+      - dpv_legal_eu_ehds_owl:PublicHealthSurveillance
+    annotations:
+      dct_source: EHDS Art.53.1(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicHealthSurveillance
+      dpv_extension_slug: legal/eu/ehds
+
+  PublicInterestRelatedToHealth:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:PublicInterestRelatedToHealth
+    description: |-
+      Purposes associated with pursuing activities for reasons of public
+      interest in the area of public and occupational health
+    aliases:
+      - Public Interest related to Health
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PublicInterestRelatedToHealth
+      - dpv_legal_eu_ehds_owl:PublicInterestRelatedToHealth
+    annotations:
+      dct_source: EHDS Art.53.1(a)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicInterestRelatedToHealth
+      dpv_extension_slug: legal/eu/ehds
+
+  PublicPolicyMaking:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:PublicPolicyMaking
+    description: |-
+      Purposes associated with public policy making policymaking in the
+      healthcare sector
+    aliases:
+      - Public Policy Making
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:PublicPolicyMaking
+      - dpv_legal_eu_ehds_owl:PublicPolicyMaking
+    annotations:
+      dct_source: EHDS Art.53.1(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#PublicPolicyMaking
+      dpv_extension_slug: legal/eu/ehds
+
+  ReimbursementAdminData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ReimbursementAdminData
+    description: Information about health-related administrative data on reimbursements
+    aliases:
+      - Health-related Administrative Data on Reimbursements
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ReimbursementAdminData
+      - dpv_legal_eu_ehds_owl:ReimbursementAdminData
+    annotations:
+      dct_source: EHDS Art.51.1(e)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ReimbursementAdminData
+      dpv_extension_slug: legal/eu/ehds
+
+  ReimbursementServicesProvision:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:ReimbursementServicesProvision
+    description: |-
+      Purposes associated with the provision of reimbursement services related
+      to healthcare
+    aliases:
+      - Reimbursement Services Provision
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ReimbursementServicesProvision
+      - dpv_legal_eu_ehds_owl:ReimbursementServicesProvision
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ReimbursementServicesProvision
+      dpv_extension_slug: legal/eu/ehds
+
+  ResearchCohortData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:ResearchCohortData
+    description: Information about health data from research cohorts
+    aliases:
+      - Research Cohort Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:ResearchCohortData
+      - dpv_legal_eu_ehds_owl:ResearchCohortData
+    annotations:
+      dct_source: EHDS Art.51.1(p)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#ResearchCohortData
+      dpv_extension_slug: legal/eu/ehds
+
+  SocialServicesProvision:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:SocialServicesProvision
+    description: |-
+      Purposes associated with the provision of social services related to
+      healthcare
+    aliases:
+      - Social Services Provision
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:SocialServicesProvision
+      - dpv_legal_eu_ehds_owl:SocialServicesProvision
+    annotations:
+      dct_source: EHDS Art.2.2(d)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#SocialServicesProvision
+      dpv_extension_slug: legal/eu/ehds
+
+  SocioeconomicHealthDeterminant:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:SocioeconomicHealthDeterminant
+    description: Information about socioeconomic data impacting on health
+    aliases:
+      - Socioeconomic Health Determinant
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:SocioeconomicHealthDeterminant
+      - dpv_legal_eu_ehds_owl:SocioeconomicHealthDeterminant
+    annotations:
+      dct_source: EHDS Art.51.1(b)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#SocioeconomicHealthDeterminant
+      dpv_extension_slug: legal/eu/ehds
+
+  SupportAuthoritiesRegulatoryActivities:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:SupportAuthoritiesRegulatoryActivities
+    description: |-
+      Purposes associated with supporting authorities to carry out their
+      regulatory tasks
+    aliases:
+      - Support Authorities in Regulatory Activities
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:SupportAuthoritiesRegulatoryActivities
+      - dpv_legal_eu_ehds_owl:SupportAuthoritiesRegulatoryActivities
+    annotations:
+      dct_source: EHDS Art.53.1(b)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#SupportAuthoritiesRegulatoryActivities
+      dpv_extension_slug: legal/eu/ehds
+
+  TrainTestAndEvaluateAISystemsAlgorithms:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:TrainTestAndEvaluateAISystemsAlgorithms
+    description: |-
+      Purposes associated with training, testing and evaluating algorithms in
+      AI systems
+    aliases:
+      - Train, Test and Evaluate AI Systems Algorithms
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:TrainTestAndEvaluateAISystemsAlgorithms
+      - dpv_legal_eu_ehds_owl:TrainTestAndEvaluateAISystemsAlgorithms
+    related_mappings:
+      - iso27701:Clause_7_2_1
+    annotations:
+      dct_source: EHDS Art.53.1(e)(ii)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#TrainTestAndEvaluateAISystemsAlgorithms
+      dpv_extension_slug: legal/eu/ehds
+
+  TrainTestAndEvaluateHealthAlgorithms:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:TrainTestAndEvaluateHealthAlgorithms
+    description: |-
+      Purposes associated with training, testing and evaluating health-related
+      algorithms
+    aliases:
+      - Train, Test and Evaluate Health-related Algorithms
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:TrainTestAndEvaluateHealthAlgorithms
+      - dpv_legal_eu_ehds_owl:TrainTestAndEvaluateHealthAlgorithms
+    annotations:
+      dct_source: EHDS Art.53.1(e)(ii)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#TrainTestAndEvaluateHealthAlgorithms
+      dpv_extension_slug: legal/eu/ehds
+
+  TrainTestAndEvaluateHealthAppsAlgorithms:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:TrainTestAndEvaluateHealthAppsAlgorithms
+    description: |-
+      Purposes associated with training, testing and evaluating algorithms in
+      digital health applications
+    aliases:
+      - Train, Test and Evaluate Health Apps Algorithms
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:TrainTestAndEvaluateHealthAppsAlgorithms
+      - dpv_legal_eu_ehds_owl:TrainTestAndEvaluateHealthAppsAlgorithms
+    annotations:
+      dct_source: EHDS Art.53.1(e)(ii)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#TrainTestAndEvaluateHealthAppsAlgorithms
+      dpv_extension_slug: legal/eu/ehds
+
+  TrainTestAndEvaluateMedicalDevicesAlgorithms:
+    mixins:
+      - Purpose
+    class_uri: legal_eu_ehds:TrainTestAndEvaluateMedicalDevicesAlgorithms
+    description: |-
+      Purposes associated with training, testing and evaluating algorithms in
+      medical devices
+    aliases:
+      - Train, Test and Evaluate Medical Devices Algorithms
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:TrainTestAndEvaluateMedicalDevicesAlgorithms
+      - dpv_legal_eu_ehds_owl:TrainTestAndEvaluateMedicalDevicesAlgorithms
+    annotations:
+      dct_source: EHDS Art.53.1(e)(ii)
+      upstream_iri: |-
+        https://w3id.org/dpv/legal/eu/ehds/owl#TrainTestAndEvaluateMedicalDevicesAlgorithms
+      dpv_extension_slug: legal/eu/ehds
+
+  TranscriptomicData:
+    mixins:
+      - PersonalData
+    class_uri: legal_eu_ehds:TranscriptomicData
+    description: Information about transcriptomic data
+    aliases:
+      - Transcriptomic Data
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:TranscriptomicData
+      - dpv_legal_eu_ehds_owl:TranscriptomicData
+    narrow_mappings:
+      - iso27701:PII
+    annotations:
+      dct_source: EHDS Art.51.1(g)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#TranscriptomicData
+      dpv_extension_slug: legal/eu/ehds
+
+  TrustedHealthDataHolder:
+    is_a: HealthDataHolder
+    mixins:
+      - LegalEntity
+    class_uri: legal_eu_ehds:TrustedHealthDataHolder
+    description: |-
+      A health data holder that meets the conditions for the simplified
+      procedure to access electronic health data
+    aliases:
+      - Trusted Health Data Holder
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:TrustedHealthDataHolder
+      - dpv_legal_eu_ehds_owl:TrustedHealthDataHolder
+    close_mappings:
+      - iso27701:PIIController
+    annotations:
+      dct_source: EHDS Art.72
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#TrustedHealthDataHolder
+      dpv_extension_slug: legal/eu/ehds
+
+  WellnessApplication:
+    mixins:
+      - Technology
+    class_uri: legal_eu_ehds:WellnessApplication
+    description: |-
+      Software component for the processing of electronic health data,
+      specifically for providing information on the health of natural persons,
+      or the delivery of care for purposes other than the provision of
+      healthcare
+    aliases:
+      - Wellness Application
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:WellnessApplication
+      - dpv_legal_eu_ehds_owl:WellnessApplication
+    related_mappings:
+      - iso27701:Clause_6_5
+    annotations:
+      dct_source: EHDS Art.2.2(ab)
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#WellnessApplication
+      dpv_extension_slug: legal/eu/ehds
+
+  WellnessApplicationLabel:
+    is_a: CertificationSeal
+    mixins:
+      - OrganisationalMeasure
+    class_uri: legal_eu_ehds:WellnessApplicationLabel
+    description: |-
+      Label issued by the manufacturer of the wellness application that
+      indicating its compliance with the common specifications referred to in
+      EHDS Article 36 and the requirements laid down in EHDS Annex II
+    aliases:
+      - Wellness Application Label
+    in_subset:
+      - legal_eu_ehds_subset
+    exact_mappings:
+      - dpv_legal_eu_ehds:WellnessApplicationLabel
+      - dpv_legal_eu_ehds_owl:WellnessApplicationLabel
+    related_mappings:
+      - iso27701:Clause_7_3_2
+    annotations:
+      dct_source: EHDS Art.47
+      upstream_iri: https://w3id.org/dpv/legal/eu/ehds/owl#WellnessApplicationLabel
+      dpv_extension_slug: legal/eu/ehds

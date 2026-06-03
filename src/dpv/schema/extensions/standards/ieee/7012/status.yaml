@@ -1,0 +1,336 @@
+id: https://w3id.org/lmodel/dpv/standards/ieee/7012/status
+name: dpv_standards_ieee_7012_status
+title: DPV - Standards - Ieee - 7012 / Status
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `standards/ieee/7012/modules/status-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/standards/ieee/7012
+  - https://w3c.github.io/dpv/2.3/standards/ieee/7012/
+source: https://w3id.org/dpv/standards/ieee/7012/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: standards/ieee/7012
+  dpv_submodule: status
+  source_ttl: upstream-releases/dpv/standards/ieee/7012/modules/status-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/standards/ieee/7012/modules/status.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/standards/ieee/7012/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/standards/ieee/7012#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  standards_ieee_7012: https://w3id.org/lmodel/dpv/standards/ieee/7012/
+  dpv_standards_ieee_7012: https://w3id.org/dpv/standards/ieee/7012#
+  dpv_standards_ieee_7012_owl: https://w3id.org/dpv/standards/ieee/7012/owl#
+
+default_prefix: standards_ieee_7012
+default_range: string
+id_prefixes:
+  - standards_ieee_7012
+  - dpv_standards_ieee_7012
+  - dpv_standards_ieee_7012_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/standards/ieee/7012
+
+subsets:
+
+  standards_ieee_7012_status_subset:
+    description: Entities from the DPV `standards/ieee/7012/modules/status` submodule.
+
+classes:
+
+  AgreementAccepted:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementAccepted
+    description: |-
+      Status indicating the Agreement Negotiation is completed and the parties
+      have accepted the relevant terms
+    aliases:
+      - Agreement Accepted
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementAccepted
+      - dpv_standards_ieee_7012_owl:AgreementAccepted
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#AgreementAccepted
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationClarificationRequired:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationClarificationRequired
+    description: |-
+      Status indicating the Agreement Negotiation requires a clarification
+      from the other party regarding the relevant context
+    aliases:
+      - Agreement Negotiation Clarification Required
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationClarificationRequired
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationClarificationRequired
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationClarificationRequired
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationConfirmationRequired:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationConfirmationRequired
+    description: |-
+      Status indicating the Agreement Negotiation requires a confirmation by a
+      human before it can proceed
+    aliases:
+      - Agreement Negotiation Confirmation Required
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationConfirmationRequired
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationConfirmationRequired
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationConfirmationRequired
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationCounterOfferMade:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationCounterOfferMade
+    description: |-
+      Status indicating the terms involved in Agreement Negotiation were not
+      accepted and a counter-offer has been made with a different set of terms
+    aliases:
+      - Agreement Negotiation Counter Offer Made
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationCounterOfferMade
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationCounterOfferMade
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationCounterOfferMade
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationExpired:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationExpired
+    description: |-
+      Status indicating the Agreement Negotiation has expired due to
+      inactivity by a party or due to other reasons
+    aliases:
+      - Agreement Negotiation Expired
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationExpired
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationExpired
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationExpired
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationInitiated:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationInitiated
+    description: Status indicating the Agreement Negotiation process has been initiated
+    aliases:
+      - Agreement Negotiation Initiated
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationInitiated
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationInitiated
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationInitiated
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationInvalid:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationInvalid
+    description: |-
+      Status indicating the Agreement Negotiation is deemed to be invalid and
+      therefore cannot continue
+    aliases:
+      - Agreement Negotiation Invalid
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationInvalid
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationInvalid
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationInvalid
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationPaused:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationPaused
+    description: |-
+      Status indicating the Agreement Negotiation has been paused i.e. halted
+      or put on hold without a specific decision
+    aliases:
+      - Agreement Negotiation Paused
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationPaused
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationPaused
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationPaused
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationPendingResponse:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationPendingResponse
+    description: |-
+      Status indicating the Agreement Negotiation process is underway and is
+      awaiting a response from the other party
+    aliases:
+      - Agreement Negotiation Pending Response
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationPendingResponse
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationPendingResponse
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationPendingResponse
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationRefused:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationRefused
+    description: |-
+      Status indicating the Agreement Negotiation has been refused to be
+      initiated or continued
+    aliases:
+      - Agreement Negotiation Refused
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationRefused
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationRefused
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationRefused
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationRequested:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationRequested
+    description: |-
+      Status indicating the Agreement Negotiation has been requested to be
+      initiated
+    aliases:
+      - Agreement Negotiation Requested
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationRequested
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationRequested
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationRequested
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationStatus:
+    is_a: Status
+    class_uri: standards_ieee_7012:AgreementNegotiationStatus
+    description: Status associated with the Agreement Negotiation
+    aliases:
+      - Agreement Negotiation Status
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationStatus
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationStatus
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationStatus
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationTerminated:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationTerminated
+    description: |-
+      Status indicating the Agreement Negotiation has been terminated by one
+      or more parties
+    aliases:
+      - Agreement Negotiation Terminated
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationTerminated
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationTerminated
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationTerminated
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementNegotiationUnknown:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementNegotiationUnknown
+    description: Status indicating the state of Agreement Negotiation is unknown
+    aliases:
+      - Agreement Negotiation Unknown
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementNegotiationUnknown
+      - dpv_standards_ieee_7012_owl:AgreementNegotiationUnknown
+    annotations:
+      upstream_iri: |-
+        https://w3id.org/dpv/standards/ieee/7012/owl#AgreementNegotiationUnknown
+      dpv_extension_slug: standards/ieee/7012
+
+  AgreementRefused:
+    is_a: AgreementNegotiationStatus
+    class_uri: standards_ieee_7012:AgreementRefused
+    description: |-
+      Status indicating the Agreement Negotiation is completed and the parties
+      have refused the relevant terms
+    aliases:
+      - Agreement Refused
+    in_subset:
+      - standards_ieee_7012_status_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:AgreementRefused
+      - dpv_standards_ieee_7012_owl:AgreementRefused
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#AgreementRefused
+      dpv_extension_slug: standards/ieee/7012

@@ -1,4 +1,0 @@
-# __unmapped__:
-#   tech:hasCapability: dpv:AccessControlMethod
-has_technical_measure: dpv:AccessControlMethod
-id: ex:CorpDataBase

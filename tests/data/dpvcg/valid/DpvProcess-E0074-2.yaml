@@ -1,4 +1,0 @@
-has_data_subject: dpv:User
-has_human_involvement: dpv:HumanInvolvementForOversight
-has_human_subject: dpv:User
-id: ex:DataProcess

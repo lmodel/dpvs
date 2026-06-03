@@ -1,0 +1,404 @@
+id: https://w3id.org/lmodel/dpv/ai/lifecycle
+name: dpv_ai_lifecycle
+title: DPV - Ai / Lifecycle
+description: |-
+  LinkML schema generated from the DPV 2.3 extension module
+  `ai/modules/lifecycle-owl.ttl`.
+license: CC-BY-4.0
+see_also:
+  - https://w3id.org/dpv/ai
+  - https://w3c.github.io/dpv/2.3/ai/
+source: https://w3id.org/dpv/ai/owl#
+version: '2.3'
+annotations:
+  dpv_version: '2.3'
+  dpv_extension_slug: ai
+  dpv_submodule: lifecycle
+  source_ttl: upstream-releases/dpv/ai/modules/lifecycle-owl.ttl
+  source_canonical_ttl: upstream-releases/dpv/ai/modules/lifecycle.ttl
+  upstream_owl_namespace: https://w3id.org/dpv/ai/owl#
+  upstream_canonical_namespace: https://w3id.org/dpv/ai#
+
+prefixes:
+  dpv: https://github.com/lmodel/dpv/
+  dpv_upstream: https://w3id.org/dpv#
+  dpv_owl: https://w3id.org/dpv/owl#
+  linkml: https://w3id.org/linkml/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  owl: http://www.w3.org/2002/07/owl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  schema: http://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  org: http://www.w3.org/ns/org#
+  prof: http://www.w3.org/ns/dx/prof/
+  svd: https://specialprivacy.ercim.eu/vocabs/data#
+  svpr: https://specialprivacy.ercim.eu/vocabs/processing#
+  svpu: https://specialprivacy.ercim.eu/vocabs/purposes#
+  usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
+  shex: http://www.w3.org/ns/shex#
+  common_domain_model: https://w3id.org/lmodel/common-domain-model/
+  gists: https://w3id.org/lmodel/gists/
+  iso22989: https://w3id.org/lmodel/iso22989/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  iso29100: https://w3id.org/lmodel/iso29100/
+  iso42001: https://w3id.org/lmodel/iso42001/
+  nist_ai_rmf: https://w3id.org/lmodel/nist-ai-rmf/
+  nist_csf_v2: https://w3id.org/lmodel/nist-csf-v2/
+  ocsf: https://w3id.org/lmodel/ocsf/
+  oscal: https://w3id.org/lmodel/oscal/
+  ai: https://w3id.org/lmodel/dpv/ai/
+  dpv_ai: https://w3id.org/dpv/ai#
+  dpv_ai_owl: https://w3id.org/dpv/ai/owl#
+  tech: https://w3id.org/lmodel/dpv/tech/
+  dpv_tech: https://w3id.org/dpv/tech#
+  dpv_tech_owl: https://w3id.org/dpv/tech/owl#
+
+default_prefix: ai
+default_range: string
+id_prefixes:
+  - ai
+  - dpv_ai
+  - dpv_ai_owl
+
+imports:
+  - linkml:types
+  - dpv:schema/dpv_core
+  - dpv:schema/extensions/ai
+  - dpv:schema/extensions/tech
+
+subsets:
+
+  ai_lifecycle_subset:
+    description: Entities from the DPV `ai/modules/lifecycle` submodule.
+
+classes:
+
+  ContinuousValidationStage:
+    is_a: LifecycleStage
+    class_uri: ai:ContinuousValidationStage
+    description: |-
+      The stage in the lifecycle where there is continuous learning within the
+      AI system by incremental training on an ongoing basis while the system
+      is running in production
+    aliases:
+      - Continuous Validation Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:ContinuousValidationStage
+      - dpv_ai_owl:ContinuousValidationStage
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#ContinuousValidationStage
+      dpv_extension_slug: ai
+
+  DecommissionStage:
+    is_a: RetirementStage
+    mixins:
+      - LifecycleStage
+    class_uri: ai:DecommissionStage
+    description: |-
+      The stage in the lifecycle where the AI system is being decommissioned
+      as part of retirement
+    aliases:
+      - Decommission Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:DecommissionStage
+      - dpv_ai_owl:DecommissionStage
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#DecommissionStage
+      dpv_extension_slug: ai
+
+  DeploymentStage:
+    is_a: LifecycleStage
+    class_uri: ai:DeploymentStage
+    description: |-
+      The stage in the lifecycle where the AI system is installed, released or
+      configured for deployment and operation in a target environment
+    aliases:
+      - Deployment Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:DeploymentStage
+      - dpv_ai_owl:DeploymentStage
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#DeploymentStage
+      dpv_extension_slug: ai
+
+  DesignStage:
+    is_a: LifecycleStage
+    class_uri: ai:DesignStage
+    description: The stage in the lifecycle where designs are created for the AI system
+    aliases:
+      - Design Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:DesignStage
+      - dpv_ai_owl:DesignStage
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#DesignStage
+      dpv_extension_slug: ai
+
+  DevelopmentStage:
+    is_a: LifecycleStage
+    class_uri: ai:DevelopmentStage
+    description: |-
+      The stage in the lifecycle where the development and creation of the
+      system occurs, signalling upon completion that it is ready for
+      verification and validation
+    aliases:
+      - Development Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:DevelopmentStage
+      - dpv_ai_owl:DevelopmentStage
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#DevelopmentStage
+      dpv_extension_slug: ai
+
+  DiscardStage:
+    is_a: RetirementStage
+    mixins:
+      - LifecycleStage
+    class_uri: ai:DiscardStage
+    description: |-
+      The stage in the lifecycle where the AI system is being discarded as
+      part of retirement
+    aliases:
+      - Discard Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:DiscardStage
+      - dpv_ai_owl:DiscardStage
+    close_mappings:
+      - iso42001:AIReferenceControl
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#DiscardStage
+      dpv_extension_slug: ai
+
+  InceptionStage:
+    is_a: LifecycleStage
+    class_uri: ai:InceptionStage
+    description: |-
+      The stage in the lifecycle where inception regarding AI occurs and one
+      or more stakeholders decide to turn an idea into a tangible system
+    aliases:
+      - Inception Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:InceptionStage
+      - dpv_ai_owl:InceptionStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#InceptionStage
+      dpv_extension_slug: ai
+
+  IncidentMonitoringStage:
+    is_a: OperationStage
+    mixins:
+      - LifecycleStage
+    class_uri: ai:IncidentMonitoringStage
+    description: |-
+      The stage in the lifecycle where an AI system is actively being
+      monitored for incidents
+    aliases:
+      - Incident Monitoring Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:IncidentMonitoringStage
+      - dpv_ai_owl:IncidentMonitoringStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#IncidentMonitoringStage
+      dpv_extension_slug: ai
+
+  LifecycleStage:
+    class_uri: ai:LifecycleStage
+    description: A stage in the lifecycle of AI
+    aliases:
+      - Lifecycle Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:LifecycleStage
+      - dpv_ai_owl:LifecycleStage
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#LifecycleStage
+      dpv_extension_slug: ai
+
+  OperationStage:
+    is_a: LifecycleStage
+    class_uri: ai:OperationStage
+    description: |-
+      The stage in the lifecycle where an AI system is running and generally
+      available for operations
+    aliases:
+      - Operation Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:OperationStage
+      - dpv_ai_owl:OperationStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#OperationStage
+      dpv_extension_slug: ai
+
+  ReevaluationStage:
+    is_a: LifecycleStage
+    class_uri: ai:ReevaluationStage
+    description: |-
+      The stage in the lifecycle where the AI system is reevaluated after the
+      operation and monitoring stage based on the operations of the AI system
+    aliases:
+      - Reevaluation Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:ReevaluationStage
+      - dpv_ai_owl:ReevaluationStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#ReevaluationStage
+      dpv_extension_slug: ai
+
+  RepairStage:
+    is_a: OperationStage
+    mixins:
+      - LifecycleStage
+    class_uri: ai:RepairStage
+    description: |-
+      The stage in the lifecycle where an AI system is being repaired due to
+      suspected or occurred incidents
+    aliases:
+      - Repair Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:RepairStage
+      - dpv_ai_owl:RepairStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#RepairStage
+      dpv_extension_slug: ai
+
+  ReplaceStage:
+    is_a: RetirementStage
+    mixins:
+      - LifecycleStage
+    class_uri: ai:ReplaceStage
+    description: |-
+      The stage in the lifecycle where the AI system is being replaced as part
+      of retirement
+    aliases:
+      - Replace Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:ReplaceStage
+      - dpv_ai_owl:ReplaceStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#ReplaceStage
+      dpv_extension_slug: ai
+
+  RetirementStage:
+    is_a: LifecycleStage
+    class_uri: ai:RetirementStage
+    description: |-
+      The stage in the lifecycle where the AI system is retired and becomes
+      obsolete
+    aliases:
+      - Retirement Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:RetirementStage
+      - dpv_ai_owl:RetirementStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#RetirementStage
+      dpv_extension_slug: ai
+
+  UpdateStage:
+    is_a: OperationStage
+    mixins:
+      - LifecycleStage
+    class_uri: ai:UpdateStage
+    description: |-
+      The stage in the lifecycle where an AI system is being or has been
+      updated
+    aliases:
+      - Update Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:UpdateStage
+      - dpv_ai_owl:UpdateStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#UpdateStage
+      dpv_extension_slug: ai
+
+  ValidationStage:
+    is_a: LifecycleStage
+    class_uri: ai:ValidationStage
+    description: |-
+      The stage in the lifecycle where the AI system is validated for
+      requirements and objectives for an intended use or application
+    aliases:
+      - Validation Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:ValidationStage
+      - dpv_ai_owl:ValidationStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#ValidationStage
+      dpv_extension_slug: ai
+
+  VerificationStage:
+    is_a: LifecycleStage
+    class_uri: ai:VerificationStage
+    description: |-
+      The stage in the lifecycle where the AI system is being verified to
+      satisfy requirements and meet objectives
+    aliases:
+      - Verification Stage
+    in_subset:
+      - ai_lifecycle_subset
+    exact_mappings:
+      - dpv_ai:VerificationStage
+      - dpv_ai_owl:VerificationStage
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/ai/owl#VerificationStage
+      dpv_extension_slug: ai

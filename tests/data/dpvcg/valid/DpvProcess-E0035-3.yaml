@@ -1,7 +1,0 @@
-has_data_exporter: ex:CompanyA
-has_data_importer: ex:CompanyB
-has_processing:
-- dpv:CrossBorderTransfer
-- dpv:Transfer
-has_recipient: ex:CompanyB
-id: ex:PDH

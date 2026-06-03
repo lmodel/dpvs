@@ -1,5 +1,0 @@
-# __unmapped__:
-#   skos:broader: dpv:EnforceSecurity
-#   skos:prefLabel: Limit access to lab by checking personnel identity
-has_sector: http://data.europa.eu/ux2/nace2.1/72
-id: RestrictPersonnelAccess

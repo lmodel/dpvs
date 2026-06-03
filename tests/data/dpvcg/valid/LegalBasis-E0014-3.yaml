@@ -1,4 +1,0 @@
-# __unmapped__:
-#   skos:broader: dpv:Consent
-has_data_subject: ex:ServiceConsumers
-id: ex:UserConsent
