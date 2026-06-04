@@ -435,12 +435,12 @@
         click Contact href "../Contact/"
 
 
-      PhysicalAddress &lt;|-- City
-        click City href "../City/"
       PhysicalAddress &lt;|-- HouseNumber
         click HouseNumber href "../HouseNumber/"
       PhysicalAddress &lt;|-- Locality
         click Locality href "../Locality/"
+      PhysicalAddress &lt;|-- PdCity
+        click PdCity href "../PdCity/"
       PhysicalAddress &lt;|-- PdRegion
         click PdRegion href "../PdRegion/"
       PhysicalAddress &lt;|-- PostalCode
@@ -454,12 +454,12 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../Tracking/">Tracking</a><ul>
+<li><a href="../PdTracking/">PdTracking</a><ul>
 <li><a href="../Contact/">Contact</a><ul>
 <li><strong>PhysicalAddress</strong> [ <a href="../PdLocation/">PdLocation</a>]<ul>
-<li><a href="../City/">City</a></li>
 <li><a href="../HouseNumber/">HouseNumber</a></li>
 <li><a href="../Locality/">Locality</a></li>
+<li><a href="../PdCity/">PdCity</a></li>
 <li><a href="../PdRegion/">PdRegion</a></li>
 <li><a href="../PostalCode/">PostalCode</a></li>
 <li><a href="../RoomNumber/">RoomNumber</a></li>

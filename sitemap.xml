@@ -4669,6 +4669,14 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiProfiling/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiRiskConcept/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiRisksSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -5878,6 +5886,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/justifications/JustificationsJustificationsNotrequiredSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/justifications/JustificationsLegalObligation/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -27913,6 +27925,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdCity/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/pd/PdCoreSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -27933,11 +27949,19 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdProfessionalTraining/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/pd/PdRegion/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/pd/PdSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdTracking/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -29973,6 +29997,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskRiskAssessment/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskRiskControlsSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -31222,6 +31250,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/tech/TechProvisionSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/TechRecommendation/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>

@@ -429,6 +429,8 @@
 <pre class="mermaid"><code> classDiagram
     class City
     click City href "../City/"
+      DpvLocation &lt;|-- City
+        click DpvLocation href "../DpvLocation/"
       PhysicalAddress &lt;|-- City
         click PhysicalAddress href "../PhysicalAddress/"
 
@@ -437,8 +439,8 @@
 <ul>
 <li><a href="../Tracking/">Tracking</a><ul>
 <li><a href="../Contact/">Contact</a><ul>
-<li><a href="../PhysicalAddress/">PhysicalAddress</a> [ <a href="../PdLocation/">PdLocation</a>]<ul>
-<li><strong>City</strong></li>
+<li><a href="../PhysicalAddress/">PhysicalAddress</a> [ <a href="../DpvLocation/">DpvLocation</a>]<ul>
+<li><strong>City</strong> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
 </ul>
 </li>
 </ul>
@@ -557,6 +559,8 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_pd:City</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_pd_owl:City</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhysicalAddress</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvLocation</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pd:City</span>
 </code></pre></div>
 </details>
@@ -580,6 +584,8 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_pd:City</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_pd_owl:City</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhysicalAddress</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvLocation</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pd:City</span>
 </code></pre></div>
 </details>
