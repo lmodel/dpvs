@@ -6,8 +6,8 @@ description: |-
   `modules/processing-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -61,13 +61,13 @@ slots:
     definition_uri: dpv:hasProcessing
     description: Indicates association with Processing
     aliases:
-      - has processing
+    - has processing
     multivalued: true
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:hasProcessing
-      - dpv_owl:hasProcessing
+    - dpv_upstream:hasProcessing
+    - dpv_owl:hasProcessing
     annotations:
       skos_in_scheme: processing-properties
 
@@ -76,207 +76,208 @@ classes:
   Access:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Access
     description: to access data
     aliases:
-      - Access
+    - Access
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Access
-      - dpv_owl:Access
+    - dpv_upstream:Access
+    - dpv_owl:Access
     annotations:
       skos_in_scheme: processing-classes
 
   Acquire:
     is_a: Obtain
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Acquire
     description: to come into possession or control of the data
     aliases:
-      - Acquire
+    - Acquire
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Acquire
-      - dpv_owl:Acquire
+    - dpv_upstream:Acquire
+    - dpv_owl:Acquire
     annotations:
       skos_in_scheme: processing-classes
 
   Adapt:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Adapt
-    description: to modify the data, often rewritten into a new form for a new use
+    description: to modify the data, often rewritten into a new form for a new 
+      use
     aliases:
-      - Adapt
+    - Adapt
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Adapt
-      - dpv_owl:Adapt
+    - dpv_upstream:Adapt
+    - dpv_owl:Adapt
     annotations:
       skos_in_scheme: processing-classes
 
   Aggregate:
     is_a: Alter
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Aggregate
     description: to aggregate data
     aliases:
-      - Aggregate
+    - Aggregate
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Aggregate
-      - dpv_owl:Aggregate
+    - dpv_upstream:Aggregate
+    - dpv_owl:Aggregate
     related_mappings:
-      - svpr:Aggregate
+    - svpr:Aggregate
     annotations:
       skos_in_scheme: processing-classes
 
   Align:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Align
     description: to adjust the data to be in relation to another data
     aliases:
-      - Align
+    - Align
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Align
-      - dpv_owl:Align
+    - dpv_upstream:Align
+    - dpv_owl:Align
     annotations:
       skos_in_scheme: processing-classes
 
   Alter:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Alter
     description: to change the data without changing it into something else
     aliases:
-      - Alter
+    - Alter
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Alter
-      - dpv_owl:Alter
+    - dpv_upstream:Alter
+    - dpv_owl:Alter
     annotations:
       skos_in_scheme: processing-classes
 
   Analyse:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Analyse
     description: to study or examine the data in detail
     aliases:
-      - Analyse
+    - Analyse
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Analyse
-      - dpv_owl:Analyse
+    - dpv_upstream:Analyse
+    - dpv_owl:Analyse
     related_mappings:
-      - svpr:Analyse
+    - svpr:Analyse
     annotations:
       skos_in_scheme: processing-classes
 
   Anonymise:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Anonymise
     description: |-
       to irreversibly alter personal data in such a way that an unique data
       subject can no longer be identified directly or indirectly or in
       combination with other data
     aliases:
-      - Anonymise
+    - Anonymise
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Anonymise
-      - dpv_owl:Anonymise
+    - dpv_upstream:Anonymise
+    - dpv_owl:Anonymise
     related_mappings:
-      - svpr:Anonymise
+    - svpr:Anonymise
     annotations:
       skos_in_scheme: processing-classes
 
   Assess:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Assess
     description: to assess data for some criteria
     aliases:
-      - Assess
+    - Assess
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Assess
-      - dpv_owl:Assess
+    - dpv_upstream:Assess
+    - dpv_owl:Assess
     annotations:
       skos_in_scheme: processing-classes
 
   Collect:
     is_a: Obtain
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Collect
     description: to gather data from someone
     aliases:
-      - Collect
+    - Collect
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Collect
-      - dpv_owl:Collect
+    - dpv_upstream:Collect
+    - dpv_owl:Collect
     related_mappings:
-      - svpr:Collect
+    - svpr:Collect
     annotations:
       skos_in_scheme: processing-classes
 
   Combine:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Combine
     description: to join or merge data
     aliases:
-      - Combine
+    - Combine
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Combine
-      - dpv_owl:Combine
+    - dpv_upstream:Combine
+    - dpv_owl:Combine
     related_mappings:
-      - svpr:Aggregate
+    - svpr:Aggregate
     annotations:
       skos_in_scheme: processing-classes
 
   Consult:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Consult
     description: to consult or query data
     aliases:
-      - Consult
+    - Consult
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Consult
-      - dpv_owl:Consult
+    - dpv_upstream:Consult
+    - dpv_owl:Consult
     related_mappings:
-      - svpr:Query
+    - svpr:Query
     annotations:
       skos_in_scheme: processing-classes
 
@@ -285,86 +286,87 @@ classes:
     class_uri: dpv:Copy
     description: to produce an exact reproduction of the data
     aliases:
-      - Copy
+    - Copy
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Copy
-      - dpv_owl:Copy
+    - dpv_upstream:Copy
+    - dpv_owl:Copy
     related_mappings:
-      - svpr:Copy
+    - svpr:Copy
     annotations:
       skos_in_scheme: processing-classes
 
   CrossBorderTransfer:
     is_a: Transfer
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:CrossBorderTransfer
     description: to move data from one jurisdiction (border) to another
     aliases:
-      - Cross-Border Transfer
+    - Cross-Border Transfer
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:CrossBorderTransfer
-      - dpv_owl:CrossBorderTransfer
+    - dpv_upstream:CrossBorderTransfer
+    - dpv_owl:CrossBorderTransfer
     annotations:
       skos_in_scheme: processing-classes
 
   Delete:
     is_a: Remove
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Delete
     description: |-
       to remove data in a logical fashion i.e. with the possibility of
       retrieval
     aliases:
-      - Delete
+    - Delete
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Delete
-      - dpv_owl:Delete
+    - dpv_upstream:Delete
+    - dpv_owl:Delete
     annotations:
       skos_in_scheme: processing-classes
 
   Derive:
     is_a: Obtain
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Derive
     description: to create new derivative data from the original data
     aliases:
-      - Derive
+    - Derive
     comments:
-      - |-
-        Derive indicates data is present or obtainable from existing data. For
-        data that is created without such existence, see Infer.
+    - |-
+      Derive indicates data is present or obtainable from existing data. For
+      data that is created without such existence, see Infer.
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Derive
-      - dpv_owl:Derive
+    - dpv_upstream:Derive
+    - dpv_owl:Derive
     related_mappings:
-      - svpr:Derive
+    - svpr:Derive
     annotations:
       skos_in_scheme: processing-classes
 
   Destruct:
     is_a: Remove
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Destruct
-    description: to process data in a way it no longer exists or cannot be repaired
+    description: to process data in a way it no longer exists or cannot be 
+      repaired
     aliases:
-      - Destruct
+    - Destruct
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Destruct
-      - dpv_owl:Destruct
+    - dpv_upstream:Destruct
+    - dpv_owl:Destruct
     annotations:
       skos_in_scheme: processing-classes
 
@@ -373,44 +375,44 @@ classes:
     class_uri: dpv:Disclose
     description: to make data known
     aliases:
-      - Disclose
+    - Disclose
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Disclose
-      - dpv_owl:Disclose
+    - dpv_upstream:Disclose
+    - dpv_owl:Disclose
     annotations:
       skos_in_scheme: processing-classes
 
   DiscloseByTransmission:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:DiscloseByTransmission
     description: to disclose data by means of transmission
     aliases:
-      - Disclose by Transmission
+    - Disclose by Transmission
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:DiscloseByTransmission
-      - dpv_owl:DiscloseByTransmission
+    - dpv_upstream:DiscloseByTransmission
+    - dpv_owl:DiscloseByTransmission
     annotations:
       skos_in_scheme: processing-classes
 
   Display:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Display
     description: to present or show data
     aliases:
-      - Display
+    - Display
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Display
-      - dpv_owl:Display
+    - dpv_upstream:Display
+    - dpv_owl:Display
     annotations:
       skos_in_scheme: processing-classes
       dct_source: DGA 2.20
@@ -418,34 +420,34 @@ classes:
   Disseminate:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Disseminate
     description: to spread data throughout
     aliases:
-      - Disseminate
+    - Disseminate
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Disseminate
-      - dpv_owl:Disseminate
+    - dpv_upstream:Disseminate
+    - dpv_owl:Disseminate
     annotations:
       skos_in_scheme: processing-classes
 
   Download:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Download
     description: |-
       to provide a copy or to receive a copy of data over a network or
       internet
     aliases:
-      - Download
+    - Download
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Download
-      - dpv_owl:Download
+    - dpv_upstream:Download
+    - dpv_owl:Download
     annotations:
       skos_in_scheme: processing-classes
       dct_source: ' 2.20'
@@ -453,49 +455,49 @@ classes:
   DpvRecord:
     is_a: Obtain
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Record
     description: to make a record (especially media)
     aliases:
-      - Record
+    - Record
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Record
-      - dpv_owl:Record
+    - dpv_upstream:Record
+    - dpv_owl:Record
     annotations:
       skos_in_scheme: processing-classes
 
   Erase:
     is_a: Remove
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Erase
     description: |-
       to remove data from existence i.e. without the possibility of retrieval
     aliases:
-      - Erase
+    - Erase
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Erase
-      - dpv_owl:Erase
+    - dpv_upstream:Erase
+    - dpv_owl:Erase
     annotations:
       skos_in_scheme: processing-classes
 
   Export:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Export
     description: to provide a copy of data from one system to another
     aliases:
-      - Export
+    - Export
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Export
-      - dpv_owl:Export
+    - dpv_upstream:Export
+    - dpv_owl:Export
     annotations:
       skos_in_scheme: processing-classes
       dct_source: DGA 2.20
@@ -503,32 +505,32 @@ classes:
   Filter:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Filter
     description: to filter or keep data for some criteria
     aliases:
-      - Filter
+    - Filter
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Filter
-      - dpv_owl:Filter
+    - dpv_upstream:Filter
+    - dpv_owl:Filter
     annotations:
       skos_in_scheme: processing-classes
 
   Format:
     is_a: Structure
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Format
     description: to arrange or structure data in a specific form
     aliases:
-      - Format
+    - Format
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Format
-      - dpv_owl:Format
+    - dpv_upstream:Format
+    - dpv_owl:Format
     annotations:
       skos_in_scheme: processing-classes
       dct_source: DGA 12.d
@@ -536,137 +538,137 @@ classes:
   Generate:
     is_a: Obtain
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Generate
     description: to generate or create data
     aliases:
-      - Generate
+    - Generate
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Generate
-      - dpv_owl:Generate
+    - dpv_upstream:Generate
+    - dpv_owl:Generate
     annotations:
       skos_in_scheme: processing-classes
 
   Infer:
     is_a: Derive
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Infer
     description: to infer data from existing data
     aliases:
-      - Infer
+    - Infer
     comments:
-      - |-
-        Infer indicates data that is derived without it being present or
-        obtainable from existing data. For data that is presented, and is
-        'extracted' or 'obtained' from existing data, see Derive.
+    - |-
+      Infer indicates data that is derived without it being present or
+      obtainable from existing data. For data that is presented, and is
+      'extracted' or 'obtained' from existing data, see Derive.
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Infer
-      - dpv_owl:Infer
+    - dpv_upstream:Infer
+    - dpv_owl:Infer
     annotations:
       skos_in_scheme: processing-classes
 
   MakeAvailable:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:MakeAvailable
     description: to transform or publish data to be used
     aliases:
-      - Make Available
+    - Make Available
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:MakeAvailable
-      - dpv_owl:MakeAvailable
+    - dpv_upstream:MakeAvailable
+    - dpv_owl:MakeAvailable
     annotations:
       skos_in_scheme: processing-classes
 
   Match:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Match
     description: to combine, compare, or match data from different sources
     aliases:
-      - Match
+    - Match
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Match
-      - dpv_owl:Match
+    - dpv_upstream:Match
+    - dpv_owl:Match
     annotations:
       skos_in_scheme: processing-classes
 
   Modify:
     is_a: Alter
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Modify
     description: to modify or change data
     aliases:
-      - Modify
+    - Modify
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Modify
-      - dpv_owl:Modify
+    - dpv_upstream:Modify
+    - dpv_owl:Modify
     annotations:
       skos_in_scheme: processing-classes
 
   Monitor:
     is_a: Consult
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Monitor
     description: to monitor data for some criteria
     aliases:
-      - Monitor
+    - Monitor
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Monitor
-      - dpv_owl:Monitor
+    - dpv_upstream:Monitor
+    - dpv_owl:Monitor
     annotations:
       skos_in_scheme: processing-classes
 
   Move:
     is_a: Transfer
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Move
     description: |-
       to move data from one location to another including deleting the
       original copy
     aliases:
-      - Move
+    - Move
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Move
-      - dpv_owl:Move
+    - dpv_upstream:Move
+    - dpv_owl:Move
     related_mappings:
-      - svpr:Move
+    - svpr:Move
     annotations:
       skos_in_scheme: processing-classes
 
   Observe:
     is_a: Obtain
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Observe
     description: to obtain data through observation
     aliases:
-      - Observe
+    - Observe
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Observe
-      - dpv_owl:Observe
+    - dpv_upstream:Observe
+    - dpv_owl:Observe
     annotations:
       skos_in_scheme: processing-classes
 
@@ -675,12 +677,12 @@ classes:
     class_uri: dpv:Obtain
     description: to solicit or gather data from someone
     aliases:
-      - Obtain
+    - Obtain
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Obtain
-      - dpv_owl:Obtain
+    - dpv_upstream:Obtain
+    - dpv_owl:Obtain
     annotations:
       skos_in_scheme: processing-classes
 
@@ -689,12 +691,12 @@ classes:
     class_uri: dpv:Organise
     description: to organize data for arranging or classifying
     aliases:
-      - Organise
+    - Organise
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Organise
-      - dpv_owl:Organise
+    - dpv_upstream:Organise
+    - dpv_owl:Organise
     annotations:
       skos_in_scheme: processing-classes
 
@@ -702,82 +704,83 @@ classes:
     class_uri: dpv:Processing
     description: Operations or 'processing' performed on data
     aliases:
-      - Processing
+    - Processing
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Processing
-      - dpv_owl:Processing
-    close_mappings:
-      - iso29100:PIIProcessingOperation
+    - dpv_upstream:Processing
+    - dpv_owl:Processing
     related_mappings:
-      - usage_policy:AnyProcessing
+    - usage_policy:AnyProcessing
     annotations:
       skos_in_scheme: processing-classes
 
+    close_mappings:
+    - iso29100:PIIProcessingOperation
   Profiling:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Profiling
     description: to create a profile that describes or represents a person
     aliases:
-      - Profiling
+    - Profiling
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Profiling
-      - dpv_owl:Profiling
-    related_mappings:
-      - iso22989:Prediction
+    - dpv_upstream:Profiling
+    - dpv_owl:Profiling
     annotations:
       skos_in_scheme: processing-classes
 
+    related_mappings:
+    - iso22989:Prediction
   Pseudonymise:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Pseudonymise
-    description: to replace personal identifiable information by artificial identifiers
+    description: to replace personal identifiable information by artificial 
+      identifiers
     aliases:
-      - Pseudonymise
+    - Pseudonymise
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Pseudonymise
-      - dpv_owl:Pseudonymise
+    - dpv_upstream:Pseudonymise
+    - dpv_owl:Pseudonymise
     annotations:
       skos_in_scheme: processing-classes
 
   Query:
     is_a: Consult
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Query
     description: to query or make enquiries over data
     aliases:
-      - Query
+    - Query
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Query
-      - dpv_owl:Query
+    - dpv_upstream:Query
+    - dpv_owl:Query
     annotations:
       skos_in_scheme: processing-classes
 
   Reformat:
     is_a: Format
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Reformat
     description: to rearrange or restructure data to change its form
     aliases:
-      - Reformat
+    - Reformat
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Reformat
-      - dpv_owl:Reformat
+    - dpv_upstream:Reformat
+    - dpv_owl:Reformat
     annotations:
       skos_in_scheme: processing-classes
       dct_source: DGA 12.d
@@ -787,76 +790,76 @@ classes:
     class_uri: dpv:Remove
     description: to destruct or erase data
     aliases:
-      - Remove
+    - Remove
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Remove
-      - dpv_owl:Remove
+    - dpv_upstream:Remove
+    - dpv_owl:Remove
     annotations:
       skos_in_scheme: processing-classes
 
   Restrict:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Restrict
     description: to apply a restriction on the processing of specific records
     aliases:
-      - Restrict
+    - Restrict
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Restrict
-      - dpv_owl:Restrict
+    - dpv_upstream:Restrict
+    - dpv_owl:Restrict
     annotations:
       skos_in_scheme: processing-classes
 
   Retrieve:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Retrieve
     description: to retrieve data, often in an automated manner
     aliases:
-      - Retrieve
+    - Retrieve
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Retrieve
-      - dpv_owl:Retrieve
+    - dpv_upstream:Retrieve
+    - dpv_owl:Retrieve
     annotations:
       skos_in_scheme: processing-classes
 
   Screen:
     is_a: Transform
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Screen
     description: to remove data for some criteria
     aliases:
-      - Screen
+    - Screen
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Screen
-      - dpv_owl:Screen
+    - dpv_upstream:Screen
+    - dpv_owl:Screen
     annotations:
       skos_in_scheme: processing-classes
 
   Share:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Share
     description: to give data (or a portion of it) to others
     aliases:
-      - Share
+    - Share
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Share
-      - dpv_owl:Share
+    - dpv_upstream:Share
+    - dpv_owl:Share
     annotations:
       skos_in_scheme: processing-classes
 
@@ -865,113 +868,113 @@ classes:
     class_uri: dpv:Store
     description: to keep data for future use
     aliases:
-      - Store
+    - Store
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Store
-      - dpv_owl:Store
+    - dpv_upstream:Store
+    - dpv_owl:Store
     annotations:
       skos_in_scheme: processing-classes
 
   Structure:
     is_a: Organise
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Structure
     description: to arrange data according to a structure
     aliases:
-      - Structure
+    - Structure
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Structure
-      - dpv_owl:Structure
+    - dpv_upstream:Structure
+    - dpv_owl:Structure
     annotations:
       skos_in_scheme: processing-classes
 
   Tracking:
     is_a: Use
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Tracking
     description: |-
       to use data to track a specific factor (e.g. a human or their
       activities) across multiple distinct contexts
     aliases:
-      - Tracking
+    - Tracking
     comments:
-      - |-
-        Tracking is a widely used (and abused) concept and therefore carries
-        several distinct interpretations, for example see Do Not Track which
-        defines tracking in the context of the web, and where other forms of
-        tracking such as location tracking or physical biometric tracking may
-        exist which are defined differently. For this concept, DPVCG defines
-        Tracking in the broadest possible sense and strongly recommends adopters
-        to provide their specific definition or interpretation by either
-        extending this concept, through a usage note, or by contributing the
-        specific term back to DPVCG for inclusion in DPV or an extension. This
-        concept may change in the future based on developments in privacy and
-        legal spaces. In DPV, Tracking is defined as a type of processing
-        operation that may collect and/or may use data - which covers both
-        initial collection and usage as well as subsequent use of existing data
-        to track an individual. The classification of Tracking as a processing
-        operation also implies that it is not sufficient as a Purpose on its own
-        and therefore a suitable purpose from the DPV taxonomy should be used to
-        justify it.
+    - |-
+      Tracking is a widely used (and abused) concept and therefore carries
+      several distinct interpretations, for example see Do Not Track which
+      defines tracking in the context of the web, and where other forms of
+      tracking such as location tracking or physical biometric tracking may
+      exist which are defined differently. For this concept, DPVCG defines
+      Tracking in the broadest possible sense and strongly recommends adopters
+      to provide their specific definition or interpretation by either
+      extending this concept, through a usage note, or by contributing the
+      specific term back to DPVCG for inclusion in DPV or an extension. This
+      concept may change in the future based on developments in privacy and
+      legal spaces. In DPV, Tracking is defined as a type of processing
+      operation that may collect and/or may use data - which covers both
+      initial collection and usage as well as subsequent use of existing data
+      to track an individual. The classification of Tracking as a processing
+      operation also implies that it is not sufficient as a Purpose on its own
+      and therefore a suitable purpose from the DPV taxonomy should be used to
+      justify it.
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Tracking
-      - dpv_owl:Tracking
+    - dpv_upstream:Tracking
+    - dpv_owl:Tracking
     annotations:
       skos_in_scheme: processing-classes
 
   TrackingByFirstParty:
     is_a: Tracking
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:TrackingByFirstParty
     description: |-
       to perform tracking where the performing entity is a first party within
       the context
     aliases:
-      - Tracking by First Party
+    - Tracking by First Party
     comments:
-      - |-
-        This concept does not strictly only specify the processing operation,
-        but also the relation of the individual with the implementing entity.
-        These concepts may change in the future based on discussions around how
-        to express First and Third Party.
+    - |-
+      This concept does not strictly only specify the processing operation,
+      but also the relation of the individual with the implementing entity.
+      These concepts may change in the future based on discussions around how
+      to express First and Third Party.
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:TrackingByFirstParty
-      - dpv_owl:TrackingByFirstParty
+    - dpv_upstream:TrackingByFirstParty
+    - dpv_owl:TrackingByFirstParty
     annotations:
       skos_in_scheme: processing-classes
 
   TrackingByThirdParty:
     is_a: Tracking
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:TrackingByThirdParty
     description: |-
       to perform tracking where the performing entity is a third party within
       the context
     aliases:
-      - Tracking by Third Party
+    - Tracking by Third Party
     comments:
-      - |-
-        This concept does not strictly only specify the processing operation,
-        but also the relation of the individual with the implementing entity.
-        These concepts may change in the future based on discussions around how
-        to express First and Third Party.
+    - |-
+      This concept does not strictly only specify the processing operation,
+      but also the relation of the individual with the implementing entity.
+      These concepts may change in the future based on discussions around how
+      to express First and Third Party.
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:TrackingByThirdParty
-      - dpv_owl:TrackingByThirdParty
+    - dpv_upstream:TrackingByThirdParty
+    - dpv_owl:TrackingByThirdParty
     annotations:
       skos_in_scheme: processing-classes
 
@@ -980,14 +983,14 @@ classes:
     class_uri: dpv:Transfer
     description: to move data from one place to another
     aliases:
-      - Transfer
+    - Transfer
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Transfer
-      - dpv_owl:Transfer
+    - dpv_upstream:Transfer
+    - dpv_owl:Transfer
     related_mappings:
-      - svpr:Transfer
+    - svpr:Transfer
     annotations:
       skos_in_scheme: processing-classes
 
@@ -996,28 +999,28 @@ classes:
     class_uri: dpv:Transform
     description: to change the form or nature of data
     aliases:
-      - Transform
+    - Transform
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Transform
-      - dpv_owl:Transform
+    - dpv_upstream:Transform
+    - dpv_owl:Transform
     annotations:
       skos_in_scheme: processing-classes
 
   Transmit:
     is_a: Disclose
     mixins:
-      - Processing
+    - Processing
     class_uri: dpv:Transmit
     description: to send out data
     aliases:
-      - Transmit
+    - Transmit
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Transmit
-      - dpv_owl:Transmit
+    - dpv_upstream:Transmit
+    - dpv_owl:Transmit
     annotations:
       skos_in_scheme: processing-classes
 
@@ -1026,11 +1029,11 @@ classes:
     class_uri: dpv:Use
     description: to use data
     aliases:
-      - Use
+    - Use
     in_subset:
-      - processing_subset
+    - processing_subset
     exact_mappings:
-      - dpv_upstream:Use
-      - dpv_owl:Use
+    - dpv_upstream:Use
+    - dpv_owl:Use
     annotations:
       skos_in_scheme: processing-classes

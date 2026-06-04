@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -87,6 +87,7 @@ classes:
     aliases:
       - Aviation Infrastructure Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:AviationInfrastructureManagement
@@ -106,6 +107,7 @@ classes:
     aliases:
       - Critical Communication Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalCommunicationManagement
@@ -125,6 +127,7 @@ classes:
     aliases:
       - Critical Digital Infrastructure Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalDigitalInfrastructureManagement
@@ -145,6 +148,7 @@ classes:
     aliases:
       - Critical Electricity Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalElectricityManagement
@@ -165,6 +169,7 @@ classes:
     aliases:
       - Critical Emergency Response Communication Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalEmergencyResponseCommunicationManagement
@@ -186,6 +191,7 @@ classes:
     aliases:
       - Critical Emergency Response Dispatch Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalEmergencyResponseDispatchManagement
@@ -207,6 +213,7 @@ classes:
     aliases:
       - Critical Emergency Response Eligibility Assessment
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalEmergencyResponseEligibilityAssessment
@@ -228,6 +235,7 @@ classes:
     aliases:
       - Critical Emergency Response Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalEmergencyResponseManagement
@@ -249,6 +257,7 @@ classes:
     aliases:
       - Critical Emergency Response Triage
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalEmergencyResponseTriage
@@ -268,6 +277,7 @@ classes:
     aliases:
       - Critical Energy Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalEnergyManagement
@@ -287,6 +297,7 @@ classes:
     aliases:
       - Critical Gas Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalGasManagement
@@ -306,6 +317,7 @@ classes:
     aliases:
       - Critical Heating Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalHeatingManagement
@@ -326,6 +338,7 @@ classes:
     aliases:
       - Critical Infrastructure Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalInfrastructureManagement
@@ -345,6 +358,7 @@ classes:
     aliases:
       - Critical Waste Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalWasteManagement
@@ -364,6 +378,7 @@ classes:
     aliases:
       - Critical Water Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:CriticalWaterManagement
@@ -379,6 +394,7 @@ classes:
     aliases:
       - Infrastructure Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:InfrastructureManagement
@@ -398,6 +414,7 @@ classes:
     aliases:
       - Public Transport Complaint Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportComplaintManagement
@@ -418,32 +435,13 @@ classes:
     aliases:
       - Public Transport Demand Forecasting
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportDemandForecasting
       - dpv_sector_infra_owl:PublicTransportDemandForecasting
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/infra/owl#PublicTransportDemandForecasting
-      dpv_extension_slug: sector/infra
-
-  PublicTransportFraudManagement:
-    is_a: PublicBenefit
-    mixins:
-      - Purpose
-      - PublicTransportManagement
-    class_uri: sector_infra:PublicTransportFraudManagement
-    description: |-
-      Purposes associated with detection, resolution, and analysis of fraud in
-      use of public transport services
-    aliases:
-      - Public Transport Fraud Management
-    in_subset:
-      - sector_infra_subset
-    exact_mappings:
-      - dpv_sector_infra:PublicTransportFraudManagement
-      - dpv_sector_infra_owl:PublicTransportFraudManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/infra/owl#PublicTransportFraudManagement
       dpv_extension_slug: sector/infra
 
   PublicTransportManagement:
@@ -456,6 +454,7 @@ classes:
     aliases:
       - Public Transport Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportManagement
@@ -476,6 +475,7 @@ classes:
     aliases:
       - Public Transport Passenger Flow Analysis
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportPassengerFlowAnalysis
@@ -497,6 +497,7 @@ classes:
     aliases:
       - Public Transport Performance Analysis
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportPerformanceAnalysis
@@ -519,6 +520,7 @@ classes:
     aliases:
       - Public Transport Research Development
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportResearchDevelopment
@@ -541,6 +543,7 @@ classes:
     aliases:
       - Public Transport Safety Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportSafetyManagement
@@ -558,6 +561,7 @@ classes:
     aliases:
       - Public Transport Service Provision
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportServiceProvision
@@ -577,6 +581,7 @@ classes:
     aliases:
       - Public Transport Ticket Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:PublicTransportTicketManagement
@@ -594,6 +599,7 @@ classes:
     aliases:
       - Rail Transport Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RailTransportManagement
@@ -613,6 +619,7 @@ classes:
     aliases:
       - Road Accident Analysis
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadAccidentAnalysis
@@ -630,6 +637,7 @@ classes:
     aliases:
       - Road Accident Monitoring
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadAccidentMonitoring
@@ -649,6 +657,7 @@ classes:
     aliases:
       - Road Condition Monitoring
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadConditionMonitoring
@@ -669,6 +678,7 @@ classes:
     aliases:
       - Road Emergency Response Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadEmergencyResponseManagement
@@ -689,6 +699,7 @@ classes:
     aliases:
       - Road Emergency Route Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadEmergencyRouteManagement
@@ -708,6 +719,7 @@ classes:
     aliases:
       - Road Emergency Scene Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadEmergencySceneManagement
@@ -727,6 +739,7 @@ classes:
     aliases:
       - Road Environmental Impact Analysis
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadEnvironmentalImpactAnalysis
@@ -744,6 +757,7 @@ classes:
     aliases:
       - Road Infrastructure Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadInfrastructureManagement
@@ -763,6 +777,7 @@ classes:
     aliases:
       - Road Infrastructure Planning
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadInfrastructurePlanning
@@ -780,6 +795,7 @@ classes:
     aliases:
       - Road Maintenance Scheduling
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadMaintenanceScheduling
@@ -799,6 +815,7 @@ classes:
     aliases:
       - Road Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadManagement
@@ -818,6 +835,7 @@ classes:
     aliases:
       - Road Pedestrian Safety Monitoring
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadPedestrianSafetyMonitoring
@@ -839,6 +857,7 @@ classes:
     aliases:
       - Road Research Development
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadResearchDevelopment
@@ -856,6 +875,7 @@ classes:
     aliases:
       - Road Safety Monitoring
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadSafetyMonitoring
@@ -876,6 +896,7 @@ classes:
     aliases:
       - Road School Zone Safety Monitoring
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadSchoolZoneSafetyMonitoring
@@ -895,6 +916,7 @@ classes:
     aliases:
       - Road Toll Collection
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadTollCollection
@@ -914,6 +936,7 @@ classes:
     aliases:
       - Road Toll Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadTollManagement
@@ -933,6 +956,7 @@ classes:
     aliases:
       - Road Traffic Analysis
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadTrafficAnalysis
@@ -950,12 +974,35 @@ classes:
     aliases:
       - Road Traffic Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:RoadTrafficManagement
       - dpv_sector_infra_owl:RoadTrafficManagement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/infra/owl#RoadTrafficManagement
+      dpv_extension_slug: sector/infra
+
+  SectorInfraPublicTransportFraudManagement:
+    is_a: PublicBenefit
+    mixins:
+      - Purpose
+      - PublicTransportManagement
+    class_uri: sector_infra:PublicTransportFraudManagement
+    description: |-
+      Purposes associated with detection, resolution, and analysis of fraud in
+      use of public transport services
+    aliases:
+      - PublicTransportFraudManagement
+      - Public Transport Fraud Management
+    in_subset:
+      - sector_infra_purposes_subset
+      - sector_infra_subset
+    exact_mappings:
+      - dpv_sector_infra:PublicTransportFraudManagement
+      - dpv_sector_infra_owl:PublicTransportFraudManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/infra/owl#PublicTransportFraudManagement
       dpv_extension_slug: sector/infra
 
   TransportManagement:
@@ -967,6 +1014,7 @@ classes:
     aliases:
       - Transport Management
     in_subset:
+      - sector_infra_purposes_subset
       - sector_infra_subset
     exact_mappings:
       - dpv_sector_infra:TransportManagement

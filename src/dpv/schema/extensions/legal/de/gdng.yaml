@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -93,7 +93,7 @@ subsets:
 
 slots:
 
-  has_data_holder:
+  legal_de_gdng_has_data_holder:
     is_a: has_entity
     definition_uri: legal_de_gdng:hasDataHolder
     description: something is related to a data holder
@@ -101,6 +101,7 @@ slots:
       - has Data Holder
     multivalued: true
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:hasDataHolder
@@ -120,6 +121,7 @@ classes:
     aliases:
       - Anonymisierung von Gesundheitsdaten
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:Anonymization
@@ -138,6 +140,7 @@ classes:
     aliases:
       - Befugte Person
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:AuthorizedPerson
@@ -152,6 +155,7 @@ classes:
     aliases:
       - Zustimmung der zuständigen Datenschutzaufsichtsbehörde
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DPAApproval
@@ -171,6 +175,7 @@ classes:
     aliases:
       - Datenzugangs- und Koordinierungsstelle für Gesundheitsdaten (DACO)
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataAccessAndCoordinationOffice
@@ -181,12 +186,13 @@ classes:
       dpv_extension_slug: legal/de/gdng
 
   DataInfrastructure:
-    is_a: HealthDataHolder
+    is_a: LegalDeGdngHealthDataHolder
     class_uri: legal_de_gdng:DataInfrastructure
     description: Zusammenschlüsse von datenhaltenden Stellen zu Dateninfrastrukturen
     aliases:
       - Dateninfrastruktur
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataInfrastructure
@@ -202,6 +208,7 @@ classes:
     aliases:
       - Datenverknüpfung
     in_subset:
+      - legal_de_gdng_linkage_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataLinkage
@@ -217,6 +224,7 @@ classes:
     aliases:
       - Genehmigung zur Verknüpfung von pseudonymisierten Daten
     in_subset:
+      - legal_de_gdng_linkage_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataLinkagePermission
@@ -232,6 +240,7 @@ classes:
     aliases:
       - Antrag auf Verknüpfung von pseudonymisierten Daten
     in_subset:
+      - legal_de_gdng_linkage_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataLinkageRequest
@@ -249,6 +258,7 @@ classes:
     aliases:
       - Datenverknüpfungsantragsdaten
     in_subset:
+      - legal_de_gdng_linkage_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataLinkageRequestRecord
@@ -259,12 +269,13 @@ classes:
       dpv_extension_slug: legal/de/gdng
 
   DataPlatform:
-    is_a: HealthDataHolder
+    is_a: LegalDeGdngHealthDataHolder
     class_uri: legal_de_gdng:DataPlatform
     description: Zusammenschlüsse von datenhaltenden Stellen zu Datenplattformen
     aliases:
       - Datenplattform
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataPlatform
@@ -287,6 +298,7 @@ classes:
     aliases:
       - Datenverarbeitende Gesundheitseinrichtung
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataProcessingHealthcareFacility
@@ -306,6 +318,7 @@ classes:
     aliases:
       - Lösch-Richtlinie
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DeletionPolicy
@@ -321,6 +334,7 @@ classes:
     aliases:
       - Informationspflicht
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DutyToInform
@@ -331,7 +345,7 @@ classes:
       dpv_extension_slug: legal/de/gdng
 
   FederalStateCentresForCancerRegistryData:
-    is_a: HealthDataHolder
+    is_a: LegalDeGdngHealthDataHolder
     class_uri: legal_de_gdng:FederalStateCentresForCancerRegistryData
     description: |-
       Die klinischen Krebsregister der Länder nach § 65c des Fünften Buches
@@ -339,6 +353,7 @@ classes:
     aliases:
       - klinische Krebsregister der Länder
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:FederalStateCentresForCancerRegistryData
@@ -357,6 +372,7 @@ classes:
     aliases:
       - Zentrum für Krebsregisterdaten beim Robert-Koch-Institut
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:GermanCentreForCancerRegistryData
@@ -378,6 +394,7 @@ classes:
     aliases:
       - Gesundheits- und Versorgungsforschungsvorhaben
     in_subset:
+      - legal_de_gdng_basic-definitions_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:HealthAndHealthcareResearchProject
@@ -386,42 +403,6 @@ classes:
       dct_source: '[[GDNG]] § 2 point 6'
       upstream_iri: |-
         https://w3id.org/dpv/legal/de/gdng/owl#HealthAndHealthcareResearchProject
-      dpv_extension_slug: legal/de/gdng
-
-  HealthData:
-    class_uri: legal_de_gdng:HealthData
-    description: |-
-      Gesundheitdaten nach GDNG sind Gesundheitsdaten im Sinne des Artikels 4
-      Nummer 15 der DSGVO [[GDPR]], einschl. Gesundheitsdaten, die zugleich
-      Sozialdaten nach § 67 des Zehnten Buches Sozialgesetzbuch sind
-    aliases:
-      - Gesundheitsdaten
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:HealthData
-      - dpv_legal_de_gdng_owl:HealthData
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 1'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthData
-      dpv_extension_slug: legal/de/gdng
-
-  HealthDataAccessApplication:
-    class_uri: legal_de_gdng:HealthDataAccessApplication
-    description: |-
-      Prozess zur Beantragung von Zugang zu Gesundheitsdaten bei
-      datenhaltenden Stellen durch Datennutzende, der durch die DACO
-      unterstützt und koordiniert wird
-    aliases:
-      - Antrag auf Zugang zu Gesundheitsdaten
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:HealthDataAccessApplication
-      - dpv_legal_de_gdng_owl:HealthDataAccessApplication
-    annotations:
-      dct_source: '4'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataAccessApplication
       dpv_extension_slug: legal/de/gdng
 
   HealthDataAccessApplicationRecord:
@@ -433,6 +414,7 @@ classes:
     aliases:
       - Gesundheitsdatenzugangsantragsdaten
     in_subset:
+      - legal_de_gdng_query-and-access_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:HealthDataAccessApplicationRecord
@@ -441,23 +423,6 @@ classes:
       dct_source: '4'
       upstream_iri: |-
         https://w3id.org/dpv/legal/de/gdng/owl#HealthDataAccessApplicationRecord
-      dpv_extension_slug: legal/de/gdng
-
-  HealthDataHolder:
-    class_uri: legal_de_gdng:HealthDataHolder
-    description: |-
-      Natürliche oder juristische Personen, die berechtigt oder verpflichtet
-      sind, Gesundheitsdaten für Forschungszwecke zu verarbeiten
-    aliases:
-      - Datenhaltende Stelle
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:HealthDataHolder
-      - dpv_legal_de_gdng_owl:HealthDataHolder
-    annotations:
-      dct_source: '[[GDNG]] § 2(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataHolder
       dpv_extension_slug: legal/de/gdng
 
   HealthDataLab:
@@ -469,6 +434,7 @@ classes:
     aliases:
       - Forschungsdatenzentrum Gesundheit
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:HealthDataLab
@@ -486,6 +452,7 @@ classes:
     aliases:
       - Identifizierung und Lokalisierung von Gesundheitsdaten
     in_subset:
+      - legal_de_gdng_query-and-access_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:HealthDataQuery
@@ -503,6 +470,7 @@ classes:
     aliases:
       - Gesundheitsdatenanfragedaten
     in_subset:
+      - legal_de_gdng_query-and-access_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:HealthDataQueryRecord
@@ -510,23 +478,6 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 3(2) point 2'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataQueryRecord
-      dpv_extension_slug: legal/de/gdng
-
-  HealthDataUser:
-    class_uri: legal_de_gdng:HealthDataUser
-    description: |-
-      Natürliche und juristische Personen, die Zugang zu Gesundheitsdaten zu
-      Forschungszwecken und weiteren Zwecken begehren oder erhalten haben
-    aliases:
-      - Datennutzende
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:HealthDataUser
-      - dpv_legal_de_gdng_owl:HealthDataUser
-    annotations:
-      dct_source: '[[GDNG]] § 2'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataUser
       dpv_extension_slug: legal/de/gdng
 
   HealthcareDataProcessing:
@@ -537,6 +488,7 @@ classes:
     aliases:
       - Weiterverarbeitung von Versorgungsdaten nach § 6 GDNG
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:HealthcareDataProcessing
@@ -552,6 +504,7 @@ classes:
       - Controller
       - Datenschutzrechtlich verantwortliche Stelle
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:Controller
@@ -567,6 +520,7 @@ classes:
       - DataSubject
       - Betroffene Person
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:DataSubject
@@ -576,12 +530,91 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DataSubject
       dpv_extension_slug: legal/de/gdng
 
+  LegalDeGdngHealthData:
+    class_uri: legal_de_gdng:HealthData
+    description: |-
+      Gesundheitdaten nach GDNG sind Gesundheitsdaten im Sinne des Artikels 4
+      Nummer 15 der DSGVO [[GDPR]], einschl. Gesundheitsdaten, die zugleich
+      Sozialdaten nach § 67 des Zehnten Buches Sozialgesetzbuch sind
+    aliases:
+      - HealthData
+      - Gesundheitsdaten
+    in_subset:
+      - legal_de_gdng_basic-definitions_subset
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:HealthData
+      - dpv_legal_de_gdng_owl:HealthData
+    annotations:
+      dct_source: '[[GDNG]] § 2 point 1'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthData
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngHealthDataAccessApplication:
+    class_uri: legal_de_gdng:HealthDataAccessApplication
+    description: |-
+      Prozess zur Beantragung von Zugang zu Gesundheitsdaten bei
+      datenhaltenden Stellen durch Datennutzende, der durch die DACO
+      unterstützt und koordiniert wird
+    aliases:
+      - HealthDataAccessApplication
+      - Antrag auf Zugang zu Gesundheitsdaten
+    in_subset:
+      - legal_de_gdng_query-and-access_subset
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:HealthDataAccessApplication
+      - dpv_legal_de_gdng_owl:HealthDataAccessApplication
+    annotations:
+      dct_source: '4'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataAccessApplication
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngHealthDataHolder:
+    class_uri: legal_de_gdng:HealthDataHolder
+    description: |-
+      Natürliche oder juristische Personen, die berechtigt oder verpflichtet
+      sind, Gesundheitsdaten für Forschungszwecke zu verarbeiten
+    aliases:
+      - HealthDataHolder
+      - Datenhaltende Stelle
+    in_subset:
+      - legal_de_gdng_actors_subset
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:HealthDataHolder
+      - dpv_legal_de_gdng_owl:HealthDataHolder
+    annotations:
+      dct_source: '[[GDNG]] § 2(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataHolder
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngHealthDataUser:
+    class_uri: legal_de_gdng:HealthDataUser
+    description: |-
+      Natürliche und juristische Personen, die Zugang zu Gesundheitsdaten zu
+      Forschungszwecken und weiteren Zwecken begehren oder erhalten haben
+    aliases:
+      - HealthDataUser
+      - Datennutzende
+    in_subset:
+      - legal_de_gdng_actors_subset
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:HealthDataUser
+      - dpv_legal_de_gdng_owl:HealthDataUser
+    annotations:
+      dct_source: '[[GDNG]] § 2'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataUser
+      dpv_extension_slug: legal/de/gdng
+
   LegalDeGdngLegitimateInterest:
     class_uri: legal_de_gdng:LegitimateInterest
     aliases:
       - LegitimateInterest
       - Berechtigtes Interesse
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:LegitimateInterest
@@ -597,6 +630,7 @@ classes:
       - Necessity
       - Erforderlichkeit
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:Necessity
@@ -615,6 +649,7 @@ classes:
       - PersonalData
       - Personenbezogene Daten
     in_subset:
+      - legal_de_gdng_basic-definitions_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:PersonalData
@@ -633,6 +668,7 @@ classes:
       - SecondaryUse
       - Sekundärdatennutzung
     in_subset:
+      - legal_de_gdng_basic-definitions_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:SecondaryUse
@@ -653,6 +689,7 @@ classes:
       - SecureProcessingEnvironment
       - Sichere Verarbeitungsumgebung
     in_subset:
+      - legal_de_gdng_query-and-access_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:SecureProcessingEnvironment
@@ -668,6 +705,7 @@ classes:
       - ThirdParty
       - Dritte
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:ThirdParty
@@ -684,6 +722,7 @@ classes:
       - Transfer
       - Weitergabe
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:Transfer
@@ -701,6 +740,7 @@ classes:
     aliases:
       - Medizinische rehabilitative und pflegerische Forschung
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:MedicalRehabNursingResearch
@@ -721,6 +761,7 @@ classes:
     aliases:
       - Plattform des Modellvorhabens Genomsequenzierung
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:ModelProjectGenomeSequencingPlatform
@@ -752,6 +793,7 @@ classes:
         processed data shall be erased no later than after 30 years. § 14 of the
         Transplantation Act shall be observed
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:P6-1
@@ -777,6 +819,7 @@ classes:
         parties based on consent of the data subject, in compliance with all
         requirements of § 6(3) GDNG for the purposes defined in § 6(1) GDNG
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:P6-3-Consent
@@ -807,6 +850,7 @@ classes:
         networks, in compliance with all requirements of § 6(3) GDNG for the
         purposes defined in § 6(1) GDNG
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:P6-3-PublicJointResearch
@@ -832,6 +876,7 @@ classes:
         parties based on a statutory provision, in compliance with all
         requirements of § 6(3) GDNG for the purposes defined in § 6(1) GDNG
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:P6-3-Statutory
@@ -846,6 +891,7 @@ classes:
     aliases:
       - Verarbeitungs-Anforderungskonform nach § 6 (1)(2)(4) GDNG
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:ProcessingRequirementsConformance
@@ -862,6 +908,7 @@ classes:
     aliases:
       - Anonymisierung von Weiterverarbeitungsergebnissen
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:ProcessingResultsAnonymization
@@ -879,6 +926,7 @@ classes:
     aliases:
       - Förderung der Patientensicherheit
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:PromotionOfPatientSafety
@@ -896,6 +944,7 @@ classes:
     aliases:
       - Pseudonymisierung von Gesundheitsdaten
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:Pseudonymization
@@ -911,6 +960,7 @@ classes:
     aliases:
       - Pseudonymisierte Daten
     in_subset:
+      - legal_de_gdng_linkage_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:PseudonymizedData
@@ -930,6 +980,7 @@ classes:
     aliases:
       - Öffentliches Antragsregister
     in_subset:
+      - legal_de_gdng_query-and-access_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:PublicHealthDataAccessApplicationRegister
@@ -952,6 +1003,7 @@ classes:
         Öffentlich geförderte Zusammenschlüsse von datenverarbeitenden
         Gesundheitseinrichtungen
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:PublicJointHealthResearchNetwork
@@ -972,6 +1024,7 @@ classes:
     aliases:
       - Öffentlicher Metadaten-Katalog
     in_subset:
+      - legal_de_gdng_query-and-access_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:PublicMetadataCatalogue
@@ -988,6 +1041,7 @@ classes:
     aliases:
       - Qualitätssicherung
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:QualityAssurance
@@ -998,7 +1052,7 @@ classes:
       dpv_extension_slug: legal/de/gdng
 
   RegulatedHealthDataHolder:
-    is_a: HealthDataHolder
+    is_a: LegalDeGdngHealthDataHolder
     class_uri: legal_de_gdng:RegulatedHealthDataHolder
     description: |-
       Solche datenhaltenden Stellen, die gesetzlich geregelt sind, wie das
@@ -1008,6 +1062,7 @@ classes:
     aliases:
       - Gesetzlich geregelte datenhaltende Stelle
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:RegulatedHealthDataHolder
@@ -1025,6 +1080,7 @@ classes:
     aliases:
       - Forschungsvorhaben
     in_subset:
+      - legal_de_gdng_basic-definitions_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:ResearchProject
@@ -1035,7 +1091,7 @@ classes:
       dpv_extension_slug: legal/de/gdng
 
   ResponsibleDataHoldingAndMediatingBody:
-    is_a: HealthDataHolder
+    is_a: LegalDeGdngHealthDataHolder
     class_uri: legal_de_gdng:ResponsibleDataHoldingAndMediatingBody
     description: |-
       Diejenige datenhaltende und -mittelnde Stelle, die für ein konkretes
@@ -1043,6 +1099,7 @@ classes:
     aliases:
       - Zuständige datenhaltende und mittelnde Stelle
     in_subset:
+      - legal_de_gdng_actors_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:ResponsibleDataHoldingAndMediatingBody
@@ -1065,6 +1122,7 @@ classes:
     aliases:
       - Rechte- und Rollenkonzept
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:RightsRolesConcept
@@ -1082,6 +1140,7 @@ classes:
     aliases:
       - Statistische Zwecke, einschließlich Gesundheitsberichterstattung
     in_subset:
+      - legal_de_gdng_lawfulness_subset
       - legal_de_gdng_subset
     exact_mappings:
       - dpv_legal_de_gdng:Statistics

@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -87,6 +87,7 @@ classes:
       - DPA-TW
       - Personal Data Protection Commission (PDPC)
     in_subset:
+      - legal_tw_tw_subset
       - legal_tw_subset
     exact_mappings:
       - dpv_legal_tw:DPA-TW
@@ -95,13 +96,14 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/tw/owl#DPA-TW
       dpv_extension_slug: legal/tw
 
-  lawPDPA:
+  LegalTwlawPDPA:
     is_a: Law
     class_uri: legal_tw:law-PDPA
     aliases:
       - law-PDPA
       - Personal Data Protection Act (PDPA)
     in_subset:
+      - legal_tw_tw_subset
       - legal_tw_subset
     exact_mappings:
       - dpv_legal_tw:law-PDPA

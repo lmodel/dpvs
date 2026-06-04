@@ -24,27 +24,19 @@ Usage::
 from __future__ import annotations
 
 import argparse
-import re
 import sys
 from pathlib import Path
 
-import yaml
 from rdflib import Graph, Namespace
 from rdflib.namespace import DCTERMS, RDFS
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _common import to_pascal, write_if_changed, yaml_dump_indented  # noqa: E402
 
 DPV_27560_NS = "https://w3id.org/dpv/schema/dpv-27560#"
 LMODEL_NS = "https://w3id.org/lmodel/dpv-27560/"
 
 DPV_27560 = Namespace(DPV_27560_NS)
-
-
-def to_pascal(local: str) -> str:
-    """Convert a kebab/snake-case local name to PascalCase NCName.
-
-    ``record`` -> ``Record``; ``record-eu-gdpr`` -> ``RecordEuGdpr``.
-    """
-    parts = re.split(r"[^A-Za-z0-9]+", local)
-    return "".join(p[:1].upper() + p[1:] for p in parts if p)
 
 
 def build_schema(graph: Graph) -> dict:
@@ -66,7 +58,7 @@ def build_schema(graph: Graph) -> dict:
             "description": title,
             "aliases": [local],
             # Upstream W3C IRI recorded as a mapping target, never identity.
-            "exact_mappings": [f"dpv_27560:{local}"],
+            "exact_mappings": [f"dpv_27560_upstream:{local}"],
         }
         classes[name] = cls
 
@@ -90,7 +82,7 @@ def build_schema(graph: Graph) -> dict:
             # Identity (we own).
             "dpv_27560": LMODEL_NS,
             # Upstream identities - mapping targets only.
-            "dpv_27560": DPV_27560_NS,
+            "dpv_27560_upstream": DPV_27560_NS,
             "dpv": "https://w3id.org/dpv#",
             "linkml": "https://w3id.org/linkml/",
             "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -104,21 +96,7 @@ def build_schema(graph: Graph) -> dict:
 
 
 def dump_yaml(schema: dict) -> str:
-    return yaml.safe_dump(
-        schema,
-        sort_keys=False,
-        default_flow_style=False,
-        allow_unicode=True,
-        width=100,
-    )
-
-
-def write_if_changed(path: Path, content: str) -> bool:
-    if path.exists() and path.read_text() == content:
-        return False
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content)
-    return True
+    return yaml_dump_indented(schema, sort_keys=False, width=100)
 
 
 def main() -> None:

@@ -4,9 +4,9 @@ title: DPV - Legal - De
 description: |-
   LinkML schema generated from the DPV 2.3 extension `legal/de`
   (`legal-de-owl.ttl`), enriched with canonical SKOS metadata. Imports the
-  semantic-group schema(s) `dpv:schema/dpv_legal_basis`,
-  `dpv:schema/dpv_entities` for the abstract parent classes this extension
-  specialises (instead of the full umbrella `dpv:schema/dpv`).
+  semantic-group schema(s) `dpv:schema/dpv_legal_basis` for the abstract
+  parent classes this extension specialises (instead of the full umbrella
+  `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/legal/de
@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -69,7 +69,6 @@ id_prefixes:
 imports:
   - linkml:types
   - dpv:schema/dpv_legal_basis
-  - dpv:schema/dpv_entities
   - dpv:schema/extensions/legal/eu/gdpr
 
 subsets:
@@ -83,7 +82,7 @@ subsets:
 classes:
 
   DPADE:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE
@@ -92,6 +91,7 @@ classes:
       - |-
         The Federal Commissioner for Data Protection and Freedom of Information
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE
@@ -101,7 +101,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEBB:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-BB
@@ -111,6 +111,7 @@ classes:
         The state representative for data protection and the right to inspect
         files in Brandenburg
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-BB
@@ -120,7 +121,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEBE:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-BE
@@ -128,6 +129,7 @@ classes:
       - DPA-DE-BE
       - Berlin Commissioner for Data Protection and Freedom of Information
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-BE
@@ -137,7 +139,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEBYnonpublic:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-BY-non-public
@@ -145,6 +147,7 @@ classes:
       - DPA-DE-BY-non-public
       - Bavarian State Office for Data Protection Supervision
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-BY-non-public
@@ -154,7 +157,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEBYpublic:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-BY-public
@@ -162,6 +165,7 @@ classes:
       - DPA-DE-BY-public
       - The Bavarian State Commissioner for Data Protection
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-BY-public
@@ -171,7 +175,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEHB:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-HB
@@ -181,6 +185,7 @@ classes:
         The State Commissioner for Data Protection and Freedom of Information of
         the Free Hanseatic City of Bremen
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-HB
@@ -190,7 +195,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEHE:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-HE
@@ -199,6 +204,7 @@ classes:
       - |-
         The Hessian Commissioner for Data Protection and Freedom of Information
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-HE
@@ -208,7 +214,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEHH:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-HH
@@ -217,6 +223,7 @@ classes:
       - |-
         The Hamburg Commissioner for Data Protection and Freedom of Information
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-HH
@@ -226,7 +233,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEMV:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-MV
@@ -236,6 +243,7 @@ classes:
         The State Commissioner for Data Protection and Freedom of Information
         Mecklenburg-West Pomerania
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-MV
@@ -245,7 +253,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADENI:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-NI
@@ -253,6 +261,7 @@ classes:
       - DPA-DE-NI
       - The State Commissioner for Data Protection Lower Saxony
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-NI
@@ -262,7 +271,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADENW:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-NW
@@ -272,6 +281,7 @@ classes:
         State Commissioner for Data Protection and Freedom of Information North
         Rhine-Westphalia
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-NW
@@ -281,7 +291,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADERP:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-RP
@@ -291,6 +301,7 @@ classes:
         The state commissioner for data protection and freedom of information in
         Rhineland-Palatinate
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-RP
@@ -300,7 +311,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADESH:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-SH
@@ -308,6 +319,7 @@ classes:
       - DPA-DE-SH
       - Independent State Center for Data Protection Schleswig-Holstein
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-SH
@@ -317,7 +329,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADESL:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-SL
@@ -327,6 +339,7 @@ classes:
         Independent Data Protection Center Saarland - State Commissioner for
         Data Protection and Freedom of Information
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-SL
@@ -336,7 +349,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADESN:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-SN
@@ -344,6 +357,7 @@ classes:
       - DPA-DE-SN
       - The Saxon data protection officer
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-SN
@@ -353,7 +367,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADEST:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-ST
@@ -361,6 +375,7 @@ classes:
       - DPA-DE-ST
       - State representative for data protection in Saxony-Anhalt
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-ST
@@ -370,7 +385,7 @@ classes:
       dpv_extension_slug: legal/de
 
   DPADETH:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_de:DPA-DE-TH
@@ -380,6 +395,7 @@ classes:
         Thuringia state commissioner for data protection and freedom of
         information
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:DPA-DE-TH
@@ -395,6 +411,7 @@ classes:
       - law-BDSG
       - Federal Data Protection Act (BDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-BDSG
@@ -410,6 +427,7 @@ classes:
       - law-BE-BbgDSG
       - Brandenburg Data Protection Act (BbgDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-BE-BbgDSG
@@ -425,6 +443,7 @@ classes:
       - law-BE-BlnDSG
       - Berlin Data Protection Act (BlnDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-BE-BlnDSG
@@ -440,6 +459,7 @@ classes:
       - law-BW-LDSG
       - State Data Protection Act (LDSG) (BW)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-BW-LDSG
@@ -455,6 +475,7 @@ classes:
       - law-BY-BayDSG
       - Bavarian Data Protection Act (BayDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-BY-BayDSG
@@ -472,6 +493,7 @@ classes:
         Bremen Implementing Act for the EU General Data Protection Regulation
         (BremDSGVOAG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-HB-BremDSGVOAG
@@ -487,6 +509,7 @@ classes:
       - law-HE-HDISG
       - Hessian Data Protection and Freedom of Information Act (HDSIG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-HE-HDISG
@@ -502,6 +525,7 @@ classes:
       - law-HH-HmbDSG
       - Hamburg Data Protection Act (HmbDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-HH-HmbDSG
@@ -519,6 +543,7 @@ classes:
         Law on the protection of personal data of citizens (Saxony-Anhalt Data
         Protection Act - DSG LSA)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-LSA-DSG
@@ -538,6 +563,7 @@ classes:
         Interior and Europe Mecklenburg-West Pomerania to Regulation (EU)
         2016/679 and to implement Directive (EU) 2016/680
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-MV-DSG
@@ -553,6 +579,7 @@ classes:
       - law-NI-NDSG
       - Lower Saxony Data Protection Act (NDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-NI-NDSG
@@ -568,6 +595,7 @@ classes:
       - law-NW-DSG
       - North Rhine-Westphalia Data Protection Act (DSG NRW)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-NW-DSG
@@ -583,6 +611,7 @@ classes:
       - law-RP-LDSG
       - State Data Protection Act (LDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-RP-LDSG
@@ -600,6 +629,7 @@ classes:
         Schleswig-Holstein law for the protection of personal data (state data
         protection law - LDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-SH-LDSG
@@ -615,6 +645,7 @@ classes:
       - law-SL-SDSG
       - Saarland Data Protection Act
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-SL-SDSG
@@ -632,6 +663,7 @@ classes:
         Law for the Protection of Informational Self-Determination in the Free
         State of Saxony (Saxon Data Protection Act - SächsDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-SN-SachsDSG
@@ -647,6 +679,7 @@ classes:
       - law-TH-ThürDSG
       - Thuringian Data Protection Act (ThürDSG)
     in_subset:
+      - legal_de_de_subset
       - legal_de_subset
     exact_mappings:
       - dpv_legal_de:law-TH-ThurDSG

@@ -7,8 +7,8 @@ description: |-
   dependencies (risk, notice) rather than all 965 DPV classes.
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -34,7 +34,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -48,8 +48,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv_common
+- linkml:types
+- dpv:schema/dpv_common
 
 subsets:
 
@@ -60,17 +60,18 @@ slots:
 
   has_consequence:
     definition_uri: dpv:hasConsequence
-    description: Indicates consequence(s) possible or arising from specified concept
+    description: Indicates consequence(s) possible or arising from specified 
+      concept
     aliases:
-      - has consequence
+    - has consequence
     comments:
-      - Removed plural suffix for consistency
+    - Removed plural suffix for consistency
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasConsequence
-      - dpv_owl:hasConsequence
+    - dpv_upstream:hasConsequence
+    - dpv_owl:hasConsequence
     annotations:
       skos_in_scheme: risk-properties
 
@@ -80,13 +81,13 @@ slots:
       Indicates the thing (e.g. plan, process, or entity) affected by a
       consequence
     aliases:
-      - has consequence on
+    - has consequence on
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasConsequenceOn
-      - dpv_owl:hasConsequenceOn
+    - dpv_upstream:hasConsequenceOn
+    - dpv_owl:hasConsequenceOn
     annotations:
       skos_in_scheme: risk-properties
 
@@ -97,28 +98,29 @@ slots:
       Indicates impact(s) possible or arising as consequences from specified
       concept
     aliases:
-      - has impact
+    - has impact
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasImpact
-      - dpv_owl:hasImpact
+    - dpv_upstream:hasImpact
+    - dpv_owl:hasImpact
     annotations:
       skos_in_scheme: risk-properties
 
   has_impact_assessment:
     is_a: has_assessment
     definition_uri: dpv:hasImpactAssessment
-    description: Indicates an impact assessment associated with the specific context
+    description: Indicates an impact assessment associated with the specific 
+      context
     aliases:
-      - has impact assessment
+    - has impact assessment
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasImpactAssessment
-      - dpv_owl:hasImpactAssessment
+    - dpv_upstream:hasImpactAssessment
+    - dpv_owl:hasImpactAssessment
     annotations:
       skos_in_scheme: risk-properties
 
@@ -129,13 +131,13 @@ slots:
       Indicates the thing (e.g. plan, process, or entity) affected by an
       impact
     aliases:
-      - has impact on
+    - has impact on
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasImpactOn
-      - dpv_owl:hasImpactOn
+    - dpv_upstream:hasImpactOn
+    - dpv_owl:hasImpactOn
     annotations:
       skos_in_scheme: risk-properties
 
@@ -143,13 +145,13 @@ slots:
     definition_uri: dpv:hasLikelihood
     description: Indicates the likelihood associated with a concept
     aliases:
-      - has likelihood
+    - has likelihood
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasLikelihood
-      - dpv_owl:hasLikelihood
+    - dpv_upstream:hasLikelihood
+    - dpv_owl:hasLikelihood
     annotations:
       skos_in_scheme: risk-properties
 
@@ -159,13 +161,13 @@ slots:
     description: |-
       Indicates the use or applicability of a Notice for the specified context
     aliases:
-      - has notice
+    - has notice
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasNotice
-      - dpv_owl:hasNotice
+    - dpv_upstream:hasNotice
+    - dpv_owl:hasNotice
     annotations:
       skos_in_scheme: notice-properties
 
@@ -175,13 +177,13 @@ slots:
       Indicates the concept can be represented graphically using the specified
       icon
     aliases:
-      - has notice icon
+    - has notice icon
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasNoticeIcon
-      - dpv_owl:hasNoticeIcon
+    - dpv_upstream:hasNoticeIcon
+    - dpv_owl:hasNoticeIcon
     annotations:
       skos_in_scheme: notice-properties
 
@@ -191,13 +193,13 @@ slots:
       Indicates the use of a notice layer within a notice or to associate a
       layer with another layer
     aliases:
-      - has notice layer
+    - has notice layer
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasNoticeLayer
-      - dpv_owl:hasNoticeLayer
+    - dpv_upstream:hasNoticeLayer
+    - dpv_owl:hasNoticeLayer
     annotations:
       skos_in_scheme: notice-properties
 
@@ -205,13 +207,13 @@ slots:
     definition_uri: dpv:hasNoticeStatus
     description: Indicates the status of the associated notice
     aliases:
-      - has notice status
+    - has notice status
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasNoticeStatus
-      - dpv_owl:hasNoticeStatus
+    - dpv_upstream:hasNoticeStatus
+    - dpv_owl:hasNoticeStatus
     annotations:
       skos_in_scheme: notice-properties
 
@@ -221,13 +223,13 @@ slots:
       Indicates the associated risk is the remaining or residual risk from
       applying mitigation measures or treatments to this risk
     aliases:
-      - has residual risk
+    - has residual risk
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasResidualRisk
-      - dpv_owl:hasResidualRisk
+    - dpv_upstream:hasResidualRisk
+    - dpv_owl:hasResidualRisk
     annotations:
       skos_in_scheme: risk-properties
 
@@ -235,13 +237,13 @@ slots:
     definition_uri: dpv:hasRisk
     description: Indicates applicability of Risk for this concept
     aliases:
-      - has risk
+    - has risk
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasRisk
-      - dpv_owl:hasRisk
+    - dpv_upstream:hasRisk
+    - dpv_owl:hasRisk
     annotations:
       skos_in_scheme: risk-properties
 
@@ -250,13 +252,13 @@ slots:
     definition_uri: dpv:hasRiskAssessment
     description: Indicates an associated risk assessment
     aliases:
-      - has risk assessment
+    - has risk assessment
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasRiskAssessment
-      - dpv_owl:hasRiskAssessment
+    - dpv_upstream:hasRiskAssessment
+    - dpv_owl:hasRiskAssessment
     annotations:
       skos_in_scheme: risk-properties
 
@@ -264,13 +266,13 @@ slots:
     definition_uri: dpv:hasRiskLevel
     description: Indicates the associated risk level associated with a risk
     aliases:
-      - has risk level
+    - has risk level
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasRiskLevel
-      - dpv_owl:hasRiskLevel
+    - dpv_upstream:hasRiskLevel
+    - dpv_owl:hasRiskLevel
     annotations:
       skos_in_scheme: risk-properties
 
@@ -278,13 +280,13 @@ slots:
     definition_uri: dpv:hasSensitivityLevel
     description: Indicates the associated level of sensitivity
     aliases:
-      - has sensitivity level
+    - has sensitivity level
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasSensitivityLevel
-      - dpv_owl:hasSensitivityLevel
+    - dpv_upstream:hasSensitivityLevel
+    - dpv_owl:hasSensitivityLevel
     annotations:
       skos_in_scheme: risk-properties
 
@@ -292,13 +294,13 @@ slots:
     definition_uri: dpv:hasSeverity
     description: Indicates the severity associated with a concept
     aliases:
-      - has severity
+    - has severity
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:hasSeverity
-      - dpv_owl:hasSeverity
+    - dpv_upstream:hasSeverity
+    - dpv_owl:hasSeverity
     annotations:
       skos_in_scheme: risk-properties
 
@@ -307,13 +309,13 @@ slots:
     definition_uri: dpv:isMitigatedByMeasure
     description: Indicate a risk is mitigated by specified measure
     aliases:
-      - is mitigated by measure
+    - is mitigated by measure
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:isMitigatedByMeasure
-      - dpv_owl:isMitigatedByMeasure
+    - dpv_upstream:isMitigatedByMeasure
+    - dpv_owl:isMitigatedByMeasure
     annotations:
       skos_in_scheme: risk-properties
 
@@ -323,13 +325,13 @@ slots:
       Indicates this risk is the remaining or residual risk from applying
       mitigation measures or treatments to specified risk
     aliases:
-      - is residual risk of
+    - is residual risk of
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:isResidualRiskOf
-      - dpv_owl:isResidualRiskOf
+    - dpv_upstream:isResidualRiskOf
+    - dpv_owl:isResidualRiskOf
     annotations:
       skos_in_scheme: risk-properties
 
@@ -337,13 +339,13 @@ slots:
     definition_uri: dpv:mitigatesRisk
     description: Indicates risks mitigated by this concept
     aliases:
-      - mitigates risk
+    - mitigates risk
     multivalued: true
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:mitigatesRisk
-      - dpv_owl:mitigatesRisk
+    - dpv_upstream:mitigatesRisk
+    - dpv_owl:mitigatesRisk
     annotations:
       skos_in_scheme: risk-properties
 
@@ -352,16 +354,16 @@ classes:
   ConsentNotice:
     is_a: PrivacyNotice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:ConsentNotice
     description: A Notice for information provision associated with Consent
     aliases:
-      - Consent Notice
+    - Consent Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:ConsentNotice
-      - dpv_owl:ConsentNotice
+    - dpv_upstream:ConsentNotice
+    - dpv_owl:ConsentNotice
     annotations:
       skos_in_scheme: notice-classes, organisational-measures-classes
 
@@ -370,12 +372,12 @@ classes:
     class_uri: dpv:Consequence
     description: The consequence(s) possible or arising from specified context
     aliases:
-      - Consequence
+    - Consequence
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:Consequence
-      - dpv_owl:Consequence
+    - dpv_upstream:Consequence
+    - dpv_owl:Consequence
     annotations:
       skos_in_scheme: risk-classes
 
@@ -386,12 +388,12 @@ classes:
       The consequence(s) possible or arising as a side-effect of specified
       context
     aliases:
-      - Consequence as Side-Effect
+    - Consequence as Side-Effect
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:ConsequenceAsSideEffect
-      - dpv_owl:ConsequenceAsSideEffect
+    - dpv_upstream:ConsequenceAsSideEffect
+    - dpv_owl:ConsequenceAsSideEffect
     annotations:
       skos_in_scheme: risk-classes
 
@@ -401,12 +403,12 @@ classes:
     description: |-
       The consequence(s) possible or arising from failure of specified context
     aliases:
-      - Consequence of Failure
+    - Consequence of Failure
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:ConsequenceOfFailure
-      - dpv_owl:ConsequenceOfFailure
+    - dpv_upstream:ConsequenceOfFailure
+    - dpv_owl:ConsequenceOfFailure
     annotations:
       skos_in_scheme: risk-classes
 
@@ -416,52 +418,52 @@ classes:
     description: |-
       The consequence(s) possible or arising from success of specified context
     aliases:
-      - Consequence of Success
+    - Consequence of Success
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:ConsequenceOfSuccess
-      - dpv_owl:ConsequenceOfSuccess
+    - dpv_upstream:ConsequenceOfSuccess
+    - dpv_owl:ConsequenceOfSuccess
     annotations:
       skos_in_scheme: risk-classes
 
   CybersecurityAssessment:
     is_a: SecurityAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:CybersecurityAssessment
     description: |-
       Assessment of cybersecurity capabilities in terms of vulnerabilities and
       effectiveness of controls
     aliases:
-      - Cybersecurity Assessment
+    - Cybersecurity Assessment
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:CybersecurityAssessment
-      - dpv_owl:CybersecurityAssessment
+    - dpv_upstream:CybersecurityAssessment
+    - dpv_owl:CybersecurityAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   DPIA:
     is_a: RightsImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DPIA
     description: |-
       Impact assessment determining the potential and actual impact of
       processing activities on individuals or groups of individuals and taking
       into account the impacts of activities on their rights and freedoms
     aliases:
-      - Data Protection Impact Assessment (DPIA)
+    - Data Protection Impact Assessment (DPIA)
     comments:
-      - |-
-        Specific requirements and procedures for DPIA are defined in GDPR Art.35
+    - |-
+      Specific requirements and procedures for DPIA are defined in GDPR Art.35
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DPIA
-      - dpv_owl:DPIA
+    - dpv_upstream:DPIA
+    - dpv_owl:DPIA
     annotations:
       skos_in_scheme: risk-classes
       dct_source: GDPR Art. 35
@@ -469,58 +471,58 @@ classes:
   DashboardNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DashboardNotice
     description: |-
       A notice that is provided within a dashboard also used for other
       purposes
     aliases:
-      - Dashboard Notice
+    - Dashboard Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DashboardNotice
-      - dpv_owl:DashboardNotice
+    - dpv_upstream:DashboardNotice
+    - dpv_owl:DashboardNotice
     annotations:
       skos_in_scheme: notice-classes
 
   DataBreachImpactAssessment:
     is_a: RightsImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DataBreachImpactAssessment
     description: |-
       Impact Assessment concerning the consequences and impacts of a data
       breach
     aliases:
-      - Data Breach Impact Assessment (DBIA)
+    - Data Breach Impact Assessment (DBIA)
     comments:
-      - |-
-        Data Breach assessments can require additional non-security related
-        assessments such as GDPR Art.34 Rights Impact Assessment
+    - |-
+      Data Breach assessments can require additional non-security related
+      assessments such as GDPR Art.34 Rights Impact Assessment
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DataBreachImpactAssessment
-      - dpv_owl:DataBreachImpactAssessment
+    - dpv_upstream:DataBreachImpactAssessment
+    - dpv_owl:DataBreachImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   DataBreachNotice:
     is_a: SecurityIncidentNotice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DataBreachNotice
     description: |-
       A notice providing information about data breach(es) i.e. unauthorised
       transfer, access, use, or modification of data
     aliases:
-      - Data Breach Notice
+    - Data Breach Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DataBreachNotice
-      - dpv_owl:DataBreachNotice
+    - dpv_upstream:DataBreachNotice
+    - dpv_owl:DataBreachNotice
     annotations:
       skos_in_scheme: notice-classes, organisational-measures-classes
       dct_source: ' DGA 21.5 GDPR 33'
@@ -528,32 +530,32 @@ classes:
   DataTransferImpactAssessment:
     is_a: ImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DataTransferImpactAssessment
     description: Impact Assessment for conducting data transfers
     aliases:
-      - Data Transfer Impact Assessment
+    - Data Transfer Impact Assessment
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DataTransferImpactAssessment
-      - dpv_owl:DataTransferImpactAssessment
+    - dpv_upstream:DataTransferImpactAssessment
+    - dpv_owl:DataTransferImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   DataTransferNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DataTransferNotice
     description: Notice for the legal entity for the transfer of its data
     aliases:
-      - Data Transfer Notice
+    - Data Transfer Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DataTransferNotice
-      - dpv_owl:DataTransferNotice
+    - dpv_upstream:DataTransferNotice
+    - dpv_owl:DataTransferNotice
     annotations:
       skos_in_scheme: notice-classes, organisational-measures-classes
       dct_source: DGA 5.9
@@ -561,41 +563,41 @@ classes:
   DeviceNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DeviceNotice
     description: |-
       A notice provided using the functionality provided by a device e.g.
       using the popup or alert feature
     aliases:
-      - Device Notice
+    - Device Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:DeviceNotice
-      - dpv_owl:DeviceNotice
+    - dpv_upstream:DeviceNotice
+    - dpv_owl:DeviceNotice
     annotations:
       skos_in_scheme: notice-classes
 
   FRIA:
     is_a: RightsImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:FRIA
     description: |-
       Impact assessment which assesses the potential and actual impact on
       fundamental rights occurring due to processing activities
     aliases:
-      - Fundamental Rights Impact Assessment (FRIA)
+    - Fundamental Rights Impact Assessment (FRIA)
     comments:
-      - |-
-        The fundamental rights and freedoms may be those defined in law or other
-        norms, and may be bound to a jurisdiction - for example see EU Charter
-        of Fundamental Rights
+    - |-
+      The fundamental rights and freedoms may be those defined in law or other
+      norms, and may be bound to a jurisdiction - for example see EU Charter
+      of Fundamental Rights
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:FRIA
-      - dpv_owl:FRIA
+    - dpv_upstream:FRIA
+    - dpv_owl:FRIA
     annotations:
       skos_in_scheme: risk-classes
       dct_source: AI Act Art.27
@@ -603,16 +605,17 @@ classes:
   GraphicalNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:GraphicalNotice
-    description: A notice that uses graphical elements such as visualisations and icons
+    description: A notice that uses graphical elements such as visualisations 
+      and icons
     aliases:
-      - Graphical Notice
+    - Graphical Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:GraphicalNotice
-      - dpv_owl:GraphicalNotice
+    - dpv_upstream:GraphicalNotice
+    - dpv_owl:GraphicalNotice
     annotations:
       skos_in_scheme: notice-classes
 
@@ -623,72 +626,72 @@ classes:
       The impact(s) possible or arising as a consequence from specified
       context
     aliases:
-      - Impact
+    - Impact
     comments:
-      - |-
-        Impact is a stronger notion of consequence in terms of influence,
-        change, or effect on something e.g. for impact assessments
+    - |-
+      Impact is a stronger notion of consequence in terms of influence,
+      change, or effect on something e.g. for impact assessments
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:Impact
-      - dpv_owl:Impact
+    - dpv_upstream:Impact
+    - dpv_owl:Impact
     annotations:
       skos_in_scheme: risk-classes
 
   ImpactAssessment:
     is_a: RiskAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:ImpactAssessment
     description: |-
       Calculating or determining the likelihood of impact of an existing or
       proposed process, which can involve risks or detriments.
     aliases:
-      - Impact Assessment
+    - Impact Assessment
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:ImpactAssessment
-      - dpv_owl:ImpactAssessment
-    close_mappings:
-      - iso42001:AISystemImpactAssessment
-    related_mappings:
-      - nist_ai_rmf:Impact
+    - dpv_upstream:ImpactAssessment
+    - dpv_owl:ImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso42001:AISystemImpactAssessment
+    related_mappings:
+    - nist_ai_rmf:Impact
   JITNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:JITNotice
     description: |-
       A notice that is provided "just in time" when collecting information or
       performing an activity
     aliases:
-      - Just-in-time Notice
+    - Just-in-time Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:JITNotice
-      - dpv_owl:JITNotice
+    - dpv_upstream:JITNotice
+    - dpv_owl:JITNotice
     annotations:
       skos_in_scheme: notice-classes
 
   LayeredNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:LayeredNotice
     description: A notice that contains layered elements
     aliases:
-      - Layered Notice
+    - Layered Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:LayeredNotice
-      - dpv_owl:LayeredNotice
+    - dpv_upstream:LayeredNotice
+    - dpv_owl:LayeredNotice
     annotations:
       skos_in_scheme: notice-classes
 
@@ -699,20 +702,20 @@ classes:
       The likelihood or probability or chance of something taking place or
       occurring
     aliases:
-      - Likelihood
+    - Likelihood
     comments:
-      - |-
-        Likelihood can be expressed in a subjective manner, such as 'Unlikely',
-        or in a quantitative manner such as "Twice in a Day" (frequency per
-        period). The suggestion is to use quantitative values, or to associate
-        them with subjective terms used so as to enable accurate interpretations
-        and interoperability. See the concepts related to Frequency and Duration
-        for possible uses as a combination to express Likelihood.
+    - |-
+      Likelihood can be expressed in a subjective manner, such as 'Unlikely',
+      or in a quantitative manner such as "Twice in a Day" (frequency per
+      period). The suggestion is to use quantitative values, or to associate
+      them with subjective terms used so as to enable accurate interpretations
+      and interoperability. See the concepts related to Frequency and Duration
+      for possible uses as a combination to express Likelihood.
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:Likelihood
-      - dpv_owl:Likelihood
+    - dpv_upstream:Likelihood
+    - dpv_owl:Likelihood
     annotations:
       skos_in_scheme: risk-classes
 
@@ -722,20 +725,20 @@ classes:
     description: |-
       A notice is an artefact for providing information, choices, or controls
     aliases:
-      - Notice
+    - Notice
     comments:
-      - |-
-        Notice refers to the information whereas Notification refers to the
-        provision of that notice. In several cases, they are used
-        interchangeably - for example Privacy Notice as a measure or control
-        refers to both the information as well as the act of making it
-        available. For 'active' contexts where this distinction is important,
-        e.g. data breach notifications, see Notification concept.
+    - |-
+      Notice refers to the information whereas Notification refers to the
+      provision of that notice. In several cases, they are used
+      interchangeably - for example Privacy Notice as a measure or control
+      refers to both the information as well as the act of making it
+      available. For 'active' contexts where this distinction is important,
+      e.g. data breach notifications, see Notification concept.
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:Notice
-      - dpv_owl:Notice
+    - dpv_upstream:Notice
+    - dpv_owl:Notice
     annotations:
       skos_in_scheme: notice-classes, organisational-measures-classes
 
@@ -744,12 +747,12 @@ classes:
     class_uri: dpv:NoticeCommunicated
     description: Status indicating the notice has been communicated
     aliases:
-      - Notice Communicated
+    - Notice Communicated
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeCommunicated
-      - dpv_owl:NoticeCommunicated
+    - dpv_upstream:NoticeCommunicated
+    - dpv_owl:NoticeCommunicated
     annotations:
       skos_in_scheme: notice-classes
 
@@ -758,12 +761,12 @@ classes:
     class_uri: dpv:NoticeGenerated
     description: Status indicating the notice has been generated
     aliases:
-      - Notice Generated
+    - Notice Generated
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeGenerated
-      - dpv_owl:NoticeGenerated
+    - dpv_upstream:NoticeGenerated
+    - dpv_owl:NoticeGenerated
     annotations:
       skos_in_scheme: notice-classes
 
@@ -773,26 +776,27 @@ classes:
     description: |-
       An icon within a notice associated with specific information or elements
     aliases:
-      - Notice Icon
+    - Notice Icon
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeIcon
-      - dpv_owl:NoticeIcon
+    - dpv_upstream:NoticeIcon
+    - dpv_owl:NoticeIcon
     annotations:
       skos_in_scheme: notice-classes
 
   NoticeLatest:
     is_a: NoticeStatus
     class_uri: dpv:NoticeLatest
-    description: Status indicating the notice is currently at its latest iteration
+    description: Status indicating the notice is currently at its latest 
+      iteration
     aliases:
-      - Notice Latest
+    - Notice Latest
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeLatest
-      - dpv_owl:NoticeLatest
+    - dpv_upstream:NoticeLatest
+    - dpv_owl:NoticeLatest
     annotations:
       skos_in_scheme: notice-classes
 
@@ -803,12 +807,12 @@ classes:
       A layer within a layered notice where the layer can be used for
       providing specific information or controls
     aliases:
-      - Notice Layer
+    - Notice Layer
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeLayer
-      - dpv_owl:NoticeLayer
+    - dpv_upstream:NoticeLayer
+    - dpv_owl:NoticeLayer
     annotations:
       skos_in_scheme: notice-classes
 
@@ -819,12 +823,12 @@ classes:
       Status indicating the notice is stale or not up to date or not the
       latest version
     aliases:
-      - Notice Stale
+    - Notice Stale
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeStale
-      - dpv_owl:NoticeStale
+    - dpv_upstream:NoticeStale
+    - dpv_owl:NoticeStale
     annotations:
       skos_in_scheme: notice-classes
 
@@ -833,12 +837,12 @@ classes:
     class_uri: dpv:NoticeStatus
     description: Status associated with notice provision, use, and management
     aliases:
-      - Notice Status
+    - Notice Status
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeStatus
-      - dpv_owl:NoticeStatus
+    - dpv_upstream:NoticeStatus
+    - dpv_owl:NoticeStatus
     annotations:
       skos_in_scheme: notice-classes
 
@@ -850,12 +854,12 @@ classes:
       used e.g. the recipient has not acknowledged it or has not taken the
       intended action
     aliases:
-      - Notice Unused
+    - Notice Unused
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeUnused
-      - dpv_owl:NoticeUnused
+    - dpv_upstream:NoticeUnused
+    - dpv_owl:NoticeUnused
     annotations:
       skos_in_scheme: notice-classes
 
@@ -866,12 +870,12 @@ classes:
       Status indicating the notice has been updated and its contents or
       implications have changed
     aliases:
-      - Notice Updated
+    - Notice Updated
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeUpdated
-      - dpv_owl:NoticeUpdated
+    - dpv_upstream:NoticeUpdated
+    - dpv_owl:NoticeUpdated
     annotations:
       skos_in_scheme: notice-classes
 
@@ -882,137 +886,138 @@ classes:
       Status indicating the notice has been communicated and has been used
       e.g. the recipient has acknowledged it or taken the intended action
     aliases:
-      - Notice Used
+    - Notice Used
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:NoticeUsed
-      - dpv_owl:NoticeUsed
+    - dpv_upstream:NoticeUsed
+    - dpv_owl:NoticeUsed
     annotations:
       skos_in_scheme: notice-classes
 
   OralNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:OralNotice
     description: A notice provided orally or verbally
     aliases:
-      - Oral Notice
+    - Oral Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:OralNotice
-      - dpv_owl:OralNotice
+    - dpv_upstream:OralNotice
+    - dpv_owl:OralNotice
     annotations:
       skos_in_scheme: notice-classes
 
   PIA:
     is_a: ImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:PIA
     description: Impact assessment regarding privacy risks
     aliases:
-      - Privacy Impact Assessment (PIA)
+    - Privacy Impact Assessment (PIA)
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:PIA
-      - dpv_owl:PIA
-      - iso29100:PrivacyImpactAssessment
-    close_mappings:
-      - iso42001:AISystemImpactAssessment
+    - dpv_upstream:PIA
+    - dpv_owl:PIA
+    - iso29100:PrivacyImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso42001:AISystemImpactAssessment
   PostedNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:PostedNotice
     description: A notice that is posted as a sign or banner
     aliases:
-      - Posted Notice
+    - Posted Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:PostedNotice
-      - dpv_owl:PostedNotice
+    - dpv_upstream:PostedNotice
+    - dpv_owl:PostedNotice
     annotations:
       skos_in_scheme: notice-classes
 
   PrintedNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:PrintedNotice
-    description: A notice that is provided in a printed form on or along with a device
+    description: A notice that is provided in a printed form on or along with a 
+      device
     aliases:
-      - Printed Notice
+    - Printed Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:PrintedNotice
-      - dpv_owl:PrintedNotice
+    - dpv_upstream:PrintedNotice
+    - dpv_owl:PrintedNotice
     annotations:
       skos_in_scheme: notice-classes
 
   PrivacyNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:PrivacyNotice
     description: |-
       Represents a notice or document outlining information regarding privacy
     aliases:
-      - Privacy Notice
+    - Privacy Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:PrivacyNotice
-      - dpv_owl:PrivacyNotice
-    close_mappings:
-      - iso29100:PrivacyPolicy
+    - dpv_upstream:PrivacyNotice
+    - dpv_owl:PrivacyNotice
     annotations:
       skos_in_scheme: notice-classes, organisational-measures-classes
 
+    close_mappings:
+    - iso29100:PrivacyPolicy
   ResidualRisk:
     is_a: Risk
     class_uri: dpv:ResidualRisk
     description: Risk remaining after treatment or mitigation
     aliases:
-      - Residual Risk
+    - Residual Risk
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:ResidualRisk
-      - dpv_owl:ResidualRisk
-      - nist_ai_rmf:ResidualRisk
-    related_mappings:
-      - iso27001:RiskTreatmentPlan
+    - dpv_upstream:ResidualRisk
+    - dpv_owl:ResidualRisk
+    - nist_ai_rmf:ResidualRisk
     annotations:
       skos_in_scheme: risk-classes
 
+    related_mappings:
+    - iso27001:RiskTreatmentPlan
   RightsImpactAssessment:
     is_a: ImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:RightsImpactAssessment
     description: |-
       Impact assessment which involves determining the impact on rights and
       freedoms
     aliases:
-      - Rights Impact Assessment
+    - Rights Impact Assessment
     comments:
-      - |-
-        The rights and freedoms may be those defined in law or other norms, and
-        may be bound to a jurisdiction
+    - |-
+      The rights and freedoms may be those defined in law or other norms, and
+      may be bound to a jurisdiction
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:RightsImpactAssessment
-      - dpv_owl:RightsImpactAssessment
+    - dpv_upstream:RightsImpactAssessment
+    - dpv_owl:RightsImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
@@ -1023,41 +1028,42 @@ classes:
       A risk or possibility or uncertainty of negative effects, impacts, or
       consequences
     aliases:
-      - Risk
+    - Risk
     comments:
-      - |-
-        Risks can be associated with one or more different concepts such as
-        purpose, processing, personal data, technical or organisational measure
+    - |-
+      Risks can be associated with one or more different concepts such as
+      purpose, processing, personal data, technical or organisational measure
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:Risk
-      - dpv_owl:Risk
+    - dpv_upstream:Risk
+    - dpv_owl:Risk
     annotations:
       skos_in_scheme: risk-classes
 
   RiskAssessment:
     is_a: Assessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:RiskAssessment
-    description: Assessment involving identification, analysis, and evaluation of risk
+    description: Assessment involving identification, analysis, and evaluation 
+      of risk
     aliases:
-      - Risk Assessment
+    - Risk Assessment
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:RiskAssessment
-      - dpv_owl:RiskAssessment
-    close_mappings:
-      - iso27001:RiskAssessment
-      - iso42001:AIRiskAssessment
-    related_mappings:
-      - nist_ai_rmf:Function
-      - nist_csf_v2:CSFCategory
+    - dpv_upstream:RiskAssessment
+    - dpv_owl:RiskAssessment
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso27001:RiskAssessment
+    - iso42001:AIRiskAssessment
+    related_mappings:
+    - nist_ai_rmf:Function
+    - nist_csf_v2:CSFCategory
   RiskConcept:
     is_a: DpvThing
     class_uri: dpv:RiskConcept
@@ -1066,19 +1072,19 @@ classes:
       such as actual and potential Risk, Risk Source, Consequences, and
       Impacts
     aliases:
-      - Risk Concept
+    - Risk Concept
     comments:
-      - |-
-        RiskConcept is a generic concept used for creation of specific
-        taxonomies in the RISK extension to provide guidance on how a concept
-        can potentially be a risk, risk source, consequence, and impact. It is
-        not intended to be used directly and is only created for organisation of
-        concepts in DPV vocabularies
+    - |-
+      RiskConcept is a generic concept used for creation of specific
+      taxonomies in the RISK extension to provide guidance on how a concept
+      can potentially be a risk, risk source, consequence, and impact. It is
+      not intended to be used directly and is only created for organisation of
+      concepts in DPV vocabularies
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:RiskConcept
-      - dpv_owl:RiskConcept
+    - dpv_upstream:RiskConcept
+    - dpv_owl:RiskConcept
     annotations:
       skos_in_scheme: risk-classes
 
@@ -1089,19 +1095,19 @@ classes:
       The magnitude of a risk expressed as an indication to aid in its
       management
     aliases:
-      - Risk Level
+    - Risk Level
     comments:
-      - |-
-        Risk Levels can be defined as a combination of different
-        characteristics. For example, ISO 31073:2022 defines it as a combination
-        of consequences and their likelihood. Another example would be the Risk
-        Matrix where Risk Level is defined as a combination of Likelihood and
-        Severity associated with the Risk.
+    - |-
+      Risk Levels can be defined as a combination of different
+      characteristics. For example, ISO 31073:2022 defines it as a combination
+      of consequences and their likelihood. Another example would be the Risk
+      Matrix where Risk Level is defined as a combination of Likelihood and
+      Severity associated with the Risk.
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:RiskLevel
-      - dpv_owl:RiskLevel
+    - dpv_upstream:RiskLevel
+    - dpv_owl:RiskLevel
     annotations:
       skos_in_scheme: risk-classes
 
@@ -1110,54 +1116,54 @@ classes:
     class_uri: dpv:RiskMitigationMeasure
     description: Measures intended to mitigate, minimise, or prevent risk.
     aliases:
-      - Risk Mitigation Measure
+    - Risk Mitigation Measure
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:RiskMitigationMeasure
-      - dpv_owl:RiskMitigationMeasure
-    close_mappings:
-      - iso27001:RiskTreatmentOption
-      - iso29100:PrivacySafeguardingRequirement
-      - iso42001:AIRiskTreatmentPlan
-      - oscal:Control
-    related_mappings:
-      - nist_ai_rmf:Function
-      - nist_csf_v2:CSFSubcategory
+    - dpv_upstream:RiskMitigationMeasure
+    - dpv_owl:RiskMitigationMeasure
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso27001:RiskTreatmentOption
+    - iso29100:PrivacySafeguardingRequirement
+    - iso42001:AIRiskTreatmentPlan
+    - oscal:Control
+    related_mappings:
+    - nist_ai_rmf:Function
+    - nist_csf_v2:CSFSubcategory
   SecurityAssessment:
     is_a: RiskAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:SecurityAssessment
     description: |-
       Assessment of security intended to identify gaps, vulnerabilities,
       risks, and effectiveness of controls
     aliases:
-      - Security Assessment
+    - Security Assessment
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:SecurityAssessment
-      - dpv_owl:SecurityAssessment
+    - dpv_upstream:SecurityAssessment
+    - dpv_owl:SecurityAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   SecurityIncidentNotice:
     is_a: Notice
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:SecurityIncidentNotice
     description: A notice providing information about security incident(s)
     aliases:
-      - Security Incident Notice
+    - Security Incident Notice
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:SecurityIncidentNotice
-      - dpv_owl:SecurityIncidentNotice
+    - dpv_upstream:SecurityIncidentNotice
+    - dpv_owl:SecurityIncidentNotice
     annotations:
       skos_in_scheme: notice-classes, organisational-measures-classes
 
@@ -1168,20 +1174,20 @@ classes:
       Sensitivity' reflects the risk of impact if not secured or utilised with
       appropriate measures and controls e.g. for sensitive data
     aliases:
-      - Sensitivity Level
+    - Sensitivity Level
     comments:
-      - |-
-        ISO/IEC TS 38505-3:2021 defines 'data sensitivity' as the potential harm
-        of unauthorised disclosure. DPV's use of the concept goes beyond
-        disclosure as it refers to the level of safeguards or controls the data
-        requires as a reflection of its 'sensitive' nature. To indicate
-        quantified levels of sensitivity, e.g. "high sensitivity", instances of
-        severity can be directly used or specialised
+    - |-
+      ISO/IEC TS 38505-3:2021 defines 'data sensitivity' as the potential harm
+      of unauthorised disclosure. DPV's use of the concept goes beyond
+      disclosure as it refers to the level of safeguards or controls the data
+      requires as a reflection of its 'sensitive' nature. To indicate
+      quantified levels of sensitivity, e.g. "high sensitivity", instances of
+      severity can be directly used or specialised
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:SensitivityLevel
-      - dpv_owl:SensitivityLevel
+    - dpv_upstream:SensitivityLevel
+    - dpv_owl:SensitivityLevel
     annotations:
       skos_in_scheme: risk-classes
 
@@ -1192,13 +1198,13 @@ classes:
       The magnitude of being unwanted or having negative effects such as
       harmful impacts
     aliases:
-      - Severity
+    - Severity
     comments:
-      - Severity can be associated with Risk, or its Consequences and Impacts
+    - Severity can be associated with Risk, or its Consequences and Impacts
     in_subset:
-      - risk_notice_subset
+    - risk_notice_subset
     exact_mappings:
-      - dpv_upstream:Severity
-      - dpv_owl:Severity
+    - dpv_upstream:Severity
+    - dpv_owl:Severity
     annotations:
       skos_in_scheme: risk-classes

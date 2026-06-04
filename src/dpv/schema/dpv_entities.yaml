@@ -9,8 +9,8 @@ description: |-
   classes.
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -36,7 +36,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -50,8 +50,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv_common
+- linkml:types
+- dpv:schema/dpv_common
 
 subsets:
 
@@ -62,15 +62,16 @@ slots:
 
   has_address:
     definition_uri: dpv:hasAddress
-    description: Specifies address of a legal entity such as street address or pin code
+    description: Specifies address of a legal entity such as street address or 
+      pin code
     aliases:
-      - has address
+    - has address
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasAddress
-      - dpv_owl:hasAddress
+    - dpv_upstream:hasAddress
+    - dpv_owl:hasAddress
     annotations:
       skos_in_scheme: entities-properties
 
@@ -78,27 +79,28 @@ slots:
     definition_uri: dpv:hasAuthority
     description: Indicates applicability of authority for a jurisdiction
     aliases:
-      - has authority
+    - has authority
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasAuthority
-      - dpv_owl:hasAuthority
+    - dpv_upstream:hasAuthority
+    - dpv_owl:hasAuthority
     annotations:
       skos_in_scheme: entities-authority-properties
 
   has_contact:
     definition_uri: dpv:hasContact
-    description: Specifies contact details of a legal entity such as phone or email
+    description: Specifies contact details of a legal entity such as phone or 
+      email
     aliases:
-      - has contact
+    - has contact
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasContact
-      - dpv_owl:hasContact
+    - dpv_upstream:hasContact
+    - dpv_owl:hasContact
     annotations:
       skos_in_scheme: entities-properties
 
@@ -107,13 +109,13 @@ slots:
     definition_uri: dpv:hasDataController
     description: Indicates association with Data Controller
     aliases:
-      - has data controller
+    - has data controller
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasDataController
-      - dpv_owl:hasDataController
+    - dpv_upstream:hasDataController
+    - dpv_owl:hasDataController
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -124,13 +126,13 @@ slots:
       Indicates inclusion or applicability of a LegalEntity in the role of
       Data Exporter
     aliases:
-      - has data exporter
+    - has data exporter
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasDataExporter
-      - dpv_owl:hasDataExporter
+    - dpv_upstream:hasDataExporter
+    - dpv_owl:hasDataExporter
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -141,13 +143,13 @@ slots:
       Indicates inclusion or applicability of a LegalEntity in the role of
       Data Importer
     aliases:
-      - has data importer
+    - has data importer
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasDataImporter
-      - dpv_owl:hasDataImporter
+    - dpv_upstream:hasDataImporter
+    - dpv_owl:hasDataImporter
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -156,13 +158,13 @@ slots:
     definition_uri: dpv:hasDataProcessor
     description: Indicates inclusion or applicability of a Data Processor
     aliases:
-      - has data processor
+    - has data processor
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasDataProcessor
-      - dpv_owl:hasDataProcessor
+    - dpv_upstream:hasDataProcessor
+    - dpv_owl:hasDataProcessor
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -171,13 +173,13 @@ slots:
     definition_uri: dpv:hasDataProtectionOfficer
     description: Specifies an associated data protection officer
     aliases:
-      - has data protection officer
+    - has data protection officer
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasDataProtectionOfficer
-      - dpv_owl:hasDataProtectionOfficer
+    - dpv_upstream:hasDataProtectionOfficer
+    - dpv_owl:hasDataProtectionOfficer
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -186,31 +188,32 @@ slots:
     definition_uri: dpv:hasDataSubject
     description: Indicates association with Data Subject
     aliases:
-      - has data subject
+    - has data subject
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasDataSubject
-      - dpv_owl:hasDataSubject
+    - dpv_upstream:hasDataSubject
+    - dpv_owl:hasDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-properties
 
   has_entity:
     definition_uri: dpv:hasEntity
-    description: Indicates inclusion or applicability of an entity to some concept
+    description: Indicates inclusion or applicability of an entity to some 
+      concept
     aliases:
-      - has entity
+    - has entity
     comments:
-      - |-
-        parent property for controller, processor, data subject, authority,
-        etc.?
+    - |-
+      parent property for controller, processor, data subject, authority,
+      etc.?
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasEntity
-      - dpv_owl:hasEntity
+    - dpv_upstream:hasEntity
+    - dpv_owl:hasEntity
     annotations:
       skos_in_scheme: entities-properties
 
@@ -219,13 +222,13 @@ slots:
     definition_uri: dpv:hasHumanSubject
     description: Indicates association with Human Subject
     aliases:
-      - has human subject
+    - has human subject
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasHumanSubject
-      - dpv_owl:hasHumanSubject
+    - dpv_upstream:hasHumanSubject
+    - dpv_owl:hasHumanSubject
     annotations:
       skos_in_scheme: entities-datasubject-properties
 
@@ -234,13 +237,13 @@ slots:
     definition_uri: dpv:hasJointDataControllers
     description: Indicates inclusion or applicability of a Joint Data Controller
     aliases:
-      - has joint data controllers
+    - has joint data controllers
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasJointDataControllers
-      - dpv_owl:hasJointDataControllers
+    - dpv_upstream:hasJointDataControllers
+    - dpv_owl:hasJointDataControllers
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -248,13 +251,13 @@ slots:
     definition_uri: dpv:hasName
     description: Specifies name of a legal entity
     aliases:
-      - has name
+    - has name
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasName
-      - dpv_owl:hasName
+    - dpv_upstream:hasName
+    - dpv_owl:hasName
     annotations:
       skos_in_scheme: entities-properties
 
@@ -263,13 +266,13 @@ slots:
     definition_uri: dpv:hasOrganisationalUnit
     description: Indicates the specified entity is a unit of the organisation
     aliases:
-      - has organisational unit
+    - has organisational unit
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasOrganisationalUnit
-      - dpv_owl:hasOrganisationalUnit
+    - dpv_upstream:hasOrganisationalUnit
+    - dpv_owl:hasOrganisationalUnit
     annotations:
       skos_in_scheme: entities-properties
 
@@ -278,15 +281,15 @@ slots:
     definition_uri: dpv:hasRecipient
     description: Indicates Recipient of Data
     aliases:
-      - has recipient
+    - has recipient
     comments:
-      - Also used to indicate the Recipient of a Right Exercise Activity
+    - Also used to indicate the Recipient of a Right Exercise Activity
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasRecipient
-      - dpv_owl:hasRecipient
+    - dpv_upstream:hasRecipient
+    - dpv_owl:hasRecipient
     annotations:
       skos_in_scheme: entities-legalrole-properties, rights-properties
 
@@ -297,13 +300,13 @@ slots:
       Indicates inclusion or applicability of a Data Controller as a Recipient
       of personal data
     aliases:
-      - has recipient data controller
+    - has recipient data controller
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasRecipientDataController
-      - dpv_owl:hasRecipientDataController
+    - dpv_upstream:hasRecipientDataController
+    - dpv_owl:hasRecipientDataController
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -314,28 +317,29 @@ slots:
       Indicates inclusion or applicability of a Third Party as a Recipient of
       personal data
     aliases:
-      - has recipient third party
+    - has recipient third party
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasRecipientThirdParty
-      - dpv_owl:hasRecipientThirdParty
+    - dpv_upstream:hasRecipientThirdParty
+    - dpv_owl:hasRecipientThirdParty
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
   has_relation_with_data_subject:
     is_a: has_entity
     definition_uri: dpv:hasRelationWithDataSubject
-    description: Indicates the relation between specified Entity and Data Subject
+    description: Indicates the relation between specified Entity and Data 
+      Subject
     aliases:
-      - has relation with data subject
+    - has relation with data subject
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasRelationWithDataSubject
-      - dpv_owl:hasRelationWithDataSubject
+    - dpv_upstream:hasRelationWithDataSubject
+    - dpv_owl:hasRelationWithDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-properties
 
@@ -344,43 +348,45 @@ slots:
     definition_uri: dpv:hasRepresentative
     description: Specifies representative of the legal entity
     aliases:
-      - has representative
+    - has representative
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasRepresentative
-      - dpv_owl:hasRepresentative
+    - dpv_upstream:hasRepresentative
+    - dpv_owl:hasRepresentative
     annotations:
       skos_in_scheme: entities-properties
 
   has_responsible_entity:
     is_a: has_entity
     definition_uri: dpv:hasResponsibleEntity
-    description: Specifies the indicated entity is responsible within some context
+    description: Specifies the indicated entity is responsible within some 
+      context
     aliases:
-      - has responsible entity
+    - has responsible entity
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasResponsibleEntity
-      - dpv_owl:hasResponsibleEntity
+    - dpv_upstream:hasResponsibleEntity
+    - dpv_owl:hasResponsibleEntity
     annotations:
       skos_in_scheme: entities-properties
 
   has_service_consumer:
     is_a: has_entity
     definition_uri: dpv:hasServiceConsumer
-    description: Indicates the entity that consumes or receives the associated service
+    description: Indicates the entity that consumes or receives the associated 
+      service
     aliases:
-      - has service consumer
+    - has service consumer
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasServiceConsumer
-      - dpv_owl:hasServiceConsumer
+    - dpv_upstream:hasServiceConsumer
+    - dpv_owl:hasServiceConsumer
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -389,28 +395,29 @@ slots:
     definition_uri: dpv:hasServiceProvider
     description: Indicates the entity that provides the associated service
     aliases:
-      - has service provider
+    - has service provider
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasServiceProvider
-      - dpv_owl:hasServiceProvider
+    - dpv_upstream:hasServiceProvider
+    - dpv_owl:hasServiceProvider
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
   has_subsidiary:
     is_a: has_entity
     definition_uri: dpv:hasSubsidiary
-    description: Indicates this entity has the specified entity as its subsidiary
+    description: Indicates this entity has the specified entity as its 
+      subsidiary
     aliases:
-      - has subsidiary
+    - has subsidiary
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasSubsidiary
-      - dpv_owl:hasSubsidiary
+    - dpv_upstream:hasSubsidiary
+    - dpv_owl:hasSubsidiary
     annotations:
       skos_in_scheme: entities-properties
 
@@ -419,13 +426,13 @@ slots:
     definition_uri: dpv:hasThirdParty
     description: Indicates association with Third Party
     aliases:
-      - has third party
+    - has third party
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:hasThirdParty
-      - dpv_owl:hasThirdParty
+    - dpv_upstream:hasThirdParty
+    - dpv_owl:hasThirdParty
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -433,13 +440,13 @@ slots:
     definition_uri: dpv:isAuthorityFor
     description: Indicates area, scope, or applicability of an Authority
     aliases:
-      - is authority for
+    - is authority for
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:isAuthorityFor
-      - dpv_owl:isAuthorityFor
+    - dpv_upstream:isAuthorityFor
+    - dpv_owl:isAuthorityFor
     annotations:
       skos_in_scheme: entities-authority-properties
 
@@ -449,13 +456,13 @@ slots:
     description: |-
       Indicates this entity is an organisational unit of the specified entity
     aliases:
-      - is organisational unit of
+    - is organisational unit of
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:isOrganisationalUnitOf
-      - dpv_owl:isOrganisationalUnitOf
+    - dpv_upstream:isOrganisationalUnitOf
+    - dpv_owl:isOrganisationalUnitOf
     annotations:
       skos_in_scheme: entities-properties
 
@@ -464,13 +471,13 @@ slots:
     definition_uri: dpv:isRepresentativeFor
     description: Indicates the entity is a representative for specified entity
     aliases:
-      - is representative for
+    - is representative for
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:isRepresentativeFor
-      - dpv_owl:isRepresentativeFor
+    - dpv_upstream:isRepresentativeFor
+    - dpv_owl:isRepresentativeFor
     annotations:
       skos_in_scheme: entities-properties
 
@@ -479,13 +486,13 @@ slots:
     definition_uri: dpv:isSubsidiaryOf
     description: Indicates this entity is the subsidiary of the specified entity
     aliases:
-      - is subsidiary of
+    - is subsidiary of
     multivalued: true
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:isSubsidiaryOf
-      - dpv_owl:isSubsidiaryOf
+    - dpv_upstream:isSubsidiaryOf
+    - dpv_owl:isSubsidiaryOf
     annotations:
       skos_in_scheme: entities-properties
 
@@ -498,12 +505,12 @@ classes:
       Organisations related to academia or scientific pursuits e.g.
       Universities, Schools, Research Bodies
     aliases:
-      - Academic or Scientific Organisation
+    - Academic or Scientific Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:AcademicScientificOrganisation
-      - dpv_owl:AcademicScientificOrganisation
+    - dpv_upstream:AcademicScientificOrganisation
+    - dpv_owl:AcademicScientificOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -514,12 +521,12 @@ classes:
       A natural person that is not a child i.e. has attained some legally
       specified age of adulthood
     aliases:
-      - Adult
+    - Adult
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Adult
-      - dpv_owl:Adult
+    - dpv_upstream:Adult
+    - dpv_owl:Adult
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -530,12 +537,12 @@ classes:
       An organisation that that offers transportation and medical care to
       patients requiring urgent medical attention
     aliases:
-      - Ambulance Provider
+    - Ambulance Provider
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:AmbulanceProvider
-      - dpv_owl:AmbulanceProvider
+    - dpv_upstream:AmbulanceProvider
+    - dpv_owl:AmbulanceProvider
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -544,28 +551,28 @@ classes:
     class_uri: dpv:Applicant
     description: Humans that are applicants in some context
     aliases:
-      - Applicant
+    - Applicant
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Applicant
-      - dpv_owl:Applicant
+    - dpv_upstream:Applicant
+    - dpv_owl:Applicant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   AsylumSeeker:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:AsylumSeeker
     description: Humans that are asylum seekers
     aliases:
-      - Asylum Seeker
+    - Asylum Seeker
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:AsylumSeeker
-      - dpv_owl:AsylumSeeker
+    - dpv_upstream:AsylumSeeker
+    - dpv_owl:AsylumSeeker
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -576,37 +583,37 @@ classes:
       A nonprofit entity dedicated to providing assistance or raising funds
       for social, educational, religious, or other philanthropic purposes
     aliases:
-      - Charity Organisation
+    - Charity Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:CharityOrganisation
-      - dpv_owl:CharityOrganisation
+    - dpv_upstream:CharityOrganisation
+    - dpv_owl:CharityOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
   Child:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:Child
     description: |-
       A 'child' is a natural legal person who is below a certain legal age
       depending on the legal jurisdiction.
     aliases:
-      - Child
+    - Child
     comments:
-      - |-
-        The legality of age defining a child varies by jurisdiction. In
-        addition, 'child' is distinct from a 'minor'. For example, the legal age
-        for consumption of alcohol can be 21, which makes a person of age 20 a
-        'minor' in this context. In other cases, 'minor' and 'child' are used
-        interchangeably to refer to a person below some legally defined age.
+    - |-
+      The legality of age defining a child varies by jurisdiction. In
+      addition, 'child' is distinct from a 'minor'. For example, the legal age
+      for consumption of alcohol can be 21, which makes a person of age 20 a
+      'minor' in this context. In other cases, 'minor' and 'child' are used
+      interchangeably to refer to a person below some legally defined age.
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Child
-      - dpv_owl:Child
+    - dpv_upstream:Child
+    - dpv_owl:Child
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -615,28 +622,28 @@ classes:
     class_uri: dpv:Citizen
     description: Humans that are citizens (for a jurisdiction)
     aliases:
-      - Citizen
+    - Citizen
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Citizen
-      - dpv_owl:Citizen
+    - dpv_upstream:Citizen
+    - dpv_owl:Citizen
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   Client:
     is_a: DpvCustomer
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:Client
     description: Humans that are clients or recipients of services
     aliases:
-      - Client
+    - Client
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Client
-      - dpv_owl:Client
+    - dpv_upstream:Client
+    - dpv_owl:Client
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -647,12 +654,12 @@ classes:
       An organisation that is a smaller healthcare facility offering
       outpatient medical services for diagnosis and treatment
     aliases:
-      - Clinic
+    - Clinic
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Clinic
-      - dpv_owl:Clinic
+    - dpv_upstream:Clinic
+    - dpv_owl:Clinic
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -663,26 +670,26 @@ classes:
       The individual or organisation that decides (or controls) the purpose(s)
       of processing personal data.
     aliases:
-      - Data Controller
+    - Data Controller
     comments:
-      - |-
-        The terms 'Controller', 'Data Controller', and 'PII Controller' refer to
-        the same concept
+    - |-
+      The terms 'Controller', 'Data Controller', and 'PII Controller' refer to
+      the same concept
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataController
-      - dpv_owl:DataController
-      - iso29100:PIIController
-    related_mappings:
-      - common_domain_model:Counterparty
-      - iso22989:AIProvider
-      - iso27001:Organization
-      - nist_ai_rmf:AiActor
-      - oscal:ResponsibleParty
+    - dpv_upstream:DataController
+    - dpv_owl:DataController
+    - iso29100:PIIController
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    related_mappings:
+    - common_domain_model:Counterparty
+    - iso22989:AIProvider
+    - iso27001:Organization
+    - nist_ai_rmf:AiActor
+    - oscal:ResponsibleParty
   DataExporter:
     is_a: LegalEntity
     class_uri: dpv:DataExporter
@@ -690,19 +697,19 @@ classes:
       An entity that 'exports' data where exporting is considered a form of
       data transfer
     aliases:
-      - Data Exporter
+    - Data Exporter
     comments:
-      - |-
-        The term 'Data Exporter' is used by the EU-EDPB as the entity that
-        transfer data across borders. While the EDPB refers to the
-        jurisdictional border of EU, the term within DPV can be used to denote
-        any 'export' or transfer or transmission of data and is thus a broader
-        concept than the EDPB's definition.
+    - |-
+      The term 'Data Exporter' is used by the EU-EDPB as the entity that
+      transfer data across borders. While the EDPB refers to the
+      jurisdictional border of EU, the term within DPV can be used to denote
+      any 'export' or transfer or transmission of data and is thus a broader
+      concept than the EDPB's definition.
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataExporter
-      - dpv_owl:DataExporter
+    - dpv_upstream:DataExporter
+    - dpv_owl:DataExporter
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -713,19 +720,19 @@ classes:
       An entity that 'imports' data where importing is considered a form of
       data transfer
     aliases:
-      - Data Importer
+    - Data Importer
     comments:
-      - |-
-        The term 'Data Importer' is used by the EU-EDPB as the entity that
-        receives transferred data across borders. While the EDPB refers to the
-        jurisdictional border of EU, the term within DPV can be used to denote
-        any 'import' or reception of transfer or transmission of data and is
-        thus a broader concept than the EDPB's definition.
+    - |-
+      The term 'Data Importer' is used by the EU-EDPB as the entity that
+      receives transferred data across borders. While the EDPB refers to the
+      jurisdictional border of EU, the term within DPV can be used to denote
+      any 'import' or reception of transfer or transmission of data and is
+      thus a broader concept than the EDPB's definition.
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataImporter
-      - dpv_owl:DataImporter
+    - dpv_upstream:DataImporter
+    - dpv_owl:DataImporter
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -736,19 +743,19 @@ classes:
       A ‘processor’ means a natural or legal person, public authority, agency
       or other body which processes data on behalf of the controller.
     aliases:
-      - Data Processor
+    - Data Processor
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataProcessor
-      - dpv_owl:DataProcessor
-      - iso29100:PIIProcessor
-    related_mappings:
-      - common_domain_model:Counterparty
-      - iso27001:Organization
+    - dpv_upstream:DataProcessor
+    - dpv_owl:DataProcessor
+    - iso29100:PIIProcessor
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    related_mappings:
+    - common_domain_model:Counterparty
+    - iso27001:Organization
   DataProtectionAuthority:
     is_a: DpvAuthority
     class_uri: dpv:DataProtectionAuthority
@@ -756,18 +763,18 @@ classes:
       An authority tasked with overseeing legal compliance regarding privacy
       and data protection laws.
     aliases:
-      - Data Protection Authority
+    - Data Protection Authority
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataProtectionAuthority
-      - dpv_owl:DataProtectionAuthority
-    related_mappings:
-      - nist_csf_v2:ResponsibleParty
-      - oscal:ResponsibleParty
+    - dpv_upstream:DataProtectionAuthority
+    - dpv_owl:DataProtectionAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
+    related_mappings:
+    - nist_csf_v2:ResponsibleParty
+    - oscal:ResponsibleParty
   DataProtectionOfficer:
     is_a: Representative
     class_uri: dpv:DataProtectionOfficer
@@ -776,32 +783,32 @@ classes:
       compliance, inform and advise on data protection obligations and act as
       a contact point for data subjects and the supervisory authority.
     aliases:
-      - Data Protection Officer
+    - Data Protection Officer
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataProtectionOfficer
-      - dpv_owl:DataProtectionOfficer
-    related_mappings:
-      - oscal:ResponsibleRole
+    - dpv_upstream:DataProtectionOfficer
+    - dpv_owl:DataProtectionOfficer
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    related_mappings:
+    - oscal:ResponsibleRole
   DataSubProcessor:
     is_a: DataProcessor
     class_uri: dpv:DataSubProcessor
     description: A 'sub-processor' is a processor engaged by another processor
     aliases:
-      - Data Sub-Processor
+    - Data Sub-Processor
     comments:
-      - |-
-        A 'Sub-Processor' is always a 'Processor' with the distinction of not
-        directly being appointed by the 'Controller'
+    - |-
+      A 'Sub-Processor' is always a 'Processor' with the distinction of not
+      directly being appointed by the 'Controller'
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataSubProcessor
-      - dpv_owl:DataSubProcessor
+    - dpv_upstream:DataSubProcessor
+    - dpv_owl:DataSubProcessor
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -812,27 +819,27 @@ classes:
       The individual (or category of individuals) whose personal data is being
       processed
     aliases:
-      - Data Subject
+    - Data Subject
     comments:
-      - |-
-        The term 'data subject' is specific to the GDPR, but is functionally
-        equivalent to the term 'individual associated with data' and the ISO/IEC
-        term 'PII Principle'
+    - |-
+      The term 'data subject' is specific to the GDPR, but is functionally
+      equivalent to the term 'individual associated with data' and the ISO/IEC
+      term 'PII Principle'
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:DataSubject
-      - dpv_owl:DataSubject
-      - iso29100:PIIPrincipal
-      - iso22989:DataSubject
-    narrow_mappings:
-      - common_domain_model:NaturalPerson
-      - gists:Person
-    related_mappings:
-      - iso27001:InterestedParty
+    - dpv_upstream:DataSubject
+    - dpv_owl:DataSubject
+    - iso29100:PIIPrincipal
+    - iso22989:DataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
+    narrow_mappings:
+    - common_domain_model:NaturalPerson
+    - gists:Person
+    related_mappings:
+    - iso27001:InterestedParty
   DpvAgent:
     is_a: DpvEntity
     class_uri: dpv:Agent
@@ -840,19 +847,19 @@ classes:
       An Agent is a dpv:Entity that is (a) acting on behalf of another Entity;
       and (b) is authorised to do so by that Entity
     aliases:
-      - Agent
+    - Agent
     comments:
-      - |-
-        the Entity the Agent is acting on behalf of can be a human or non-human
-        and a legal or non-legal entity. For specific distinction, see
-        dpv:LegalAgent and tech:MachineAgent. The form and validity of
-        authorisation through which the Agent is empowered to represent and act
-        on behalf of the Entity is not defined or covered in this concept
+    - |-
+      the Entity the Agent is acting on behalf of can be a human or non-human
+      and a legal or non-legal entity. For specific distinction, see
+      dpv:LegalAgent and tech:MachineAgent. The form and validity of
+      authorisation through which the Agent is empowered to represent and act
+      on behalf of the Entity is not defined or covered in this concept
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Agent
-      - dpv_owl:Agent
+    - dpv_upstream:Agent
+    - dpv_owl:Agent
     annotations:
       skos_in_scheme: entities-classes
 
@@ -863,12 +870,12 @@ classes:
       An authority with the power to create or enforce laws, or determine
       their compliance.
     aliases:
-      - Authority
+    - Authority
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Authority
-      - dpv_owl:Authority
+    - dpv_upstream:Authority
+    - dpv_owl:Authority
     annotations:
       skos_in_scheme: entities-authority-classes
 
@@ -877,12 +884,12 @@ classes:
     class_uri: dpv:Consumer
     description: Humans that consume goods or services for direct use
     aliases:
-      - Consumer
+    - Consumer
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Consumer
-      - dpv_owl:Consumer
+    - dpv_upstream:Consumer
+    - dpv_owl:Consumer
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -891,16 +898,16 @@ classes:
     class_uri: dpv:Customer
     description: Humans that purchase goods or services
     aliases:
-      - Customer
+    - Customer
     comments:
-      - |-
-        note: for B2B relations where customers are organisations, this concept
-        only applies for data subjects
+    - |-
+      note: for B2B relations where customers are organisations, this concept
+      only applies for data subjects
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Customer
-      - dpv_owl:Customer
+    - dpv_upstream:Customer
+    - dpv_owl:Customer
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -909,12 +916,12 @@ classes:
     class_uri: dpv:Entity
     description: A human or non-human 'thing' that constitutes as an entity
     aliases:
-      - Entity
+    - Entity
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Entity
-      - dpv_owl:Entity
+    - dpv_upstream:Entity
+    - dpv_owl:Entity
     annotations:
       skos_in_scheme: entities-classes
 
@@ -925,12 +932,12 @@ classes:
       A general term reflecting a company or a business or a group acting as a
       unit
     aliases:
-      - Organisation
+    - Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Organisation
-      - dpv_owl:Organisation
+    - dpv_upstream:Organisation
+    - dpv_owl:Organisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -939,18 +946,18 @@ classes:
     class_uri: dpv:Recipient
     description: Entities that receive data or technologies
     aliases:
-      - Recipient
+    - Recipient
     comments:
-      - |-
-        Recipients that receive personal data can be a Third Party, Data
-        Controller, or Data Processor.
+    - |-
+      Recipients that receive personal data can be a Third Party, Data
+      Controller, or Data Processor.
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Recipient
-      - dpv_owl:Recipient
+    - dpv_upstream:Recipient
+    - dpv_owl:Recipient
     related_mappings:
-      - usage_policy:AnyRecipient
+    - usage_policy:AnyRecipient
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -959,12 +966,12 @@ classes:
     class_uri: dpv:User
     description: Humans that use service(s)
     aliases:
-      - User
+    - User
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:User
-      - dpv_owl:User
+    - dpv_upstream:User
+    - dpv_owl:User
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -975,44 +982,44 @@ classes:
       An organisation focused on delivering formal or informal education,
       training, or research
     aliases:
-      - Educational Organisation
+    - Educational Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:EducationalOrganisation
-      - dpv_owl:EducationalOrganisation
+    - dpv_upstream:EducationalOrganisation
+    - dpv_owl:EducationalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
   ElderlyDataSubject:
     is_a: VulnerableDataSubject
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:ElderlyDataSubject
     description: Data subjects that are considered elderly (i.e. based on age)
     aliases:
-      - Elderly Data Subject
+    - Elderly Data Subject
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ElderlyDataSubject
-      - dpv_owl:ElderlyDataSubject
+    - dpv_upstream:ElderlyDataSubject
+    - dpv_owl:ElderlyDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   ElderlyHuman:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:ElderlyHuman
     description: Humans that are considered elderly (i.e. based on age)
     aliases:
-      - Elderly Human
+    - Elderly Human
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ElderlyHuman
-      - dpv_owl:ElderlyHuman
+    - dpv_upstream:ElderlyHuman
+    - dpv_owl:ElderlyHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1024,12 +1031,12 @@ classes:
       delivering immediate medical care to patients in critical or
       life-threatening situations
     aliases:
-      - Emergency Healthcare Provider
+    - Emergency Healthcare Provider
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:EmergencyHealthcareProvider
-      - dpv_owl:EmergencyHealthcareProvider
+    - dpv_upstream:EmergencyHealthcareProvider
+    - dpv_owl:EmergencyHealthcareProvider
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1041,12 +1048,12 @@ classes:
       responding rapidly to urgent situations to protect lives, property, and
       the environment
     aliases:
-      - Emergency Service Provider
+    - Emergency Service Provider
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:EmergencyServiceProvider
-      - dpv_owl:EmergencyServiceProvider
+    - dpv_upstream:EmergencyServiceProvider
+    - dpv_owl:EmergencyServiceProvider
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1055,12 +1062,12 @@ classes:
     class_uri: dpv:Employee
     description: Humans that are employees
     aliases:
-      - Employee
+    - Employee
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Employee
-      - dpv_owl:Employee
+    - dpv_upstream:Employee
+    - dpv_owl:Employee
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1071,12 +1078,12 @@ classes:
       An organisation that is an emergency service provider for fire
       prevention, firefighting, and rescue services
     aliases:
-      - Fire Department
+    - Fire Department
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:FireDepartment
-      - dpv_owl:FireDepartment
+    - dpv_upstream:FireDepartment
+    - dpv_owl:FireDepartment
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1085,12 +1092,12 @@ classes:
     class_uri: dpv:ForProfitOrganisation
     description: An organisation that aims to achieve profit as its primary goal
     aliases:
-      - For-Profit Organisation
+    - For-Profit Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ForProfitOrganisation
-      - dpv_owl:ForProfitOrganisation
+    - dpv_upstream:ForProfitOrganisation
+    - dpv_owl:ForProfitOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1099,28 +1106,28 @@ classes:
     class_uri: dpv:GovernmentalOrganisation
     description: An organisation managed or part of government
     aliases:
-      - Governmental Organisation
+    - Governmental Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:GovernmentalOrganisation
-      - dpv_owl:GovernmentalOrganisation
+    - dpv_upstream:GovernmentalOrganisation
+    - dpv_owl:GovernmentalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
   GuardianOfDataSubject:
     is_a: GuardianOfHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:GuardianOfDataSubject
     description: Guardian(s) of data subjects such as children
     aliases:
-      - Guardian(s) of Data Subject
+    - Guardian(s) of Data Subject
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:GuardianOfDataSubject
-      - dpv_owl:GuardianOfDataSubject
+    - dpv_upstream:GuardianOfDataSubject
+    - dpv_owl:GuardianOfDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1129,12 +1136,12 @@ classes:
     class_uri: dpv:GuardianOfHuman
     description: Guardian(s) of humans
     aliases:
-      - Guardian(s) of Human
+    - Guardian(s) of Human
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:GuardianOfHuman
-      - dpv_owl:GuardianOfHuman
+    - dpv_upstream:GuardianOfHuman
+    - dpv_owl:GuardianOfHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1145,12 +1152,12 @@ classes:
       An organisation that delivers medical services, promotes health, and
       provides care for individuals and communities
     aliases:
-      - Healthcare Organisation
+    - Healthcare Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:HealthcareOrganisation
-      - dpv_owl:HealthcareOrganisation
+    - dpv_upstream:HealthcareOrganisation
+    - dpv_owl:HealthcareOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1161,12 +1168,12 @@ classes:
       An organisation that provides comprehensive medical treatment, including
       emergency care, surgeries, and inpatient services
     aliases:
-      - Hospital
+    - Hospital
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Hospital
-      - dpv_owl:Hospital
+    - dpv_upstream:Hospital
+    - dpv_owl:Hospital
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1178,12 +1185,12 @@ classes:
       some context such as personal data (dpv:DataSubject) or technology
       (tech:Subject)
     aliases:
-      - Human Subject
+    - Human Subject
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:HumanSubject
-      - dpv_owl:HumanSubject
+    - dpv_upstream:HumanSubject
+    - dpv_owl:HumanSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1192,26 +1199,27 @@ classes:
     class_uri: dpv:Immigrant
     description: Humans that are immigrants (for a jurisdiction)
     aliases:
-      - Immigrant
+    - Immigrant
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Immigrant
-      - dpv_owl:Immigrant
+    - dpv_upstream:Immigrant
+    - dpv_owl:Immigrant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   IndustryConsortium:
     is_a: DpvOrganisation
     class_uri: dpv:IndustryConsortium
-    description: A consortium established and comprising on industry organisations
+    description: A consortium established and comprising on industry 
+      organisations
     aliases:
-      - Industry Consortium
+    - Industry Consortium
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:IndustryConsortium
-      - dpv_owl:IndustryConsortium
+    - dpv_upstream:IndustryConsortium
+    - dpv_owl:IndustryConsortium
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1223,12 +1231,12 @@ classes:
       international law, or any other body which is set up by, or on the basis
       of, an agreement between two or more countries
     aliases:
-      - International Organisation
+    - International Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:InternationalOrganisation
-      - dpv_owl:InternationalOrganisation
+    - dpv_upstream:InternationalOrganisation
+    - dpv_owl:InternationalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1237,12 +1245,12 @@ classes:
     class_uri: dpv:JobApplicant
     description: Humans that apply for jobs or employments
     aliases:
-      - Job Applicant
+    - Job Applicant
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:JobApplicant
-      - dpv_owl:JobApplicant
+    - dpv_upstream:JobApplicant
+    - dpv_owl:JobApplicant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1253,21 +1261,21 @@ classes:
       A group of Data Controllers that jointly determine the purposes and
       means of processing
     aliases:
-      - Joint Data Controllers
+    - Joint Data Controllers
     comments:
-      - |-
-        While Joint Data Controllers operate together, they are made up of
-        individually distinct legal entities. To indicate the membership of this
-        group, hasDataController should be used to denote each Data Controller.
-        The concept of Joint Data Controllers also allows specifying a single
-        group as the 'Controller' and to specify role and responsibilities
-        within that group for each entity using DPV's concepts (e.g.
-        isImplementedByEntity)
+    - |-
+      While Joint Data Controllers operate together, they are made up of
+      individually distinct legal entities. To indicate the membership of this
+      group, hasDataController should be used to denote each Data Controller.
+      The concept of Joint Data Controllers also allows specifying a single
+      group as the 'Controller' and to specify role and responsibilities
+      within that group for each entity using DPV's concepts (e.g.
+      isImplementedByEntity)
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:JointDataControllers
-      - dpv_owl:JointDataControllers
+    - dpv_upstream:JointDataControllers
+    - dpv_owl:JointDataControllers
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -1278,12 +1286,12 @@ classes:
       An organisation involved in interpreting and applying the law, resolving
       disputes, and administering justice as part of the judicial system
     aliases:
-      - Judicial Organisation
+    - Judicial Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:JudicialOrganisation
-      - dpv_owl:JudicialOrganisation
+    - dpv_upstream:JudicialOrganisation
+    - dpv_owl:JudicialOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1294,36 +1302,36 @@ classes:
       An organisation that is an agency responsible for enforcing laws,
       maintaining public order, and ensuring public safety
     aliases:
-      - Law Enforcement Organisation
+    - Law Enforcement Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:LawEnforcementOrganisation
-      - dpv_owl:LawEnforcementOrganisation
+    - dpv_upstream:LawEnforcementOrganisation
+    - dpv_owl:LawEnforcementOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
   LegalAgent:
     is_a: DpvAgent
     mixins:
-      - LegalEntity
+    - LegalEntity
     class_uri: dpv:LegalAgent
     description: |-
       A Legal Agent is a Legal Entity that is authorised to act on behalf of
       another entity
     aliases:
-      - Legal Agent
+    - Legal Agent
     comments:
-      - |-
-        Legal agents may be human or non-human (e.g. an organisation), but they
-        must be 'legal persons' i.e. recognised by law as such. The agency and
-        the mechanisms through which it is given, acquired, or expressed is
-        governed by relevant jurisdictional frameworks e.g. power of attorney
+    - |-
+      Legal agents may be human or non-human (e.g. an organisation), but they
+      must be 'legal persons' i.e. recognised by law as such. The agency and
+      the mechanisms through which it is given, acquired, or expressed is
+      governed by relevant jurisdictional frameworks e.g. power of attorney
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:LegalAgent
-      - dpv_owl:LegalAgent
+    - dpv_upstream:LegalAgent
+    - dpv_owl:LegalAgent
     annotations:
       skos_in_scheme: entities-classes
 
@@ -1334,78 +1342,81 @@ classes:
       A human or non-human 'thing' that constitutes as an entity and which is
       recognised and defined in law
     aliases:
-      - Legal Entity
+    - Legal Entity
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:LegalEntity
-      - dpv_owl:LegalEntity
-      - common_domain_model:LegalEntity
-    close_mappings:
-      - gists:Organization
-      - ocsf:Organization
-      - oscal:Party
+    - dpv_upstream:LegalEntity
+    - dpv_owl:LegalEntity
+    - common_domain_model:LegalEntity
     annotations:
       skos_in_scheme: entities-classes
 
+    close_mappings:
+    - gists:Organization
+    - ocsf:Organization
+    - oscal:Party
   Member:
     is_a: HumanSubject
     class_uri: dpv:Member
-    description: Humans that are members of a group, organisation, or other collectives
+    description: Humans that are members of a group, organisation, or other 
+      collectives
     aliases:
-      - Member
+    - Member
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Member
-      - dpv_owl:Member
+    - dpv_upstream:Member
+    - dpv_owl:Member
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   MentallyVulnerableDataSubject:
     is_a: MentallyVulnerableHuman
     mixins:
-      - HumanSubject
-      - VulnerableDataSubject
+    - HumanSubject
+    - VulnerableDataSubject
     class_uri: dpv:MentallyVulnerableDataSubject
     description: Data subjects that are considered mentally vulnerable
     aliases:
-      - Mentally Vulnerable Data Subject
+    - Mentally Vulnerable Data Subject
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:MentallyVulnerableDataSubject
-      - dpv_owl:MentallyVulnerableDataSubject
+    - dpv_upstream:MentallyVulnerableDataSubject
+    - dpv_owl:MentallyVulnerableDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   MentallyVulnerableHuman:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:MentallyVulnerableHuman
-    description: Humans that are considered mentally vulnerable within the context
+    description: Humans that are considered mentally vulnerable within the 
+      context
     aliases:
-      - Mentally Vulnerable Human
+    - Mentally Vulnerable Human
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:MentallyVulnerableHuman
-      - dpv_owl:MentallyVulnerableHuman
+    - dpv_upstream:MentallyVulnerableHuman
+    - dpv_owl:MentallyVulnerableHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   NationalAuthority:
     is_a: DpvAuthority
     class_uri: dpv:NationalAuthority
-    description: An authority tasked with overseeing legal compliance for a nation
+    description: An authority tasked with overseeing legal compliance for a 
+      nation
     aliases:
-      - National Authority
+    - National Authority
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:NationalAuthority
-      - dpv_owl:NationalAuthority
+    - dpv_upstream:NationalAuthority
+    - dpv_owl:NationalAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
@@ -1414,32 +1425,32 @@ classes:
     class_uri: dpv:NaturalPerson
     description: A human
     aliases:
-      - Natural Person
+    - Natural Person
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:NaturalPerson
-      - dpv_owl:NaturalPerson
-      - common_domain_model:NaturalPerson
-      - gists:Person
-    close_mappings:
-      - ocsf:User
-    narrow_mappings:
-      - oscal:Party
+    - dpv_upstream:NaturalPerson
+    - dpv_owl:NaturalPerson
+    - common_domain_model:NaturalPerson
+    - gists:Person
     annotations:
       skos_in_scheme: entities-classes
 
+    close_mappings:
+    - ocsf:User
+    narrow_mappings:
+    - oscal:Party
   NonCitizen:
     is_a: HumanSubject
     class_uri: dpv:NonCitizen
     description: Humans that are not citizens (for a jurisdiction)
     aliases:
-      - Non-Citizen
+    - Non-Citizen
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:NonCitizen
-      - dpv_owl:NonCitizen
+    - dpv_upstream:NonCitizen
+    - dpv_owl:NonCitizen
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1448,12 +1459,12 @@ classes:
     class_uri: dpv:NonGovernmentalOrganisation
     description: An organisation not part of or independent from the government
     aliases:
-      - Non-Governmental Organisation
+    - Non-Governmental Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:NonGovernmentalOrganisation
-      - dpv_owl:NonGovernmentalOrganisation
+    - dpv_upstream:NonGovernmentalOrganisation
+    - dpv_owl:NonGovernmentalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1463,12 +1474,12 @@ classes:
     description: |-
       An organisation that does not aim to achieve profit as its primary goal
     aliases:
-      - Non-Profit Organisation
+    - Non-Profit Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:NonProfitOrganisation
-      - dpv_owl:NonProfitOrganisation
+    - dpv_upstream:NonProfitOrganisation
+    - dpv_owl:NonProfitOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1479,20 +1490,20 @@ classes:
       Entity within an organisation that does not constitute as a separate
       legal entity
     aliases:
-      - Organisational Unit
+    - Organisational Unit
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:OrganisationalUnit
-      - dpv_owl:OrganisationalUnit
-    close_mappings:
-      - common_domain_model:BusinessUnit
-      - iso27001:Organization
-    narrow_mappings:
-      - gists:Organization
+    - dpv_upstream:OrganisationalUnit
+    - dpv_owl:OrganisationalUnit
     annotations:
       skos_in_scheme: entities-organisation-classes
 
+    close_mappings:
+    - common_domain_model:BusinessUnit
+    - iso27001:Organization
+    narrow_mappings:
+    - gists:Organization
   ParentLegalEntity:
     is_a: DpvOrganisation
     class_uri: dpv:ParentLegalEntity
@@ -1500,28 +1511,28 @@ classes:
       A legal entity that has one or more subsidiary entities operating under
       it
     aliases:
-      - Parent Legal Entity
+    - Parent Legal Entity
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ParentLegalEntity
-      - dpv_owl:ParentLegalEntity
+    - dpv_upstream:ParentLegalEntity
+    - dpv_owl:ParentLegalEntity
     annotations:
       skos_in_scheme: entities-classes
 
   ParentOfDataSubject:
     is_a: ParentOfHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:ParentOfDataSubject
     description: Parent(s) of data subjects such as children
     aliases:
-      - Parent(s) of Data Subject
+    - Parent(s) of Data Subject
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ParentOfDataSubject
-      - dpv_owl:ParentOfDataSubject
+    - dpv_upstream:ParentOfDataSubject
+    - dpv_owl:ParentOfDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1530,12 +1541,12 @@ classes:
     class_uri: dpv:ParentOfHuman
     description: Parent(s) of humans
     aliases:
-      - Parent of Human
+    - Parent of Human
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ParentOfHuman
-      - dpv_owl:ParentOfHuman
+    - dpv_upstream:ParentOfHuman
+    - dpv_owl:ParentOfHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1545,12 +1556,12 @@ classes:
     description: |-
       Humans that participate in some context such as volunteers in a function
     aliases:
-      - Participant
+    - Participant
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Participant
-      - dpv_owl:Participant
+    - dpv_upstream:Participant
+    - dpv_owl:Participant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1561,26 +1572,27 @@ classes:
       Humans that receive medical attention, treatment, care, advice, or other
       health related services
     aliases:
-      - Patient
+    - Patient
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Patient
-      - dpv_owl:Patient
+    - dpv_upstream:Patient
+    - dpv_owl:Patient
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   PrivateSectorBody:
     is_a: LegalEntity
     class_uri: dpv:PrivateSectorBody
-    description: An organisation owned and operated by private individuals or companies
+    description: An organisation owned and operated by private individuals or 
+      companies
     aliases:
-      - Private Sector Body
+    - Private Sector Body
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:PrivateSectorBody
-      - dpv_owl:PrivateSectorBody
+    - dpv_upstream:PrivateSectorBody
+    - dpv_owl:PrivateSectorBody
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1591,12 +1603,12 @@ classes:
       A publicly available list of entities e.g. to indicate which entities
       perform a certain activity within a certain location or jurisdiction
     aliases:
-      - Public Register of Entities
+    - Public Register of Entities
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:PublicRegisterOfEntities
-      - dpv_owl:PublicRegisterOfEntities
+    - dpv_upstream:PublicRegisterOfEntities
+    - dpv_owl:PublicRegisterOfEntities
     annotations:
       skos_in_scheme: entities-classes
 
@@ -1607,26 +1619,27 @@ classes:
       A government-controlled organisation that provides services or goods to
       the public
     aliases:
-      - Public Sector Body
+    - Public Sector Body
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:PublicSectorBody
-      - dpv_owl:PublicSectorBody
+    - dpv_upstream:PublicSectorBody
+    - dpv_owl:PublicSectorBody
     annotations:
       skos_in_scheme: entities-organisation-classes
 
   RegionalAuthority:
     is_a: DpvAuthority
     class_uri: dpv:RegionalAuthority
-    description: An authority tasked with overseeing legal compliance for a region
+    description: An authority tasked with overseeing legal compliance for a 
+      region
     aliases:
-      - Regional Authority
+    - Regional Authority
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:RegionalAuthority
-      - dpv_owl:RegionalAuthority
+    - dpv_upstream:RegionalAuthority
+    - dpv_owl:RegionalAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
@@ -1637,12 +1650,12 @@ classes:
       An organisations that supports the practice, promotion, and management
       of religious activities and beliefs
     aliases:
-      - Religious Associations
+    - Religious Associations
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ReligiousAssociations
-      - dpv_owl:ReligiousAssociations
+    - dpv_upstream:ReligiousAssociations
+    - dpv_owl:ReligiousAssociations
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1651,16 +1664,16 @@ classes:
     class_uri: dpv:Representative
     description: A representative of a legal entity
     aliases:
-      - Representative
+    - Representative
     comments:
-      - |-
-        A representative may not be a 'legal agent' if it is authorised to only
-        represent the entity and not to take actions on its behalf
+    - |-
+      A representative may not be a 'legal agent' if it is authorised to only
+      represent the entity and not to take actions on its behalf
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Representative
-      - dpv_owl:Representative
+    - dpv_upstream:Representative
+    - dpv_owl:Representative
     annotations:
       skos_in_scheme: entities-classes
 
@@ -1671,12 +1684,12 @@ classes:
       An organisation that is characterised as a Small or Medium-sized
       Enterprise based on limited staff and revenue
     aliases:
-      - SME Organisation
+    - SME Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:SMEOrganisation
-      - dpv_owl:SMEOrganisation
+    - dpv_upstream:SMEOrganisation
+    - dpv_owl:SMEOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1685,12 +1698,12 @@ classes:
     class_uri: dpv:ServiceConsumer
     description: The entity that consumes or receives the service
     aliases:
-      - Service Consumer
+    - Service Consumer
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ServiceConsumer
-      - dpv_owl:ServiceConsumer
+    - dpv_upstream:ServiceConsumer
+    - dpv_owl:ServiceConsumer
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -1699,12 +1712,12 @@ classes:
     class_uri: dpv:ServiceProvider
     description: The entity that provides a service
     aliases:
-      - Service Provider
+    - Service Provider
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ServiceProvider
-      - dpv_owl:ServiceProvider
+    - dpv_upstream:ServiceProvider
+    - dpv_owl:ServiceProvider
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -1715,12 +1728,12 @@ classes:
       An organisation that is newly established and is nascent in terms of
       available resources
     aliases:
-      - Startup Organisation
+    - Startup Organisation
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:StartupOrganisation
-      - dpv_owl:StartupOrganisation
+    - dpv_upstream:StartupOrganisation
+    - dpv_owl:StartupOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -1729,12 +1742,12 @@ classes:
     class_uri: dpv:Student
     description: Humans that are students
     aliases:
-      - Student
+    - Student
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Student
-      - dpv_owl:Student
+    - dpv_upstream:Student
+    - dpv_owl:Student
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1743,28 +1756,29 @@ classes:
     class_uri: dpv:Subscriber
     description: Humans that subscribe to service(s)
     aliases:
-      - Subscriber
+    - Subscriber
     comments:
-      - 'note: subscriber can be customer or consumer'
+    - 'note: subscriber can be customer or consumer'
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Subscriber
-      - dpv_owl:Subscriber
+    - dpv_upstream:Subscriber
+    - dpv_owl:Subscriber
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   SubsidiaryLegalEntity:
     is_a: DpvOrganisation
     class_uri: dpv:SubsidiaryLegalEntity
-    description: A legal entity that operates as a subsidiary of another legal entity
+    description: A legal entity that operates as a subsidiary of another legal 
+      entity
     aliases:
-      - Subsidiary Legal Entity
+    - Subsidiary Legal Entity
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:SubsidiaryLegalEntity
-      - dpv_owl:SubsidiaryLegalEntity
+    - dpv_upstream:SubsidiaryLegalEntity
+    - dpv_owl:SubsidiaryLegalEntity
     annotations:
       skos_in_scheme: entities-classes
 
@@ -1775,12 +1789,12 @@ classes:
       An authority tasked with overseeing legal compliance for a
       supra-national union e.g. EU
     aliases:
-      - Supranational Authority
+    - Supranational Authority
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:SupraNationalAuthority
-      - dpv_owl:SupraNationalAuthority
+    - dpv_upstream:SupraNationalAuthority
+    - dpv_owl:SupraNationalAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
@@ -1792,39 +1806,39 @@ classes:
       entities directly involved or operating under those directly involved in
       a process
     aliases:
-      - Third Party
+    - Third Party
     comments:
-      - |-
-        Third Party in the context of personal data processing are entities
-        other than the data subject, controllers, processors, and authorities
+    - |-
+      Third Party in the context of personal data processing are entities
+      other than the data subject, controllers, processors, and authorities
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:ThirdParty
-      - dpv_owl:ThirdParty
-      - iso29100:ThirdParty
-    close_mappings:
-      - common_domain_model:RelatedParty
-      - iso27001:InterestedParty
-      - iso42001:ThirdPartyRelationship
-    narrow_mappings:
-      - gists:Organization
-    related_mappings:
-      - ocsf:Actor
+    - dpv_upstream:ThirdParty
+    - dpv_owl:ThirdParty
+    - iso29100:ThirdParty
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    close_mappings:
+    - common_domain_model:RelatedParty
+    - iso27001:InterestedParty
+    - iso42001:ThirdPartyRelationship
+    narrow_mappings:
+    - gists:Organization
+    related_mappings:
+    - ocsf:Actor
   Tourist:
     is_a: HumanSubject
     class_uri: dpv:Tourist
     description: Humans that are tourists i.e. not citizens and not immigrants
     aliases:
-      - Tourist
+    - Tourist
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Tourist
-      - dpv_owl:Tourist
+    - dpv_upstream:Tourist
+    - dpv_owl:Tourist
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -1833,49 +1847,50 @@ classes:
     class_uri: dpv:Visitor
     description: Humans that are temporary visitors
     aliases:
-      - Visitor
+    - Visitor
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:Visitor
-      - dpv_owl:Visitor
+    - dpv_upstream:Visitor
+    - dpv_owl:Visitor
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   VulnerableDataSubject:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:VulnerableDataSubject
     description: |-
       Humans which should be considered 'vulnerable' and therefore would
       require additional measures and safeguards
     aliases:
-      - Vulnerable Data Subject
+    - Vulnerable Data Subject
     comments:
-      - |-
-        This concept denotes a Data Subject or a group are vulnerable, but not
-        what vulnerability they possess or its context. This information can be
-        provided additionally as comments, or as separate concepts and
-        relations. Proposals for this are welcome.
+    - |-
+      This concept denotes a Data Subject or a group are vulnerable, but not
+      what vulnerability they possess or its context. This information can be
+      provided additionally as comments, or as separate concepts and
+      relations. Proposals for this are welcome.
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:VulnerableDataSubject
-      - dpv_owl:VulnerableDataSubject
+    - dpv_upstream:VulnerableDataSubject
+    - dpv_owl:VulnerableDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   VulnerableHuman:
     is_a: HumanSubject
     class_uri: dpv:VulnerableHuman
-    description: Human(s) which should be considered 'vulnerable' within the context
+    description: Human(s) which should be considered 'vulnerable' within the 
+      context
     aliases:
-      - Vulnerable Human
+    - Vulnerable Human
     in_subset:
-      - entities_subset
+    - entities_subset
     exact_mappings:
-      - dpv_upstream:VulnerableHuman
-      - dpv_owl:VulnerableHuman
+    - dpv_upstream:VulnerableHuman
+    - dpv_owl:VulnerableHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes

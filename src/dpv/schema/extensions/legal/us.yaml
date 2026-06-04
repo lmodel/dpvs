@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -87,6 +87,7 @@ classes:
       - DPA-US-CA
       - California Privacy Protection Agency (CPPA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:DPA-US-CA
@@ -104,6 +105,7 @@ classes:
       - DPA-US-CO
       - Colorado Attorney General
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:DPA-US-CO
@@ -121,6 +123,7 @@ classes:
       - DPA-US-CT
       - Connecticut Attorney General
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:DPA-US-CT
@@ -138,6 +141,7 @@ classes:
       - DPA-US-NV
       - Nevada Attorney General
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:DPA-US-NV
@@ -155,6 +159,7 @@ classes:
       - DPA-US-UT
       - Utah Attorney General
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:DPA-US-UT
@@ -172,6 +177,7 @@ classes:
       - DPA-US-VA
       - Virginia Attorney General
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:DPA-US-VA
@@ -187,6 +193,7 @@ classes:
       - law-CA-CCPA
       - California Consumer Privacy Act (CCPA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-CA-CCPA
@@ -202,6 +209,7 @@ classes:
       - law-CA-CPRA
       - California Privacy Rights Act (CPRA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-CA-CPRA
@@ -217,6 +225,7 @@ classes:
       - law-CO-CPA
       - Colorado Privacy Act (CPA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-CO-CPA
@@ -232,6 +241,7 @@ classes:
       - law-CT-CTPA
       - Connecticut Data Privacy Act (CTPA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-CT-CTPA
@@ -249,6 +259,7 @@ classes:
         Nevada Privacy of Information Collected on the Internet from Consumers
         Act (NPICICA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-NV-NPICICA
@@ -264,6 +275,7 @@ classes:
       - law-UT-UCPA
       - Utah Consumer Privacy Act (UCPA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-UT-UCPA
@@ -279,6 +291,7 @@ classes:
       - law-VA-VCDPA
       - Virginia Consumer Data Protection Act (VCDPA)
     in_subset:
+      - legal_us_us_subset
       - legal_us_subset
     exact_mappings:
       - dpv_legal_us:law-VA-VCDPA

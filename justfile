@@ -57,7 +57,7 @@ dest := "project"
 pymodel := src / schema_name / "datamodel"
 source_schema_path := source_schema_dir / schema_name + ".yaml"
 # Pre-merged, self-contained schema used as input to `gen-project`. See
-# `_merged-schema` recipe and `scripts/merge_linkml_schema.py` for the rationale: the
+# `_merged-schema` recipe and `scripts/linkml_import_tools.py` for the rationale: the
 # SchemaLoader-based sub-generators inside gen-project (python/sqltable/excel)
 # leak unresolved URI imports into a secondary SchemaView that ignores the
 # import map, so we must feed them a schema whose `imports:` list is empty.
@@ -251,11 +251,11 @@ _importmap:
 # (python/sqltable/excel) construct a secondary SchemaView from the merged
 # schema *without* propagating `--importmap`, so any unresolved URI imports
 # in the merged schema's `imports:` list get HTTP-fetched and fail.
-# `scripts/merge_linkml_schema.py` resolves imports up-front and strips them.
+# `scripts/linkml_import_tools.py merge` resolves imports up-front and strips them.
 # Depends on `apply-sssom-overlay` so the source schemas exist (and carry
 # the curated mappings) before we try to flatten them.
 _merged-schema: _importmap apply-sssom-overlay
-  uv run python scripts/merge_linkml_schema.py {{source_schema_path}} \
+  uv run python scripts/linkml_import_tools.py merge {{source_schema_path}} \
     --importmap {{import_map_path}} \
     --output {{merged_schema_path}}
 
@@ -302,12 +302,12 @@ _test-python: gen-python _gen-fixtures
 # every domain-less DPV slot (`has_location`, `is_subsidiary_of`, ...) on
 # every concrete class -- even though the dpv schema deliberately attaches
 # those slots to `DpvThing` rather than to a specific class (open-world).
-# `scripts/run_examples_open_world.py` is a drop-in wrapper that uses the
+# `tests/run_examples_open_world.py` is a drop-in wrapper that uses the
 # same `Validator` machinery in open-world mode, matching `tests/test_data.py`
 # and the documented design in `docs/about.md`. See `ISSUE.md` for the
 # upstream gap.
 _test-examples: _ensure_examples_output _merged-schema
-  uv run python scripts/run_examples_open_world.py \
+  uv run python tests/run_examples_open_world.py \
     --schema {{merged_schema_path}} \
     --input-directory tests/data/dpvcg/valid \
     --counter-example-input-directory tests/data/dpvcg/invalid \

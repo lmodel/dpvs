@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -92,6 +92,7 @@ classes:
     aliases:
       - Crime Arrest Detention
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeArrestDetention
@@ -110,6 +111,7 @@ classes:
     aliases:
       - Crime Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeDetection
@@ -129,6 +131,7 @@ classes:
     aliases:
       - Crime Investigation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeInvestigation
@@ -149,6 +152,7 @@ classes:
     aliases:
       - Crime Prosecution
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeProsecution
@@ -169,6 +173,7 @@ classes:
     aliases:
       - Crime Surveillance
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeSurveillance
@@ -188,6 +193,7 @@ classes:
     aliases:
       - Crime Victim Counselling Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeVictimCounsellingManagement
@@ -207,6 +213,7 @@ classes:
     aliases:
       - Crime Victim Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeVictimPrediction
@@ -227,6 +234,7 @@ classes:
     aliases:
       - Crime Victim Restitution Support
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeVictimRestitutionSupport
@@ -246,6 +254,7 @@ classes:
     aliases:
       - Crime Victim Safety Assessment
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeVictimSafetyAssessment
@@ -265,6 +274,7 @@ classes:
     aliases:
       - Crime Victim Safety Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeVictimSafetyManagement
@@ -284,6 +294,7 @@ classes:
     aliases:
       - Crime Victim Safety Provision
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CrimeVictimSafetyProvision
@@ -303,6 +314,7 @@ classes:
     aliases:
       - Criminal Behaviour Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CriminalBehaviourDetection
@@ -322,6 +334,7 @@ classes:
     aliases:
       - Criminal Law Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:CriminalLawEnforcement
@@ -343,6 +356,7 @@ classes:
     aliases:
       - Immigration Application Assessment
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationApplicationAssessment
@@ -362,6 +376,7 @@ classes:
     aliases:
       - Immigration Application Collection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationApplicationCollection
@@ -381,6 +396,7 @@ classes:
     aliases:
       - Immigration Application Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationApplicationManagement
@@ -400,6 +416,7 @@ classes:
     aliases:
       - Immigration Application Screening
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationApplicationScreening
@@ -421,6 +438,7 @@ classes:
     aliases:
       - Immigration Asylum Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationAsylumManagement
@@ -438,6 +456,7 @@ classes:
     aliases:
       - Immigration Border Control Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationBorderControlManagement
@@ -457,6 +476,7 @@ classes:
     aliases:
       - Immigration Border Document Verification
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationBorderDocumentVerification
@@ -477,6 +497,7 @@ classes:
     aliases:
       - Immigration Border Identity Verification
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationBorderIdentityVerification
@@ -497,6 +518,7 @@ classes:
     aliases:
       - Immigration Claim Verification
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationClaimVerification
@@ -516,6 +538,7 @@ classes:
     aliases:
       - Immigration Complaint Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationComplaintManagement
@@ -535,6 +558,7 @@ classes:
     aliases:
       - Immigration Decision Communication
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationDecisionCommunication
@@ -554,6 +578,7 @@ classes:
     aliases:
       - Immigration Document Verification
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationDocumentVerification
@@ -573,6 +598,7 @@ classes:
     aliases:
       - Immigration Eligibility Assessment
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationEligibilityAssessment
@@ -592,6 +618,7 @@ classes:
     aliases:
       - Immigration Expired Permit Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationExpiredPermitManagement
@@ -611,6 +638,7 @@ classes:
     aliases:
       - Immigration Fraud Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationFraudManagement
@@ -630,6 +658,7 @@ classes:
     aliases:
       - Immigration Health Risk Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationHealthRiskDetection
@@ -649,6 +678,7 @@ classes:
     aliases:
       - Immigration Health Risk Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationHealthRiskManagement
@@ -668,6 +698,7 @@ classes:
     aliases:
       - Immigration Health Risk Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationHealthRiskPrediction
@@ -688,6 +719,7 @@ classes:
     aliases:
       - Immigration Identity Verification
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationIdentityVerification
@@ -707,6 +739,7 @@ classes:
     aliases:
       - Immigration Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationManagement
@@ -728,6 +761,7 @@ classes:
     aliases:
       - Immigration Migration Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationMigrationManagement
@@ -747,6 +781,7 @@ classes:
     aliases:
       - Immigration Request Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationRequestManagement
@@ -768,6 +803,7 @@ classes:
     aliases:
       - Immigration Residency Permit Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationResidencyPermitManagement
@@ -788,6 +824,7 @@ classes:
     aliases:
       - Immigration Security Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationSecurityManagement
@@ -809,6 +846,7 @@ classes:
     aliases:
       - Immigration Transit Permit Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationTransitPermitManagement
@@ -830,6 +868,7 @@ classes:
     aliases:
       - Immigration Visa Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationVisaManagement
@@ -851,6 +890,7 @@ classes:
     aliases:
       - Immigration Work Authorisation Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ImmigrationWorkAuthorisationManagement
@@ -870,6 +910,7 @@ classes:
     aliases:
       - Judicial Case Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JudicialCaseManagement
@@ -890,6 +931,7 @@ classes:
     aliases:
       - Judicial Decision Making
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JudicialDecisionMaking
@@ -910,6 +952,7 @@ classes:
     aliases:
       - Judicial Dispute Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JudicialDisputeManagement
@@ -929,6 +972,7 @@ classes:
     aliases:
       - Judicial Legal Interpretation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JudicialLegalInterpretation
@@ -946,6 +990,7 @@ classes:
     aliases:
       - Judicial Record Keeping
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JudicialRecordKeeping
@@ -965,6 +1010,7 @@ classes:
     aliases:
       - Judicial System Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JudicialSystemManagement
@@ -982,6 +1028,7 @@ classes:
     aliases:
       - Justice Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:JusticeManagement
@@ -999,6 +1046,7 @@ classes:
     aliases:
       - Law Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LawEnforcement
@@ -1018,6 +1066,7 @@ classes:
     aliases:
       - Legal Aid Provision
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalAidProvision
@@ -1037,6 +1086,7 @@ classes:
     aliases:
       - Legal Complaint Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalComplaintManagement
@@ -1056,6 +1106,7 @@ classes:
     aliases:
       - Legal Evidence Collection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalEvidenceCollection
@@ -1075,6 +1126,7 @@ classes:
     aliases:
       - Legal Evidence Eligibility Assessment
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalEvidenceEligibilityAssessment
@@ -1094,6 +1146,7 @@ classes:
     aliases:
       - Legal Evidence Interpretation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalEvidenceInterpretation
@@ -1114,6 +1167,7 @@ classes:
     aliases:
       - Legal First Offence Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalFirstOffencePrediction
@@ -1133,6 +1187,7 @@ classes:
     aliases:
       - Legal Institutional Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalInstitutionalManagement
@@ -1152,6 +1207,7 @@ classes:
     aliases:
       - Legal Interrogation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalInterrogation
@@ -1169,6 +1225,7 @@ classes:
     aliases:
       - Legal Investigation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalInvestigation
@@ -1188,6 +1245,7 @@ classes:
     aliases:
       - Legal Offence Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalOffenceDetection
@@ -1208,6 +1266,7 @@ classes:
     aliases:
       - Legal Offence Pattern Analysis
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalOffencePatternAnalysis
@@ -1228,6 +1287,7 @@ classes:
     aliases:
       - Legal Offence Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalOffencePrediction
@@ -1247,6 +1307,7 @@ classes:
     aliases:
       - Legal Offence Prosecution
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalOffenceProsecution
@@ -1267,6 +1328,7 @@ classes:
     aliases:
       - Legal Offence Surveillance
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalOffenceSurveillance
@@ -1287,6 +1349,7 @@ classes:
     aliases:
       - Legal Repeat Offence Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalRepeatOffencePrediction
@@ -1306,6 +1369,7 @@ classes:
     aliases:
       - Legal Research Development
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalResearchDevelopment
@@ -1326,6 +1390,7 @@ classes:
     aliases:
       - Legal Suspected Offence Investigation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:LegalSuspectedOffenceInvestigation
@@ -1345,6 +1410,7 @@ classes:
     aliases:
       - Prison Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:PrisonManagement
@@ -1364,31 +1430,13 @@ classes:
     aliases:
       - Probation Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:ProbationManagement
       - dpv_sector_law_owl:ProbationManagement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/law/owl#ProbationManagement
-      dpv_extension_slug: sector/law
-
-  PublicTransportFraudManagement:
-    is_a: PublicTransportLawEnforcement
-    mixins:
-      - Purpose
-    class_uri: sector_law:PublicTransportFraudManagement
-    description: |-
-      Purposes associated with fraud prevention and detection and management
-      related to public transport infrastructure and services
-    aliases:
-      - Public Transport Fraud Management
-    in_subset:
-      - sector_law_subset
-    exact_mappings:
-      - dpv_sector_law:PublicTransportFraudManagement
-      - dpv_sector_law_owl:PublicTransportFraudManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/law/owl#PublicTransportFraudManagement
       dpv_extension_slug: sector/law
 
   PublicTransportLawEnforcement:
@@ -1402,6 +1450,7 @@ classes:
     aliases:
       - Public Transport Law Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:PublicTransportLawEnforcement
@@ -1421,6 +1470,7 @@ classes:
     aliases:
       - Public Transport Safety Monitoring
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:PublicTransportSafetyMonitoring
@@ -1440,6 +1490,7 @@ classes:
     aliases:
       - Public Transport Violation Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:PublicTransportViolationDetection
@@ -1461,6 +1512,7 @@ classes:
     aliases:
       - Recidivism Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RecidivismPrediction
@@ -1480,6 +1532,7 @@ classes:
     aliases:
       - Rehabilitation Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RehabilitationManagement
@@ -1499,6 +1552,7 @@ classes:
     aliases:
       - Road DUIEnforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadDUIEnforcement
@@ -1518,6 +1572,7 @@ classes:
     aliases:
       - Road Parking Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadParkingEnforcement
@@ -1537,6 +1592,7 @@ classes:
     aliases:
       - Road Speed Limit Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadSpeedLimitEnforcement
@@ -1557,6 +1613,7 @@ classes:
     aliases:
       - Road Toll Violation Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTollViolationDetection
@@ -1576,6 +1633,7 @@ classes:
     aliases:
       - Road Traffic Law Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficLawEnforcement
@@ -1595,6 +1653,7 @@ classes:
     aliases:
       - Road Traffic Law Violation Communication
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficLawViolationCommunication
@@ -1615,6 +1674,7 @@ classes:
     aliases:
       - Road Traffic Law Violation Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficLawViolationDetection
@@ -1634,6 +1694,7 @@ classes:
     aliases:
       - Road Traffic Law Violation Fine Assessment
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficLawViolationFineAssessment
@@ -1654,6 +1715,7 @@ classes:
     aliases:
       - Road Traffic Law Violation Fine Collection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficLawViolationFineCollection
@@ -1674,6 +1736,7 @@ classes:
     aliases:
       - Road Traffic Rule Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficRuleEnforcement
@@ -1693,6 +1756,7 @@ classes:
     aliases:
       - Road Traffic Signal Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadTrafficSignalEnforcement
@@ -1712,6 +1776,7 @@ classes:
     aliases:
       - Road Vehicle Certification Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadVehicleCertificationEnforcement
@@ -1732,6 +1797,7 @@ classes:
     aliases:
       - Road Vehicle Emission Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadVehicleEmissionEnforcement
@@ -1751,6 +1817,7 @@ classes:
     aliases:
       - Road Vehicle Insurance Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadVehicleInsuranceEnforcement
@@ -1770,12 +1837,34 @@ classes:
     aliases:
       - Road Vehicle Registration Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:RoadVehicleRegistrationEnforcement
       - dpv_sector_law_owl:RoadVehicleRegistrationEnforcement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/law/owl#RoadVehicleRegistrationEnforcement
+      dpv_extension_slug: sector/law
+
+  SectorLawPublicTransportFraudManagement:
+    is_a: PublicTransportLawEnforcement
+    mixins:
+      - Purpose
+    class_uri: sector_law:PublicTransportFraudManagement
+    description: |-
+      Purposes associated with fraud prevention and detection and management
+      related to public transport infrastructure and services
+    aliases:
+      - PublicTransportFraudManagement
+      - Public Transport Fraud Management
+    in_subset:
+      - sector_law_purposes_subset
+      - sector_law_subset
+    exact_mappings:
+      - dpv_sector_law:PublicTransportFraudManagement
+      - dpv_sector_law_owl:PublicTransportFraudManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/law/owl#PublicTransportFraudManagement
       dpv_extension_slug: sector/law
 
   SuspectedCrimeInvestigation:
@@ -1790,6 +1879,7 @@ classes:
     aliases:
       - Suspected Crime Investigation
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:SuspectedCrimeInvestigation
@@ -1810,6 +1900,7 @@ classes:
     aliases:
       - Suspected Criminal Behaviour Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:SuspectedCriminalBehaviourDetection
@@ -1830,6 +1921,7 @@ classes:
     aliases:
       - Transport Law Enforcement
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:TransportLawEnforcement
@@ -1849,6 +1941,7 @@ classes:
     aliases:
       - Unauthorised Migration Detection
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:UnauthorisedMigrationDetection
@@ -1868,6 +1961,7 @@ classes:
     aliases:
       - Unauthorised Migration Management
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:UnauthorisedMigrationManagement
@@ -1887,6 +1981,7 @@ classes:
     aliases:
       - Unauthorised Migration Prediction
     in_subset:
+      - sector_law_purposes_subset
       - sector_law_subset
     exact_mappings:
       - dpv_sector_law:UnauthorisedMigrationPrediction

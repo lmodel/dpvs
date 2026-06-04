@@ -6,8 +6,8 @@ description: |-
   (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -59,17 +59,18 @@ slots:
 
   has_consequence:
     definition_uri: dpv:hasConsequence
-    description: Indicates consequence(s) possible or arising from specified concept
+    description: Indicates consequence(s) possible or arising from specified 
+      concept
     aliases:
-      - has consequence
+    - has consequence
     comments:
-      - Removed plural suffix for consistency
+    - Removed plural suffix for consistency
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasConsequence
-      - dpv_owl:hasConsequence
+    - dpv_upstream:hasConsequence
+    - dpv_owl:hasConsequence
     annotations:
       skos_in_scheme: risk-properties
 
@@ -79,13 +80,13 @@ slots:
       Indicates the thing (e.g. plan, process, or entity) affected by a
       consequence
     aliases:
-      - has consequence on
+    - has consequence on
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasConsequenceOn
-      - dpv_owl:hasConsequenceOn
+    - dpv_upstream:hasConsequenceOn
+    - dpv_owl:hasConsequenceOn
     annotations:
       skos_in_scheme: risk-properties
 
@@ -96,28 +97,29 @@ slots:
       Indicates impact(s) possible or arising as consequences from specified
       concept
     aliases:
-      - has impact
+    - has impact
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasImpact
-      - dpv_owl:hasImpact
+    - dpv_upstream:hasImpact
+    - dpv_owl:hasImpact
     annotations:
       skos_in_scheme: risk-properties
 
   has_impact_assessment:
     is_a: has_assessment
     definition_uri: dpv:hasImpactAssessment
-    description: Indicates an impact assessment associated with the specific context
+    description: Indicates an impact assessment associated with the specific 
+      context
     aliases:
-      - has impact assessment
+    - has impact assessment
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasImpactAssessment
-      - dpv_owl:hasImpactAssessment
+    - dpv_upstream:hasImpactAssessment
+    - dpv_owl:hasImpactAssessment
     annotations:
       skos_in_scheme: risk-properties
 
@@ -128,13 +130,13 @@ slots:
       Indicates the thing (e.g. plan, process, or entity) affected by an
       impact
     aliases:
-      - has impact on
+    - has impact on
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasImpactOn
-      - dpv_owl:hasImpactOn
+    - dpv_upstream:hasImpactOn
+    - dpv_owl:hasImpactOn
     annotations:
       skos_in_scheme: risk-properties
 
@@ -142,13 +144,13 @@ slots:
     definition_uri: dpv:hasLikelihood
     description: Indicates the likelihood associated with a concept
     aliases:
-      - has likelihood
+    - has likelihood
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasLikelihood
-      - dpv_owl:hasLikelihood
+    - dpv_upstream:hasLikelihood
+    - dpv_owl:hasLikelihood
     annotations:
       skos_in_scheme: risk-properties
 
@@ -158,13 +160,13 @@ slots:
       Indicates the associated risk is the remaining or residual risk from
       applying mitigation measures or treatments to this risk
     aliases:
-      - has residual risk
+    - has residual risk
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasResidualRisk
-      - dpv_owl:hasResidualRisk
+    - dpv_upstream:hasResidualRisk
+    - dpv_owl:hasResidualRisk
     annotations:
       skos_in_scheme: risk-properties
 
@@ -172,13 +174,13 @@ slots:
     definition_uri: dpv:hasRisk
     description: Indicates applicability of Risk for this concept
     aliases:
-      - has risk
+    - has risk
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasRisk
-      - dpv_owl:hasRisk
+    - dpv_upstream:hasRisk
+    - dpv_owl:hasRisk
     annotations:
       skos_in_scheme: risk-properties
 
@@ -187,13 +189,13 @@ slots:
     definition_uri: dpv:hasRiskAssessment
     description: Indicates an associated risk assessment
     aliases:
-      - has risk assessment
+    - has risk assessment
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasRiskAssessment
-      - dpv_owl:hasRiskAssessment
+    - dpv_upstream:hasRiskAssessment
+    - dpv_owl:hasRiskAssessment
     annotations:
       skos_in_scheme: risk-properties
 
@@ -201,13 +203,13 @@ slots:
     definition_uri: dpv:hasRiskLevel
     description: Indicates the associated risk level associated with a risk
     aliases:
-      - has risk level
+    - has risk level
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasRiskLevel
-      - dpv_owl:hasRiskLevel
+    - dpv_upstream:hasRiskLevel
+    - dpv_owl:hasRiskLevel
     annotations:
       skos_in_scheme: risk-properties
 
@@ -215,13 +217,13 @@ slots:
     definition_uri: dpv:hasSensitivityLevel
     description: Indicates the associated level of sensitivity
     aliases:
-      - has sensitivity level
+    - has sensitivity level
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasSensitivityLevel
-      - dpv_owl:hasSensitivityLevel
+    - dpv_upstream:hasSensitivityLevel
+    - dpv_owl:hasSensitivityLevel
     annotations:
       skos_in_scheme: risk-properties
 
@@ -229,13 +231,13 @@ slots:
     definition_uri: dpv:hasSeverity
     description: Indicates the severity associated with a concept
     aliases:
-      - has severity
+    - has severity
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:hasSeverity
-      - dpv_owl:hasSeverity
+    - dpv_upstream:hasSeverity
+    - dpv_owl:hasSeverity
     annotations:
       skos_in_scheme: risk-properties
 
@@ -244,13 +246,13 @@ slots:
     definition_uri: dpv:isMitigatedByMeasure
     description: Indicate a risk is mitigated by specified measure
     aliases:
-      - is mitigated by measure
+    - is mitigated by measure
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:isMitigatedByMeasure
-      - dpv_owl:isMitigatedByMeasure
+    - dpv_upstream:isMitigatedByMeasure
+    - dpv_owl:isMitigatedByMeasure
     annotations:
       skos_in_scheme: risk-properties
 
@@ -260,13 +262,13 @@ slots:
       Indicates this risk is the remaining or residual risk from applying
       mitigation measures or treatments to specified risk
     aliases:
-      - is residual risk of
+    - is residual risk of
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:isResidualRiskOf
-      - dpv_owl:isResidualRiskOf
+    - dpv_upstream:isResidualRiskOf
+    - dpv_owl:isResidualRiskOf
     annotations:
       skos_in_scheme: risk-properties
 
@@ -274,13 +276,13 @@ slots:
     definition_uri: dpv:mitigatesRisk
     description: Indicates risks mitigated by this concept
     aliases:
-      - mitigates risk
+    - mitigates risk
     multivalued: true
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:mitigatesRisk
-      - dpv_owl:mitigatesRisk
+    - dpv_upstream:mitigatesRisk
+    - dpv_owl:mitigatesRisk
     annotations:
       skos_in_scheme: risk-properties
 
@@ -291,12 +293,12 @@ classes:
     class_uri: dpv:Consequence
     description: The consequence(s) possible or arising from specified context
     aliases:
-      - Consequence
+    - Consequence
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:Consequence
-      - dpv_owl:Consequence
+    - dpv_upstream:Consequence
+    - dpv_owl:Consequence
     annotations:
       skos_in_scheme: risk-classes
 
@@ -307,12 +309,12 @@ classes:
       The consequence(s) possible or arising as a side-effect of specified
       context
     aliases:
-      - Consequence as Side-Effect
+    - Consequence as Side-Effect
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:ConsequenceAsSideEffect
-      - dpv_owl:ConsequenceAsSideEffect
+    - dpv_upstream:ConsequenceAsSideEffect
+    - dpv_owl:ConsequenceAsSideEffect
     annotations:
       skos_in_scheme: risk-classes
 
@@ -322,12 +324,12 @@ classes:
     description: |-
       The consequence(s) possible or arising from failure of specified context
     aliases:
-      - Consequence of Failure
+    - Consequence of Failure
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:ConsequenceOfFailure
-      - dpv_owl:ConsequenceOfFailure
+    - dpv_upstream:ConsequenceOfFailure
+    - dpv_owl:ConsequenceOfFailure
     annotations:
       skos_in_scheme: risk-classes
 
@@ -337,52 +339,52 @@ classes:
     description: |-
       The consequence(s) possible or arising from success of specified context
     aliases:
-      - Consequence of Success
+    - Consequence of Success
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:ConsequenceOfSuccess
-      - dpv_owl:ConsequenceOfSuccess
+    - dpv_upstream:ConsequenceOfSuccess
+    - dpv_owl:ConsequenceOfSuccess
     annotations:
       skos_in_scheme: risk-classes
 
   CybersecurityAssessment:
     is_a: SecurityAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:CybersecurityAssessment
     description: |-
       Assessment of cybersecurity capabilities in terms of vulnerabilities and
       effectiveness of controls
     aliases:
-      - Cybersecurity Assessment
+    - Cybersecurity Assessment
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:CybersecurityAssessment
-      - dpv_owl:CybersecurityAssessment
+    - dpv_upstream:CybersecurityAssessment
+    - dpv_owl:CybersecurityAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   DPIA:
     is_a: RightsImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DPIA
     description: |-
       Impact assessment determining the potential and actual impact of
       processing activities on individuals or groups of individuals and taking
       into account the impacts of activities on their rights and freedoms
     aliases:
-      - Data Protection Impact Assessment (DPIA)
+    - Data Protection Impact Assessment (DPIA)
     comments:
-      - |-
-        Specific requirements and procedures for DPIA are defined in GDPR Art.35
+    - |-
+      Specific requirements and procedures for DPIA are defined in GDPR Art.35
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:DPIA
-      - dpv_owl:DPIA
+    - dpv_upstream:DPIA
+    - dpv_owl:DPIA
     annotations:
       skos_in_scheme: risk-classes
       dct_source: GDPR Art. 35
@@ -390,61 +392,61 @@ classes:
   DataBreachImpactAssessment:
     is_a: RightsImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DataBreachImpactAssessment
     description: |-
       Impact Assessment concerning the consequences and impacts of a data
       breach
     aliases:
-      - Data Breach Impact Assessment (DBIA)
+    - Data Breach Impact Assessment (DBIA)
     comments:
-      - |-
-        Data Breach assessments can require additional non-security related
-        assessments such as GDPR Art.34 Rights Impact Assessment
+    - |-
+      Data Breach assessments can require additional non-security related
+      assessments such as GDPR Art.34 Rights Impact Assessment
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:DataBreachImpactAssessment
-      - dpv_owl:DataBreachImpactAssessment
+    - dpv_upstream:DataBreachImpactAssessment
+    - dpv_owl:DataBreachImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   DataTransferImpactAssessment:
     is_a: ImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:DataTransferImpactAssessment
     description: Impact Assessment for conducting data transfers
     aliases:
-      - Data Transfer Impact Assessment
+    - Data Transfer Impact Assessment
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:DataTransferImpactAssessment
-      - dpv_owl:DataTransferImpactAssessment
+    - dpv_upstream:DataTransferImpactAssessment
+    - dpv_owl:DataTransferImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
   FRIA:
     is_a: RightsImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:FRIA
     description: |-
       Impact assessment which assesses the potential and actual impact on
       fundamental rights occurring due to processing activities
     aliases:
-      - Fundamental Rights Impact Assessment (FRIA)
+    - Fundamental Rights Impact Assessment (FRIA)
     comments:
-      - |-
-        The fundamental rights and freedoms may be those defined in law or other
-        norms, and may be bound to a jurisdiction - for example see EU Charter
-        of Fundamental Rights
+    - |-
+      The fundamental rights and freedoms may be those defined in law or other
+      norms, and may be bound to a jurisdiction - for example see EU Charter
+      of Fundamental Rights
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:FRIA
-      - dpv_owl:FRIA
+    - dpv_upstream:FRIA
+    - dpv_owl:FRIA
     annotations:
       skos_in_scheme: risk-classes
       dct_source: AI Act Art.27
@@ -456,119 +458,119 @@ classes:
       The impact(s) possible or arising as a consequence from specified
       context
     aliases:
-      - Impact
+    - Impact
     comments:
-      - |-
-        Impact is a stronger notion of consequence in terms of influence,
-        change, or effect on something e.g. for impact assessments
+    - |-
+      Impact is a stronger notion of consequence in terms of influence,
+      change, or effect on something e.g. for impact assessments
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:Impact
-      - dpv_owl:Impact
+    - dpv_upstream:Impact
+    - dpv_owl:Impact
     annotations:
       skos_in_scheme: risk-classes
 
   ImpactAssessment:
     is_a: RiskAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:ImpactAssessment
     description: |-
       Calculating or determining the likelihood of impact of an existing or
       proposed process, which can involve risks or detriments.
     aliases:
-      - Impact Assessment
+    - Impact Assessment
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:ImpactAssessment
-      - dpv_owl:ImpactAssessment
-    close_mappings:
-      - iso42001:AISystemImpactAssessment
-    related_mappings:
-      - nist_ai_rmf:Impact
+    - dpv_upstream:ImpactAssessment
+    - dpv_owl:ImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso42001:AISystemImpactAssessment
+    related_mappings:
+    - nist_ai_rmf:Impact
   Likelihood:
     class_uri: dpv:Likelihood
     description: |-
       The likelihood or probability or chance of something taking place or
       occurring
     aliases:
-      - Likelihood
+    - Likelihood
     comments:
-      - |-
-        Likelihood can be expressed in a subjective manner, such as 'Unlikely',
-        or in a quantitative manner such as "Twice in a Day" (frequency per
-        period). The suggestion is to use quantitative values, or to associate
-        them with subjective terms used so as to enable accurate interpretations
-        and interoperability. See the concepts related to Frequency and Duration
-        for possible uses as a combination to express Likelihood.
+    - |-
+      Likelihood can be expressed in a subjective manner, such as 'Unlikely',
+      or in a quantitative manner such as "Twice in a Day" (frequency per
+      period). The suggestion is to use quantitative values, or to associate
+      them with subjective terms used so as to enable accurate interpretations
+      and interoperability. See the concepts related to Frequency and Duration
+      for possible uses as a combination to express Likelihood.
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:Likelihood
-      - dpv_owl:Likelihood
+    - dpv_upstream:Likelihood
+    - dpv_owl:Likelihood
     annotations:
       skos_in_scheme: risk-classes
 
   PIA:
     is_a: ImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:PIA
     description: Impact assessment regarding privacy risks
     aliases:
-      - Privacy Impact Assessment (PIA)
+    - Privacy Impact Assessment (PIA)
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:PIA
-      - dpv_owl:PIA
-      - iso29100:PrivacyImpactAssessment
-    close_mappings:
-      - iso42001:AISystemImpactAssessment
+    - dpv_upstream:PIA
+    - dpv_owl:PIA
+    - iso29100:PrivacyImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso42001:AISystemImpactAssessment
   ResidualRisk:
     is_a: Risk
     class_uri: dpv:ResidualRisk
     description: Risk remaining after treatment or mitigation
     aliases:
-      - Residual Risk
+    - Residual Risk
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:ResidualRisk
-      - dpv_owl:ResidualRisk
-      - nist_ai_rmf:ResidualRisk
-    related_mappings:
-      - iso27001:RiskTreatmentPlan
+    - dpv_upstream:ResidualRisk
+    - dpv_owl:ResidualRisk
+    - nist_ai_rmf:ResidualRisk
     annotations:
       skos_in_scheme: risk-classes
 
+    related_mappings:
+    - iso27001:RiskTreatmentPlan
   RightsImpactAssessment:
     is_a: ImpactAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:RightsImpactAssessment
     description: |-
       Impact assessment which involves determining the impact on rights and
       freedoms
     aliases:
-      - Rights Impact Assessment
+    - Rights Impact Assessment
     comments:
-      - |-
-        The rights and freedoms may be those defined in law or other norms, and
-        may be bound to a jurisdiction
+    - |-
+      The rights and freedoms may be those defined in law or other norms, and
+      may be bound to a jurisdiction
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:RightsImpactAssessment
-      - dpv_owl:RightsImpactAssessment
+    - dpv_upstream:RightsImpactAssessment
+    - dpv_owl:RightsImpactAssessment
     annotations:
       skos_in_scheme: risk-classes
 
@@ -579,41 +581,42 @@ classes:
       A risk or possibility or uncertainty of negative effects, impacts, or
       consequences
     aliases:
-      - Risk
+    - Risk
     comments:
-      - |-
-        Risks can be associated with one or more different concepts such as
-        purpose, processing, personal data, technical or organisational measure
+    - |-
+      Risks can be associated with one or more different concepts such as
+      purpose, processing, personal data, technical or organisational measure
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:Risk
-      - dpv_owl:Risk
+    - dpv_upstream:Risk
+    - dpv_owl:Risk
     annotations:
       skos_in_scheme: risk-classes
 
   RiskAssessment:
     is_a: Assessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:RiskAssessment
-    description: Assessment involving identification, analysis, and evaluation of risk
+    description: Assessment involving identification, analysis, and evaluation 
+      of risk
     aliases:
-      - Risk Assessment
+    - Risk Assessment
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:RiskAssessment
-      - dpv_owl:RiskAssessment
-    close_mappings:
-      - iso27001:RiskAssessment
-      - iso42001:AIRiskAssessment
-    related_mappings:
-      - nist_ai_rmf:Function
-      - nist_csf_v2:CSFCategory
+    - dpv_upstream:RiskAssessment
+    - dpv_owl:RiskAssessment
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso27001:RiskAssessment
+    - iso42001:AIRiskAssessment
+    related_mappings:
+    - nist_ai_rmf:Function
+    - nist_csf_v2:CSFCategory
   RiskConcept:
     class_uri: dpv:RiskConcept
     description: |-
@@ -621,19 +624,19 @@ classes:
       such as actual and potential Risk, Risk Source, Consequences, and
       Impacts
     aliases:
-      - Risk Concept
+    - Risk Concept
     comments:
-      - |-
-        RiskConcept is a generic concept used for creation of specific
-        taxonomies in the RISK extension to provide guidance on how a concept
-        can potentially be a risk, risk source, consequence, and impact. It is
-        not intended to be used directly and is only created for organisation of
-        concepts in DPV vocabularies
+    - |-
+      RiskConcept is a generic concept used for creation of specific
+      taxonomies in the RISK extension to provide guidance on how a concept
+      can potentially be a risk, risk source, consequence, and impact. It is
+      not intended to be used directly and is only created for organisation of
+      concepts in DPV vocabularies
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:RiskConcept
-      - dpv_owl:RiskConcept
+    - dpv_upstream:RiskConcept
+    - dpv_owl:RiskConcept
     annotations:
       skos_in_scheme: risk-classes
 
@@ -643,19 +646,19 @@ classes:
       The magnitude of a risk expressed as an indication to aid in its
       management
     aliases:
-      - Risk Level
+    - Risk Level
     comments:
-      - |-
-        Risk Levels can be defined as a combination of different
-        characteristics. For example, ISO 31073:2022 defines it as a combination
-        of consequences and their likelihood. Another example would be the Risk
-        Matrix where Risk Level is defined as a combination of Likelihood and
-        Severity associated with the Risk.
+    - |-
+      Risk Levels can be defined as a combination of different
+      characteristics. For example, ISO 31073:2022 defines it as a combination
+      of consequences and their likelihood. Another example would be the Risk
+      Matrix where Risk Level is defined as a combination of Likelihood and
+      Severity associated with the Risk.
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:RiskLevel
-      - dpv_owl:RiskLevel
+    - dpv_upstream:RiskLevel
+    - dpv_owl:RiskLevel
     annotations:
       skos_in_scheme: risk-classes
 
@@ -664,38 +667,38 @@ classes:
     class_uri: dpv:RiskMitigationMeasure
     description: Measures intended to mitigate, minimise, or prevent risk.
     aliases:
-      - Risk Mitigation Measure
+    - Risk Mitigation Measure
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:RiskMitigationMeasure
-      - dpv_owl:RiskMitigationMeasure
-    close_mappings:
-      - iso27001:RiskTreatmentOption
-      - iso29100:PrivacySafeguardingRequirement
-      - iso42001:AIRiskTreatmentPlan
-      - oscal:Control
-    related_mappings:
-      - nist_ai_rmf:Function
-      - nist_csf_v2:CSFSubcategory
+    - dpv_upstream:RiskMitigationMeasure
+    - dpv_owl:RiskMitigationMeasure
     annotations:
       skos_in_scheme: risk-classes
 
+    close_mappings:
+    - iso27001:RiskTreatmentOption
+    - iso29100:PrivacySafeguardingRequirement
+    - iso42001:AIRiskTreatmentPlan
+    - oscal:Control
+    related_mappings:
+    - nist_ai_rmf:Function
+    - nist_csf_v2:CSFSubcategory
   SecurityAssessment:
     is_a: RiskAssessment
     mixins:
-      - OrganisationalMeasure
+    - OrganisationalMeasure
     class_uri: dpv:SecurityAssessment
     description: |-
       Assessment of security intended to identify gaps, vulnerabilities,
       risks, and effectiveness of controls
     aliases:
-      - Security Assessment
+    - Security Assessment
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:SecurityAssessment
-      - dpv_owl:SecurityAssessment
+    - dpv_upstream:SecurityAssessment
+    - dpv_owl:SecurityAssessment
     annotations:
       skos_in_scheme: risk-classes
 
@@ -706,20 +709,20 @@ classes:
       Sensitivity' reflects the risk of impact if not secured or utilised with
       appropriate measures and controls e.g. for sensitive data
     aliases:
-      - Sensitivity Level
+    - Sensitivity Level
     comments:
-      - |-
-        ISO/IEC TS 38505-3:2021 defines 'data sensitivity' as the potential harm
-        of unauthorised disclosure. DPV's use of the concept goes beyond
-        disclosure as it refers to the level of safeguards or controls the data
-        requires as a reflection of its 'sensitive' nature. To indicate
-        quantified levels of sensitivity, e.g. "high sensitivity", instances of
-        severity can be directly used or specialised
+    - |-
+      ISO/IEC TS 38505-3:2021 defines 'data sensitivity' as the potential harm
+      of unauthorised disclosure. DPV's use of the concept goes beyond
+      disclosure as it refers to the level of safeguards or controls the data
+      requires as a reflection of its 'sensitive' nature. To indicate
+      quantified levels of sensitivity, e.g. "high sensitivity", instances of
+      severity can be directly used or specialised
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:SensitivityLevel
-      - dpv_owl:SensitivityLevel
+    - dpv_upstream:SensitivityLevel
+    - dpv_owl:SensitivityLevel
     annotations:
       skos_in_scheme: risk-classes
 
@@ -729,13 +732,13 @@ classes:
       The magnitude of being unwanted or having negative effects such as
       harmful impacts
     aliases:
-      - Severity
+    - Severity
     comments:
-      - Severity can be associated with Risk, or its Consequences and Impacts
+    - Severity can be associated with Risk, or its Consequences and Impacts
     in_subset:
-      - risk_subset
+    - risk_subset
     exact_mappings:
-      - dpv_upstream:Severity
-      - dpv_owl:Severity
+    - dpv_upstream:Severity
+    - dpv_owl:Severity
     annotations:
       skos_in_scheme: risk-classes

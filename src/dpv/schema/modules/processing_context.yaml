@@ -6,8 +6,8 @@ description: |-
   `modules/processing_context-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -62,13 +62,13 @@ slots:
     definition_uri: dpv:hasActiveEntity
     description: indicates the entity is actively involved in specified context
     aliases:
-      - has active entity
+    - has active entity
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasActiveEntity
-      - dpv_owl:hasActiveEntity
+    - dpv_upstream:hasActiveEntity
+    - dpv_owl:hasActiveEntity
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -78,13 +78,13 @@ slots:
       Indicates the logic used in processing such as for automated decision
       making
     aliases:
-      - has algorithmic logic
+    - has algorithmic logic
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasAlgorithmicLogic
-      - dpv_owl:hasAlgorithmicLogic
+    - dpv_upstream:hasAlgorithmicLogic
+    - dpv_owl:hasAlgorithmicLogic
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -94,13 +94,13 @@ slots:
       Indicates the level of automation involved in implementation of the
       specified context
     aliases:
-      - has automation level
+    - has automation level
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasAutomationLevel
-      - dpv_owl:hasAutomationLevel
+    - dpv_upstream:hasAutomationLevel
+    - dpv_owl:hasAutomationLevel
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -108,13 +108,13 @@ slots:
     definition_uri: dpv:hasDataSource
     description: Indicates the source or origin of data being processed
     aliases:
-      - has data source
+    - has data source
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasDataSource
-      - dpv_owl:hasDataSource
+    - dpv_upstream:hasDataSource
+    - dpv_owl:hasDataSource
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -122,13 +122,13 @@ slots:
     definition_uri: dpv:hasEntityInvolvement
     description: Indicates involvement of an entity in specified context
     aliases:
-      - has entity involvement
+    - has entity involvement
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasEntityInvolvement
-      - dpv_owl:hasEntityInvolvement
+    - dpv_upstream:hasEntityInvolvement
+    - dpv_owl:hasEntityInvolvement
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -138,15 +138,15 @@ slots:
       Indicates Involvement of humans in processing such as within automated
       decision making process
     aliases:
-      - has human involvement
+    - has human involvement
     comments:
-      - Human involvement is also relevant to 'human in the loop'
+    - Human involvement is also relevant to 'human in the loop'
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasHumanInvolvement
-      - dpv_owl:hasHumanInvolvement
+    - dpv_upstream:hasHumanInvolvement
+    - dpv_owl:hasHumanInvolvement
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -155,13 +155,13 @@ slots:
     definition_uri: dpv:hasNonInvolvedEntity
     description: indicates the entity is not involved in specified context
     aliases:
-      - has non-involved entity
+    - has non-involved entity
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasNonInvolvedEntity
-      - dpv_owl:hasNonInvolvedEntity
+    - dpv_upstream:hasNonInvolvedEntity
+    - dpv_owl:hasNonInvolvedEntity
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -170,13 +170,13 @@ slots:
     definition_uri: dpv:hasPassiveEntity
     description: indicates the entity is passively involved in specified context
     aliases:
-      - has passive entity
+    - has passive entity
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasPassiveEntity
-      - dpv_owl:hasPassiveEntity
+    - dpv_upstream:hasPassiveEntity
+    - dpv_owl:hasPassiveEntity
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -184,13 +184,13 @@ slots:
     definition_uri: dpv:hasProcessingCondition
     description: Indicates information about processing condition
     aliases:
-      - has processing condition
+    - has processing condition
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasProcessingCondition
-      - dpv_owl:hasProcessingCondition
+    - dpv_upstream:hasProcessingCondition
+    - dpv_owl:hasProcessingCondition
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -199,13 +199,13 @@ slots:
     definition_uri: dpv:hasStorageCondition
     description: Indicates information about storage condition
     aliases:
-      - has storage condition
+    - has storage condition
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:hasStorageCondition
-      - dpv_owl:hasStorageCondition
+    - dpv_upstream:hasStorageCondition
+    - dpv_owl:hasStorageCondition
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -214,13 +214,13 @@ slots:
     definition_uri: dpv:isDeterminedByEntity
     description: Indicates the context is determined by the specified entity
     aliases:
-      - is determined by entity
+    - is determined by entity
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:isDeterminedByEntity
-      - dpv_owl:isDeterminedByEntity
+    - dpv_upstream:isDeterminedByEntity
+    - dpv_owl:isDeterminedByEntity
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -228,36 +228,37 @@ slots:
     definition_uri: dpv:isImplementedByEntity
     description: Indicates implementation details such as entities or agents
     aliases:
-      - is implemented by entity
+    - is implemented by entity
     comments:
-      - |-
-        The use of 'entity' is inclusive of entities (e.g. Data Processor) as
-        well as 'agent' (e.g. DPO). For indicating technological implementation,
-        the property isImplementedByTechnology should be used.
+    - |-
+      The use of 'entity' is inclusive of entities (e.g. Data Processor) as
+      well as 'agent' (e.g. DPO). For indicating technological implementation,
+      the property isImplementedByTechnology should be used.
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:isImplementedByEntity
-      - dpv_owl:isImplementedByEntity
+    - dpv_upstream:isImplementedByEntity
+    - dpv_owl:isImplementedByEntity
     annotations:
       skos_in_scheme: processing-context-properties
 
   is_implemented_using_technology:
     definition_uri: dpv:isImplementedUsingTechnology
-    description: Indicates implementation details such as technologies or processes
+    description: Indicates implementation details such as technologies or 
+      processes
     aliases:
-      - is implemented using technology
+    - is implemented using technology
     comments:
-      - |-
-        The term 'technology' is inclusive of technologies, processes, and
-        methods.
+    - |-
+      The term 'technology' is inclusive of technologies, processes, and
+      methods.
     multivalued: true
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:isImplementedUsingTechnology
-      - dpv_owl:isImplementedUsingTechnology
+    - dpv_upstream:isImplementedUsingTechnology
+    - dpv_owl:isImplementedUsingTechnology
     annotations:
       skos_in_scheme: processing-context-properties
 
@@ -268,17 +269,17 @@ classes:
     class_uri: dpv:AlgorithmicLogic
     description: The algorithmic logic applied or used
     aliases:
-      - Algorithmic Logic
+    - Algorithmic Logic
     comments:
-      - |-
-        Algorithmic Logic is intended as a broad concept for explaining the use
-        of algorithms and automated decisions making within Processing. To
-        describe the actual algorithm, see the Algorithm concept.
+    - |-
+      Algorithmic Logic is intended as a broad concept for explaining the use
+      of algorithms and automated decisions making within Processing. To
+      describe the actual algorithm, see the Algorithm concept.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:AlgorithmicLogic
-      - dpv_owl:AlgorithmicLogic
+    - dpv_upstream:AlgorithmicLogic
+    - dpv_owl:AlgorithmicLogic
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -291,17 +292,17 @@ classes:
       system in a manner that does not change the control of the human in
       using/driving the system
     aliases:
-      - Assistive Automation
+    - Assistive Automation
     comments:
-      - |-
-        Human Involvement is implied here, specifically the ability to make
-        decisions regarding operations, but also possibly for intervention,
-        oversight, and verification
+    - |-
+      Human Involvement is implied here, specifically the ability to make
+      decisions regarding operations, but also possibly for intervention,
+      oversight, and verification
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:AssistiveAutomation
-      - dpv_owl:AssistiveAutomation
+    - dpv_upstream:AssistiveAutomation
+    - dpv_owl:AssistiveAutomation
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -310,41 +311,41 @@ classes:
     class_uri: dpv:AutomatedDecisionMaking
     description: Processing that involves automated decision making
     aliases:
-      - Automated Decision Making
+    - Automated Decision Making
     comments:
-      - |-
-        Automated decision making can be defined as “the ability to make
-        decisions by technological means without human involvement.”
-        (“Guidelines on Automated individual decision-making and Profiling for
-        the purposes of Regulation 2016/679 (wp251rev.01)”, 2018, p. 8)
+    - |-
+      Automated decision making can be defined as “the ability to make
+      decisions by technological means without human involvement.”
+      (“Guidelines on Automated individual decision-making and Profiling for
+      the purposes of Regulation 2016/679 (wp251rev.01)”, 2018, p. 8)
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:AutomatedDecisionMaking
-      - dpv_owl:AutomatedDecisionMaking
-    related_mappings:
-      - iso22989:Decision
+    - dpv_upstream:AutomatedDecisionMaking
+    - dpv_owl:AutomatedDecisionMaking
     annotations:
       skos_in_scheme: processing-context-classes
 
+    related_mappings:
+    - iso22989:Decision
   AutomatedScoringOfIndividuals:
     is_a: ScoringOfIndividuals
     class_uri: dpv:AutomatedScoringOfIndividuals
     description: Processing that involves automated scoring of individuals
     aliases:
-      - Automated Scoring of Individuals
+    - Automated Scoring of Individuals
     comments:
-      - |-
-        Scoring can lead to the action being considered Decision Making if the
-        scoring is itself a decision - see 2023-MAR-16 opinion of Advocate
-        General on Case C 634/21. Therefore, the assessment of whether scoring
-        was automated or not is important given the legal obligations
-        surrounding automated decision making e.g. in GDPR
+    - |-
+      Scoring can lead to the action being considered Decision Making if the
+      scoring is itself a decision - see 2023-MAR-16 opinion of Advocate
+      General on Case C 634/21. Therefore, the assessment of whether scoring
+      was automated or not is important given the legal obligations
+      surrounding automated decision making e.g. in GDPR
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:AutomatedScoringOfIndividuals
-      - dpv_owl:AutomatedScoringOfIndividuals
+    - dpv_upstream:AutomatedScoringOfIndividuals
+    - dpv_owl:AutomatedScoringOfIndividuals
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -355,14 +356,14 @@ classes:
       Indication of degree or level of automation associated with specified
       context
     aliases:
-      - Automation Level
+    - Automation Level
     comments:
-      - This concept was called 'Automation' in previous versions
+    - This concept was called 'Automation' in previous versions
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:AutomationLevel
-      - dpv_owl:AutomationLevel
+    - dpv_upstream:AutomationLevel
+    - dpv_owl:AutomationLevel
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -374,16 +375,16 @@ classes:
       the automation in system is capable of modifying its operation domain or
       its goals without external intervention, control or oversight
     aliases:
-      - Autonomous
+    - Autonomous
     comments:
-      - |-
-        Though Autonomous, such operations can still be associated with
-        dpv:HumanInvolved e.g. for inputs, oversight or verification
+    - |-
+      Though Autonomous, such operations can still be associated with
+      dpv:HumanInvolved e.g. for inputs, oversight or verification
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:Autonomous
-      - dpv_owl:Autonomous
+    - dpv_upstream:Autonomous
+    - dpv_owl:Autonomous
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -394,31 +395,32 @@ classes:
       Involvement where entity cannot challenge the process of specified
       context
     aliases:
-      - Cannot Challenge Process
+    - Cannot Challenge Process
     comments:
-      - |-
-        Challenge refers to raising questions about validity, necessity,
-        correctness, or other similar 'trustworthiness' attributes regarding the
-        process or plan or implementation
+    - |-
+      Challenge refers to raising questions about validity, necessity,
+      correctness, or other similar 'trustworthiness' attributes regarding the
+      process or plan or implementation
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotChallengeProcess
-      - dpv_owl:CannotChallengeProcess
+    - dpv_upstream:CannotChallengeProcess
+    - dpv_owl:CannotChallengeProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
   CannotChallengeProcessInput:
     is_a: EntityNonPermissiveInvolvement
     class_uri: dpv:CannotChallengeProcessInput
-    description: Involvement where entity cannot challenge input of specified context
+    description: Involvement where entity cannot challenge input of specified 
+      context
     aliases:
-      - Cannot Challenge Process Input
+    - Cannot Challenge Process Input
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotChallengeProcessInput
-      - dpv_owl:CannotChallengeProcessInput
+    - dpv_upstream:CannotChallengeProcessInput
+    - dpv_owl:CannotChallengeProcessInput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -429,18 +431,18 @@ classes:
       Involvement where entity cannot challenge the output of specified
       context
     aliases:
-      - Cannot Challenge Process Output
+    - Cannot Challenge Process Output
     comments:
-      - |-
-        Challenge refers to raising questions about validity, necessity,
-        correctness, or other similar 'trustworthiness' attributes regarding the
-        output of the process or plan or implementation (where output is
-        distinct from the process itself)
+    - |-
+      Challenge refers to raising questions about validity, necessity,
+      correctness, or other similar 'trustworthiness' attributes regarding the
+      output of the process or plan or implementation (where output is
+      distinct from the process itself)
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotChallengeProcessOutput
-      - dpv_owl:CannotChallengeProcessOutput
+    - dpv_upstream:CannotChallengeProcessOutput
+    - dpv_owl:CannotChallengeProcessOutput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -450,26 +452,27 @@ classes:
     description: |-
       Involvement where entity cannot correct the process of specified context
     aliases:
-      - Cannot Correct Process
+    - Cannot Correct Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotCorrectProcess
-      - dpv_owl:CannotCorrectProcess
+    - dpv_upstream:CannotCorrectProcess
+    - dpv_owl:CannotCorrectProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
   CannotCorrectProcessInput:
     is_a: EntityNonPermissiveInvolvement
     class_uri: dpv:CannotCorrectProcessInput
-    description: Involvement where entity cannot correct input of specified context
+    description: Involvement where entity cannot correct input of specified 
+      context
     aliases:
-      - Cannot Correct Process Input
+    - Cannot Correct Process Input
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotCorrectProcessInput
-      - dpv_owl:CannotCorrectProcessInput
+    - dpv_upstream:CannotCorrectProcessInput
+    - dpv_owl:CannotCorrectProcessInput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -479,26 +482,27 @@ classes:
     description: |-
       Involvement where entity cannot correct the output of specified context
     aliases:
-      - Cannot Correct Process Output
+    - Cannot Correct Process Output
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotCorrectProcessOutput
-      - dpv_owl:CannotCorrectProcessOutput
+    - dpv_upstream:CannotCorrectProcessOutput
+    - dpv_owl:CannotCorrectProcessOutput
     annotations:
       skos_in_scheme: processing-context-classes
 
   CannotObjectToProcess:
     is_a: EntityNonPermissiveInvolvement
     class_uri: dpv:CannotObjectToProcess
-    description: Involvement where entity cannot object to process of specified context
+    description: Involvement where entity cannot object to process of specified 
+      context
     aliases:
-      - Cannot Object to Process
+    - Cannot Object to Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotObjectToProcess
-      - dpv_owl:CannotObjectToProcess
+    - dpv_upstream:CannotObjectToProcess
+    - dpv_owl:CannotObjectToProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -507,12 +511,12 @@ classes:
     class_uri: dpv:CannotOptInToProcess
     description: Involvement where entity cannot opt-in to specified context
     aliases:
-      - Cannot Opt-in to Process
+    - Cannot Opt-in to Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotOptInToProcess
-      - dpv_owl:CannotOptInToProcess
+    - dpv_upstream:CannotOptInToProcess
+    - dpv_owl:CannotOptInToProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -521,63 +525,66 @@ classes:
     class_uri: dpv:CannotOptOutFromProcess
     description: Involvement where entity cannot opt-out from specified context
     aliases:
-      - Cannot Opt-out from Process
+    - Cannot Opt-out from Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotOptOutFromProcess
-      - dpv_owl:CannotOptOutFromProcess
+    - dpv_upstream:CannotOptOutFromProcess
+    - dpv_owl:CannotOptOutFromProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
   CannotReverseProcessEffects:
     is_a: EntityNonPermissiveInvolvement
     class_uri: dpv:CannotReverseProcessEffects
-    description: Involvement where entity cannot reverse effects of specified context
+    description: Involvement where entity cannot reverse effects of specified 
+      context
     aliases:
-      - Cannot Reverse Process Effects
+    - Cannot Reverse Process Effects
     comments:
-      - |-
-        Effects refer to consequences and impacts arising from the process or
-        from the outputs of a process
+    - |-
+      Effects refer to consequences and impacts arising from the process or
+      from the outputs of a process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotReverseProcessEffects
-      - dpv_owl:CannotReverseProcessEffects
+    - dpv_upstream:CannotReverseProcessEffects
+    - dpv_owl:CannotReverseProcessEffects
     annotations:
       skos_in_scheme: processing-context-classes
 
   CannotReverseProcessInput:
     is_a: EntityNonPermissiveInvolvement
     class_uri: dpv:CannotReverseProcessInput
-    description: Involvement where entity cannot reverse input of specified context
+    description: Involvement where entity cannot reverse input of specified 
+      context
     aliases:
-      - Cannot Reverse Process Input
+    - Cannot Reverse Process Input
     comments:
-      - |-
-        Reversion can be considered a form of correction in some instances. We
-        welcome inputs to further explore and define this relation between
-        correction and reversion concepts.
+    - |-
+      Reversion can be considered a form of correction in some instances. We
+      welcome inputs to further explore and define this relation between
+      correction and reversion concepts.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotReverseProcessInput
-      - dpv_owl:CannotReverseProcessInput
+    - dpv_upstream:CannotReverseProcessInput
+    - dpv_owl:CannotReverseProcessInput
     annotations:
       skos_in_scheme: processing-context-classes
 
   CannotReverseProcessOutput:
     is_a: EntityNonPermissiveInvolvement
     class_uri: dpv:CannotReverseProcessOutput
-    description: Involvement where entity cannot reverse output of specified context
+    description: Involvement where entity cannot reverse output of specified 
+      context
     aliases:
-      - Cannot Reverse Process Output
+    - Cannot Reverse Process Output
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotReverseProcessOutput
-      - dpv_owl:CannotReverseProcessOutput
+    - dpv_upstream:CannotReverseProcessOutput
+    - dpv_owl:CannotReverseProcessOutput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -588,12 +595,12 @@ classes:
       Involvement where entity cannot withdraw a previously given assent from
       specified context
     aliases:
-      - Cannot Withdraw from Process
+    - Cannot Withdraw from Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CannotWithdrawFromProcess
-      - dpv_owl:CannotWithdrawFromProcess
+    - dpv_upstream:CannotWithdrawFromProcess
+    - dpv_owl:CannotWithdrawFromProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -603,51 +610,53 @@ classes:
     description: |-
       Involvement where entity can challenge the process of specified context
     aliases:
-      - Challenging Process
+    - Challenging Process
     comments:
-      - |-
-        Challenge refers to raising questions about validity, necessity,
-        correctness, or other similar 'trustworthiness' attributes regarding the
-        process or plan or implementation
+    - |-
+      Challenge refers to raising questions about validity, necessity,
+      correctness, or other similar 'trustworthiness' attributes regarding the
+      process or plan or implementation
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ChallengingProcess
-      - dpv_owl:ChallengingProcess
+    - dpv_upstream:ChallengingProcess
+    - dpv_owl:ChallengingProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
   ChallengingProcessInput:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:ChallengingProcessInput
-    description: Involvement where entity can challenge input of specified context
+    description: Involvement where entity can challenge input of specified 
+      context
     aliases:
-      - Challenging Process Input
+    - Challenging Process Input
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ChallengingProcessInput
-      - dpv_owl:ChallengingProcessInput
+    - dpv_upstream:ChallengingProcessInput
+    - dpv_owl:ChallengingProcessInput
     annotations:
       skos_in_scheme: processing-context-classes
 
   ChallengingProcessOutput:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:ChallengingProcessOutput
-    description: Involvement where entity can challenge the output of specified context
+    description: Involvement where entity can challenge the output of specified 
+      context
     aliases:
-      - Challenging Process Output
+    - Challenging Process Output
     comments:
-      - |-
-        Challenge refers to raising questions about validity, necessity,
-        correctness, or other similar 'trustworthiness' attributes regarding the
-        output of the process or plan or implementation (where output is
-        distinct from the process itself)
+    - |-
+      Challenge refers to raising questions about validity, necessity,
+      correctness, or other similar 'trustworthiness' attributes regarding the
+      output of the process or plan or implementation (where output is
+      distinct from the process itself)
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ChallengingProcessOutput
-      - dpv_owl:ChallengingProcessOutput
+    - dpv_upstream:ChallengingProcessOutput
+    - dpv_owl:ChallengingProcessOutput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -659,34 +668,35 @@ classes:
       the automation is sufficient to perform most tasks of the system with
       the human present to take over where necessary
     aliases:
-      - Conditional Automation
+    - Conditional Automation
     comments:
-      - |-
-        Human Involvement is implied here, e.g. for intervention, input,
-        decisions
+    - |-
+      Human Involvement is implied here, e.g. for intervention, input,
+      decisions
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ConditionalAutomation
-      - dpv_owl:ConditionalAutomation
+    - dpv_upstream:ConditionalAutomation
+    - dpv_owl:ConditionalAutomation
     annotations:
       skos_in_scheme: processing-context-classes
 
   CorrectingProcess:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:CorrectingProcess
-    description: Involvement where entity can correct the process of specified context
+    description: Involvement where entity can correct the process of specified 
+      context
     aliases:
-      - Correcting Process
+    - Correcting Process
     comments:
-      - |-
-        Correction of process refers to the ability to change how the process
-        takes place
+    - |-
+      Correction of process refers to the ability to change how the process
+      takes place
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CorrectingProcess
-      - dpv_owl:CorrectingProcess
+    - dpv_upstream:CorrectingProcess
+    - dpv_owl:CorrectingProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -695,32 +705,33 @@ classes:
     class_uri: dpv:CorrectingProcessInput
     description: Involvement where entity can correct input of specified context
     aliases:
-      - Correcting Process Input
+    - Correcting Process Input
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CorrectingProcessInput
-      - dpv_owl:CorrectingProcessInput
+    - dpv_upstream:CorrectingProcessInput
+    - dpv_owl:CorrectingProcessInput
     annotations:
       skos_in_scheme: processing-context-classes
 
   CorrectingProcessOutput:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:CorrectingProcessOutput
-    description: Involvement where entity can correct the output of specified context
+    description: Involvement where entity can correct the output of specified 
+      context
     aliases:
-      - Correcting Process Output
+    - Correcting Process Output
     comments:
-      - |-
-        Correction of outputs allows modification of the output - implying
-        continuation of the process. This is distinct from reversing of outputs
-        which revert the output back to its previous value and possibly imply
-        not continuing with the process
+    - |-
+      Correction of outputs allows modification of the output - implying
+      continuation of the process. This is distinct from reversing of outputs
+      which revert the output back to its previous value and possibly imply
+      not continuing with the process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:CorrectingProcessOutput
-      - dpv_owl:CorrectingProcessOutput
+    - dpv_upstream:CorrectingProcessOutput
+    - dpv_owl:CorrectingProcessOutput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -731,12 +742,12 @@ classes:
       Data Sourced from Data Controller(s), e.g. a Controller inferring data
       or generating data
     aliases:
-      - Data Controller as Data Source
+    - Data Controller as Data Source
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:DataControllerDataSource
-      - dpv_owl:DataControllerDataSource
+    - dpv_upstream:DataControllerDataSource
+    - dpv_owl:DataControllerDataSource
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -745,17 +756,17 @@ classes:
     class_uri: dpv:DataPublishedByDataSubject
     description: Data is published by the data subject
     aliases:
-      - Data published by Data Subject
+    - Data published by Data Subject
     comments:
-      - |-
-        This refers to where that data was made publicly available by the data
-        subject. An example of this would be a social media profile that the
-        data subject has made publicly accessible.
+    - |-
+      This refers to where that data was made publicly available by the data
+      subject. An example of this would be a social media profile that the
+      data subject has made publicly accessible.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:DataPublishedByDataSubject
-      - dpv_owl:DataPublishedByDataSubject
+    - dpv_upstream:DataPublishedByDataSubject
+    - dpv_owl:DataPublishedByDataSubject
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -764,16 +775,16 @@ classes:
     class_uri: dpv:DataSource
     description: The source or origin of data
     aliases:
-      - Data Source
+    - Data Source
     comments:
-      - |-
-        Source' is the direct point of data collection; 'origin' would indicate
-        the original/others points of where the data originates from.
+    - |-
+      Source' is the direct point of data collection; 'origin' would indicate
+      the original/others points of where the data originates from.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:DataSource
-      - dpv_owl:DataSource
+    - dpv_upstream:DataSource
+    - dpv_owl:DataSource
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -784,12 +795,12 @@ classes:
       Data Sourced from Data Subject(s), e.g. when data is collected via a
       form or observed from their activities
     aliases:
-      - Data Subject as Data Source
+    - Data Subject as Data Source
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:DataSubjectDataSource
-      - dpv_owl:DataSubjectDataSource
+    - dpv_upstream:DataSubjectDataSource
+    - dpv_owl:DataSubjectDataSource
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -798,45 +809,45 @@ classes:
     class_uri: dpv:DecisionMaking
     description: Processing that involves decision making
     aliases:
-      - Decision Making
+    - Decision Making
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:DecisionMaking
-      - dpv_owl:DecisionMaking
-    close_mappings:
-      - iso22989:Decision
+    - dpv_upstream:DecisionMaking
+    - dpv_owl:DecisionMaking
     annotations:
       skos_in_scheme: processing-context-classes
 
+    close_mappings:
+    - iso22989:Decision
   EntityActiveInvolvement:
     is_a: EntityInvolvement
     class_uri: dpv:EntityActiveInvolvement
     description: Involvement where entity is 'actively' involved
     aliases:
-      - Entity Active Involvement
+    - Entity Active Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityActiveInvolvement
-      - dpv_owl:EntityActiveInvolvement
+    - dpv_upstream:EntityActiveInvolvement
+    - dpv_owl:EntityActiveInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
   EntityIntendedInvolvement:
     is_a: EntityInvolvement
     mixins:
-      - EntityInvolvementStatus
-      - Intended
+    - EntityInvolvementStatus
+    - Intended
     class_uri: dpv:EntityIntendedInvolvement
     description: Status indicating the involvement of the entity is intended
     aliases:
-      - Entity Intended Involvement
+    - Entity Intended Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityIntendedInvolvement
-      - dpv_owl:EntityIntendedInvolvement
+    - dpv_upstream:EntityIntendedInvolvement
+    - dpv_owl:EntityIntendedInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -845,12 +856,12 @@ classes:
     class_uri: dpv:EntityInvolved
     description: Status indicating the entity is involved
     aliases:
-      - Entity Involved
+    - Entity Involved
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityInvolved
-      - dpv_owl:EntityInvolved
+    - dpv_upstream:EntityInvolved
+    - dpv_owl:EntityInvolved
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -859,28 +870,28 @@ classes:
     class_uri: dpv:EntityInvolvement
     description: Involvement of an entity in specific context
     aliases:
-      - Entity Involvement
+    - Entity Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityInvolvement
-      - dpv_owl:EntityInvolvement
+    - dpv_upstream:EntityInvolvement
+    - dpv_owl:EntityInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
   EntityInvolvementStatus:
     is_a: EntityInvolvement
     mixins:
-      - Status
+    - Status
     class_uri: dpv:EntityInvolvementStatus
     description: Status indicating whether an entity is involved
     aliases:
-      - Entity Involvement Status
+    - Entity Involvement Status
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityInvolvementStatus
-      - dpv_owl:EntityInvolvementStatus
+    - dpv_upstream:EntityInvolvementStatus
+    - dpv_owl:EntityInvolvementStatus
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -889,12 +900,12 @@ classes:
     class_uri: dpv:EntityNonInvolvement
     description: Indicating entity is not involved
     aliases:
-      - Entity Non-Involvement
+    - Entity Non-Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityNonInvolvement
-      - dpv_owl:EntityNonInvolvement
+    - dpv_upstream:EntityNonInvolvement
+    - dpv_owl:EntityNonInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -905,12 +916,12 @@ classes:
       Involvement of an entity in specific context where it is not permitted
       or able to do something
     aliases:
-      - Entity Non-Permissive Involvement
+    - Entity Non-Permissive Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityNonPermissiveInvolvement
-      - dpv_owl:EntityNonPermissiveInvolvement
+    - dpv_upstream:EntityNonPermissiveInvolvement
+    - dpv_owl:EntityNonPermissiveInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -919,26 +930,27 @@ classes:
     class_uri: dpv:EntityNotInvolved
     description: Status indicating the entity is not involved
     aliases:
-      - Entity Not Involved
+    - Entity Not Involved
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityNotInvolved
-      - dpv_owl:EntityNotInvolved
+    - dpv_upstream:EntityNotInvolved
+    - dpv_owl:EntityNotInvolved
     annotations:
       skos_in_scheme: processing-context-classes
 
   EntityPassiveInvolvement:
     is_a: EntityInvolvement
     class_uri: dpv:EntityPassiveInvolvement
-    description: Involvement where entity is 'passively' or 'not actively' involved
+    description: Involvement where entity is 'passively' or 'not actively' 
+      involved
     aliases:
-      - Entity Passive Involvement
+    - Entity Passive Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityPassiveInvolvement
-      - dpv_owl:EntityPassiveInvolvement
+    - dpv_upstream:EntityPassiveInvolvement
+    - dpv_owl:EntityPassiveInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -949,29 +961,29 @@ classes:
       Involvement of an entity in specific context where it is permitted or
       able to do something
     aliases:
-      - Entity Permissive Involvement
+    - Entity Permissive Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityPermissiveInvolvement
-      - dpv_owl:EntityPermissiveInvolvement
+    - dpv_upstream:EntityPermissiveInvolvement
+    - dpv_owl:EntityPermissiveInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
   EntityUnintendedInvolvement:
     is_a: EntityInvolvement
     mixins:
-      - EntityInvolvementStatus
-      - Unintended
+    - EntityInvolvementStatus
+    - Unintended
     class_uri: dpv:EntityUnintendedInvolvement
     description: Status indicating the involvement of the entity is not intended
     aliases:
-      - Entity Unintended Involvement
+    - Entity Unintended Involvement
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EntityUnintendedInvolvement
-      - dpv_owl:EntityUnintendedInvolvement
+    - dpv_upstream:EntityUnintendedInvolvement
+    - dpv_owl:EntityUnintendedInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -980,12 +992,12 @@ classes:
     class_uri: dpv:EvaluationOfIndividuals
     description: Processing that involves evaluation of individuals
     aliases:
-      - Evaluation of Individuals
+    - Evaluation of Individuals
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EvaluationOfIndividuals
-      - dpv_owl:EvaluationOfIndividuals
+    - dpv_upstream:EvaluationOfIndividuals
+    - dpv_owl:EvaluationOfIndividuals
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -994,12 +1006,12 @@ classes:
     class_uri: dpv:EvaluationScoring
     description: Processing that involves evaluation and scoring of individuals
     aliases:
-      - Evaluation and Scoring
+    - Evaluation and Scoring
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:EvaluationScoring
-      - dpv_owl:EvaluationScoring
+    - dpv_upstream:EvaluationScoring
+    - dpv_owl:EvaluationScoring
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1011,16 +1023,16 @@ classes:
       the automation in system is capable of performing all its tasks
       regardless of the conditions without human involvement
     aliases:
-      - Full Automation
+    - Full Automation
     comments:
-      - |-
-        Though Fully Automated such operations can still be associated with
-        dpv:HumanInvolved e.g. for inputs, oversight or verification
+    - |-
+      Though Fully Automated such operations can still be associated with
+      dpv:HumanInvolved e.g. for inputs, oversight or verification
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:FullAutomation
-      - dpv_owl:FullAutomation
+    - dpv_upstream:FullAutomation
+    - dpv_owl:FullAutomation
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1032,16 +1044,16 @@ classes:
       the automation in system is capable of performing all its tasks within
       specific controlled conditions without human involvement
     aliases:
-      - High Automation
+    - High Automation
     comments:
-      - |-
-        Human Involvement is implied here, e.g. for intervention, input,
-        decisions
+    - |-
+      Human Involvement is implied here, e.g. for intervention, input,
+      decisions
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HighAutomation
-      - dpv_owl:HighAutomation
+    - dpv_upstream:HighAutomation
+    - dpv_owl:HighAutomation
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1050,17 +1062,17 @@ classes:
     class_uri: dpv:HumanInvolved
     description: Humans are involved in the specified context
     aliases:
-      - Human involved
+    - Human involved
     comments:
-      - |-
-        This concept only indicates that humans are involved. For specific
-        involvement, see specialised concepts e.g. involved for input,
-        oversight.
+    - |-
+      This concept only indicates that humans are involved. For specific
+      involvement, see specialised concepts e.g. involved for input,
+      oversight.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolved
-      - dpv_owl:HumanInvolved
+    - dpv_upstream:HumanInvolved
+    - dpv_owl:HumanInvolved
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1069,21 +1081,21 @@ classes:
     class_uri: dpv:HumanInvolvement
     description: The involvement of humans in specified context
     aliases:
-      - Human Involvement
+    - Human Involvement
     comments:
-      - |-
-        Human Involvement here broadly refers to any involvement by a human in
-        the context of carrying out processing. This may include verification of
-        outcomes, providing input data for making decisions, or overseeing
-        activities. To indicate whether humans are involved or not, see relevant
-        concepts of dpv:HumanInvolved and dpv:HumanNotInvolved. The term 'Human
-        in the loop' and its varieties are absent from DPV due to their
-        contradictory and non-compatible use across different sources.
+    - |-
+      Human Involvement here broadly refers to any involvement by a human in
+      the context of carrying out processing. This may include verification of
+      outcomes, providing input data for making decisions, or overseeing
+      activities. To indicate whether humans are involved or not, see relevant
+      concepts of dpv:HumanInvolved and dpv:HumanNotInvolved. The term 'Human
+      in the loop' and its varieties are absent from DPV due to their
+      contradictory and non-compatible use across different sources.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvement
-      - dpv_owl:HumanInvolvement
+    - dpv_upstream:HumanInvolvement
+    - dpv_owl:HumanInvolvement
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1094,16 +1106,16 @@ classes:
       Human involvement for the purposes of exercising control over the
       specified operations in context
     aliases:
-      - Human Involvement for control
+    - Human Involvement for control
     comments:
-      - |-
-        Control is a broad term that can be applied to various stages and
-        operations. It maps to None, Assistive, and Partial automation models.
+    - |-
+      Control is a broad term that can be applied to various stages and
+      operations. It maps to None, Assistive, and Partial automation models.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvementForControl
-      - dpv_owl:HumanInvolvementForControl
+    - dpv_upstream:HumanInvolvementForControl
+    - dpv_owl:HumanInvolvementForControl
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1114,16 +1126,16 @@ classes:
       Human involvement for the purposes of exercising decisions over the
       specified operations in context
     aliases:
-      - Human Involvement for decision
+    - Human Involvement for decision
     comments:
-      - |-
-        Decisions are about exercising control over the operation, and are
-        distinct from input (data or parameters).
+    - |-
+      Decisions are about exercising control over the operation, and are
+      distinct from input (data or parameters).
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvementForDecision
-      - dpv_owl:HumanInvolvementForDecision
+    - dpv_upstream:HumanInvolvementForDecision
+    - dpv_owl:HumanInvolvementForDecision
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1134,14 +1146,14 @@ classes:
       Human involvement for the purposes of providing inputs to the specified
       context
     aliases:
-      - Human Involvement for Input
+    - Human Involvement for Input
     comments:
-      - Inputs can be in the form of data or other resources.
+    - Inputs can be in the form of data or other resources.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvementForInput
-      - dpv_owl:HumanInvolvementForInput
+    - dpv_upstream:HumanInvolvementForInput
+    - dpv_owl:HumanInvolvementForInput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1152,16 +1164,16 @@ classes:
       Human involvement for the purposes of exercising interventions over the
       specified operations in context
     aliases:
-      - Human Involvement for intervention
+    - Human Involvement for intervention
     comments:
-      - |-
-        Intervention indicates the ability to intervene in operations, which can
-        be at various stages. It maps to Conditional and High automation models.
+    - |-
+      Intervention indicates the ability to intervene in operations, which can
+      be at various stages. It maps to Conditional and High automation models.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvementForIntervention
-      - dpv_owl:HumanInvolvementForIntervention
+    - dpv_upstream:HumanInvolvementForIntervention
+    - dpv_owl:HumanInvolvementForIntervention
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1172,16 +1184,16 @@ classes:
       Human involvement for the purposes of having oversight over the
       specified context regarding its operations, inputs, or outputs
     aliases:
-      - Human Involvement for Oversight
+    - Human Involvement for Oversight
     comments:
-      - |-
-        Oversight by itself does not indicate the ability to intervene or
-        control the operations.
+    - |-
+      Oversight by itself does not indicate the ability to intervene or
+      control the operations.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvementForOversight
-      - dpv_owl:HumanInvolvementForOversight
+    - dpv_upstream:HumanInvolvementForOversight
+    - dpv_owl:HumanInvolvementForOversight
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1193,16 +1205,16 @@ classes:
       to ensure its operations, inputs, or outputs are correct or are
       acceptable.
     aliases:
-      - Human Involvement for Verification
+    - Human Involvement for Verification
     comments:
-      - |-
-        Verification by itself does not imply ability to Control, Intervene, or
-        having Oversight.
+    - |-
+      Verification by itself does not imply ability to Control, Intervene, or
+      having Oversight.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanInvolvementForVerification
-      - dpv_owl:HumanInvolvementForVerification
+    - dpv_upstream:HumanInvolvementForVerification
+    - dpv_owl:HumanInvolvementForVerification
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1211,30 +1223,31 @@ classes:
     class_uri: dpv:HumanNotInvolved
     description: Humans are not involved in the specified context
     aliases:
-      - Human not involved
+    - Human not involved
     comments:
-      - |-
-        This maps to Autonomous and Full Automation models if no humans are
-        involved.
+    - |-
+      This maps to Autonomous and Full Automation models if no humans are
+      involved.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:HumanNotInvolved
-      - dpv_owl:HumanNotInvolved
+    - dpv_upstream:HumanNotInvolved
+    - dpv_owl:HumanNotInvolved
     annotations:
       skos_in_scheme: processing-context-classes
 
   InnovativeUseOfExistingTechnology:
     is_a: InnovativeUseOfTechnology
     class_uri: dpv:InnovativeUseOfExistingTechnology
-    description: Involvement of existing technologies used in an innovative manner
+    description: Involvement of existing technologies used in an innovative 
+      manner
     aliases:
-      - Innovative Use of Existing Technologies
+    - Innovative Use of Existing Technologies
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:InnovativeUseOfExistingTechnology
-      - dpv_owl:InnovativeUseOfExistingTechnology
+    - dpv_upstream:InnovativeUseOfExistingTechnology
+    - dpv_owl:InnovativeUseOfExistingTechnology
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1243,14 +1256,14 @@ classes:
     class_uri: dpv:InnovativeUseOfNewTechnologies
     description: Involvement of a new (innovative) technologies
     aliases:
-      - Innovative Use of New Technologies
+    - Innovative Use of New Technologies
     comments:
-      - New technologies are by definition considered innovative
+    - New technologies are by definition considered innovative
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:InnovativeUseOfNewTechnologies
-      - dpv_owl:InnovativeUseOfNewTechnologies
+    - dpv_upstream:InnovativeUseOfNewTechnologies
+    - dpv_owl:InnovativeUseOfNewTechnologies
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1259,17 +1272,17 @@ classes:
     class_uri: dpv:InnovativeUseOfTechnology
     description: Indicates that technology is being used in an innovative manner
     aliases:
-      - Innovative use of Technology
+    - Innovative use of Technology
     comments:
-      - |-
-        Innovative here refers to 'state of the art' rather than the
-        implementing entity, and can be for either new technology or new uses of
-        existing technology
+    - |-
+      Innovative here refers to 'state of the art' rather than the
+      implementing entity, and can be for either new technology or new uses of
+      existing technology
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:InnovativeUseOfTechnology
-      - dpv_owl:InnovativeUseOfTechnology
+    - dpv_upstream:InnovativeUseOfTechnology
+    - dpv_owl:InnovativeUseOfTechnology
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1278,12 +1291,12 @@ classes:
     class_uri: dpv:NonPublicDataSource
     description: A source of data that is not publicly accessible or available
     aliases:
-      - Non-Public Data Source
+    - Non-Public Data Source
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:NonPublicDataSource
-      - dpv_owl:NonPublicDataSource
+    - dpv_upstream:NonPublicDataSource
+    - dpv_owl:NonPublicDataSource
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1294,28 +1307,29 @@ classes:
       Level of automation corresponding to Level 0 in ISO/IEC 22989:2022 where
       there is no automation in the system
     aliases:
-      - Not Automated
+    - Not Automated
     comments:
-      - Human Involvement is necessary here as there is no automation
+    - Human Involvement is necessary here as there is no automation
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:NotAutomated
-      - dpv_owl:NotAutomated
+    - dpv_upstream:NotAutomated
+    - dpv_owl:NotAutomated
     annotations:
       skos_in_scheme: processing-context-classes
 
   ObjectingToProcess:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:ObjectingToProcess
-    description: Involvement where entity can object to process of specified context
+    description: Involvement where entity can object to process of specified 
+      context
     aliases:
-      - Objecting to Process
+    - Objecting to Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ObjectingToProcess
-      - dpv_owl:ObjectingToProcess
+    - dpv_upstream:ObjectingToProcess
+    - dpv_owl:ObjectingToProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1324,12 +1338,12 @@ classes:
     class_uri: dpv:OptingInToProcess
     description: Involvement where entity can opt-in to specified context
     aliases:
-      - Opting in to Process
+    - Opting in to Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:OptingInToProcess
-      - dpv_owl:OptingInToProcess
+    - dpv_upstream:OptingInToProcess
+    - dpv_owl:OptingInToProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1338,12 +1352,12 @@ classes:
     class_uri: dpv:OptingOutFromProcess
     description: Involvement where entity can opt-out from specified context
     aliases:
-      - Opting out of Process
+    - Opting out of Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:OptingOutFromProcess
-      - dpv_owl:OptingOutFromProcess
+    - dpv_upstream:OptingOutFromProcess
+    - dpv_owl:OptingOutFromProcess
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1356,17 +1370,17 @@ classes:
       that does not require the human to control/use these parts while still
       retaining control over the system
     aliases:
-      - Partial Automation
+    - Partial Automation
     comments:
-      - |-
-        Human Involvement is implied here, specifically the ability to Control
-        operations, but also possibly for intervention, oversight, and
-        verification
+    - |-
+      Human Involvement is implied here, specifically the ability to Control
+      operations, but also possibly for intervention, oversight, and
+      verification
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:PartialAutomation
-      - dpv_owl:PartialAutomation
+    - dpv_upstream:PartialAutomation
+    - dpv_owl:PartialAutomation
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1377,12 +1391,12 @@ classes:
       Conditions required or followed regarding processing of data or use of
       technologies
     aliases:
-      - Processing Condition
+    - Processing Condition
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ProcessingCondition
-      - dpv_owl:ProcessingCondition
+    - dpv_upstream:ProcessingCondition
+    - dpv_owl:ProcessingCondition
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1391,46 +1405,47 @@ classes:
     class_uri: dpv:ProcessingContext
     description: Context or conditions within which processing takes place
     aliases:
-      - Processing Context
+    - Processing Context
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ProcessingContext
-      - dpv_owl:ProcessingContext
+    - dpv_upstream:ProcessingContext
+    - dpv_owl:ProcessingContext
     annotations:
       skos_in_scheme: processing-context-classes
 
   ProcessingDuration:
     is_a: DpvDuration
     mixins:
-      - ProcessingCondition
+    - ProcessingCondition
     class_uri: dpv:ProcessingDuration
-    description: Conditions regarding duration or temporal limitation for processing
+    description: Conditions regarding duration or temporal limitation for 
+      processing
     aliases:
-      - Processing Duration
+    - Processing Duration
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ProcessingDuration
-      - dpv_owl:ProcessingDuration
+    - dpv_upstream:ProcessingDuration
+    - dpv_owl:ProcessingDuration
     annotations:
       skos_in_scheme: processing-context-classes
 
   ProcessingLocation:
     is_a: DpvLocation
     mixins:
-      - ProcessingCondition
+    - ProcessingCondition
     class_uri: dpv:ProcessingLocation
     description: |-
       Conditions regarding location or geospatial scope where processing takes
       places
     aliases:
-      - Processing Location
+    - Processing Location
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ProcessingLocation
-      - dpv_owl:ProcessingLocation
+    - dpv_upstream:ProcessingLocation
+    - dpv_owl:ProcessingLocation
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1439,36 +1454,37 @@ classes:
     class_uri: dpv:PublicDataSource
     description: A source of data that is publicly accessible or available
     aliases:
-      - Public Data Source
+    - Public Data Source
     comments:
-      - |-
-        The term 'Public' is used here in a broad sense. Actual consideration of
-        what is 'Public Data' can vary based on several contextual or
-        jurisdictional factors such as definition of open, methods of access,
-        permissions and licenses.
+    - |-
+      The term 'Public' is used here in a broad sense. Actual consideration of
+      what is 'Public Data' can vary based on several contextual or
+      jurisdictional factors such as definition of open, methods of access,
+      permissions and licenses.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:PublicDataSource
-      - dpv_owl:PublicDataSource
+    - dpv_upstream:PublicDataSource
+    - dpv_owl:PublicDataSource
     annotations:
       skos_in_scheme: processing-context-classes
 
   ReversingProcessEffects:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:ReversingProcessEffects
-    description: Involvement where entity can reverse effects of specified context
+    description: Involvement where entity can reverse effects of specified 
+      context
     aliases:
-      - Reversing Process Effects
+    - Reversing Process Effects
     comments:
-      - |-
-        Effects refer to consequences and impacts arising from the process or
-        from the outputs of a process
+    - |-
+      Effects refer to consequences and impacts arising from the process or
+      from the outputs of a process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ReversingProcessEffects
-      - dpv_owl:ReversingProcessEffects
+    - dpv_upstream:ReversingProcessEffects
+    - dpv_owl:ReversingProcessEffects
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1477,37 +1493,38 @@ classes:
     class_uri: dpv:ReversingProcessInput
     description: Involvement where entity can reverse input of specified context
     aliases:
-      - Reversing Process Input
+    - Reversing Process Input
     comments:
-      - |-
-        Reversion can be considered a form of correction in some instances. We
-        welcome inputs to further explore and define this relation between
-        correction and reversion concepts.
+    - |-
+      Reversion can be considered a form of correction in some instances. We
+      welcome inputs to further explore and define this relation between
+      correction and reversion concepts.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ReversingProcessInput
-      - dpv_owl:ReversingProcessInput
+    - dpv_upstream:ReversingProcessInput
+    - dpv_owl:ReversingProcessInput
     annotations:
       skos_in_scheme: processing-context-classes
 
   ReversingProcessOutput:
     is_a: EntityPermissiveInvolvement
     class_uri: dpv:ReversingProcessOutput
-    description: Involvement where entity can reverse output of specified context
+    description: Involvement where entity can reverse output of specified 
+      context
     aliases:
-      - Reversing Process Output
+    - Reversing Process Output
     comments:
-      - |-
-        Reversing of outputs indicate discarding the output and going back to
-        the previous output. This is different from correction of output which
-        allows modification of the output - implying continuation of the
-        process.
+    - |-
+      Reversing of outputs indicate discarding the output and going back to
+      the previous output. This is different from correction of output which
+      allows modification of the output - implying continuation of the
+      process.
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ReversingProcessOutput
-      - dpv_owl:ReversingProcessOutput
+    - dpv_upstream:ReversingProcessOutput
+    - dpv_owl:ReversingProcessOutput
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1516,12 +1533,12 @@ classes:
     class_uri: dpv:ScoringOfIndividuals
     description: Processing that involves scoring of individuals
     aliases:
-      - Scoring of Individuals
+    - Scoring of Individuals
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ScoringOfIndividuals
-      - dpv_owl:ScoringOfIndividuals
+    - dpv_upstream:ScoringOfIndividuals
+    - dpv_owl:ScoringOfIndividuals
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1530,12 +1547,12 @@ classes:
     class_uri: dpv:StorageCondition
     description: Conditions required or followed regarding storage of data
     aliases:
-      - Storage Condition
+    - Storage Condition
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:StorageCondition
-      - dpv_owl:StorageCondition
+    - dpv_upstream:StorageCondition
+    - dpv_owl:StorageCondition
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1544,51 +1561,51 @@ classes:
     class_uri: dpv:StorageDeletion
     description: Deletion or Erasure of data including any deletion guarantees
     aliases:
-      - Storage Deletion
+    - Storage Deletion
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:StorageDeletion
-      - dpv_owl:StorageDeletion
+    - dpv_upstream:StorageDeletion
+    - dpv_owl:StorageDeletion
     annotations:
       skos_in_scheme: processing-context-classes
 
   StorageDuration:
     is_a: ProcessingDuration
     mixins:
-      - StorageCondition
+    - StorageCondition
     class_uri: dpv:StorageDuration
     description: Duration or temporal limitation on storage of data
     aliases:
-      - Storage Duration
+    - Storage Duration
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:StorageDuration
-      - dpv_owl:StorageDuration
+    - dpv_upstream:StorageDuration
+    - dpv_owl:StorageDuration
     annotations:
       skos_in_scheme: processing-context-classes
 
   StorageLocation:
     is_a: ProcessingLocation
     mixins:
-      - StorageCondition
+    - StorageCondition
     class_uri: dpv:StorageLocation
     description: Location or geospatial scope where the data is stored
     aliases:
-      - Storage Location
+    - Storage Location
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:StorageLocation
-      - dpv_owl:StorageLocation
-    close_mappings:
-      - gists:GeoLocation
-      - ocsf:Location
-      - oscal:Location
+    - dpv_upstream:StorageLocation
+    - dpv_owl:StorageLocation
     annotations:
       skos_in_scheme: processing-context-classes
 
+    close_mappings:
+    - gists:GeoLocation
+    - ocsf:Location
+    - oscal:Location
   StorageRestoration:
     is_a: StorageCondition
     class_uri: dpv:StorageRestoration
@@ -1596,12 +1613,12 @@ classes:
       Regularity and temporal span of data restoration/backup mechanisms that
       guarantee that data is preserved
     aliases:
-      - Storage Restoration
+    - Storage Restoration
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:StorageRestoration
-      - dpv_owl:StorageRestoration
+    - dpv_upstream:StorageRestoration
+    - dpv_owl:StorageRestoration
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1610,12 +1627,12 @@ classes:
     class_uri: dpv:SystematicMonitoring
     description: Processing that involves systematic monitoring of individuals
     aliases:
-      - Systematic Monitoring
+    - Systematic Monitoring
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:SystematicMonitoring
-      - dpv_owl:SystematicMonitoring
+    - dpv_upstream:SystematicMonitoring
+    - dpv_owl:SystematicMonitoring
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1625,16 +1642,16 @@ classes:
       The technology, technological implementation, or any techniques, skills,
       methods, and processes used or applied
     aliases:
-      - Technology
+    - Technology
     comments:
-      - |-
-        Examples (non-exhaustive) include: Algorithm, Process, Method, Skill,
-        Database, Cookies, Server, Device
+    - |-
+      Examples (non-exhaustive) include: Algorithm, Process, Method, Skill,
+      Database, Cookies, Server, Device
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:Technology
-      - dpv_owl:Technology
+    - dpv_upstream:Technology
+    - dpv_owl:Technology
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1645,12 +1662,12 @@ classes:
       Data Sourced from a Third Party, e.g. when data is collected from an
       entity that is neither the Controller nor the Data Subject
     aliases:
-      - Third Party as Data Source
+    - Third Party as Data Source
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:ThirdPartyDataSource
-      - dpv_owl:ThirdPartyDataSource
+    - dpv_upstream:ThirdPartyDataSource
+    - dpv_owl:ThirdPartyDataSource
     annotations:
       skos_in_scheme: processing-context-classes
 
@@ -1661,11 +1678,11 @@ classes:
       Involvement where entity can withdraw a previously given assent from
       specified context
     aliases:
-      - Withdrawing from Process
+    - Withdrawing from Process
     in_subset:
-      - processing_context_subset
+    - processing_context_subset
     exact_mappings:
-      - dpv_upstream:WithdrawingFromProcess
-      - dpv_owl:WithdrawingFromProcess
+    - dpv_upstream:WithdrawingFromProcess
+    - dpv_owl:WithdrawingFromProcess
     annotations:
       skos_in_scheme: processing-context-classes

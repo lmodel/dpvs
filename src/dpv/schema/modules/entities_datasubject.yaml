@@ -6,8 +6,8 @@ description: |-
   `modules/entities_datasubject-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -62,13 +62,13 @@ slots:
     definition_uri: dpv:hasDataSubject
     description: Indicates association with Data Subject
     aliases:
-      - has data subject
+    - has data subject
     multivalued: true
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:hasDataSubject
-      - dpv_owl:hasDataSubject
+    - dpv_upstream:hasDataSubject
+    - dpv_owl:hasDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-properties
 
@@ -77,28 +77,29 @@ slots:
     definition_uri: dpv:hasHumanSubject
     description: Indicates association with Human Subject
     aliases:
-      - has human subject
+    - has human subject
     multivalued: true
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:hasHumanSubject
-      - dpv_owl:hasHumanSubject
+    - dpv_upstream:hasHumanSubject
+    - dpv_owl:hasHumanSubject
     annotations:
       skos_in_scheme: entities-datasubject-properties
 
   has_relation_with_data_subject:
     is_a: has_entity
     definition_uri: dpv:hasRelationWithDataSubject
-    description: Indicates the relation between specified Entity and Data Subject
+    description: Indicates the relation between specified Entity and Data 
+      Subject
     aliases:
-      - has relation with data subject
+    - has relation with data subject
     multivalued: true
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:hasRelationWithDataSubject
-      - dpv_owl:hasRelationWithDataSubject
+    - dpv_upstream:hasRelationWithDataSubject
+    - dpv_owl:hasRelationWithDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-properties
 
@@ -111,12 +112,12 @@ classes:
       A natural person that is not a child i.e. has attained some legally
       specified age of adulthood
     aliases:
-      - Adult
+    - Adult
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Adult
-      - dpv_owl:Adult
+    - dpv_upstream:Adult
+    - dpv_owl:Adult
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -125,53 +126,53 @@ classes:
     class_uri: dpv:Applicant
     description: Humans that are applicants in some context
     aliases:
-      - Applicant
+    - Applicant
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Applicant
-      - dpv_owl:Applicant
+    - dpv_upstream:Applicant
+    - dpv_owl:Applicant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   AsylumSeeker:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:AsylumSeeker
     description: Humans that are asylum seekers
     aliases:
-      - Asylum Seeker
+    - Asylum Seeker
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:AsylumSeeker
-      - dpv_owl:AsylumSeeker
+    - dpv_upstream:AsylumSeeker
+    - dpv_owl:AsylumSeeker
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   Child:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:Child
     description: |-
       A 'child' is a natural legal person who is below a certain legal age
       depending on the legal jurisdiction.
     aliases:
-      - Child
+    - Child
     comments:
-      - |-
-        The legality of age defining a child varies by jurisdiction. In
-        addition, 'child' is distinct from a 'minor'. For example, the legal age
-        for consumption of alcohol can be 21, which makes a person of age 20 a
-        'minor' in this context. In other cases, 'minor' and 'child' are used
-        interchangeably to refer to a person below some legally defined age.
+    - |-
+      The legality of age defining a child varies by jurisdiction. In
+      addition, 'child' is distinct from a 'minor'. For example, the legal age
+      for consumption of alcohol can be 21, which makes a person of age 20 a
+      'minor' in this context. In other cases, 'minor' and 'child' are used
+      interchangeably to refer to a person below some legally defined age.
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Child
-      - dpv_owl:Child
+    - dpv_upstream:Child
+    - dpv_owl:Child
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -180,28 +181,28 @@ classes:
     class_uri: dpv:Citizen
     description: Humans that are citizens (for a jurisdiction)
     aliases:
-      - Citizen
+    - Citizen
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Citizen
-      - dpv_owl:Citizen
+    - dpv_upstream:Citizen
+    - dpv_owl:Citizen
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   Client:
     is_a: DpvCustomer
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:Client
     description: Humans that are clients or recipients of services
     aliases:
-      - Client
+    - Client
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Client
-      - dpv_owl:Client
+    - dpv_upstream:Client
+    - dpv_owl:Client
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -212,38 +213,38 @@ classes:
       The individual (or category of individuals) whose personal data is being
       processed
     aliases:
-      - Data Subject
+    - Data Subject
     comments:
-      - |-
-        The term 'data subject' is specific to the GDPR, but is functionally
-        equivalent to the term 'individual associated with data' and the ISO/IEC
-        term 'PII Principle'
+    - |-
+      The term 'data subject' is specific to the GDPR, but is functionally
+      equivalent to the term 'individual associated with data' and the ISO/IEC
+      term 'PII Principle'
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:DataSubject
-      - dpv_owl:DataSubject
-      - iso29100:PIIPrincipal
-      - iso22989:DataSubject
-    narrow_mappings:
-      - common_domain_model:NaturalPerson
-      - gists:Person
-    related_mappings:
-      - iso27001:InterestedParty
+    - dpv_upstream:DataSubject
+    - dpv_owl:DataSubject
+    - iso29100:PIIPrincipal
+    - iso22989:DataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
+    narrow_mappings:
+    - common_domain_model:NaturalPerson
+    - gists:Person
+    related_mappings:
+    - iso27001:InterestedParty
   DpvConsumer:
     is_a: HumanSubject
     class_uri: dpv:Consumer
     description: Humans that consume goods or services for direct use
     aliases:
-      - Consumer
+    - Consumer
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Consumer
-      - dpv_owl:Consumer
+    - dpv_upstream:Consumer
+    - dpv_owl:Consumer
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -252,16 +253,16 @@ classes:
     class_uri: dpv:Customer
     description: Humans that purchase goods or services
     aliases:
-      - Customer
+    - Customer
     comments:
-      - |-
-        note: for B2B relations where customers are organisations, this concept
-        only applies for data subjects
+    - |-
+      note: for B2B relations where customers are organisations, this concept
+      only applies for data subjects
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Customer
-      - dpv_owl:Customer
+    - dpv_upstream:Customer
+    - dpv_owl:Customer
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -270,44 +271,44 @@ classes:
     class_uri: dpv:User
     description: Humans that use service(s)
     aliases:
-      - User
+    - User
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:User
-      - dpv_owl:User
+    - dpv_upstream:User
+    - dpv_owl:User
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   ElderlyDataSubject:
     is_a: VulnerableDataSubject
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:ElderlyDataSubject
     description: Data subjects that are considered elderly (i.e. based on age)
     aliases:
-      - Elderly Data Subject
+    - Elderly Data Subject
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:ElderlyDataSubject
-      - dpv_owl:ElderlyDataSubject
+    - dpv_upstream:ElderlyDataSubject
+    - dpv_owl:ElderlyDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   ElderlyHuman:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:ElderlyHuman
     description: Humans that are considered elderly (i.e. based on age)
     aliases:
-      - Elderly Human
+    - Elderly Human
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:ElderlyHuman
-      - dpv_owl:ElderlyHuman
+    - dpv_upstream:ElderlyHuman
+    - dpv_owl:ElderlyHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -316,28 +317,28 @@ classes:
     class_uri: dpv:Employee
     description: Humans that are employees
     aliases:
-      - Employee
+    - Employee
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Employee
-      - dpv_owl:Employee
+    - dpv_upstream:Employee
+    - dpv_owl:Employee
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   GuardianOfDataSubject:
     is_a: GuardianOfHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:GuardianOfDataSubject
     description: Guardian(s) of data subjects such as children
     aliases:
-      - Guardian(s) of Data Subject
+    - Guardian(s) of Data Subject
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:GuardianOfDataSubject
-      - dpv_owl:GuardianOfDataSubject
+    - dpv_upstream:GuardianOfDataSubject
+    - dpv_owl:GuardianOfDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -346,12 +347,12 @@ classes:
     class_uri: dpv:GuardianOfHuman
     description: Guardian(s) of humans
     aliases:
-      - Guardian(s) of Human
+    - Guardian(s) of Human
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:GuardianOfHuman
-      - dpv_owl:GuardianOfHuman
+    - dpv_upstream:GuardianOfHuman
+    - dpv_owl:GuardianOfHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -363,12 +364,12 @@ classes:
       some context such as personal data (dpv:DataSubject) or technology
       (tech:Subject)
     aliases:
-      - Human Subject
+    - Human Subject
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:HumanSubject
-      - dpv_owl:HumanSubject
+    - dpv_upstream:HumanSubject
+    - dpv_owl:HumanSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -377,12 +378,12 @@ classes:
     class_uri: dpv:Immigrant
     description: Humans that are immigrants (for a jurisdiction)
     aliases:
-      - Immigrant
+    - Immigrant
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Immigrant
-      - dpv_owl:Immigrant
+    - dpv_upstream:Immigrant
+    - dpv_owl:Immigrant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -391,59 +392,61 @@ classes:
     class_uri: dpv:JobApplicant
     description: Humans that apply for jobs or employments
     aliases:
-      - Job Applicant
+    - Job Applicant
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:JobApplicant
-      - dpv_owl:JobApplicant
+    - dpv_upstream:JobApplicant
+    - dpv_owl:JobApplicant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   Member:
     is_a: HumanSubject
     class_uri: dpv:Member
-    description: Humans that are members of a group, organisation, or other collectives
+    description: Humans that are members of a group, organisation, or other 
+      collectives
     aliases:
-      - Member
+    - Member
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Member
-      - dpv_owl:Member
+    - dpv_upstream:Member
+    - dpv_owl:Member
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   MentallyVulnerableDataSubject:
     is_a: MentallyVulnerableHuman
     mixins:
-      - HumanSubject
-      - VulnerableDataSubject
+    - HumanSubject
+    - VulnerableDataSubject
     class_uri: dpv:MentallyVulnerableDataSubject
     description: Data subjects that are considered mentally vulnerable
     aliases:
-      - Mentally Vulnerable Data Subject
+    - Mentally Vulnerable Data Subject
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:MentallyVulnerableDataSubject
-      - dpv_owl:MentallyVulnerableDataSubject
+    - dpv_upstream:MentallyVulnerableDataSubject
+    - dpv_owl:MentallyVulnerableDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   MentallyVulnerableHuman:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:MentallyVulnerableHuman
-    description: Humans that are considered mentally vulnerable within the context
+    description: Humans that are considered mentally vulnerable within the 
+      context
     aliases:
-      - Mentally Vulnerable Human
+    - Mentally Vulnerable Human
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:MentallyVulnerableHuman
-      - dpv_owl:MentallyVulnerableHuman
+    - dpv_upstream:MentallyVulnerableHuman
+    - dpv_owl:MentallyVulnerableHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -452,28 +455,28 @@ classes:
     class_uri: dpv:NonCitizen
     description: Humans that are not citizens (for a jurisdiction)
     aliases:
-      - Non-Citizen
+    - Non-Citizen
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:NonCitizen
-      - dpv_owl:NonCitizen
+    - dpv_upstream:NonCitizen
+    - dpv_owl:NonCitizen
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   ParentOfDataSubject:
     is_a: ParentOfHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:ParentOfDataSubject
     description: Parent(s) of data subjects such as children
     aliases:
-      - Parent(s) of Data Subject
+    - Parent(s) of Data Subject
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:ParentOfDataSubject
-      - dpv_owl:ParentOfDataSubject
+    - dpv_upstream:ParentOfDataSubject
+    - dpv_owl:ParentOfDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -482,12 +485,12 @@ classes:
     class_uri: dpv:ParentOfHuman
     description: Parent(s) of humans
     aliases:
-      - Parent of Human
+    - Parent of Human
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:ParentOfHuman
-      - dpv_owl:ParentOfHuman
+    - dpv_upstream:ParentOfHuman
+    - dpv_owl:ParentOfHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -497,12 +500,12 @@ classes:
     description: |-
       Humans that participate in some context such as volunteers in a function
     aliases:
-      - Participant
+    - Participant
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Participant
-      - dpv_owl:Participant
+    - dpv_upstream:Participant
+    - dpv_owl:Participant
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -513,12 +516,12 @@ classes:
       Humans that receive medical attention, treatment, care, advice, or other
       health related services
     aliases:
-      - Patient
+    - Patient
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Patient
-      - dpv_owl:Patient
+    - dpv_upstream:Patient
+    - dpv_owl:Patient
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -527,12 +530,12 @@ classes:
     class_uri: dpv:Student
     description: Humans that are students
     aliases:
-      - Student
+    - Student
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Student
-      - dpv_owl:Student
+    - dpv_upstream:Student
+    - dpv_owl:Student
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -541,14 +544,14 @@ classes:
     class_uri: dpv:Subscriber
     description: Humans that subscribe to service(s)
     aliases:
-      - Subscriber
+    - Subscriber
     comments:
-      - 'note: subscriber can be customer or consumer'
+    - 'note: subscriber can be customer or consumer'
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Subscriber
-      - dpv_owl:Subscriber
+    - dpv_upstream:Subscriber
+    - dpv_owl:Subscriber
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -557,12 +560,12 @@ classes:
     class_uri: dpv:Tourist
     description: Humans that are tourists i.e. not citizens and not immigrants
     aliases:
-      - Tourist
+    - Tourist
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Tourist
-      - dpv_owl:Tourist
+    - dpv_upstream:Tourist
+    - dpv_owl:Tourist
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
@@ -571,49 +574,50 @@ classes:
     class_uri: dpv:Visitor
     description: Humans that are temporary visitors
     aliases:
-      - Visitor
+    - Visitor
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:Visitor
-      - dpv_owl:Visitor
+    - dpv_upstream:Visitor
+    - dpv_owl:Visitor
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   VulnerableDataSubject:
     is_a: VulnerableHuman
     mixins:
-      - HumanSubject
+    - HumanSubject
     class_uri: dpv:VulnerableDataSubject
     description: |-
       Humans which should be considered 'vulnerable' and therefore would
       require additional measures and safeguards
     aliases:
-      - Vulnerable Data Subject
+    - Vulnerable Data Subject
     comments:
-      - |-
-        This concept denotes a Data Subject or a group are vulnerable, but not
-        what vulnerability they possess or its context. This information can be
-        provided additionally as comments, or as separate concepts and
-        relations. Proposals for this are welcome.
+    - |-
+      This concept denotes a Data Subject or a group are vulnerable, but not
+      what vulnerability they possess or its context. This information can be
+      provided additionally as comments, or as separate concepts and
+      relations. Proposals for this are welcome.
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:VulnerableDataSubject
-      - dpv_owl:VulnerableDataSubject
+    - dpv_upstream:VulnerableDataSubject
+    - dpv_owl:VulnerableDataSubject
     annotations:
       skos_in_scheme: entities-datasubject-classes
 
   VulnerableHuman:
     is_a: HumanSubject
     class_uri: dpv:VulnerableHuman
-    description: Human(s) which should be considered 'vulnerable' within the context
+    description: Human(s) which should be considered 'vulnerable' within the 
+      context
     aliases:
-      - Vulnerable Human
+    - Vulnerable Human
     in_subset:
-      - entities_datasubject_subset
+    - entities_datasubject_subset
     exact_mappings:
-      - dpv_upstream:VulnerableHuman
-      - dpv_owl:VulnerableHuman
+    - dpv_upstream:VulnerableHuman
+    - dpv_owl:VulnerableHuman
     annotations:
       skos_in_scheme: entities-datasubject-classes

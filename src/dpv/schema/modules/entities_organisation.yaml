@@ -6,8 +6,8 @@ description: |-
   `modules/entities_organisation-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -64,12 +64,12 @@ classes:
       Organisations related to academia or scientific pursuits e.g.
       Universities, Schools, Research Bodies
     aliases:
-      - Academic or Scientific Organisation
+    - Academic or Scientific Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:AcademicScientificOrganisation
-      - dpv_owl:AcademicScientificOrganisation
+    - dpv_upstream:AcademicScientificOrganisation
+    - dpv_owl:AcademicScientificOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -80,12 +80,12 @@ classes:
       An organisation that that offers transportation and medical care to
       patients requiring urgent medical attention
     aliases:
-      - Ambulance Provider
+    - Ambulance Provider
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:AmbulanceProvider
-      - dpv_owl:AmbulanceProvider
+    - dpv_upstream:AmbulanceProvider
+    - dpv_owl:AmbulanceProvider
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -96,12 +96,12 @@ classes:
       A nonprofit entity dedicated to providing assistance or raising funds
       for social, educational, religious, or other philanthropic purposes
     aliases:
-      - Charity Organisation
+    - Charity Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:CharityOrganisation
-      - dpv_owl:CharityOrganisation
+    - dpv_upstream:CharityOrganisation
+    - dpv_owl:CharityOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -112,12 +112,12 @@ classes:
       An organisation that is a smaller healthcare facility offering
       outpatient medical services for diagnosis and treatment
     aliases:
-      - Clinic
+    - Clinic
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:Clinic
-      - dpv_owl:Clinic
+    - dpv_upstream:Clinic
+    - dpv_owl:Clinic
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -128,12 +128,12 @@ classes:
       A general term reflecting a company or a business or a group acting as a
       unit
     aliases:
-      - Organisation
+    - Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:Organisation
-      - dpv_owl:Organisation
+    - dpv_upstream:Organisation
+    - dpv_owl:Organisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -144,12 +144,12 @@ classes:
       An organisation focused on delivering formal or informal education,
       training, or research
     aliases:
-      - Educational Organisation
+    - Educational Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:EducationalOrganisation
-      - dpv_owl:EducationalOrganisation
+    - dpv_upstream:EducationalOrganisation
+    - dpv_owl:EducationalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -161,12 +161,12 @@ classes:
       delivering immediate medical care to patients in critical or
       life-threatening situations
     aliases:
-      - Emergency Healthcare Provider
+    - Emergency Healthcare Provider
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:EmergencyHealthcareProvider
-      - dpv_owl:EmergencyHealthcareProvider
+    - dpv_upstream:EmergencyHealthcareProvider
+    - dpv_owl:EmergencyHealthcareProvider
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -178,12 +178,12 @@ classes:
       responding rapidly to urgent situations to protect lives, property, and
       the environment
     aliases:
-      - Emergency Service Provider
+    - Emergency Service Provider
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:EmergencyServiceProvider
-      - dpv_owl:EmergencyServiceProvider
+    - dpv_upstream:EmergencyServiceProvider
+    - dpv_owl:EmergencyServiceProvider
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -194,12 +194,12 @@ classes:
       An organisation that is an emergency service provider for fire
       prevention, firefighting, and rescue services
     aliases:
-      - Fire Department
+    - Fire Department
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:FireDepartment
-      - dpv_owl:FireDepartment
+    - dpv_upstream:FireDepartment
+    - dpv_owl:FireDepartment
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -208,12 +208,12 @@ classes:
     class_uri: dpv:ForProfitOrganisation
     description: An organisation that aims to achieve profit as its primary goal
     aliases:
-      - For-Profit Organisation
+    - For-Profit Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:ForProfitOrganisation
-      - dpv_owl:ForProfitOrganisation
+    - dpv_upstream:ForProfitOrganisation
+    - dpv_owl:ForProfitOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -222,12 +222,12 @@ classes:
     class_uri: dpv:GovernmentalOrganisation
     description: An organisation managed or part of government
     aliases:
-      - Governmental Organisation
+    - Governmental Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:GovernmentalOrganisation
-      - dpv_owl:GovernmentalOrganisation
+    - dpv_upstream:GovernmentalOrganisation
+    - dpv_owl:GovernmentalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -238,12 +238,12 @@ classes:
       An organisation that delivers medical services, promotes health, and
       provides care for individuals and communities
     aliases:
-      - Healthcare Organisation
+    - Healthcare Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:HealthcareOrganisation
-      - dpv_owl:HealthcareOrganisation
+    - dpv_upstream:HealthcareOrganisation
+    - dpv_owl:HealthcareOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -254,26 +254,27 @@ classes:
       An organisation that provides comprehensive medical treatment, including
       emergency care, surgeries, and inpatient services
     aliases:
-      - Hospital
+    - Hospital
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:Hospital
-      - dpv_owl:Hospital
+    - dpv_upstream:Hospital
+    - dpv_owl:Hospital
     annotations:
       skos_in_scheme: entities-organisation-classes
 
   IndustryConsortium:
     is_a: DpvOrganisation
     class_uri: dpv:IndustryConsortium
-    description: A consortium established and comprising on industry organisations
+    description: A consortium established and comprising on industry 
+      organisations
     aliases:
-      - Industry Consortium
+    - Industry Consortium
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:IndustryConsortium
-      - dpv_owl:IndustryConsortium
+    - dpv_upstream:IndustryConsortium
+    - dpv_owl:IndustryConsortium
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -285,12 +286,12 @@ classes:
       international law, or any other body which is set up by, or on the basis
       of, an agreement between two or more countries
     aliases:
-      - International Organisation
+    - International Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:InternationalOrganisation
-      - dpv_owl:InternationalOrganisation
+    - dpv_upstream:InternationalOrganisation
+    - dpv_owl:InternationalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -301,12 +302,12 @@ classes:
       An organisation involved in interpreting and applying the law, resolving
       disputes, and administering justice as part of the judicial system
     aliases:
-      - Judicial Organisation
+    - Judicial Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:JudicialOrganisation
-      - dpv_owl:JudicialOrganisation
+    - dpv_upstream:JudicialOrganisation
+    - dpv_owl:JudicialOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -317,12 +318,12 @@ classes:
       An organisation that is an agency responsible for enforcing laws,
       maintaining public order, and ensuring public safety
     aliases:
-      - Law Enforcement Organisation
+    - Law Enforcement Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:LawEnforcementOrganisation
-      - dpv_owl:LawEnforcementOrganisation
+    - dpv_upstream:LawEnforcementOrganisation
+    - dpv_owl:LawEnforcementOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -331,12 +332,12 @@ classes:
     class_uri: dpv:NonGovernmentalOrganisation
     description: An organisation not part of or independent from the government
     aliases:
-      - Non-Governmental Organisation
+    - Non-Governmental Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:NonGovernmentalOrganisation
-      - dpv_owl:NonGovernmentalOrganisation
+    - dpv_upstream:NonGovernmentalOrganisation
+    - dpv_owl:NonGovernmentalOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -346,12 +347,12 @@ classes:
     description: |-
       An organisation that does not aim to achieve profit as its primary goal
     aliases:
-      - Non-Profit Organisation
+    - Non-Profit Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:NonProfitOrganisation
-      - dpv_owl:NonProfitOrganisation
+    - dpv_upstream:NonProfitOrganisation
+    - dpv_owl:NonProfitOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -362,31 +363,32 @@ classes:
       Entity within an organisation that does not constitute as a separate
       legal entity
     aliases:
-      - Organisational Unit
+    - Organisational Unit
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:OrganisationalUnit
-      - dpv_owl:OrganisationalUnit
-    close_mappings:
-      - common_domain_model:BusinessUnit
-      - iso27001:Organization
-    narrow_mappings:
-      - gists:Organization
+    - dpv_upstream:OrganisationalUnit
+    - dpv_owl:OrganisationalUnit
     annotations:
       skos_in_scheme: entities-organisation-classes
 
+    close_mappings:
+    - common_domain_model:BusinessUnit
+    - iso27001:Organization
+    narrow_mappings:
+    - gists:Organization
   PrivateSectorBody:
     is_a: LegalEntity
     class_uri: dpv:PrivateSectorBody
-    description: An organisation owned and operated by private individuals or companies
+    description: An organisation owned and operated by private individuals or 
+      companies
     aliases:
-      - Private Sector Body
+    - Private Sector Body
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:PrivateSectorBody
-      - dpv_owl:PrivateSectorBody
+    - dpv_upstream:PrivateSectorBody
+    - dpv_owl:PrivateSectorBody
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -397,12 +399,12 @@ classes:
       A government-controlled organisation that provides services or goods to
       the public
     aliases:
-      - Public Sector Body
+    - Public Sector Body
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:PublicSectorBody
-      - dpv_owl:PublicSectorBody
+    - dpv_upstream:PublicSectorBody
+    - dpv_owl:PublicSectorBody
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -413,12 +415,12 @@ classes:
       An organisations that supports the practice, promotion, and management
       of religious activities and beliefs
     aliases:
-      - Religious Associations
+    - Religious Associations
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:ReligiousAssociations
-      - dpv_owl:ReligiousAssociations
+    - dpv_upstream:ReligiousAssociations
+    - dpv_owl:ReligiousAssociations
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -429,12 +431,12 @@ classes:
       An organisation that is characterised as a Small or Medium-sized
       Enterprise based on limited staff and revenue
     aliases:
-      - SME Organisation
+    - SME Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:SMEOrganisation
-      - dpv_owl:SMEOrganisation
+    - dpv_upstream:SMEOrganisation
+    - dpv_owl:SMEOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes
 
@@ -445,11 +447,11 @@ classes:
       An organisation that is newly established and is nascent in terms of
       available resources
     aliases:
-      - Startup Organisation
+    - Startup Organisation
     in_subset:
-      - entities_organisation_subset
+    - entities_organisation_subset
     exact_mappings:
-      - dpv_upstream:StartupOrganisation
-      - dpv_owl:StartupOrganisation
+    - dpv_upstream:StartupOrganisation
+    - dpv_owl:StartupOrganisation
     annotations:
       skos_in_scheme: entities-organisation-classes

@@ -6,8 +6,8 @@ description: |-
   `modules/entities_authority-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -61,13 +61,13 @@ slots:
     definition_uri: dpv:hasAuthority
     description: Indicates applicability of authority for a jurisdiction
     aliases:
-      - has authority
+    - has authority
     multivalued: true
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:hasAuthority
-      - dpv_owl:hasAuthority
+    - dpv_upstream:hasAuthority
+    - dpv_owl:hasAuthority
     annotations:
       skos_in_scheme: entities-authority-properties
 
@@ -75,13 +75,13 @@ slots:
     definition_uri: dpv:isAuthorityFor
     description: Indicates area, scope, or applicability of an Authority
     aliases:
-      - is authority for
+    - is authority for
     multivalued: true
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:isAuthorityFor
-      - dpv_owl:isAuthorityFor
+    - dpv_upstream:isAuthorityFor
+    - dpv_owl:isAuthorityFor
     annotations:
       skos_in_scheme: entities-authority-properties
 
@@ -94,18 +94,18 @@ classes:
       An authority tasked with overseeing legal compliance regarding privacy
       and data protection laws.
     aliases:
-      - Data Protection Authority
+    - Data Protection Authority
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:DataProtectionAuthority
-      - dpv_owl:DataProtectionAuthority
-    related_mappings:
-      - nist_csf_v2:ResponsibleParty
-      - oscal:ResponsibleParty
+    - dpv_upstream:DataProtectionAuthority
+    - dpv_owl:DataProtectionAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
+    related_mappings:
+    - nist_csf_v2:ResponsibleParty
+    - oscal:ResponsibleParty
   DpvAuthority:
     is_a: GovernmentalOrganisation
     class_uri: dpv:Authority
@@ -113,40 +113,42 @@ classes:
       An authority with the power to create or enforce laws, or determine
       their compliance.
     aliases:
-      - Authority
+    - Authority
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:Authority
-      - dpv_owl:Authority
+    - dpv_upstream:Authority
+    - dpv_owl:Authority
     annotations:
       skos_in_scheme: entities-authority-classes
 
   NationalAuthority:
     is_a: DpvAuthority
     class_uri: dpv:NationalAuthority
-    description: An authority tasked with overseeing legal compliance for a nation
+    description: An authority tasked with overseeing legal compliance for a 
+      nation
     aliases:
-      - National Authority
+    - National Authority
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:NationalAuthority
-      - dpv_owl:NationalAuthority
+    - dpv_upstream:NationalAuthority
+    - dpv_owl:NationalAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
   RegionalAuthority:
     is_a: DpvAuthority
     class_uri: dpv:RegionalAuthority
-    description: An authority tasked with overseeing legal compliance for a region
+    description: An authority tasked with overseeing legal compliance for a 
+      region
     aliases:
-      - Regional Authority
+    - Regional Authority
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:RegionalAuthority
-      - dpv_owl:RegionalAuthority
+    - dpv_upstream:RegionalAuthority
+    - dpv_owl:RegionalAuthority
     annotations:
       skos_in_scheme: entities-authority-classes
 
@@ -157,11 +159,11 @@ classes:
       An authority tasked with overseeing legal compliance for a
       supra-national union e.g. EU
     aliases:
-      - Supranational Authority
+    - Supranational Authority
     in_subset:
-      - entities_authority_subset
+    - entities_authority_subset
     exact_mappings:
-      - dpv_upstream:SupraNationalAuthority
-      - dpv_owl:SupraNationalAuthority
+    - dpv_upstream:SupraNationalAuthority
+    - dpv_owl:SupraNationalAuthority
     annotations:
       skos_in_scheme: entities-authority-classes

@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -67,7 +67,6 @@ id_prefixes:
 imports:
   - linkml:types
   - dpv:schema/dpv_legal_basis
-  - dpv:schema/dpv_entities
   - dpv:schema/extensions/legal/se
   - dpv:schema/extensions/legal/eu/gdpr
 
@@ -75,22 +74,3 @@ subsets:
 
   legal_se_se_subset:
     description: Entities from the DPV `legal/se/modules/se` submodule.
-
-classes:
-
-  DPASE:
-    is_a: DataProtectionAuthority
-    mixins:
-      - Law
-    class_uri: legal_se:DPA-SE
-    aliases:
-      - DPA-SE
-      - Data Protection Authority (IMY)
-    in_subset:
-      - legal_se_se_subset
-    exact_mappings:
-      - dpv_legal_se:DPA-SE
-      - dpv_legal_se_owl:DPA-SE
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/se/owl#DPA-SE
-      dpv_extension_slug: legal/se

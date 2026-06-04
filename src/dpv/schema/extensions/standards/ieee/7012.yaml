@@ -45,7 +45,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -113,6 +113,7 @@ slots:
       - has agent
     multivalued: true
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasAgent
@@ -128,6 +129,7 @@ slots:
       - has agent behaviour
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasAgentBehaviour
@@ -143,6 +145,7 @@ slots:
       - has agreement
     multivalued: true
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasAgreement
@@ -160,6 +163,7 @@ slots:
       - has privacy preference
     multivalued: true
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasAgreementPreference
@@ -177,6 +181,7 @@ slots:
       - has agreement registry
     multivalued: true
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasAgreementRegistry
@@ -193,6 +198,7 @@ slots:
       - has conflict resolution
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasConflictResolution
@@ -208,6 +214,7 @@ slots:
       - has data sharing term
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasDataSharingTerm
@@ -225,6 +232,7 @@ slots:
       - has deontic interpretation
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasDeonticInterpretation
@@ -242,6 +250,7 @@ slots:
       - has endpoint
     multivalued: true
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasEndpoint
@@ -258,6 +267,7 @@ slots:
       - has first party
     multivalued: true
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasFirstParty
@@ -273,6 +283,7 @@ slots:
       - has human description
     multivalued: true
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasHumanDescription
@@ -290,6 +301,7 @@ slots:
       - has human readable format
     multivalued: true
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasHumanReadableFormat
@@ -312,30 +324,13 @@ slots:
         or specification used to express the resource
     multivalued: true
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasMachineReadableFormat
       - dpv_standards_ieee_7012_owl:hasMachineReadableFormat
     annotations:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasMachineReadableFormat
-      dpv_extension_slug: standards/ieee/7012
-
-  has_party:
-    is_a: has_entity
-    definition_uri: standards_ieee_7012:hasParty
-    description: |-
-      Specifies that an entity is a party to the context i.e. it has decision
-      making abilities or has obligations and responsibilities
-    aliases:
-      - has party
-    multivalued: true
-    in_subset:
-      - standards_ieee_7012_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:hasParty
-      - dpv_standards_ieee_7012_owl:hasParty
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasParty
       dpv_extension_slug: standards/ieee/7012
 
   has_portability_term:
@@ -345,6 +340,7 @@ slots:
       - has portability term
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasPortabilityTerm
@@ -360,6 +356,7 @@ slots:
       - has preference applicability
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasPreferenceApplicability
@@ -376,6 +373,7 @@ slots:
       - has profiling term
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasProfilingTerm
@@ -392,27 +390,13 @@ slots:
       - has second party
     multivalued: true
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasSecondParty
       - dpv_standards_ieee_7012_owl:hasSecondParty
     annotations:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasSecondParty
-      dpv_extension_slug: standards/ieee/7012
-
-  has_third_party:
-    definition_uri: standards_ieee_7012:hasThirdParty
-    description: Specifies the a party other than the person or Entity that is involved
-    aliases:
-      - has third party
-    multivalued: true
-    in_subset:
-      - standards_ieee_7012_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:hasThirdParty
-      - dpv_standards_ieee_7012_owl:hasThirdParty
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasThirdParty
       dpv_extension_slug: standards/ieee/7012
 
   has_tracking_term:
@@ -422,6 +406,7 @@ slots:
       - has tracking term
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasTrackingTerm
@@ -437,12 +422,48 @@ slots:
       - has transparency term
     multivalued: true
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:hasTransparencyTerm
       - dpv_standards_ieee_7012_owl:hasTransparencyTerm
     annotations:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasTransparencyTerm
+      dpv_extension_slug: standards/ieee/7012
+
+  standards_ieee_7012_has_party:
+    is_a: has_entity
+    definition_uri: standards_ieee_7012:hasParty
+    description: |-
+      Specifies that an entity is a party to the context i.e. it has decision
+      making abilities or has obligations and responsibilities
+    aliases:
+      - has party
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+      - standards_ieee_7012_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasParty
+      - dpv_standards_ieee_7012_owl:hasParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasParty
+      dpv_extension_slug: standards/ieee/7012
+
+  standards_ieee_7012_has_third_party:
+    definition_uri: standards_ieee_7012:hasThirdParty
+    description: Specifies the a party other than the person or Entity that is involved
+    aliases:
+      - has third party
+    multivalued: true
+    in_subset:
+      - standards_ieee_7012_entities_subset
+      - standards_ieee_7012_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:hasThirdParty
+      - dpv_standards_ieee_7012_owl:hasThirdParty
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#hasThirdParty
       dpv_extension_slug: standards/ieee/7012
 
 classes:
@@ -454,6 +475,7 @@ classes:
     aliases:
       - Agent Allows Negotiation
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentAllowsNegotiation
@@ -473,6 +495,7 @@ classes:
     aliases:
       - Agent Allows Negotiation Only Known Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentAllowsNegotiationOnlyKnownParty
@@ -493,6 +516,7 @@ classes:
     aliases:
       - Agent Allows Negotiation Only Prior Agreement Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentAllowsNegotiationOnlyPriorAgreementParty
@@ -510,6 +534,7 @@ classes:
     aliases:
       - Agent Allows Requests
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentAllowsRequests
@@ -529,6 +554,7 @@ classes:
     aliases:
       - Agent Allows Requests Only Known Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentAllowsRequestsOnlyKnownParty
@@ -550,6 +576,7 @@ classes:
     aliases:
       - Agent Allows Requests Only Prior Agreement Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentAllowsRequestsOnlyPriorAgreementParty
@@ -566,6 +593,7 @@ classes:
     aliases:
       - Agent Behaviour
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentBehaviour
@@ -581,6 +609,7 @@ classes:
     aliases:
       - Agent Disallows Negotiation
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentDisallowsNegotiation
@@ -596,6 +625,7 @@ classes:
     aliases:
       - Agent Disallows Requests
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentDisallowsRequests
@@ -613,6 +643,7 @@ classes:
     aliases:
       - Agent Negotiation Behaviour
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentNegotiationBehaviour
@@ -628,6 +659,7 @@ classes:
     aliases:
       - Agent Request Behaviour
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgentRequestBehaviour
@@ -646,6 +678,7 @@ classes:
     aliases:
       - Agreement
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Agreement
@@ -663,6 +696,7 @@ classes:
     aliases:
       - Agreement Accepted
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementAccepted
@@ -681,6 +715,7 @@ classes:
     aliases:
       - Agreement Interaction Record
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementInteractionRecord
@@ -697,6 +732,7 @@ classes:
     aliases:
       - Agreement Negotiation
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiation
@@ -714,6 +750,7 @@ classes:
     aliases:
       - Agreement Negotiation Clarification Required
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationClarificationRequired
@@ -732,6 +769,7 @@ classes:
     aliases:
       - Agreement Negotiation Confirmation Required
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationConfirmationRequired
@@ -750,6 +788,7 @@ classes:
     aliases:
       - Agreement Negotiation Counter Offer Made
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationCounterOfferMade
@@ -768,6 +807,7 @@ classes:
     aliases:
       - Agreement Negotiation Expired
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationExpired
@@ -784,6 +824,7 @@ classes:
     aliases:
       - Agreement Negotiation Initiated
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationInitiated
@@ -802,6 +843,7 @@ classes:
     aliases:
       - Agreement Negotiation Invalid
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationInvalid
@@ -820,6 +862,7 @@ classes:
     aliases:
       - Agreement Negotiation Paused
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationPaused
@@ -838,6 +881,7 @@ classes:
     aliases:
       - Agreement Negotiation Pending Response
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationPendingResponse
@@ -856,6 +900,7 @@ classes:
     aliases:
       - Agreement Negotiation Refused
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationRefused
@@ -874,6 +919,7 @@ classes:
     aliases:
       - Agreement Negotiation Request
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationRequest
@@ -892,6 +938,7 @@ classes:
     aliases:
       - Agreement Negotiation Requested
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationRequested
@@ -908,6 +955,7 @@ classes:
     aliases:
       - Agreement Negotiation Status
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationStatus
@@ -926,6 +974,7 @@ classes:
     aliases:
       - Agreement Negotiation Terminated
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationTerminated
@@ -942,6 +991,7 @@ classes:
     aliases:
       - Agreement Negotiation Unknown
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementNegotiationUnknown
@@ -960,6 +1010,7 @@ classes:
     aliases:
       - Agreement Preference
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementPreference
@@ -977,6 +1028,7 @@ classes:
     aliases:
       - Agreement Refused
     in_subset:
+      - standards_ieee_7012_status_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementRefused
@@ -994,6 +1046,7 @@ classes:
     aliases:
       - Agreement Term Registry
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:AgreementRegistry
@@ -1009,6 +1062,7 @@ classes:
     aliases:
       - Conflict Resolution Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ConflictResolutionTerm
@@ -1024,6 +1078,7 @@ classes:
     aliases:
       - Data Deletion Not Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataDeletionNotRequired
@@ -1041,6 +1096,7 @@ classes:
     aliases:
       - Data Deletion on Request
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataDeletionOnRequest
@@ -1060,6 +1116,7 @@ classes:
     aliases:
       - Data Deletion Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataDeletionRequired
@@ -1075,6 +1132,7 @@ classes:
     aliases:
       - Data Deletion Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataDeletionTerm
@@ -1090,6 +1148,7 @@ classes:
     aliases:
       - Data Sharing Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataSharingTerm
@@ -1111,6 +1170,7 @@ classes:
     aliases:
       - Data Transparency Ex Ante
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataTransparencyExAnte
@@ -1132,6 +1192,7 @@ classes:
     aliases:
       - Data Transparency Ex Post
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataTransparencyExPost
@@ -1149,6 +1210,7 @@ classes:
     aliases:
       - Data Transparency Not Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataTransparencyNotRequired
@@ -1170,6 +1232,7 @@ classes:
     aliases:
       - Data Transparency On Request
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataTransparencyOnRequest
@@ -1189,6 +1252,7 @@ classes:
     aliases:
       - Data Transparency Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataTransparencyRequired
@@ -1206,6 +1270,7 @@ classes:
     aliases:
       - Data Transparency Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DataTransparencyTerm
@@ -1221,6 +1286,7 @@ classes:
     aliases:
       - Deontic Interpretation Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:DeonticInterpretationTerm
@@ -1238,6 +1304,7 @@ classes:
     aliases:
       - Endpoint
     in_subset:
+      - standards_ieee_7012_process_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Endpoint
@@ -1253,6 +1320,7 @@ classes:
     aliases:
       - Entity Agent
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:EntityAgent
@@ -1270,6 +1338,7 @@ classes:
     aliases:
       - Non-Service Data
     in_subset:
+      - standards_ieee_7012_data_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:NonServiceData
@@ -1285,6 +1354,7 @@ classes:
     aliases:
       - Personal Data Contribution
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PDC
@@ -1305,6 +1375,7 @@ classes:
       - PDC-AI
       - Personal Data Contribution for AI Training and Development
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PDC-AI
@@ -1325,6 +1396,7 @@ classes:
       - PDC-GOOD
       - Personal Data Contribution for Public Good
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PDC-GOOD
@@ -1345,6 +1417,7 @@ classes:
       - PDC-INTENT
       - Personal Data Contribution for Intent Casting
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PDC-INTENT
@@ -1367,6 +1440,7 @@ classes:
     aliases:
       - Party Transparency Ex Ante
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PartyTransparencyExAnte
@@ -1389,6 +1463,7 @@ classes:
     aliases:
       - Party Transparency Ex Post
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PartyTransparencyExPost
@@ -1406,6 +1481,7 @@ classes:
     aliases:
       - Party Transparency Not Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PartyTransparencyNotRequired
@@ -1427,6 +1503,7 @@ classes:
     aliases:
       - Party Transparency On Request
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PartyTransparencyOnRequest
@@ -1447,6 +1524,7 @@ classes:
     aliases:
       - Party Transparency Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PartyTransparencyRequired
@@ -1464,6 +1542,7 @@ classes:
     aliases:
       - Party Transparency Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PartyTransparencyTerm
@@ -1482,6 +1561,7 @@ classes:
     aliases:
       - Permissive Interpretation
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PermissiveInterpretation
@@ -1497,6 +1577,7 @@ classes:
     aliases:
       - Person Agent
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PersonAgent
@@ -1514,6 +1595,7 @@ classes:
     aliases:
       - Portability Not Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PortabilityNotRequired
@@ -1531,6 +1613,7 @@ classes:
     aliases:
       - Portability Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PortabilityRequired
@@ -1551,6 +1634,7 @@ classes:
     aliases:
       - Portability Required Immediately
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PortabilityRequiredImmediately
@@ -1570,6 +1654,7 @@ classes:
     aliases:
       - Portability Required On Request
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PortabilityRequiredOnRequest
@@ -1588,6 +1673,7 @@ classes:
     aliases:
       - Portability Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PortabilityTerm
@@ -1608,6 +1694,7 @@ classes:
     aliases:
       - Portability To Third Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PortabilityToThirdParty
@@ -1625,6 +1712,7 @@ classes:
     aliases:
       - Preference Always Applies
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PreferenceAlwaysApplies
@@ -1640,6 +1728,7 @@ classes:
     aliases:
       - Privacy Preference Applicability
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PreferenceApplicability
@@ -1658,6 +1747,7 @@ classes:
     aliases:
       - Preference Conditionally Applies
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PreferenceConditionallyApplies
@@ -1676,6 +1766,7 @@ classes:
     aliases:
       - Preference Never Applies
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PreferenceNeverApplies
@@ -1694,6 +1785,7 @@ classes:
     aliases:
       - Profiling Allowed Only First Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Profiling2PAllowed
@@ -1712,6 +1804,7 @@ classes:
     aliases:
       - Profiling Disallowed For Third Party
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Profiling3PDisallowed
@@ -1729,6 +1822,7 @@ classes:
     aliases:
       - Profiling Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingAllowed
@@ -1746,6 +1840,7 @@ classes:
     aliases:
       - Profiling Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingDisallowed
@@ -1761,6 +1856,7 @@ classes:
     aliases:
       - Profiling Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingTerm
@@ -1781,6 +1877,7 @@ classes:
     aliases:
       - Profiling Disallowed FP
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingWithFPDisallowed
@@ -1799,6 +1896,7 @@ classes:
     aliases:
       - Profiling Disallowed PII
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingWithPIIDisallowed
@@ -1820,6 +1918,7 @@ classes:
     aliases:
       - Profiling Allowed No FP
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingWithoutFPAllowed
@@ -1838,6 +1937,7 @@ classes:
     aliases:
       - Profiling Allowed Only Non PII
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProfilingWithoutPIIAllowed
@@ -1857,6 +1957,7 @@ classes:
     aliases:
       - Prohibitive Interpretation
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ProhibitiveInterpretation
@@ -1879,6 +1980,7 @@ classes:
     aliases:
       - Purpose Transparency Ex Ante
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PurposeTransparencyExAnte
@@ -1901,6 +2003,7 @@ classes:
     aliases:
       - Purpose Transparency Ex Post
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PurposeTransparencyExPost
@@ -1918,6 +2021,7 @@ classes:
     aliases:
       - Purpose Transparency Not Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PurposeTransparencyNotRequired
@@ -1939,6 +2043,7 @@ classes:
     aliases:
       - Purpose Transparency On Request
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PurposeTransparencyOnRequest
@@ -1957,6 +2062,7 @@ classes:
     aliases:
       - Purpose Transparency Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PurposeTransparencyRequired
@@ -1975,6 +2081,7 @@ classes:
     aliases:
       - Purpose Transparency Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:PurposeTransparencyTerm
@@ -1993,6 +2100,7 @@ classes:
     aliases:
       - Resolve Across Contexts
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ResolveAcrossContexts
@@ -2010,6 +2118,7 @@ classes:
     aliases:
       - Resolve By Discarding
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ResolveByDiscarding
@@ -2028,6 +2137,7 @@ classes:
     aliases:
       - Resolve Only Within Context
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ResolveOnlyWithinContext
@@ -2046,6 +2156,7 @@ classes:
     aliases:
       - Resolve Preferring Permission
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ResolvePreferringPermission
@@ -2065,6 +2176,7 @@ classes:
     aliases:
       - Resolve Preferring Prohibition
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ResolvePreferringProhibition
@@ -2084,6 +2196,7 @@ classes:
     aliases:
       - SD-BASE
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE
@@ -2105,6 +2218,7 @@ classes:
       - SD-BASE-A
       - SD BASE-A
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-A
@@ -2128,6 +2242,7 @@ classes:
       - SD-BASE-A-DP
       - SD BASE-A-DP
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-A-DP
@@ -2150,6 +2265,7 @@ classes:
       - SD-BASE-AT
       - SD BASE-AT
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-AT
@@ -2173,6 +2289,7 @@ classes:
       - SD-BASE-AT-DP
       - SD BASE-AT-DP
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-AT-DP
@@ -2194,6 +2311,7 @@ classes:
       - SD-BASE-ATP
       - SD BASE-ATP
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-ATP
@@ -2217,6 +2335,7 @@ classes:
       - SD-BASE-ATP-DP
       - SD BASE-ATP-DP
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-ATP-DP
@@ -2240,6 +2359,7 @@ classes:
       - SD-BASE-ATP-S3P
       - SD BASE-ATP-S3P
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-ATP-S3P
@@ -2264,6 +2384,7 @@ classes:
       - SD-BASE-ATP-S3P-DP
       - SD BASE-ATP-S3P-DP
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-ATP-S3P-DP
@@ -2285,6 +2406,7 @@ classes:
       - SD-BASE-DP
       - SD BASE-DP
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SD-BASE-DP
@@ -2304,6 +2426,7 @@ classes:
     aliases:
       - Service Analytics
     in_subset:
+      - standards_ieee_7012_purpose_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ServiceAnalytics
@@ -2321,6 +2444,7 @@ classes:
     aliases:
       - Service Analytics Data
     in_subset:
+      - standards_ieee_7012_data_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ServiceAnalyticsData
@@ -2338,6 +2462,7 @@ classes:
     aliases:
       - Service Data
     in_subset:
+      - standards_ieee_7012_data_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ServiceData
@@ -2355,31 +2480,13 @@ classes:
     aliases:
       - Service Delivery
     in_subset:
+      - standards_ieee_7012_purpose_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ServiceDelivery
       - dpv_standards_ieee_7012_owl:ServiceDelivery
     annotations:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ServiceDelivery
-      dpv_extension_slug: standards/ieee/7012
-
-  ServiceImprovement:
-    is_a: ServiceOptimisation
-    mixins:
-      - Purpose
-    class_uri: standards_ieee_7012:ServiceImprovement
-    description: |-
-      Purposes associated with identifying and implementing improvements to a
-      service
-    aliases:
-      - Service Improvement
-    in_subset:
-      - standards_ieee_7012_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:ServiceImprovement
-      - dpv_standards_ieee_7012_owl:ServiceImprovement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ServiceImprovement
       dpv_extension_slug: standards/ieee/7012
 
   ServiceUsageData:
@@ -2391,6 +2498,7 @@ classes:
     aliases:
       - Service Usage Data
     in_subset:
+      - standards_ieee_7012_data_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ServiceUsageData
@@ -2409,6 +2517,7 @@ classes:
     aliases:
       - Sharing Data with 3rd Party Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingData3PAllowed
@@ -2427,6 +2536,7 @@ classes:
     aliases:
       - Sharing Data with 3rd Party Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingData3PDisallowed
@@ -2444,6 +2554,7 @@ classes:
     aliases:
       - Sharing Data Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingDataAllowed
@@ -2464,6 +2575,7 @@ classes:
     aliases:
       - Sharing Anonymised Data with 3rd Party Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingDataAnonymised3PAllowed
@@ -2485,6 +2597,7 @@ classes:
     aliases:
       - Sharing Anonymised Data with 3rd Party Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingDataAnonymised3PDisallowed
@@ -2503,6 +2616,7 @@ classes:
     aliases:
       - Sharing Data Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingDataDisallowed
@@ -2523,6 +2637,7 @@ classes:
     aliases:
       - Sharing Non-Anonymised Data with 3rd Party Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingDataNonAnonymised3PDisallowed
@@ -2544,6 +2659,7 @@ classes:
     aliases:
       - Sharing Non-Anonymised Data Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:SharingDataNonAnonymisedDisallowed
@@ -2564,6 +2680,7 @@ classes:
     aliases:
       - Agent
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Agent
@@ -2582,6 +2699,7 @@ classes:
     aliases:
       - Entity
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Entity
@@ -2599,12 +2717,34 @@ classes:
     aliases:
       - Person
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Person
       - dpv_standards_ieee_7012_owl:Person
     annotations:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Person
+      dpv_extension_slug: standards/ieee/7012
+
+  StandardsIeee7012ServiceImprovement:
+    is_a: ServiceOptimisation
+    mixins:
+      - Purpose
+    class_uri: standards_ieee_7012:ServiceImprovement
+    description: |-
+      Purposes associated with identifying and implementing improvements to a
+      service
+    aliases:
+      - ServiceImprovement
+      - Service Improvement
+    in_subset:
+      - standards_ieee_7012_purpose_subset
+      - standards_ieee_7012_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:ServiceImprovement
+      - dpv_standards_ieee_7012_owl:ServiceImprovement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ServiceImprovement
       dpv_extension_slug: standards/ieee/7012
 
   StandardsIeee7012ThirdParty:
@@ -2617,6 +2757,7 @@ classes:
       - ThirdParty
       - Third Party
     in_subset:
+      - standards_ieee_7012_entities_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:ThirdParty
@@ -2635,6 +2776,7 @@ classes:
     aliases:
       - Trusted Personal Relationship
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TPR
@@ -2656,6 +2798,7 @@ classes:
       - TPR-IDENTITY-REF
       - Trusted Personal Relationship - Identity Reference
     in_subset:
+      - standards_ieee_7012_agreement_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TPR-IDENTITY-REF
@@ -2674,6 +2817,7 @@ classes:
     aliases:
       - Tracking by 2nd Party Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Tracking2PAllowed
@@ -2692,6 +2836,7 @@ classes:
     aliases:
       - Tracking by 3rd Party Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:Tracking3PDisallowed
@@ -2709,6 +2854,7 @@ classes:
     aliases:
       - Tracking Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingAllowed
@@ -2726,6 +2872,7 @@ classes:
     aliases:
       - Tracking Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingDisallowed
@@ -2741,6 +2888,7 @@ classes:
     aliases:
       - Tracking Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingTerm
@@ -2761,6 +2909,7 @@ classes:
     aliases:
       - Tracking With FP Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingWithFPDisallowed
@@ -2779,6 +2928,7 @@ classes:
     aliases:
       - Tracking With PII Disallowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingWithPIIDisallowed
@@ -2799,6 +2949,7 @@ classes:
     aliases:
       - Tracking Without FP Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingWithoutFPAllowed
@@ -2819,6 +2970,7 @@ classes:
     aliases:
       - Tracking Without PII Allowed
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TrackingWithoutPIIAllowed
@@ -2839,6 +2991,7 @@ classes:
     aliases:
       - Transparency Ex Ante
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TransparencyExAnte
@@ -2859,6 +3012,7 @@ classes:
     aliases:
       - Transparency Ex Post
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TransparencyExPost
@@ -2876,6 +3030,7 @@ classes:
     aliases:
       - Transparency Not Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TransparencyNotRequired
@@ -2894,6 +3049,7 @@ classes:
     aliases:
       - Transparency On Request
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TransparencyOnRequest
@@ -2911,6 +3067,7 @@ classes:
     aliases:
       - Transparency Required
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TransparencyRequired
@@ -2926,6 +3083,7 @@ classes:
     aliases:
       - Transparency Term
     in_subset:
+      - standards_ieee_7012_privacy_term_subset
       - standards_ieee_7012_subset
     exact_mappings:
       - dpv_standards_ieee_7012:TransparencyTerm

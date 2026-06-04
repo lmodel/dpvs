@@ -8,8 +8,8 @@ description: |-
   than all 965 DPV classes.
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -35,7 +35,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -49,7 +49,7 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
+- linkml:types
 
 subsets:
 
@@ -63,13 +63,13 @@ slots:
     definition_uri: dpv:hasActivityStatus
     description: Indicates the status of activity of specified concept
     aliases:
-      - has activity status
+    - has activity status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasActivityStatus
-      - dpv_owl:hasActivityStatus
+    - dpv_upstream:hasActivityStatus
+    - dpv_owl:hasActivityStatus
     annotations:
       skos_in_scheme: status-properties
 
@@ -81,28 +81,29 @@ slots:
       dpv:Applicability should be used with this relation to express the
       situation
     aliases:
-      - has applicability
+    - has applicability
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasApplicability
-      - dpv_owl:hasApplicability
+    - dpv_upstream:hasApplicability
+    - dpv_owl:hasApplicability
     annotations:
       skos_in_scheme: context-properties
 
   has_assessment:
     is_a: has_organisational_measure
     definition_uri: dpv:hasAssessment
-    description: Indicates a relevant assessment associated with the specific context
+    description: Indicates a relevant assessment associated with the specific 
+      context
     aliases:
-      - has assessment
+    - has assessment
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasAssessment
-      - dpv_owl:hasAssessment
+    - dpv_upstream:hasAssessment
+    - dpv_owl:hasAssessment
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -111,13 +112,13 @@ slots:
     definition_uri: dpv:hasAuditStatus
     description: Indicates the status of audit associated with specified concept
     aliases:
-      - has audit status
+    - has audit status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasAuditStatus
-      - dpv_owl:hasAuditStatus
+    - dpv_upstream:hasAuditStatus
+    - dpv_owl:hasAuditStatus
     annotations:
       skos_in_scheme: status-properties
 
@@ -126,13 +127,13 @@ slots:
     definition_uri: dpv:hasComplianceStatus
     description: Indicates the status of compliance of specified concept
     aliases:
-      - has compliance status
+    - has compliance status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasComplianceStatus
-      - dpv_owl:hasComplianceStatus
+    - dpv_upstream:hasComplianceStatus
+    - dpv_owl:hasComplianceStatus
     annotations:
       skos_in_scheme: status-properties
 
@@ -140,13 +141,13 @@ slots:
     definition_uri: dpv:hasConformanceStatus
     description: Indicates the status of being conformant or non-conformant
     aliases:
-      - has conformance status
+    - has conformance status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasConformanceStatus
-      - dpv_owl:hasConformanceStatus
+    - dpv_upstream:hasConformanceStatus
+    - dpv_owl:hasConformanceStatus
     annotations:
       skos_in_scheme: status-properties
 
@@ -154,13 +155,13 @@ slots:
     definition_uri: dpv:hasContext
     description: Indicates a purpose is restricted to the specified context(s)
     aliases:
-      - has context
+    - has context
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasContext
-      - dpv_owl:hasContext
+    - dpv_upstream:hasContext
+    - dpv_owl:hasContext
     annotations:
       skos_in_scheme: context-properties
 
@@ -171,13 +172,13 @@ slots:
       Specifies applicability or inclusion of a deterrence rule within
       specified context
     aliases:
-      - has deterrence
+    - has deterrence
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasDeterrence
-      - dpv_owl:hasDeterrence
+    - dpv_upstream:hasDeterrence
+    - dpv_owl:hasDeterrence
     annotations:
       skos_in_scheme: rules-properties
 
@@ -185,13 +186,13 @@ slots:
     definition_uri: dpv:hasDuration
     description: Indicates information about duration
     aliases:
-      - has duration
+    - has duration
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasDuration
-      - dpv_owl:hasDuration
+    - dpv_upstream:hasDuration
+    - dpv_owl:hasDuration
     annotations:
       skos_in_scheme: context-properties
 
@@ -202,28 +203,29 @@ slots:
       Indicates a control or measure provided for an entity to perform the
       specified action
     aliases:
-      - has entity control
+    - has entity control
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasEntityControl
-      - dpv_owl:hasEntityControl
+    - dpv_upstream:hasEntityControl
+    - dpv_owl:hasEntityControl
     annotations:
       skos_in_scheme: TOM-properties
 
   has_expectation:
     is_a: has_status
     definition_uri: dpv:hasExpectation
-    description: Indicates whether the specified context was expected or unexpected
+    description: Indicates whether the specified context was expected or 
+      unexpected
     aliases:
-      - has expectation
+    - has expectation
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasExpectation
-      - dpv_owl:hasExpectation
+    - dpv_upstream:hasExpectation
+    - dpv_owl:hasExpectation
     annotations:
       skos_in_scheme: status-properties
 
@@ -231,13 +233,13 @@ slots:
     definition_uri: dpv:hasFee
     description: Indicates whether a fee is required for the specified context
     aliases:
-      - has fee
+    - has fee
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasFee
-      - dpv_owl:hasFee
+    - dpv_upstream:hasFee
+    - dpv_owl:hasFee
     annotations:
       skos_in_scheme: context-properties
 
@@ -245,13 +247,13 @@ slots:
     definition_uri: dpv:hasFrequency
     description: Indicates the frequency with which something takes place
     aliases:
-      - has frequency
+    - has frequency
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasFrequency
-      - dpv_owl:hasFrequency
+    - dpv_upstream:hasFrequency
+    - dpv_owl:hasFrequency
     annotations:
       skos_in_scheme: context-properties
 
@@ -260,27 +262,28 @@ slots:
     definition_uri: dpv:hasFulfilmentStatus
     description: Specifies the fulfillment status associated with a rule
     aliases:
-      - has fulfilment status
+    - has fulfilment status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasFulfilmentStatus
-      - dpv_owl:hasFulfilmentStatus
+    - dpv_upstream:hasFulfilmentStatus
+    - dpv_owl:hasFulfilmentStatus
     annotations:
       skos_in_scheme: rules-properties
 
   has_identifier:
     definition_uri: dpv:hasIdentifier
-    description: Indicates an identifier associated for identification or reference
+    description: Indicates an identifier associated for identification or 
+      reference
     aliases:
-      - has identifier
+    - has identifier
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasIdentifier
-      - dpv_owl:hasIdentifier
+    - dpv_upstream:hasIdentifier
+    - dpv_owl:hasIdentifier
     annotations:
       skos_in_scheme: context-properties
 
@@ -288,13 +291,13 @@ slots:
     definition_uri: dpv:hasImportance
     description: Indicates the importance for specified context or criteria
     aliases:
-      - has importance
+    - has importance
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasImportance
-      - dpv_owl:hasImportance
+    - dpv_upstream:hasImportance
+    - dpv_owl:hasImportance
     annotations:
       skos_in_scheme: context-properties
 
@@ -303,28 +306,29 @@ slots:
     definition_uri: dpv:hasInformedStatus
     description: Indicates whether an entity was informed or uninformed
     aliases:
-      - has informed status
+    - has informed status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasInformedStatus
-      - dpv_owl:hasInformedStatus
+    - dpv_upstream:hasInformedStatus
+    - dpv_owl:hasInformedStatus
     annotations:
       skos_in_scheme: status-properties
 
   has_intention:
     is_a: has_status
     definition_uri: dpv:hasIntention
-    description: Indicates whether the specified context was intended or unintended
+    description: Indicates whether the specified context was intended or 
+      unintended
     aliases:
-      - has intention
+    - has intention
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasIntention
-      - dpv_owl:hasIntention
+    - dpv_upstream:hasIntention
+    - dpv_owl:hasIntention
     annotations:
       skos_in_scheme: status-properties
 
@@ -333,13 +337,13 @@ slots:
     definition_uri: dpv:hasInvolvement
     description: Indicates the involvement status for the specified context
     aliases:
-      - has involvement
+    - has involvement
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasInvolvement
-      - dpv_owl:hasInvolvement
+    - dpv_upstream:hasInvolvement
+    - dpv_owl:hasInvolvement
     annotations:
       skos_in_scheme: status-properties
 
@@ -347,17 +351,17 @@ slots:
     definition_uri: dpv:hasJustification
     description: Indicates a justification for specified concept or context
     aliases:
-      - has justification
+    - has justification
     comments:
-      - |-
-        Also used for specifying a justification for non-fulfilment of Right
-        Exercise
+    - |-
+      Also used for specifying a justification for non-fulfilment of Right
+      Exercise
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasJustification
-      - dpv_owl:hasJustification
+    - dpv_upstream:hasJustification
+    - dpv_owl:hasJustification
     annotations:
       skos_in_scheme: context-properties, rights-properties
 
@@ -366,13 +370,13 @@ slots:
     definition_uri: dpv:hasLawfulness
     description: Indicates the status of being lawful or legally compliant
     aliases:
-      - has lawfulness
+    - has lawfulness
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasLawfulness
-      - dpv_owl:hasLawfulness
+    - dpv_upstream:hasLawfulness
+    - dpv_owl:hasLawfulness
     annotations:
       skos_in_scheme: status-properties
 
@@ -381,13 +385,13 @@ slots:
     definition_uri: dpv:hasLegalMeasure
     description: Indicates use or applicability of Legal measure
     aliases:
-      - has legal measure
+    - has legal measure
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasLegalMeasure
-      - dpv_owl:hasLegalMeasure
+    - dpv_upstream:hasLegalMeasure
+    - dpv_owl:hasLegalMeasure
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -395,13 +399,13 @@ slots:
     definition_uri: dpv:hasNecessity
     description: Indicates the necessity for specified context or criteria
     aliases:
-      - has necessity
+    - has necessity
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasNecessity
-      - dpv_owl:hasNecessity
+    - dpv_upstream:hasNecessity
+    - dpv_owl:hasNecessity
     annotations:
       skos_in_scheme: context-properties
 
@@ -409,13 +413,13 @@ slots:
     definition_uri: dpv:hasNotificationStatus
     description: Indicates the status associated with a notice
     aliases:
-      - has notification status
+    - has notification status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasNotificationStatus
-      - dpv_owl:hasNotificationStatus
+    - dpv_upstream:hasNotificationStatus
+    - dpv_owl:hasNotificationStatus
     annotations:
       skos_in_scheme: status-properties
 
@@ -426,13 +430,13 @@ slots:
       Specifies applicability or inclusion of an obligation rule within
       specified context
     aliases:
-      - has obligation
+    - has obligation
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasObligation
-      - dpv_owl:hasObligation
+    - dpv_upstream:hasObligation
+    - dpv_owl:hasObligation
     annotations:
       skos_in_scheme: rules-properties
 
@@ -441,13 +445,13 @@ slots:
     definition_uri: dpv:hasOrganisationalMeasure
     description: Indicates use or applicability of Organisational measure
     aliases:
-      - has organisational measure
+    - has organisational measure
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasOrganisationalMeasure
-      - dpv_owl:hasOrganisationalMeasure
+    - dpv_upstream:hasOrganisationalMeasure
+    - dpv_owl:hasOrganisationalMeasure
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -455,13 +459,13 @@ slots:
     definition_uri: dpv:hasOutcome
     description: Indicates an outcome of specified concept or context
     aliases:
-      - has outcome
+    - has outcome
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasOutcome
-      - dpv_owl:hasOutcome
+    - dpv_upstream:hasOutcome
+    - dpv_owl:hasOutcome
     annotations:
       skos_in_scheme: context-properties
 
@@ -472,13 +476,13 @@ slots:
       Specifies applicability or inclusion of a permission rule within
       specified context
     aliases:
-      - has permission
+    - has permission
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasPermission
-      - dpv_owl:hasPermission
+    - dpv_upstream:hasPermission
+    - dpv_owl:hasPermission
     annotations:
       skos_in_scheme: rules-properties
 
@@ -487,13 +491,13 @@ slots:
     definition_uri: dpv:hasPhysicalMeasure
     description: Indicates use or applicability of Physical measure
     aliases:
-      - has physical measure
+    - has physical measure
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasPhysicalMeasure
-      - dpv_owl:hasPhysicalMeasure
+    - dpv_upstream:hasPhysicalMeasure
+    - dpv_owl:hasPhysicalMeasure
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -502,13 +506,13 @@ slots:
     definition_uri: dpv:hasPolicy
     description: Indicates policy applicable or used
     aliases:
-      - has policy
+    - has policy
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasPolicy
-      - dpv_owl:hasPolicy
+    - dpv_upstream:hasPolicy
+    - dpv_owl:hasPolicy
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -519,13 +523,13 @@ slots:
       Specifies applicability or inclusion of a prohibition rule within
       specified context
     aliases:
-      - has prohibition
+    - has prohibition
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasProhibition
-      - dpv_owl:hasProhibition
+    - dpv_upstream:hasProhibition
+    - dpv_owl:hasProhibition
     annotations:
       skos_in_scheme: rules-properties
 
@@ -536,13 +540,13 @@ slots:
       Specifies applicability or inclusion of a recommendation rule within
       specified context
     aliases:
-      - has recommendation
+    - has recommendation
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasRecommendation
-      - dpv_owl:hasRecommendation
+    - dpv_upstream:hasRecommendation
+    - dpv_owl:hasRecommendation
     annotations:
       skos_in_scheme: rules-properties
 
@@ -551,13 +555,13 @@ slots:
     definition_uri: dpv:hasRecordOfActivity
     description: Indicates a relevant record of activity
     aliases:
-      - has record of activity
+    - has record of activity
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasRecordOfActivity
-      - dpv_owl:hasRecordOfActivity
+    - dpv_upstream:hasRecordOfActivity
+    - dpv_owl:hasRecordOfActivity
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -565,13 +569,13 @@ slots:
     definition_uri: dpv:hasRequestStatus
     description: Indicates the status associated with a request
     aliases:
-      - has request status
+    - has request status
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasRequestStatus
-      - dpv_owl:hasRequestStatus
+    - dpv_upstream:hasRequestStatus
+    - dpv_owl:hasRequestStatus
     annotations:
       skos_in_scheme: status-properties
 
@@ -580,13 +584,13 @@ slots:
     definition_uri: dpv:hasReuseCompatibility
     description: Indicates the reuse compatibility for the specified context
     aliases:
-      - has reuse compatibility
+    - has reuse compatibility
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasReuseCompatibility
-      - dpv_owl:hasReuseCompatibility
+    - dpv_upstream:hasReuseCompatibility
+    - dpv_owl:hasReuseCompatibility
     annotations:
       skos_in_scheme: status-properties
 
@@ -595,13 +599,13 @@ slots:
     description: |-
       Specifies applicability or inclusion of a rule within specified context
     aliases:
-      - has rule
+    - has rule
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasRule
-      - dpv_owl:hasRule
+    - dpv_upstream:hasRule
+    - dpv_owl:hasRule
     annotations:
       skos_in_scheme: rules-properties
 
@@ -609,13 +613,13 @@ slots:
     definition_uri: dpv:hasScope
     description: Indicates the scope of specified concept or context
     aliases:
-      - has scope
+    - has scope
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasScope
-      - dpv_owl:hasScope
+    - dpv_upstream:hasScope
+    - dpv_owl:hasScope
     annotations:
       skos_in_scheme: context-properties
 
@@ -624,27 +628,28 @@ slots:
     definition_uri: dpv:hasTechnicalMeasure
     description: Indicates use or applicability of Technical measure
     aliases:
-      - has technical measure
+    - has technical measure
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasTechnicalMeasure
-      - dpv_owl:hasTechnicalMeasure
+    - dpv_upstream:hasTechnicalMeasure
+    - dpv_owl:hasTechnicalMeasure
     annotations:
       skos_in_scheme: TOM-properties
 
   has_technical_organisational_measure:
     definition_uri: dpv:hasTechnicalOrganisationalMeasure
-    description: Indicates use or applicability of Technical or Organisational measure
+    description: Indicates use or applicability of Technical or Organisational 
+      measure
     aliases:
-      - has technical and organisational measure
+    - has technical and organisational measure
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:hasTechnicalOrganisationalMeasure
-      - dpv_owl:hasTechnicalOrganisationalMeasure
+    - dpv_upstream:hasTechnicalOrganisationalMeasure
+    - dpv_owl:hasTechnicalOrganisationalMeasure
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -655,24 +660,24 @@ slots:
     range: uriorcurie
     identifier: true
     in_subset:
-      - common_subset
+    - common_subset
 
   is_after:
     definition_uri: dpv:isAfter
     description: |-
       Indicates the specified concepts is 'after' this concept in some context
     aliases:
-      - is after
+    - is after
     comments:
-      - |-
-        Also used for specifying a RightExerciseActivity occurs before another
-        RightExerciseActivity
+    - |-
+      Also used for specifying a RightExerciseActivity occurs before another
+      RightExerciseActivity
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:isAfter
-      - dpv_owl:isAfter
+    - dpv_upstream:isAfter
+    - dpv_owl:isAfter
     annotations:
       skos_in_scheme: context-properties, rights-properties
 
@@ -681,13 +686,13 @@ slots:
     description: |-
       Indicates the concept or information is applicable for specified context
     aliases:
-      - is applicable for
+    - is applicable for
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:isApplicableFor
-      - dpv_owl:isApplicableFor
+    - dpv_upstream:isApplicableFor
+    - dpv_owl:isApplicableFor
     annotations:
       skos_in_scheme: context-properties
 
@@ -697,17 +702,17 @@ slots:
       Indicates the specified concepts is 'before' this concept in some
       context
     aliases:
-      - is before
+    - is before
     comments:
-      - |-
-        Also used for specifying a RightExerciseActivity occurs before another
-        RightExerciseActivity
+    - |-
+      Also used for specifying a RightExerciseActivity occurs before another
+      RightExerciseActivity
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:isBefore
-      - dpv_owl:isBefore
+    - dpv_upstream:isBefore
+    - dpv_owl:isBefore
     annotations:
       skos_in_scheme: context-properties, rights-properties
 
@@ -717,13 +722,13 @@ slots:
       Indicates the specified concepts occur 'during' this concept in some
       context
     aliases:
-      - is during
+    - is during
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:isDuring
-      - dpv_owl:isDuring
+    - dpv_upstream:isDuring
+    - dpv_owl:isDuring
     annotations:
       skos_in_scheme: context-properties
 
@@ -733,13 +738,13 @@ slots:
       Indicates the concept or information is not applicable for specified
       context
     aliases:
-      - is not applicable for
+    - is not applicable for
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:isNotApplicableFor
-      - dpv_owl:isNotApplicableFor
+    - dpv_upstream:isNotApplicableFor
+    - dpv_owl:isNotApplicableFor
     annotations:
       skos_in_scheme: context-properties
 
@@ -747,13 +752,13 @@ slots:
     definition_uri: dpv:isPolicyFor
     description: Indicates the context or application of policy
     aliases:
-      - is policy for
+    - is policy for
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:isPolicyFor
-      - dpv_owl:isPolicyFor
+    - dpv_upstream:isPolicyFor
+    - dpv_owl:isPolicyFor
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -763,13 +768,13 @@ slots:
       Indicate the measure is required for meeting specified requirement or
       satisfying specified condition/constraint
     aliases:
-      - supports Compliance With
+    - supports Compliance With
     multivalued: true
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:supportsComplianceWith
-      - dpv_owl:supportsComplianceWith
+    - dpv_upstream:supportsComplianceWith
+    - dpv_owl:supportsComplianceWith
     annotations:
       skos_in_scheme: TOM-properties
 
@@ -782,17 +787,17 @@ classes:
       A rule that is acceptable where it is either desirable if it occurs or
       it is not unacceptable if it does
     aliases:
-      - Acceptable Rule
+    - Acceptable Rule
     comments:
-      - |-
-        Acceptable is a subjective concept that enables distinguishing with
-        "unacceptable". By itself it does not signal any permission or
-        obligation - for which further specific concepts are defined
+    - |-
+      Acceptable is a subjective concept that enables distinguishing with
+      "unacceptable". By itself it does not signal any permission or
+      obligation - for which further specific concepts are defined
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AcceptableRule
-      - dpv_owl:AcceptableRule
+    - dpv_upstream:AcceptableRule
+    - dpv_owl:AcceptableRule
     annotations:
       skos_in_scheme: rules-classes
 
@@ -801,30 +806,31 @@ classes:
     class_uri: dpv:ActivelyInvolved
     description: Status indicating the specified context is 'actively' involved
     aliases:
-      - Actively Involved
+    - Actively Involved
     comments:
-      - |-
-        An example of active involvement is a person directly using a system to
-        enter information
+    - |-
+      An example of active involvement is a person directly using a system to
+      enter information
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivelyInvolved
-      - dpv_owl:ActivelyInvolved
+    - dpv_upstream:ActivelyInvolved
+    - dpv_owl:ActivelyInvolved
     annotations:
       skos_in_scheme: status-classes
 
   ActivityCompleted:
     is_a: ActivityStatus
     class_uri: dpv:ActivityCompleted
-    description: State of an activity that has completed i.e. is fully in the past
+    description: State of an activity that has completed i.e. is fully in the 
+      past
     aliases:
-      - Activity Completed
+    - Activity Completed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityCompleted
-      - dpv_owl:ActivityCompleted
+    - dpv_upstream:ActivityCompleted
+    - dpv_owl:ActivityCompleted
     annotations:
       skos_in_scheme: status-classes
 
@@ -835,12 +841,12 @@ classes:
       State of an activity that was occurring in the past, and has been halted
       or paused or stopped
     aliases:
-      - Activity Halted
+    - Activity Halted
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityHalted
-      - dpv_owl:ActivityHalted
+    - dpv_upstream:ActivityHalted
+    - dpv_owl:ActivityHalted
     annotations:
       skos_in_scheme: status-classes
 
@@ -851,31 +857,32 @@ classes:
       State of an activity that could not be completed, but has reached some
       end state
     aliases:
-      - Activity Not Completed
+    - Activity Not Completed
     comments:
-      - |-
-        This relates to a 'Stop' state as distinct from a 'Halt' state. It makes
-        no comments on whether the Activity can be resumed or continued towards
-        completion.
+    - |-
+      This relates to a 'Stop' state as distinct from a 'Halt' state. It makes
+      no comments on whether the Activity can be resumed or continued towards
+      completion.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityNotCompleted
-      - dpv_owl:ActivityNotCompleted
+    - dpv_upstream:ActivityNotCompleted
+    - dpv_owl:ActivityNotCompleted
     annotations:
       skos_in_scheme: status-classes
 
   ActivityOngoing:
     is_a: ActivityStatus
     class_uri: dpv:ActivityOngoing
-    description: State of an activity occurring in continuation i.e. currently ongoing
+    description: State of an activity occurring in continuation i.e. currently 
+      ongoing
     aliases:
-      - Activity Ongoing
+    - Activity Ongoing
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityOngoing
-      - dpv_owl:ActivityOngoing
+    - dpv_upstream:ActivityOngoing
+    - dpv_owl:ActivityOngoing
     annotations:
       skos_in_scheme: status-classes
 
@@ -886,12 +893,12 @@ classes:
       State of an activity being planned with concrete plans for
       implementation
     aliases:
-      - Activity Planned
+    - Activity Planned
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityPlanned
-      - dpv_owl:ActivityPlanned
+    - dpv_upstream:ActivityPlanned
+    - dpv_owl:ActivityPlanned
     annotations:
       skos_in_scheme: status-classes
 
@@ -902,12 +909,12 @@ classes:
       State of an activity being proposed without any concrete plans for
       implementation
     aliases:
-      - Activity Proposed
+    - Activity Proposed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityProposed
-      - dpv_owl:ActivityProposed
+    - dpv_upstream:ActivityProposed
+    - dpv_owl:ActivityProposed
     annotations:
       skos_in_scheme: status-classes
 
@@ -916,12 +923,12 @@ classes:
     class_uri: dpv:ActivityStatus
     description: Status associated with activity operations and lifecycles
     aliases:
-      - Activity Status
+    - Activity Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ActivityStatus
-      - dpv_owl:ActivityStatus
+    - dpv_upstream:ActivityStatus
+    - dpv_owl:ActivityStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -934,17 +941,17 @@ classes:
       or determined yet. If the information is applicable and available, this
       concept should not be used.
     aliases:
-      - Applicability
+    - Applicability
     comments:
-      - |-
-        These concepts are useful in closed-world interpretations, for example
-        in forms where a field must have a value to explicitly denote it is not
-        applicable or the information is not available yet.
+    - |-
+      These concepts are useful in closed-world interpretations, for example
+      in forms where a field must have a value to explicitly denote it is not
+      applicable or the information is not available yet.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Applicability
-      - dpv_owl:Applicability
+    - dpv_upstream:Applicability
+    - dpv_owl:Applicability
     annotations:
       skos_in_scheme: context-classes
 
@@ -953,12 +960,12 @@ classes:
     class_uri: dpv:AuditApproved
     description: State of being approved through the audit
     aliases:
-      - Audit Approved
+    - Audit Approved
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditApproved
-      - dpv_owl:AuditApproved
+    - dpv_upstream:AuditApproved
+    - dpv_owl:AuditApproved
     annotations:
       skos_in_scheme: status-classes
 
@@ -967,22 +974,22 @@ classes:
     class_uri: dpv:AuditConditionallyApproved
     description: State of being conditionally approved through the audit
     aliases:
-      - Audit Conditionally Approved
+    - Audit Conditionally Approved
     comments:
-      - |-
-        A "conditional approval" is intended to reflect states where the audit
-        has identified further changes which must be implemented before
-        considering the audit has been 'passed', without requiring another audit
-        to validate them. This is distinct from the case where an audit has
-        state 'rejected', which means changes must be made and submitted for
-        review. The requirements of a 'conditional acceptance' are expected to
-        be minor or not significant enough to warrant another audit to review
-        them.
+    - |-
+      A "conditional approval" is intended to reflect states where the audit
+      has identified further changes which must be implemented before
+      considering the audit has been 'passed', without requiring another audit
+      to validate them. This is distinct from the case where an audit has
+      state 'rejected', which means changes must be made and submitted for
+      review. The requirements of a 'conditional acceptance' are expected to
+      be minor or not significant enough to warrant another audit to review
+      them.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditConditionallyApproved
-      - dpv_owl:AuditConditionallyApproved
+    - dpv_upstream:AuditConditionallyApproved
+    - dpv_owl:AuditConditionallyApproved
     annotations:
       skos_in_scheme: status-classes
 
@@ -991,12 +998,12 @@ classes:
     class_uri: dpv:AuditNotRequired
     description: State where an audit is determined as not being required
     aliases:
-      - Audit Not Required
+    - Audit Not Required
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditNotRequired
-      - dpv_owl:AuditNotRequired
+    - dpv_upstream:AuditNotRequired
+    - dpv_owl:AuditNotRequired
     annotations:
       skos_in_scheme: status-classes
 
@@ -1005,26 +1012,27 @@ classes:
     class_uri: dpv:AuditRejected
     description: State of not being approved or being rejected through the audit
     aliases:
-      - Audit Rejected
+    - Audit Rejected
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditRejected
-      - dpv_owl:AuditRejected
+    - dpv_upstream:AuditRejected
+    - dpv_owl:AuditRejected
     annotations:
       skos_in_scheme: status-classes
 
   AuditRequested:
     is_a: AuditStatus
     class_uri: dpv:AuditRequested
-    description: State of an audit being requested whose outcome is not yet known
+    description: State of an audit being requested whose outcome is not yet 
+      known
     aliases:
-      - Audit Requested
+    - Audit Requested
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditRequested
-      - dpv_owl:AuditRequested
+    - dpv_upstream:AuditRequested
+    - dpv_owl:AuditRequested
     annotations:
       skos_in_scheme: status-classes
 
@@ -1035,12 +1043,12 @@ classes:
       State where an audit is determined as being required but has not been
       conducted
     aliases:
-      - Audit Required
+    - Audit Required
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditRequired
-      - dpv_owl:AuditRequired
+    - dpv_upstream:AuditRequired
+    - dpv_owl:AuditRequired
     annotations:
       skos_in_scheme: status-classes
 
@@ -1049,48 +1057,48 @@ classes:
     class_uri: dpv:AuditStatus
     description: Status associated with Auditing or Investigation
     aliases:
-      - Audit Status
+    - Audit Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuditStatus
-      - dpv_owl:AuditStatus
+    - dpv_upstream:AuditStatus
+    - dpv_owl:AuditStatus
     annotations:
       skos_in_scheme: status-classes
 
   AuthorityInformed:
     is_a: EntityInformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:AuthorityInformed
     description: |-
       Status indicating Authority has been informed about the specified
       context
     aliases:
-      - Authority Informed
+    - Authority Informed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuthorityInformed
-      - dpv_owl:AuthorityInformed
+    - dpv_upstream:AuthorityInformed
+    - dpv_owl:AuthorityInformed
     annotations:
       skos_in_scheme: status-classes
 
   AuthorityUninformed:
     is_a: EntityUninformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:AuthorityUninformed
     description: |-
       Status indicating Authority is uninformed i.e. has not been informed
       about the specified context
     aliases:
-      - Authority Uninformed
+    - Authority Uninformed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:AuthorityUninformed
-      - dpv_owl:AuthorityUninformed
+    - dpv_upstream:AuthorityUninformed
+    - dpv_owl:AuthorityUninformed
     annotations:
       skos_in_scheme: status-classes
 
@@ -1101,12 +1109,12 @@ classes:
       Status indicating the compatibility of the context with an earlier
       context is currently unknown
     aliases:
-      - Compatibility Unknown
+    - Compatibility Unknown
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:CompatibilityUnknown
-      - dpv_owl:CompatibilityUnknown
+    - dpv_upstream:CompatibilityUnknown
+    - dpv_owl:CompatibilityUnknown
     annotations:
       skos_in_scheme: status-classes
 
@@ -1117,12 +1125,12 @@ classes:
       State where the status of compliance has not been fully assessed,
       evaluated, or determined
     aliases:
-      - Compliance Indeterminate
+    - Compliance Indeterminate
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ComplianceIndeterminate
-      - dpv_owl:ComplianceIndeterminate
+    - dpv_upstream:ComplianceIndeterminate
+    - dpv_owl:ComplianceIndeterminate
     annotations:
       skos_in_scheme: status-classes
 
@@ -1133,12 +1141,12 @@ classes:
       Status associated with Compliance with some norms, objectives, or
       requirements
     aliases:
-      - Compliance Status
+    - Compliance Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ComplianceStatus
-      - dpv_owl:ComplianceStatus
+    - dpv_upstream:ComplianceStatus
+    - dpv_owl:ComplianceStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -1147,12 +1155,12 @@ classes:
     class_uri: dpv:ComplianceUnknown
     description: State where the status of compliance is unknown
     aliases:
-      - Compliance Unknown
+    - Compliance Unknown
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ComplianceUnknown
-      - dpv_owl:ComplianceUnknown
+    - dpv_upstream:ComplianceUnknown
+    - dpv_owl:ComplianceUnknown
     annotations:
       skos_in_scheme: status-classes
 
@@ -1163,15 +1171,15 @@ classes:
       State where compliance cannot be achieved due to requirements being
       violated
     aliases:
-      - Compliance Violation
+    - Compliance Violation
     comments:
-      - |-
-        Changed from "violation of compliance" for consistency with other terms
+    - |-
+      Changed from "violation of compliance" for consistency with other terms
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ComplianceViolation
-      - dpv_owl:ComplianceViolation
+    - dpv_upstream:ComplianceViolation
+    - dpv_owl:ComplianceViolation
     annotations:
       skos_in_scheme: status-classes
 
@@ -1180,12 +1188,12 @@ classes:
     class_uri: dpv:Compliant
     description: State of being fully compliant
     aliases:
-      - Compliant
+    - Compliant
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Compliant
-      - dpv_owl:Compliant
+    - dpv_upstream:Compliant
+    - dpv_owl:Compliant
     annotations:
       skos_in_scheme: status-classes
 
@@ -1196,12 +1204,12 @@ classes:
       Status associated with conformance to a standard, guideline, code, or
       recommendation
     aliases:
-      - Conformance Status
+    - Conformance Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ConformanceStatus
-      - dpv_owl:ConformanceStatus
+    - dpv_upstream:ConformanceStatus
+    - dpv_owl:ConformanceStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -1210,12 +1218,12 @@ classes:
     class_uri: dpv:Conformant
     description: State of being conformant
     aliases:
-      - Conformant
+    - Conformant
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Conformant
-      - dpv_owl:Conformant
+    - dpv_upstream:Conformant
+    - dpv_owl:Conformant
     annotations:
       skos_in_scheme: status-classes
 
@@ -1224,18 +1232,18 @@ classes:
     class_uri: dpv:Context
     description: Contextually relevant information
     aliases:
-      - Context
+    - Context
     comments:
-      - |-
-        Context is a catch-all concept for information of relevance not possible
-        to represent through other core concepts. DPV offers specific contextual
-        concepts such as Necessity, Frequency, and Duration. More can be created
-        by extending Context within use-cases.
+    - |-
+      Context is a catch-all concept for information of relevance not possible
+      to represent through other core concepts. DPV offers specific contextual
+      concepts such as Necessity, Frequency, and Duration. More can be created
+      by extending Context within use-cases.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Context
-      - dpv_owl:Context
+    - dpv_upstream:Context
+    - dpv_owl:Context
     annotations:
       skos_in_scheme: context-classes
 
@@ -1244,141 +1252,141 @@ classes:
     class_uri: dpv:ContinuousFrequency
     description: Frequency where occurrences are continuous
     aliases:
-      - Continuous Frequency
+    - Continuous Frequency
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ContinuousFrequency
-      - dpv_owl:ContinuousFrequency
+    - dpv_upstream:ContinuousFrequency
+    - dpv_owl:ContinuousFrequency
     annotations:
       skos_in_scheme: context-classes
 
   ControllerInformed:
     is_a: EntityInformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:ControllerInformed
     description: |-
       Status indicating Controller has been informed about the specified
       context
     aliases:
-      - Controller Informed
+    - Controller Informed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ControllerInformed
-      - dpv_owl:ControllerInformed
+    - dpv_upstream:ControllerInformed
+    - dpv_owl:ControllerInformed
     annotations:
       skos_in_scheme: status-classes
 
   ControllerUninformed:
     is_a: EntityUninformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:ControllerUninformed
     description: |-
       Status indicating Controller is uninformed i.e. has not been informed
       about the specified context
     aliases:
-      - Controller Uninformed
+    - Controller Uninformed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ControllerUninformed
-      - dpv_owl:ControllerUninformed
+    - dpv_upstream:ControllerUninformed
+    - dpv_owl:ControllerUninformed
     annotations:
       skos_in_scheme: status-classes
 
   DataSubjectInformed:
     is_a: EntityInformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:DataSubjectInformed
     description: |-
       Status indicating DataSubject has been informed about the specified
       context
     aliases:
-      - Data Subject Informed
+    - Data Subject Informed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:DataSubjectInformed
-      - dpv_owl:DataSubjectInformed
+    - dpv_upstream:DataSubjectInformed
+    - dpv_owl:DataSubjectInformed
     annotations:
       skos_in_scheme: status-classes
 
   DataSubjectUninformed:
     is_a: EntityUninformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:DataSubjectUninformed
     description: |-
       Status indicating DataSubject is uninformed i.e. has not been informed
       about the specified context
     aliases:
-      - Data Subject Uninformed
+    - Data Subject Uninformed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:DataSubjectUninformed
-      - dpv_owl:DataSubjectUninformed
+    - dpv_upstream:DataSubjectUninformed
+    - dpv_owl:DataSubjectUninformed
     annotations:
       skos_in_scheme: status-classes
 
   Deterrence:
     is_a: UnacceptableRule
     mixins:
-      - Rule
+    - Rule
     class_uri: dpv:Deterrence
     description: A rule describing a deterrence for performing an activity
     aliases:
-      - Deterrence
+    - Deterrence
     comments:
-      - |-
-        Deterrences are aligned with the term SHOULD NOT in RFC2119 where
-        specified activities should be avoided from being carried out but are
-        not prohibitions
+    - |-
+      Deterrences are aligned with the term SHOULD NOT in RFC2119 where
+      specified activities should be avoided from being carried out but are
+      not prohibitions
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Deterrence
-      - dpv_owl:Deterrence
+    - dpv_upstream:Deterrence
+    - dpv_owl:Deterrence
     annotations:
       skos_in_scheme: rules-classes
 
   DeterrenceFollowed:
     is_a: RuleFulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:DeterrenceFollowed
     description: |-
       Status indicating a deterrence has been followed i.e. the activity
       stated as being deterred has not been carried out
     aliases:
-      - Deterrence Followed
+    - Deterrence Followed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:DeterrenceFollowed
-      - dpv_owl:DeterrenceFollowed
+    - dpv_upstream:DeterrenceFollowed
+    - dpv_owl:DeterrenceFollowed
     annotations:
       skos_in_scheme: rules-classes
 
   DeterrenceNotFollowed:
     is_a: RuleUnfulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:DeterrenceNotFollowed
     description: |-
       Status indicating a deterrence has not been followed i.e. the activity
       stated as being deterred has been carried out
     aliases:
-      - Deterrence Not Followed
+    - Deterrence Not Followed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:DeterrenceNotFollowed
-      - dpv_owl:DeterrenceNotFollowed
+    - dpv_upstream:DeterrenceNotFollowed
+    - dpv_owl:DeterrenceNotFollowed
     annotations:
       skos_in_scheme: rules-classes
 
@@ -1387,12 +1395,12 @@ classes:
     class_uri: dpv:Duration
     description: The duration or temporal limitation
     aliases:
-      - Duration
+    - Duration
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Duration
-      - dpv_owl:Duration
+    - dpv_upstream:Duration
+    - dpv_owl:Duration
     annotations:
       skos_in_scheme: context-classes
 
@@ -1401,12 +1409,12 @@ classes:
     class_uri: dpv:Optional
     description: Indication of 'optional' or 'voluntary'
     aliases:
-      - Optional
+    - Optional
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Optional
-      - dpv_owl:Optional
+    - dpv_upstream:Optional
+    - dpv_owl:Optional
     annotations:
       skos_in_scheme: context-classes
 
@@ -1420,9 +1428,9 @@ classes:
       closed-world property list per class should consume the W3C DPV OWL
       release directly rather than this LinkML projection.
     in_subset:
-      - common_subset
+    - common_subset
     slots:
-      - id
+    - id
 
   EndlessDuration:
     is_a: DpvDuration
@@ -1430,26 +1438,27 @@ classes:
     description: |-
       Duration that is (known or intended to be) open ended or without an end
     aliases:
-      - Endless Duration
+    - Endless Duration
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:EndlessDuration
-      - dpv_owl:EndlessDuration
+    - dpv_upstream:EndlessDuration
+    - dpv_owl:EndlessDuration
     annotations:
       skos_in_scheme: context-classes
 
   EntityInformed:
     is_a: EntityInformedStatus
     class_uri: dpv:EntityInformed
-    description: Status indicating entity has been informed about specified context
+    description: Status indicating entity has been informed about specified 
+      context
     aliases:
-      - Entity Informed
+    - Entity Informed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:EntityInformed
-      - dpv_owl:EntityInformed
+    - dpv_upstream:EntityInformed
+    - dpv_owl:EntityInformed
     annotations:
       skos_in_scheme: status-classes
 
@@ -1460,12 +1469,12 @@ classes:
       Status indicating whether an entity is informed or uninformed about
       specified context
     aliases:
-      - Entity Informed Status
+    - Entity Informed Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:EntityInformedStatus
-      - dpv_owl:EntityInformedStatus
+    - dpv_upstream:EntityInformedStatus
+    - dpv_owl:EntityInformedStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -1476,12 +1485,12 @@ classes:
       Status indicating entity is uninformed i.e. has been not been informed
       about specified context
     aliases:
-      - Entity Uninformed
+    - Entity Uninformed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:EntityUninformed
-      - dpv_owl:EntityUninformed
+    - dpv_upstream:EntityUninformed
+    - dpv_owl:EntityUninformed
     annotations:
       skos_in_scheme: status-classes
 
@@ -1492,21 +1501,21 @@ classes:
       Status indicating whether the specified context was intended or
       unintended
     aliases:
-      - Expectation Status
+    - Expectation Status
     comments:
-      - |-
-        Expectation is associated with the outcome of a goal or purpose for what
-        is expected to happen i.e. an ex-post indication of what was expected to
-        happen in the specified context. Intention and Expectation are closely
-        related terms. We recommend using Intention when the entity has the
-        ability to control the implementation and Expectation for when the
-        entity does not have control or for what happens after or beyond the
-        exercise of control.
+    - |-
+      Expectation is associated with the outcome of a goal or purpose for what
+      is expected to happen i.e. an ex-post indication of what was expected to
+      happen in the specified context. Intention and Expectation are closely
+      related terms. We recommend using Intention when the entity has the
+      ability to control the implementation and Expectation for when the
+      entity does not have control or for what happens after or beyond the
+      exercise of control.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ExpectationStatus
-      - dpv_owl:ExpectationStatus
+    - dpv_upstream:ExpectationStatus
+    - dpv_owl:ExpectationStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -1515,12 +1524,12 @@ classes:
     class_uri: dpv:Expected
     description: Status indicating the specified context was expected
     aliases:
-      - Expected
+    - Expected
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Expected
-      - dpv_owl:Expected
+    - dpv_upstream:Expected
+    - dpv_owl:Expected
     annotations:
       skos_in_scheme: status-classes
 
@@ -1531,12 +1540,12 @@ classes:
       Concept indicating a fee is not required. This is distinct from a Fee of
       zero as it indicates a fee is not applicable in the context
     aliases:
-      - Fee Not Required
+    - Fee Not Required
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:FeeNotRequired
-      - dpv_owl:FeeNotRequired
+    - dpv_upstream:FeeNotRequired
+    - dpv_owl:FeeNotRequired
     annotations:
       skos_in_scheme: context-classes
 
@@ -1547,12 +1556,12 @@ classes:
       Concept indicating a fee is required. The value of the fee should be
       specified using rdf:value or an another relevant means
     aliases:
-      - Fee Required
+    - Fee Required
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:FeeRequired
-      - dpv_owl:FeeRequired
+    - dpv_upstream:FeeRequired
+    - dpv_owl:FeeRequired
     annotations:
       skos_in_scheme: context-classes
 
@@ -1561,12 +1570,12 @@ classes:
     class_uri: dpv:FeeRequirement
     description: Concept indicating whether a fee is required
     aliases:
-      - Fee Requirement
+    - Fee Requirement
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:FeeRequirement
-      - dpv_owl:FeeRequirement
+    - dpv_upstream:FeeRequirement
+    - dpv_owl:FeeRequirement
     annotations:
       skos_in_scheme: context-classes
 
@@ -1575,12 +1584,12 @@ classes:
     class_uri: dpv:FixedOccurrencesDuration
     description: Duration that takes place a fixed number of times e.g. 3 times
     aliases:
-      - Fixed Occurrences Duration
+    - Fixed Occurrences Duration
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:FixedOccurrencesDuration
-      - dpv_owl:FixedOccurrencesDuration
+    - dpv_upstream:FixedOccurrencesDuration
+    - dpv_owl:FixedOccurrencesDuration
     annotations:
       skos_in_scheme: context-classes
 
@@ -1591,12 +1600,12 @@ classes:
       The frequency or information about periods and repetitions in terms of
       recurrence.
     aliases:
-      - Frequency
+    - Frequency
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Frequency
-      - dpv_owl:Frequency
+    - dpv_upstream:Frequency
+    - dpv_owl:Frequency
     annotations:
       skos_in_scheme: context-classes
 
@@ -1605,16 +1614,16 @@ classes:
     class_uri: dpv:Importance
     description: An indication of 'importance' within a context
     aliases:
-      - Importance
+    - Importance
     comments:
-      - |-
-        Importance can be used to express importance, desirability, relevance,
-        or significance as a context.
+    - |-
+      Importance can be used to express importance, desirability, relevance,
+      or significance as a context.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Importance
-      - dpv_owl:Importance
+    - dpv_upstream:Importance
+    - dpv_owl:Importance
     annotations:
       skos_in_scheme: context-classes
 
@@ -1623,17 +1632,17 @@ classes:
     class_uri: dpv:IndeterminateDuration
     description: Duration that is indeterminate or cannot be determined
     aliases:
-      - Indeterminate Duration
+    - Indeterminate Duration
     comments:
-      - |-
-        Indeterminate means (exact or otherwise) information about the duration
-        cannot be determined, which is distinct from 'EndlessDuration' where it
-        is known (or decided) that the duration is open-ended or without an end.
+    - |-
+      Indeterminate means (exact or otherwise) information about the duration
+      cannot be determined, which is distinct from 'EndlessDuration' where it
+      is known (or decided) that the duration is open-ended or without an end.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:IndeterminateDuration
-      - dpv_owl:IndeterminateDuration
+    - dpv_upstream:IndeterminateDuration
+    - dpv_owl:IndeterminateDuration
     annotations:
       skos_in_scheme: context-classes
 
@@ -1642,12 +1651,12 @@ classes:
     class_uri: dpv:Intended
     description: Status indicating the specified context was intended
     aliases:
-      - Intended
+    - Intended
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Intended
-      - dpv_owl:Intended
+    - dpv_upstream:Intended
+    - dpv_owl:Intended
     annotations:
       skos_in_scheme: status-classes
 
@@ -1658,21 +1667,21 @@ classes:
       Status indicating whether the specified context was intended or
       unintended
     aliases:
-      - Intention Status
+    - Intention Status
     comments:
-      - |-
-        Intention is associated with the goal or purpose for what is about to
-        happen i.e. an ex-ante indication of whether the specified context
-        is/was planned or intended. Intention and Expectation are closely
-        related terms. We recommend using Intention when the entity has the
-        ability to control the implementation and Expectation for when the
-        entity does not have control or for what happens after or beyond the
-        exercise of control.
+    - |-
+      Intention is associated with the goal or purpose for what is about to
+      happen i.e. an ex-ante indication of whether the specified context
+      is/was planned or intended. Intention and Expectation are closely
+      related terms. We recommend using Intention when the entity has the
+      ability to control the implementation and Expectation for when the
+      entity does not have control or for what happens after or beyond the
+      exercise of control.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:IntentionStatus
-      - dpv_owl:IntentionStatus
+    - dpv_upstream:IntentionStatus
+    - dpv_owl:IntentionStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -1681,12 +1690,12 @@ classes:
     class_uri: dpv:InvolvementStatus
     description: Status indicating whether the involvement of specified context
     aliases:
-      - Involvement Status
+    - Involvement Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:InvolvementStatus
-      - dpv_owl:InvolvementStatus
+    - dpv_upstream:InvolvementStatus
+    - dpv_owl:InvolvementStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -1697,12 +1706,12 @@ classes:
       A form of documentation providing reasons, explanations, or
       justifications
     aliases:
-      - Justification
+    - Justification
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Justification
-      - dpv_owl:Justification
+    - dpv_upstream:Justification
+    - dpv_owl:Justification
     annotations:
       skos_in_scheme: context-classes
 
@@ -1711,26 +1720,27 @@ classes:
     class_uri: dpv:Lawful
     description: State of being lawful or legally compliant
     aliases:
-      - Lawful
+    - Lawful
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Lawful
-      - dpv_owl:Lawful
+    - dpv_upstream:Lawful
+    - dpv_owl:Lawful
     annotations:
       skos_in_scheme: status-classes
 
   Lawfulness:
     is_a: ComplianceStatus
     class_uri: dpv:Lawfulness
-    description: Status associated with expressing lawfulness or legal compliance
+    description: Status associated with expressing lawfulness or legal 
+      compliance
     aliases:
-      - Lawfulness
+    - Lawfulness
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Lawfulness
-      - dpv_owl:Lawfulness
+    - dpv_upstream:Lawfulness
+    - dpv_owl:Lawfulness
     annotations:
       skos_in_scheme: status-classes
 
@@ -1739,12 +1749,12 @@ classes:
     class_uri: dpv:LawfulnessUnknown
     description: State of the lawfulness not being known
     aliases:
-      - Lawfulness Unknown
+    - Lawfulness Unknown
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:LawfulnessUnknown
-      - dpv_owl:LawfulnessUnknown
+    - dpv_upstream:LawfulnessUnknown
+    - dpv_owl:LawfulnessUnknown
     annotations:
       skos_in_scheme: status-classes
 
@@ -1755,12 +1765,12 @@ classes:
       Legal measures used to safeguard and ensure good practices in connection
       with data and technologies
     aliases:
-      - Legal Measure
+    - Legal Measure
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:LegalMeasure
-      - dpv_owl:LegalMeasure
+    - dpv_upstream:LegalMeasure
+    - dpv_owl:LegalMeasure
     annotations:
       skos_in_scheme: TOM-classes
       dct_source: DGA 12.j
@@ -1770,16 +1780,16 @@ classes:
     class_uri: dpv:Necessity
     description: An indication of 'necessity' within a context
     aliases:
-      - Necessity
+    - Necessity
     comments:
-      - |-
-        Necessity can be used to express need, essentiality, requirement, or
-        compulsion.
+    - |-
+      Necessity can be used to express need, essentiality, requirement, or
+      compulsion.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Necessity
-      - dpv_owl:Necessity
+    - dpv_upstream:Necessity
+    - dpv_owl:Necessity
     annotations:
       skos_in_scheme: context-classes
 
@@ -1790,14 +1800,14 @@ classes:
       State of non-compliance where objectives have not been met, but have not
       been violated
     aliases:
-      - Non Compliant
+    - Non Compliant
     comments:
-      - Changed from not compliant for consistency in commonly used terms
+    - Changed from not compliant for consistency in commonly used terms
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NonCompliant
-      - dpv_owl:NonCompliant
+    - dpv_upstream:NonCompliant
+    - dpv_owl:NonCompliant
     annotations:
       skos_in_scheme: status-classes
 
@@ -1806,12 +1816,12 @@ classes:
     class_uri: dpv:NonConformant
     description: State of being non-conformant
     aliases:
-      - NonConformant
+    - NonConformant
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NonConformant
-      - dpv_owl:NonConformant
+    - dpv_upstream:NonConformant
+    - dpv_owl:NonConformant
     annotations:
       skos_in_scheme: status-classes
 
@@ -1820,17 +1830,17 @@ classes:
     class_uri: dpv:NotApplicable
     description: Concept indicating the information or context is not applicable
     aliases:
-      - Not Applicable
+    - Not Applicable
     comments:
-      - |-
-        This relates to a 'Stop' state as distinct from a 'Halt' state. It makes
-        no comments on whether the Activity can be resumed or continued towards
-        completion.
+    - |-
+      This relates to a 'Stop' state as distinct from a 'Halt' state. It makes
+      no comments on whether the Activity can be resumed or continued towards
+      completion.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotApplicable
-      - dpv_owl:NotApplicable
+    - dpv_upstream:NotApplicable
+    - dpv_owl:NotApplicable
     annotations:
       skos_in_scheme: context-classes
 
@@ -1841,20 +1851,20 @@ classes:
       Concept indicating the information or context is applicable but
       information is not yet available
     aliases:
-      - Not Available
+    - Not Available
     comments:
-      - |-
-        This concept is useful when describing situations where information is
-        required but is not available (yet). For example, if in a form a field
-        asks about whether a process X was completed, and it is correct to
-        interpret that process X is applicable and must be completed, but the
-        information is not yet available as to whether this was done - then
-        NotAvailable is useful to represent this.
+    - |-
+      This concept is useful when describing situations where information is
+      required but is not available (yet). For example, if in a form a field
+      asks about whether a process X was completed, and it is correct to
+      interpret that process X is applicable and must be completed, but the
+      information is not yet available as to whether this was done - then
+      NotAvailable is useful to represent this.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotAvailable
-      - dpv_owl:NotAvailable
+    - dpv_upstream:NotAvailable
+    - dpv_owl:NotAvailable
     annotations:
       skos_in_scheme: context-classes
 
@@ -1863,12 +1873,12 @@ classes:
     class_uri: dpv:NotInvolved
     description: Status indicating the specified context is 'not' involved
     aliases:
-      - Not Involved
+    - Not Involved
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotInvolved
-      - dpv_owl:NotInvolved
+    - dpv_upstream:NotInvolved
+    - dpv_owl:NotInvolved
     annotations:
       skos_in_scheme: status-classes
 
@@ -1879,12 +1889,12 @@ classes:
       Indication of neither being required nor optional i.e. not relevant or
       needed
     aliases:
-      - Not Required
+    - Not Required
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotRequired
-      - dpv_owl:NotRequired
+    - dpv_upstream:NotRequired
+    - dpv_owl:NotRequired
     annotations:
       skos_in_scheme: context-classes
 
@@ -1893,12 +1903,12 @@ classes:
     class_uri: dpv:NotificationCompleted
     description: Status indicating notification(s) are completed
     aliases:
-      - Notification Completed
+    - Notification Completed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotificationCompleted
-      - dpv_owl:NotificationCompleted
+    - dpv_upstream:NotificationCompleted
+    - dpv_owl:NotificationCompleted
     annotations:
       skos_in_scheme: status-classes
 
@@ -1909,12 +1919,12 @@ classes:
       Status indicating notification(s) could not be completed due to a
       failure
     aliases:
-      - Notification Failed
+    - Notification Failed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotificationFailed
-      - dpv_owl:NotificationFailed
+    - dpv_upstream:NotificationFailed
+    - dpv_owl:NotificationFailed
     annotations:
       skos_in_scheme: status-classes
 
@@ -1923,12 +1933,12 @@ classes:
     class_uri: dpv:NotificationNotNeeded
     description: Status indicating notification(s) are not needed
     aliases:
-      - Notification Not Needed
+    - Notification Not Needed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotificationNotNeeded
-      - dpv_owl:NotificationNotNeeded
+    - dpv_upstream:NotificationNotNeeded
+    - dpv_owl:NotificationNotNeeded
     annotations:
       skos_in_scheme: status-classes
 
@@ -1937,12 +1947,12 @@ classes:
     class_uri: dpv:NotificationOngoing
     description: Status indicating notification(s) are ongoing
     aliases:
-      - Notification Ongoing
+    - Notification Ongoing
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotificationOngoing
-      - dpv_owl:NotificationOngoing
+    - dpv_upstream:NotificationOngoing
+    - dpv_owl:NotificationOngoing
     annotations:
       skos_in_scheme: status-classes
 
@@ -1951,12 +1961,12 @@ classes:
     class_uri: dpv:NotificationPlanned
     description: Status indicating notification(s) are planned
     aliases:
-      - Notification Planned
+    - Notification Planned
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotificationPlanned
-      - dpv_owl:NotificationPlanned
+    - dpv_upstream:NotificationPlanned
+    - dpv_owl:NotificationPlanned
     annotations:
       skos_in_scheme: status-classes
 
@@ -1967,60 +1977,60 @@ classes:
       Status indicating whether notification(s) are planned, completed, or
       failed
     aliases:
-      - Notification Status
+    - Notification Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:NotificationStatus
-      - dpv_owl:NotificationStatus
+    - dpv_upstream:NotificationStatus
+    - dpv_owl:NotificationStatus
     annotations:
       skos_in_scheme: status-classes
 
   Obligation:
     is_a: AcceptableRule
     mixins:
-      - Rule
+    - Rule
     class_uri: dpv:Obligation
     description: A rule describing an obligation for performing an activity
     aliases:
-      - Obligation
+    - Obligation
     comments:
-      - |-
-        Obligations are aligned with the term MUST in RFC2119 where specified
-        activities are mandatory to be carried out
+    - |-
+      Obligations are aligned with the term MUST in RFC2119 where specified
+      activities are mandatory to be carried out
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Obligation
-      - dpv_owl:Obligation
-    close_mappings:
-      - gists:ContingentObligation
+    - dpv_upstream:Obligation
+    - dpv_owl:Obligation
     annotations:
       skos_in_scheme: rules-classes
 
+    close_mappings:
+    - gists:ContingentObligation
   ObligationFulfilled:
     is_a: RuleFulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:ObligationFulfilled
     description: |-
       Status indicating an obligation has been fulfilled i.e. the activity
       stated as being required to be carried out has been successfully
       completed
     aliases:
-      - Obligation Fulfilled
+    - Obligation Fulfilled
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ObligationFulfilled
-      - dpv_owl:ObligationFulfilled
+    - dpv_upstream:ObligationFulfilled
+    - dpv_owl:ObligationFulfilled
     annotations:
       skos_in_scheme: rules-classes
 
   ObligationUnfulfilled:
     is_a: RuleUnfulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:ObligationUnfulfilled
     description: |-
       Status indicating an obligation has not been fulfilled i.e. the activity
@@ -2028,19 +2038,19 @@ classes:
       this is not considered as a violation e.g. there is still time to
       conduct the activity
     aliases:
-      - Obligation Unfulfilled
+    - Obligation Unfulfilled
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ObligationUnfulfilled
-      - dpv_owl:ObligationUnfulfilled
+    - dpv_upstream:ObligationUnfulfilled
+    - dpv_owl:ObligationUnfulfilled
     annotations:
       skos_in_scheme: rules-classes
 
   ObligationViolated:
     is_a: RuleViolated
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:ObligationViolated
     description: |-
       Status indicating an obligation has been violated i.e. the activity
@@ -2048,26 +2058,27 @@ classes:
       this is considered as a violation i.e. the activity can no longer be
       carried out to fulfil the obligation
     aliases:
-      - Obligation Violated
+    - Obligation Violated
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ObligationViolated
-      - dpv_owl:ObligationViolated
+    - dpv_upstream:ObligationViolated
+    - dpv_owl:ObligationViolated
     annotations:
       skos_in_scheme: rules-classes
 
   OftenFrequency:
     is_a: Frequency
     class_uri: dpv:OftenFrequency
-    description: Frequency where occurrences are often or frequent, but not continuous
+    description: Frequency where occurrences are often or frequent, but not 
+      continuous
     aliases:
-      - Often Frequency
+    - Often Frequency
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:OftenFrequency
-      - dpv_owl:OftenFrequency
+    - dpv_upstream:OftenFrequency
+    - dpv_owl:OftenFrequency
     annotations:
       skos_in_scheme: context-classes
 
@@ -2078,21 +2089,21 @@ classes:
       Organisational measures used to safeguard and ensure good practices in
       connection with data and technologies
     aliases:
-      - Organisational Measure
+    - Organisational Measure
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:OrganisationalMeasure
-      - dpv_owl:OrganisationalMeasure
-    broad_mappings:
-      - iso29100:PrivacyControl
-      - nist_csf_v2:CSFSubcategory
-    narrow_mappings:
-      - iso27001:SecurityControl
-      - oscal:Control
+    - dpv_upstream:OrganisationalMeasure
+    - dpv_owl:OrganisationalMeasure
     annotations:
       skos_in_scheme: TOM-classes
 
+    narrow_mappings:
+    - iso27001:SecurityControl
+    - oscal:Control
+    broad_mappings:
+    - iso29100:PrivacyControl
+    - nist_csf_v2:CSFSubcategory
   PartiallyCompliant:
     is_a: ComplianceStatus
     class_uri: dpv:PartiallyCompliant
@@ -2100,12 +2111,12 @@ classes:
       State of partially being compliant i.e. only some objectives have been
       met, and others have not been in violation
     aliases:
-      - Partially Compliant
+    - Partially Compliant
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PartiallyCompliant
-      - dpv_owl:PartiallyCompliant
+    - dpv_upstream:PartiallyCompliant
+    - dpv_owl:PartiallyCompliant
     annotations:
       skos_in_scheme: status-classes
 
@@ -2114,72 +2125,72 @@ classes:
     class_uri: dpv:PassivelyInvolved
     description: Status indicating the specified context is 'passively' involved
     aliases:
-      - Passively Involved
+    - Passively Involved
     comments:
-      - |-
-        An example of passive involvement is a person being monitored by a CCTV
+    - |-
+      An example of passive involvement is a person being monitored by a CCTV
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PassivelyInvolved
-      - dpv_owl:PassivelyInvolved
+    - dpv_upstream:PassivelyInvolved
+    - dpv_owl:PassivelyInvolved
     annotations:
       skos_in_scheme: status-classes
 
   Permission:
     is_a: AcceptableRule
     mixins:
-      - Rule
+    - Rule
     class_uri: dpv:Permission
     description: A rule describing a permission to perform an activity
     aliases:
-      - Permission
+    - Permission
     comments:
-      - |-
-        Permissions are aligned with the term MAY in RFC2119 where specified
-        activities may or may not be carried out
+    - |-
+      Permissions are aligned with the term MAY in RFC2119 where specified
+      activities may or may not be carried out
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Permission
-      - dpv_owl:Permission
-      - gists:Permission
+    - dpv_upstream:Permission
+    - dpv_owl:Permission
+    - gists:Permission
     annotations:
       skos_in_scheme: rules-classes
 
   PermissionNotUtilised:
     is_a: RuleFulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:PermissionNotUtilised
     description: |-
       Status indicating a permission has not been utilised i.e. the activity
       stated as being permitted has not been carried out
     aliases:
-      - Permission Not Utilised
+    - Permission Not Utilised
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PermissionNotUtilised
-      - dpv_owl:PermissionNotUtilised
+    - dpv_upstream:PermissionNotUtilised
+    - dpv_owl:PermissionNotUtilised
     annotations:
       skos_in_scheme: rules-classes
 
   PermissionUtilised:
     is_a: RuleFulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:PermissionUtilised
     description: |-
       Status indicating a permission has been utilised i.e. the activity
       stated as being permitted has been carried out
     aliases:
-      - Permission Utilised
+    - Permission Utilised
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PermissionUtilised
-      - dpv_owl:PermissionUtilised
+    - dpv_upstream:PermissionUtilised
+    - dpv_owl:PermissionUtilised
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2190,12 +2201,12 @@ classes:
       Physical measures used to safeguard and ensure good practices in
       connection with data and technologies
     aliases:
-      - Physical Measure
+    - Physical Measure
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PhysicalMeasure
-      - dpv_owl:PhysicalMeasure
+    - dpv_upstream:PhysicalMeasure
+    - dpv_owl:PhysicalMeasure
     annotations:
       skos_in_scheme: TOM-classes
 
@@ -2204,12 +2215,12 @@ classes:
     class_uri: dpv:PrimaryImportance
     description: Indication of 'primary' or 'main' or 'core' importance
     aliases:
-      - Primary Importance
+    - Primary Importance
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PrimaryImportance
-      - dpv_owl:PrimaryImportance
+    - dpv_upstream:PrimaryImportance
+    - dpv_owl:PrimaryImportance
     annotations:
       skos_in_scheme: context-classes
 
@@ -2220,166 +2231,166 @@ classes:
       Status indicating compatibility based on the use being either the
       original context or something that is compatible with it
     aliases:
-      - Primary Use
+    - Primary Use
     comments:
-      - |-
-        Primary Use refers to an assessment where two contexts are found to be
-        compatible, e.g. if purpose is used to test compatibility, then for two
-        activities the second activity is said be the primary use if its purpose
-        is compatible with the first activity's purpose
+    - |-
+      Primary Use refers to an assessment where two contexts are found to be
+      compatible, e.g. if purpose is used to test compatibility, then for two
+      activities the second activity is said be the primary use if its purpose
+      is compatible with the first activity's purpose
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:PrimaryUse
-      - dpv_owl:PrimaryUse
+    - dpv_upstream:PrimaryUse
+    - dpv_owl:PrimaryUse
     annotations:
       skos_in_scheme: status-classes
 
   Prohibition:
     is_a: UnacceptableRule
     mixins:
-      - Rule
+    - Rule
     class_uri: dpv:Prohibition
     description: A rule describing a prohibition to perform an activity
     aliases:
-      - Prohibition
+    - Prohibition
     comments:
-      - |-
-        Prohibitions are aligned with the term MUST NOT in RFC2119 where
-        specified activities are prohibited from being carried out
+    - |-
+      Prohibitions are aligned with the term MUST NOT in RFC2119 where
+      specified activities are prohibited from being carried out
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Prohibition
-      - dpv_owl:Prohibition
+    - dpv_upstream:Prohibition
+    - dpv_owl:Prohibition
     annotations:
       skos_in_scheme: rules-classes
 
   ProhibitionUnviolated:
     is_a: RuleFulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:ProhibitionUnviolated
     description: |-
       Status indicating a prohibition has not been violated i.e. the activity
       stated as being prohibited has not been carried out
     aliases:
-      - Prohibition Unviolated
+    - Prohibition Unviolated
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ProhibitionUnviolated
-      - dpv_owl:ProhibitionUnviolated
+    - dpv_upstream:ProhibitionUnviolated
+    - dpv_owl:ProhibitionUnviolated
     annotations:
       skos_in_scheme: rules-classes
 
   ProhibitionViolated:
     is_a: RuleViolated
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:ProhibitionViolated
     description: |-
       Status indicating a prohibition has been violated i.e. the activity
       stated as being prohibited has been carried out
     aliases:
-      - Prohibition Violated
+    - Prohibition Violated
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ProhibitionViolated
-      - dpv_owl:ProhibitionViolated
+    - dpv_upstream:ProhibitionViolated
+    - dpv_owl:ProhibitionViolated
     annotations:
       skos_in_scheme: rules-classes
 
   RecipientInformed:
     is_a: EntityInformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:RecipientInformed
     description: |-
       Status indicating Recipient has been informed about the specified
       context
     aliases:
-      - Recipient Informed
+    - Recipient Informed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RecipientInformed
-      - dpv_owl:RecipientInformed
+    - dpv_upstream:RecipientInformed
+    - dpv_owl:RecipientInformed
     annotations:
       skos_in_scheme: status-classes
 
   RecipientUninformed:
     is_a: EntityUninformed
     mixins:
-      - EntityInformedStatus
+    - EntityInformedStatus
     class_uri: dpv:RecipientUninformed
     description: |-
       Status indicating Recipient is uninformed i.e. has not been informed
       about the specified context
     aliases:
-      - Recipient Uninformed
+    - Recipient Uninformed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RecipientUninformed
-      - dpv_owl:RecipientUninformed
+    - dpv_upstream:RecipientUninformed
+    - dpv_owl:RecipientUninformed
     annotations:
       skos_in_scheme: status-classes
 
   Recommendation:
     is_a: AcceptableRule
     mixins:
-      - Rule
+    - Rule
     class_uri: dpv:Recommendation
     description: A rule describing a recommendation for performing an activity
     aliases:
-      - Recommendation
+    - Recommendation
     comments:
-      - |-
-        Recommendations are aligned with the term SHOULD in RFC2119 where
-        specified activities should be carried out but are not obligations
+    - |-
+      Recommendations are aligned with the term SHOULD in RFC2119 where
+      specified activities should be carried out but are not obligations
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Recommendation
-      - dpv_owl:Recommendation
+    - dpv_upstream:Recommendation
+    - dpv_owl:Recommendation
     annotations:
       skos_in_scheme: rules-classes
 
   RecommendationFollowed:
     is_a: RuleFulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:RecommendationFollowed
     description: |-
       Status indicating a recommendation has been followed i.e. the activity
       stated as being recommended has been carried out
     aliases:
-      - Recommendation Followed
+    - Recommendation Followed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RecommendationFollowed
-      - dpv_owl:RecommendationFollowed
+    - dpv_upstream:RecommendationFollowed
+    - dpv_owl:RecommendationFollowed
     annotations:
       skos_in_scheme: rules-classes
 
   RecommendationNotFollowed:
     is_a: RuleUnfulfilled
     mixins:
-      - RuleFulfilmentStatus
+    - RuleFulfilmentStatus
     class_uri: dpv:RecommendationNotFollowed
     description: |-
       Status indicating a recommendation has not been followed i.e. the
       activity stated as being recommended has not been carried out
     aliases:
-      - Recommendation Not Followed
+    - Recommendation Not Followed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RecommendationNotFollowed
-      - dpv_owl:RecommendationNotFollowed
+    - dpv_upstream:RecommendationNotFollowed
+    - dpv_owl:RecommendationNotFollowed
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2388,12 +2399,12 @@ classes:
     class_uri: dpv:RequestAccepted
     description: State of a request being accepted towards fulfilment
     aliases:
-      - Request Accepted
+    - Request Accepted
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestAccepted
-      - dpv_owl:RequestAccepted
+    - dpv_upstream:RequestAccepted
+    - dpv_owl:RequestAccepted
     annotations:
       skos_in_scheme: status-classes
 
@@ -2402,12 +2413,12 @@ classes:
     class_uri: dpv:RequestAcknowledged
     description: State of a request being acknowledged
     aliases:
-      - Request Acknowledged
+    - Request Acknowledged
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestAcknowledged
-      - dpv_owl:RequestAcknowledged
+    - dpv_upstream:RequestAcknowledged
+    - dpv_owl:RequestAcknowledged
     annotations:
       skos_in_scheme: status-classes
 
@@ -2416,12 +2427,12 @@ classes:
     class_uri: dpv:RequestActionDelayed
     description: State of a request being delayed towards fulfilment
     aliases:
-      - Request Action Delayed
+    - Request Action Delayed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestActionDelayed
-      - dpv_owl:RequestActionDelayed
+    - dpv_upstream:RequestActionDelayed
+    - dpv_owl:RequestActionDelayed
     annotations:
       skos_in_scheme: status-classes
 
@@ -2430,12 +2441,12 @@ classes:
     class_uri: dpv:RequestFulfilled
     description: State of a request being fulfilled
     aliases:
-      - Request Fulfilled
+    - Request Fulfilled
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestFulfilled
-      - dpv_owl:RequestFulfilled
+    - dpv_upstream:RequestFulfilled
+    - dpv_owl:RequestFulfilled
     annotations:
       skos_in_scheme: status-classes
 
@@ -2444,12 +2455,12 @@ classes:
     class_uri: dpv:RequestInitiated
     description: State of a request being initiated
     aliases:
-      - Request Initiated
+    - Request Initiated
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestInitiated
-      - dpv_owl:RequestInitiated
+    - dpv_upstream:RequestInitiated
+    - dpv_owl:RequestInitiated
     annotations:
       skos_in_scheme: status-classes
 
@@ -2458,12 +2469,12 @@ classes:
     class_uri: dpv:RequestRejected
     description: State of a request being rejected towards non-fulfilment
     aliases:
-      - Request Rejected
+    - Request Rejected
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestRejected
-      - dpv_owl:RequestRejected
+    - dpv_upstream:RequestRejected
+    - dpv_owl:RequestRejected
     annotations:
       skos_in_scheme: status-classes
 
@@ -2474,12 +2485,12 @@ classes:
       State of a request's required action having been performed by the other
       party
     aliases:
-      - Request Required Action Performed
+    - Request Required Action Performed
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestRequiredActionPerformed
-      - dpv_owl:RequestRequiredActionPerformed
+    - dpv_upstream:RequestRequiredActionPerformed
+    - dpv_owl:RequestRequiredActionPerformed
     annotations:
       skos_in_scheme: status-classes
 
@@ -2490,12 +2501,12 @@ classes:
       State of a request requiring an action to be performed from another
       party
     aliases:
-      - Request Requires Action
+    - Request Requires Action
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestRequiresAction
-      - dpv_owl:RequestRequiresAction
+    - dpv_upstream:RequestRequiresAction
+    - dpv_owl:RequestRequiresAction
     annotations:
       skos_in_scheme: status-classes
 
@@ -2504,12 +2515,12 @@ classes:
     class_uri: dpv:RequestStatus
     description: Status associated with requests
     aliases:
-      - Request Status
+    - Request Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestStatus
-      - dpv_owl:RequestStatus
+    - dpv_upstream:RequestStatus
+    - dpv_owl:RequestStatus
     annotations:
       skos_in_scheme: status-classes
 
@@ -2518,12 +2529,12 @@ classes:
     class_uri: dpv:RequestStatusQuery
     description: State of a request's status being queried
     aliases:
-      - Request Status Query
+    - Request Status Query
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestStatusQuery
-      - dpv_owl:RequestStatusQuery
+    - dpv_upstream:RequestStatusQuery
+    - dpv_owl:RequestStatusQuery
     annotations:
       skos_in_scheme: status-classes
 
@@ -2532,12 +2543,12 @@ classes:
     class_uri: dpv:RequestUnfulfilled
     description: State of a request being unfulfilled
     aliases:
-      - Request Unfulfilled
+    - Request Unfulfilled
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RequestUnfulfilled
-      - dpv_owl:RequestUnfulfilled
+    - dpv_upstream:RequestUnfulfilled
+    - dpv_owl:RequestUnfulfilled
     annotations:
       skos_in_scheme: status-classes
 
@@ -2546,12 +2557,12 @@ classes:
     class_uri: dpv:Required
     description: Indication of 'required' or 'necessary'
     aliases:
-      - Required
+    - Required
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Required
-      - dpv_owl:Required
+    - dpv_upstream:Required
+    - dpv_owl:Required
     annotations:
       skos_in_scheme: context-classes
 
@@ -2562,21 +2573,21 @@ classes:
       Status indicating whether the specified context is compatible with
       another earlier context
     aliases:
-      - ReuseCompatibility
+    - ReuseCompatibility
     comments:
-      - |-
-        Compatibility refers to whether two contexts, such as dpv:Process
-        instances, are compatible with each other based on a criteria which is
-        not defined by the concept. This criteria can be based on requirements
-        from law, such as GDPR's purpose compatibility or can be based on
-        privacy norms such as contextual integrity. To express such
-        interpretations, further concepts should be expanded from this base
-        concept
+    - |-
+      Compatibility refers to whether two contexts, such as dpv:Process
+      instances, are compatible with each other based on a criteria which is
+      not defined by the concept. This criteria can be based on requirements
+      from law, such as GDPR's purpose compatibility or can be based on
+      privacy norms such as contextual integrity. To express such
+      interpretations, further concepts should be expanded from this base
+      concept
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:ReuseCompatibility
-      - dpv_owl:ReuseCompatibility
+    - dpv_upstream:ReuseCompatibility
+    - dpv_owl:ReuseCompatibility
     annotations:
       skos_in_scheme: status-classes
 
@@ -2587,26 +2598,27 @@ classes:
       A rule describing a process or control that directs or determines if and
       how an activity should be conducted
     aliases:
-      - Rule
+    - Rule
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Rule
-      - dpv_owl:Rule
+    - dpv_upstream:Rule
+    - dpv_owl:Rule
     annotations:
       skos_in_scheme: rules-classes
 
   RuleFulfilled:
     is_a: RuleFulfilmentStatus
     class_uri: dpv:RuleFulfilled
-    description: Status indicating a rule has been fulfilled, completed, or satisfied
+    description: Status indicating a rule has been fulfilled, completed, or 
+      satisfied
     aliases:
-      - Rule Fulfilled
+    - Rule Fulfilled
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RuleFulfilled
-      - dpv_owl:RuleFulfilled
+    - dpv_upstream:RuleFulfilled
+    - dpv_owl:RuleFulfilled
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2618,12 +2630,12 @@ classes:
       or has been utilised, and whether the requirements of the rule have been
       fulfilled or violated
     aliases:
-      - Rule Fulfilment Status
+    - Rule Fulfilment Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RuleFulfilmentStatus
-      - dpv_owl:RuleFulfilmentStatus
+    - dpv_upstream:RuleFulfilmentStatus
+    - dpv_owl:RuleFulfilmentStatus
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2632,12 +2644,12 @@ classes:
     class_uri: dpv:RuleUnfulfilled
     description: Status indicating a rule has not been fulfilled nor violated
     aliases:
-      - Rule Unfulfilled
+    - Rule Unfulfilled
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RuleUnfulfilled
-      - dpv_owl:RuleUnfulfilled
+    - dpv_upstream:RuleUnfulfilled
+    - dpv_owl:RuleUnfulfilled
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2648,12 +2660,12 @@ classes:
       Status indicating a rule has been violated, breached, broken, or
       infracted
     aliases:
-      - Rule Violated
+    - Rule Violated
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:RuleViolated
-      - dpv_owl:RuleViolated
+    - dpv_upstream:RuleViolated
+    - dpv_owl:RuleViolated
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2664,12 +2676,12 @@ classes:
       Indication of the extent or range or boundaries associated with(in) a
       context
     aliases:
-      - Scope
+    - Scope
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Scope
-      - dpv_owl:Scope
+    - dpv_upstream:Scope
+    - dpv_owl:Scope
     annotations:
       skos_in_scheme: context-classes
 
@@ -2678,12 +2690,12 @@ classes:
     class_uri: dpv:SecondaryImportance
     description: Indication of 'secondary' or 'minor' or 'auxiliary' importance
     aliases:
-      - Secondary Importance
+    - Secondary Importance
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:SecondaryImportance
-      - dpv_owl:SecondaryImportance
+    - dpv_upstream:SecondaryImportance
+    - dpv_owl:SecondaryImportance
     annotations:
       skos_in_scheme: context-classes
 
@@ -2694,18 +2706,18 @@ classes:
       Status indicating incompatibility based on the use not being compatible
       with an earlier context
     aliases:
-      - Secondary Use
+    - Secondary Use
     comments:
-      - |-
-        Secondary Use refers to an assessment where two contexts are found to be
-        incompatible, e.g. if purpose is used to test compatibility, then for
-        two activities the second activity is said be the secondary use if its
-        purpose is incompatible with the first activity's purpose
+    - |-
+      Secondary Use refers to an assessment where two contexts are found to be
+      incompatible, e.g. if purpose is used to test compatibility, then for
+      two activities the second activity is said be the secondary use if its
+      purpose is incompatible with the first activity's purpose
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:SecondaryUse
-      - dpv_owl:SecondaryUse
+    - dpv_upstream:SecondaryUse
+    - dpv_owl:SecondaryUse
     annotations:
       skos_in_scheme: status-classes
 
@@ -2715,26 +2727,27 @@ classes:
     description: |-
       Frequency where occurrences are singular i.e. they take place only once
     aliases:
-      - Singular Frequency
+    - Singular Frequency
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:SingularFrequency
-      - dpv_owl:SingularFrequency
+    - dpv_upstream:SingularFrequency
+    - dpv_owl:SingularFrequency
     annotations:
       skos_in_scheme: context-classes
 
   SporadicFrequency:
     is_a: Frequency
     class_uri: dpv:SporadicFrequency
-    description: Frequency where occurrences are sporadic or infrequent or sparse
+    description: Frequency where occurrences are sporadic or infrequent or 
+      sparse
     aliases:
-      - Sporadic Frequency
+    - Sporadic Frequency
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:SporadicFrequency
-      - dpv_owl:SporadicFrequency
+    - dpv_upstream:SporadicFrequency
+    - dpv_owl:SporadicFrequency
     annotations:
       skos_in_scheme: context-classes
 
@@ -2743,12 +2756,12 @@ classes:
     class_uri: dpv:Status
     description: The status or state of something
     aliases:
-      - Status
+    - Status
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Status
-      - dpv_owl:Status
+    - dpv_upstream:Status
+    - dpv_owl:Status
     annotations:
       skos_in_scheme: status-classes
 
@@ -2759,23 +2772,23 @@ classes:
       Technical measures used to safeguard and ensure good practices in
       connection with data and technologies
     aliases:
-      - Technical Measure
+    - Technical Measure
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:TechnicalMeasure
-      - dpv_owl:TechnicalMeasure
-    broad_mappings:
-      - iso29100:PrivacyControl
-      - nist_csf_v2:CSFSubcategory
-    narrow_mappings:
-      - iso27001:SecurityControl
-      - oscal:Control
-    related_mappings:
-      - ocsf:DataSecurity
+    - dpv_upstream:TechnicalMeasure
+    - dpv_owl:TechnicalMeasure
     annotations:
       skos_in_scheme: TOM-classes
 
+    narrow_mappings:
+    - iso27001:SecurityControl
+    - oscal:Control
+    broad_mappings:
+    - iso29100:PrivacyControl
+    - nist_csf_v2:CSFSubcategory
+    related_mappings:
+    - ocsf:DataSecurity
   TechnicalOrganisationalMeasure:
     is_a: DpvThing
     class_uri: dpv:TechnicalOrganisationalMeasure
@@ -2783,48 +2796,49 @@ classes:
       Technical and Organisational measures used to safeguard and ensure good
       practices in connection with data and technologies
     aliases:
-      - Technical and Organisational Measure
+    - Technical and Organisational Measure
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:TechnicalOrganisationalMeasure
-      - dpv_owl:TechnicalOrganisationalMeasure
-    close_mappings:
-      - oscal:Control
+    - dpv_upstream:TechnicalOrganisationalMeasure
+    - dpv_owl:TechnicalOrganisationalMeasure
     annotations:
       skos_in_scheme: TOM-classes
 
+    close_mappings:
+    - oscal:Control
   TemporalDuration:
     is_a: DpvDuration
     class_uri: dpv:TemporalDuration
     description: Duration that has a fixed temporal duration e.g. 6 months
     aliases:
-      - Temporal Duration
+    - Temporal Duration
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:TemporalDuration
-      - dpv_owl:TemporalDuration
+    - dpv_upstream:TemporalDuration
+    - dpv_owl:TemporalDuration
     annotations:
       skos_in_scheme: context-classes
 
   UnacceptableRule:
     is_a: Rule
     class_uri: dpv:UnacceptableRule
-    description: A rule that is unacceptable where it is not desirable if it occurs
+    description: A rule that is unacceptable where it is not desirable if it 
+      occurs
     aliases:
-      - Unacceptable Rule
+    - Unacceptable Rule
     comments:
-      - |-
-        Unacceptable is a subjective concept that enables specifying something
-        is to be avoided as compared to "acceptable". By itself it does not
-        signal any deterrence or prohibition - for which further specific
-        concepts are defined
+    - |-
+      Unacceptable is a subjective concept that enables specifying something
+      is to be avoided as compared to "acceptable". By itself it does not
+      signal any deterrence or prohibition - for which further specific
+      concepts are defined
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:UnacceptableRule
-      - dpv_owl:UnacceptableRule
+    - dpv_upstream:UnacceptableRule
+    - dpv_owl:UnacceptableRule
     annotations:
       skos_in_scheme: rules-classes
 
@@ -2834,12 +2848,12 @@ classes:
     description: |-
       Status indicating the specified context was unexpected i.e. not expected
     aliases:
-      - Unexpected
+    - Unexpected
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Unexpected
-      - dpv_owl:Unexpected
+    - dpv_upstream:Unexpected
+    - dpv_owl:Unexpected
     annotations:
       skos_in_scheme: status-classes
 
@@ -2849,12 +2863,12 @@ classes:
     description: |-
       Status indicating the specified context was unintended i.e. not intended
     aliases:
-      - Unintended
+    - Unintended
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Unintended
-      - dpv_owl:Unintended
+    - dpv_upstream:Unintended
+    - dpv_owl:Unintended
     annotations:
       skos_in_scheme: status-classes
 
@@ -2866,22 +2880,22 @@ classes:
       it is not known if the information exists or is applicable and therefore
       statements about its availability cannot be made (yet)
     aliases:
-      - Unknown Applicability
+    - Unknown Applicability
     comments:
-      - |-
-        This concept is useful when describing situations where it cannot be
-        stated whether the context applies or whether the information is not
-        available yet. For example, if a form field asks about whether a process
-        X was completed and it is not yet known whether X applies or not and
-        therefore it is also unclear whether X was completed or not. Using
-        UnknownApplicability is a signal that the applicability of X should be
-        assessed, and if applicable, then information about X should be
-        identified and used here.
+    - |-
+      This concept is useful when describing situations where it cannot be
+      stated whether the context applies or whether the information is not
+      available yet. For example, if a form field asks about whether a process
+      X was completed and it is not yet known whether X applies or not and
+      therefore it is also unclear whether X was completed or not. Using
+      UnknownApplicability is a signal that the applicability of X should be
+      assessed, and if applicable, then information about X should be
+      identified and used here.
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:UnknownApplicability
-      - dpv_owl:UnknownApplicability
+    - dpv_upstream:UnknownApplicability
+    - dpv_owl:UnknownApplicability
     annotations:
       skos_in_scheme: context-classes
 
@@ -2890,12 +2904,12 @@ classes:
     class_uri: dpv:Unlawful
     description: State of being unlawful or legally non-compliant
     aliases:
-      - Unlawful
+    - Unlawful
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:Unlawful
-      - dpv_owl:Unlawful
+    - dpv_upstream:Unlawful
+    - dpv_owl:Unlawful
     annotations:
       skos_in_scheme: status-classes
 
@@ -2906,12 +2920,12 @@ classes:
       Duration that takes place until a specific event occurs e.g. Account
       Closure
     aliases:
-      - Until Event Duration
+    - Until Event Duration
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:UntilEventDuration
-      - dpv_owl:UntilEventDuration
+    - dpv_upstream:UntilEventDuration
+    - dpv_owl:UntilEventDuration
     annotations:
       skos_in_scheme: context-classes
 
@@ -2920,11 +2934,11 @@ classes:
     class_uri: dpv:UntilTimeDuration
     description: Duration that has a fixed end date e.g. 2022-12-31
     aliases:
-      - Until Time Duration
+    - Until Time Duration
     in_subset:
-      - common_subset
+    - common_subset
     exact_mappings:
-      - dpv_upstream:UntilTimeDuration
-      - dpv_owl:UntilTimeDuration
+    - dpv_upstream:UntilTimeDuration
+    - dpv_owl:UntilTimeDuration
     annotations:
       skos_in_scheme: context-classes

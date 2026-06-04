@@ -616,6 +616,7 @@ def extract_slots(
 def _split_collision_slots_to_attributes(
     classes: dict[str, dict],
     slots: dict[str, dict],
+    extra_collision_names: frozenset[str] = frozenset(),
 ) -> tuple[dict[str, dict], int]:
     """Move slots whose name collides with common LinkML top-level slots
     into class-bound ``attributes`` of their declared ``domain`` class.
@@ -626,14 +627,22 @@ def _split_collision_slots_to_attributes(
     resolvable ``domain`` (or whose domain class lives in another module
     not present in ``classes``) are left at the top level unchanged.
 
+    ``extra_collision_names`` augments the static ``_COLLISION_PRONE_SLOTS``
+    set with caller-supplied names. The extension generator passes the
+    union of every core-group slot name here so an extension slot that
+    happens to share a local name with a core predicate (different URI,
+    different semantics) is demoted to a class-bound attribute instead of
+    colliding with the core slot at merge time.
+
     Returns the filtered slot dict and the count of slots moved.
     """
     if not slots:
         return slots, 0
+    collision_names = _COLLISION_PRONE_SLOTS | extra_collision_names
     remaining: dict[str, dict] = {}
     moved = 0
     for sname, sentry in slots.items():
-        if sname in _COLLISION_PRONE_SLOTS:
+        if sname in collision_names:
             domain = sentry.get("domain")
             if domain and domain in classes:
                 attr = {k: v for k, v in sentry.items() if k != "domain"}
@@ -863,7 +872,7 @@ def _base_prefixes() -> dict[str, str]:
         "shex": "http://www.w3.org/ns/shex#",
         # SSSOM mapping-overlay target namespaces. These are referenced
         # from `exact_mappings` / `close_mappings` etc. added by
-        # `scripts/apply_sssom_overlay.py`. We pre-declare them in the
+        # `scripts/sssom_mappings.py overlay`. We pre-declare them in the
         # base prefix block because the SSSOM overlay only adds them to
         # the schema whose elements carry the mappings (the relevant
         # semantic-group schema), and `SchemaLoader.merge` does not carry
@@ -871,7 +880,7 @@ def _base_prefixes() -> dict[str, str]:
         # without these, `gen-project` warns "Unrecognized prefix: iso..."
         # for every overlay prefix when consuming the merged YAML.
         "common_domain_model": "https://w3id.org/lmodel/common-domain-model/",
-        "gists": "https://w3id.org/lmodel/gists/",
+        "gist": "https://w3id.org/lmodel/gist/",
         "iso22989": "https://w3id.org/lmodel/iso22989/",
         "iso27001": "https://w3id.org/lmodel/iso27001/",
         "iso29100": "https://w3id.org/lmodel/iso29100/",
@@ -1366,7 +1375,7 @@ def generate(
         # FIRST module's group only, so it appears in exactly one group file.
         # This is essential — otherwise the umbrella ``dpv.yaml`` would import
         # the same class twice with conflicting ``from_schema`` URIs and
-        # ``merge_linkml_schema.py`` would refuse to merge.
+        # ``linkml_import_tools.py merge`` would refuse to merge.
         group_name = _MODULE_TO_GROUP.get(mod_name)
         if group_name is None:
             print(f"   WARNING: module '{mod_name}' is not assigned to any "

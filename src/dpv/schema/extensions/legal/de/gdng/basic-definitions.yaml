@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -71,97 +71,3 @@ subsets:
     description: |-
       Entities from the DPV `legal/de/gdng/modules/basic-definitions`
       submodule.
-
-classes:
-
-  HealthAndHealthcareResearchProject:
-    is_a: ResearchProject
-    class_uri: legal_de_gdng:HealthAndHealthcareResearchProject
-    description: |-
-      Forschungsvorhaben mit dem Ziel, die Gesundheit zu fördern, Krankheiten
-      vorzubeugen, zu heilen und ihre Folgen zu vermindern, die
-      Gesundheitsversorgung und -prävention zu verbessern sowie das
-      Gesundheitswesen weiterzuentwickeln
-    aliases:
-      - Gesundheits- und Versorgungsforschungsvorhaben
-    in_subset:
-      - legal_de_gdng_basic-definitions_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:HealthAndHealthcareResearchProject
-      - dpv_legal_de_gdng_owl:HealthAndHealthcareResearchProject
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 6'
-      upstream_iri: |-
-        https://w3id.org/dpv/legal/de/gdng/owl#HealthAndHealthcareResearchProject
-      dpv_extension_slug: legal/de/gdng
-
-  HealthData:
-    class_uri: legal_de_gdng:HealthData
-    description: |-
-      Gesundheitdaten nach GDNG sind Gesundheitsdaten im Sinne des Artikels 4
-      Nummer 15 der DSGVO [[GDPR]], einschl. Gesundheitsdaten, die zugleich
-      Sozialdaten nach § 67 des Zehnten Buches Sozialgesetzbuch sind
-    aliases:
-      - Gesundheitsdaten
-    in_subset:
-      - legal_de_gdng_basic-definitions_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:HealthData
-      - dpv_legal_de_gdng_owl:HealthData
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 1'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthData
-      dpv_extension_slug: legal/de/gdng
-
-  LegalDeGdngPersonalData:
-    class_uri: legal_de_gdng:PersonalData
-    description: |-
-      Personenbezogene Daten nach GDNG sind personenbezogene Daten im Sinne
-      von Artikel 4 der DSGVO [[GDPR]]
-    aliases:
-      - PersonalData
-      - Personenbezogene Daten
-    in_subset:
-      - legal_de_gdng_basic-definitions_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:PersonalData
-      - dpv_legal_de_gdng_owl:PersonalData
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 2'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#PersonalData
-      dpv_extension_slug: legal/de/gdng
-
-  LegalDeGdngSecondaryUse:
-    class_uri: legal_de_gdng:SecondaryUse
-    description: |-
-      Weiterverarbeitung von Gesundheitsdaten zu anderen Zwecken als
-      denjenigen, für die die Daten ursprünglich erhoben wurden
-    aliases:
-      - SecondaryUse
-      - Sekundärdatennutzung
-    in_subset:
-      - legal_de_gdng_basic-definitions_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:SecondaryUse
-      - dpv_legal_de_gdng_owl:SecondaryUse
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 8'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#SecondaryUse
-      dpv_extension_slug: legal/de/gdng
-
-  ResearchProject:
-    class_uri: legal_de_gdng:ResearchProject
-    description: |-
-      Ein Forschungsvorhaben im Sinne von Artikel 9 Absatz 2 Buchstabe j und
-      Artikel 89 Absatz 1 Satz 1 und Absatz 2 der DSGVO [[GDPR]]
-    aliases:
-      - Forschungsvorhaben
-    in_subset:
-      - legal_de_gdng_basic-definitions_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:ResearchProject
-      - dpv_legal_de_gdng_owl:ResearchProject
-    annotations:
-      dct_source: '[[GDNG]] § 2 point 5'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#ResearchProject
-      dpv_extension_slug: legal/de/gdng

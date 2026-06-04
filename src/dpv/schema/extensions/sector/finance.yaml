@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -90,6 +90,7 @@ classes:
     aliases:
       - Anti Money Laundering Compliance
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:AntiMoneyLaunderingCompliance
@@ -109,6 +110,7 @@ classes:
     aliases:
       - Anti-Money Laundering Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:AntiMoneyLaunderingManagement
@@ -128,6 +130,7 @@ classes:
     aliases:
       - Budget Planning Assistance
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:BudgetPlanningAssistance
@@ -148,6 +151,7 @@ classes:
     aliases:
       - Credit Checking
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:CreditChecking
@@ -167,6 +171,7 @@ classes:
     aliases:
       - Credit History Evaluation
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:CreditHistoryEvaluation
@@ -186,6 +191,7 @@ classes:
     aliases:
       - Credit Limit Determination
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:CreditLimitDetermination
@@ -205,6 +211,7 @@ classes:
     aliases:
       - Credit Score Evaluation
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:CreditScoreEvaluation
@@ -225,6 +232,7 @@ classes:
     aliases:
       - Customer Due Diligence
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:CustomerDueDiligence
@@ -244,6 +252,7 @@ classes:
     aliases:
       - Debt Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:DebtManagement
@@ -263,6 +272,7 @@ classes:
     aliases:
       - Expense Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:ExpenseManagement
@@ -278,6 +288,7 @@ classes:
     aliases:
       - Financial Service Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:FinancialServiceManagement
@@ -298,31 +309,13 @@ classes:
     aliases:
       - Fraud Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:FraudManagement
       - dpv_sector_finance_owl:FraudManagement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/finance/owl#FraudManagement
-      dpv_extension_slug: sector/finance
-
-  IdentityFraudManagement:
-    is_a: FraudManagement
-    mixins:
-      - Purpose
-    class_uri: sector_finance:IdentityFraudManagement
-    description: |-
-      Purposes associated with discovery, handling, prediction, and assessment
-      of identity frauds in relation to financial services
-    aliases:
-      - Identity Fraud Management
-    in_subset:
-      - sector_finance_subset
-    exact_mappings:
-      - dpv_sector_finance:IdentityFraudManagement
-      - dpv_sector_finance_owl:IdentityFraudManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/finance/owl#IdentityFraudManagement
       dpv_extension_slug: sector/finance
 
   InstabilityRiskAssessment:
@@ -336,6 +329,7 @@ classes:
     aliases:
       - Instability Risk Assessment
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InstabilityRiskAssessment
@@ -353,6 +347,7 @@ classes:
     aliases:
       - Insurance Claim Dispute Resolution
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceClaimDisputeResolution
@@ -372,6 +367,7 @@ classes:
     aliases:
       - Insurance Claim Eligibility Assessment
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceClaimEligibilityAssessment
@@ -379,26 +375,6 @@ classes:
     annotations:
       upstream_iri: |-
         https://w3id.org/dpv/sector/finance/owl#InsuranceClaimEligibilityAssessment
-      dpv_extension_slug: sector/finance
-
-  InsuranceClaimFraudManagement:
-    is_a: InsuranceClaimsManagement
-    mixins:
-      - Purpose
-      - InsuranceFraudManagement
-    class_uri: sector_finance:InsuranceClaimFraudManagement
-    description: |-
-      Purposes associated with fraud prevention and detection related to
-      insurance claims
-    aliases:
-      - Insurance Claim Fraud Management
-    in_subset:
-      - sector_finance_subset
-    exact_mappings:
-      - dpv_sector_finance:InsuranceClaimFraudManagement
-      - dpv_sector_finance_owl:InsuranceClaimFraudManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/finance/owl#InsuranceClaimFraudManagement
       dpv_extension_slug: sector/finance
 
   InsuranceClaimPayoutAssessment:
@@ -412,6 +388,7 @@ classes:
     aliases:
       - Insurance Claim Payout Assessment
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceClaimPayoutAssessment
@@ -421,7 +398,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   InsuranceClaimsManagement:
-    is_a: InsuranceManagement
+    is_a: SectorFinanceInsuranceManagement
     mixins:
       - Purpose
     class_uri: sector_finance:InsuranceClaimsManagement
@@ -429,6 +406,7 @@ classes:
     aliases:
       - Insurance Claims Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceClaimsManagement
@@ -438,7 +416,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   InsuranceCoverageAssessment:
-    is_a: InsuranceManagement
+    is_a: SectorFinanceInsuranceManagement
     mixins:
       - Purpose
     class_uri: sector_finance:InsuranceCoverageAssessment
@@ -448,6 +426,7 @@ classes:
     aliases:
       - Insurance Coverage Assessment
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceCoverageAssessment
@@ -457,7 +436,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   InsuranceEligibilityAssessment:
-    is_a: InsuranceManagement
+    is_a: SectorFinanceInsuranceManagement
     mixins:
       - Purpose
     class_uri: sector_finance:InsuranceEligibilityAssessment
@@ -467,6 +446,7 @@ classes:
     aliases:
       - Insurance Eligibility Assessment
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceEligibilityAssessment
@@ -479,7 +459,7 @@ classes:
     is_a: FraudPreventionAndDetection
     mixins:
       - Purpose
-      - InsuranceManagement
+      - SectorFinanceInsuranceManagement
     class_uri: sector_finance:InsuranceFraudManagement
     description: |-
       Purposes associated with fraud prevention and detection related to
@@ -487,6 +467,7 @@ classes:
     aliases:
       - Insurance Fraud Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceFraudManagement
@@ -506,6 +487,7 @@ classes:
     aliases:
       - Insurance Identity Fraud Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceIdentityFraudManagement
@@ -515,26 +497,11 @@ classes:
         https://w3id.org/dpv/sector/finance/owl#InsuranceIdentityFraudManagement
       dpv_extension_slug: sector/finance
 
-  InsuranceManagement:
-    is_a: Purpose
-    class_uri: sector_finance:InsuranceManagement
-    description: Purposes associated with management of insurance
-    aliases:
-      - Insurance Management
-    in_subset:
-      - sector_finance_subset
-    exact_mappings:
-      - dpv_sector_finance:InsuranceManagement
-      - dpv_sector_finance_owl:InsuranceManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/finance/owl#InsuranceManagement
-      dpv_extension_slug: sector/finance
-
   InsurancePersonalisedPricingManagement:
     is_a: ServicePersonalisation
     mixins:
       - Purpose
-      - InsuranceManagement
+      - SectorFinanceInsuranceManagement
     class_uri: sector_finance:InsurancePersonalisedPricingManagement
     description: |-
       Purposes associated with the use of personalisation in determination,
@@ -543,6 +510,7 @@ classes:
     aliases:
       - Insurance Personalised Pricing Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsurancePersonalisedPricingManagement
@@ -553,7 +521,7 @@ classes:
       dpv_extension_slug: sector/finance
 
   InsurancePricingManagement:
-    is_a: InsuranceManagement
+    is_a: SectorFinanceInsuranceManagement
     mixins:
       - Purpose
     class_uri: sector_finance:InsurancePricingManagement
@@ -563,6 +531,7 @@ classes:
     aliases:
       - Insurance Pricing Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsurancePricingManagement
@@ -575,7 +544,7 @@ classes:
     is_a: FraudPreventionAndDetection
     mixins:
       - Purpose
-      - InsuranceManagement
+      - SectorFinanceInsuranceManagement
     class_uri: sector_finance:InsuranceRiskAssessment
     description: |-
       Purposes associated with conducting risk assessments in the context of
@@ -583,6 +552,7 @@ classes:
     aliases:
       - Insurance Risk Assessment
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InsuranceRiskAssessment
@@ -602,6 +572,7 @@ classes:
     aliases:
       - Investment Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:InvestmentManagement
@@ -621,6 +592,7 @@ classes:
     aliases:
       - Loan Service Provision
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:LoanServiceProvision
@@ -638,6 +610,7 @@ classes:
     aliases:
       - Maintain Credit Checking Database
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:MaintainCreditCheckingDatabase
@@ -655,6 +628,7 @@ classes:
     aliases:
       - Maintain Credit Rating Database
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:MaintainCreditRatingDatabase
@@ -674,6 +648,7 @@ classes:
     aliases:
       - Payment Processing
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:PaymentProcessing
@@ -692,6 +667,7 @@ classes:
     aliases:
       - Personalised Service Provision
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:PersonalisedServiceProvision
@@ -711,6 +687,7 @@ classes:
     aliases:
       - Phishing Attack Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:PhishingAttackManagement
@@ -730,6 +707,7 @@ classes:
     aliases:
       - Product Recommendation
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:ProductRecommendation
@@ -751,6 +729,7 @@ classes:
     aliases:
       - Regulatory Compliance
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:RegulatoryCompliance
@@ -771,12 +750,95 @@ classes:
       - AccountManagement
       - Account Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:AccountManagement
       - dpv_sector_finance_owl:AccountManagement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/finance/owl#AccountManagement
+      dpv_extension_slug: sector/finance
+
+  SectorFinanceIdentityFraudManagement:
+    is_a: FraudManagement
+    mixins:
+      - Purpose
+    class_uri: sector_finance:IdentityFraudManagement
+    description: |-
+      Purposes associated with discovery, handling, prediction, and assessment
+      of identity frauds in relation to financial services
+    aliases:
+      - IdentityFraudManagement
+      - Identity Fraud Management
+    in_subset:
+      - sector_finance_purposes_subset
+      - sector_finance_subset
+    exact_mappings:
+      - dpv_sector_finance:IdentityFraudManagement
+      - dpv_sector_finance_owl:IdentityFraudManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/finance/owl#IdentityFraudManagement
+      dpv_extension_slug: sector/finance
+
+  SectorFinanceInsuranceClaimFraudManagement:
+    is_a: InsuranceClaimsManagement
+    mixins:
+      - Purpose
+      - InsuranceFraudManagement
+    class_uri: sector_finance:InsuranceClaimFraudManagement
+    description: |-
+      Purposes associated with fraud prevention and detection related to
+      insurance claims
+    aliases:
+      - InsuranceClaimFraudManagement
+      - Insurance Claim Fraud Management
+    in_subset:
+      - sector_finance_purposes_subset
+      - sector_finance_subset
+    exact_mappings:
+      - dpv_sector_finance:InsuranceClaimFraudManagement
+      - dpv_sector_finance_owl:InsuranceClaimFraudManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/finance/owl#InsuranceClaimFraudManagement
+      dpv_extension_slug: sector/finance
+
+  SectorFinanceInsuranceManagement:
+    is_a: Purpose
+    class_uri: sector_finance:InsuranceManagement
+    description: Purposes associated with management of insurance
+    aliases:
+      - InsuranceManagement
+      - Insurance Management
+    in_subset:
+      - sector_finance_purposes_subset
+      - sector_finance_subset
+    exact_mappings:
+      - dpv_sector_finance:InsuranceManagement
+      - dpv_sector_finance_owl:InsuranceManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/finance/owl#InsuranceManagement
+      dpv_extension_slug: sector/finance
+
+  SectorFinanceServiceImprovement:
+    is_a: ServiceOptimisation
+    mixins:
+      - Purpose
+      - FinancialServiceManagement
+    class_uri: sector_finance:ServiceImprovement
+    description: |-
+      Purposes associated with identifying, planning, and carrying out
+      improvements to financial services
+    aliases:
+      - ServiceImprovement
+      - Service Improvement
+    in_subset:
+      - sector_finance_purposes_subset
+      - sector_finance_subset
+    exact_mappings:
+      - dpv_sector_finance:ServiceImprovement
+      - dpv_sector_finance_owl:ServiceImprovement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/finance/owl#ServiceImprovement
       dpv_extension_slug: sector/finance
 
   SectorFinanceServiceProvision:
@@ -790,32 +852,13 @@ classes:
       - ServiceProvision
       - Service Provision
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:ServiceProvision
       - dpv_sector_finance_owl:ServiceProvision
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/finance/owl#ServiceProvision
-      dpv_extension_slug: sector/finance
-
-  ServiceImprovement:
-    is_a: ServiceOptimisation
-    mixins:
-      - Purpose
-      - FinancialServiceManagement
-    class_uri: sector_finance:ServiceImprovement
-    description: |-
-      Purposes associated with identifying, planning, and carrying out
-      improvements to financial services
-    aliases:
-      - Service Improvement
-    in_subset:
-      - sector_finance_subset
-    exact_mappings:
-      - dpv_sector_finance:ServiceImprovement
-      - dpv_sector_finance_owl:ServiceImprovement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/finance/owl#ServiceImprovement
       dpv_extension_slug: sector/finance
 
   TaxReportingCompliance:
@@ -830,6 +873,7 @@ classes:
     aliases:
       - Tax Reporting Compliance
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:TaxReportingCompliance
@@ -849,6 +893,7 @@ classes:
     aliases:
       - Transaction Fraud Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:TransactionFraudManagement
@@ -869,6 +914,7 @@ classes:
     aliases:
       - Transaction Reporting Compliance
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:TransactionReportingCompliance
@@ -888,6 +934,7 @@ classes:
     aliases:
       - Wealth Management
     in_subset:
+      - sector_finance_purposes_subset
       - sector_finance_subset
     exact_mappings:
       - dpv_sector_finance:WealthManagement

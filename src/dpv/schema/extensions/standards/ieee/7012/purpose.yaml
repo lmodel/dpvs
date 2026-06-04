@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -70,60 +70,3 @@ subsets:
 
   standards_ieee_7012_purpose_subset:
     description: Entities from the DPV `standards/ieee/7012/modules/purpose` submodule.
-
-classes:
-
-  ServiceAnalytics:
-    is_a: ServiceUsageAnalytics
-    mixins:
-      - Purpose
-    class_uri: standards_ieee_7012:ServiceAnalytics
-    description: |-
-      Purposes associated with analysing the usage, delivery, and provisioning
-      metrics of a service
-    aliases:
-      - Service Analytics
-    in_subset:
-      - standards_ieee_7012_purpose_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:ServiceAnalytics
-      - dpv_standards_ieee_7012_owl:ServiceAnalytics
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ServiceAnalytics
-      dpv_extension_slug: standards/ieee/7012
-
-  ServiceDelivery:
-    is_a: RequestedServiceProvision
-    mixins:
-      - Purpose
-    class_uri: standards_ieee_7012:ServiceDelivery
-    description: Purposes associated with delivery of a service
-    aliases:
-      - Service Delivery
-    in_subset:
-      - standards_ieee_7012_purpose_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:ServiceDelivery
-      - dpv_standards_ieee_7012_owl:ServiceDelivery
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ServiceDelivery
-      dpv_extension_slug: standards/ieee/7012
-
-  ServiceImprovement:
-    is_a: ServiceOptimisation
-    mixins:
-      - Purpose
-    class_uri: standards_ieee_7012:ServiceImprovement
-    description: |-
-      Purposes associated with identifying and implementing improvements to a
-      service
-    aliases:
-      - Service Improvement
-    in_subset:
-      - standards_ieee_7012_purpose_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:ServiceImprovement
-      - dpv_standards_ieee_7012_owl:ServiceImprovement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#ServiceImprovement
-      dpv_extension_slug: standards/ieee/7012

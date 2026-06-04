@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -71,102 +71,3 @@ subsets:
 
   ai_measures_subset:
     description: Entities from the DPV `ai/modules/measures` submodule.
-
-classes:
-
-  Benchmarking:
-    is_a: DataQualityAssessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: ai:Benchmarking
-    description: |-
-      Measure where performance and outputs are compared to best practices,
-      gold standards, or other forms of desired quality
-    aliases:
-      - Benchmarking
-    in_subset:
-      - ai_measures_subset
-    exact_mappings:
-      - dpv_ai:Benchmarking
-      - dpv_ai_owl:Benchmarking
-    close_mappings:
-      - iso42001:InternalAudit
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#Benchmarking
-      dpv_extension_slug: ai
-
-  BiasAssessment:
-    is_a: DataQualityAssessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: ai:BiasAssessment
-    description: Examination of a data set, model, or AI system for bias
-    aliases:
-      - Bias Assessment
-    in_subset:
-      - ai_measures_subset
-    exact_mappings:
-      - dpv_ai:BiasAssessment
-      - dpv_ai_owl:BiasAssessment
-    close_mappings:
-      - iso42001:AISystemImpactAssessment
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#BiasAssessment
-      dpv_extension_slug: ai
-
-  BiasDetection:
-    is_a: BiasAssessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: ai:BiasDetection
-    description: Indicates measures to detect bias
-    aliases:
-      - Bias Detection
-    in_subset:
-      - ai_measures_subset
-    exact_mappings:
-      - dpv_ai:BiasDetection
-      - dpv_ai_owl:BiasDetection
-    close_mappings:
-      - iso42001:AISystemImpactAssessment
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#BiasDetection
-      dpv_extension_slug: ai
-
-  BiasMitigation:
-    is_a: BiasAssessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: ai:BiasMitigation
-    description: Indicates measures to mitigate bias
-    aliases:
-      - Bias Mitigation
-    in_subset:
-      - ai_measures_subset
-    exact_mappings:
-      - dpv_ai:BiasMitigation
-      - dpv_ai_owl:BiasMitigation
-    close_mappings:
-      - iso42001:AIRiskTreatmentPlan
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#BiasMitigation
-      dpv_extension_slug: ai
-
-  BiasPrevention:
-    is_a: BiasAssessment
-    mixins:
-      - OrganisationalMeasure
-    class_uri: ai:BiasPrevention
-    description: Indicates measures to prevent bias
-    aliases:
-      - Bias Prevention
-    in_subset:
-      - ai_measures_subset
-    exact_mappings:
-      - dpv_ai:BiasPrevention
-      - dpv_ai_owl:BiasPrevention
-    close_mappings:
-      - iso42001:AIRiskTreatmentPlan
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#BiasPrevention
-      dpv_extension_slug: ai

@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -67,7 +67,6 @@ id_prefixes:
 imports:
   - linkml:types
   - dpv:schema/dpv_legal_basis
-  - dpv:schema/dpv_entities
   - dpv:schema/extensions/legal/ee
   - dpv:schema/extensions/legal/eu/gdpr
 
@@ -75,22 +74,3 @@ subsets:
 
   legal_ee_ee_subset:
     description: Entities from the DPV `legal/ee/modules/ee` submodule.
-
-classes:
-
-  DPAEE:
-    is_a: DataProtectionAuthority
-    mixins:
-      - Law
-    class_uri: legal_ee:DPA-EE
-    aliases:
-      - DPA-EE
-      - Data Protection Inspectorate (AKI)
-    in_subset:
-      - legal_ee_ee_subset
-    exact_mappings:
-      - dpv_legal_ee:DPA-EE
-      - dpv_legal_ee_owl:DPA-EE
-    annotations:
-      upstream_iri: https://w3id.org/dpv/legal/ee/owl#DPA-EE
-      dpv_extension_slug: legal/ee

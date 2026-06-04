@@ -11,8 +11,8 @@ description: |-
   specialises (instead of the full umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv/tech
-  - https://w3c.github.io/dpv/2.3/tech/
+- https://w3id.org/dpv/tech
+- https://w3c.github.io/dpv/2.3/tech/
 source: https://w3id.org/dpv/tech/owl#
 version: '2.3'
 annotations:
@@ -45,7 +45,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -61,18 +61,18 @@ prefixes:
 default_prefix: tech
 default_range: string
 id_prefixes:
-  - tech
-  - dpv_tech
-  - dpv_tech_owl
+- tech
+- dpv_tech
+- dpv_tech_owl
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv_common
-  - dpv:schema/dpv_legal_basis
-  - dpv:schema/dpv_entities
-  - dpv:schema/dpv_personal_data
-  - dpv:schema/dpv_processing
-  - dpv:schema/dpv_rights
+- linkml:types
+- dpv:schema/dpv_common
+- dpv:schema/dpv_legal_basis
+- dpv:schema/dpv_entities
+- dpv:schema/dpv_personal_data
+- dpv:schema/dpv_processing
+- dpv:schema/dpv_rights
 
 subsets:
 
@@ -109,13 +109,14 @@ slots:
     definition_uri: tech:hasActor
     description: Indicates an actor associated with technology
     aliases:
-      - has actor
+    - has actor
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasActor
-      - dpv_tech_owl:hasActor
+    - dpv_tech:hasActor
+    - dpv_tech_owl:hasActor
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasActor
       dpv_extension_slug: tech
@@ -124,13 +125,14 @@ slots:
     definition_uri: tech:hasAlgorithm
     description: Indicates the technology has or uses the associated algorithm
     aliases:
-      - has algorithm
+    - has algorithm
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasAlgorithm
-      - dpv_tech_owl:hasAlgorithm
+    - dpv_tech:hasAlgorithm
+    - dpv_tech_owl:hasAlgorithm
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasAlgorithm
       dpv_extension_slug: tech
@@ -139,13 +141,14 @@ slots:
     definition_uri: tech:hasAPI
     description: Indicates the technology has or uses the associated api
     aliases:
-      - has api
+    - has api
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasAPI
-      - dpv_tech_owl:hasAPI
+    - dpv_tech:hasAPI
+    - dpv_tech_owl:hasAPI
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasAPI
       dpv_extension_slug: tech
@@ -154,13 +157,14 @@ slots:
     definition_uri: tech:hasApplication
     description: Indicates the technology has or uses the associated application
     aliases:
-      - has application
+    - has application
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasApplication
-      - dpv_tech_owl:hasApplication
+    - dpv_tech:hasApplication
+    - dpv_tech_owl:hasApplication
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasApplication
       dpv_extension_slug: tech
@@ -170,43 +174,31 @@ slots:
     definition_uri: tech:hasAuditor
     description: Indicates technology auditor
     aliases:
-      - has auditor
+    - has auditor
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasAuditor
-      - dpv_tech_owl:hasAuditor
+    - dpv_tech:hasAuditor
+    - dpv_tech_owl:hasAuditor
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasAuditor
       dpv_extension_slug: tech
 
-  has_capability:
-    definition_uri: tech:hasCapability
-    description: Indicates the capability of the technology
-    aliases:
-      - has capability
-    multivalued: true
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:hasCapability
-      - dpv_tech_owl:hasCapability
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#hasCapability
-      dpv_extension_slug: tech
-
   has_communication_mechanism:
     definition_uri: tech:hasCommunicationMechanism
-    description: Indicates communication mechanisms used or provided by technology
+    description: Indicates communication mechanisms used or provided by 
+      technology
     aliases:
-      - has communication mechanism
+    - has communication mechanism
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasCommunicationMechanism
-      - dpv_tech_owl:hasCommunicationMechanism
+    - dpv_tech:hasCommunicationMechanism
+    - dpv_tech_owl:hasCommunicationMechanism
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasCommunicationMechanism
       dpv_extension_slug: tech
@@ -215,13 +207,14 @@ slots:
     definition_uri: tech:hasComponent
     description: Indicates the system has or uses the associated component
     aliases:
-      - has component
+    - has component
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasComponent
-      - dpv_tech_owl:hasComponent
+    - dpv_tech:hasComponent
+    - dpv_tech_owl:hasComponent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasComponent
       dpv_extension_slug: tech
@@ -231,13 +224,14 @@ slots:
     definition_uri: tech:hasCustomer
     description: Indicates technology customer
     aliases:
-      - has customer
+    - has customer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasCustomer
-      - dpv_tech_owl:hasCustomer
+    - dpv_tech:hasCustomer
+    - dpv_tech_owl:hasCustomer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasCustomer
       dpv_extension_slug: tech
@@ -247,13 +241,14 @@ slots:
     definition_uri: tech:hasDeployer
     description: Indicates technology deployer
     aliases:
-      - has deployer
+    - has deployer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasDeployer
-      - dpv_tech_owl:hasDeployer
+    - dpv_tech:hasDeployer
+    - dpv_tech_owl:hasDeployer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasDeployer
       dpv_extension_slug: tech
@@ -262,13 +257,14 @@ slots:
     definition_uri: tech:hasDeploymentLocation
     description: Specifies the location of technology deployment and use
     aliases:
-      - has deployment location
+    - has deployment location
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasDeploymentLocation
-      - dpv_tech_owl:hasDeploymentLocation
+    - dpv_tech:hasDeploymentLocation
+    - dpv_tech_owl:hasDeploymentLocation
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasDeploymentLocation
       dpv_extension_slug: tech
@@ -278,13 +274,14 @@ slots:
     definition_uri: tech:hasDesigner
     description: Indicates technology designer
     aliases:
-      - has designer
+    - has designer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasDesigner
-      - dpv_tech_owl:hasDesigner
+    - dpv_tech:hasDesigner
+    - dpv_tech_owl:hasDesigner
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasDesigner
       dpv_extension_slug: tech
@@ -294,13 +291,14 @@ slots:
     definition_uri: tech:hasDeveloper
     description: Indicates technology developer
     aliases:
-      - has developer
+    - has developer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasDeveloper
-      - dpv_tech_owl:hasDeveloper
+    - dpv_tech:hasDeveloper
+    - dpv_tech_owl:hasDeveloper
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasDeveloper
       dpv_extension_slug: tech
@@ -310,13 +308,14 @@ slots:
     definition_uri: tech:hasDevice
     description: Indicates the technology has or uses the associated device
     aliases:
-      - has device
+    - has device
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasDevice
-      - dpv_tech_owl:hasDevice
+    - dpv_tech:hasDevice
+    - dpv_tech_owl:hasDevice
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasDevice
       dpv_extension_slug: tech
@@ -325,13 +324,14 @@ slots:
     definition_uri: tech:hasDocumentation
     description: Indicates documentation associated with technology
     aliases:
-      - has documentation
+    - has documentation
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasDocumentation
-      - dpv_tech_owl:hasDocumentation
+    - dpv_tech:hasDocumentation
+    - dpv_tech_owl:hasDocumentation
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasDocumentation
       dpv_extension_slug: tech
@@ -341,13 +341,14 @@ slots:
     definition_uri: tech:hasEvaluator
     description: Indicates technology evaluator
     aliases:
-      - has evaluator
+    - has evaluator
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasEvaluator
-      - dpv_tech_owl:hasEvaluator
+    - dpv_tech:hasEvaluator
+    - dpv_tech_owl:hasEvaluator
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasEvaluator
       dpv_extension_slug: tech
@@ -356,13 +357,14 @@ slots:
     definition_uri: tech:hasFunction
     description: Indicates the function of the technology
     aliases:
-      - has function
+    - has function
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasFunction
-      - dpv_tech_owl:hasFunction
+    - dpv_tech:hasFunction
+    - dpv_tech_owl:hasFunction
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasFunction
       dpv_extension_slug: tech
@@ -371,28 +373,31 @@ slots:
     definition_uri: tech:hasHardware
     description: Indicates the technology has or uses the associated hardware
     aliases:
-      - has hardware
+    - has hardware
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasHardware
-      - dpv_tech_owl:hasHardware
+    - dpv_tech:hasHardware
+    - dpv_tech_owl:hasHardware
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasHardware
       dpv_extension_slug: tech
 
   has_infrastructure:
     definition_uri: tech:hasInfrastructure
-    description: Indicates the technology has or uses the associated infrastructure
+    description: Indicates the technology has or uses the associated 
+      infrastructure
     aliases:
-      - has infrastructure
+    - has infrastructure
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasInfrastructure
-      - dpv_tech_owl:hasInfrastructure
+    - dpv_tech:hasInfrastructure
+    - dpv_tech_owl:hasInfrastructure
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasInfrastructure
       dpv_extension_slug: tech
@@ -401,13 +406,14 @@ slots:
     definition_uri: tech:hasInput
     description: Indicates the input associated with the technology
     aliases:
-      - has input
+    - has input
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasInput
-      - dpv_tech_owl:hasInput
+    - dpv_tech:hasInput
+    - dpv_tech_owl:hasInput
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasInput
       dpv_extension_slug: tech
@@ -417,13 +423,14 @@ slots:
     definition_uri: tech:hasInputAction
     description: Indicates the input action associated with the technology
     aliases:
-      - has input action
+    - has input action
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasInputAction
-      - dpv_tech_owl:hasInputAction
+    - dpv_tech:hasInputAction
+    - dpv_tech_owl:hasInputAction
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasInputAction
       dpv_extension_slug: tech
@@ -433,13 +440,14 @@ slots:
     definition_uri: tech:hasInputData
     description: Indicates the input data associated with the technology
     aliases:
-      - has input data
+    - has input data
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasInputData
-      - dpv_tech_owl:hasInputData
+    - dpv_tech:hasInputData
+    - dpv_tech_owl:hasInputData
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasInputData
       dpv_extension_slug: tech
@@ -449,13 +457,14 @@ slots:
     definition_uri: tech:hasInstaller
     description: Indicates technology installer
     aliases:
-      - has installer
+    - has installer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasInstaller
-      - dpv_tech_owl:hasInstaller
+    - dpv_tech:hasInstaller
+    - dpv_tech_owl:hasInstaller
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasInstaller
       dpv_extension_slug: tech
@@ -464,13 +473,14 @@ slots:
     definition_uri: tech:hasIntendedUse
     description: Indicates the intended use of technology
     aliases:
-      - has intended use
+    - has intended use
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasIntendedUse
-      - dpv_tech_owl:hasIntendedUse
+    - dpv_tech:hasIntendedUse
+    - dpv_tech_owl:hasIntendedUse
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasIntendedUse
       dpv_extension_slug: tech
@@ -480,13 +490,14 @@ slots:
     definition_uri: tech:hasLicense
     description: Indicates the license associated with the technology
     aliases:
-      - has license
+    - has license
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasLicense
-      - dpv_tech_owl:hasLicense
+    - dpv_tech:hasLicense
+    - dpv_tech_owl:hasLicense
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasLicense
       dpv_extension_slug: tech
@@ -495,13 +506,14 @@ slots:
     definition_uri: tech:hasLifecycleStage
     description: Indicates the lifecycle stage associated with the technology
     aliases:
-      - has lifecycle stage
+    - has lifecycle stage
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasLifecycleStage
-      - dpv_tech_owl:hasLifecycleStage
+    - dpv_tech:hasLifecycleStage
+    - dpv_tech_owl:hasLifecycleStage
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasLifecycleStage
       dpv_extension_slug: tech
@@ -511,13 +523,14 @@ slots:
     definition_uri: tech:hasMaintainer
     description: Indicates technology maintainer
     aliases:
-      - has maintainer
+    - has maintainer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasMaintainer
-      - dpv_tech_owl:hasMaintainer
+    - dpv_tech:hasMaintainer
+    - dpv_tech_owl:hasMaintainer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasMaintainer
       dpv_extension_slug: tech
@@ -527,13 +540,14 @@ slots:
     definition_uri: tech:hasManufacturer
     description: Indicates technology manufacturer
     aliases:
-      - has manufacturer
+    - has manufacturer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasManufacturer
-      - dpv_tech_owl:hasManufacturer
+    - dpv_tech:hasManufacturer
+    - dpv_tech_owl:hasManufacturer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasManufacturer
       dpv_extension_slug: tech
@@ -543,43 +557,30 @@ slots:
     definition_uri: tech:hasMarketAvailabilityStatus
     description: Indicates whether the technology is available on the market
     aliases:
-      - has market availability status
+    - has market availability status
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasMarketAvailabilityStatus
-      - dpv_tech_owl:hasMarketAvailabilityStatus
+    - dpv_tech:hasMarketAvailabilityStatus
+    - dpv_tech_owl:hasMarketAvailabilityStatus
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasMarketAvailabilityStatus
-      dpv_extension_slug: tech
-
-  has_model:
-    definition_uri: tech:hasModel
-    description: Indicates the technology has or uses the associated model
-    aliases:
-      - has model
-    multivalued: true
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:hasModel
-      - dpv_tech_owl:hasModel
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#hasModel
       dpv_extension_slug: tech
 
   has_operating_environment:
     definition_uri: tech:hasOperatingEnvironment
     description: Indicates the operating environment for the technology
     aliases:
-      - has operating environment
+    - has operating environment
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasOperatingEnvironment
-      - dpv_tech_owl:hasOperatingEnvironment
+    - dpv_tech:hasOperatingEnvironment
+    - dpv_tech_owl:hasOperatingEnvironment
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasOperatingEnvironment
       dpv_extension_slug: tech
@@ -588,13 +589,14 @@ slots:
     definition_uri: tech:hasOperatingFactor
     description: Indicates the operating factor for the technology
     aliases:
-      - has operating factor
+    - has operating factor
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasOperatingFactor
-      - dpv_tech_owl:hasOperatingFactor
+    - dpv_tech:hasOperatingFactor
+    - dpv_tech_owl:hasOperatingFactor
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasOperatingFactor
       dpv_extension_slug: tech
@@ -603,13 +605,14 @@ slots:
     definition_uri: tech:hasOutput
     description: Indicates the output associated with the technology
     aliases:
-      - has output
+    - has output
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasOutput
-      - dpv_tech_owl:hasOutput
+    - dpv_tech:hasOutput
+    - dpv_tech_owl:hasOutput
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasOutput
       dpv_extension_slug: tech
@@ -619,13 +622,14 @@ slots:
     definition_uri: tech:hasOutputAction
     description: Indicates the output action associated with the technology
     aliases:
-      - has output action
+    - has output action
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasOutputAction
-      - dpv_tech_owl:hasOutputAction
+    - dpv_tech:hasOutputAction
+    - dpv_tech_owl:hasOutputAction
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasOutputAction
       dpv_extension_slug: tech
@@ -635,13 +639,14 @@ slots:
     definition_uri: tech:hasOutputData
     description: Indicates the output data associated with the technology
     aliases:
-      - has output data
+    - has output data
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasOutputData
-      - dpv_tech_owl:hasOutputData
+    - dpv_tech:hasOutputData
+    - dpv_tech_owl:hasOutputData
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasOutputData
       dpv_extension_slug: tech
@@ -651,13 +656,14 @@ slots:
     definition_uri: tech:hasOwner
     description: Indicates technology owner
     aliases:
-      - has owner
+    - has owner
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasOwner
-      - dpv_tech_owl:hasOwner
+    - dpv_tech:hasOwner
+    - dpv_tech_owl:hasOwner
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasOwner
       dpv_extension_slug: tech
@@ -667,13 +673,14 @@ slots:
     definition_uri: tech:hasPartner
     description: Indicates technology partner
     aliases:
-      - has partner
+    - has partner
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasPartner
-      - dpv_tech_owl:hasPartner
+    - dpv_tech:hasPartner
+    - dpv_tech_owl:hasPartner
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasPartner
       dpv_extension_slug: tech
@@ -682,13 +689,14 @@ slots:
     definition_uri: tech:hasPlatform
     description: Indicates the technology has or uses the associated platform
     aliases:
-      - has platform
+    - has platform
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasPlatform
-      - dpv_tech_owl:hasPlatform
+    - dpv_tech:hasPlatform
+    - dpv_tech_owl:hasPlatform
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasPlatform
       dpv_extension_slug: tech
@@ -698,13 +706,14 @@ slots:
     definition_uri: tech:hasProducer
     description: Indicates technology producer
     aliases:
-      - has producer
+    - has producer
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasProducer
-      - dpv_tech_owl:hasProducer
+    - dpv_tech:hasProducer
+    - dpv_tech_owl:hasProducer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasProducer
       dpv_extension_slug: tech
@@ -714,13 +723,14 @@ slots:
     definition_uri: tech:hasProvider
     description: Indicates technology provider
     aliases:
-      - has provider
+    - has provider
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasProvider
-      - dpv_tech_owl:hasProvider
+    - dpv_tech:hasProvider
+    - dpv_tech_owl:hasProvider
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasProvider
       dpv_extension_slug: tech
@@ -729,13 +739,14 @@ slots:
     definition_uri: tech:hasProvisionMethod
     description: Specifies the provision or usage method of technology
     aliases:
-      - has provision method
+    - has provision method
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasProvisionMethod
-      - dpv_tech_owl:hasProvisionMethod
+    - dpv_tech:hasProvisionMethod
+    - dpv_tech_owl:hasProvisionMethod
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasProvisionMethod
       dpv_extension_slug: tech
@@ -745,13 +756,14 @@ slots:
     definition_uri: tech:hasProvisionStatus
     description: Indicates whether the technology has been provided
     aliases:
-      - has provision status
+    - has provision status
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasProvisionStatus
-      - dpv_tech_owl:hasProvisionStatus
+    - dpv_tech:hasProvisionStatus
+    - dpv_tech_owl:hasProvisionStatus
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasProvisionStatus
       dpv_extension_slug: tech
@@ -761,43 +773,30 @@ slots:
     definition_uri: tech:hasPurchaser
     description: Indicates technology purchaser
     aliases:
-      - has purchaser
+    - has purchaser
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasPurchaser
-      - dpv_tech_owl:hasPurchaser
+    - dpv_tech:hasPurchaser
+    - dpv_tech_owl:hasPurchaser
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasPurchaser
-      dpv_extension_slug: tech
-
-  has_service:
-    definition_uri: tech:hasService
-    description: Indicates the technology has or uses the associated service
-    aliases:
-      - has service
-    multivalued: true
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:hasService
-      - dpv_tech_owl:hasService
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#hasService
       dpv_extension_slug: tech
 
   has_software:
     definition_uri: tech:hasSoftware
     description: Indicates the technology has or uses the associated software
     aliases:
-      - has software
+    - has software
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasSoftware
-      - dpv_tech_owl:hasSoftware
+    - dpv_tech:hasSoftware
+    - dpv_tech_owl:hasSoftware
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasSoftware
       dpv_extension_slug: tech
@@ -807,13 +806,14 @@ slots:
     definition_uri: tech:hasSubject
     description: Indicates technology subject
     aliases:
-      - has subject
+    - has subject
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasSubject
-      - dpv_tech_owl:hasSubject
+    - dpv_tech:hasSubject
+    - dpv_tech_owl:hasSubject
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasSubject
       dpv_extension_slug: tech
@@ -823,13 +823,14 @@ slots:
     definition_uri: tech:hasSupplier
     description: Indicates technology supplier
     aliases:
-      - has supplier
+    - has supplier
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasSupplier
-      - dpv_tech_owl:hasSupplier
+    - dpv_tech:hasSupplier
+    - dpv_tech_owl:hasSupplier
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasSupplier
       dpv_extension_slug: tech
@@ -838,13 +839,14 @@ slots:
     definition_uri: tech:hasSystem
     description: Indicates the technology has or uses the associated system
     aliases:
-      - has system
+    - has system
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasSystem
-      - dpv_tech_owl:hasSystem
+    - dpv_tech:hasSystem
+    - dpv_tech_owl:hasSystem
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasSystem
       dpv_extension_slug: tech
@@ -854,13 +856,14 @@ slots:
     definition_uri: tech:hasSystemIntegrator
     description: Indicates technology system integrator
     aliases:
-      - has system integrator
+    - has system integrator
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasSystemIntegrator
-      - dpv_tech_owl:hasSystemIntegrator
+    - dpv_tech:hasSystemIntegrator
+    - dpv_tech_owl:hasSystemIntegrator
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasSystemIntegrator
       dpv_extension_slug: tech
@@ -870,13 +873,14 @@ slots:
     definition_uri: tech:hasTRL
     description: Indicates technology maturity level
     aliases:
-      - has TRL
+    - has TRL
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasTRL
-      - dpv_tech_owl:hasTRL
+    - dpv_tech:hasTRL
+    - dpv_tech_owl:hasTRL
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasTRL
       dpv_extension_slug: tech
@@ -886,13 +890,14 @@ slots:
     definition_uri: tech:hasUser
     description: Indicates technology user
     aliases:
-      - has user
+    - has user
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:hasUser
-      - dpv_tech_owl:hasUser
+    - dpv_tech:hasUser
+    - dpv_tech_owl:hasUser
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#hasUser
       dpv_extension_slug: tech
@@ -901,15 +906,64 @@ slots:
     definition_uri: tech:isComponentOf
     description: Indicates the component is part of the associated system
     aliases:
-      - is component of
+    - is component of
     multivalued: true
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:isComponentOf
-      - dpv_tech_owl:isComponentOf
+    - dpv_tech:isComponentOf
+    - dpv_tech_owl:isComponentOf
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#isComponentOf
+      dpv_extension_slug: tech
+
+  tech_has_capability:
+    definition_uri: tech:hasCapability
+    description: Indicates the capability of the technology
+    aliases:
+    - has capability
+    multivalued: true
+    in_subset:
+    - tech_core_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:hasCapability
+    - dpv_tech_owl:hasCapability
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasCapability
+      dpv_extension_slug: tech
+
+  tech_has_model:
+    definition_uri: tech:hasModel
+    description: Indicates the technology has or uses the associated model
+    aliases:
+    - has model
+    multivalued: true
+    in_subset:
+    - tech_tools_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:hasModel
+    - dpv_tech_owl:hasModel
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasModel
+      dpv_extension_slug: tech
+
+  tech_has_service:
+    definition_uri: tech:hasService
+    description: Indicates the technology has or uses the associated service
+    aliases:
+    - has service
+    multivalued: true
+    in_subset:
+    - tech_tools_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:hasService
+    - dpv_tech_owl:hasService
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#hasService
       dpv_extension_slug: tech
 
 classes:
@@ -917,18 +971,19 @@ classes:
   API:
     is_a: Algorithm
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:API
     description: |-
       A set of rules and protocols to communicate and exchange data between
       applications
     aliases:
-      - API
+    - API
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:API
-      - dpv_tech_owl:API
+    - dpv_tech:API
+    - dpv_tech_owl:API
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#API
       dpv_extension_slug: tech
@@ -940,12 +995,13 @@ classes:
       Actors and Entities involved in provision, use, and management of
       Technology
     aliases:
-      - Actor
+    - Actor
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Actor
-      - dpv_tech_owl:Actor
+    - dpv_tech:Actor
+    - dpv_tech_owl:Actor
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Actor
       dpv_extension_slug: tech
@@ -957,31 +1013,33 @@ classes:
       A step-by-step set of instructions used to solve a problem or perform a
       computation
     aliases:
-      - Algorithm
+    - Algorithm
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Algorithm
-      - dpv_tech_owl:Algorithm
-    close_mappings:
-      - iso22989:Algorithm
+    - dpv_tech:Algorithm
+    - dpv_tech_owl:Algorithm
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Algorithm
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Algorithm
   Android:
     is_a: OS
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:Android
     description: Android operating system
     aliases:
-      - Android
+    - Android
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Android
-      - dpv_tech_owl:Android
+    - dpv_tech:Android
+    - dpv_tech_owl:Android
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Android
       dpv_extension_slug: tech
@@ -989,16 +1047,18 @@ classes:
   AppStore:
     is_a: TechApplication
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:AppStore
-    description: An application or platform for distribution of other applications
+    description: An application or platform for distribution of other 
+      applications
     aliases:
-      - Application Store
+    - Application Store
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:AppStore
-      - dpv_tech_owl:AppStore
+    - dpv_tech:AppStore
+    - dpv_tech_owl:AppStore
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#AppStore
       dpv_extension_slug: tech
@@ -1006,18 +1066,21 @@ classes:
   ApplicationSpecificIntegratedCircuit:
     is_a: IntegratedCircuit
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:ApplicationSpecificIntegratedCircuit
-    description: A custom-designed integrated circuit optimised for a specific task
+    description: A custom-designed integrated circuit optimised for a specific 
+      task
     aliases:
-      - ApplicationSpecificIntegratedCircuit
+    - ApplicationSpecificIntegratedCircuit
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ApplicationSpecificIntegratedCircuit
-      - dpv_tech_owl:ApplicationSpecificIntegratedCircuit
+    - dpv_tech:ApplicationSpecificIntegratedCircuit
+    - dpv_tech_owl:ApplicationSpecificIntegratedCircuit
     annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#ApplicationSpecificIntegratedCircuit
+      upstream_iri: 
+        https://w3id.org/dpv/tech/owl#ApplicationSpecificIntegratedCircuit
       dpv_extension_slug: tech
 
   AudioContent:
@@ -1025,12 +1088,13 @@ classes:
     class_uri: tech:AudioContent
     description: Content that is or has an audio component
     aliases:
-      - Audio Content
+    - Audio Content
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:AudioContent
-      - dpv_tech_owl:AudioContent
+    - dpv_tech:AudioContent
+    - dpv_tech_owl:AudioContent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#AudioContent
       dpv_extension_slug: tech
@@ -1038,53 +1102,35 @@ classes:
   Bluetooth:
     is_a: Networking
     mixins:
-      - CommunicationMechanism
+    - CommunicationMechanism
     class_uri: tech:Bluetooth
     description: Technology utilising bluetooth
     aliases:
-      - Bluetooth
+    - Bluetooth
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Bluetooth
-      - dpv_tech_owl:Bluetooth
+    - dpv_tech:Bluetooth
+    - dpv_tech_owl:Bluetooth
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Bluetooth
-      dpv_extension_slug: tech
-
-  Capability:
-    class_uri: tech:Capability
-    description: Expression of what the technology is capable of achieving or providing
-    aliases:
-      - Capability
-    comments:
-      - |-
-        Examples of capabilities are image recognition, sentiment analysis,
-        machine translation
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Capability
-      - dpv_tech_owl:Capability
-    related_mappings:
-      - iso22989:AICapability
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Capability
       dpv_extension_slug: tech
 
   CellularNetwork:
     is_a: Networking
     mixins:
-      - CommunicationMechanism
+    - CommunicationMechanism
     class_uri: tech:CellularNetwork
     description: Technology utilising cellular networking
     aliases:
-      - Cellular Network
+    - Cellular Network
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:CellularNetwork
-      - dpv_tech_owl:CellularNetwork
+    - dpv_tech:CellularNetwork
+    - dpv_tech_owl:CellularNetwork
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#CellularNetwork
       dpv_extension_slug: tech
@@ -1096,12 +1142,13 @@ classes:
       A remotely accessible service delivered over the internet for providing
       resources, software, or infrastructure
     aliases:
-      - Cloud Service Provision
+    - Cloud Service Provision
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:CloudService
-      - dpv_tech_owl:CloudService
+    - dpv_tech:CloudService
+    - dpv_tech_owl:CloudService
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#CloudService
       dpv_extension_slug: tech
@@ -1109,20 +1156,21 @@ classes:
   CloudStorage:
     is_a: CloudLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - StorageLocation
-      - DataStorage
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - StorageLocation
+    - DataStorage
     class_uri: tech:CloudStorage
     description: Storage utilising cloud technologies
     aliases:
-      - Cloud Storage
+    - Cloud Storage
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:CloudStorage
-      - dpv_tech_owl:CloudStorage
+    - dpv_tech:CloudStorage
+    - dpv_tech_owl:CloudStorage
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#CloudStorage
       dpv_extension_slug: tech
@@ -1132,12 +1180,13 @@ classes:
     class_uri: tech:CommunicationMechanism
     description: Communication mechanism used or provided by Technology
     aliases:
-      - Communication Mechanism
+    - Communication Mechanism
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:CommunicationMechanism
-      - dpv_tech_owl:CommunicationMechanism
+    - dpv_tech:CommunicationMechanism
+    - dpv_tech_owl:CommunicationMechanism
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#CommunicationMechanism
       dpv_extension_slug: tech
@@ -1145,20 +1194,21 @@ classes:
   Content:
     is_a: DpvData
     mixins:
-      - InputOutput
+    - InputOutput
     class_uri: tech:Content
     description: Data or information in a particular form and structure
     aliases:
-      - Content
+    - Content
     comments:
-      - |-
-        Content is a concept referring to information used in the context of
-        technologies producing or using them as inputs or outputs
+    - |-
+      Content is a concept referring to information used in the context of
+      technologies producing or using them as inputs or outputs
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Content
-      - dpv_tech_owl:Content
+    - dpv_tech:Content
+    - dpv_tech_owl:Content
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Content
       dpv_extension_slug: tech
@@ -1166,19 +1216,20 @@ classes:
   Cookie:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - LocalStorage
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - LocalStorage
     class_uri: tech:Cookie
     description: A HTTP or web or internet cookie
     aliases:
-      - Cookie
+    - Cookie
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Cookie
-      - dpv_tech_owl:Cookie
+    - dpv_tech:Cookie
+    - dpv_tech_owl:Cookie
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Cookie
       dpv_extension_slug: tech
@@ -1186,19 +1237,20 @@ classes:
   DataStorage:
     is_a: ProcessingLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - StorageLocation
-      - Software
+    - DpvLocation
+    - Technology
+    - StorageLocation
+    - Software
     class_uri: tech:DataStorage
     description: Technology associated with storage of data
     aliases:
-      - Data Storage
+    - Data Storage
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:DataStorage
-      - dpv_tech_owl:DataStorage
+    - dpv_tech:DataStorage
+    - dpv_tech_owl:DataStorage
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#DataStorage
       dpv_extension_slug: tech
@@ -1206,19 +1258,21 @@ classes:
   Database:
     is_a: ProcessingLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - StorageLocation
-      - DataStorage
+    - DpvLocation
+    - Technology
+    - StorageLocation
+    - DataStorage
     class_uri: tech:Database
-    description: A database, database management system (DBMS), or application database
+    description: A database, database management system (DBMS), or application 
+      database
     aliases:
-      - Database
+    - Database
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Database
-      - dpv_tech_owl:Database
+    - dpv_tech:Database
+    - dpv_tech_owl:Database
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Database
       dpv_extension_slug: tech
@@ -1228,30 +1282,32 @@ classes:
     class_uri: tech:Deployer
     description: Actor that deploys Technology
     aliases:
-      - Deployer
+    - Deployer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Deployer
-      - dpv_tech_owl:Deployer
-    close_mappings:
-      - iso22989:Stakeholder
+    - dpv_tech:Deployer
+    - dpv_tech_owl:Deployer
     annotations:
       dct_source: AI Act
       upstream_iri: https://w3id.org/dpv/tech/owl#Deployer
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Stakeholder
   DeploymentLocation:
     is_a: DpvLocation
     class_uri: tech:DeploymentLocation
     description: Location for where technology is deployed and used
     aliases:
-      - Deployment Location
+    - Deployment Location
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:DeploymentLocation
-      - dpv_tech_owl:DeploymentLocation
+    - dpv_tech:DeploymentLocation
+    - dpv_tech_owl:DeploymentLocation
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#DeploymentLocation
       dpv_extension_slug: tech
@@ -1261,35 +1317,37 @@ classes:
     class_uri: tech:Designer
     description: Actor that designs Technology
     aliases:
-      - Designer
+    - Designer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Designer
-      - dpv_tech_owl:Designer
-    close_mappings:
-      - iso22989:Stakeholder
+    - dpv_tech:Designer
+    - dpv_tech_owl:Designer
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Designer
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Stakeholder
   DesktopPC:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - PersonalComputer
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - PersonalComputer
     class_uri: tech:DesktopPC
     description: A non-portable or fixed personal computer
     aliases:
-      - Desktop PC
+    - Desktop PC
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:DesktopPC
-      - dpv_tech_owl:DesktopPC
+    - dpv_tech:DesktopPC
+    - dpv_tech_owl:DesktopPC
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#DesktopPC
       dpv_extension_slug: tech
@@ -1297,36 +1355,38 @@ classes:
   Developer:
     is_a: TechProducer
     mixins:
-      - Actor
+    - Actor
     class_uri: tech:Developer
     description: Actor that develops Technology
     aliases:
-      - Developer
+    - Developer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Developer
-      - dpv_tech_owl:Developer
-    close_mappings:
-      - iso22989:Stakeholder
+    - dpv_tech:Developer
+    - dpv_tech_owl:Developer
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Developer
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Stakeholder
   DevelopmentPlan:
     is_a: Plan
     mixins:
-      - Documentation
+    - Documentation
     class_uri: tech:DevelopmentPlan
     description: Plan associated with developing technology
     aliases:
-      - Development Plan
+    - Development Plan
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:DevelopmentPlan
-      - dpv_tech_owl:DevelopmentPlan
+    - dpv_tech:DevelopmentPlan
+    - dpv_tech_owl:DevelopmentPlan
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#DevelopmentPlan
       dpv_extension_slug: tech
@@ -1334,19 +1394,20 @@ classes:
   Device:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Hardware
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - Hardware
     class_uri: tech:Device
     description: Device or computing device
     aliases:
-      - Device
+    - Device
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Device
-      - dpv_tech_owl:Device
+    - dpv_tech:Device
+    - dpv_tech_owl:Device
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Device
       dpv_extension_slug: tech
@@ -1356,12 +1417,13 @@ classes:
     class_uri: tech:Distributor
     description: Actor that distributes the Technology
     aliases:
-      - Distributor
+    - Distributor
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Distributor
-      - dpv_tech_owl:Distributor
+    - dpv_tech:Distributor
+    - dpv_tech_owl:Distributor
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Distributor
       dpv_extension_slug: tech
@@ -1372,31 +1434,33 @@ classes:
       Information describing use, functionality, design, or other technical
       aspects of the Technology
     aliases:
-      - Documentation
+    - Documentation
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Documentation
-      - dpv_tech_owl:Documentation
-    close_mappings:
-      - iso22989:Documentation
+    - dpv_tech:Documentation
+    - dpv_tech_owl:Documentation
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Documentation
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Documentation
   Evaluator:
     is_a: Partner
     mixins:
-      - Actor
+    - Actor
     class_uri: tech:Evaluator
     description: Actor that evaluates the performance of Technology
     aliases:
-      - Evaluator
+    - Evaluator
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Evaluator
-      - dpv_tech_owl:Evaluator
+    - dpv_tech:Evaluator
+    - dpv_tech_owl:Evaluator
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Evaluator
@@ -1405,16 +1469,17 @@ classes:
   GNULinux:
     is_a: OS
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:GNULinux
     description: GNU/Linux operating system
     aliases:
-      - GNU/Linux
+    - GNU/Linux
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:GNULinux
-      - dpv_tech_owl:GNULinux
+    - dpv_tech:GNULinux
+    - dpv_tech_owl:GNULinux
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#GNULinux
       dpv_extension_slug: tech
@@ -1424,17 +1489,18 @@ classes:
     class_uri: tech:GPS
     description: Technology utilising GPS
     aliases:
-      - GPS
+    - GPS
     comments:
-      - |-
-        This concept models GPS as a networking technology. For representing use
-        of GPS to get current location, see pd:GPSCoordinate and
-        pd:CurrentLocation concepts in PD extension
+    - |-
+      This concept models GPS as a networking technology. For representing use
+      of GPS to get current location, see pd:GPSCoordinate and
+      pd:CurrentLocation concepts in PD extension
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:GPS
-      - dpv_tech_owl:GPS
+    - dpv_tech:GPS
+    - dpv_tech_owl:GPS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#GPS
       dpv_extension_slug: tech
@@ -1444,12 +1510,13 @@ classes:
     class_uri: tech:Guide
     description: Documentation that provides guidance regarding the technology
     aliases:
-      - Guide
+    - Guide
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Guide
-      - dpv_tech_owl:Guide
+    - dpv_tech:Guide
+    - dpv_tech_owl:Guide
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Guide
       dpv_extension_slug: tech
@@ -1459,29 +1526,31 @@ classes:
     class_uri: tech:Hardware
     description: Physical parts or components of the technology
     aliases:
-      - Hardware
+    - Hardware
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Hardware
-      - dpv_tech_owl:Hardware
-    related_mappings:
-      - iso22989:AISystem
+    - dpv_tech:Hardware
+    - dpv_tech_owl:Hardware
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Hardware
       dpv_extension_slug: tech
 
+    related_mappings:
+    - iso22989:AISystem
   ImageContent:
     is_a: Content
     class_uri: tech:ImageContent
     description: Content that is or has an image component
     aliases:
-      - Image Content
+    - Image Content
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ImageContent
-      - dpv_tech_owl:ImageContent
+    - dpv_tech:ImageContent
+    - dpv_tech_owl:ImageContent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ImageContent
       dpv_extension_slug: tech
@@ -1491,12 +1560,13 @@ classes:
     class_uri: tech:Importer
     description: Actor that imports the Technology within a jurisdiction
     aliases:
-      - Importer
+    - Importer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Importer
-      - dpv_tech_owl:Importer
+    - dpv_tech:Importer
+    - dpv_tech_owl:Importer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Importer
       dpv_extension_slug: tech
@@ -1508,29 +1578,31 @@ classes:
       The foundational hardware, software, and other resources to support the
       operation of systems or services
     aliases:
-      - Infrastructure as a Service (IaaS) Provision
+    - Infrastructure as a Service (IaaS) Provision
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Infrastructure
-      - dpv_tech_owl:Infrastructure
-    related_mappings:
-      - iso22989:AISystem
+    - dpv_tech:Infrastructure
+    - dpv_tech_owl:Infrastructure
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Infrastructure
       dpv_extension_slug: tech
 
+    related_mappings:
+    - iso22989:AISystem
   Input:
     is_a: InputOutput
     class_uri: tech:Input
     description: Input to a technology
     aliases:
-      - Input
+    - Input
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Input
-      - dpv_tech_owl:Input
+    - dpv_tech:Input
+    - dpv_tech_owl:Input
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Input
       dpv_extension_slug: tech
@@ -1538,20 +1610,21 @@ classes:
   InputAction:
     is_a: TechAction
     mixins:
-      - Input
+    - Input
     class_uri: tech:InputAction
     description: Action provided as an input to a technology
     aliases:
-      - Input Action
+    - Input Action
     comments:
-      - |-
-        Action can mean a physical action, such as the movements involved in
-        robotics
+    - |-
+      Action can mean a physical action, such as the movements involved in
+      robotics
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:InputAction
-      - dpv_tech_owl:InputAction
+    - dpv_tech:InputAction
+    - dpv_tech_owl:InputAction
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#InputAction
       dpv_extension_slug: tech
@@ -1559,32 +1632,34 @@ classes:
   InputData:
     is_a: DpvData
     mixins:
-      - Input
+    - Input
     class_uri: tech:InputData
     description: Data that is provided an input to a technology
     aliases:
-      - Input Data
+    - Input Data
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:InputData
-      - dpv_tech_owl:InputData
-    close_mappings:
-      - iso22989:Data
+    - dpv_tech:InputData
+    - dpv_tech_owl:InputData
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#InputData
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Data
   InputOutput:
     class_uri: tech:InputOutput
     description: Forms of inputs and outputs associated with a technology
     aliases:
-      - Input/Output
+    - Input/Output
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:InputOutput
-      - dpv_tech_owl:InputOutput
+    - dpv_tech:InputOutput
+    - dpv_tech_owl:InputOutput
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#InputOutput
       dpv_extension_slug: tech
@@ -1594,12 +1669,13 @@ classes:
     class_uri: tech:Installer
     description: Actor that installs Technology
     aliases:
-      - Installer
+    - Installer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Installer
-      - dpv_tech_owl:Installer
+    - dpv_tech:Installer
+    - dpv_tech_owl:Installer
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Installer
@@ -1610,12 +1686,13 @@ classes:
     class_uri: tech:Instructions
     description: Instructions related to technology
     aliases:
-      - Instructions
+    - Instructions
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Instructions
-      - dpv_tech_owl:Instructions
+    - dpv_tech:Instructions
+    - dpv_tech_owl:Instructions
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Instructions
       dpv_extension_slug: tech
@@ -1623,18 +1700,19 @@ classes:
   IntegratedCircuit:
     is_a: Hardware
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:IntegratedCircuit
     description: |-
       A integrated electronic chip containing interconnected components to
       perform specific functions
     aliases:
-      - IntegratedCircuit
+    - IntegratedCircuit
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:IntegratedCircuit
-      - dpv_tech_owl:IntegratedCircuit
+    - dpv_tech:IntegratedCircuit
+    - dpv_tech_owl:IntegratedCircuit
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#IntegratedCircuit
       dpv_extension_slug: tech
@@ -1643,24 +1721,25 @@ classes:
     class_uri: tech:IntendedUse
     description: Describes the 'intended' use of the technology
     aliases:
-      - Intended Use
+    - Intended Use
     comments:
-      - |-
-        Intended use can be used to describe how the developer or provider of
-        technology intends it to be used e.g. use a database to store data, and
-        to describe the plan or 'intent' to use the technology by a user or
-        operator e.g. use a database to store and analyse data. Intended Use can
-        involve any concept e.g. DPV's purpose, processing, tech/org measures,
-        and can be low-level purely technical uses such as store data or
-        high-level goals such as legal compliance. Intended Use only describes
-        the intent or ex-ante intention, and may be different from how the
-        technology is being actually used - which is indicated by using
-        isImplementedUsingTechnology in a process or other relevant context.
+    - |-
+      Intended use can be used to describe how the developer or provider of
+      technology intends it to be used e.g. use a database to store data, and
+      to describe the plan or 'intent' to use the technology by a user or
+      operator e.g. use a database to store and analyse data. Intended Use can
+      involve any concept e.g. DPV's purpose, processing, tech/org measures,
+      and can be low-level purely technical uses such as store data or
+      high-level goals such as legal compliance. Intended Use only describes
+      the intent or ex-ante intention, and may be different from how the
+      technology is being actually used - which is indicated by using
+      isImplementedUsingTechnology in a process or other relevant context.
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:IntendedUse
-      - dpv_tech_owl:IntendedUse
+    - dpv_tech:IntendedUse
+    - dpv_tech_owl:IntendedUse
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#IntendedUse
       dpv_extension_slug: tech
@@ -1668,16 +1747,17 @@ classes:
   Internet:
     is_a: Networking
     mixins:
-      - CommunicationMechanism
+    - CommunicationMechanism
     class_uri: tech:Internet
     description: Technology utilising internet
     aliases:
-      - Internet
+    - Internet
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Internet
-      - dpv_tech_owl:Internet
+    - dpv_tech:Internet
+    - dpv_tech_owl:Internet
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Internet
       dpv_extension_slug: tech
@@ -1685,48 +1765,50 @@ classes:
   IoT:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Hardware
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - Hardware
     class_uri: tech:IoT
     description: |-
       IoT is the infrastructure of interconnected entities, people, systems
       and information resources together with services that process and react
       to information from the physical world and virtual world
     aliases:
-      - Internet of Things (IoT)
+    - Internet of Things (IoT)
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:IoT
-      - dpv_tech_owl:IoT
-    related_mappings:
-      - iso22989:AISystem
+    - dpv_tech:IoT
+    - dpv_tech_owl:IoT
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#IoT
       dpv_extension_slug: tech
 
+    related_mappings:
+    - iso22989:AISystem
   IoTDevice:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Device
-      - IoT
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - Device
+    - IoT
     class_uri: tech:IoTDevice
     description: |-
       An entity of an IoT system that interacts and communicates with the
       physical world through sensing or actuating
     aliases:
-      - IoT Device
+    - IoT Device
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:IoTDevice
-      - dpv_tech_owl:IoTDevice
+    - dpv_tech:IoTDevice
+    - dpv_tech_owl:IoTDevice
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#IoTDevice
@@ -1735,11 +1817,11 @@ classes:
   IoTSystem:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - IoT
-      - TechSystem
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - IoT
+    - TechSystem
     class_uri: tech:IoTSystem
     description: |-
       A specific system that is an implementation or application of the IoT
@@ -1747,35 +1829,37 @@ classes:
       communication network along with other hardware and software required
       for providing functionalities
     aliases:
-      - IoT System
+    - IoT System
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:IoTSystem
-      - dpv_tech_owl:IoTSystem
-    related_mappings:
-      - iso22989:AISystem
+    - dpv_tech:IoTSystem
+    - dpv_tech_owl:IoTSystem
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#IoTSystem
       dpv_extension_slug: tech
 
+    related_mappings:
+    - iso22989:AISystem
   LaptopPC:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - PersonalComputer
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - PersonalComputer
     class_uri: tech:LaptopPC
     description: A portal personal computer
     aliases:
-      - Laptop PC
+    - Laptop PC
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:LaptopPC
-      - dpv_tech_owl:LaptopPC
+    - dpv_tech:LaptopPC
+    - dpv_tech_owl:LaptopPC
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#LaptopPC
       dpv_extension_slug: tech
@@ -1787,49 +1871,35 @@ classes:
       A legal agreement that allows or provides a license for the use or other
       operations involving a technology
     aliases:
-      - License
+    - License
     comments:
-      - |-
-        This concept is derived from license agreements and contracts which are
-        legal bases, and therefore can also be used as a legal basis
+    - |-
+      This concept is derived from license agreements and contracts which are
+      legal bases, and therefore can also be used as a legal basis
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:License
-      - dpv_tech_owl:License
+    - dpv_tech:License
+    - dpv_tech_owl:License
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#License
-      dpv_extension_slug: tech
-
-  LifecycleStage:
-    class_uri: tech:LifecycleStage
-    description: A stage within the lifecycle of technology
-    aliases:
-      - Lifecycle Stage
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:LifecycleStage
-      - dpv_tech_owl:LifecycleStage
-    close_mappings:
-      - iso22989:AISystemLifecycle
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#LifecycleStage
       dpv_extension_slug: tech
 
   LocalNetwork:
     is_a: Networking
     mixins:
-      - CommunicationMechanism
+    - CommunicationMechanism
     class_uri: tech:LocalNetwork
     description: Technology utilising local networking
     aliases:
-      - Local Network
+    - Local Network
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:LocalNetwork
-      - dpv_tech_owl:LocalNetwork
+    - dpv_tech:LocalNetwork
+    - dpv_tech_owl:LocalNetwork
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#LocalNetwork
       dpv_extension_slug: tech
@@ -1837,19 +1907,20 @@ classes:
   LocalStorage:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - DataStorage
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - DataStorage
     class_uri: tech:LocalStorage
     description: Storage that is local (e.g. on device)
     aliases:
-      - Local Storage
+    - Local Storage
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:LocalStorage
-      - dpv_tech_owl:LocalStorage
+    - dpv_tech:LocalStorage
+    - dpv_tech_owl:LocalStorage
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#LocalStorage
       dpv_extension_slug: tech
@@ -1857,16 +1928,17 @@ classes:
   MSWindows:
     is_a: OS
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:MSWindows
     description: Microsoft Windows operating system
     aliases:
-      - Microsoft Windows
+    - Microsoft Windows
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:MSWindows
-      - dpv_tech_owl:MSWindows
+    - dpv_tech:MSWindows
+    - dpv_tech_owl:MSWindows
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#MSWindows
       dpv_extension_slug: tech
@@ -1876,12 +1948,13 @@ classes:
     class_uri: tech:Maintainer
     description: Actor that maintains Technology
     aliases:
-      - Maintainer
+    - Maintainer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Maintainer
-      - dpv_tech_owl:Maintainer
+    - dpv_tech:Maintainer
+    - dpv_tech_owl:Maintainer
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Maintainer
@@ -1894,12 +1967,13 @@ classes:
       Documentation that provides instructions for using, maintaining,
       developing, or performing other activities regarding the technology
     aliases:
-      - Manual
+    - Manual
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Manual
-      - dpv_tech_owl:Manual
+    - dpv_tech:Manual
+    - dpv_tech_owl:Manual
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Manual
       dpv_extension_slug: tech
@@ -1909,58 +1983,46 @@ classes:
     class_uri: tech:Manufacturer
     description: Actor that manufactures Technology
     aliases:
-      - Manufacturer
+    - Manufacturer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Manufacturer
-      - dpv_tech_owl:Manufacturer
+    - dpv_tech:Manufacturer
+    - dpv_tech_owl:Manufacturer
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Manufacturer
       dpv_extension_slug: tech
 
-  MarketAvailabilityStatus:
-    is_a: TechnologyStatus
-    class_uri: tech:MarketAvailabilityStatus
-    description: Status indicating whether Technology is available on the market
-    aliases:
-      - Market Availability Status
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:MarketAvailabilityStatus
-      - dpv_tech_owl:MarketAvailabilityStatus
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#MarketAvailabilityStatus
-      dpv_extension_slug: tech
-
   MarketAvailable:
-    is_a: MarketAvailabilityStatus
+    is_a: TechMarketAvailabilityStatus
     class_uri: tech:MarketAvailable
     description: Status indicating Technology is available on the market
     aliases:
-      - Market Available
+    - Market Available
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:MarketAvailable
-      - dpv_tech_owl:MarketAvailable
+    - dpv_tech:MarketAvailable
+    - dpv_tech_owl:MarketAvailable
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#MarketAvailable
       dpv_extension_slug: tech
 
   MarketUnavailable:
-    is_a: MarketAvailabilityStatus
+    is_a: TechMarketAvailabilityStatus
     class_uri: tech:MarketUnavailable
     description: Status indicating Technology is unavailable on the market
     aliases:
-      - Market Unavailable
+    - Market Unavailable
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:MarketUnavailable
-      - dpv_tech_owl:MarketUnavailable
+    - dpv_tech:MarketUnavailable
+    - dpv_tech_owl:MarketUnavailable
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#MarketUnavailable
       dpv_extension_slug: tech
@@ -1968,40 +2030,22 @@ classes:
   MobilePhone:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Telephone
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - Telephone
     class_uri: tech:MobilePhone
     description: Mobile telephone
     aliases:
-      - Mobile Phone
+    - Mobile Phone
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:MobilePhone
-      - dpv_tech_owl:MobilePhone
+    - dpv_tech:MobilePhone
+    - dpv_tech_owl:MobilePhone
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#MobilePhone
-      dpv_extension_slug: tech
-
-  Model:
-    is_a: Technology
-    class_uri: tech:Model
-    description: |-
-      A simplified representation or abstraction of a system, process, or
-      concept
-    aliases:
-      - Model
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Model
-      - dpv_tech_owl:Model
-    close_mappings:
-      - iso22989:Model
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Model
       dpv_extension_slug: tech
 
   Networking:
@@ -2009,12 +2053,13 @@ classes:
     class_uri: tech:Networking
     description: Technology utilising networking
     aliases:
-      - Networking
+    - Networking
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Networking
-      - dpv_tech_owl:Networking
+    - dpv_tech:Networking
+    - dpv_tech_owl:Networking
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Networking
       dpv_extension_slug: tech
@@ -2024,12 +2069,13 @@ classes:
     class_uri: tech:NotProvided
     description: Status indicating Technology has not been provided
     aliases:
-      - Not Provided
+    - Not Provided
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:NotProvided
-      - dpv_tech_owl:NotProvided
+    - dpv_tech:NotProvided
+    - dpv_tech_owl:NotProvided
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#NotProvided
       dpv_extension_slug: tech
@@ -2037,16 +2083,17 @@ classes:
   OS:
     is_a: Software
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:OS
     description: Software for managing hardware and other software
     aliases:
-      - Operating System (OS)
+    - Operating System (OS)
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:OS
-      - dpv_tech_owl:OS
+    - dpv_tech:OS
+    - dpv_tech_owl:OS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#OS
       dpv_extension_slug: tech
@@ -2055,20 +2102,21 @@ classes:
     class_uri: tech:OperatingEnvironment
     description: The environment within which the technology operates
     aliases:
-      - Operating Environment
+    - Operating Environment
     comments:
-      - |-
-        Environment here is a broad term used to refer to the immediate
-        surroundings and parts of it that form the context of where the
-        technology operates, for example a room or in open air where specific
-        machines are set up. This helps describe the expectations and set up of
-        systems and, to specify and compare them against ideal conditions or
-        environments
+    - |-
+      Environment here is a broad term used to refer to the immediate
+      surroundings and parts of it that form the context of where the
+      technology operates, for example a room or in open air where specific
+      machines are set up. This helps describe the expectations and set up of
+      systems and, to specify and compare them against ideal conditions or
+      environments
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:OperatingEnvironment
-      - dpv_tech_owl:OperatingEnvironment
+    - dpv_tech:OperatingEnvironment
+    - dpv_tech_owl:OperatingEnvironment
     annotations:
       dct_source: Model Cards by Mitchell et al. (2019)
       upstream_iri: https://w3id.org/dpv/tech/owl#OperatingEnvironment
@@ -2076,21 +2124,23 @@ classes:
 
   OperatingFactor:
     class_uri: tech:OperatingFactor
-    description: A 'factor' affecting the operation and outcomes of the technology
+    description: A 'factor' affecting the operation and outcomes of the 
+      technology
     aliases:
-      - Operating Factor
+    - Operating Factor
     comments:
-      - |-
-        Examples of operating factor could be equipment characteristics,
-        lighting conditions for camera operations, connectivity for
-        communications. This helps indicate whether specific factors are ideal
-        i.e. they will give the best performance, or are problematic i.e. they
-        will cause issues
+    - |-
+      Examples of operating factor could be equipment characteristics,
+      lighting conditions for camera operations, connectivity for
+      communications. This helps indicate whether specific factors are ideal
+      i.e. they will give the best performance, or are problematic i.e. they
+      will cause issues
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:OperatingFactor
-      - dpv_tech_owl:OperatingFactor
+    - dpv_tech:OperatingFactor
+    - dpv_tech_owl:OperatingFactor
     annotations:
       dct_source: Model Cards by Mitchell et al. (2019)
       upstream_iri: https://w3id.org/dpv/tech/owl#OperatingFactor
@@ -2101,12 +2151,13 @@ classes:
     class_uri: tech:Output
     description: Output from a technology
     aliases:
-      - Output
+    - Output
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Output
-      - dpv_tech_owl:Output
+    - dpv_tech:Output
+    - dpv_tech_owl:Output
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Output
       dpv_extension_slug: tech
@@ -2114,20 +2165,21 @@ classes:
   OutputAction:
     is_a: TechAction
     mixins:
-      - Output
+    - Output
     class_uri: tech:OutputAction
     description: Action produced as an output from a technology
     aliases:
-      - Output Action
+    - Output Action
     comments:
-      - |-
-        Action can mean a physical action, such as the movements involved in
-        robotics
+    - |-
+      Action can mean a physical action, such as the movements involved in
+      robotics
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:OutputAction
-      - dpv_tech_owl:OutputAction
+    - dpv_tech:OutputAction
+    - dpv_tech_owl:OutputAction
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#OutputAction
       dpv_extension_slug: tech
@@ -2135,33 +2187,35 @@ classes:
   OutputData:
     is_a: DpvData
     mixins:
-      - Output
+    - Output
     class_uri: tech:OutputData
     description: Data that is produced as an output from a technology
     aliases:
-      - Output Data
+    - Output Data
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:OutputData
-      - dpv_tech_owl:OutputData
-    close_mappings:
-      - iso22989:Data
+    - dpv_tech:OutputData
+    - dpv_tech_owl:OutputData
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#OutputData
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Data
   Owner:
     is_a: Actor
     class_uri: tech:Owner
     description: Actor that owns Technology
     aliases:
-      - Owner
+    - Owner
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Owner
-      - dpv_tech_owl:Owner
+    - dpv_tech:Owner
+    - dpv_tech_owl:Owner
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Owner
@@ -2172,19 +2226,20 @@ classes:
     class_uri: tech:Partner
     description: Actor that provides services in the context of Technology
     aliases:
-      - Partner
+    - Partner
     comments:
-      - |-
-        "Partner" is a vague term and should not be used - instead the more
-        specific terms provided in this vocabulary should be used. Partner
-        refers to entities that provide services for the technology (as opposed
-        to for using the technology) - for example to further develop or refine
-        it, or to test or audit it.
+    - |-
+      "Partner" is a vague term and should not be used - instead the more
+      specific terms provided in this vocabulary should be used. Partner
+      refers to entities that provide services for the technology (as opposed
+      to for using the technology) - for example to further develop or refine
+      it, or to test or audit it.
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Partner
-      - dpv_tech_owl:Partner
+    - dpv_tech:Partner
+    - dpv_tech_owl:Partner
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Partner
@@ -2193,19 +2248,20 @@ classes:
   PersonalComputer:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Device
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - Device
     class_uri: tech:PersonalComputer
     description: A computing device intended for individual use
     aliases:
-      - Personal Computer (PC)
+    - Personal Computer (PC)
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:PersonalComputer
-      - dpv_tech_owl:PersonalComputer
+    - dpv_tech:PersonalComputer
+    - dpv_tech_owl:PersonalComputer
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#PersonalComputer
       dpv_extension_slug: tech
@@ -2217,12 +2273,13 @@ classes:
       Plan associated with using, maintaining, developing, or performing other
       activities associated with technology
     aliases:
-      - Plan
+    - Plan
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Plan
-      - dpv_tech_owl:Plan
+    - dpv_tech:Plan
+    - dpv_tech_owl:Plan
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Plan
       dpv_extension_slug: tech
@@ -2234,12 +2291,13 @@ classes:
       A digital environment that provides tools, infrastructure, and services
       for developing, deploying, and running applications
     aliases:
-      - Platform
+    - Platform
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Platform
-      - dpv_tech_owl:Platform
+    - dpv_tech:Platform
+    - dpv_tech_owl:Platform
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Platform
       dpv_extension_slug: tech
@@ -2251,33 +2309,35 @@ classes:
       An inference or prediction of an action or data or decision in the
       context of technologies
     aliases:
-      - Prediction
+    - Prediction
     comments:
-      - |-
-        Prediction is a concept referring to activities or tasks in the context
-        of technologies producing or using them as inputs or outputs
+    - |-
+      Prediction is a concept referring to activities or tasks in the context
+      of technologies producing or using them as inputs or outputs
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Prediction
-      - dpv_tech_owl:Prediction
-    close_mappings:
-      - iso22989:Prediction
+    - dpv_tech:Prediction
+    - dpv_tech_owl:Prediction
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Prediction
       dpv_extension_slug: tech
 
+    close_mappings:
+    - iso22989:Prediction
   Provided:
     is_a: ProvisionStatus
     class_uri: tech:Provided
     description: Status indicating Technology has been provided
     aliases:
-      - Provided
+    - Provided
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Provided
-      - dpv_tech_owl:Provided
+    - dpv_tech:Provided
+    - dpv_tech_owl:Provided
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Provided
       dpv_extension_slug: tech
@@ -2287,12 +2347,13 @@ classes:
     class_uri: tech:ProvidedAsAlgorithmic
     description: Technology provided as an algorithm or method
     aliases:
-      - Provided as AlgorithmicProvision
+    - Provided as AlgorithmicProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsAlgorithmic
-      - dpv_tech_owl:ProvidedAsAlgorithmic
+    - dpv_tech:ProvidedAsAlgorithmic
+    - dpv_tech_owl:ProvidedAsAlgorithmic
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsAlgorithmic
       dpv_extension_slug: tech
@@ -2300,18 +2361,19 @@ classes:
   ProvidedAsCaaS:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsCaaS
     description: |-
       Technology provided as a cloud service consisting of managed compute
       resources
     aliases:
-      - Provided as Compute as a Service (CaaS)Provision
+    - Provided as Compute as a Service (CaaS)Provision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsCaaS
-      - dpv_tech_owl:ProvidedAsCaaS
+    - dpv_tech:ProvidedAsCaaS
+    - dpv_tech_owl:ProvidedAsCaaS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsCaaS
       dpv_extension_slug: tech
@@ -2319,16 +2381,17 @@ classes:
   ProvidedAsCloudService:
     is_a: ProvidedAsService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsCloudService
     description: Technology provided as a cloud service
     aliases:
-      - Provided as Cloud ServiceProvision
+    - Provided as Cloud ServiceProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsCloudService
-      - dpv_tech_owl:ProvidedAsCloudService
+    - dpv_tech:ProvidedAsCloudService
+    - dpv_tech_owl:ProvidedAsCloudService
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsCloudService
       dpv_extension_slug: tech
@@ -2338,12 +2401,13 @@ classes:
     class_uri: tech:ProvidedAsComponent
     description: Technology provided as a component
     aliases:
-      - Provided as ComponentProvision
+    - Provided as ComponentProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsComponent
-      - dpv_tech_owl:ProvidedAsComponent
+    - dpv_tech:ProvidedAsComponent
+    - dpv_tech_owl:ProvidedAsComponent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsComponent
       dpv_extension_slug: tech
@@ -2353,12 +2417,13 @@ classes:
     class_uri: tech:ProvidedAsFixedUse
     description: Technology provided for using a fixed number of times
     aliases:
-      - Provided as Fixed UseProvision
+    - Provided as Fixed UseProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsFixedUse
-      - dpv_tech_owl:ProvidedAsFixedUse
+    - dpv_tech:ProvidedAsFixedUse
+    - dpv_tech_owl:ProvidedAsFixedUse
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsFixedUse
       dpv_extension_slug: tech
@@ -2368,12 +2433,13 @@ classes:
     class_uri: tech:ProvidedAsGoods
     description: Technology provided or used as goods
     aliases:
-      - Provided as GoodsProvision
+    - Provided as GoodsProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsGoods
-      - dpv_tech_owl:ProvidedAsGoods
+    - dpv_tech:ProvidedAsGoods
+    - dpv_tech_owl:ProvidedAsGoods
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsGoods
       dpv_extension_slug: tech
@@ -2381,19 +2447,20 @@ classes:
   ProvidedAsHybridCloudService:
     is_a: ProvidedAsPrivateCloudService
     mixins:
-      - ProvisionMethod
-      - ProvidedAsPublicCloudService
+    - ProvisionMethod
+    - ProvidedAsPublicCloudService
     class_uri: tech:ProvidedAsHybridCloudService
     description: |-
       Technology provided as a cloud service that is both private and public
       in parts
     aliases:
-      - Provided as Hybrid Cloud ServiceProvision
+    - Provided as Hybrid Cloud ServiceProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsHybridCloudService
-      - dpv_tech_owl:ProvidedAsHybridCloudService
+    - dpv_tech:ProvidedAsHybridCloudService
+    - dpv_tech_owl:ProvidedAsHybridCloudService
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsHybridCloudService
       dpv_extension_slug: tech
@@ -2401,18 +2468,19 @@ classes:
   ProvidedAsIaaS:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsIaaS
     description: |-
       Technology provided as a cloud service consisting of managed
       infrastructure resources
     aliases:
-      - Provided as Infrastructure as a Service (IaaS)Provision
+    - Provided as Infrastructure as a Service (IaaS)Provision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsIaaS
-      - dpv_tech_owl:ProvidedAsIaaS
+    - dpv_tech:ProvidedAsIaaS
+    - dpv_tech_owl:ProvidedAsIaaS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsIaaS
       dpv_extension_slug: tech
@@ -2420,18 +2488,19 @@ classes:
   ProvidedAsMBaaS:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsMBaaS
     description: |-
       Technology provided as a cloud service consisting of managed 'backend'
       services for mobile users
     aliases:
-      - Provided as Mobile backend as a ServiceProvision
+    - Provided as Mobile backend as a ServiceProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsMBaaS
-      - dpv_tech_owl:ProvidedAsMBaaS
+    - dpv_tech:ProvidedAsMBaaS
+    - dpv_tech_owl:ProvidedAsMBaaS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsMBaaS
       dpv_extension_slug: tech
@@ -2439,18 +2508,19 @@ classes:
   ProvidedAsPaaS:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsPaaS
     description: |-
       Technology provided as a cloud service consisting of managed platform
       resources
     aliases:
-      - Provided as Platform as a Service (PaaS)Provision
+    - Provided as Platform as a Service (PaaS)Provision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsPaaS
-      - dpv_tech_owl:ProvidedAsPaaS
+    - dpv_tech:ProvidedAsPaaS
+    - dpv_tech_owl:ProvidedAsPaaS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsPaaS
       dpv_extension_slug: tech
@@ -2458,16 +2528,17 @@ classes:
   ProvidedAsPrivateCloudService:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsPrivateCloudService
     description: Technology provided as a cloud service that is private
     aliases:
-      - Provided as Private Cloud ServiceProvision
+    - Provided as Private Cloud ServiceProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsPrivateCloudService
-      - dpv_tech_owl:ProvidedAsPrivateCloudService
+    - dpv_tech:ProvidedAsPrivateCloudService
+    - dpv_tech_owl:ProvidedAsPrivateCloudService
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsPrivateCloudService
       dpv_extension_slug: tech
@@ -2477,12 +2548,13 @@ classes:
     class_uri: tech:ProvidedAsProduct
     description: Technology provided as a product
     aliases:
-      - Provided as ProductProvision
+    - Provided as ProductProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsProduct
-      - dpv_tech_owl:ProvidedAsProduct
+    - dpv_tech:ProvidedAsProduct
+    - dpv_tech_owl:ProvidedAsProduct
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsProduct
       dpv_extension_slug: tech
@@ -2490,16 +2562,17 @@ classes:
   ProvidedAsPublicCloudService:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsPublicCloudService
     description: Technology provided as a cloud service that is public
     aliases:
-      - Provided as Public Cloud ServiceProvision
+    - Provided as Public Cloud ServiceProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsPublicCloudService
-      - dpv_tech_owl:ProvidedAsPublicCloudService
+    - dpv_tech:ProvidedAsPublicCloudService
+    - dpv_tech_owl:ProvidedAsPublicCloudService
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsPublicCloudService
       dpv_extension_slug: tech
@@ -2507,18 +2580,19 @@ classes:
   ProvidedAsSaaS:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsSaaS
     description: |-
       Technology provided as a cloud service consisting of managed software
       resources
     aliases:
-      - Provided as Software as a Service (SaaS)Provision
+    - Provided as Software as a Service (SaaS)Provision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsSaaS
-      - dpv_tech_owl:ProvidedAsSaaS
+    - dpv_tech:ProvidedAsSaaS
+    - dpv_tech_owl:ProvidedAsSaaS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsSaaS
       dpv_extension_slug: tech
@@ -2526,18 +2600,19 @@ classes:
   ProvidedAsServerlessComputing:
     is_a: ProvidedAsCloudService
     mixins:
-      - ProvisionMethod
+    - ProvisionMethod
     class_uri: tech:ProvidedAsServerlessComputing
     description: |-
       Technology provided as a cloud service consisting of fully managed
       servers for executing functions
     aliases:
-      - Provided as Serverless ComputingProvision
+    - Provided as Serverless ComputingProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsServerlessComputing
-      - dpv_tech_owl:ProvidedAsServerlessComputing
+    - dpv_tech:ProvidedAsServerlessComputing
+    - dpv_tech_owl:ProvidedAsServerlessComputing
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsServerlessComputing
       dpv_extension_slug: tech
@@ -2547,12 +2622,13 @@ classes:
     class_uri: tech:ProvidedAsService
     description: Technology provided or used as service(s)
     aliases:
-      - Provided as ServiceProvision
+    - Provided as ServiceProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsService
-      - dpv_tech_owl:ProvidedAsService
+    - dpv_tech:ProvidedAsService
+    - dpv_tech_owl:ProvidedAsService
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsService
       dpv_extension_slug: tech
@@ -2562,12 +2638,13 @@ classes:
     class_uri: tech:ProvidedAsSubscription
     description: Technology that is provided or used as a periodic subscription
     aliases:
-      - Provided as SubscriptionProvision
+    - Provided as SubscriptionProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsSubscription
-      - dpv_tech_owl:ProvidedAsSubscription
+    - dpv_tech:ProvidedAsSubscription
+    - dpv_tech_owl:ProvidedAsSubscription
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsSubscription
       dpv_extension_slug: tech
@@ -2577,12 +2654,13 @@ classes:
     class_uri: tech:ProvidedAsSystem
     description: Technology provided as a system
     aliases:
-      - Provided as SystemProvision
+    - Provided as SystemProvision
     in_subset:
-      - tech_subset
+    - tech_provision_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvidedAsSystem
-      - dpv_tech_owl:ProvidedAsSystem
+    - dpv_tech:ProvidedAsSystem
+    - dpv_tech_owl:ProvidedAsSystem
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvidedAsSystem
       dpv_extension_slug: tech
@@ -2592,12 +2670,13 @@ classes:
     class_uri: tech:ProvisionMethod
     description: Method associated with provision or use of technology
     aliases:
-      - Provision Method
+    - Provision Method
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvisionMethod
-      - dpv_tech_owl:ProvisionMethod
+    - dpv_tech:ProvisionMethod
+    - dpv_tech_owl:ProvisionMethod
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvisionMethod
       dpv_extension_slug: tech
@@ -2607,12 +2686,13 @@ classes:
     class_uri: tech:ProvisionStatus
     description: Status indicating whether Technology has been provided
     aliases:
-      - Provision Status
+    - Provision Status
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:ProvisionStatus
-      - dpv_tech_owl:ProvisionStatus
+    - dpv_tech:ProvisionStatus
+    - dpv_tech_owl:ProvisionStatus
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvisionStatus
       dpv_extension_slug: tech
@@ -2622,12 +2702,13 @@ classes:
     class_uri: tech:Purchaser
     description: Actor that purchases Technology
     aliases:
-      - Purchaser
+    - Purchaser
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Purchaser
-      - dpv_tech_owl:Purchaser
+    - dpv_tech:Purchaser
+    - dpv_tech_owl:Purchaser
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Purchaser
@@ -2636,22 +2717,23 @@ classes:
   Smartphone:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - MobilePhone
-      - PersonalComputer
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - MobilePhone
+    - PersonalComputer
     class_uri: tech:Smartphone
     description: |-
       A combination of a mobile phone with computing capabilities similar to a
       PC
     aliases:
-      - Smartphone
+    - Smartphone
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Smartphone
-      - dpv_tech_owl:Smartphone
+    - dpv_tech:Smartphone
+    - dpv_tech_owl:Smartphone
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Smartphone
       dpv_extension_slug: tech
@@ -2659,19 +2741,20 @@ classes:
   SmartphoneApplication:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - TechApplication
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - TechApplication
     class_uri: tech:SmartphoneApplication
     description: A computing or digital program on a smartphone device
     aliases:
-      - Smartphone Application
+    - Smartphone Application
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:SmartphoneApplication
-      - dpv_tech_owl:SmartphoneApplication
+    - dpv_tech:SmartphoneApplication
+    - dpv_tech_owl:SmartphoneApplication
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#SmartphoneApplication
       dpv_extension_slug: tech
@@ -2682,32 +2765,34 @@ classes:
     description: |-
       Virtual parts or components of the technology such as programs and data
     aliases:
-      - Software
+    - Software
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Software
-      - dpv_tech_owl:Software
-    related_mappings:
-      - iso22989:AISystem
+    - dpv_tech:Software
+    - dpv_tech_owl:Software
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Software
       dpv_extension_slug: tech
 
+    related_mappings:
+    - iso22989:AISystem
   SoftwareAgent:
     is_a: DpvAgent
     mixins:
-      - Technology
-      - Software
+    - Technology
+    - Software
     class_uri: tech:SoftwareAgent
     description: A software that acts on behalf of another Entity or technology
     aliases:
-      - Software Agent
+    - Software Agent
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:SoftwareAgent
-      - dpv_tech_owl:SoftwareAgent
+    - dpv_tech:SoftwareAgent
+    - dpv_tech_owl:SoftwareAgent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#SoftwareAgent
       dpv_extension_slug: tech
@@ -2715,18 +2800,19 @@ classes:
   SoftwareFramework:
     is_a: Software
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:SoftwareFramework
     description: |-
       An opinionated collection of functions and architecture design choices
       for building applications
     aliases:
-      - SoftwareFramework
+    - SoftwareFramework
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:SoftwareFramework
-      - dpv_tech_owl:SoftwareFramework
+    - dpv_tech:SoftwareFramework
+    - dpv_tech_owl:SoftwareFramework
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#SoftwareFramework
       dpv_extension_slug: tech
@@ -2734,18 +2820,19 @@ classes:
   SoftwareLibrary:
     is_a: Software
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:SoftwareLibrary
     description: |-
       A collection of pre-built and reusable functions for use in development
       and management of software
     aliases:
-      - SoftwareLibrary
+    - SoftwareLibrary
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:SoftwareLibrary
-      - dpv_tech_owl:SoftwareLibrary
+    - dpv_tech:SoftwareLibrary
+    - dpv_tech_owl:SoftwareLibrary
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#SoftwareLibrary
       dpv_extension_slug: tech
@@ -2757,12 +2844,13 @@ classes:
       Documentation that specifies requirements that must be satisfied by the
       technology
     aliases:
-      - Specification
+    - Specification
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Specification
-      - dpv_tech_owl:Specification
+    - dpv_tech:Specification
+    - dpv_tech_owl:Specification
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Specification
       dpv_extension_slug: tech
@@ -2772,12 +2860,13 @@ classes:
     class_uri: tech:Supplier
     description: Actor that supplies Technology
     aliases:
-      - Supplier
+    - Supplier
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Supplier
-      - dpv_tech_owl:Supplier
+    - dpv_tech:Supplier
+    - dpv_tech_owl:Supplier
     annotations:
       dct_source: DGA 26.3
       upstream_iri: https://w3id.org/dpv/tech/owl#Supplier
@@ -2786,16 +2875,17 @@ classes:
   SystemIntegrator:
     is_a: Partner
     mixins:
-      - Actor
+    - Actor
     class_uri: tech:SystemIntegrator
     description: Actor that integrates Technology in to (larger) systems
     aliases:
-      - System Integrator
+    - System Integrator
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:SystemIntegrator
-      - dpv_tech_owl:SystemIntegrator
+    - dpv_tech:SystemIntegrator
+    - dpv_tech_owl:SystemIntegrator
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#SystemIntegrator
@@ -2806,16 +2896,17 @@ classes:
     class_uri: tech:Action
     description: A process or activity, which could be physical or virtual
     aliases:
-      - Action
+    - Action
     comments:
-      - |-
-        Action is a concept referring to activities or tasks in the context of
-        technologies producing or using them as inputs or outputs
+    - |-
+      Action is a concept referring to activities or tasks in the context of
+      technologies producing or using them as inputs or outputs
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Action
-      - dpv_tech_owl:Action
+    - dpv_tech:Action
+    - dpv_tech_owl:Action
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Action
       dpv_extension_slug: tech
@@ -2823,19 +2914,20 @@ classes:
   TechApplication:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Software
+    - DpvLocation
+    - Technology
+    - ProcessingLocation
+    - Software
     class_uri: tech:Application
     description: Application or Application Software
     aliases:
-      - Application
+    - Application
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Application
-      - dpv_tech_owl:Application
+    - dpv_tech:Application
+    - dpv_tech_owl:Application
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Application
       dpv_extension_slug: tech
@@ -2843,21 +2935,42 @@ classes:
   TechAuditor:
     is_a: Partner
     mixins:
-      - Actor
+    - Actor
     class_uri: tech:Auditor
     description: |-
       Actor that audits Technology for conformance to policies, standards, or
       legal requirements
     aliases:
-      - Auditor
+    - Auditor
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Auditor
-      - dpv_tech_owl:Auditor
+    - dpv_tech:Auditor
+    - dpv_tech_owl:Auditor
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Auditor
+      dpv_extension_slug: tech
+
+  TechCapability:
+    class_uri: tech:Capability
+    description: Expression of what the technology is capable of achieving or 
+      providing
+    aliases:
+    - Capability
+    comments:
+    - |-
+      Examples of capabilities are image recognition, sentiment analysis,
+      machine translation
+    in_subset:
+    - tech_core_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:Capability
+    - dpv_tech_owl:Capability
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Capability
       dpv_extension_slug: tech
 
   TechComponent:
@@ -2867,12 +2980,13 @@ classes:
       A self-contained part of a system that performs a specific function and
       interacts with other components
     aliases:
-      - Component
+    - Component
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Component
-      - dpv_tech_owl:Component
+    - dpv_tech:Component
+    - dpv_tech_owl:Component
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Component
       dpv_extension_slug: tech
@@ -2884,12 +2998,13 @@ classes:
       Actor that uses Technology directly or indirectly by providing it to
       Users
     aliases:
-      - Customer
+    - Customer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Customer
-      - dpv_tech_owl:Customer
+    - dpv_tech:Customer
+    - dpv_tech_owl:Customer
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Customer
@@ -2902,16 +3017,17 @@ classes:
       A conclusion or determination of an action or choice in the context of
       technologies
     aliases:
-      - Decision
+    - Decision
     comments:
-      - |-
-        Decision is a concept referring to activities or tasks in the context of
-        technologies producing or using them as inputs or outputs
+    - |-
+      Decision is a concept referring to activities or tasks in the context of
+      technologies producing or using them as inputs or outputs
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Decision
-      - dpv_tech_owl:Decision
+    - dpv_tech:Decision
+    - dpv_tech_owl:Decision
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Decision
       dpv_extension_slug: tech
@@ -2922,19 +3038,71 @@ classes:
       Expression of what goals or purposes the technology's capabilities are
       being used towards or developed for
     aliases:
-      - Function
+    - Function
     comments:
-      - |-
-        Function is a broad concept that can include purposes such as identify
-        verification, capability such as image recognition, or specific security
-        measures such as encryption
+    - |-
+      Function is a broad concept that can include purposes such as identify
+      verification, capability such as image recognition, or specific security
+      measures such as encryption
     in_subset:
-      - tech_subset
+    - tech_core_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Function
-      - dpv_tech_owl:Function
+    - dpv_tech:Function
+    - dpv_tech_owl:Function
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Function
+      dpv_extension_slug: tech
+
+  TechLifecycleStage:
+    class_uri: tech:LifecycleStage
+    description: A stage within the lifecycle of technology
+    aliases:
+    - LifecycleStage
+    - Lifecycle Stage
+    in_subset:
+    - tech_core_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:LifecycleStage
+    - dpv_tech_owl:LifecycleStage
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#LifecycleStage
+      dpv_extension_slug: tech
+
+  TechMarketAvailabilityStatus:
+    is_a: TechnologyStatus
+    class_uri: tech:MarketAvailabilityStatus
+    description: Status indicating whether Technology is available on the market
+    aliases:
+    - MarketAvailabilityStatus
+    - Market Availability Status
+    in_subset:
+    - tech_status_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:MarketAvailabilityStatus
+    - dpv_tech_owl:MarketAvailabilityStatus
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#MarketAvailabilityStatus
+      dpv_extension_slug: tech
+
+  TechModel:
+    is_a: Technology
+    class_uri: tech:Model
+    description: |-
+      A simplified representation or abstraction of a system, process, or
+      concept
+    aliases:
+    - Model
+    in_subset:
+    - tech_tools_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:Model
+    - dpv_tech_owl:Model
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Model
       dpv_extension_slug: tech
 
   TechOperator:
@@ -2942,18 +3110,19 @@ classes:
     class_uri: tech:Operator
     description: Actor that operates the Technology
     aliases:
-      - Operator
+    - Operator
     comments:
-      - |-
-        Operator and User are similar concepts but may refer to different
-        actors, for example in the scenario where the user determines what
-        actions to perform on the technology and the operator executes these
-        actions by operating the technology
+    - |-
+      Operator and User are similar concepts but may refer to different
+      actors, for example in the scenario where the user determines what
+      actions to perform on the technology and the operator executes these
+      actions by operating the technology
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Operator
-      - dpv_tech_owl:Operator
+    - dpv_tech:Operator
+    - dpv_tech_owl:Operator
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Operator
       dpv_extension_slug: tech
@@ -2963,12 +3132,13 @@ classes:
     class_uri: tech:Producer
     description: Actor that produces Technology
     aliases:
-      - Producer
+    - Producer
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Producer
-      - dpv_tech_owl:Producer
+    - dpv_tech:Producer
+    - dpv_tech_owl:Producer
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Producer
@@ -2979,12 +3149,13 @@ classes:
     class_uri: tech:Provider
     description: Actor that provides Technology
     aliases:
-      - Provider
+    - Provider
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Provider
-      - dpv_tech_owl:Provider
+    - dpv_tech:Provider
+    - dpv_tech_owl:Provider
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Provider
@@ -2997,16 +3168,17 @@ classes:
       A recommendation or suggestion of an action or decision or choice in the
       context of technologies
     aliases:
-      - Recommendation
+    - Recommendation
     comments:
-      - |-
-        Recommendation is a concept referring to activities or tasks in the
-        context of technologies producing or using them as inputs or outputs
+    - |-
+      Recommendation is a concept referring to activities or tasks in the
+      context of technologies producing or using them as inputs or outputs
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Recommendation
-      - dpv_tech_owl:Recommendation
+    - dpv_tech:Recommendation
+    - dpv_tech_owl:Recommendation
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Recommendation
       dpv_extension_slug: tech
@@ -3014,19 +3186,21 @@ classes:
   TechService:
     is_a: Technology
     class_uri: tech:Service
-    description: The carrying out of a specific task or set of tasks as a service
+    description: The carrying out of a specific task or set of tasks as a 
+      service
     aliases:
-      - Service
+    - Service
     comments:
-      - |-
-        This concept is distinct from dpv:Service as it represents the notion of
-        a technical service whereas dpv:Service can also refer to
-        organisational, legal, social, and other meanings of service
+    - |-
+      This concept is distinct from dpv:Service as it represents the notion of
+      a technical service whereas dpv:Service can also refer to
+      organisational, legal, social, and other meanings of service
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Service
-      - dpv_tech_owl:Service
+    - dpv_tech:Service
+    - dpv_tech_owl:Service
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Service
       dpv_extension_slug: tech
@@ -3036,18 +3210,19 @@ classes:
     class_uri: tech:Subject
     description: Actor that is subjected to the use or impact of Technology
     aliases:
-      - Subject
+    - Subject
     comments:
-      - |-
-        Subject can be a human or non-human entity. To explicitly indicate that
-        the subject is a human, and to reuse DPV's human subject taxonomy, the
-        tech:Subject should also be defined as an instance or category of
-        dpv:HumanSubject
+    - |-
+      Subject can be a human or non-human entity. To explicitly indicate that
+      the subject is a human, and to reuse DPV's human subject taxonomy, the
+      tech:Subject should also be defined as an instance or category of
+      dpv:HumanSubject
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Subject
-      - dpv_tech_owl:Subject
+    - dpv_tech:Subject
+    - dpv_tech_owl:Subject
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#Subject
@@ -3060,12 +3235,13 @@ classes:
       A collection of components that interact to achieve a specific goal or
       function
     aliases:
-      - System
+    - System
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:System
-      - dpv_tech_owl:System
+    - dpv_tech:System
+    - dpv_tech_owl:System
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#System
       dpv_extension_slug: tech
@@ -3073,19 +3249,47 @@ classes:
   TechUser:
     is_a: TechCustomer
     mixins:
-      - Actor
+    - Actor
     class_uri: tech:User
     description: Actor that uses Technology
     aliases:
-      - User
+    - User
     in_subset:
-      - tech_subset
+    - tech_actors_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:User
-      - dpv_tech_owl:User
+    - dpv_tech:User
+    - dpv_tech_owl:User
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#User
+      dpv_extension_slug: tech
+
+  TechUserAgent:
+    is_a: SoftwareAgent
+    mixins:
+    - Technology
+    class_uri: tech:UserAgent
+    description: A software agent that represents a person (i.e. a human)
+    aliases:
+    - UserAgent
+    - User-Agent
+    comments:
+    - |-
+      User Agent as defined here specifically represents software agents that
+      represent humans, whether directly or indirectly, based on the
+      well-defined use of this term in Web interactions. Software that is not
+      representing a human but which acts or declares itself as a user agent
+      is termed as 'user agent spoofing' (see
+      https://developer.mozilla.org/en-US/docs/Glossary/User_agent)
+    in_subset:
+    - tech_tools_subset
+    - tech_subset
+    exact_mappings:
+    - dpv_tech:UserAgent
+    - dpv_tech_owl:UserAgent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#UserAgent
       dpv_extension_slug: tech
 
   TechnologyReadinessLevel:
@@ -3093,12 +3297,13 @@ classes:
     class_uri: tech:TechnologyReadinessLevel
     description: Indication of maturity of Technology (ISO 16290:2013)
     aliases:
-      - Technology Readiness Level (TRL)
+    - Technology Readiness Level (TRL)
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:TechnologyReadinessLevel
-      - dpv_tech_owl:TechnologyReadinessLevel
+    - dpv_tech:TechnologyReadinessLevel
+    - dpv_tech_owl:TechnologyReadinessLevel
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#TechnologyReadinessLevel
       dpv_extension_slug: tech
@@ -3106,14 +3311,16 @@ classes:
   TechnologyStatus:
     is_a: Status
     class_uri: tech:TechnologyStatus
-    description: Status associated with development, deployment, and use of technology
+    description: Status associated with development, deployment, and use of 
+      technology
     aliases:
-      - Technology Status
+    - Technology Status
     in_subset:
-      - tech_subset
+    - tech_status_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:TechnologyStatus
-      - dpv_tech_owl:TechnologyStatus
+    - dpv_tech:TechnologyStatus
+    - dpv_tech_owl:TechnologyStatus
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#TechnologyStatus
       dpv_extension_slug: tech
@@ -3121,16 +3328,17 @@ classes:
   Telephone:
     is_a: Device
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:Telephone
     description: Telephone
     aliases:
-      - Telephone
+    - Telephone
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:Telephone
-      - dpv_tech_owl:Telephone
+    - dpv_tech:Telephone
+    - dpv_tech_owl:Telephone
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Telephone
       dpv_extension_slug: tech
@@ -3138,16 +3346,17 @@ classes:
   TestingPlan:
     is_a: Plan
     mixins:
-      - Documentation
+    - Documentation
     class_uri: tech:TestingPlan
     description: Plan associated with testing technology
     aliases:
-      - Testing Plan
+    - Testing Plan
     in_subset:
-      - tech_subset
+    - tech_docs_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:TestingPlan
-      - dpv_tech_owl:TestingPlan
+    - dpv_tech:TestingPlan
+    - dpv_tech_owl:TestingPlan
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#TestingPlan
       dpv_extension_slug: tech
@@ -3157,39 +3366,15 @@ classes:
     class_uri: tech:TextualContent
     description: Content that is or has a textual component
     aliases:
-      - Textual Content
+    - Textual Content
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:TextualContent
-      - dpv_tech_owl:TextualContent
+    - dpv_tech:TextualContent
+    - dpv_tech_owl:TextualContent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#TextualContent
-      dpv_extension_slug: tech
-
-  UserAgent:
-    is_a: SoftwareAgent
-    mixins:
-      - Technology
-    class_uri: tech:UserAgent
-    description: A software agent that represents a person (i.e. a human)
-    aliases:
-      - User-Agent
-    comments:
-      - |-
-        User Agent as defined here specifically represents software agents that
-        represent humans, whether directly or indirectly, based on the
-        well-defined use of this term in Web interactions. Software that is not
-        representing a human but which acts or declares itself as a user agent
-        is termed as 'user agent spoofing' (see
-        https://developer.mozilla.org/en-US/docs/Glossary/User_agent)
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:UserAgent
-      - dpv_tech_owl:UserAgent
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#UserAgent
       dpv_extension_slug: tech
 
   VideoContent:
@@ -3197,12 +3382,13 @@ classes:
     class_uri: tech:VideoContent
     description: Content that is or has a video component
     aliases:
-      - Video Content
+    - Video Content
     in_subset:
-      - tech_subset
+    - tech_io_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:VideoContent
-      - dpv_tech_owl:VideoContent
+    - dpv_tech:VideoContent
+    - dpv_tech_owl:VideoContent
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#VideoContent
       dpv_extension_slug: tech
@@ -3210,18 +3396,19 @@ classes:
   WebScraper:
     is_a: Software
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:WebScraper
     description: |-
       Software that extracts data from websites to implement collection
       practices colloquially called "web scraping"
     aliases:
-      - Web Scraper
+    - Web Scraper
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:WebScraper
-      - dpv_tech_owl:WebScraper
+    - dpv_tech:WebScraper
+    - dpv_tech_owl:WebScraper
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#WebScraper
       dpv_extension_slug: tech
@@ -3229,16 +3416,17 @@ classes:
   WiFi:
     is_a: Networking
     mixins:
-      - CommunicationMechanism
+    - CommunicationMechanism
     class_uri: tech:WiFi
     description: Technology utilising Wi-Fi wireless networking
     aliases:
-      - WiFi
+    - WiFi
     in_subset:
-      - tech_subset
+    - tech_comms_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:WiFi
-      - dpv_tech_owl:WiFi
+    - dpv_tech:WiFi
+    - dpv_tech_owl:WiFi
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#WiFi
       dpv_extension_slug: tech
@@ -3246,16 +3434,17 @@ classes:
   iOS:
     is_a: OS
     mixins:
-      - Technology
+    - Technology
     class_uri: tech:iOS
     description: iOS operating system
     aliases:
-      - iOS
+    - iOS
     in_subset:
-      - tech_subset
+    - tech_tools_subset
+    - tech_subset
     exact_mappings:
-      - dpv_tech:iOS
-      - dpv_tech_owl:iOS
+    - dpv_tech:iOS
+    - dpv_tech_owl:iOS
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#iOS
       dpv_extension_slug: tech

@@ -9,8 +9,8 @@ description: |-
   contract_status, contract_types) rather than all 965 DPV classes.
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -36,7 +36,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -50,8 +50,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv_common
+- linkml:types
+- dpv:schema/dpv_common
 
 subsets:
 
@@ -64,13 +64,13 @@ slots:
     definition_uri: dpv:hasApplicableLaw
     description: Indicates applicability of a Law
     aliases:
-      - has applicable law
+    - has applicable law
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasApplicableLaw
-      - dpv_owl:hasApplicableLaw
+    - dpv_upstream:hasApplicableLaw
+    - dpv_owl:hasApplicableLaw
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -78,13 +78,13 @@ slots:
     definition_uri: dpv:hasContractControl
     description: Indicates the contract to be used with a contract
     aliases:
-      - has contract control
+    - has contract control
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasContractControl
-      - dpv_owl:hasContractControl
+    - dpv_upstream:hasContractControl
+    - dpv_owl:hasContractControl
     annotations:
       skos_in_scheme: contract-properties
 
@@ -93,13 +93,13 @@ slots:
     definition_uri: dpv:hasContractStatus
     description: Indicates the status of the contract
     aliases:
-      - has contract status
+    - has contract status
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasContractStatus
-      - dpv_owl:hasContractStatus
+    - dpv_upstream:hasContractStatus
+    - dpv_owl:hasContractStatus
     annotations:
       skos_in_scheme: contract-properties
 
@@ -108,28 +108,29 @@ slots:
     description: |-
       Indicates the association or involvement of specified contractual clause
     aliases:
-      - has contractual clause
+    - has contractual clause
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasContractualClause
-      - dpv_owl:hasContractualClause
+    - dpv_upstream:hasContractualClause
+    - dpv_owl:hasContractualClause
     annotations:
       skos_in_scheme: contract-properties
 
   has_contractual_fulfilment_status:
     is_a: has_contract_status
     definition_uri: dpv:hasContractualFulfilmentStatus
-    description: Indicates the fulfilment status of a contract or a contractual clause
+    description: Indicates the fulfilment status of a contract or a contractual 
+      clause
     aliases:
-      - has contractual fulfilment status
+    - has contractual fulfilment status
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasContractualFulfilmentStatus
-      - dpv_owl:hasContractualFulfilmentStatus
+    - dpv_upstream:hasContractualFulfilmentStatus
+    - dpv_owl:hasContractualFulfilmentStatus
     annotations:
       skos_in_scheme: contract-properties
 
@@ -138,13 +139,13 @@ slots:
     definition_uri: dpv:hasCountry
     description: Indicates applicability of specified country
     aliases:
-      - has country
+    - has country
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasCountry
-      - dpv_owl:hasCountry
+    - dpv_upstream:hasCountry
+    - dpv_owl:hasCountry
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -154,13 +155,13 @@ slots:
       Specifies the method by which an entity has indicated the specific
       context
     aliases:
-      - has indication method
+    - has indication method
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasIndicationMethod
-      - dpv_owl:hasIndicationMethod
+    - dpv_upstream:hasIndicationMethod
+    - dpv_owl:hasIndicationMethod
     annotations:
       skos_in_scheme: legal-basis-properties
 
@@ -169,18 +170,18 @@ slots:
     definition_uri: dpv:hasInverseJurisdiction
     description: Indicates the inverse jurisdiction for a given jurisdiction
     aliases:
-      - has inverse jurisdiction
+    - has inverse jurisdiction
     comments:
-      - |-
-        Using this property gives the set of all other jurisdictions that are
-        not part of the jurisdiction e.g. when used with a country, it refers to
-        all other countries
+    - |-
+      Using this property gives the set of all other jurisdictions that are
+      not part of the jurisdiction e.g. when used with a country, it refers to
+      all other countries
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasInverseJurisdiction
-      - dpv_owl:hasInverseJurisdiction
+    - dpv_upstream:hasInverseJurisdiction
+    - dpv_owl:hasInverseJurisdiction
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -188,13 +189,13 @@ slots:
     definition_uri: dpv:hasJurisdiction
     description: Indicates applicability of specified jurisdiction
     aliases:
-      - has jurisdiction
+    - has jurisdiction
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasJurisdiction
-      - dpv_owl:hasJurisdiction
+    - dpv_upstream:hasJurisdiction
+    - dpv_owl:hasJurisdiction
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -202,13 +203,13 @@ slots:
     definition_uri: dpv:hasLegalBasis
     description: Indicates use or applicability of a Legal Basis
     aliases:
-      - has legal basis
+    - has legal basis
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasLegalBasis
-      - dpv_owl:hasLegalBasis
+    - dpv_upstream:hasLegalBasis
+    - dpv_owl:hasLegalBasis
     annotations:
       skos_in_scheme: legal-basis-properties
 
@@ -216,13 +217,13 @@ slots:
     definition_uri: dpv:hasLocation
     description: Indicates information about location
     aliases:
-      - has location
+    - has location
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasLocation
-      - dpv_owl:hasLocation
+    - dpv_upstream:hasLocation
+    - dpv_owl:hasLocation
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -230,13 +231,13 @@ slots:
     definition_uri: dpv:hasParty
     description: Indicates a legal entity involved as a party in a contract
     aliases:
-      - has party
+    - has party
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasParty
-      - dpv_owl:hasParty
+    - dpv_upstream:hasParty
+    - dpv_owl:hasParty
     annotations:
       skos_in_scheme: contract-properties
 
@@ -245,13 +246,13 @@ slots:
     definition_uri: dpv:hasThirdCountry
     description: Indicates applicability or relevance of a 'third country'
     aliases:
-      - has third country
+    - has third country
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:hasThirdCountry
-      - dpv_owl:hasThirdCountry
+    - dpv_upstream:hasThirdCountry
+    - dpv_owl:hasThirdCountry
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -261,13 +262,13 @@ slots:
       Specifies the temporal information for when the entity has indicated the
       specific context
     aliases:
-      - is indicated at time
+    - is indicated at time
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:isIndicatedAtTime
-      - dpv_owl:isIndicatedAtTime
+    - dpv_upstream:isIndicatedAtTime
+    - dpv_owl:isIndicatedAtTime
     annotations:
       skos_in_scheme: legal-basis-properties
 
@@ -275,13 +276,13 @@ slots:
     definition_uri: dpv:isIndicatedBy
     description: Specifies entity who indicates the specific context
     aliases:
-      - is indicated by
+    - is indicated by
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:isIndicatedBy
-      - dpv_owl:isIndicatedBy
+    - dpv_upstream:isIndicatedBy
+    - dpv_owl:isIndicatedBy
     annotations:
       skos_in_scheme: legal-basis-properties
 
@@ -292,20 +293,20 @@ slots:
       Indicates the interpretation where the location being referenced is
       outside of the indicated concept
     aliases:
-      - is outside of location
+    - is outside of location
     comments:
-      - |-
-        This property is helpful for cases where a distinction needs to be made
-        between inside/outside of a concept, and the area outside of that
-        concept is to be referenced. For example, using Home with
-        dpv:hasLocation means inside the Home, and using this property along
-        with Home means outside of Home - such as the yard or porch
+    - |-
+      This property is helpful for cases where a distinction needs to be made
+      between inside/outside of a concept, and the area outside of that
+      concept is to be referenced. For example, using Home with
+      dpv:hasLocation means inside the Home, and using this property along
+      with Home means outside of Home - such as the yard or porch
     multivalued: true
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:isOutsideOfLocation
-      - dpv_owl:isOutsideOfLocation
+    - dpv_upstream:isOutsideOfLocation
+    - dpv_owl:isOutsideOfLocation
     annotations:
       skos_in_scheme: jurisdiction-properties
 
@@ -316,99 +317,99 @@ classes:
     class_uri: dpv:AcceptContract
     description: Control for accepting a contract
     aliases:
-      - Accept Contract
+    - Accept Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:AcceptContract
-      - dpv_owl:AcceptContract
+    - dpv_upstream:AcceptContract
+    - dpv_owl:AcceptContract
     annotations:
       skos_in_scheme: contract-control-classes
 
   B2B2CContract:
     is_a: B2BContract
     mixins:
-      - LegalBasis
-      - B2CContract
+    - LegalBasis
+    - B2CContract
     class_uri: dpv:B2B2CContract
     description: |-
       A contract between two businesses who partner together to provide
       services to a consumer
     aliases:
-      - Business-to-Business-to-Consumer Contract
+    - Business-to-Business-to-Consumer Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:B2B2CContract
-      - dpv_owl:B2B2CContract
+    - dpv_upstream:B2B2CContract
+    - dpv_owl:B2B2CContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   B2BContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:B2BContract
     description: A contract between two businesses
     aliases:
-      - Business-to-Business Contract
+    - Business-to-Business Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:B2BContract
-      - dpv_owl:B2BContract
+    - dpv_upstream:B2BContract
+    - dpv_owl:B2BContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   B2CContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:B2CContract
     description: |-
       A contract between a business and a consumer where the business provides
       goods or services to the consumer
     aliases:
-      - Business-to-Consumer Contract
+    - Business-to-Consumer Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:B2CContract
-      - dpv_owl:B2CContract
+    - dpv_upstream:B2CContract
+    - dpv_owl:B2CContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   C2BContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:C2BContract
     description: |-
       A contract between a consumer and a business where the business
       purchases goods or services from the consumer
     aliases:
-      - Consumer-to-Business Contract
+    - Consumer-to-Business Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:C2BContract
-      - dpv_owl:C2BContract
+    - dpv_upstream:C2BContract
+    - dpv_owl:C2BContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   C2CContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:C2CContract
     description: A contract between two consumers
     aliases:
-      - Consumer-to-Consumer Contract
+    - Consumer-to-Consumer Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:C2CContract
-      - dpv_owl:C2CContract
+    - dpv_upstream:C2CContract
+    - dpv_owl:C2CContract
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -417,48 +418,48 @@ classes:
     class_uri: dpv:City
     description: A region consisting of urban population and commerce
     aliases:
-      - City
+    - City
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:City
-      - dpv_owl:City
+    - dpv_upstream:City
+    - dpv_owl:City
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   CloudLocation:
     is_a: RemoteLocation
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:CloudLocation
     description: |-
       Location that is in the 'cloud' i.e. a logical location operated over
       the internet
     aliases:
-      - Cloud Location
+    - Cloud Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:CloudLocation
-      - dpv_owl:CloudLocation
+    - dpv_upstream:CloudLocation
+    - dpv_owl:CloudLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   ConfidentialityAgreement:
     is_a: LegalAgreement
     mixins:
-      - LegalMeasure
+    - LegalMeasure
     class_uri: dpv:ConfidentialityAgreement
     description: |-
       Agreements that enforce confidentiality for e.g. to protect business,
       professional, or company secrets
     aliases:
-      - Confidentiality Agreement
+    - Confidentiality Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ConfidentialityAgreement
-      - dpv_owl:ConfidentialityAgreement
+    - dpv_upstream:ConfidentialityAgreement
+    - dpv_owl:ConfidentialityAgreement
     annotations:
       skos_in_scheme: legal-measures-classes
       dct_source: DGA 3.1.a
@@ -468,19 +469,19 @@ classes:
     class_uri: dpv:Consent
     description: Consent of the Data Subject for specified process or activity
     aliases:
-      - Consent
+    - Consent
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Consent
-      - dpv_owl:Consent
+    - dpv_upstream:Consent
+    - dpv_owl:Consent
     annotations:
       skos_in_scheme: legal-basis-classes
 
   ConsumerStandardFormContract:
     is_a: StandardFormContract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ConsumerStandardFormContract
     description: |-
       A contract where the terms and conditions are determined by parties in
@@ -488,12 +489,12 @@ classes:
       other parties have negligible or no ability to negotiate the terms and
       conditions
     aliases:
-      - Consumer Standard Form Contract
+    - Consumer Standard Form Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ConsumerStandardFormContract
-      - dpv_owl:ConsumerStandardFormContract
+    - dpv_upstream:ConsumerStandardFormContract
+    - dpv_owl:ConsumerStandardFormContract
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -504,12 +505,12 @@ classes:
       Creation, completion, fulfilment, or performance of a contract involving
       specified processing of data or technologies
     aliases:
-      - Contract
+    - Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Contract
-      - dpv_owl:Contract
+    - dpv_upstream:Contract
+    - dpv_owl:Contract
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -520,12 +521,12 @@ classes:
       Status associated with activation of a contract i.e. whether its terms
       are active and are required to be performed
     aliases:
-      - Contract Activation Status
+    - Contract Activation Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractActivationStatus
-      - dpv_owl:ContractActivationStatus
+    - dpv_upstream:ContractActivationStatus
+    - dpv_owl:ContractActivationStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -537,17 +538,17 @@ classes:
       terms are considered active i.e. they are applicable and are required to
       be performed
     aliases:
-      - Contract Active
+    - Contract Active
     comments:
-      - |-
-        A contract being active only refers to its terms now being required to
-        be fulfilled, while dpv:ContractBeingPerformed states that they are
-        being performed
+    - |-
+      A contract being active only refers to its terms now being required to
+      be fulfilled, while dpv:ContractBeingPerformed states that they are
+      being performed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractActive
-      - dpv_owl:ContractActive
+    - dpv_upstream:ContractActive
+    - dpv_owl:ContractActive
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -559,12 +560,12 @@ classes:
       terms have been amended through mutual agreement or other means such
       that the contract is still required to be performed
     aliases:
-      - Contract Amended
+    - Contract Amended
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractAmended
-      - dpv_owl:ContractAmended
+    - dpv_upstream:ContractAmended
+    - dpv_owl:ContractAmended
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -575,12 +576,12 @@ classes:
       A provision describing how changes or modifications to the contract can
       be made and the process for implementing them
     aliases:
-      - Contract Amendment Clause
+    - Contract Amendment Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractAmendmentClause
-      - dpv_owl:ContractAmendmentClause
+    - dpv_upstream:ContractAmendmentClause
+    - dpv_owl:ContractAmendmentClause
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -591,12 +592,12 @@ classes:
       Status representing contract has been approved and can be used for
       signing
     aliases:
-      - Contract Approved
+    - Contract Approved
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractApproved
-      - dpv_owl:ContractApproved
+    - dpv_upstream:ContractApproved
+    - dpv_owl:ContractApproved
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -607,12 +608,12 @@ classes:
       Status representing contract that has been fully executed and whose
       terms are being carried out i.e. the contract is being performed
     aliases:
-      - Contract Being Performed
+    - Contract Being Performed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractBeingPerformed
-      - dpv_owl:ContractBeingPerformed
+    - dpv_upstream:ContractBeingPerformed
+    - dpv_owl:ContractBeingPerformed
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -623,67 +624,67 @@ classes:
       Status representing contract being breached where its terms are not
       fulfilled or are violated with legal consequences
     aliases:
-      - Contract Breached
+    - Contract Breached
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractBreached
-      - dpv_owl:ContractBreached
+    - dpv_upstream:ContractBreached
+    - dpv_owl:ContractBreached
     annotations:
       skos_in_scheme: contract-status-classes
 
   ContractByDomain:
     is_a: Contract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ContractByDomain
     description: |-
       A generic concept representing contracts categorised by specific domains
       which dictate the drafting and interpretation of contracts
     aliases:
-      - Contract by Domain
+    - Contract by Domain
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractByDomain
-      - dpv_owl:ContractByDomain
+    - dpv_upstream:ContractByDomain
+    - dpv_owl:ContractByDomain
     annotations:
       skos_in_scheme: contract-types-classes
 
   ContractByEntityType:
     is_a: Contract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ContractByEntityType
     description: |-
       A generic concept representing contracts categorised by the type of
       entities involved - such as Businesses (B), Consumers (C), and
       Governments (G)
     aliases:
-      - Contract by Entity Type
+    - Contract by Entity Type
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractByEntityType
-      - dpv_owl:ContractByEntityType
+    - dpv_upstream:ContractByEntityType
+    - dpv_owl:ContractByEntityType
     annotations:
       skos_in_scheme: contract-types-classes
 
   ContractByNegotiationType:
     is_a: Contract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ContractByNegotiationType
     description: |-
       A generic concept representing contracts categorised based on their use
       or absence of negotiation in the contract forming process
     aliases:
-      - Contract by Negotiation Type
+    - Contract by Negotiation Type
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractByNegotiationType
-      - dpv_owl:ContractByNegotiationType
+    - dpv_upstream:ContractByNegotiationType
+    - dpv_owl:ContractByNegotiationType
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -694,12 +695,12 @@ classes:
       A provision requiring parties to keep certain information confidential
       and not disclose it to third parties
     aliases:
-      - Contract Confidentiality Clause
+    - Contract Confidentiality Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractConfidentialityClause
-      - dpv_owl:ContractConfidentialityClause
+    - dpv_upstream:ContractConfidentialityClause
+    - dpv_owl:ContractConfidentialityClause
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -710,12 +711,12 @@ classes:
       The control or activity associated with accepting, refusing, and other
       actions associated with a contract
     aliases:
-      - Contract Control
+    - Contract Control
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractControl
-      - dpv_owl:ContractControl
+    - dpv_upstream:ContractControl
+    - dpv_owl:ContractControl
     annotations:
       skos_in_scheme: contract-control-classes
 
@@ -726,12 +727,12 @@ classes:
       A section specifying the meanings of key terms and phrases used
       throughout the contract
     aliases:
-      - Contract Definitions
+    - Contract Definitions
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractDefinitions
-      - dpv_owl:ContractDefinitions
+    - dpv_upstream:ContractDefinitions
+    - dpv_owl:ContractDefinitions
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -742,12 +743,12 @@ classes:
       A provision detailing the methods and procedures for resolving
       disagreements or conflicts arising from the contract
     aliases:
-      - Contract DisputeResolution Clause
+    - Contract DisputeResolution Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractDisputeResolutionClause
-      - dpv_owl:ContractDisputeResolutionClause
+    - dpv_upstream:ContractDisputeResolutionClause
+    - dpv_owl:ContractDisputeResolutionClause
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -759,12 +760,12 @@ classes:
       have an issue regarding the interpretation and performance of the
       contract
     aliases:
-      - Contract Disputed
+    - Contract Disputed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractDisputed
-      - dpv_owl:ContractDisputed
+    - dpv_upstream:ContractDisputed
+    - dpv_owl:ContractDisputed
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -775,12 +776,12 @@ classes:
       Status representing the drafting of contract text has been completed and
       it can now be offered for signing
     aliases:
-      - Contract Drafted
+    - Contract Drafted
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractDrafted
-      - dpv_owl:ContractDrafted
+    - dpv_upstream:ContractDrafted
+    - dpv_owl:ContractDrafted
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -791,12 +792,12 @@ classes:
       Status associated with execution of a contract (i.e. signing and
       procedural aspects before the contract terms come in to effect)
     aliases:
-      - Contract Execution Status
+    - Contract Execution Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractExecutionStatus
-      - dpv_owl:ContractExecutionStatus
+    - dpv_upstream:ContractExecutionStatus
+    - dpv_owl:ContractExecutionStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -807,12 +808,12 @@ classes:
       Status representing reaching the expiry defined in the contract, such as
       when the stated duration or the stated obligations have been completed
     aliases:
-      - Contract Expired
+    - Contract Expired
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractExpired
-      - dpv_owl:ContractExpired
+    - dpv_upstream:ContractExpired
+    - dpv_owl:ContractExpired
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -823,12 +824,12 @@ classes:
       Status representing the duration associated with a contract being
       extended through mutual agreement or by a party
     aliases:
-      - Contract Extended
+    - Contract Extended
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractExtended
-      - dpv_owl:ContractExtended
+    - dpv_upstream:ContractExtended
+    - dpv_owl:ContractExtended
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -839,12 +840,12 @@ classes:
       Status representing contract where all its terms have been fulfilled in
       a manner that does not constitute a violation or breach of the contract
     aliases:
-      - Contract Fulfilled
+    - Contract Fulfilled
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractFulfilled
-      - dpv_owl:ContractFulfilled
+    - dpv_upstream:ContractFulfilled
+    - dpv_owl:ContractFulfilled
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -853,12 +854,12 @@ classes:
     class_uri: dpv:ContractFulfilmentStatus
     description: Status associated with fulfilment of a contract
     aliases:
-      - Contract Fulfilment Status
+    - Contract Fulfilment Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractFulfilmentStatus
-      - dpv_owl:ContractFulfilmentStatus
+    - dpv_upstream:ContractFulfilmentStatus
+    - dpv_owl:ContractFulfilmentStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -870,26 +871,27 @@ classes:
       signed by all parties and all other procedural aspects such as exchange
       of signed contract copies have been completed
     aliases:
-      - Contract Fully Executed
+    - Contract Fully Executed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractFullyExecuted
-      - dpv_owl:ContractFullyExecuted
+    - dpv_upstream:ContractFullyExecuted
+    - dpv_owl:ContractFullyExecuted
     annotations:
       skos_in_scheme: contract-status-classes
 
   ContractFullySigned:
     is_a: ContractExecutionStatus
     class_uri: dpv:ContractFullySigned
-    description: Status representing contract has been signed by all concerned parties
+    description: Status representing contract has been signed by all concerned 
+      parties
     aliases:
-      - Contract Fully Signed
+    - Contract Fully Signed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractFullySigned
-      - dpv_owl:ContractFullySigned
+    - dpv_upstream:ContractFullySigned
+    - dpv_owl:ContractFullySigned
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -900,17 +902,17 @@ classes:
       Status representing contract that has been fully executed and whose
       terms are not yet active i.e. they need to be performed at a later time
     aliases:
-      - Contract Inactive
+    - Contract Inactive
     comments:
-      - |-
-        An example of an inactive contract is where its terms need to be
-        fulfilled at a later date, at which point the contract will become
-        active
+    - |-
+      An example of an inactive contract is where its terms need to be
+      fulfilled at a later date, at which point the contract will become
+      active
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractInactive
-      - dpv_owl:ContractInactive
+    - dpv_upstream:ContractInactive
+    - dpv_owl:ContractInactive
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -921,12 +923,12 @@ classes:
       A provision specifying the legal jurisdiction or court where disputes
       related to the contract will be resolved
     aliases:
-      - Contract Jurisdiction Clause
+    - Contract Jurisdiction Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractJurisdictionClause
-      - dpv_owl:ContractJurisdictionClause
+    - dpv_upstream:ContractJurisdictionClause
+    - dpv_owl:ContractJurisdictionClause
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -937,12 +939,12 @@ classes:
       Status representing contract has been successfully negotiated by
       involved parties
     aliases:
-      - Contract Negotiated
+    - Contract Negotiated
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractNegotiated
-      - dpv_owl:ContractNegotiated
+    - dpv_upstream:ContractNegotiated
+    - dpv_owl:ContractNegotiated
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -954,12 +956,12 @@ classes:
       in a manner that does not constitute a violation or breach of the
       contract i.e. there is still time and opportunity to complete the terms
     aliases:
-      - Contract Not Fulfilled
+    - Contract Not Fulfilled
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractNotFulfilled
-      - dpv_owl:ContractNotFulfilled
+    - dpv_upstream:ContractNotFulfilled
+    - dpv_owl:ContractNotFulfilled
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -970,12 +972,12 @@ classes:
       Status representing contract has been offered to a party or to parties
       for reviewing and signing
     aliases:
-      - Contract Offered
+    - Contract Offered
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractOffered
-      - dpv_owl:ContractOffered
+    - dpv_upstream:ContractOffered
+    - dpv_owl:ContractOffered
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -988,12 +990,12 @@ classes:
       constitute a violation or breach of the contract i.e. there is still
       time and opportunity to complete the terms
     aliases:
-      - Contract Partially Fulfilled
+    - Contract Partially Fulfilled
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractPartiallyFulfilled
-      - dpv_owl:ContractPartiallyFulfilled
+    - dpv_upstream:ContractPartiallyFulfilled
+    - dpv_owl:ContractPartiallyFulfilled
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1005,30 +1007,30 @@ classes:
       some parties have signed the contract and others are yet to make a
       decision to sign it
     aliases:
-      - Contract Partially Signed
+    - Contract Partially Signed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractPartiallySigned
-      - dpv_owl:ContractPartiallySigned
+    - dpv_upstream:ContractPartiallySigned
+    - dpv_owl:ContractPartiallySigned
     annotations:
       skos_in_scheme: contract-status-classes
 
   ContractPerformance:
     is_a: Contract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ContractPerformance
     description: |-
       Fulfilment or performance of a contract involving specified processing
       of data or technologies
     aliases:
-      - Contract Performance
+    - Contract Performance
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractPerformance
-      - dpv_owl:ContractPerformance
+    - dpv_upstream:ContractPerformance
+    - dpv_owl:ContractPerformance
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -1037,12 +1039,12 @@ classes:
     class_uri: dpv:ContractPerformanceStatus
     description: Status associated with performance of a contract
     aliases:
-      - Contract Performance Status
+    - Contract Performance Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractPerformanceStatus
-      - dpv_owl:ContractPerformanceStatus
+    - dpv_upstream:ContractPerformanceStatus
+    - dpv_owl:ContractPerformanceStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1053,12 +1055,12 @@ classes:
       An introductory section outlining the background, context, and purpose
       of the contract
     aliases:
-      - Contract Preamble
+    - Contract Preamble
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractPreamble
-      - dpv_owl:ContractPreamble
+    - dpv_upstream:ContractPreamble
+    - dpv_owl:ContractPreamble
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1069,12 +1071,12 @@ classes:
       Status associated with preparation of contracts before they are signed
       or accepted or executed
     aliases:
-      - Contract Preparation Status
+    - Contract Preparation Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractPreparationStatus
-      - dpv_owl:ContractPreparationStatus
+    - dpv_upstream:ContractPreparationStatus
+    - dpv_owl:ContractPreparationStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1085,12 +1087,12 @@ classes:
       Status representing contract has been rejected and cannot be used for
       signing
     aliases:
-      - Contract Rejected
+    - Contract Rejected
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractRejected
-      - dpv_owl:ContractRejected
+    - dpv_upstream:ContractRejected
+    - dpv_owl:ContractRejected
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1101,12 +1103,12 @@ classes:
       Status representing contract being renewed with new duration and/or
       applicability where the contract has been fully executed in the past
     aliases:
-      - Contract Renewed
+    - Contract Renewed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractRenewed
-      - dpv_owl:ContractRenewed
+    - dpv_upstream:ContractRenewed
+    - dpv_owl:ContractRenewed
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1117,18 +1119,18 @@ classes:
       Status representing contract has been signed by the indicated signing
       party
     aliases:
-      - Contract Signed By Party
+    - Contract Signed By Party
     comments:
-      - |-
-        The signing party can be expressed using dpv:hasParty with the status
-        along with metadata such as a timestamp, or the status can be used to
-        list whether each party in the contract has signed or not e.g. it is
-        reviewing the contract
+    - |-
+      The signing party can be expressed using dpv:hasParty with the status
+      along with metadata such as a timestamp, or the status can be used to
+      list whether each party in the contract has signed or not e.g. it is
+      reviewing the contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractSignedByParty
-      - dpv_owl:ContractSignedByParty
+    - dpv_upstream:ContractSignedByParty
+    - dpv_owl:ContractSignedByParty
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1137,12 +1139,12 @@ classes:
     class_uri: dpv:ContractStatus
     description: Status associated with a contract
     aliases:
-      - Contract Status
+    - Contract Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractStatus
-      - dpv_owl:ContractStatus
+    - dpv_upstream:ContractStatus
+    - dpv_owl:ContractStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1153,26 +1155,27 @@ classes:
       Status representing contract that has been temporarily suspended through
       mutual agreement or by some parties
     aliases:
-      - Contract Temporarily Suspended
+    - Contract Temporarily Suspended
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractTemporarilySuspended
-      - dpv_owl:ContractTemporarilySuspended
+    - dpv_upstream:ContractTemporarilySuspended
+    - dpv_owl:ContractTemporarilySuspended
     annotations:
       skos_in_scheme: contract-status-classes
 
   ContractTerminated:
     is_a: ContractTerminationStatus
     class_uri: dpv:ContractTerminated
-    description: Status representing contract being terminated by one or more parties
+    description: Status representing contract being terminated by one or more 
+      parties
     aliases:
-      - Contract Terminated
+    - Contract Terminated
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractTerminated
-      - dpv_owl:ContractTerminated
+    - dpv_upstream:ContractTerminated
+    - dpv_owl:ContractTerminated
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1183,12 +1186,12 @@ classes:
       A provision outlining the conditions under which the contract can be
       terminated before its completion, including any penalties or obligations
     aliases:
-      - Contract Termination Clause
+    - Contract Termination Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractTerminationClause
-      - dpv_owl:ContractTerminationClause
+    - dpv_upstream:ContractTerminationClause
+    - dpv_owl:ContractTerminationClause
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1197,26 +1200,27 @@ classes:
     class_uri: dpv:ContractTerminationStatus
     description: Status associated with termination of a contract
     aliases:
-      - Contract Termination Status
+    - Contract Termination Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractTerminationStatus
-      - dpv_owl:ContractTerminationStatus
+    - dpv_upstream:ContractTerminationStatus
+    - dpv_owl:ContractTerminationStatus
     annotations:
       skos_in_scheme: contract-status-classes
 
   ContractUnderNegotiation:
     is_a: ContractPreparationStatus
     class_uri: dpv:ContractUnderNegotiation
-    description: Status representing contract is under negotiation between parties
+    description: Status representing contract is under negotiation between 
+      parties
     aliases:
-      - Contract Under Negotiation
+    - Contract Under Negotiation
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractUnderNegotiation
-      - dpv_owl:ContractUnderNegotiation
+    - dpv_upstream:ContractUnderNegotiation
+    - dpv_owl:ContractUnderNegotiation
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1227,12 +1231,12 @@ classes:
       Status representing contract is under review and is being considered for
       signing
     aliases:
-      - Contract Under Review
+    - Contract Under Review
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractUnderReview
-      - dpv_owl:ContractUnderReview
+    - dpv_upstream:ContractUnderReview
+    - dpv_owl:ContractUnderReview
     annotations:
       skos_in_scheme: contract-status-classes
 
@@ -1244,26 +1248,27 @@ classes:
       fulfilled or have been fulfilled, where either is considered a violation
       of the terms
     aliases:
-      - Contract Violated
+    - Contract Violated
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractViolated
-      - dpv_owl:ContractViolated
+    - dpv_upstream:ContractViolated
+    - dpv_owl:ContractViolated
     annotations:
       skos_in_scheme: contract-status-classes
 
   ContractualClause:
     is_a: DpvThing
     class_uri: dpv:ContractualClause
-    description: A part or component within a contract that outlines its specifics
+    description: A part or component within a contract that outlines its 
+      specifics
     aliases:
-      - Contractual Clause
+    - Contractual Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualClause
-      - dpv_owl:ContractualClause
+    - dpv_upstream:ContractualClause
+    - dpv_owl:ContractualClause
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1274,12 +1279,12 @@ classes:
       Status indicating the terms of the contractual clause are fulfilled i.e.
       they have been successfully completed without violation
     aliases:
-      - Contractual Clause Fulfilled
+    - Contractual Clause Fulfilled
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualClauseFulfilled
-      - dpv_owl:ContractualClauseFulfilled
+    - dpv_upstream:ContractualClauseFulfilled
+    - dpv_owl:ContractualClauseFulfilled
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1288,12 +1293,12 @@ classes:
     class_uri: dpv:ContractualClauseFulfilmentStatus
     description: Status associated with fulfilment of a contractual clause
     aliases:
-      - Contractual Clause Fulfilment Status
+    - Contractual Clause Fulfilment Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualClauseFulfilmentStatus
-      - dpv_owl:ContractualClauseFulfilmentStatus
+    - dpv_upstream:ContractualClauseFulfilmentStatus
+    - dpv_owl:ContractualClauseFulfilmentStatus
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1305,12 +1310,12 @@ classes:
       fulfilled in a manner that does not constitute a violation i.e. there is
       still an opportunity to complete them
     aliases:
-      - Contractual Clause Unfulfilled
+    - Contractual Clause Unfulfilled
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualClauseNotFulfilled
-      - dpv_owl:ContractualClauseNotFulfilled
+    - dpv_upstream:ContractualClauseNotFulfilled
+    - dpv_owl:ContractualClauseNotFulfilled
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1323,12 +1328,12 @@ classes:
       not constitute a violation i.e. there is still an opportunity to
       complete them
     aliases:
-      - Contractual Clause Partially Fulfilled
+    - Contractual Clause Partially Fulfilled
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualClausePartiallyFulfilled
-      - dpv_owl:ContractualClausePartiallyFulfilled
+    - dpv_upstream:ContractualClausePartiallyFulfilled
+    - dpv_owl:ContractualClausePartiallyFulfilled
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -1338,73 +1343,74 @@ classes:
     description: |-
       Status indicating the terms of the contractual clause have been violated
     aliases:
-      - Contractual Clause Breached
+    - Contractual Clause Breached
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualClauseViolated
-      - dpv_owl:ContractualClauseViolated
+    - dpv_upstream:ContractualClauseViolated
+    - dpv_owl:ContractualClauseViolated
     annotations:
       skos_in_scheme: contract-clause-classes
 
   ContractualTerms:
     is_a: LegalMeasure
     class_uri: dpv:ContractualTerms
-    description: Contractual terms governing data handling within or with an entity
+    description: Contractual terms governing data handling within or with an 
+      entity
     aliases:
-      - Contractual Terms
+    - Contractual Terms
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ContractualTerms
-      - dpv_owl:ContractualTerms
+    - dpv_upstream:ContractualTerms
+    - dpv_owl:ContractualTerms
     annotations:
       skos_in_scheme: legal-measures-classes
 
   ControllerDataSubjectAgreement:
     is_a: DataSubjectContract
     mixins:
-      - LegalBasis
-      - LegalMeasure
+    - LegalBasis
+    - LegalMeasure
     class_uri: dpv:ControllerDataSubjectAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for carrying out processing of data
       between a Data Controller and a Data Subject
     aliases:
-      - Controller-Data Subject Agreement
+    - Controller-Data Subject Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ControllerDataSubjectAgreement
-      - dpv_owl:ControllerDataSubjectAgreement
+    - dpv_upstream:ControllerDataSubjectAgreement
+    - dpv_owl:ControllerDataSubjectAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
   ControllerProcessorAgreement:
     is_a: DataProcessorContract
     mixins:
-      - LegalBasis
-      - LegalMeasure
+    - LegalBasis
+    - LegalMeasure
     class_uri: dpv:ControllerProcessorAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for carrying out processing of data
       between a Data Controller and a Data Processor
     aliases:
-      - Controller-Processor Agreement
+    - Controller-Processor Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ControllerProcessorAgreement
-      - dpv_owl:ControllerProcessorAgreement
+    - dpv_upstream:ControllerProcessorAgreement
+    - dpv_owl:ControllerProcessorAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
   DataControllerContract:
     is_a: DataProcessingAgreement
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:DataControllerContract
     description: |-
       Creation, completion, fulfilment, or performance of a contract, with
@@ -1414,60 +1420,61 @@ classes:
       more explicit definition of the entities involved and the intent of the
       contract
     aliases:
-      - Data Controller Contract
+    - Data Controller Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DataControllerContract
-      - dpv_owl:DataControllerContract
+    - dpv_upstream:DataControllerContract
+    - dpv_owl:DataControllerContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   DataHandlingClause:
     is_a: ContractualTerms
     mixins:
-      - LegalMeasure
+    - LegalMeasure
     class_uri: dpv:DataHandlingClause
-    description: Contractual clauses governing handling of data within or by an entity
+    description: Contractual clauses governing handling of data within or by an 
+      entity
     aliases:
-      - Data Handling Clause
+    - Data Handling Clause
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DataHandlingClause
-      - dpv_owl:DataHandlingClause
+    - dpv_upstream:DataHandlingClause
+    - dpv_owl:DataHandlingClause
     annotations:
       skos_in_scheme: legal-measures-classes
 
   DataProcessingAgreement:
     is_a: Contract
     mixins:
-      - LegalBasis
-      - LegalMeasure
+    - LegalBasis
+    - LegalMeasure
     class_uri: dpv:DataProcessingAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for carrying out processing of data
     aliases:
-      - Data Processing Agreement
+    - Data Processing Agreement
     comments:
-      - |-
-        For specific role-based data processing agreements, see concepts for
-        Processors and JointDataController agreements.
+    - |-
+      For specific role-based data processing agreements, see concepts for
+      Processors and JointDataController agreements.
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DataProcessingAgreement
-      - dpv_owl:DataProcessingAgreement
-    narrow_mappings:
-      - gists:Agreement
+    - dpv_upstream:DataProcessingAgreement
+    - dpv_owl:DataProcessingAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
+    narrow_mappings:
+    - gists:Agreement
   DataProcessorContract:
     is_a: DataProcessingAgreement
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:DataProcessorContract
     description: |-
       Creation, completion, fulfilment, or performance of a contract, with the
@@ -1477,19 +1484,19 @@ classes:
       explicit definition of the entities involved and the intent of the
       contract
     aliases:
-      - Data Processor Contract
+    - Data Processor Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DataProcessorContract
-      - dpv_owl:DataProcessorContract
+    - dpv_upstream:DataProcessorContract
+    - dpv_owl:DataProcessorContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   DataSubjectContract:
     is_a: DataProcessingAgreement
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:DataSubjectContract
     description: |-
       Creation, completion, fulfilment, or performance of a contract, with the
@@ -1499,12 +1506,12 @@ classes:
       explicit definition of the entities involved and the intent of the
       contract
     aliases:
-      - Data Subject Contract
+    - Data Subject Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DataSubjectContract
-      - dpv_owl:DataSubjectContract
+    - dpv_upstream:DataSubjectContract
+    - dpv_owl:DataSubjectContract
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -1515,12 +1522,12 @@ classes:
       Specific or special categories and instances of legal basis intended for
       justifying data transfers
     aliases:
-      - Data Transfer Legal Basis
+    - Data Transfer Legal Basis
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DataTransferLegalBasis
-      - dpv_owl:DataTransferLegalBasis
+    - dpv_upstream:DataTransferLegalBasis
+    - dpv_owl:DataTransferLegalBasis
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -1531,30 +1538,30 @@ classes:
       Location that is spread across multiple separate areas with no
       distinction between their importance
     aliases:
-      - Decentralised Locations
+    - Decentralised Locations
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DecentralisedLocations
-      - dpv_owl:DecentralisedLocations
+    - dpv_upstream:DecentralisedLocations
+    - dpv_owl:DecentralisedLocations
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   DistributionAgreement:
     is_a: ContractByDomain
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:DistributionAgreement
     description: |-
       A contract regarding supply of data or technologies between a
       distributor and a supplier
     aliases:
-      - Distribution Agreement
+    - Distribution Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:DistributionAgreement
-      - dpv_owl:DistributionAgreement
+    - dpv_upstream:DistributionAgreement
+    - dpv_owl:DistributionAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -1565,17 +1572,17 @@ classes:
       A political entity indicative of a sovereign or non-sovereign
       territorial state comprising of distinct geographical areas
     aliases:
-      - Country
+    - Country
     comments:
-      - |-
-        The definition of country is not intended for political interpretation.
-        DPVCG welcomes alternate definitions based in existing sources with
-        global scope, such as UN or ISO.
+    - |-
+      The definition of country is not intended for political interpretation.
+      DPVCG welcomes alternate definitions based in existing sources with
+      global scope, such as UN or ISO.
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Country
-      - dpv_owl:Country
+    - dpv_upstream:Country
+    - dpv_owl:Country
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -1587,28 +1594,29 @@ classes:
       authority (or control) claimed, granted, or asserted by a legal entity
       (in particular a legal authority) to govern or enforce rules
     aliases:
-      - Jurisdiction
+    - Jurisdiction
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Jurisdiction
-      - dpv_owl:Jurisdiction
+    - dpv_upstream:Jurisdiction
+    - dpv_owl:Jurisdiction
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   DpvLocation:
     is_a: DpvThing
     class_uri: dpv:Location
-    description: A location is a position, site, or area where something is located
+    description: A location is a position, site, or area where something is 
+      located
     aliases:
-      - Location
+    - Location
     comments:
-      - Location may be geographic, physical, or virtual.
+    - Location may be geographic, physical, or virtual.
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Location
-      - dpv_owl:Location
+    - dpv_upstream:Location
+    - dpv_owl:Location
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -1617,30 +1625,30 @@ classes:
     class_uri: dpv:Region
     description: A region is an area or site that is considered a location
     aliases:
-      - Region
+    - Region
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Region
-      - dpv_owl:Region
+    - dpv_upstream:Region
+    - dpv_owl:Region
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   EULA:
     is_a: LicenseAgreement
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:EULA
     description: |-
       End User License Agreement is a contract entered into between a software
       (or service) developer or provider with the (end-)user
     aliases:
-      - End User License Agreement (EULA)
+    - End User License Agreement (EULA)
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:EULA
-      - dpv_owl:EULA
+    - dpv_upstream:EULA
+    - dpv_owl:EULA
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -1651,44 +1659,45 @@ classes:
       A political union of two or more countries based on economic or trade
       agreements
     aliases:
-      - Economic Union
+    - Economic Union
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:EconomicUnion
-      - dpv_owl:EconomicUnion
+    - dpv_upstream:EconomicUnion
+    - dpv_owl:EconomicUnion
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   EmploymentContract:
     is_a: ContractByDomain
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:EmploymentContract
-    description: A contract regarding employment between an employer and an employee
+    description: A contract regarding employment between an employer and an 
+      employee
     aliases:
-      - Employment Contract
+    - Employment Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:EmploymentContract
-      - dpv_owl:EmploymentContract
+    - dpv_upstream:EmploymentContract
+    - dpv_owl:EmploymentContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   EnterIntoContract:
     is_a: Contract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:EnterIntoContract
     description: Processing necessary to enter into contract
     aliases:
-      - Enter Into Contract
+    - Enter Into Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:EnterIntoContract
-      - dpv_owl:EnterIntoContract
+    - dpv_upstream:EnterIntoContract
+    - dpv_owl:EnterIntoContract
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -1699,12 +1708,12 @@ classes:
       Location that is federated across multiple separate areas with
       designation of a primary or central location
     aliases:
-      - Federated Locations
+    - Federated Locations
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:FederatedLocations
-      - dpv_owl:FederatedLocations
+    - dpv_upstream:FederatedLocations
+    - dpv_owl:FederatedLocations
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -1713,112 +1722,114 @@ classes:
     class_uri: dpv:FixedLocation
     description: Location that is fixed i.e. known to occur at a specific place
     aliases:
-      - Fixed Location
+    - Fixed Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:FixedLocation
-      - dpv_owl:FixedLocation
+    - dpv_upstream:FixedLocation
+    - dpv_owl:FixedLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   FixedMultipleLocations:
     is_a: FixedLocation
     mixins:
-      - LocationFixture
+    - LocationFixture
     class_uri: dpv:FixedMultipleLocations
-    description: Location that is fixed with multiple places e.g. multiple cities
+    description: Location that is fixed with multiple places e.g. multiple 
+      cities
     aliases:
-      - Fixed Multiple Locations
+    - Fixed Multiple Locations
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:FixedMultipleLocations
-      - dpv_owl:FixedMultipleLocations
+    - dpv_upstream:FixedMultipleLocations
+    - dpv_owl:FixedMultipleLocations
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   FixedSingularLocation:
     is_a: FixedLocation
     mixins:
-      - LocationFixture
+    - LocationFixture
     class_uri: dpv:FixedSingularLocation
     description: Location that is fixed at a specific place e.g. a city
     aliases:
-      - Fixed Singular Location
+    - Fixed Singular Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:FixedSingularLocation
-      - dpv_owl:FixedSingularLocation
+    - dpv_upstream:FixedSingularLocation
+    - dpv_owl:FixedSingularLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   G2BContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:G2BContract
     description: A contract between a government and a business
     aliases:
-      - Government-to-Business Contract
+    - Government-to-Business Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:G2BContract
-      - dpv_owl:G2BContract
+    - dpv_upstream:G2BContract
+    - dpv_owl:G2BContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   G2CContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:G2CContract
     description: A contract between a government and consumers
     aliases:
-      - Government-to-Consumer Contract
+    - Government-to-Consumer Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:G2CContract
-      - dpv_owl:G2CContract
+    - dpv_upstream:G2CContract
+    - dpv_owl:G2CContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   G2GContract:
     is_a: ContractByEntityType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:G2GContract
-    description: A contract between two governments or government departments or units
+    description: A contract between two governments or government departments or
+      units
     aliases:
-      - Government-to-Government Contract
+    - Government-to-Government Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:G2GContract
-      - dpv_owl:G2GContract
+    - dpv_upstream:G2GContract
+    - dpv_owl:G2GContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   HybridPublicPrivateSpace:
     is_a: PrivateSpace
     mixins:
-      - DpvLocation
-      - PublicSpace
+    - DpvLocation
+    - PublicSpace
     class_uri: dpv:HybridPublicPrivateSpace
     description: |-
       A space that is a hybrid space i.e it has both public and private
       components - such as by having part of it be a private space or which is
       operated privately
     aliases:
-      - Hybrid Public Private Space
+    - Hybrid Public Private Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:HybridPublicPrivateSpace
-      - dpv_owl:HybridPublicPrivateSpace
+    - dpv_upstream:HybridPublicPrivateSpace
+    - dpv_owl:HybridPublicPrivateSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -1829,40 +1840,40 @@ classes:
       An inverse jurisdiction for a specific jurisdiction is the set of all
       other jurisdictions that are not part of the specific jurisdiction
     aliases:
-      - Inverse Jurisdiction
+    - Inverse Jurisdiction
     comments:
-      - |-
-        Inverse Jurisdictions are helpful when asserting and checking rules that
-        involve a concept representing jurisdictions outside of a given
-        jurisdiction. An inverse jurisdiction of an inverse jurisdiction should
-        give back the same original jurisdiction but this is undefined and
-        strongly dissuaded as it could lead to recursive definitions in some
-        use-cases
+    - |-
+      Inverse Jurisdictions are helpful when asserting and checking rules that
+      involve a concept representing jurisdictions outside of a given
+      jurisdiction. An inverse jurisdiction of an inverse jurisdiction should
+      give back the same original jurisdiction but this is undefined and
+      strongly dissuaded as it could lead to recursive definitions in some
+      use-cases
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:InverseJurisdiction
-      - dpv_owl:InverseJurisdiction
+    - dpv_upstream:InverseJurisdiction
+    - dpv_owl:InverseJurisdiction
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   JointDataControllersAgreement:
     is_a: DataControllerContract
     mixins:
-      - LegalBasis
-      - LegalMeasure
+    - LegalBasis
+    - LegalMeasure
     class_uri: dpv:JointDataControllersAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for carrying out processing of data
       between Controllers within a Joint Controllers relationship
     aliases:
-      - Joint Data Controllers Agreement
+    - Joint Data Controllers Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:JointDataControllersAgreement
-      - dpv_owl:JointDataControllersAgreement
+    - dpv_upstream:JointDataControllersAgreement
+    - dpv_owl:JointDataControllersAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -1871,12 +1882,12 @@ classes:
     class_uri: dpv:Law
     description: A law is a set of rules created by government or authorities
     aliases:
-      - Law
+    - Law
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:Law
-      - dpv_owl:Law
+    - dpv_upstream:Law
+    - dpv_owl:Law
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -1885,12 +1896,12 @@ classes:
     class_uri: dpv:LegalAgreement
     description: A legally binding agreement
     aliases:
-      - Legal Agreement
+    - Legal Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalAgreement
-      - dpv_owl:LegalAgreement
+    - dpv_upstream:LegalAgreement
+    - dpv_owl:LegalAgreement
     annotations:
       skos_in_scheme: legal-measures-classes
 
@@ -1901,20 +1912,20 @@ classes:
       Legal basis used to justify processing of data or use of technology in
       accordance with a law
     aliases:
-      - Legal Basis
+    - Legal Basis
     comments:
-      - |-
-        Legal basis (plural: legal bases) are defined by legislations and
-        regulations, whose applicability is usually restricted to specific
-        jurisdictions which can be represented using dpv:hasJurisdiction or
-        dpv:hasLaw. Legal basis can be used without such declarations, e.g.
-        'Consent', however their interpretation will require association with a
-        law, e.g. 'EU GDPR'.
+    - |-
+      Legal basis (plural: legal bases) are defined by legislations and
+      regulations, whose applicability is usually restricted to specific
+      jurisdictions which can be represented using dpv:hasJurisdiction or
+      dpv:hasLaw. Legal basis can be used without such declarations, e.g.
+      'Consent', however their interpretation will require association with a
+      law, e.g. 'EU GDPR'.
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalBasis
-      - dpv_owl:LegalBasis
+    - dpv_upstream:LegalBasis
+    - dpv_owl:LegalBasis
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -1923,12 +1934,12 @@ classes:
     class_uri: dpv:LegalObligation
     description: Legal Obligation to conduct the specified activities
     aliases:
-      - Legal Obligation
+    - Legal Obligation
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalObligation
-      - dpv_owl:LegalObligation
+    - dpv_upstream:LegalObligation
+    - dpv_owl:LegalObligation
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -1937,12 +1948,12 @@ classes:
     class_uri: dpv:LegalObligationCompleted
     description: Status where the legal obligation has been completed
     aliases:
-      - Legal ObligationCompleted
+    - Legal ObligationCompleted
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalObligationCompleted
-      - dpv_owl:LegalObligationCompleted
+    - dpv_upstream:LegalObligationCompleted
+    - dpv_owl:LegalObligationCompleted
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -1951,12 +1962,12 @@ classes:
     class_uri: dpv:LegalObligationOngoing
     description: Status where the legal obligation is being fulfilled
     aliases:
-      - Legal ObligationOngoing
+    - Legal ObligationOngoing
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalObligationOngoing
-      - dpv_owl:LegalObligationOngoing
+    - dpv_upstream:LegalObligationOngoing
+    - dpv_owl:LegalObligationOngoing
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -1965,12 +1976,12 @@ classes:
     class_uri: dpv:LegalObligationPending
     description: Status where the legal obligation has not been started
     aliases:
-      - Legal ObligationPending
+    - Legal ObligationPending
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalObligationPending
-      - dpv_owl:LegalObligationPending
+    - dpv_upstream:LegalObligationPending
+    - dpv_owl:LegalObligationPending
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -1979,12 +1990,12 @@ classes:
     class_uri: dpv:LegalObligationStatus
     description: Status associated with use of Legal Obligation as a legal basis
     aliases:
-      - Legal ObligationStatus
+    - Legal ObligationStatus
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegalObligationStatus
-      - dpv_owl:LegalObligationStatus
+    - dpv_upstream:LegalObligationStatus
+    - dpv_owl:LegalObligationStatus
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -1995,12 +2006,12 @@ classes:
       Legitimate Interests of a Party as justification for specified
       activities
     aliases:
-      - Legitimate Interest
+    - Legitimate Interest
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterest
-      - dpv_owl:LegitimateInterest
+    - dpv_upstream:LegitimateInterest
+    - dpv_owl:LegitimateInterest
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -2011,12 +2022,12 @@ classes:
       Status where the Legitimate Interest was informed to the data subject or
       other relevant entities
     aliases:
-      - Legitimate InterestInformed
+    - Legitimate InterestInformed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestInformed
-      - dpv_owl:LegitimateInterestInformed
+    - dpv_upstream:LegitimateInterestInformed
+    - dpv_owl:LegitimateInterestInformed
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2025,12 +2036,12 @@ classes:
     class_uri: dpv:LegitimateInterestNotObjected
     description: Status where the use of Legitimate Interest was not objected to
     aliases:
-      - Legitimate InterestNotObjected
+    - Legitimate InterestNotObjected
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestNotObjected
-      - dpv_owl:LegitimateInterestNotObjected
+    - dpv_upstream:LegitimateInterestNotObjected
+    - dpv_owl:LegitimateInterestNotObjected
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2039,79 +2050,80 @@ classes:
     class_uri: dpv:LegitimateInterestObjected
     description: Status where the use of Legitimate Interest was objected to
     aliases:
-      - Legitimate InterestObjected
+    - Legitimate InterestObjected
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestObjected
-      - dpv_owl:LegitimateInterestObjected
+    - dpv_upstream:LegitimateInterestObjected
+    - dpv_owl:LegitimateInterestObjected
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
   LegitimateInterestOfController:
     is_a: LegitimateInterest
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:LegitimateInterestOfController
     description: |-
       Legitimate Interests of a Data Controller in conducting specified
       activities
     aliases:
-      - Legitimate Interest of Controller
+    - Legitimate Interest of Controller
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestOfController
-      - dpv_owl:LegitimateInterestOfController
+    - dpv_upstream:LegitimateInterestOfController
+    - dpv_owl:LegitimateInterestOfController
     annotations:
       skos_in_scheme: legal-basis-classes
 
   LegitimateInterestOfDataSubject:
     is_a: LegitimateInterest
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:LegitimateInterestOfDataSubject
     description: |-
       Legitimate Interests of the Data Subject in conducting specified
       activities
     aliases:
-      - Legitimate Interest of Data Subject
+    - Legitimate Interest of Data Subject
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestOfDataSubject
-      - dpv_owl:LegitimateInterestOfDataSubject
+    - dpv_upstream:LegitimateInterestOfDataSubject
+    - dpv_owl:LegitimateInterestOfDataSubject
     annotations:
       skos_in_scheme: legal-basis-classes
 
   LegitimateInterestOfThirdParty:
     is_a: LegitimateInterest
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:LegitimateInterestOfThirdParty
     description: |-
       Legitimate Interests of a Third Party in conducting specified activities
     aliases:
-      - Legitimate Interest of Third Party
+    - Legitimate Interest of Third Party
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestOfThirdParty
-      - dpv_owl:LegitimateInterestOfThirdParty
+    - dpv_upstream:LegitimateInterestOfThirdParty
+    - dpv_owl:LegitimateInterestOfThirdParty
     annotations:
       skos_in_scheme: legal-basis-classes
 
   LegitimateInterestStatus:
     is_a: Status
     class_uri: dpv:LegitimateInterestStatus
-    description: Status associated with use of Legitimate Interest as a legal basis
+    description: Status associated with use of Legitimate Interest as a legal 
+      basis
     aliases:
-      - Legitimate InterestStatus
+    - Legitimate InterestStatus
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestStatus
-      - dpv_owl:LegitimateInterestStatus
+    - dpv_upstream:LegitimateInterestStatus
+    - dpv_owl:LegitimateInterestStatus
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2122,46 +2134,46 @@ classes:
       Status where the Legitimate Interest was not informed to the data
       subject or other relevant entities
     aliases:
-      - Legitimate InterestUninformed
+    - Legitimate InterestUninformed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LegitimateInterestUninformed
-      - dpv_owl:LegitimateInterestUninformed
+    - dpv_upstream:LegitimateInterestUninformed
+    - dpv_owl:LegitimateInterestUninformed
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
   LicenseAgreement:
     is_a: ContractByDomain
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:LicenseAgreement
     description: |-
       A Legal Document providing permission to utilise data or resource and
       outlining the conditions under which such use is considered valid
     aliases:
-      - License Agreement
+    - License Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LicenseAgreement
-      - dpv_owl:LicenseAgreement
+    - dpv_upstream:LicenseAgreement
+    - dpv_owl:LicenseAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
   LocalLocation:
     is_a: LocationLocality
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:LocalLocation
     description: Location is local
     aliases:
-      - Local Location
+    - Local Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LocalLocation
-      - dpv_owl:LocalLocation
+    - dpv_upstream:LocalLocation
+    - dpv_owl:LocalLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2170,12 +2182,12 @@ classes:
     class_uri: dpv:LocationFixture
     description: The fixture of location refers to whether the location is fixed
     aliases:
-      - Location Fixture
+    - Location Fixture
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LocationFixture
-      - dpv_owl:LocationFixture
+    - dpv_upstream:LocationFixture
+    - dpv_owl:LocationFixture
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2186,29 +2198,29 @@ classes:
       Locality refers to whether the specified location is local within some
       context, e.g. for the user
     aliases:
-      - Location Locality
+    - Location Locality
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:LocationLocality
-      - dpv_owl:LocationLocality
+    - dpv_upstream:LocationLocality
+    - dpv_owl:LocationLocality
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   NDA:
     is_a: LegalAgreement
     mixins:
-      - LegalMeasure
+    - LegalMeasure
     class_uri: dpv:NDA
     description: |-
       Non-disclosure Agreements e.g. preserving confidentiality of information
     aliases:
-      - Non-Disclosure Agreement (NDA)
+    - Non-Disclosure Agreement (NDA)
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:NDA
-      - dpv_owl:NDA
+    - dpv_upstream:NDA
+    - dpv_owl:NDA
     annotations:
       skos_in_scheme: legal-measures-classes
 
@@ -2217,37 +2229,37 @@ classes:
     class_uri: dpv:NegotiateContract
     description: Control for negotiating a contract
     aliases:
-      - Negotiate Contract
+    - Negotiate Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:NegotiateContract
-      - dpv_owl:NegotiateContract
+    - dpv_upstream:NegotiateContract
+    - dpv_owl:NegotiateContract
     annotations:
       skos_in_scheme: contract-control-classes
 
   NegotiatedContract:
     is_a: ContractByNegotiationType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:NegotiatedContract
     description: |-
       A contract where the terms and conditions are determined with all
       parties having the ability to negotiate the terms and conditions
     aliases:
-      - Negotiated Contract
+    - Negotiated Contract
     comments:
-      - |-
-        Negotiation here refers to the opportunity for a party on their own
-        initiative to modify or dictate terms and conditions within a contract.
-        If the party is provided a set of options to choose from or in other
-        ways is dictated which terms and conditions can be present in the
-        contract, neither of these should be considered a negotiation
+    - |-
+      Negotiation here refers to the opportunity for a party on their own
+      initiative to modify or dictate terms and conditions within a contract.
+      If the party is provided a set of options to choose from or in other
+      ways is dictated which terms and conditions can be present in the
+      contract, neither of these should be considered a negotiation
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:NegotiatedContract
-      - dpv_owl:NegotiatedContract
+    - dpv_upstream:NegotiatedContract
+    - dpv_owl:NegotiatedContract
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -2256,26 +2268,27 @@ classes:
     class_uri: dpv:OfferContract
     description: Control for offering a contract
     aliases:
-      - Offer Contract
+    - Offer Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:OfferContract
-      - dpv_owl:OfferContract
+    - dpv_upstream:OfferContract
+    - dpv_owl:OfferContract
     annotations:
       skos_in_scheme: contract-control-classes
 
   OfficialAuthorityExerciseCompleted:
     is_a: OfficialAuthorityExerciseStatus
     class_uri: dpv:OfficialAuthorityExerciseCompleted
-    description: Status where the official authority has been exercised to completion
+    description: Status where the official authority has been exercised to 
+      completion
     aliases:
-      - Official Authority Exercise Completed
+    - Official Authority Exercise Completed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:OfficialAuthorityExerciseCompleted
-      - dpv_owl:OfficialAuthorityExerciseCompleted
+    - dpv_upstream:OfficialAuthorityExerciseCompleted
+    - dpv_owl:OfficialAuthorityExerciseCompleted
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2284,12 +2297,12 @@ classes:
     class_uri: dpv:OfficialAuthorityExerciseOngoing
     description: Status where the official authority is being exercised
     aliases:
-      - Official Authority Exercise Ongoing
+    - Official Authority Exercise Ongoing
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:OfficialAuthorityExerciseOngoing
-      - dpv_owl:OfficialAuthorityExerciseOngoing
+    - dpv_upstream:OfficialAuthorityExerciseOngoing
+    - dpv_owl:OfficialAuthorityExerciseOngoing
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2298,26 +2311,27 @@ classes:
     class_uri: dpv:OfficialAuthorityExercisePending
     description: Status where the official authority has not been exercised
     aliases:
-      - Official Authority Exercise Pending
+    - Official Authority Exercise Pending
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:OfficialAuthorityExercisePending
-      - dpv_owl:OfficialAuthorityExercisePending
+    - dpv_upstream:OfficialAuthorityExercisePending
+    - dpv_owl:OfficialAuthorityExercisePending
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
   OfficialAuthorityExerciseStatus:
     is_a: Status
     class_uri: dpv:OfficialAuthorityExerciseStatus
-    description: Status associated with use of Official Authority as a legal basis
+    description: Status associated with use of Official Authority as a legal 
+      basis
     aliases:
-      - Official Authority Exercise Status
+    - Official Authority Exercise Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:OfficialAuthorityExerciseStatus
-      - dpv_owl:OfficialAuthorityExerciseStatus
+    - dpv_upstream:OfficialAuthorityExerciseStatus
+    - dpv_owl:OfficialAuthorityExerciseStatus
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2328,74 +2342,74 @@ classes:
       Activities are necessary or authorised through the official authority
       granted to or vested in the Data Controller
     aliases:
-      - Official Authority of Controller
+    - Official Authority of Controller
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:OfficialAuthorityOfController
-      - dpv_owl:OfficialAuthorityOfController
+    - dpv_upstream:OfficialAuthorityOfController
+    - dpv_owl:OfficialAuthorityOfController
     annotations:
       skos_in_scheme: legal-basis-classes
 
   PersonalSpace:
     is_a: PrivateSpace
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PersonalSpace
     description: |-
       A private space associated with an individual in a personal capacity -
       such as their home or the space around their physical person e.g. my
       home or my room
     aliases:
-      - Personal Space
+    - Personal Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PersonalSpace
-      - dpv_owl:PersonalSpace
-    narrow_mappings:
-      - gists:GeoRegion
+    - dpv_upstream:PersonalSpace
+    - dpv_owl:PersonalSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
+    narrow_mappings:
+    - gists:GeoRegion
   PrivateCommunalSpace:
     is_a: PrivateSpace
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PrivateCommunalSpace
     description: |-
       A space that is accessible to a group or a community within a private
       space and where members of the public do not have access to it e.g.
       society amenities such as gyms and pools
     aliases:
-      - Private Communal Space
+    - Private Communal Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PrivateCommunalSpace
-      - dpv_owl:PrivateCommunalSpace
+    - dpv_upstream:PrivateCommunalSpace
+    - dpv_owl:PrivateCommunalSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PrivateLocation:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PrivateLocation
     description: |-
       Location that is not or cannot be accessed by the public and is
       controlled as a private space
     aliases:
-      - Private Location (deprecated)
+    - Private Location (deprecated)
     comments:
-      - |-
-        This concept will be deprecated in a future DPV release, it is suggested
-        to use the better defined and legally aligned dpv:PrivateSpace instead
+    - |-
+      This concept will be deprecated in a future DPV release, it is suggested
+      to use the better defined and legally aligned dpv:PrivateSpace instead
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PrivateLocation
-      - dpv_owl:PrivateLocation
+    - dpv_upstream:PrivateLocation
+    - dpv_owl:PrivateLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2406,87 +2420,87 @@ classes:
       A space that is owned or controlled by a private entity and where access
       to members of the public is restricted
     aliases:
-      - Private Space
+    - Private Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PrivateSpace
-      - dpv_owl:PrivateSpace
+    - dpv_upstream:PrivateSpace
+    - dpv_owl:PrivateSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PrivatelyOperatedPublicSpace:
     is_a: HybridPublicPrivateSpace
     mixins:
-      - DpvLocation
-      - PubliclyAccessibleSpace
+    - DpvLocation
+    - PubliclyAccessibleSpace
     class_uri: dpv:PrivatelyOperatedPublicSpace
     description: |-
       A space that is operated or managed by a private entity but which is
       accessible to the public e.g. a public bus station operated by a
       specific company
     aliases:
-      - Privately Operated Public Space
+    - Privately Operated Public Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PrivatelyOperatedPublicSpace
-      - dpv_owl:PrivatelyOperatedPublicSpace
+    - dpv_upstream:PrivatelyOperatedPublicSpace
+    - dpv_owl:PrivatelyOperatedPublicSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PrivatelyOwnedPublicSpace:
     is_a: HybridPublicPrivateSpace
     mixins:
-      - DpvLocation
-      - PrivatelyOwnedSpace
+    - DpvLocation
+    - PrivatelyOwnedSpace
     class_uri: dpv:PrivatelyOwnedPublicSpace
     description: |-
       A space that is privately owned but which is accessible and usable by
       the public - whether freely or through a process which is open to all
       members of the public e.g. hotel lobby, shopping mall atriums
     aliases:
-      - Privately Owned Public Space
+    - Privately Owned Public Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PrivatelyOwnedPublicSpace
-      - dpv_owl:PrivatelyOwnedPublicSpace
+    - dpv_upstream:PrivatelyOwnedPublicSpace
+    - dpv_owl:PrivatelyOwnedPublicSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PrivatelyOwnedSpace:
     is_a: PrivateSpace
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PrivatelyOwnedSpace
     description: A place that is privately owned e.g. offices, malls
     aliases:
-      - Privately Owned Space
+    - Privately Owned Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PrivatelyOwnedSpace
-      - dpv_owl:PrivatelyOwnedSpace
+    - dpv_upstream:PrivatelyOwnedSpace
+    - dpv_owl:PrivatelyOwnedSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   ProviderStandardFormContract:
     is_a: StandardFormContract
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ProviderStandardFormContract
     description: |-
       A contract where the terms and conditions are determined by parties in
       the role of a 'provider', and the other parties have negligible or no
       ability to negotiate the terms and conditions
     aliases:
-      - Provider Standard Form Contract
+    - Provider Standard Form Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ProviderStandardFormContract
-      - dpv_owl:ProviderStandardFormContract
+    - dpv_upstream:ProviderStandardFormContract
+    - dpv_owl:ProviderStandardFormContract
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -2497,12 +2511,12 @@ classes:
       Activities are necessary or beneficial for interest of the public or
       society at large
     aliases:
-      - Public Interest
+    - Public Interest
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicInterest
-      - dpv_owl:PublicInterest
+    - dpv_upstream:PublicInterest
+    - dpv_owl:PublicInterest
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -2511,12 +2525,12 @@ classes:
     class_uri: dpv:PublicInterestCompleted
     description: Status where the public interest activity has been completed
     aliases:
-      - Public Interest Completed
+    - Public Interest Completed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicInterestCompleted
-      - dpv_owl:PublicInterestCompleted
+    - dpv_upstream:PublicInterestCompleted
+    - dpv_owl:PublicInterestCompleted
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2527,12 +2541,12 @@ classes:
       Status where the public interest activity was objected to by the Data
       Subject or another relevant entity
     aliases:
-      - Public Interest Objected
+    - Public Interest Objected
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicInterestObjected
-      - dpv_owl:PublicInterestObjected
+    - dpv_upstream:PublicInterestObjected
+    - dpv_owl:PublicInterestObjected
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2541,12 +2555,12 @@ classes:
     class_uri: dpv:PublicInterestOngoing
     description: Status where the public interest activity is ongoing
     aliases:
-      - Public Interest Ongoing
+    - Public Interest Ongoing
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicInterestOngoing
-      - dpv_owl:PublicInterestOngoing
+    - dpv_upstream:PublicInterestOngoing
+    - dpv_owl:PublicInterestOngoing
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2555,12 +2569,12 @@ classes:
     class_uri: dpv:PublicInterestPending
     description: Status where the public interest activity has not started
     aliases:
-      - Public Interest Pending
+    - Public Interest Pending
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicInterestPending
-      - dpv_owl:PublicInterestPending
+    - dpv_upstream:PublicInterestPending
+    - dpv_owl:PublicInterestPending
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2569,85 +2583,87 @@ classes:
     class_uri: dpv:PublicInterestStatus
     description: Status associated with use of Public Interest as a legal basis
     aliases:
-      - Public Interest Status
+    - Public Interest Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicInterestStatus
-      - dpv_owl:PublicInterestStatus
+    - dpv_upstream:PublicInterestStatus
+    - dpv_owl:PublicInterestStatus
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
   PublicLocation:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PublicLocation
     description: Location that is or can be accessed by the public
     aliases:
-      - Public Location (deprecated)
+    - Public Location (deprecated)
     comments:
-      - |-
-        This concept will be deprecated in a future DPV release, it is suggested
-        to use the better defined and legally aligned dpv:PublicSpace instead
+    - |-
+      This concept will be deprecated in a future DPV release, it is suggested
+      to use the better defined and legally aligned dpv:PublicSpace instead
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicLocation
-      - dpv_owl:PublicLocation
+    - dpv_upstream:PublicLocation
+    - dpv_owl:PublicLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PublicSpace:
     is_a: DpvLocation
     class_uri: dpv:PublicSpace
-    description: Any space that is accessible to the public or is owned by the public
+    description: Any space that is accessible to the public or is owned by the 
+      public
     aliases:
-      - Public Space
+    - Public Space
     comments:
-      - |-
-        Public space is distinct from places under (public) government ownership
-        as such places can exclude public from accessing the place e.g.
-        government military installations or reserved land
+    - |-
+      Public space is distinct from places under (public) government ownership
+      as such places can exclude public from accessing the place e.g.
+      government military installations or reserved land
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PublicSpace
-      - dpv_owl:PublicSpace
+    - dpv_upstream:PublicSpace
+    - dpv_owl:PublicSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PubliclyAccessibleSpace:
     is_a: PublicSpace
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PubliclyAccessibleSpace
     description: |-
       A space that is accessible to all members of the public e.g. parks,
       malls, train stations
     aliases:
-      - Publicly Accessible Space
+    - Publicly Accessible Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PubliclyAccessibleSpace
-      - dpv_owl:PubliclyAccessibleSpace
+    - dpv_upstream:PubliclyAccessibleSpace
+    - dpv_owl:PubliclyAccessibleSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   PubliclyOwnedSpace:
     is_a: PublicSpace
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:PubliclyOwnedSpace
-    description: A space that is owned by the public e.g. national parks, forests
+    description: A space that is owned by the public e.g. national parks, 
+      forests
     aliases:
-      - Publicly Owned Space
+    - Publicly Owned Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:PubliclyOwnedSpace
-      - dpv_owl:PubliclyOwnedSpace
+    - dpv_upstream:PubliclyOwnedSpace
+    - dpv_owl:PubliclyOwnedSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2656,12 +2672,12 @@ classes:
     class_uri: dpv:RandomLocation
     description: Location that is random or unknown
     aliases:
-      - Random Location
+    - Random Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:RandomLocation
-      - dpv_owl:RandomLocation
+    - dpv_upstream:RandomLocation
+    - dpv_owl:RandomLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2670,129 +2686,129 @@ classes:
     class_uri: dpv:RefuseContract
     description: Control for refusing a contract
     aliases:
-      - Refuse Contract
+    - Refuse Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:RefuseContract
-      - dpv_owl:RefuseContract
+    - dpv_upstream:RefuseContract
+    - dpv_owl:RefuseContract
     annotations:
       skos_in_scheme: contract-control-classes
 
   RemoteLocation:
     is_a: LocationLocality
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:RemoteLocation
     description: Location is remote i.e. not local
     aliases:
-      - Remote Location
+    - Remote Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:RemoteLocation
-      - dpv_owl:RemoteLocation
+    - dpv_upstream:RemoteLocation
+    - dpv_owl:RemoteLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   SemiPrivateSpace:
     is_a: PrivateSpace
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:SemiPrivateSpace
     description: |-
       A private space that acts as a shared space with other entities but
       which is still essentially private for the individuals e.g. a
       semi-private hospital room shared with another patient
     aliases:
-      - Semi Private Space
+    - Semi Private Space
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:SemiPrivateSpace
-      - dpv_owl:SemiPrivateSpace
+    - dpv_upstream:SemiPrivateSpace
+    - dpv_owl:SemiPrivateSpace
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   ServiceLevelAgreement:
     is_a: ContractByDomain
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ServiceLevelAgreement
     description: |-
       A contract regarding the provision of a service which outlines the
       acceptable metrics and performance of the service for the consumer
     aliases:
-      - Service Level Agreement (SLA)
+    - Service Level Agreement (SLA)
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ServiceLevelAgreement
-      - dpv_owl:ServiceLevelAgreement
+    - dpv_upstream:ServiceLevelAgreement
+    - dpv_owl:ServiceLevelAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
   StandardFormContract:
     is_a: ContractByNegotiationType
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:StandardFormContract
     description: |-
       A contract where the terms and conditions are determined by one or more
       of the parties, and the other parties have negligible or no ability to
       negotiate the terms and conditions
     aliases:
-      - Standard Form Contract
+    - Standard Form Contract
     comments:
-      - |-
-        Such a contract results in the unempowered parties being in a "take it
-        or leave it" position as they can only accept or reject the contract.
-        Standard form contracts are also known as "Adhesion contract" or
-        "Boilerplate contract"
+    - |-
+      Such a contract results in the unempowered parties being in a "take it
+      or leave it" position as they can only accept or reject the contract.
+      Standard form contracts are also known as "Adhesion contract" or
+      "Boilerplate contract"
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:StandardFormContract
-      - dpv_owl:StandardFormContract
+    - dpv_upstream:StandardFormContract
+    - dpv_owl:StandardFormContract
     annotations:
       skos_in_scheme: contract-types-classes
 
   StatisticalConfidentialityAgreement:
     is_a: LegalAgreement
     mixins:
-      - LegalMeasure
+    - LegalMeasure
     class_uri: dpv:StatisticalConfidentialityAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for classification and management of
       'confidential data' based on a statistical framework
     aliases:
-      - Statistical Confidentiality Agreement
+    - Statistical Confidentiality Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:StatisticalConfidentialityAgreement
-      - dpv_owl:StatisticalConfidentialityAgreement
+    - dpv_upstream:StatisticalConfidentialityAgreement
+    - dpv_owl:StatisticalConfidentialityAgreement
     annotations:
       skos_in_scheme: legal-measures-classes
 
   SubProcessorAgreement:
     is_a: DataProcessingAgreement
     mixins:
-      - LegalBasis
-      - LegalMeasure
+    - LegalBasis
+    - LegalMeasure
     class_uri: dpv:SubProcessorAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for carrying out processing of data
       between a Data Processor and a Data (Sub-)Processor
     aliases:
-      - Sub-Processor Agreement
+    - Sub-Processor Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:SubProcessorAgreement
-      - dpv_owl:SubProcessorAgreement
+    - dpv_upstream:SubProcessorAgreement
+    - dpv_owl:SubProcessorAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -2803,12 +2819,12 @@ classes:
       A political union of two or more countries with an establishment of
       common authority
     aliases:
-      - Supranational Union
+    - Supranational Union
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:SupraNationalUnion
-      - dpv_owl:SupraNationalUnion
+    - dpv_upstream:SupraNationalUnion
+    - dpv_owl:SupraNationalUnion
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2817,12 +2833,12 @@ classes:
     class_uri: dpv:TerminateContract
     description: Control for terminating a contract
     aliases:
-      - Terminate Contract
+    - Terminate Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:TerminateContract
-      - dpv_owl:TerminateContract
+    - dpv_upstream:TerminateContract
+    - dpv_owl:TerminateContract
     annotations:
       skos_in_scheme: contract-control-classes
 
@@ -2835,12 +2851,12 @@ classes:
       service consumer, also know as 'Terms of Use' and 'Terms and Conditions'
       and commonly abbreviated as TOS, ToS, ToU, or T&C
     aliases:
-      - Terms of Service
+    - Terms of Service
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:TermsOfService
-      - dpv_owl:TermsOfService
+    - dpv_upstream:TermsOfService
+    - dpv_owl:TermsOfService
     annotations:
       skos_in_scheme: contract-clause-classes
 
@@ -2851,39 +2867,39 @@ classes:
       Represents a country outside applicable or compatible jurisdiction as
       outlined in law
     aliases:
-      - Third Country
+    - Third Country
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ThirdCountry
-      - dpv_owl:ThirdCountry
+    - dpv_upstream:ThirdCountry
+    - dpv_owl:ThirdCountry
     annotations:
       skos_in_scheme: jurisdiction-classes
 
   ThirdPartyAgreement:
     is_a: ThirdPartyContract
     mixins:
-      - LegalBasis
-      - LegalMeasure
+    - LegalBasis
+    - LegalMeasure
     class_uri: dpv:ThirdPartyAgreement
     description: |-
       An agreement outlining conditions, criteria, obligations,
       responsibilities, and specifics for carrying out processing of data
       between a Data Controller or Processor and a Third Party
     aliases:
-      - Third-Party Agreement
+    - Third-Party Agreement
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ThirdPartyAgreement
-      - dpv_owl:ThirdPartyAgreement
+    - dpv_upstream:ThirdPartyAgreement
+    - dpv_owl:ThirdPartyAgreement
     annotations:
       skos_in_scheme: contract-types-classes
 
   ThirdPartyContract:
     is_a: DataProcessingAgreement
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:ThirdPartyContract
     description: |-
       Creation, completion, fulfilment, or performance of a contract, with the
@@ -2892,12 +2908,12 @@ classes:
       deprecated - use dpv:ThirdPartyAgreement which has a more explicit
       definition of the entities involved and the intent of the contract
     aliases:
-      - Third Party Contract
+    - Third Party Contract
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:ThirdPartyContract
-      - dpv_owl:ThirdPartyContract
+    - dpv_upstream:ThirdPartyContract
+    - dpv_owl:ThirdPartyContract
     annotations:
       skos_in_scheme: contract-types-classes
 
@@ -2908,12 +2924,12 @@ classes:
       Location that is known but is variable e.g. somewhere within a given
       area
     aliases:
-      - Variable Location
+    - Variable Location
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VariableLocation
-      - dpv_owl:VariableLocation
+    - dpv_upstream:VariableLocation
+    - dpv_owl:VariableLocation
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -2924,12 +2940,12 @@ classes:
       Activities are necessary or required to protect vital interests of a
       data subject or other natural person
     aliases:
-      - Vital Interest
+    - Vital Interest
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterest
-      - dpv_owl:VitalInterest
+    - dpv_upstream:VitalInterest
+    - dpv_owl:VitalInterest
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -2938,12 +2954,12 @@ classes:
     class_uri: dpv:VitalInterestCompleted
     description: Status where the vital interest activity has been completed
     aliases:
-      - Vital Interest Completed
+    - Vital Interest Completed
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestCompleted
-      - dpv_owl:VitalInterestCompleted
+    - dpv_upstream:VitalInterestCompleted
+    - dpv_owl:VitalInterestCompleted
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -2954,48 +2970,48 @@ classes:
       Status where the vital interest activity was objected to by the Data
       Subject or another relevant entity
     aliases:
-      - Vital Interest Objected
+    - Vital Interest Objected
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestObjected
-      - dpv_owl:VitalInterestObjected
+    - dpv_upstream:VitalInterestObjected
+    - dpv_owl:VitalInterestObjected
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
   VitalInterestOfDataSubject:
     is_a: VitalInterestOfNaturalPerson
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:VitalInterestOfDataSubject
     description: |-
       Activities are necessary or required to protect vital interests of a
       data subject
     aliases:
-      - Vital Interest of Data Subject
+    - Vital Interest of Data Subject
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestOfDataSubject
-      - dpv_owl:VitalInterestOfDataSubject
+    - dpv_upstream:VitalInterestOfDataSubject
+    - dpv_owl:VitalInterestOfDataSubject
     annotations:
       skos_in_scheme: legal-basis-classes
 
   VitalInterestOfNaturalPerson:
     is_a: VitalInterest
     mixins:
-      - LegalBasis
+    - LegalBasis
     class_uri: dpv:VitalInterestOfNaturalPerson
     description: |-
       Activities are necessary or required to protect vital interests of a
       natural person
     aliases:
-      - Vital Interest of Natural Person
+    - Vital Interest of Natural Person
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestOfNaturalPerson
-      - dpv_owl:VitalInterestOfNaturalPerson
+    - dpv_upstream:VitalInterestOfNaturalPerson
+    - dpv_owl:VitalInterestOfNaturalPerson
     annotations:
       skos_in_scheme: legal-basis-classes
 
@@ -3004,12 +3020,12 @@ classes:
     class_uri: dpv:VitalInterestOngoing
     description: Status where the vital interest activity is ongoing
     aliases:
-      - Vital Interest Ongoing
+    - Vital Interest Ongoing
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestOngoing
-      - dpv_owl:VitalInterestOngoing
+    - dpv_upstream:VitalInterestOngoing
+    - dpv_owl:VitalInterestOngoing
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -3018,12 +3034,12 @@ classes:
     class_uri: dpv:VitalInterestPending
     description: Status where the vital interest activity has not started
     aliases:
-      - Vital Interest Pending
+    - Vital Interest Pending
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestPending
-      - dpv_owl:VitalInterestPending
+    - dpv_upstream:VitalInterestPending
+    - dpv_owl:VitalInterestPending
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
@@ -3032,34 +3048,35 @@ classes:
     class_uri: dpv:VitalInterestStatus
     description: Status associated with use of Vital Interest as a legal basis
     aliases:
-      - Vital Interest Status
+    - Vital Interest Status
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:VitalInterestStatus
-      - dpv_owl:VitalInterestStatus
+    - dpv_upstream:VitalInterestStatus
+    - dpv_owl:VitalInterestStatus
     annotations:
       skos_in_scheme: legal-basis-status-classes
 
   WithinDevice:
     is_a: LocalLocation
     mixins:
-      - DpvLocation
+    - DpvLocation
     class_uri: dpv:WithinDevice
-    description: Location is local and entirely within a device, such as a smartphone
+    description: Location is local and entirely within a device, such as a 
+      smartphone
     aliases:
-      - Within Device (deprecated)
+    - Within Device (deprecated)
     comments:
-      - |-
-        This concept will be deprecated in a future DPV release, it is suggested
-        to use the existing concepts representing device as tech:Device to have
-        parity and consistency between the use of device as a technology and for
-        data storage
+    - |-
+      This concept will be deprecated in a future DPV release, it is suggested
+      to use the existing concepts representing device as tech:Device to have
+      parity and consistency between the use of device as a technology and for
+      data storage
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:WithinDevice
-      - dpv_owl:WithinDevice
+    - dpv_upstream:WithinDevice
+    - dpv_owl:WithinDevice
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -3070,17 +3087,17 @@ classes:
       Location is local and entirely within a physical environment, such as a
       room
     aliases:
-      - Within Physical Environment
+    - Within Physical Environment
     comments:
-      - |-
-        This concept will be deprecated in a future DPV release, it is suggested
-        to use other concepts that also represent the nature of the location
-        e.g. dpv:PrivateSpace or its accessibility dpv:PubliclyAccessibleSpace
+    - |-
+      This concept will be deprecated in a future DPV release, it is suggested
+      to use other concepts that also represent the nature of the location
+      e.g. dpv:PrivateSpace or its accessibility dpv:PubliclyAccessibleSpace
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:WithinPhysicalEnvironment
-      - dpv_owl:WithinPhysicalEnvironment
+    - dpv_upstream:WithinPhysicalEnvironment
+    - dpv_owl:WithinPhysicalEnvironment
     annotations:
       skos_in_scheme: jurisdiction-classes
 
@@ -3091,18 +3108,18 @@ classes:
       Location is local and entirely within a virtual environment, such as a
       software system
     aliases:
-      - Within Virtual Environment
+    - Within Virtual Environment
     comments:
-      - |-
-        This concept will be deprecated in a future DPV release, it is suggested
-        to use the existing concepts representing device as tech:Software and
-        its taxonomy to have parity and consistency between the use of software
-        as a technology and as a virtual environment for data storage and
-        operations
+    - |-
+      This concept will be deprecated in a future DPV release, it is suggested
+      to use the existing concepts representing device as tech:Software and
+      its taxonomy to have parity and consistency between the use of software
+      as a technology and as a virtual environment for data storage and
+      operations
     in_subset:
-      - legal_basis_subset
+    - legal_basis_subset
     exact_mappings:
-      - dpv_upstream:WithinVirtualEnvironment
-      - dpv_owl:WithinVirtualEnvironment
+    - dpv_upstream:WithinVirtualEnvironment
+    - dpv_owl:WithinVirtualEnvironment
     annotations:
       skos_in_scheme: jurisdiction-classes

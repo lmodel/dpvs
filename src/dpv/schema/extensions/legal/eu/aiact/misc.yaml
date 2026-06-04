@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -76,99 +76,3 @@ subsets:
 
   legal_eu_aiact_misc_subset:
     description: Entities from the DPV `legal/eu/aiact/modules/misc` submodule.
-
-classes:
-
-  IntendedPurpose:
-    is_a: IntendedUse
-    class_uri: legal_eu_aiact:IntendedPurpose
-    description: |-
-      The use for which an AI system is intended by the provider, including
-      the specific context and conditions of use, as specified in the
-      information supplied by the provider in the instructions for use,
-      promotional or sales materials and statements, as well as in the
-      technical documentation
-    aliases:
-      - Intended Purpose
-    in_subset:
-      - legal_eu_aiact_misc_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:IntendedPurpose
-      - dpv_legal_eu_aiact_owl:IntendedPurpose
-    annotations:
-      dct_source: AIA (Art. 3(12))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#IntendedPurpose
-      dpv_extension_slug: legal/eu/aiact
-
-  LegalEuAiactAILiteracy:
-    is_a: AILiteracy
-    mixins:
-      - OrganisationalMeasure
-    class_uri: legal_eu_aiact:AILiteracy
-    description: |-
-      Skills, knowledge and understanding that allow providers, deployers and
-      affected persons, taking into account their respective rights and
-      obligations in the context of this Regulation, to make an informed
-      deployment of AI systems, as well as to gain awareness about the
-      opportunities and risks of AI and possible harm it can cause
-    aliases:
-      - AILiteracy
-      - AI Literacy
-    comments:
-      - |-
-        AI Literacy should take into account the subject's level of technical
-        knowledge, experience, education and training -- these can be
-        represented through the corresponding concepts in the PD extension
-    in_subset:
-      - legal_eu_aiact_misc_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:AILiteracy
-      - dpv_legal_eu_aiact_owl:AILiteracy
-    annotations:
-      dct_source: AIA (Art. 3(56))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#AILiteracy
-      dpv_extension_slug: legal/eu/aiact
-
-  LegalEuAiactPubliclyAccessibleSpace:
-    is_a: PublicLocation
-    mixins:
-      - DpvLocation
-    class_uri: legal_eu_aiact:PubliclyAccessibleSpace
-    description: |-
-      Any publicly or privately owned physical place accessible to an
-      undetermined number of natural persons, regardless of whether certain
-      conditions for access may apply, and regardless of the potential
-      capacity restrictions
-    aliases:
-      - PubliclyAccessibleSpace
-      - Publicly Accessible Space
-    in_subset:
-      - legal_eu_aiact_misc_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:PubliclyAccessibleSpace
-      - dpv_legal_eu_aiact_owl:PubliclyAccessibleSpace
-    annotations:
-      dct_source: AIA(Art. 3(44))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#PubliclyAccessibleSpace
-      dpv_extension_slug: legal/eu/aiact
-
-  SubstantialModification:
-    class_uri: legal_eu_aiact:SubstantialModification
-    description: |-
-      A change to an AI system after its placing on the market or putting into
-      service which is not foreseen or planned in the initial conformity
-      assessment carried out by the provider and as a result of which the
-      compliance of the AI system with the requirements set out in Chapter
-      III, Section 2 is affected or results in a modification to the intended
-      purpose for which the AI system has been assessed
-    aliases:
-      - Substantial Modification
-    in_subset:
-      - legal_eu_aiact_misc_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:SubstantialModification
-      - dpv_legal_eu_aiact_owl:SubstantialModification
-    annotations:
-      dct_source: AIA(Art. 3(23))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#SubstantialModification
-      dpv_extension_slug: legal/eu/aiact

@@ -23,7 +23,7 @@ from linkml_runtime.utils.schemaview import SchemaView
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_ROOT = Path(__file__).parent / "data"
 # Use the pre-merged, self-contained schema produced by `just _merged-schema`
-# (see `scripts/merge_linkml_schema.py`). The source `src/dpv/schema/dpv.yaml`
+# (see `scripts/linkml_import_tools.py merge`). The source `src/dpv/schema/dpv.yaml`
 # imports `dpv:schema/dpv_core` via a URI-style CURIE; resolving that
 # import requires the build-time import map, and `SchemaView` falls back
 # to fetching the URI over HTTP without it (404 on the w3id IRI - see

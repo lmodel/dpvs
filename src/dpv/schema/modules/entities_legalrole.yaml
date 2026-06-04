@@ -6,8 +6,8 @@ description: |-
   `modules/entities_legalrole-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -62,13 +62,13 @@ slots:
     definition_uri: dpv:hasDataController
     description: Indicates association with Data Controller
     aliases:
-      - has data controller
+    - has data controller
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasDataController
-      - dpv_owl:hasDataController
+    - dpv_upstream:hasDataController
+    - dpv_owl:hasDataController
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -79,13 +79,13 @@ slots:
       Indicates inclusion or applicability of a LegalEntity in the role of
       Data Exporter
     aliases:
-      - has data exporter
+    - has data exporter
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasDataExporter
-      - dpv_owl:hasDataExporter
+    - dpv_upstream:hasDataExporter
+    - dpv_owl:hasDataExporter
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -96,13 +96,13 @@ slots:
       Indicates inclusion or applicability of a LegalEntity in the role of
       Data Importer
     aliases:
-      - has data importer
+    - has data importer
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasDataImporter
-      - dpv_owl:hasDataImporter
+    - dpv_upstream:hasDataImporter
+    - dpv_owl:hasDataImporter
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -111,13 +111,13 @@ slots:
     definition_uri: dpv:hasDataProcessor
     description: Indicates inclusion or applicability of a Data Processor
     aliases:
-      - has data processor
+    - has data processor
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasDataProcessor
-      - dpv_owl:hasDataProcessor
+    - dpv_upstream:hasDataProcessor
+    - dpv_owl:hasDataProcessor
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -126,13 +126,13 @@ slots:
     definition_uri: dpv:hasDataProtectionOfficer
     description: Specifies an associated data protection officer
     aliases:
-      - has data protection officer
+    - has data protection officer
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasDataProtectionOfficer
-      - dpv_owl:hasDataProtectionOfficer
+    - dpv_upstream:hasDataProtectionOfficer
+    - dpv_owl:hasDataProtectionOfficer
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -141,13 +141,13 @@ slots:
     definition_uri: dpv:hasJointDataControllers
     description: Indicates inclusion or applicability of a Joint Data Controller
     aliases:
-      - has joint data controllers
+    - has joint data controllers
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasJointDataControllers
-      - dpv_owl:hasJointDataControllers
+    - dpv_upstream:hasJointDataControllers
+    - dpv_owl:hasJointDataControllers
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -156,13 +156,13 @@ slots:
     definition_uri: dpv:hasRecipient
     description: Indicates Recipient of Data
     aliases:
-      - has recipient
+    - has recipient
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasRecipient
-      - dpv_owl:hasRecipient
+    - dpv_upstream:hasRecipient
+    - dpv_owl:hasRecipient
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -173,13 +173,13 @@ slots:
       Indicates inclusion or applicability of a Data Controller as a Recipient
       of personal data
     aliases:
-      - has recipient data controller
+    - has recipient data controller
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasRecipientDataController
-      - dpv_owl:hasRecipientDataController
+    - dpv_upstream:hasRecipientDataController
+    - dpv_owl:hasRecipientDataController
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -190,28 +190,29 @@ slots:
       Indicates inclusion or applicability of a Third Party as a Recipient of
       personal data
     aliases:
-      - has recipient third party
+    - has recipient third party
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasRecipientThirdParty
-      - dpv_owl:hasRecipientThirdParty
+    - dpv_upstream:hasRecipientThirdParty
+    - dpv_owl:hasRecipientThirdParty
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
   has_service_consumer:
     is_a: has_entity
     definition_uri: dpv:hasServiceConsumer
-    description: Indicates the entity that consumes or receives the associated service
+    description: Indicates the entity that consumes or receives the associated 
+      service
     aliases:
-      - has service consumer
+    - has service consumer
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasServiceConsumer
-      - dpv_owl:hasServiceConsumer
+    - dpv_upstream:hasServiceConsumer
+    - dpv_owl:hasServiceConsumer
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -220,13 +221,13 @@ slots:
     definition_uri: dpv:hasServiceProvider
     description: Indicates the entity that provides the associated service
     aliases:
-      - has service provider
+    - has service provider
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasServiceProvider
-      - dpv_owl:hasServiceProvider
+    - dpv_upstream:hasServiceProvider
+    - dpv_owl:hasServiceProvider
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -235,13 +236,13 @@ slots:
     definition_uri: dpv:hasThirdParty
     description: Indicates association with Third Party
     aliases:
-      - has third party
+    - has third party
     multivalued: true
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:hasThirdParty
-      - dpv_owl:hasThirdParty
+    - dpv_upstream:hasThirdParty
+    - dpv_owl:hasThirdParty
     annotations:
       skos_in_scheme: entities-legalrole-properties
 
@@ -254,26 +255,26 @@ classes:
       The individual or organisation that decides (or controls) the purpose(s)
       of processing personal data.
     aliases:
-      - Data Controller
+    - Data Controller
     comments:
-      - |-
-        The terms 'Controller', 'Data Controller', and 'PII Controller' refer to
-        the same concept
+    - |-
+      The terms 'Controller', 'Data Controller', and 'PII Controller' refer to
+      the same concept
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:DataController
-      - dpv_owl:DataController
-      - iso29100:PIIController
-    related_mappings:
-      - common_domain_model:Counterparty
-      - iso22989:AIProvider
-      - iso27001:Organization
-      - nist_ai_rmf:AiActor
-      - oscal:ResponsibleParty
+    - dpv_upstream:DataController
+    - dpv_owl:DataController
+    - iso29100:PIIController
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    related_mappings:
+    - common_domain_model:Counterparty
+    - iso22989:AIProvider
+    - iso27001:Organization
+    - nist_ai_rmf:AiActor
+    - oscal:ResponsibleParty
   DataExporter:
     is_a: LegalEntity
     class_uri: dpv:DataExporter
@@ -281,19 +282,19 @@ classes:
       An entity that 'exports' data where exporting is considered a form of
       data transfer
     aliases:
-      - Data Exporter
+    - Data Exporter
     comments:
-      - |-
-        The term 'Data Exporter' is used by the EU-EDPB as the entity that
-        transfer data across borders. While the EDPB refers to the
-        jurisdictional border of EU, the term within DPV can be used to denote
-        any 'export' or transfer or transmission of data and is thus a broader
-        concept than the EDPB's definition.
+    - |-
+      The term 'Data Exporter' is used by the EU-EDPB as the entity that
+      transfer data across borders. While the EDPB refers to the
+      jurisdictional border of EU, the term within DPV can be used to denote
+      any 'export' or transfer or transmission of data and is thus a broader
+      concept than the EDPB's definition.
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:DataExporter
-      - dpv_owl:DataExporter
+    - dpv_upstream:DataExporter
+    - dpv_owl:DataExporter
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -304,19 +305,19 @@ classes:
       An entity that 'imports' data where importing is considered a form of
       data transfer
     aliases:
-      - Data Importer
+    - Data Importer
     comments:
-      - |-
-        The term 'Data Importer' is used by the EU-EDPB as the entity that
-        receives transferred data across borders. While the EDPB refers to the
-        jurisdictional border of EU, the term within DPV can be used to denote
-        any 'import' or reception of transfer or transmission of data and is
-        thus a broader concept than the EDPB's definition.
+    - |-
+      The term 'Data Importer' is used by the EU-EDPB as the entity that
+      receives transferred data across borders. While the EDPB refers to the
+      jurisdictional border of EU, the term within DPV can be used to denote
+      any 'import' or reception of transfer or transmission of data and is
+      thus a broader concept than the EDPB's definition.
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:DataImporter
-      - dpv_owl:DataImporter
+    - dpv_upstream:DataImporter
+    - dpv_owl:DataImporter
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -327,19 +328,19 @@ classes:
       A ‘processor’ means a natural or legal person, public authority, agency
       or other body which processes data on behalf of the controller.
     aliases:
-      - Data Processor
+    - Data Processor
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:DataProcessor
-      - dpv_owl:DataProcessor
-      - iso29100:PIIProcessor
-    related_mappings:
-      - common_domain_model:Counterparty
-      - iso27001:Organization
+    - dpv_upstream:DataProcessor
+    - dpv_owl:DataProcessor
+    - iso29100:PIIProcessor
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    related_mappings:
+    - common_domain_model:Counterparty
+    - iso27001:Organization
   DataProtectionOfficer:
     is_a: Representative
     class_uri: dpv:DataProtectionOfficer
@@ -348,32 +349,32 @@ classes:
       compliance, inform and advise on data protection obligations and act as
       a contact point for data subjects and the supervisory authority.
     aliases:
-      - Data Protection Officer
+    - Data Protection Officer
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:DataProtectionOfficer
-      - dpv_owl:DataProtectionOfficer
-    related_mappings:
-      - oscal:ResponsibleRole
+    - dpv_upstream:DataProtectionOfficer
+    - dpv_owl:DataProtectionOfficer
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
+    related_mappings:
+    - oscal:ResponsibleRole
   DataSubProcessor:
     is_a: DataProcessor
     class_uri: dpv:DataSubProcessor
     description: A 'sub-processor' is a processor engaged by another processor
     aliases:
-      - Data Sub-Processor
+    - Data Sub-Processor
     comments:
-      - |-
-        A 'Sub-Processor' is always a 'Processor' with the distinction of not
-        directly being appointed by the 'Controller'
+    - |-
+      A 'Sub-Processor' is always a 'Processor' with the distinction of not
+      directly being appointed by the 'Controller'
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:DataSubProcessor
-      - dpv_owl:DataSubProcessor
+    - dpv_upstream:DataSubProcessor
+    - dpv_owl:DataSubProcessor
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -382,18 +383,18 @@ classes:
     class_uri: dpv:Recipient
     description: Entities that receive data or technologies
     aliases:
-      - Recipient
+    - Recipient
     comments:
-      - |-
-        Recipients that receive personal data can be a Third Party, Data
-        Controller, or Data Processor.
+    - |-
+      Recipients that receive personal data can be a Third Party, Data
+      Controller, or Data Processor.
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:Recipient
-      - dpv_owl:Recipient
+    - dpv_upstream:Recipient
+    - dpv_owl:Recipient
     related_mappings:
-      - usage_policy:AnyRecipient
+    - usage_policy:AnyRecipient
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -404,21 +405,21 @@ classes:
       A group of Data Controllers that jointly determine the purposes and
       means of processing
     aliases:
-      - Joint Data Controllers
+    - Joint Data Controllers
     comments:
-      - |-
-        While Joint Data Controllers operate together, they are made up of
-        individually distinct legal entities. To indicate the membership of this
-        group, hasDataController should be used to denote each Data Controller.
-        The concept of Joint Data Controllers also allows specifying a single
-        group as the 'Controller' and to specify role and responsibilities
-        within that group for each entity using DPV's concepts (e.g.
-        isImplementedByEntity)
+    - |-
+      While Joint Data Controllers operate together, they are made up of
+      individually distinct legal entities. To indicate the membership of this
+      group, hasDataController should be used to denote each Data Controller.
+      The concept of Joint Data Controllers also allows specifying a single
+      group as the 'Controller' and to specify role and responsibilities
+      within that group for each entity using DPV's concepts (e.g.
+      isImplementedByEntity)
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:JointDataControllers
-      - dpv_owl:JointDataControllers
+    - dpv_upstream:JointDataControllers
+    - dpv_owl:JointDataControllers
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -427,12 +428,12 @@ classes:
     class_uri: dpv:ServiceConsumer
     description: The entity that consumes or receives the service
     aliases:
-      - Service Consumer
+    - Service Consumer
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:ServiceConsumer
-      - dpv_owl:ServiceConsumer
+    - dpv_upstream:ServiceConsumer
+    - dpv_owl:ServiceConsumer
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -441,12 +442,12 @@ classes:
     class_uri: dpv:ServiceProvider
     description: The entity that provides a service
     aliases:
-      - Service Provider
+    - Service Provider
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:ServiceProvider
-      - dpv_owl:ServiceProvider
+    - dpv_upstream:ServiceProvider
+    - dpv_owl:ServiceProvider
     annotations:
       skos_in_scheme: entities-legalrole-classes
 
@@ -458,24 +459,24 @@ classes:
       entities directly involved or operating under those directly involved in
       a process
     aliases:
-      - Third Party
+    - Third Party
     comments:
-      - |-
-        Third Party in the context of personal data processing are entities
-        other than the data subject, controllers, processors, and authorities
+    - |-
+      Third Party in the context of personal data processing are entities
+      other than the data subject, controllers, processors, and authorities
     in_subset:
-      - entities_legalrole_subset
+    - entities_legalrole_subset
     exact_mappings:
-      - dpv_upstream:ThirdParty
-      - dpv_owl:ThirdParty
-      - iso29100:ThirdParty
-    close_mappings:
-      - common_domain_model:RelatedParty
-      - iso27001:InterestedParty
-      - iso42001:ThirdPartyRelationship
-    narrow_mappings:
-      - gists:Organization
-    related_mappings:
-      - ocsf:Actor
+    - dpv_upstream:ThirdParty
+    - dpv_owl:ThirdParty
+    - iso29100:ThirdParty
     annotations:
       skos_in_scheme: entities-legalrole-classes
+    close_mappings:
+    - common_domain_model:RelatedParty
+    - iso27001:InterestedParty
+    - iso42001:ThirdPartyRelationship
+    narrow_mappings:
+    - gists:Organization
+    related_mappings:
+    - ocsf:Actor

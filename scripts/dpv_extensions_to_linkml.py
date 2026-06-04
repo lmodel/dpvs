@@ -429,7 +429,8 @@ def _owner_prefix_for(slug: str, ext: ExtensionSpec) -> str:
 
 
 def _class_name_for(slug: str, local: str, ext: ExtensionSpec,
-                    core_class_names: frozenset[str] = frozenset()) -> str:
+                    core_class_names: frozenset[str] = frozenset(),
+                    ext_class_owners: dict[str, set[str]] | None = None) -> str:
     """Resolve a (slug, local) reference to its LinkML class name.
 
     Encapsulates the collision-prone rename: e.g. (``"ai"``, ``"Data"``) ->
@@ -443,15 +444,34 @@ def _class_name_for(slug: str, local: str, ext: ExtensionSpec,
     pascal prefix (``AiRiskConcept``). This catches DPV-domain collisions
     that are not in the static ``_COLLISION_PRONE_CLASSES`` list. Names
     already prefixed by the static rename are left alone.
+
+    ``ext_class_owners`` maps each declared class local name to the set of
+    extension slugs that actually declare it as an ``owl:Class``. This is
+    used to guard the auto-prefix branches: some upstream TTL files
+    *reference* (e.g. as rdf:type / mixin) a URI in their own namespace
+    that is never actually declared locally (e.g. ``pd-owl:PersonalData``
+    is referenced by pd classes but only declared in core dpv). Without
+    the guard, such references would be falsely renamed to
+    ``PdPersonalData`` (a class that does not exist).
     """
     owner_prefix = _owner_prefix_for(slug, ext)
     name = core.sanitise_class_name(local, owner_prefix=owner_prefix)
-    if slug == ext.slug and core_class_names:
+    if core_class_names:
         unprefixed = core.ascii_safe_local(local).replace("-", "")
         # Only fire dynamic rename if the static collision list did NOT already
         # prefix the name (otherwise we'd double-prefix).
         if name == unprefixed and unprefixed in core_class_names:
-            return f"{ext.pascal_prefix}{unprefixed}"
+            owners = (ext_class_owners or {}).get(unprefixed, set())
+            if slug == ext.slug and (
+                ext_class_owners is None or ext.slug in owners
+            ):
+                return f"{ext.pascal_prefix}{unprefixed}"
+            if slug and slug != ext.slug and (
+                ext_class_owners is None or slug in owners
+            ):
+                # Foreign sibling extension: mirror the rename that the
+                # owning extension applied (cross-ext class collision).
+                return f"{_slug_to_pascal(slug)}{unprefixed}"
     return name
 
 
@@ -461,6 +481,7 @@ def _extract_classes_ns(
     ext: ExtensionSpec,
     foreign_log: set[str],
     core_class_names: frozenset[str] = frozenset(),
+    ext_class_owners: dict[str, set[str]] | None = None,
 ) -> dict[str, dict]:
     """Extract every owl:Class in ``ext.owl_ns`` as a LinkML class.
 
@@ -486,7 +507,7 @@ def _extract_classes_ns(
         # ``cls_local`` is retained for canonical-NS URI reconstruction
         # (RDF graph lookup) and for traceability via ``aliases``.
         cls_local_safe = core.ascii_safe_local(cls_local)
-        cls_name = _class_name_for(ext.slug, cls_local, ext, core_class_names)
+        cls_name = _class_name_for(ext.slug, cls_local, ext, core_class_names, ext_class_owners)
         entry: dict[str, Any] = {}
 
         # ---- description -----------------------------------------------
@@ -510,7 +531,7 @@ def _extract_classes_ns(
 
         if named_parents:
             parent_slug, parent_local = named_parents[0]
-            parent_name = _class_name_for(parent_slug, parent_local, ext, core_class_names)
+            parent_name = _class_name_for(parent_slug, parent_local, ext, core_class_names, ext_class_owners)
             # Guard: a class can never be its own parent.
             if parent_name and parent_name != cls_name:
                 entry["is_a"] = parent_name
@@ -524,7 +545,7 @@ def _extract_classes_ns(
             if fl is None:
                 continue
             slug, local = fl
-            type_mixins.append(_class_name_for(slug, local, ext, core_class_names))
+            type_mixins.append(_class_name_for(slug, local, ext, core_class_names, ext_class_owners))
             if slug != ext.slug:
                 foreign_log.add(slug)
 
@@ -536,7 +557,7 @@ def _extract_classes_ns(
                 seen.add(m)
         if len(named_parents) > 1:
             for parent_slug2, local in named_parents[1:]:
-                m = _class_name_for(parent_slug2, local, ext, core_class_names)
+                m = _class_name_for(parent_slug2, local, ext, core_class_names, ext_class_owners)
                 if m and m not in seen and m != cls_name:
                     dedup_mixins.append(m)
                     seen.add(m)
@@ -638,6 +659,7 @@ def _extract_slots_ns(
     ext: ExtensionSpec,
     foreign_log: set[str],
     core_class_names: frozenset[str] = frozenset(),
+    ext_class_owners: dict[str, set[str]] | None = None,
 ) -> dict[str, dict]:
     slots: dict[str, dict] = {}
 
@@ -681,7 +703,7 @@ def _extract_slots_ns(
             if isinstance(o, URIRef):
                 fl = _family_local(o)
                 if fl:
-                    domains.append(_class_name_for(fl[0], fl[1], ext, core_class_names))
+                    domains.append(_class_name_for(fl[0], fl[1], ext, core_class_names, ext_class_owners))
                     if fl[0] != ext.slug:
                         foreign_log.add(fl[0])
         if domains:
@@ -700,7 +722,7 @@ def _extract_slots_ns(
             for o in range_uris:
                 fl = _family_local(o)
                 if fl:
-                    dpv_ranges.append(_class_name_for(fl[0], fl[1], ext, core_class_names))
+                    dpv_ranges.append(_class_name_for(fl[0], fl[1], ext, core_class_names, ext_class_owners))
                     if fl[0] != ext.slug:
                         foreign_log.add(fl[0])
             if len(dpv_ranges) == 1:
@@ -847,6 +869,81 @@ def _build_core_class_names(schema_dir: Path) -> frozenset[str]:
     return frozenset(names)
 
 
+def _build_core_slot_names(schema_dir: Path) -> frozenset[str]:
+    """Return the set of all slot names defined by any core ``dpv_<group>.yaml``.
+
+    Used to demote extension slots whose local name collides with a
+    core-declared slot (different ``slot_uri``, distinct semantics) into
+    class-bound ``attributes`` via ``_split_collision_slots_to_attributes``.
+    A downstream consumer that imports both a core group and an extension
+    would otherwise trip LinkML's ``Conflicting URIs`` merge error.
+    """
+    names: set[str] = set()
+    for group in core.SEMANTIC_GROUPS:
+        f = schema_dir / f"dpv_{group}.yaml"
+        if not f.exists():
+            continue
+        doc = core.yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+        names.update((doc.get("slots") or {}).keys())
+    return frozenset(names)
+
+
+def _rename_unanchored_collisions(
+    classes: dict[str, dict],
+    slots: dict[str, dict],
+    collision_names: frozenset[str],
+    prefix: str,
+) -> tuple[dict[str, dict], dict[str, str]]:
+    """Rename top-level slots whose name collides with ``collision_names``
+    and that were *not* successfully demoted to class-bound attributes
+    (because they carried no resolvable ``domain``). Renamed slots get
+    the extension prefix prepended (``has_data`` -> ``<prefix>_has_data``);
+    their ``slot_uri`` / ``definition_uri`` and every other field is
+    preserved so the RDF/OWL identity stays intact.
+
+    Every reference to the old slot name from a class's ``slots`` list,
+    ``slot_usage`` keys, or ``attributes`` keys is rewritten to the new
+    name. Slot ``is_a`` references are rewritten too (other slots in this
+    schema that specialised the colliding slot).
+
+    Returns the (possibly-renamed) slots dict and a ``{old: new}`` map.
+    """
+    renames: dict[str, str] = {}
+    for sname in list(slots):
+        if sname in collision_names:
+            new_name = f"{prefix}_{sname}"
+            if new_name == sname or new_name in slots:
+                continue
+            renames[sname] = new_name
+    if not renames:
+        return slots, renames
+
+    new_slots: dict[str, dict] = {}
+    for sname, sentry in slots.items():
+        target = renames.get(sname, sname)
+        entry = dict(sentry)
+        parent = entry.get("is_a")
+        if isinstance(parent, str) and parent in renames:
+            entry["is_a"] = renames[parent]
+        new_slots[target] = entry
+
+    for cname, centry in classes.items():
+        s_list = centry.get("slots")
+        if isinstance(s_list, list):
+            centry["slots"] = [renames.get(s, s) for s in s_list]
+        usage = centry.get("slot_usage")
+        if isinstance(usage, dict):
+            centry["slot_usage"] = {
+                renames.get(k, k): v for k, v in usage.items()
+            }
+        attrs = centry.get("attributes")
+        if isinstance(attrs, dict):
+            centry["attributes"] = {
+                renames.get(k, k): v for k, v in attrs.items()
+            }
+    return new_slots, renames
+
+
 def _referenced_core_groups(
     classes: dict, slots: dict, core_index: dict[str, str],
 ) -> list[str]:
@@ -914,6 +1011,8 @@ def build_aggregate_schema(
     foreign: set[str],
     groups: list[str],
     source: str | None,
+    class_membership: dict[str, set[str]] | None = None,
+    slot_membership: dict[str, set[str]] | None = None,
 ) -> dict:
     subset_name = core._module_subset_name(ext.prefix)
     subsets: dict[str, dict] = {
@@ -982,9 +1081,13 @@ def build_aggregate_schema(
         "upstream_canonical_namespace": ext.can_ns,
     }
     if slots:
-        schema["slots"] = core._order_elements(slots, subset_name)
+        schema["slots"] = core._order_elements(
+            slots, subset_name, membership=slot_membership,
+        )
     if classes:
-        schema["classes"] = core._order_elements(classes, subset_name)
+        schema["classes"] = core._order_elements(
+            classes, subset_name, membership=class_membership,
+        )
     return core._order_keys(schema, core._SCHEMA_KEY_ORDER)
 
 
@@ -1114,10 +1217,67 @@ def generate(
     # core generator emits into the parent of ``output_dir`` (src/dpv/schema).
     core_index = _build_core_group_index(output_dir.parent)
     core_class_names = _build_core_class_names(output_dir.parent)
+    core_slot_names = _build_core_slot_names(output_dir.parent)
     if not core_index:
         print("   WARNING: no dpv_<group>.yaml schemas found next to "
               f"{output_dir}; run dpv_core_to_linkml.py first. Extensions will "
               "fall back to importing the full umbrella.", file=sys.stderr)
+
+    # Pre-pass: collect slot AND class names declared by each extension so we
+    # can detect cross-extension local-name collisions (e.g.
+    # ``has_capability`` in both ``ai`` and ``tech`` with different
+    # ``slot_uri`` values, or the class ``DataAggregationBias`` declared in
+    # both ``ai`` and ``risk``). Any local name appearing in 2+ extensions is
+    # treated as a collision: slots are renamed with the extension prefix on
+    # the main pass below; classes are auto-prefixed (PascalCase) via the
+    # existing ``core_class_names`` mechanism by adding the collision names
+    # to that set so each owning extension renders e.g. ``AiDataAggregationBias``
+    # and ``RiskDataAggregationBias`` instead of two ``DataAggregationBias``
+    # entries with conflicting URIs.
+    print("\nPre-scanning extensions for cross-extension slot/class "
+          "collisions...", file=sys.stderr)
+    ext_slot_owners: dict[str, set[str]] = {}
+    ext_class_owners: dict[str, set[str]] = {}
+    for ext in extensions:
+        g_owl_pre = _parse_ttl(ext.aggregate_owl)
+        g_can_pre = _parse_ttl(ext.aggregate_can) if ext.aggregate_can else None
+        pre_foreign: set[str] = set()
+        # Run extraction WITHOUT collision-rename sets so we get the raw
+        # unprefixed local names; cross-ext detection compares on those.
+        pre_slots = _extract_slots_ns(
+            g_owl_pre, g_can_pre, ext, pre_foreign,
+        )
+        for sname in pre_slots:
+            ext_slot_owners.setdefault(sname, set()).add(ext.slug)
+        # For classes, record the unprefixed local form (mirrors what
+        # ``_class_name_for`` uses for its lookup key) by scanning subjects
+        # directly from the RDF graph.
+        for t in (OWL.Class, RDFS.Class):
+            for s in g_owl_pre.subjects(RDF.type, t):
+                if not isinstance(s, URIRef):
+                    continue
+                local = _local_of(s, ext.owl_ns)
+                if local is None:
+                    continue
+                unprefixed = core.ascii_safe_local(local).replace("-", "")
+                ext_class_owners.setdefault(unprefixed, set()).add(ext.slug)
+    cross_ext_collisions: frozenset[str] = frozenset(
+        sname for sname, owners in ext_slot_owners.items() if len(owners) > 1
+    )
+    cross_ext_class_collisions: frozenset[str] = frozenset(
+        cname for cname, owners in ext_class_owners.items() if len(owners) > 1
+    )
+    if cross_ext_collisions:
+        print(f"   cross-extension slot collisions: "
+              f"{sorted(cross_ext_collisions)}", file=sys.stderr)
+    if cross_ext_class_collisions:
+        print(f"   cross-extension class collisions (auto-prefixed): "
+              f"{sorted(cross_ext_class_collisions)}", file=sys.stderr)
+    # Augment ``core_class_names`` so ``_class_name_for`` auto-prefixes
+    # cross-extension class collisions in their owning extensions too.
+    # ``ext_class_owners`` guards the rename so we only auto-prefix when
+    # the slug actually owns (declares) the class locally.
+    core_class_names = core_class_names | cross_ext_class_collisions
 
     total_ext = total_cls = total_slt = 0
 
@@ -1133,12 +1293,34 @@ def generate(
                   file=sys.stderr)
 
         foreign: set[str] = set()
-        classes = _extract_classes_ns(g_owl, g_can, ext, foreign, core_class_names)
-        slots = _extract_slots_ns(g_owl, g_can, ext, foreign, core_class_names)
-        slots, moved = core._split_collision_slots_to_attributes(classes, slots)
+        classes = _extract_classes_ns(g_owl, g_can, ext, foreign, core_class_names, ext_class_owners)
+        slots = _extract_slots_ns(g_owl, g_can, ext, foreign, core_class_names, ext_class_owners)
+        # Demote slots whose name collides with (a) common LinkML top-level
+        # slots, or (b) a core-declared DPV slot with a different semantic URI
+        # (e.g. ``ai:hasData`` vs ``dpv:hasData``). Both end up as class-bound
+        # attributes so a downstream consumer importing both core and this
+        # extension never trips LinkML's ``Conflicting URIs`` merge error.
+        slots, moved = core._split_collision_slots_to_attributes(
+            classes, slots, extra_collision_names=core_slot_names,
+        )
         if moved and report:
             print(f"   collision-prone slots moved to attributes: {moved}",
                   file=sys.stderr)
+        # Fallback for unanchored collisions (no resolvable ``domain``):
+        # rename them with the extension prefix so the slot survives as a
+        # reusable top-level slot under a distinct local name while
+        # keeping its ``slot_uri`` / ``definition_uri`` identity intact.
+        slots, renamed = _rename_unanchored_collisions(
+            classes, slots,
+            collision_names=(
+                core._COLLISION_PRONE_SLOTS | core_slot_names
+                | cross_ext_collisions
+            ),
+            prefix=ext.prefix,
+        )
+        if renamed and report:
+            print(f"   collision-prone slots renamed with prefix "
+                  f"`{ext.prefix}_`: {sorted(renamed)}", file=sys.stderr)
         # Strip the slug for the *own* extension; only foreign refs matter.
         foreign.discard(ext.slug)
         if ext.ontology_iri_slug:
@@ -1149,6 +1331,49 @@ def generate(
         if not classes and not slots:
             print("   (skipped - aggregate empty)", file=sys.stderr)
             continue
+
+        # --- pre-process submodules so the aggregate can attribute each
+        # element to every submodule subset it belongs to via ``in_subset``,
+        # and the submodule files can be written as thin subset-only shims
+        # (no slots/classes blocks) that no longer collide with the aggregate
+        # at merge time.
+        class_membership: dict[str, set[str]] = {}
+        slot_membership: dict[str, set[str]] = {}
+        sub_extracts: list[tuple[SubmoduleSpec, dict, dict, set[str], Graph]] = []
+        for sub in ext.submodules:
+            g_owl_s = _parse_ttl(sub.owl_path)
+            g_can_s = _parse_ttl(sub.can_path) if sub.can_path else None
+            sub_foreign: set[str] = set()
+            sub_classes = _extract_classes_ns(
+                g_owl_s, g_can_s, ext, sub_foreign, core_class_names, ext_class_owners,
+            )
+            sub_slots = _extract_slots_ns(
+                g_owl_s, g_can_s, ext, sub_foreign, core_class_names, ext_class_owners,
+            )
+            sub_slots, _ = core._split_collision_slots_to_attributes(
+                sub_classes, sub_slots,
+                extra_collision_names=core_slot_names,
+            )
+            sub_slots, _ = _rename_unanchored_collisions(
+                sub_classes, sub_slots,
+                collision_names=(
+                    core._COLLISION_PRONE_SLOTS | core_slot_names
+                    | cross_ext_collisions
+                ),
+                prefix=ext.prefix,
+            )
+            sub_foreign.discard(ext.slug)
+            if ext.ontology_iri_slug:
+                sub_foreign.discard(ext.ontology_iri_slug)
+            sub_foreign.discard("")
+            sub_subset = core._module_subset_name(f"{ext.prefix}_{sub.name}")
+            for cname in sub_classes:
+                if cname in classes:
+                    class_membership.setdefault(cname, set()).add(sub_subset)
+            for sname in sub_slots:
+                if sname in slots:
+                    slot_membership.setdefault(sname, set()).add(sub_subset)
+            sub_extracts.append((sub, sub_classes, sub_slots, sub_foreign, g_owl_s))
 
         groups = (_referenced_core_groups(classes, slots, core_index)
                   if core_index else None)
@@ -1161,6 +1386,8 @@ def generate(
             foreign=foreign,
             groups=groups,
             source=core.get_ontology_iri(g_owl),
+            class_membership=class_membership,
+            slot_membership=slot_membership,
         )
         agg_path = output_dir / ext.out_aggregate
         _write(agg_schema, agg_path)
@@ -1178,26 +1405,21 @@ def generate(
                   file=sys.stderr)
 
         # --- submodules ---------------------------------------------------
-        for sub in ext.submodules:
-            g_owl_s = _parse_ttl(sub.owl_path)
-            g_can_s = _parse_ttl(sub.can_path) if sub.can_path else None
-            sub_foreign: set[str] = set()
-            sub_classes = _extract_classes_ns(g_owl_s, g_can_s, ext, sub_foreign, core_class_names)
-            sub_slots = _extract_slots_ns(g_owl_s, g_can_s, ext, sub_foreign, core_class_names)
-            sub_slots, _ = core._split_collision_slots_to_attributes(
-                sub_classes, sub_slots,
-            )
-            sub_foreign.discard(ext.slug)
-            if ext.ontology_iri_slug:
-                # Also discard the ontology IRI slug alias for submodules
-                sub_foreign.discard(ext.ontology_iri_slug)
-            sub_foreign.discard("")
+        # Submodule schemas are written as thin subset-only shims: they
+        # declare their own ``<ext>_<sub>_subset`` and import the aggregate
+        # so the subset name resolves, but they re-emit *no* slots/classes.
+        # The aggregate owns each element and tags it with every submodule
+        # subset via ``in_subset``. This keeps the per-submodule import URI
+        # stable for downstream slicing while eliminating the duplicate
+        # ``from_schema`` collisions that the prior per-submodule re-emission
+        # produced at merge time.
+        for sub, sub_classes, sub_slots, sub_foreign, g_owl_s in sub_extracts:
             if not sub_classes and not sub_slots:
                 continue
             sub_groups = (_referenced_core_groups(sub_classes, sub_slots, core_index)
                           if core_index else None)
             sub_schema = build_submodule_schema(
-                ext, sub, sub_classes, sub_slots, version,
+                ext, sub, {}, {}, version,
                 foreign=sub_foreign,
                 groups=sub_groups,
                 source=core.get_ontology_iri(g_owl_s),

@@ -6,8 +6,8 @@ description: |-
   `modules/process-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -61,13 +61,13 @@ slots:
     definition_uri: dpv:hasNonPersonalDataProcess
     description: Indicates association with a Non-Personal Data Process
     aliases:
-      - has non-personal data process
+    - has non-personal data process
     multivalued: true
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:hasNonPersonalDataProcess
-      - dpv_owl:hasNonPersonalDataProcess
+    - dpv_upstream:hasNonPersonalDataProcess
+    - dpv_owl:hasNonPersonalDataProcess
     annotations:
       skos_in_scheme: process-properties
 
@@ -75,13 +75,13 @@ slots:
     definition_uri: dpv:hasPersonalDataHandling
     description: Indicates association with Personal Data Handling
     aliases:
-      - has personal data handling
+    - has personal data handling
     multivalued: true
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:hasPersonalDataHandling
-      - dpv_owl:hasPersonalDataHandling
+    - dpv_upstream:hasPersonalDataHandling
+    - dpv_owl:hasPersonalDataHandling
     annotations:
       skos_in_scheme: process-properties
 
@@ -89,13 +89,13 @@ slots:
     definition_uri: dpv:hasPersonalDataProcess
     description: Indicates association with a Personal Data Process
     aliases:
-      - has personal data process
+    - has personal data process
     multivalued: true
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:hasPersonalDataProcess
-      - dpv_owl:hasPersonalDataProcess
+    - dpv_upstream:hasPersonalDataProcess
+    - dpv_owl:hasPersonalDataProcess
     annotations:
       skos_in_scheme: process-properties
 
@@ -103,13 +103,13 @@ slots:
     definition_uri: dpv:hasProcess
     description: Indicates association with a Process
     aliases:
-      - has process
+    - has process
     multivalued: true
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:hasProcess
-      - dpv_owl:hasProcess
+    - dpv_upstream:hasProcess
+    - dpv_owl:hasProcess
     annotations:
       skos_in_scheme: process-properties
 
@@ -117,13 +117,13 @@ slots:
     definition_uri: dpv:hasService
     description: Indicates associated with the specified service
     aliases:
-      - has service
+    - has service
     multivalued: true
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:hasService
-      - dpv_owl:hasService
+    - dpv_upstream:hasService
+    - dpv_owl:hasService
     annotations:
       skos_in_scheme: process-properties
 
@@ -133,12 +133,12 @@ classes:
     class_uri: dpv:Process
     description: An action, activity, or method
     aliases:
-      - Process
+    - Process
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:Process
-      - dpv_owl:Process
+    - dpv_upstream:Process
+    - dpv_owl:Process
     annotations:
       skos_in_scheme: process-classes
 
@@ -149,17 +149,17 @@ classes:
       A service is a process where one entity provides some benefit or
       assistance to another entity
     aliases:
-      - Service
+    - Service
     comments:
-      - |-
-        Service Provider and Service Consumer reflect the roles associated with
-        a service. 'Service' as a process is a distinct concept from the use of
-        'service' as a provision method in Tech extension
+    - |-
+      Service Provider and Service Consumer reflect the roles associated with
+      a service. 'Service' as a process is a distinct concept from the use of
+      'service' as a provision method in Tech extension
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:Service
-      - dpv_owl:Service
+    - dpv_upstream:Service
+    - dpv_owl:Service
     annotations:
       skos_in_scheme: process-classes
 
@@ -170,17 +170,17 @@ classes:
       An action, activity, or method involving non-personal data, and
       asserting that no personal data is involved
     aliases:
-      - Non-Personal Data Process
+    - Non-Personal Data Process
     comments:
-      - |-
-        Use of personal data within NonPersonalDataProcess should be considered
-        a violation of the explicit constraint that no personal data is
-        involved.
+    - |-
+      Use of personal data within NonPersonalDataProcess should be considered
+      a violation of the explicit constraint that no personal data is
+      involved.
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:NonPersonalDataProcess
-      - dpv_owl:NonPersonalDataProcess
+    - dpv_upstream:NonPersonalDataProcess
+    - dpv_owl:NonPersonalDataProcess
     annotations:
       skos_in_scheme: process-classes
 
@@ -189,18 +189,18 @@ classes:
     class_uri: dpv:PersonalDataHandling
     description: An abstract concept describing 'personal data handling'
     aliases:
-      - Personal Data Handling
+    - Personal Data Handling
     comments:
-      - |-
-        This concept will be deprecated in future updates. It is recommended to
-        use dpv:Process as the equivalent alternative which is better aligned
-        with legal and operational terminology.
+    - |-
+      This concept will be deprecated in future updates. It is recommended to
+      use dpv:Process as the equivalent alternative which is better aligned
+      with legal and operational terminology.
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:PersonalDataHandling
-      - dpv_owl:PersonalDataHandling
-      - iso29100:PIIFlowScenario
+    - dpv_upstream:PersonalDataHandling
+    - dpv_owl:PersonalDataHandling
+    - iso29100:PIIFlowScenario
     annotations:
       skos_in_scheme: process-classes
 
@@ -209,14 +209,14 @@ classes:
     class_uri: dpv:PersonalDataProcess
     description: An action, activity, or method involving personal data
     aliases:
-      - Personal Data Process
+    - Personal Data Process
     in_subset:
-      - process_subset
+    - process_subset
     exact_mappings:
-      - dpv_upstream:PersonalDataProcess
-      - dpv_owl:PersonalDataProcess
-      - iso29100:PIIProcessingActivity
-    close_mappings:
-      - iso22989:DataProcess
+    - dpv_upstream:PersonalDataProcess
+    - dpv_owl:PersonalDataProcess
+    - iso29100:PIIProcessingActivity
     annotations:
       skos_in_scheme: process-classes
+    close_mappings:
+    - iso22989:DataProcess

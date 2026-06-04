@@ -41,7 +41,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -78,85 +78,3 @@ subsets:
 
   legal_eu_aiact_data_subset:
     description: Entities from the DPV `legal/eu/aiact/modules/data` submodule.
-
-classes:
-
-  BiometricData:
-    is_a: Biometric
-    mixins:
-      - PersonalData
-    class_uri: legal_eu_aiact:BiometricData
-    description: |-
-      Personal data resulting from specific technical processing relating to
-      the physical, physiological or behavioural characteristics of a natural
-      person, such as facial images or dactyloscopic data
-    aliases:
-      - Biometric Data
-    in_subset:
-      - legal_eu_aiact_data_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:BiometricData
-      - dpv_legal_eu_aiact_owl:BiometricData
-    annotations:
-      dct_source: AIA(Art. 3(34))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#BiometricData
-      dpv_extension_slug: legal/eu/aiact
-
-  TestingData:
-    class_uri: legal_eu_aiact:TestingData
-    description: |-
-      Data used for providing an independent evaluation of the AI system in
-      order to confirm the expected performance of that system before its
-      placing on the market or putting into service
-    aliases:
-      - Testing Data
-    in_subset:
-      - legal_eu_aiact_data_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:TestingData
-      - dpv_legal_eu_aiact_owl:TestingData
-    close_mappings:
-      - iso42001:DataResource
-    annotations:
-      dct_source: AIA (Art. 3(32))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#TestingData
-      dpv_extension_slug: legal/eu/aiact
-
-  TrainingData:
-    class_uri: legal_eu_aiact:TrainingData
-    description: |-
-      Data used for training an AI system through fitting its learnable
-      parameters
-    aliases:
-      - Training Data
-    in_subset:
-      - legal_eu_aiact_data_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:TrainingData
-      - dpv_legal_eu_aiact_owl:TrainingData
-    close_mappings:
-      - iso42001:DataResource
-    annotations:
-      dct_source: AIA(Art. 3(29))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#TrainingData
-      dpv_extension_slug: legal/eu/aiact
-
-  ValidationData:
-    class_uri: legal_eu_aiact:ValidationData
-    description: |-
-      Data used for providing an evaluation of the trained AI system and for
-      tuning its non-learnable parameters and its learning process in order,
-      inter alia, to prevent underfitting or overfitting
-    aliases:
-      - Validation Data
-    in_subset:
-      - legal_eu_aiact_data_subset
-    exact_mappings:
-      - dpv_legal_eu_aiact:ValidationData
-      - dpv_legal_eu_aiact_owl:ValidationData
-    close_mappings:
-      - iso42001:DataResource
-    annotations:
-      dct_source: AIA (Art. 3(30))
-      upstream_iri: https://w3id.org/dpv/legal/eu/aiact/owl#ValidationData
-      dpv_extension_slug: legal/eu/aiact

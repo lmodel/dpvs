@@ -6,8 +6,8 @@ description: |-
   `modules/technical_measures-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -62,12 +62,12 @@ classes:
     class_uri: dpv:AccessControlMethod
     description: Methods which restrict access to a place or resource
     aliases:
-      - Access Control Method
+    - Access Control Method
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:AccessControlMethod
-      - dpv_owl:AccessControlMethod
+    - dpv_upstream:AccessControlMethod
+    - dpv_owl:AccessControlMethod
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -78,19 +78,19 @@ classes:
       Monitoring of activities including assessing whether they have been
       successfully initiated and completed
     aliases:
-      - Activity Monitoring
+    - Activity Monitoring
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:ActivityMonitoring
-      - dpv_owl:ActivityMonitoring
+    - dpv_upstream:ActivityMonitoring
+    - dpv_owl:ActivityMonitoring
     annotations:
       skos_in_scheme: technical-measures-classes
 
   Anonymisation:
     is_a: Deidentification
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:Anonymisation
     description: |-
       Anonymisation is the process by which data is irreversibly altered in
@@ -98,84 +98,84 @@ classes:
       indirectly, either by the entity holding the data alone or in
       collaboration with other entities and information sources
     aliases:
-      - Anonymisation
+    - Anonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:Anonymisation
-      - dpv_owl:Anonymisation
+    - dpv_upstream:Anonymisation
+    - dpv_owl:Anonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   AsymmetricCryptography:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:AsymmetricCryptography
     description: |-
       Use of public-key cryptography or asymmetric cryptography involving a
       public and private pair of keys
     aliases:
-      - Asymmetric Cryptography
+    - Asymmetric Cryptography
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:AsymmetricCryptography
-      - dpv_owl:AsymmetricCryptography
+    - dpv_upstream:AsymmetricCryptography
+    - dpv_owl:AsymmetricCryptography
     annotations:
       skos_in_scheme: technical-measures-classes
 
   AsymmetricEncryption:
     is_a: Encryption
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:AsymmetricEncryption
     description: Use of asymmetric cryptography to encrypt data
     aliases:
-      - Asymmetric Encryption
+    - Asymmetric Encryption
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:AsymmetricEncryption
-      - dpv_owl:AsymmetricEncryption
+    - dpv_upstream:AsymmetricEncryption
+    - dpv_owl:AsymmetricEncryption
     annotations:
       skos_in_scheme: technical-measures-classes
 
   AuthenticationABC:
     is_a: CryptographicAuthentication
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:Authentication-ABC
     description: |-
       Use of Attribute Based Credentials (ABC) to perform and manage
       authentication
     aliases:
-      - Authentication-ABC
-      - Authentication using ABC
+    - Authentication-ABC
+    - Authentication using ABC
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:Authentication-ABC
-      - dpv_owl:Authentication-ABC
+    - dpv_upstream:Authentication-ABC
+    - dpv_owl:Authentication-ABC
     annotations:
       skos_in_scheme: technical-measures-classes
 
   AuthenticationPABC:
     is_a: CryptographicAuthentication
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:Authentication-PABC
     description: |-
       Use of Privacy-enhancing Attribute Based Credentials (ABC) to perform
       and manage authentication
     aliases:
-      - Authentication-PABC
-      - Authentication using PABC
+    - Authentication-PABC
+    - Authentication using PABC
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:Authentication-PABC
-      - dpv_owl:Authentication-PABC
+    - dpv_upstream:Authentication-PABC
+    - dpv_owl:Authentication-PABC
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -186,12 +186,12 @@ classes:
       Protocols involving validation of identity i.e. authentication of a
       person or information
     aliases:
-      - Authentication Protocols
+    - Authentication Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:AuthenticationProtocols
-      - dpv_owl:AuthenticationProtocols
+    - dpv_upstream:AuthenticationProtocols
+    - dpv_owl:AuthenticationProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -202,63 +202,63 @@ classes:
       Protocols involving authorisation of roles or profiles to determine
       permission, rights, or privileges
     aliases:
-      - Authorisation Protocols
+    - Authorisation Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:AuthorisationProtocols
-      - dpv_owl:AuthorisationProtocols
+    - dpv_upstream:AuthorisationProtocols
+    - dpv_owl:AuthorisationProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
   BiometricAuthentication:
     is_a: AuthenticationProtocols
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:BiometricAuthentication
     description: Use of biometric data for authentication
     aliases:
-      - Biometric Authentication
+    - Biometric Authentication
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:BiometricAuthentication
-      - dpv_owl:BiometricAuthentication
+    - dpv_upstream:BiometricAuthentication
+    - dpv_owl:BiometricAuthentication
     annotations:
       skos_in_scheme: technical-measures-classes
 
   CryptographicAuthentication:
     is_a: AuthenticationProtocols
     mixins:
-      - TechnicalMeasure
-      - CryptographicMethods
+    - TechnicalMeasure
+    - CryptographicMethods
     class_uri: dpv:CryptographicAuthentication
     description: Use of cryptography for authentication
     aliases:
-      - Cryptographic Authentication
+    - Cryptographic Authentication
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:CryptographicAuthentication
-      - dpv_owl:CryptographicAuthentication
+    - dpv_upstream:CryptographicAuthentication
+    - dpv_owl:CryptographicAuthentication
     annotations:
       skos_in_scheme: technical-measures-classes
 
   CryptographicKeyManagement:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:CryptographicKeyManagement
     description: |-
       Management of cryptographic keys, including their generation, storage,
       assessment, and safekeeping
     aliases:
-      - Cryptographic Key Management
+    - Cryptographic Key Management
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:CryptographicKeyManagement
-      - dpv_owl:CryptographicKeyManagement
+    - dpv_upstream:CryptographicKeyManagement
+    - dpv_owl:CryptographicKeyManagement
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -267,12 +267,12 @@ classes:
     class_uri: dpv:CryptographicMethods
     description: Use of cryptographic methods to perform tasks
     aliases:
-      - Cryptographic Methods
+    - Cryptographic Methods
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:CryptographicMethods
-      - dpv_owl:CryptographicMethods
+    - dpv_upstream:CryptographicMethods
+    - dpv_owl:CryptographicMethods
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -281,28 +281,28 @@ classes:
     class_uri: dpv:DataBackupProtocols
     description: Protocols or plans for backing up of data
     aliases:
-      - Data Backup Protocols
+    - Data Backup Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DataBackupProtocols
-      - dpv_owl:DataBackupProtocols
+    - dpv_upstream:DataBackupProtocols
+    - dpv_owl:DataBackupProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DataRedaction:
     is_a: DataSanitisationTechnique
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DataRedaction
     description: Removal of sensitive information from a data or document
     aliases:
-      - Data Redaction
+    - Data Redaction
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DataRedaction
-      - dpv_owl:DataRedaction
+    - dpv_upstream:DataRedaction
+    - dpv_owl:DataRedaction
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -313,62 +313,62 @@ classes:
       Cleaning or any removal or re-organisation of elements in data based on
       selective criteria
     aliases:
-      - Data Sanitisation Technique
+    - Data Sanitisation Technique
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DataSanitisationTechnique
-      - dpv_owl:DataSanitisationTechnique
+    - dpv_upstream:DataSanitisationTechnique
+    - dpv_owl:DataSanitisationTechnique
     annotations:
       skos_in_scheme: technical-measures-classes
 
   Deidentification:
     is_a: DataSanitisationTechnique
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:Deidentification
     description: Removal of identity or information to reduce identifiability
     aliases:
-      - De-Identification
+    - De-Identification
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:Deidentification
-      - dpv_owl:Deidentification
+    - dpv_upstream:Deidentification
+    - dpv_owl:Deidentification
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DeterministicPseudonymisation:
     is_a: Pseudonymisation
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DeterministicPseudonymisation
     description: Pseudonymisation achieved through a deterministic function
     aliases:
-      - Deterministic Pseudonymisation
+    - Deterministic Pseudonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DeterministicPseudonymisation
-      - dpv_owl:DeterministicPseudonymisation
+    - dpv_upstream:DeterministicPseudonymisation
+    - dpv_owl:DeterministicPseudonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DifferentialPrivacy:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DifferentialPrivacy
     description: |-
       Utilisation of differential privacy where information is shared as
       patterns or groups to withhold individual elements
     aliases:
-      - Differential Privacy
+    - Differential Privacy
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DifferentialPrivacy
-      - dpv_owl:DifferentialPrivacy
+    - dpv_upstream:DifferentialPrivacy
+    - dpv_owl:DifferentialPrivacy
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -379,82 +379,83 @@ classes:
       Management of access, use, and other operations associated with digital
       content
     aliases:
-      - Digital Rights Management
+    - Digital Rights Management
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DigitalRightsManagement
-      - dpv_owl:DigitalRightsManagement
+    - dpv_upstream:DigitalRightsManagement
+    - dpv_owl:DigitalRightsManagement
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DigitalSignatures:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DigitalSignatures
     description: |-
       Expression and authentication of identity through digital information
       containing cryptographic signatures
     aliases:
-      - Digital Signatures
+    - Digital Signatures
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DigitalSignatures
-      - dpv_owl:DigitalSignatures
+    - dpv_upstream:DigitalSignatures
+    - dpv_owl:DigitalSignatures
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DistributedSystemSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DistributedSystemSecurity
-    description: Security implementations provided using or over a distributed system
+    description: Security implementations provided using or over a distributed 
+      system
     aliases:
-      - Distributed System Security
+    - Distributed System Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DistributedSystemSecurity
-      - dpv_owl:DistributedSystemSecurity
+    - dpv_upstream:DistributedSystemSecurity
+    - dpv_owl:DistributedSystemSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DocumentRandomisedPseudonymisation:
     is_a: Pseudonymisation
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DocumentRandomisedPseudonymisation
     description: |-
       Use of randomised pseudonymisation where the same elements are assigned
       different values in the same document or database
     aliases:
-      - Document Randomised Pseudonymisation
+    - Document Randomised Pseudonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DocumentRandomisedPseudonymisation
-      - dpv_owl:DocumentRandomisedPseudonymisation
+    - dpv_upstream:DocumentRandomisedPseudonymisation
+    - dpv_owl:DocumentRandomisedPseudonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   DocumentSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:DocumentSecurity
     description: |-
       Security measures enacted over documents to protect against tampering or
       restrict access
     aliases:
-      - Document Security
+    - Document Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:DocumentSecurity
-      - dpv_owl:DocumentSecurity
+    - dpv_upstream:DocumentSecurity
+    - dpv_owl:DocumentSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -463,82 +464,82 @@ classes:
     class_uri: dpv:Encryption
     description: Technical measures consisting of encryption
     aliases:
-      - Encryption
+    - Encryption
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:Encryption
-      - dpv_owl:Encryption
-    narrow_mappings:
-      - iso27001:SecurityControl
+    - dpv_upstream:Encryption
+    - dpv_owl:Encryption
     annotations:
       skos_in_scheme: technical-measures-classes
 
+    narrow_mappings:
+    - iso27001:SecurityControl
   EncryptionAtRest:
     is_a: Encryption
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:EncryptionAtRest
     description: Encryption of data when being stored (persistent encryption)
     aliases:
-      - Encryption at Rest
+    - Encryption at Rest
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:EncryptionAtRest
-      - dpv_owl:EncryptionAtRest
+    - dpv_upstream:EncryptionAtRest
+    - dpv_owl:EncryptionAtRest
     annotations:
       skos_in_scheme: technical-measures-classes
 
   EncryptionInTransfer:
     is_a: Encryption
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:EncryptionInTransfer
     description: |-
       Encryption of data in transit e.g. when being transferred from one
       location to another, including sharing
     aliases:
-      - Encryption in Transfer
+    - Encryption in Transfer
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:EncryptionInTransfer
-      - dpv_owl:EncryptionInTransfer
+    - dpv_upstream:EncryptionInTransfer
+    - dpv_owl:EncryptionInTransfer
     annotations:
       skos_in_scheme: technical-measures-classes
 
   EncryptionInUse:
     is_a: Encryption
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:EncryptionInUse
     description: Encryption of data when it is being used
     aliases:
-      - Encryption in Use
+    - Encryption in Use
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:EncryptionInUse
-      - dpv_owl:EncryptionInUse
+    - dpv_upstream:EncryptionInUse
+    - dpv_owl:EncryptionInUse
     annotations:
       skos_in_scheme: technical-measures-classes
 
   EndToEndEncryption:
     is_a: Encryption
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:EndToEndEncryption
     description: |-
       Encrypted communications where data is encrypted by the sender and
       decrypted by the intended receiver to prevent access to any third party
     aliases:
-      - End-to-End Encryption (E2EE)
+    - End-to-End Encryption (E2EE)
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:EndToEndEncryption
-      - dpv_owl:EndToEndEncryption
+    - dpv_upstream:EndToEndEncryption
+    - dpv_owl:EndToEndEncryption
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -547,12 +548,12 @@ classes:
     class_uri: dpv:FailSafeProtocols
     description: Use of fail-safe measures and protocols
     aliases:
-      - Fail-Safe Protocols
+    - Fail-Safe Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:FailSafeProtocols
-      - dpv_owl:FailSafeProtocols
+    - dpv_upstream:FailSafeProtocols
+    - dpv_owl:FailSafeProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
       dct_source: AI Act Article 15(4)
@@ -560,104 +561,104 @@ classes:
   FileSystemSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:FileSystemSecurity
     description: Security implemented over a file system
     aliases:
-      - File System Security
+    - File System Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:FileSystemSecurity
-      - dpv_owl:FileSystemSecurity
+    - dpv_upstream:FileSystemSecurity
+    - dpv_owl:FileSystemSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
   FullyRandomisedPseudonymisation:
     is_a: Pseudonymisation
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:FullyRandomisedPseudonymisation
     description: |-
       Use of randomised pseudonymisation where the same elements are assigned
       different values each time they occur
     aliases:
-      - Fully Randomised Pseudonymisation
+    - Fully Randomised Pseudonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:FullyRandomisedPseudonymisation
-      - dpv_owl:FullyRandomisedPseudonymisation
+    - dpv_upstream:FullyRandomisedPseudonymisation
+    - dpv_owl:FullyRandomisedPseudonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   HardwareSecurityProtocols:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:HardwareSecurityProtocols
     description: Security protocols implemented at or within hardware
     aliases:
-      - Hardware Security Protocols
+    - Hardware Security Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:HardwareSecurityProtocols
-      - dpv_owl:HardwareSecurityProtocols
+    - dpv_upstream:HardwareSecurityProtocols
+    - dpv_owl:HardwareSecurityProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
   HashFunctions:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:HashFunctions
     description: |-
       Use of hash functions to map information or to retrieve a prior
       categorisation
     aliases:
-      - Hash Functions
+    - Hash Functions
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:HashFunctions
-      - dpv_owl:HashFunctions
+    - dpv_upstream:HashFunctions
+    - dpv_owl:HashFunctions
     annotations:
       skos_in_scheme: technical-measures-classes
 
   HashMessageAuthenticationCode:
     is_a: CryptographicAuthentication
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:HashMessageAuthenticationCode
     description: |-
       Use of HMAC where message authentication code (MAC) utilise a
       cryptographic hash function and a secret cryptographic key
     aliases:
-      - Hash-based Message Authentication Code (HMAC)
+    - Hash-based Message Authentication Code (HMAC)
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:HashMessageAuthenticationCode
-      - dpv_owl:HashMessageAuthenticationCode
+    - dpv_upstream:HashMessageAuthenticationCode
+    - dpv_owl:HashMessageAuthenticationCode
     annotations:
       skos_in_scheme: technical-measures-classes
 
   HomomorphicEncryption:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:HomomorphicEncryption
     description: |-
       Use of Homomorphic encryption that permits computations on encrypted
       data without decrypting it
     aliases:
-      - Homomorphic Encryption
+    - Homomorphic Encryption
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:HomomorphicEncryption
-      - dpv_owl:HomomorphicEncryption
+    - dpv_upstream:HomomorphicEncryption
+    - dpv_owl:HomomorphicEncryption
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -666,239 +667,240 @@ classes:
     class_uri: dpv:InformationFlowControl
     description: Use of measures to control information flows
     aliases:
-      - Information Flow Control
+    - Information Flow Control
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:InformationFlowControl
-      - dpv_owl:InformationFlowControl
+    - dpv_upstream:InformationFlowControl
+    - dpv_owl:InformationFlowControl
     annotations:
       skos_in_scheme: technical-measures-classes
 
   IntrusionDetectionSystem:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:IntrusionDetectionSystem
     description: |-
       Use of measures to detect intrusions and other unauthorised attempts to
       gain access to a system
     aliases:
-      - Intrusion Detection System
+    - Intrusion Detection System
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:IntrusionDetectionSystem
-      - dpv_owl:IntrusionDetectionSystem
+    - dpv_upstream:IntrusionDetectionSystem
+    - dpv_owl:IntrusionDetectionSystem
     annotations:
       skos_in_scheme: technical-measures-classes
 
   MessageAuthenticationCodes:
     is_a: CryptographicAuthentication
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:MessageAuthenticationCodes
     description: Use of cryptographic methods to authenticate messages
     aliases:
-      - Message Authentication Codes (MAC)
+    - Message Authentication Codes (MAC)
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:MessageAuthenticationCodes
-      - dpv_owl:MessageAuthenticationCodes
+    - dpv_upstream:MessageAuthenticationCodes
+    - dpv_owl:MessageAuthenticationCodes
     annotations:
       skos_in_scheme: technical-measures-classes
 
   MobilePlatformSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:MobilePlatformSecurity
     description: Security implemented over a mobile platform
     aliases:
-      - Mobile Platform Security
+    - Mobile Platform Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:MobilePlatformSecurity
-      - dpv_owl:MobilePlatformSecurity
+    - dpv_upstream:MobilePlatformSecurity
+    - dpv_owl:MobilePlatformSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
   MonotonicCounterPseudonymisation:
     is_a: Pseudonymisation
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:MonotonicCounterPseudonymisation
     description: |-
       A simple pseudonymisation method where identifiers are substituted by a
       number chosen by a monotonic counter
     aliases:
-      - Monotonic Counter Pseudonymisation
+    - Monotonic Counter Pseudonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:MonotonicCounterPseudonymisation
-      - dpv_owl:MonotonicCounterPseudonymisation
+    - dpv_upstream:MonotonicCounterPseudonymisation
+    - dpv_owl:MonotonicCounterPseudonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   MultiFactorAuthentication:
     is_a: AuthenticationProtocols
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:MultiFactorAuthentication
-    description: An authentication system that uses two or more methods to authenticate
+    description: An authentication system that uses two or more methods to 
+      authenticate
     aliases:
-      - Multi-Factor Authentication (MFA)
+    - Multi-Factor Authentication (MFA)
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:MultiFactorAuthentication
-      - dpv_owl:MultiFactorAuthentication
+    - dpv_upstream:MultiFactorAuthentication
+    - dpv_owl:MultiFactorAuthentication
     annotations:
       skos_in_scheme: technical-measures-classes
 
   NetworkProxyRouting:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:NetworkProxyRouting
     description: Use of network routing using proxy
     aliases:
-      - Network Proxy Routing
+    - Network Proxy Routing
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:NetworkProxyRouting
-      - dpv_owl:NetworkProxyRouting
+    - dpv_upstream:NetworkProxyRouting
+    - dpv_owl:NetworkProxyRouting
     annotations:
       skos_in_scheme: technical-measures-classes
 
   NetworkSecurityProtocols:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:NetworkSecurityProtocols
     description: Security implemented at or over networks protocols
     aliases:
-      - Network Security Protocols
+    - Network Security Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:NetworkSecurityProtocols
-      - dpv_owl:NetworkSecurityProtocols
+    - dpv_upstream:NetworkSecurityProtocols
+    - dpv_owl:NetworkSecurityProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
   OperatingSystemSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:OperatingSystemSecurity
     description: Security implemented at or through operating systems
     aliases:
-      - Operating System Security
+    - Operating System Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:OperatingSystemSecurity
-      - dpv_owl:OperatingSystemSecurity
+    - dpv_upstream:OperatingSystemSecurity
+    - dpv_owl:OperatingSystemSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
   PasswordAuthentication:
     is_a: AuthenticationProtocols
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:PasswordAuthentication
     description: Use of passwords to perform authentication
     aliases:
-      - Password Authentication
+    - Password Authentication
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:PasswordAuthentication
-      - dpv_owl:PasswordAuthentication
+    - dpv_upstream:PasswordAuthentication
+    - dpv_owl:PasswordAuthentication
     annotations:
       skos_in_scheme: technical-measures-classes
 
   PenetrationTestingMethods:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:PenetrationTestingMethods
     description: |-
       Use of penetration testing to identify weaknesses and vulnerabilities
       through simulations
     aliases:
-      - Penetration Testing Methods
+    - Penetration Testing Methods
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:PenetrationTestingMethods
-      - dpv_owl:PenetrationTestingMethods
+    - dpv_upstream:PenetrationTestingMethods
+    - dpv_owl:PenetrationTestingMethods
     annotations:
       skos_in_scheme: technical-measures-classes
 
   PostQuantumCryptography:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:PostQuantumCryptography
     description: |-
       Use of algorithms that are intended to be secure against cryptanalytic
       attack by a quantum computer
     aliases:
-      - Post-Quantum Cryptography
+    - Post-Quantum Cryptography
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:PostQuantumCryptography
-      - dpv_owl:PostQuantumCryptography
+    - dpv_upstream:PostQuantumCryptography
+    - dpv_owl:PostQuantumCryptography
     annotations:
       skos_in_scheme: technical-measures-classes
 
   PrivacyPreservingProtocol:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:PrivacyPreservingProtocol
     description: |-
       Use of protocols designed with the intention of provided additional
       guarantees regarding privacy
     aliases:
-      - Privacy Preserving Protocol
+    - Privacy Preserving Protocol
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:PrivacyPreservingProtocol
-      - dpv_owl:PrivacyPreservingProtocol
+    - dpv_upstream:PrivacyPreservingProtocol
+    - dpv_owl:PrivacyPreservingProtocol
     annotations:
       skos_in_scheme: technical-measures-classes
 
   PrivateInformationRetrieval:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:PrivateInformationRetrieval
     description: |-
       Use of cryptographic methods to retrieve a record from a system without
       revealing which record is retrieved
     aliases:
-      - Private Information Retrieval
+    - Private Information Retrieval
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:PrivateInformationRetrieval
-      - dpv_owl:PrivateInformationRetrieval
+    - dpv_upstream:PrivateInformationRetrieval
+    - dpv_owl:PrivateInformationRetrieval
     annotations:
       skos_in_scheme: technical-measures-classes
 
   Pseudonymisation:
     is_a: Deidentification
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:Pseudonymisation
     description: |-
       Pseudonymisation means the processing of personal data in such a manner
@@ -908,84 +910,84 @@ classes:
       and organisational measures to ensure that the personal data are not
       attributed to an identified or identifiable natural person;
     aliases:
-      - Pseudonymisation
+    - Pseudonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:Pseudonymisation
-      - dpv_owl:Pseudonymisation
+    - dpv_upstream:Pseudonymisation
+    - dpv_owl:Pseudonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   QuantumCryptography:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:QuantumCryptography
     description: |-
       Cryptographic methods that utilise quantum mechanical properties to
       perform cryptographic tasks
     aliases:
-      - Quantum Cryptography
+    - Quantum Cryptography
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:QuantumCryptography
-      - dpv_owl:QuantumCryptography
+    - dpv_upstream:QuantumCryptography
+    - dpv_owl:QuantumCryptography
     annotations:
       skos_in_scheme: technical-measures-classes
 
   RNGPseudonymisation:
     is_a: Pseudonymisation
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:RNGPseudonymisation
     description: |-
       A pseudonymisation method where identifiers are substituted by a number
       chosen by a Random Number Generator (RNG)
     aliases:
-      - RNG Pseudonymisation
+    - RNG Pseudonymisation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:RNGPseudonymisation
-      - dpv_owl:RNGPseudonymisation
+    - dpv_upstream:RNGPseudonymisation
+    - dpv_owl:RNGPseudonymisation
     annotations:
       skos_in_scheme: technical-measures-classes
 
   SecretSharingSchemes:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:SecretSharingSchemes
     description: |-
       Use of secret sharing schemes where the secret can only be reconstructed
       through combination of sufficient number of individuals
     aliases:
-      - Secret Sharing Schemes
+    - Secret Sharing Schemes
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:SecretSharingSchemes
-      - dpv_owl:SecretSharingSchemes
+    - dpv_upstream:SecretSharingSchemes
+    - dpv_owl:SecretSharingSchemes
     annotations:
       skos_in_scheme: technical-measures-classes
 
   SecureMultiPartyComputation:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:SecureMultiPartyComputation
     description: |-
       Use of cryptographic methods for entities to jointly compute functions
       without revealing inputs
     aliases:
-      - Secure Multi-Party Computation
+    - Secure Multi-Party Computation
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:SecureMultiPartyComputation
-      - dpv_owl:SecureMultiPartyComputation
+    - dpv_upstream:SecureMultiPartyComputation
+    - dpv_owl:SecureMultiPartyComputation
     annotations:
       skos_in_scheme: technical-measures-classes
 
@@ -994,232 +996,233 @@ classes:
     class_uri: dpv:SecurityMethod
     description: Methods that relate to creating and providing security
     aliases:
-      - Security Method
+    - Security Method
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:SecurityMethod
-      - dpv_owl:SecurityMethod
+    - dpv_upstream:SecurityMethod
+    - dpv_owl:SecurityMethod
     annotations:
       skos_in_scheme: technical-measures-classes
 
   SingleSignOn:
     is_a: AuthenticationProtocols
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:SingleSignOn
     description: |-
       Use of credentials or processes that enable using one set of credentials
       to authenticate multiple contexts.
     aliases:
-      - Single Sign On
+    - Single Sign On
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:SingleSignOn
-      - dpv_owl:SingleSignOn
+    - dpv_upstream:SingleSignOn
+    - dpv_owl:SingleSignOn
     annotations:
       skos_in_scheme: technical-measures-classes
 
   SymmetricCryptography:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:SymmetricCryptography
     description: |-
       Use of cryptography where the same keys are utilised for encryption and
       decryption of information
     aliases:
-      - Symmetric Cryptography
+    - Symmetric Cryptography
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:SymmetricCryptography
-      - dpv_owl:SymmetricCryptography
+    - dpv_upstream:SymmetricCryptography
+    - dpv_owl:SymmetricCryptography
     annotations:
       skos_in_scheme: technical-measures-classes
 
   SymmetricEncryption:
     is_a: Encryption
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:SymmetricEncryption
     description: Use of symmetric cryptography to encrypt data
     aliases:
-      - Symmetric Encryption
+    - Symmetric Encryption
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:SymmetricEncryption
-      - dpv_owl:SymmetricEncryption
+    - dpv_upstream:SymmetricEncryption
+    - dpv_owl:SymmetricEncryption
     annotations:
       skos_in_scheme: technical-measures-classes
 
   TrustedComputing:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:TrustedComputing
     description: |-
       Use of cryptographic methods to restrict access and execution to trusted
       parties and code
     aliases:
-      - Trusted Computing
+    - Trusted Computing
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:TrustedComputing
-      - dpv_owl:TrustedComputing
+    - dpv_upstream:TrustedComputing
+    - dpv_owl:TrustedComputing
     annotations:
       skos_in_scheme: technical-measures-classes
 
   TrustedExecutionEnvironment:
     is_a: CryptographicMethods
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:TrustedExecutionEnvironment
     description: |-
       Use of cryptographic methods to restrict access and execution to trusted
       parties and code within a dedicated execution environment
     aliases:
-      - Trusted Execution Environment
+    - Trusted Execution Environment
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:TrustedExecutionEnvironment
-      - dpv_owl:TrustedExecutionEnvironment
+    - dpv_upstream:TrustedExecutionEnvironment
+    - dpv_owl:TrustedExecutionEnvironment
     annotations:
       skos_in_scheme: technical-measures-classes
 
   UsageControl:
     is_a: AccessControlMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:UsageControl
     description: |-
       Management of usage, which is intended to be broader than access control
       and may cover trust, digital rights, or other relevant controls
     aliases:
-      - Usage Control
+    - Usage Control
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:UsageControl
-      - dpv_owl:UsageControl
+    - dpv_upstream:UsageControl
+    - dpv_owl:UsageControl
     annotations:
       skos_in_scheme: technical-measures-classes
 
   UseSyntheticData:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:UseSyntheticData
     description: |-
       Use of synthetic data to preserve privacy, security, or other effects
       and side-effects
     aliases:
-      - Use of Synthetic Data
+    - Use of Synthetic Data
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:UseSyntheticData
-      - dpv_owl:UseSyntheticData
+    - dpv_upstream:UseSyntheticData
+    - dpv_owl:UseSyntheticData
     annotations:
       skos_in_scheme: technical-measures-classes
 
   VirtualisationSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:VirtualisationSecurity
     description: Security implemented at or through virtualised environments
     aliases:
-      - Virtualisation Security
+    - Virtualisation Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:VirtualisationSecurity
-      - dpv_owl:VirtualisationSecurity
+    - dpv_upstream:VirtualisationSecurity
+    - dpv_owl:VirtualisationSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
   VulnerabilityTestingMethods:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:VulnerabilityTestingMethods
     description: Methods that assess or discover vulnerabilities in a system
     aliases:
-      - Vulnerability Testing Methods
+    - Vulnerability Testing Methods
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:VulnerabilityTestingMethods
-      - dpv_owl:VulnerabilityTestingMethods
+    - dpv_upstream:VulnerabilityTestingMethods
+    - dpv_owl:VulnerabilityTestingMethods
     annotations:
       skos_in_scheme: technical-measures-classes
 
   WebBrowserSecurity:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:WebBrowserSecurity
     description: Security implemented at or over web browsers
     aliases:
-      - WebBrowser Security
+    - WebBrowser Security
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:WebBrowserSecurity
-      - dpv_owl:WebBrowserSecurity
+    - dpv_upstream:WebBrowserSecurity
+    - dpv_owl:WebBrowserSecurity
     annotations:
       skos_in_scheme: technical-measures-classes
 
   WebSecurityProtocols:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:WebSecurityProtocols
     description: Security implemented at or over web-based protocols
     aliases:
-      - Web Security Protocols
+    - Web Security Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:WebSecurityProtocols
-      - dpv_owl:WebSecurityProtocols
+    - dpv_upstream:WebSecurityProtocols
+    - dpv_owl:WebSecurityProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
   WirelessSecurityProtocols:
     is_a: SecurityMethod
     mixins:
-      - TechnicalMeasure
+    - TechnicalMeasure
     class_uri: dpv:WirelessSecurityProtocols
-    description: Security implemented at or over wireless communication protocols
+    description: Security implemented at or over wireless communication 
+      protocols
     aliases:
-      - Wireless Security Protocols
+    - Wireless Security Protocols
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:WirelessSecurityProtocols
-      - dpv_owl:WirelessSecurityProtocols
+    - dpv_upstream:WirelessSecurityProtocols
+    - dpv_owl:WirelessSecurityProtocols
     annotations:
       skos_in_scheme: technical-measures-classes
 
   ZeroKnowledgeAuthentication:
     is_a: AuthenticationProtocols
     mixins:
-      - TechnicalMeasure
-      - CryptographicMethods
+    - TechnicalMeasure
+    - CryptographicMethods
     class_uri: dpv:ZeroKnowledgeAuthentication
     description: Authentication using Zero-Knowledge proofs
     aliases:
-      - Zero Knowledge Authentication
+    - Zero Knowledge Authentication
     in_subset:
-      - technical_measures_subset
+    - technical_measures_subset
     exact_mappings:
-      - dpv_upstream:ZeroKnowledgeAuthentication
-      - dpv_owl:ZeroKnowledgeAuthentication
+    - dpv_upstream:ZeroKnowledgeAuthentication
+    - dpv_owl:ZeroKnowledgeAuthentication
     annotations:
       skos_in_scheme: technical-measures-classes

@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -77,25 +77,6 @@ subsets:
 
 classes:
 
-  AccessManagement:
-    is_a: EducationManagement
-    mixins:
-      - Purpose
-    class_uri: sector_education:AccessManagement
-    description: |-
-      Purposes associated with determination and management of access to
-      educational programs, resources, and services
-    aliases:
-      - AccessManagement
-    in_subset:
-      - sector_education_subset
-    exact_mappings:
-      - dpv_sector_education:AccessManagement
-      - dpv_sector_education_owl:AccessManagement
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/education/owl#AccessManagement
-      dpv_extension_slug: sector/education
-
   EducationManagement:
     is_a: Purpose
     class_uri: sector_education:EducationManagement
@@ -105,6 +86,7 @@ classes:
     aliases:
       - Education Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:EducationManagement
@@ -124,6 +106,7 @@ classes:
     aliases:
       - Research Data Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:ResearchDataManagement
@@ -145,6 +128,7 @@ classes:
     aliases:
       - Research Integrity Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:ResearchIntegrityManagement
@@ -166,6 +150,7 @@ classes:
     aliases:
       - Research Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:ResearchManagement
@@ -185,12 +170,33 @@ classes:
     aliases:
       - Research User Study Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:ResearchUserStudyManagement
       - dpv_sector_education_owl:ResearchUserStudyManagement
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/education/owl#ResearchUserStudyManagement
+      dpv_extension_slug: sector/education
+
+  SectorEducationAccessManagement:
+    is_a: EducationManagement
+    mixins:
+      - Purpose
+    class_uri: sector_education:AccessManagement
+    description: |-
+      Purposes associated with determination and management of access to
+      educational programs, resources, and services
+    aliases:
+      - AccessManagement
+    in_subset:
+      - sector_education_purposes_subset
+      - sector_education_subset
+    exact_mappings:
+      - dpv_sector_education:AccessManagement
+      - dpv_sector_education_owl:AccessManagement
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/education/owl#AccessManagement
       dpv_extension_slug: sector/education
 
   SectorEducationServiceProvision:
@@ -207,6 +213,7 @@ classes:
       - ServiceProvision
       - Service Provision
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:ServiceProvision
@@ -226,6 +233,7 @@ classes:
     aliases:
       - Staff Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StaffManagement
@@ -246,6 +254,7 @@ classes:
     aliases:
       - Staff Performance Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StaffPerformanceAssessment
@@ -266,6 +275,7 @@ classes:
     aliases:
       - Student Academic Potential Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentAcademicPotentialAssessment
@@ -276,7 +286,7 @@ classes:
       dpv_extension_slug: sector/education
 
   StudentAdmissionManagement:
-    is_a: AccessManagement
+    is_a: SectorEducationAccessManagement
     mixins:
       - Purpose
       - StudentManagement
@@ -287,6 +297,7 @@ classes:
     aliases:
       - Student Admission Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentAdmissionManagement
@@ -307,6 +318,7 @@ classes:
     aliases:
       - Student Admission Screening
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentAdmissionScreening
@@ -326,6 +338,7 @@ classes:
     aliases:
       - StudentAllocation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentAllocation
@@ -346,6 +359,7 @@ classes:
     aliases:
       - Student Assignment Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentAssignmentAssessment
@@ -365,6 +379,7 @@ classes:
     aliases:
       - Student Attendance Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentAttendanceManagement
@@ -387,6 +402,7 @@ classes:
     aliases:
       - Student Cheating Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentCheatingAssessment
@@ -406,6 +422,7 @@ classes:
     aliases:
       - Student Content Delivery
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentContentDelivery
@@ -425,6 +442,7 @@ classes:
     aliases:
       - Student Course Allocation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentCourseAllocation
@@ -444,6 +462,7 @@ classes:
     aliases:
       - Student Course Recommendation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentCourseRecommendation
@@ -464,6 +483,7 @@ classes:
     aliases:
       - Student Eligibility Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentEligibilityAssessment
@@ -483,6 +503,7 @@ classes:
     aliases:
       - Student Enrolment Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentEnrolmentManagement
@@ -502,6 +523,7 @@ classes:
     aliases:
       - Student Exam Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentExamAssessment
@@ -521,6 +543,7 @@ classes:
     aliases:
       - Student Fees Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentFeesManagement
@@ -540,6 +563,7 @@ classes:
     aliases:
       - Student Financial Benefits Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentFinancialBenefitsManagement
@@ -560,6 +584,7 @@ classes:
     aliases:
       - Student Guidance Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentGuidanceManagement
@@ -580,6 +605,7 @@ classes:
     aliases:
       - Student Identity Verification
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentIdentityVerification
@@ -600,6 +626,7 @@ classes:
     aliases:
       - Student In Person Proctoring
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentInPersonProctoring
@@ -619,6 +646,7 @@ classes:
     aliases:
       - Student Institute Allocation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentInstituteAllocation
@@ -638,6 +666,7 @@ classes:
     aliases:
       - Student Institute Recommendation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentInstituteRecommendation
@@ -659,6 +688,7 @@ classes:
     aliases:
       - Student Integrity Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentIntegrityManagement
@@ -678,6 +708,7 @@ classes:
     aliases:
       - Student Integrity Training
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentIntegrityTraining
@@ -698,6 +729,7 @@ classes:
     aliases:
       - Student Learning Feedback Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentLearningFeedbackManagement
@@ -720,6 +752,7 @@ classes:
     aliases:
       - Student Learning Needs Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentLearningNeedsAssessment
@@ -741,6 +774,7 @@ classes:
     aliases:
       - Student Learning Outcome Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentLearningOutcomeAssessment
@@ -760,6 +794,7 @@ classes:
     aliases:
       - Student Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentManagement
@@ -780,6 +815,7 @@ classes:
     aliases:
       - Student Misconduct Investigation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentMisconductInvestigation
@@ -802,6 +838,7 @@ classes:
     aliases:
       - Student Online Proctoring
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentOnlineProctoring
@@ -821,6 +858,7 @@ classes:
     aliases:
       - Student Performance Assessment
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentPerformanceAssessment
@@ -840,6 +878,7 @@ classes:
     aliases:
       - Student Performance Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentPerformanceManagement
@@ -859,6 +898,7 @@ classes:
     aliases:
       - Student Performance Monitoring
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentPerformanceMonitoring
@@ -880,6 +920,7 @@ classes:
     aliases:
       - Student Personalised Content Delivery
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentPersonalisedContentDelivery
@@ -902,6 +943,7 @@ classes:
     aliases:
       - Student Plagiarism Detection
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentPlagiarismDetection
@@ -921,6 +963,7 @@ classes:
     aliases:
       - Student Proctoring
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentProctoring
@@ -940,6 +983,7 @@ classes:
     aliases:
       - Student Program Allocation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentProgramAllocation
@@ -959,6 +1003,7 @@ classes:
     aliases:
       - Student Program Recommendation
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentProgramRecommendation
@@ -979,6 +1024,7 @@ classes:
     aliases:
       - Student Resource Access Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentResourceAccessManagement
@@ -999,6 +1045,7 @@ classes:
     aliases:
       - Student Social Activities Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentSocialActivitiesManagement
@@ -1020,6 +1067,7 @@ classes:
     aliases:
       - Student Special Needs Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentSpecialNeedsManagement
@@ -1040,6 +1088,7 @@ classes:
     aliases:
       - Student Wellbeing Management
     in_subset:
+      - sector_education_purposes_subset
       - sector_education_subset
     exact_mappings:
       - dpv_sector_education:StudentWellbeingManagement

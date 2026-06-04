@@ -4,9 +4,9 @@ title: DPV - Legal - Hr
 description: |-
   LinkML schema generated from the DPV 2.3 extension `legal/hr`
   (`legal-hr-owl.ttl`), enriched with canonical SKOS metadata. Imports the
-  semantic-group schema(s) `dpv:schema/dpv_legal_basis`,
-  `dpv:schema/dpv_entities` for the abstract parent classes this extension
-  specialises (instead of the full umbrella `dpv:schema/dpv`).
+  semantic-group schema(s) `dpv:schema/dpv_legal_basis` for the abstract
+  parent classes this extension specialises (instead of the full umbrella
+  `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/legal/hr
@@ -43,7 +43,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -69,7 +69,6 @@ id_prefixes:
 imports:
   - linkml:types
   - dpv:schema/dpv_legal_basis
-  - dpv:schema/dpv_entities
   - dpv:schema/extensions/legal/eu/gdpr
 
 subsets:
@@ -83,7 +82,7 @@ subsets:
 classes:
 
   DPAHR:
-    is_a: DataProtectionAuthority
+    is_a: LegalEuGdprDataProtectionAuthority
     mixins:
       - Law
     class_uri: legal_hr:DPA-HR
@@ -91,6 +90,7 @@ classes:
       - DPA-HR
       - Personal Data Protection Agency (AZOP)
     in_subset:
+      - legal_hr_hr_subset
       - legal_hr_subset
     exact_mappings:
       - dpv_legal_hr:DPA-HR

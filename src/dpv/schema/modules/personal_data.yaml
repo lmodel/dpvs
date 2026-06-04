@@ -6,8 +6,8 @@ description: |-
   `modules/personal_data-owl.ttl` (Data Privacy Vocabulary).
 license: CC-BY-4.0
 see_also:
-  - https://w3id.org/dpv
-  - https://w3c.github.io/dpv/
+- https://w3id.org/dpv
+- https://w3c.github.io/dpv/
 source: https://w3id.org/dpv/owl#
 version: '2.3'
 
@@ -33,7 +33,7 @@ prefixes:
   usage_policy: https://specialprivacy.ercim.eu/langs/usage-policy#
   shex: http://www.w3.org/ns/shex#
   common_domain_model: https://w3id.org/lmodel/common-domain-model/
-  gists: https://w3id.org/lmodel/gists/
+  gist: https://w3id.org/lmodel/gist/
   iso22989: https://w3id.org/lmodel/iso22989/
   iso27001: https://w3id.org/lmodel/iso27001/
   iso29100: https://w3id.org/lmodel/iso29100/
@@ -47,8 +47,8 @@ default_prefix: dpv
 default_range: string
 
 imports:
-  - linkml:types
-  - dpv:schema/dpv
+- linkml:types
+- dpv:schema/dpv
 
 subsets:
 
@@ -61,13 +61,13 @@ slots:
     definition_uri: dpv:hasData
     description: Indicates associated with Data (may or may not be personal)
     aliases:
-      - has data
+    - has data
     multivalued: true
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:hasData
-      - dpv_owl:hasData
+    - dpv_upstream:hasData
+    - dpv_owl:hasData
     annotations:
       skos_in_scheme: personal-data-properties
 
@@ -76,13 +76,13 @@ slots:
     definition_uri: dpv:hasPersonalData
     description: Indicates association with Personal Data
     aliases:
-      - has personal data
+    - has personal data
     multivalued: true
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:hasPersonalData
-      - dpv_owl:hasPersonalData
+    - dpv_upstream:hasPersonalData
+    - dpv_owl:hasPersonalData
     annotations:
       skos_in_scheme: personal-data-properties
 
@@ -91,13 +91,13 @@ slots:
     definition_uri: dpv:hasUncategorisedData
     description: Indicates association with the specified uncategorised data
     aliases:
-      - has uncategorised data
+    - has uncategorised data
     multivalued: true
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:hasUncategorisedData
-      - dpv_owl:hasUncategorisedData
+    - dpv_upstream:hasUncategorisedData
+    - dpv_owl:hasUncategorisedData
     annotations:
       skos_in_scheme: personal-data-properties
 
@@ -106,13 +106,13 @@ slots:
     definition_uri: dpv:hasUnstructuredData
     description: Indicates association with the specified unstructured data
     aliases:
-      - has unstructured data
+    - has unstructured data
     multivalued: true
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:hasUnstructuredData
-      - dpv_owl:hasUnstructuredData
+    - dpv_upstream:hasUnstructuredData
+    - dpv_owl:hasUnstructuredData
     annotations:
       skos_in_scheme: personal-data-properties
 
@@ -125,21 +125,21 @@ classes:
       Personal Data that has been (fully and completely) anonymised so that it
       is no longer considered Personal Data
     aliases:
-      - Anonymised Data
+    - Anonymised Data
     comments:
-      - |-
-        It is advised to carefully consider indicating data is fully or
-        completely anonymised by determining whether the data by itself or in
-        combination with other data can identify a person. Failing this
-        condition, the data should be denoted as PseudonymisedData. To indicate
-        data is anonymised only for a specified entity (e.g. within an
-        organisation), the concept ContextuallyAnonymisedData (as subclass of
-        PseudonymisedData) should be used instead of AnonymisedData.
+    - |-
+      It is advised to carefully consider indicating data is fully or
+      completely anonymised by determining whether the data by itself or in
+      combination with other data can identify a person. Failing this
+      condition, the data should be denoted as PseudonymisedData. To indicate
+      data is anonymised only for a specified entity (e.g. within an
+      organisation), the concept ContextuallyAnonymisedData (as subclass of
+      PseudonymisedData) should be used instead of AnonymisedData.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:AnonymisedData
-      - dpv_owl:AnonymisedData
+    - dpv_upstream:AnonymisedData
+    - dpv_owl:AnonymisedData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -148,34 +148,34 @@ classes:
     class_uri: dpv:CollectedData
     description: Data that has been obtained by collecting it from a source
     aliases:
-      - Collected Data
+    - Collected Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:CollectedData
-      - dpv_owl:CollectedData
+    - dpv_upstream:CollectedData
+    - dpv_owl:CollectedData
     annotations:
       skos_in_scheme: personal-data-classes
 
   CollectedPersonalData:
     is_a: CollectedData
     mixins:
-      - PersonalData
+    - PersonalData
     class_uri: dpv:CollectedPersonalData
     description: |-
       Personal Data that has been collected from another source such as the
       Data Subject
     aliases:
-      - Collected Personal Data
+    - Collected Personal Data
     comments:
-      - |-
-        To indicate the source of data, use the DataSource concept with the
-        hasDataSource relation
+    - |-
+      To indicate the source of data, use the DataSource concept with the
+      hasDataSource relation
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:CollectedPersonalData
-      - dpv_owl:CollectedPersonalData
+    - dpv_upstream:CollectedPersonalData
+    - dpv_owl:CollectedPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -186,12 +186,12 @@ classes:
       Data that is considered confidential due to business/trade secrets,
       confidentiality agreements, or company secrets
     aliases:
-      - Commercially Confidential Data
+    - Commercially Confidential Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:CommerciallyConfidentialData
-      - dpv_owl:CommerciallyConfidentialData
+    - dpv_upstream:CommerciallyConfidentialData
+    - dpv_owl:CommerciallyConfidentialData
     annotations:
       skos_in_scheme: personal-data-classes
       dct_source: DGA 6.5(c)
@@ -201,12 +201,12 @@ classes:
     class_uri: dpv:ConfidentialData
     description: Data deemed confidential
     aliases:
-      - Confidential Data
+    - Confidential Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ConfidentialData
-      - dpv_owl:ConfidentialData
+    - dpv_upstream:ConfidentialData
+    - dpv_owl:ConfidentialData
     annotations:
       skos_in_scheme: personal-data-classes
       dct_source: DGA 5.10
@@ -219,20 +219,20 @@ classes:
       but in actuality is not fully anonymised and is still personal data as
       it can be de-anonymised outside that context
     aliases:
-      - Contextually Anonymised Data
+    - Contextually Anonymised Data
     comments:
-      - |-
-        To distinguish between partially anonymised data that can be effectively
-        treated as anonymised data (e.g. in processing) within a context (e.g.
-        an organisation), the concept ContextuallyAnonymisedData should be used
-        instead of AnonymisedData. Transfer of this data outside of the context
-        should consider that it is not fully anonymised and that it is still
-        personal data
+    - |-
+      To distinguish between partially anonymised data that can be effectively
+      treated as anonymised data (e.g. in processing) within a context (e.g.
+      an organisation), the concept ContextuallyAnonymisedData should be used
+      instead of AnonymisedData. Transfer of this data outside of the context
+      should consider that it is not fully anonymised and that it is still
+      personal data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ContextuallyAnonymisedData
-      - dpv_owl:ContextuallyAnonymisedData
+    - dpv_upstream:ContextuallyAnonymisedData
+    - dpv_owl:ContextuallyAnonymisedData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -241,36 +241,36 @@ classes:
     class_uri: dpv:DerivedData
     description: Data that has been obtained through derivations of other data
     aliases:
-      - Derived Data
+    - Derived Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:DerivedData
-      - dpv_owl:DerivedData
+    - dpv_upstream:DerivedData
+    - dpv_owl:DerivedData
     annotations:
       skos_in_scheme: personal-data-classes
 
   DerivedPersonalData:
     is_a: DerivedData
     mixins:
-      - PersonalData
+    - PersonalData
     class_uri: dpv:DerivedPersonalData
     description: Personal Data that is obtained or derived from other data
     aliases:
-      - Derived Personal Data
+    - Derived Personal Data
     comments:
-      - |-
-        Derived Data is data that is obtained through processing of existing
-        data, e.g. deriving first name from full name. To indicate data that is
-        derived but which was not present or evident within the source data,
-        InferredPersonalData should be used.
+    - |-
+      Derived Data is data that is obtained through processing of existing
+      data, e.g. deriving first name from full name. To indicate data that is
+      derived but which was not present or evident within the source data,
+      InferredPersonalData should be used.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:DerivedPersonalData
-      - dpv_owl:DerivedPersonalData
+    - dpv_upstream:DerivedPersonalData
+    - dpv_owl:DerivedPersonalData
     related_mappings:
-      - svd:Derived
+    - svd:Derived
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -278,12 +278,12 @@ classes:
     class_uri: dpv:Data
     description: A broad concept representing 'data' or 'information'
     aliases:
-      - Data
+    - Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:Data
-      - dpv_owl:Data
+    - dpv_upstream:Data
+    - dpv_owl:Data
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -294,12 +294,12 @@ classes:
       Data that is generated or brought into existence without relation to
       existing data i.e. it is not derived or inferred from other data
     aliases:
-      - Generated Data
+    - Generated Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:GeneratedData
-      - dpv_owl:GeneratedData
+    - dpv_upstream:GeneratedData
+    - dpv_owl:GeneratedData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -311,16 +311,16 @@ classes:
       relation to existing data i.e. it is not derived or inferred from other
       data
     aliases:
-      - Generated Personal Data
+    - Generated Personal Data
     comments:
-      - |-
-        Generated Data is used to indicate data that is produced and is not
-        derived or inferred from other data
+    - |-
+      Generated Data is used to indicate data that is produced and is not
+      derived or inferred from other data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:GeneratedPersonalData
-      - dpv_owl:GeneratedPersonalData
+    - dpv_upstream:GeneratedPersonalData
+    - dpv_owl:GeneratedPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -331,20 +331,20 @@ classes:
       Personal Data that explicitly and by itself is sufficient to identify a
       person
     aliases:
-      - Identifying Personal Data
+    - Identifying Personal Data
     comments:
-      - |-
-        DPV does not use PII ('Personally Identifiable Information') as it has
-        varying and conflicting definitions across sources. Instead the concept
-        'identifying personal data' is intended to provide a clear
-        categorisation of its interpretation. Where multiple data categories can
-        be combined to create an 'identifying' category e.g. fingerprinting,
-        this concept represents the combined category.
+    - |-
+      DPV does not use PII ('Personally Identifiable Information') as it has
+      varying and conflicting definitions across sources. Instead the concept
+      'identifying personal data' is intended to provide a clear
+      categorisation of its interpretation. Where multiple data categories can
+      be combined to create an 'identifying' category e.g. fingerprinting,
+      this concept represents the combined category.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:IdentifyingPersonalData
-      - dpv_owl:IdentifyingPersonalData
+    - dpv_upstream:IdentifyingPersonalData
+    - dpv_owl:IdentifyingPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -355,12 +355,12 @@ classes:
       Data that is known to be incorrect or inconsistent with some
       requirements
     aliases:
-      - Incorrect Data
+    - Incorrect Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:IncorrectData
-      - dpv_owl:IncorrectData
+    - dpv_upstream:IncorrectData
+    - dpv_owl:IncorrectData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -369,33 +369,34 @@ classes:
     class_uri: dpv:InferredData
     description: Data that has been obtained through inferences of other data
     aliases:
-      - Inferred Data
+    - Inferred Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:InferredData
-      - dpv_owl:InferredData
+    - dpv_upstream:InferredData
+    - dpv_owl:InferredData
     annotations:
       skos_in_scheme: personal-data-classes
 
   InferredPersonalData:
     is_a: DerivedPersonalData
     mixins:
-      - InferredData
+    - InferredData
     class_uri: dpv:InferredPersonalData
-    description: Personal Data that is obtained through inference from other data
+    description: Personal Data that is obtained through inference from other 
+      data
     aliases:
-      - Inferred Personal Data
+    - Inferred Personal Data
     comments:
-      - |-
-        Inferred Data is derived data generated from existing data, but which
-        did not originally exist within it, e.g. inferring demographics from
-        browsing history.
+    - |-
+      Inferred Data is derived data generated from existing data, but which
+      did not originally exist within it, e.g. inferring demographics from
+      browsing history.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:InferredPersonalData
-      - dpv_owl:InferredPersonalData
+    - dpv_upstream:InferredPersonalData
+    - dpv_owl:InferredPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -404,37 +405,37 @@ classes:
     class_uri: dpv:IntellectualPropertyData
     description: Data protected by Intellectual Property rights and regulations
     aliases:
-      - Intellectual Property Data
+    - Intellectual Property Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:IntellectualPropertyData
-      - dpv_owl:IntellectualPropertyData
-    narrow_mappings:
-      - gists:IntellectualProperty
+    - dpv_upstream:IntellectualPropertyData
+    - dpv_owl:IntellectualPropertyData
     annotations:
       skos_in_scheme: personal-data-classes
       dct_source: DGA 5.10
 
+    narrow_mappings:
+    - gists:IntellectualProperty
   NonPersonalData:
     is_a: DpvData
     class_uri: dpv:NonPersonalData
     description: Data that is not Personal Data
     aliases:
-      - Non-Personal Data
+    - Non-Personal Data
     comments:
-      - |-
-        The term NonPersonalData is provided to distinguish between PersonalData
-        and other data, e.g. for indicating which data is regulated by privacy
-        laws. To specify personal data that has been anonymised, the concept
-        AnonymisedData should be used as the anonymisation process has a risk of
-        not being fully effective and such anonymous data may be found to be
-        personal data depending on circumstances.
+    - |-
+      The term NonPersonalData is provided to distinguish between PersonalData
+      and other data, e.g. for indicating which data is regulated by privacy
+      laws. To specify personal data that has been anonymised, the concept
+      AnonymisedData should be used as the anonymisation process has a risk of
+      not being fully effective and such anonymous data may be found to be
+      personal data depending on circumstances.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:NonPersonalData
-      - dpv_owl:NonPersonalData
+    - dpv_upstream:NonPersonalData
+    - dpv_owl:NonPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -443,58 +444,59 @@ classes:
     class_uri: dpv:ObservedData
     description: Data that has been obtained through observations of a source
     aliases:
-      - Observed Data
+    - Observed Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ObservedData
-      - dpv_owl:ObservedData
+    - dpv_upstream:ObservedData
+    - dpv_owl:ObservedData
     annotations:
       skos_in_scheme: personal-data-classes
 
   ObservedPersonalData:
     is_a: CollectedPersonalData
     mixins:
-      - ObservedData
+    - ObservedData
     class_uri: dpv:ObservedPersonalData
     description: |-
       Personal Data that has been collected through observation of the Data
       Subject(s)
     aliases:
-      - Observed Personal Data
+    - Observed Personal Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ObservedPersonalData
-      - dpv_owl:ObservedPersonalData
+    - dpv_upstream:ObservedPersonalData
+    - dpv_owl:ObservedPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
   PersonalData:
     is_a: DpvData
     class_uri: dpv:PersonalData
-    description: Data directly or indirectly associated or related to an individual
+    description: Data directly or indirectly associated or related to an 
+      individual
     aliases:
-      - Personal Data
+    - Personal Data
     comments:
-      - |-
-        This definition of personal data encompasses the concepts used in GDPR
-        Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally
-        identifiable information (PII)'.
+    - |-
+      This definition of personal data encompasses the concepts used in GDPR
+      Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally
+      identifiable information (PII)'.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:PersonalData
-      - dpv_owl:PersonalData
-    close_mappings:
-      - iso29100:PersonallyIdentifiableInformation
-    narrow_mappings:
-      - iso27001:Asset
+    - dpv_upstream:PersonalData
+    - dpv_owl:PersonalData
     related_mappings:
-      - usage_policy:AnyData
+    - usage_policy:AnyData
     annotations:
       skos_in_scheme: personal-data-classes
 
+    narrow_mappings:
+    - iso27001:Asset
+    close_mappings:
+    - iso29100:PersonallyIdentifiableInformation
   ProfessionalConfidentialData:
     is_a: ConfidentialData
     class_uri: dpv:ProfessionalConfidentialData
@@ -505,12 +507,12 @@ classes:
       confidentiality and other forms of recognised professional
       confidentiality obligations
     aliases:
-      - Professional Confidential Data
+    - Professional Confidential Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ProfessionalConfidentialData
-      - dpv_owl:ProfessionalConfidentialData
+    - dpv_upstream:ProfessionalConfidentialData
+    - dpv_owl:ProfessionalConfidentialData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -519,39 +521,39 @@ classes:
     class_uri: dpv:ProvidedData
     description: Data that has been provided by an entity
     aliases:
-      - Provided Data
+    - Provided Data
     comments:
-      - |-
-        Provided data involves one entity explicitly providing the data, which
-        the other entity then collects
+    - |-
+      Provided data involves one entity explicitly providing the data, which
+      the other entity then collects
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ProvidedData
-      - dpv_owl:ProvidedData
+    - dpv_upstream:ProvidedData
+    - dpv_owl:ProvidedData
     annotations:
       skos_in_scheme: personal-data-classes
 
   ProvidedPersonalData:
     is_a: CollectedPersonalData
     mixins:
-      - ProvidedData
+    - ProvidedData
     class_uri: dpv:ProvidedPersonalData
     description: |-
       Personal Data that has been provided by an entity such as the Data
       Subject
     aliases:
-      - Provided Personal Data
+    - Provided Personal Data
     comments:
-      - |-
-        Provided personal data involves one entity (e.g. data subject)
-        explicitly providing the data, which the other entity (e.g. data
-        controller) then collects
+    - |-
+      Provided personal data involves one entity (e.g. data subject)
+      explicitly providing the data, which the other entity (e.g. data
+      controller) then collects
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:ProvidedPersonalData
-      - dpv_owl:ProvidedPersonalData
+    - dpv_upstream:ProvidedPersonalData
+    - dpv_owl:ProvidedPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -564,12 +566,12 @@ classes:
       artificial identifiers or 'pseudonyms', and is still considered as
       personal data
     aliases:
-      - Pseudonymised Data
+    - Pseudonymised Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:PseudonymisedData
-      - dpv_owl:PseudonymisedData
+    - dpv_upstream:PseudonymisedData
+    - dpv_owl:PseudonymisedData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -578,12 +580,12 @@ classes:
     class_uri: dpv:SensitiveData
     description: Data deemed sensitive
     aliases:
-      - Sensitive Data
+    - Sensitive Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:SensitiveData
-      - dpv_owl:SensitiveData
+    - dpv_upstream:SensitiveData
+    - dpv_owl:SensitiveData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -592,12 +594,12 @@ classes:
     class_uri: dpv:SensitiveNonPersonalData
     description: Non-personal data deemed sensitive
     aliases:
-      - Sensitive Non Personal Data
+    - Sensitive Non Personal Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:SensitiveNonPersonalData
-      - dpv_owl:SensitiveNonPersonalData
+    - dpv_upstream:SensitiveNonPersonalData
+    - dpv_owl:SensitiveNonPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
       dct_source: DGA 30(a)
@@ -605,28 +607,28 @@ classes:
   SensitivePersonalData:
     is_a: PersonalData
     mixins:
-      - SensitiveData
+    - SensitiveData
     class_uri: dpv:SensitivePersonalData
     description: |-
       Personal data that is considered 'sensitive' in terms of privacy and/or
       impact, and therefore requires additional considerations and/or
       protection
     aliases:
-      - Sensitive Personal Data
+    - Sensitive Personal Data
     comments:
-      - |-
-        Sensitivity' is a matter of context, and may be defined within legal
-        frameworks. For GDPR, Special categories of personal data are considered
-        a subset of sensitive data. To illustrate the difference between the
-        two, consider the situation where Location data is collected, and which
-        is considered 'sensitive' but not 'special'. As a probable rule,
-        sensitive data require additional considerations whereas special
-        category data requires additional legal basis / justifications.
+    - |-
+      Sensitivity' is a matter of context, and may be defined within legal
+      frameworks. For GDPR, Special categories of personal data are considered
+      a subset of sensitive data. To illustrate the difference between the
+      two, consider the situation where Location data is collected, and which
+      is considered 'sensitive' but not 'special'. As a probable rule,
+      sensitive data require additional considerations whereas special
+      category data requires additional legal basis / justifications.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:SensitivePersonalData
-      - dpv_owl:SensitivePersonalData
+    - dpv_upstream:SensitivePersonalData
+    - dpv_owl:SensitivePersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -637,19 +639,19 @@ classes:
       Sensitive Personal Data whose use requires specific additional legal
       permission or justification
     aliases:
-      - Special Category Personal Data
+    - Special Category Personal Data
     comments:
-      - |-
-        The term 'special category' is based on GDPR Art.9, but should not be
-        considered as exclusive to it. DPV considers all Special Categories to
-        also be Sensitive, but whose use is either prohibited or regulated and
-        therefore requires additional legal basis for justification that is
-        separate from that for general personal data.
+    - |-
+      The term 'special category' is based on GDPR Art.9, but should not be
+      considered as exclusive to it. DPV considers all Special Categories to
+      also be Sensitive, but whose use is either prohibited or regulated and
+      therefore requires additional legal basis for justification that is
+      separate from that for general personal data.
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:SpecialCategoryPersonalData
-      - dpv_owl:SpecialCategoryPersonalData
+    - dpv_upstream:SpecialCategoryPersonalData
+    - dpv_owl:SpecialCategoryPersonalData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -660,12 +662,12 @@ classes:
       Data protected through Statistical Confidentiality regulations and
       agreements
     aliases:
-      - Statistically Confidential Data
+    - Statistically Confidential Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:StatisticallyConfidentialData
-      - dpv_owl:StatisticallyConfidentialData
+    - dpv_upstream:StatisticallyConfidentialData
+    - dpv_owl:StatisticallyConfidentialData
     annotations:
       skos_in_scheme: personal-data-classes
       dct_source: DGA 2(20)
@@ -679,12 +681,12 @@ classes:
       refer to any specific identified or identifiable individual, or to the
       real measure of an observable parameter in the case of non-personal data
     aliases:
-      - Synthetic Data
+    - Synthetic Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:SyntheticData
-      - dpv_owl:SyntheticData
+    - dpv_upstream:SyntheticData
+    - dpv_owl:SyntheticData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -695,19 +697,19 @@ classes:
       Data whose categorisation is not known e.g. whether it is personal or
       non-personal data
     aliases:
-      - Uncategorised Data
+    - Uncategorised Data
     comments:
-      - |-
-        This concept is intended for indicating that a legally relevant
-        categorisation of data has not been made - specifically regarding
-        whether it is personal data or not, but it can also be extended for
-        other categorisations such as sensitive data or domain-specific
-        confidential data
+    - |-
+      This concept is intended for indicating that a legally relevant
+      categorisation of data has not been made - specifically regarding
+      whether it is personal data or not, but it can also be extended for
+      other categorisations such as sensitive data or domain-specific
+      confidential data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:UncategorisedData
-      - dpv_owl:UncategorisedData
+    - dpv_upstream:UncategorisedData
+    - dpv_owl:UncategorisedData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -718,19 +720,19 @@ classes:
       Data that is without a predefined data model or is not organised in a
       pre-defined manner
     aliases:
-      - Unstructured Data
+    - Unstructured Data
     comments:
-      - |-
-        This concept is relevant to application of privacy/data protection
-        regulations like GDPR as unstructured data may contain PII/personal data
-        and it is useful to flag such data with unknown or incomplete modelling
-        information for audits. It is also useful to flag data for potential
-        quality issues
+    - |-
+      This concept is relevant to application of privacy/data protection
+      regulations like GDPR as unstructured data may contain PII/personal data
+      and it is useful to flag such data with unknown or incomplete modelling
+      information for audits. It is also useful to flag data for potential
+      quality issues
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:UnstructuredData
-      - dpv_owl:UnstructuredData
+    - dpv_upstream:UnstructuredData
+    - dpv_owl:UnstructuredData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -741,12 +743,12 @@ classes:
       Data that has not been verified in terms of accuracy, inconsistency, or
       quality
     aliases:
-      - Unverified Data
+    - Unverified Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:UnverifiedData
-      - dpv_owl:UnverifiedData
+    - dpv_upstream:UnverifiedData
+    - dpv_owl:UnverifiedData
     annotations:
       skos_in_scheme: personal-data-classes
 
@@ -757,11 +759,11 @@ classes:
       Data that has been verified in terms of accuracy, consistency, or
       quality
     aliases:
-      - Verified Data
+    - Verified Data
     in_subset:
-      - personal_data_subset
+    - personal_data_subset
     exact_mappings:
-      - dpv_upstream:VerifiedData
-      - dpv_owl:VerifiedData
+    - dpv_upstream:VerifiedData
+    - dpv_owl:VerifiedData
     annotations:
       skos_in_scheme: personal-data-classes

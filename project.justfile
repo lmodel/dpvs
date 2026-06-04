@@ -60,7 +60,7 @@ dpv-mappings-to-sssom:
 # Merge curated SSSOM mappings into the generated LinkML schemas.
 [group('model development')]
 apply-sssom-overlay: gen-linkml gen-linkml-extensions dpv-mappings-to-sssom
-  uv run python scripts/apply_sssom_overlay.py \
+  uv run python scripts/sssom_mappings.py overlay \
     --schema-dir src/dpv/schema \
     --mappings-dir src/dpv/mappings
 
@@ -72,7 +72,7 @@ apply-sssom-overlay: gen-linkml gen-linkml-extensions dpv-mappings-to-sssom
 # embedded as <pre> blocks in the HTML documentation page. Idempotent.
 [group('model development')]
 _extract-example-ttls:
-  uv run python scripts/gen_dpvcg_turtle.py \
+  uv run python scripts/dpvcg_examples.py extract \
     -i upstream-releases/dpv/examples/dex.html \
     -o examples
 
@@ -82,7 +82,7 @@ _extract-example-ttls:
 # writes to tests/data/dpvcg/valid/. Idempotent: byte-identical output.
 [group('model development')]
 _load-ttl-fixtures: _extract-example-ttls
-  uv run python scripts/load_dpvcg_turtle.py \
+  uv run python scripts/dpvcg_examples.py load \
     -i examples \
     -o tests/data/dpvcg
 
@@ -93,7 +93,7 @@ _load-ttl-fixtures: _extract-example-ttls
 # Must run after apply-sssom-overlay so the schema class/slot index is current.
 [group('model development')]
 _gen-fixtures: apply-sssom-overlay _load-ttl-fixtures
-  uv run python scripts/dpvcg_turtle_to_yaml.py \
+  uv run python scripts/dpvcg_examples.py to-yaml \
     -s src/dpv/schema \
     -i tests/data/dpvcg/valid \
     -o tests/data/dpvcg/valid
@@ -105,7 +105,7 @@ _gen-fixtures: apply-sssom-overlay _load-ttl-fixtures
 # not generated in v1; add them explicitly as needed by extending the
 # loop below.
 #
-# Why we DON'T pre-merge with merge_linkml_schema.py here:
+# Why we DON'T pre-merge with linkml_import_tools.py merge here:
 #   1. Upstream DPV redeclares some classes across extensions
 #      (e.g. `DataAggregationBias` in both `ai` and `risk`,
 #       `DpvData` in both `ai` and core `dpv_personal_data`),
@@ -152,7 +152,7 @@ gen-doc-extensions: _importmap apply-sssom-overlay
     staged="tmp/extensions/${slug}.yaml"
     docout="docs/extensions/${slug}"
     echo ">>> gen-doc-extensions: ${slug}"
-    uv run python scripts/strip_sibling_imports.py "$src" "$staged"
+    uv run python scripts/linkml_import_tools.py strip-siblings "$src" "$staged"
     mkdir -p "$docout"
     uv run gen-doc {{import_map}} {{gen_doc_args}} -d "$docout" "$staged"
     title="${friendly[$slug]:-$(uv run python -c "import yaml; t=yaml.safe_load(open('$src')).get('title') or '$slug'; print(t.removeprefix('DPV - '))")}"

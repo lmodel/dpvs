@@ -1,5 +1,5 @@
 # Auto generated from dpv.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-06-04T02:40:49
+# Generation date: 2026-06-04T11:44:10
 # Schema: dpv
 #
 # id: https://w3id.org/lmodel/dpv
@@ -76,7 +76,8 @@ DPV = CurieNamespace('dpv', 'https://w3id.org/lmodel/dpv/')
 DPV_OWL = CurieNamespace('dpv_owl', 'https://w3id.org/dpv/owl#')
 DPV_UPSTREAM = CurieNamespace('dpv_upstream', 'https://w3id.org/dpv#')
 FOAF = CurieNamespace('foaf', 'http://xmlns.com/foaf/0.1/')
-GISTS = CurieNamespace('gists', 'https://w3id.org/lmodel/gists/')
+GIST = CurieNamespace('gist', 'https://w3id.org/lmodel/gist/')
+GISTS = CurieNamespace('gists', 'http://example.org/UNKNOWN/gists/')
 ISO22989 = CurieNamespace('iso22989', 'https://w3id.org/lmodel/iso22989/')
 ISO27001 = CurieNamespace('iso27001', 'https://w3id.org/lmodel/iso27001/')
 ISO29100 = CurieNamespace('iso29100', 'https://w3id.org/lmodel/iso29100/')

@@ -3,7 +3,6 @@
 @prefix dpv: <https://w3id.org/lmodel/dpv/> .
 @prefix dpv_owl: <https://w3id.org/dpv/owl#> .
 @prefix dpv_upstream: <https://w3id.org/dpv#> .
-@prefix gists: <https://w3id.org/lmodel/gists/> .
 @prefix iso22989: <https://w3id.org/lmodel/iso22989/> .
 @prefix iso27001: <https://w3id.org/lmodel/iso27001/> .
 @prefix iso29100: <https://w3id.org/lmodel/iso29100/> .
@@ -4070,8 +4069,8 @@ processed""" ;
         iso22989:DataSubject,
         iso29100:PIIPrincipal ;
     skos:inScheme dpv:dpv_entities ;
-    skos:narrowMatch common_domain_model:NaturalPerson,
-        gists:Person ;
+    skos:narrowMatch <gists:Person>,
+        common_domain_model:NaturalPerson ;
     skos:note """The term 'data subject' is specific to the GDPR, but is functionally
 equivalent to the term 'individual associated with data' and the ISO/IEC
 term 'PII Principle'""" ;
@@ -5813,7 +5812,7 @@ dpv:IntellectualPropertyData a owl:Class ;
         dpv_owl:IntellectualPropertyData,
         dpv:IntellectualPropertyData ;
     skos:inScheme dpv:dpv_personal_data ;
-    skos:narrowMatch gists:IntellectualProperty ;
+    skos:narrowMatch <gists:IntellectualProperty> ;
     dpv:dct_source "DGA 5.10" ;
     dpv:skos_in_scheme "personal-data-classes" .
 
@@ -6578,11 +6577,11 @@ dpv:NaturalPerson a owl:Class ;
     skos:altLabel "Natural Person" ;
     skos:closeMatch ocsf:User ;
     skos:definition "A human" ;
-    skos:exactMatch dpv_upstream:NaturalPerson,
+    skos:exactMatch <gists:Person>,
+        dpv_upstream:NaturalPerson,
         dpv_owl:NaturalPerson,
         common_domain_model:NaturalPerson,
-        dpv:NaturalPerson,
-        gists:Person ;
+        dpv:NaturalPerson ;
     skos:inScheme dpv:dpv_entities ;
     skos:narrowMatch oscal:Party ;
     dpv:skos_in_scheme "entities-classes" .
@@ -6970,7 +6969,7 @@ dpv:Obligation a owl:Class ;
     rdfs:subClassOf dpv:AcceptableRule,
         dpv:Rule ;
     skos:altLabel "Obligation" ;
-    skos:closeMatch gists:ContingentObligation ;
+    skos:closeMatch <gists:ContingentObligation> ;
     skos:definition "A rule describing an obligation for performing an activity" ;
     skos:exactMatch dpv_upstream:Obligation,
         dpv_owl:Obligation,
@@ -7218,7 +7217,7 @@ legal entity""" ;
         dpv_owl:OrganisationalUnit,
         dpv:OrganisationalUnit ;
     skos:inScheme dpv:dpv_entities ;
-    skos:narrowMatch gists:Organization ;
+    skos:narrowMatch <gists:Organization> ;
     dpv:skos_in_scheme "entities-organisation-classes" .
 
 dpv:PIA a owl:Class ;
@@ -7382,10 +7381,10 @@ dpv:Permission a owl:Class ;
         dpv:Rule ;
     skos:altLabel "Permission" ;
     skos:definition "A rule describing a permission to perform an activity" ;
-    skos:exactMatch dpv_upstream:Permission,
+    skos:exactMatch <gists:Permission>,
+        dpv_upstream:Permission,
         dpv_owl:Permission,
-        dpv:Permission,
-        gists:Permission ;
+        dpv:Permission ;
     skos:inScheme dpv:dpv_common ;
     skos:note """Permissions are aligned with the term MAY in RFC2119 where specified
 activities may or may not be carried out""" ;
@@ -7475,7 +7474,7 @@ home or my room""" ;
         dpv_owl:PersonalSpace,
         dpv:PersonalSpace ;
     skos:inScheme dpv:dpv_legal_basis ;
-    skos:narrowMatch gists:GeoRegion ;
+    skos:narrowMatch <gists:GeoRegion> ;
     dpv:skos_in_scheme "jurisdiction-classes" .
 
 dpv:PersonalisedBenefits a owl:Class ;
@@ -9640,7 +9639,7 @@ dpv:StorageLocation a owl:Class ;
     rdfs:subClassOf dpv:ProcessingLocation,
         dpv:StorageCondition ;
     skos:altLabel "Storage Location" ;
-    skos:closeMatch gists:GeoLocation,
+    skos:closeMatch <gists:GeoLocation>,
         ocsf:Location,
         oscal:Location ;
     skos:definition "Location or geospatial scope where the data is stored" ;
@@ -9927,7 +9926,7 @@ a process""" ;
         dpv:ThirdParty,
         iso29100:ThirdParty ;
     skos:inScheme dpv:dpv_entities ;
-    skos:narrowMatch gists:Organization ;
+    skos:narrowMatch <gists:Organization> ;
     skos:note """Third Party in the context of personal data processing are entities
 other than the data subject, controllers, processors, and authorities""" ;
     skos:relatedMatch ocsf:Actor ;
@@ -13267,7 +13266,7 @@ responsibilities, and specifics for carrying out processing of data""" ;
         dpv_owl:DataProcessingAgreement,
         dpv:DataProcessingAgreement ;
     skos:inScheme dpv:dpv_legal_basis ;
-    skos:narrowMatch gists:Agreement ;
+    skos:narrowMatch <gists:Agreement> ;
     skos:note """For specific role-based data processing agreements, see concepts for
 Processors and JointDataController agreements.""" ;
     dpv:skos_in_scheme "contract-types-classes" .
@@ -14019,7 +14018,7 @@ dpv:LegalEntity a owl:Class ;
     rdfs:label "LegalEntity" ;
     rdfs:subClassOf dpv:DpvEntity ;
     skos:altLabel "Legal Entity" ;
-    skos:closeMatch gists:Organization,
+    skos:closeMatch <gists:Organization>,
         ocsf:Organization,
         oscal:Party ;
     skos:definition """A human or non-human 'thing' that constitutes as an entity and which is
@@ -14106,10 +14105,10 @@ dpv:DpvThing a owl:Class ;
             owl:onProperty dpv:id ],
         [ owl:unionOf ( dpv:Context dpv:ContractualClause dpv:DpvData dpv:DpvEntity dpv:DpvLocation dpv:DpvProcess dpv:ExpectationStatus dpv:Law dpv:LegalBasis dpv:Likelihood dpv:LocationFixture dpv:NoticeIcon dpv:NoticeLayer dpv:Processing dpv:PublicRegisterOfEntities dpv:Purpose dpv:Right dpv:RiskConcept dpv:RiskLevel dpv:Rule dpv:Sector dpv:Severity dpv:TechnicalOrganisationalMeasure dpv:Technology ) ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom xsd:anyURI ;
             owl:onProperty dpv:id ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
+            owl:minCardinality 1 ;
             owl:onProperty dpv:id ] ;
     skos:definition """Abstract base class for every DPV entity. Provides a uniform ``id``
 identifier slot. Does NOT enumerate DPV properties: the upstream OWL
