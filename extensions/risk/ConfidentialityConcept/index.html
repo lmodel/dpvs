@@ -442,10 +442,6 @@
         click CompromiseAccount href "../CompromiseAccount/"
       ConfidentialityConcept &lt;|-- CompromiseAccountCredentials
         click CompromiseAccountCredentials href "../CompromiseAccountCredentials/"
-      ConfidentialityConcept &lt;|-- ConfidentialityBreach
-        click ConfidentialityBreach href "../ConfidentialityBreach/"
-      ConfidentialityConcept &lt;|-- DataBreach
-        click DataBreach href "../DataBreach/"
       ConfidentialityConcept &lt;|-- Deception
         click Deception href "../Deception/"
       ConfidentialityConcept &lt;|-- Exploitation
@@ -470,10 +466,14 @@
         click PhishingScam href "../PhishingScam/"
       ConfidentialityConcept &lt;|-- Reidentification
         click Reidentification href "../Reidentification/"
+      ConfidentialityConcept &lt;|-- RiskConfidentialityBreach
+        click RiskConfidentialityBreach href "../RiskConfidentialityBreach/"
+      ConfidentialityConcept &lt;|-- RiskDataBreach
+        click RiskDataBreach href "../RiskDataBreach/"
+      ConfidentialityConcept &lt;|-- RiskSecurityAttack
+        click RiskSecurityAttack href "../RiskSecurityAttack/"
       ConfidentialityConcept &lt;|-- Scam
         click Scam href "../Scam/"
-      ConfidentialityConcept &lt;|-- SecurityAttack
-        click SecurityAttack href "../SecurityAttack/"
       ConfidentialityConcept &lt;|-- SecurityBreach
         click SecurityBreach href "../SecurityBreach/"
       ConfidentialityConcept &lt;|-- Spoofing
@@ -539,6 +539,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -620,6 +621,7 @@ or impact</li>
 
 <span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">impact'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -650,6 +652,7 @@ or impact</li>
 
 <span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">impact'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

@@ -430,8 +430,8 @@
 <pre class="mermaid"><code> classDiagram
     class RetirementStage
     click RetirementStage href "../RetirementStage/"
-      LifecycleStage &lt;|-- RetirementStage
-        click LifecycleStage href "../LifecycleStage/"
+      AiLifecycleStage &lt;|-- RetirementStage
+        click AiLifecycleStage href "../AiLifecycleStage/"
 
 
       RetirementStage &lt;|-- DecommissionStage
@@ -445,11 +445,11 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../LifecycleStage/">LifecycleStage</a><ul>
+<li><a href="../AiLifecycleStage/">AiLifecycleStage</a><ul>
 <li><strong>RetirementStage</strong><ul>
-<li><a href="../DecommissionStage/">DecommissionStage</a> [ <a href="../LifecycleStage/">LifecycleStage</a>]</li>
-<li><a href="../DiscardStage/">DiscardStage</a> [ <a href="../LifecycleStage/">LifecycleStage</a>]</li>
-<li><a href="../ReplaceStage/">ReplaceStage</a> [ <a href="../LifecycleStage/">LifecycleStage</a>]</li>
+<li><a href="../DecommissionStage/">DecommissionStage</a> [ <a href="../AiLifecycleStage/">AiLifecycleStage</a>]</li>
+<li><a href="../DiscardStage/">DiscardStage</a> [ <a href="../AiLifecycleStage/">AiLifecycleStage</a>]</li>
+<li><a href="../ReplaceStage/">ReplaceStage</a> [ <a href="../AiLifecycleStage/">AiLifecycleStage</a>]</li>
 </ul>
 </li>
 </ul>
@@ -491,6 +491,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiLifecycleSubset/">AiLifecycleSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -567,6 +568,7 @@
 
 <span class="w">  </span><span class="s">obsolete'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -574,7 +576,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:RetirementStage</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RetirementStage</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RetirementStage</span>
 </code></pre></div>
 </details>
@@ -595,6 +597,7 @@
 
 <span class="w">  </span><span class="s">obsolete'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -602,7 +605,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:RetirementStage</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RetirementStage</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RetirementStage</span>
 </code></pre></div>
 </details>

@@ -430,8 +430,8 @@
 <pre class="mermaid"><code> classDiagram
     class ContentGeneration
     click ContentGeneration href "../ContentGeneration/"
-      Capability &lt;|-- ContentGeneration
-        click Capability href "../Capability/"
+      AiCapability &lt;|-- ContentGeneration
+        click AiCapability href "../AiCapability/"
 
 
       ContentGeneration &lt;|-- AudioGeneration
@@ -449,11 +449,11 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
-<li><a href="../Capability/">Capability</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
+<li><a href="../AiCapability/">AiCapability</a><ul>
 <li><strong>ContentGeneration</strong><ul>
-<li><a href="../ImageGeneration/">ImageGeneration</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../VideoGeneration/">VideoGeneration</a> [ <a href="../Capability/">Capability</a>]</li>
+<li><a href="../ImageGeneration/">ImageGeneration</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../VideoGeneration/">VideoGeneration</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
 </ul>
 </li>
 </ul>
@@ -497,6 +497,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCapabilitiesSubset/">AiCapabilitiesSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -566,6 +567,7 @@
 
 <span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">transforming</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">content'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -573,7 +575,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:ContentGeneration</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:ContentGeneration</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:ContentGeneration</span>
 </code></pre></div>
 </details>
@@ -591,6 +593,7 @@
 
 <span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">transforming</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">content'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -598,7 +601,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:ContentGeneration</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:ContentGeneration</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:ContentGeneration</span>
 </code></pre></div>
 </details>

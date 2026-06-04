@@ -435,14 +435,14 @@
         click PotentialRisk href "../PotentialRisk/"
       PotentialRiskSource &lt;|-- DataUnavailable
         click PotentialRiskSource href "../PotentialRiskSource/"
-      DataRisk &lt;|-- DataUnavailable
-        click DataRisk href "../DataRisk/"
+      RiskDataRisk &lt;|-- DataUnavailable
+        click RiskDataRisk href "../RiskDataRisk/"
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../TechnicalRiskConcept/">TechnicalRiskConcept</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]<ul>
-<li><a href="../DataRisk/">DataRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]<ul>
+<li><a href="../RiskDataRisk/">RiskDataRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]<ul>
 <li><strong>DataUnavailable</strong> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]</li>
 </ul>
 </li>
@@ -485,6 +485,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -552,6 +553,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concept representing data being unavailable</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -559,7 +561,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_risk:DataUnavailable</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_risk_owl:DataUnavailable</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DataRisk</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskDataRisk</span>
 <span class="nt">mixins</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialConsequence</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialRisk</span>
@@ -579,6 +581,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concept representing data being unavailable</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -586,7 +589,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_risk:DataUnavailable</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_risk_owl:DataUnavailable</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DataRisk</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskDataRisk</span>
 <span class="nt">mixins</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialConsequence</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialRisk</span>

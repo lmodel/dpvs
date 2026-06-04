@@ -436,12 +436,12 @@
 
       RiskIdentification &lt;|-- RiskSource
         click RiskSource href "../RiskSource/"
+      RiskIdentification &lt;|-- RiskVulnerability
+        click RiskVulnerability href "../RiskVulnerability/"
       RiskIdentification &lt;|-- Threat
         click Threat href "../Threat/"
       RiskIdentification &lt;|-- ThreatSource
         click ThreatSource href "../ThreatSource/"
-      RiskIdentification &lt;|-- Vulnerability
-        click Vulnerability href "../Vulnerability/"
 
 
 </code></pre>
@@ -451,9 +451,9 @@
 <li><a href="../RiskRiskAssessment/">RiskRiskAssessment</a><ul>
 <li><strong>RiskIdentification</strong><ul>
 <li><a href="../RiskSource/">RiskSource</a></li>
+<li><a href="../RiskVulnerability/">RiskVulnerability</a></li>
 <li><a href="../Threat/">Threat</a></li>
 <li><a href="../ThreatSource/">ThreatSource</a></li>
-<li><a href="../Vulnerability/">Vulnerability</a></li>
 </ul>
 </li>
 </ul>
@@ -497,6 +497,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskManagementSubset/">RiskRiskManagementSubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -566,6 +567,7 @@
 
 <span class="w">  </span><span class="s">potential</span><span class="nv"> </span><span class="s">incidents,</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">causes,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">consequences'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_management_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -591,6 +593,7 @@
 
 <span class="w">  </span><span class="s">potential</span><span class="nv"> </span><span class="s">incidents,</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">causes,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">consequences'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_management_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

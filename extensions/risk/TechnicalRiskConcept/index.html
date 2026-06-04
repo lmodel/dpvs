@@ -443,12 +443,12 @@
 
       TechnicalRiskConcept &lt;|-- Bias
         click Bias href "../Bias/"
-      TechnicalRiskConcept &lt;|-- DataRisk
-        click DataRisk href "../DataRisk/"
       TechnicalRiskConcept &lt;|-- ExternalSecurityThreat
         click ExternalSecurityThreat href "../ExternalSecurityThreat/"
       TechnicalRiskConcept &lt;|-- OperationalSecurityRisk
         click OperationalSecurityRisk href "../OperationalSecurityRisk/"
+      TechnicalRiskConcept &lt;|-- RiskDataRisk
+        click RiskDataRisk href "../RiskDataRisk/"
 
 
 </code></pre>
@@ -456,9 +456,9 @@
 <ul>
 <li><strong>TechnicalRiskConcept</strong> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]<ul>
 <li><a href="../Bias/">Bias</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]</li>
-<li><a href="../DataRisk/">DataRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]</li>
 <li><a href="../ExternalSecurityThreat/">ExternalSecurityThreat</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]</li>
 <li><a href="../OperationalSecurityRisk/">OperationalSecurityRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]</li>
+<li><a href="../RiskDataRisk/">RiskDataRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PotentialRiskSource/">PotentialRiskSource</a>]</li>
 </ul>
 </li>
 </ul>
@@ -498,6 +498,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -569,6 +570,7 @@
 
 <span class="w">  </span><span class="s">technological</span><span class="nv"> </span><span class="s">process'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -600,6 +602,7 @@
 
 <span class="w">  </span><span class="s">technological</span><span class="nv"> </span><span class="s">process'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

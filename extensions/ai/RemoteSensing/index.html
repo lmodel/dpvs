@@ -430,19 +430,19 @@
 <pre class="mermaid"><code> classDiagram
     class RemoteSensing
     click RemoteSensing href "../RemoteSensing/"
-      Capability &lt;|-- RemoteSensing
-        click Capability href "../Capability/"
+      AiCapability &lt;|-- RemoteSensing
+        click AiCapability href "../AiCapability/"
       PerceptionBasedAI &lt;|-- RemoteSensing
         click PerceptionBasedAI href "../PerceptionBasedAI/"
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
-<li><a href="../Capability/">Capability</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
+<li><a href="../AiCapability/">AiCapability</a><ul>
 <li><a href="../ComputerVision/">ComputerVision</a><ul>
-<li><a href="../PerceptionBasedAI/">PerceptionBasedAI</a> [ <a href="../Capability/">Capability</a>]<ul>
-<li><strong>RemoteSensing</strong> [ <a href="../Capability/">Capability</a>]</li>
+<li><a href="../PerceptionBasedAI/">PerceptionBasedAI</a> [ <a href="../AiCapability/">AiCapability</a>]<ul>
+<li><strong>RemoteSensing</strong> [ <a href="../AiCapability/">AiCapability</a>]</li>
 </ul>
 </li>
 </ul>
@@ -488,6 +488,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCapabilitiesSubset/">AiCapabilitiesSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -557,6 +558,7 @@
 
 <span class="w">  </span><span class="s">without</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">contact,</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">aerial</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">technologies'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -566,7 +568,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RemoteSensing</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PerceptionBasedAI</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RemoteSensing</span>
 </code></pre></div>
 </details>
@@ -584,6 +586,7 @@
 
 <span class="w">  </span><span class="s">without</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">contact,</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">aerial</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">technologies'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -593,7 +596,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RemoteSensing</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PerceptionBasedAI</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RemoteSensing</span>
 </code></pre></div>
 </details>

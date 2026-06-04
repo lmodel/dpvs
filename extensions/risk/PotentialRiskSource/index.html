@@ -446,8 +446,6 @@
         click AccuracyUnverified href "../AccuracyUnverified/"
       PotentialRiskSource &lt;|-- AuthorisationFailure
         click AuthorisationFailure href "../AuthorisationFailure/"
-      PotentialRiskSource &lt;|-- AvailabilityBreach
-        click AvailabilityBreach href "../AvailabilityBreach/"
       PotentialRiskSource &lt;|-- Bias
         click Bias href "../Bias/"
       PotentialRiskSource &lt;|-- Blackmail
@@ -466,8 +464,6 @@
         click CompromiseAccount href "../CompromiseAccount/"
       PotentialRiskSource &lt;|-- CompromiseAccountCredentials
         click CompromiseAccountCredentials href "../CompromiseAccountCredentials/"
-      PotentialRiskSource &lt;|-- ConfidentialityBreach
-        click ConfidentialityBreach href "../ConfidentialityBreach/"
       PotentialRiskSource &lt;|-- ConfirmationBias
         click ConfirmationBias href "../ConfirmationBias/"
       PotentialRiskSource &lt;|-- ConfoundingVariablesBias
@@ -476,12 +472,6 @@
         click CoverageBias href "../CoverageBias/"
       PotentialRiskSource &lt;|-- Cryptojacking
         click Cryptojacking href "../Cryptojacking/"
-      PotentialRiskSource &lt;|-- DataAggregationBias
-        click DataAggregationBias href "../DataAggregationBias/"
-      PotentialRiskSource &lt;|-- DataBias
-        click DataBias href "../DataBias/"
-      PotentialRiskSource &lt;|-- DataBreach
-        click DataBreach href "../DataBreach/"
       PotentialRiskSource &lt;|-- DataCollectionError
         click DataCollectionError href "../DataCollectionError/"
       PotentialRiskSource &lt;|-- DataCorruption
@@ -510,8 +500,6 @@
         click DataProcessingBias href "../DataProcessingBias/"
       PotentialRiskSource &lt;|-- DataProcessingError
         click DataProcessingError href "../DataProcessingError/"
-      PotentialRiskSource &lt;|-- DataRisk
-        click DataRisk href "../DataRisk/"
       PotentialRiskSource &lt;|-- DataSelectionError
         click DataSelectionError href "../DataSelectionError/"
       PotentialRiskSource &lt;|-- DataSparse
@@ -566,8 +554,6 @@
         click ImplicitBias href "../ImplicitBias/"
       PotentialRiskSource &lt;|-- InGroupBias
         click InGroupBias href "../InGroupBias/"
-      PotentialRiskSource &lt;|-- InformativenessBias
-        click InformativenessBias href "../InformativenessBias/"
       PotentialRiskSource &lt;|-- InstructionsInaccessible
         click InstructionsInaccessible href "../InstructionsInaccessible/"
       PotentialRiskSource &lt;|-- InstructionsIncorrect
@@ -576,8 +562,6 @@
         click InstructionsInsufficient href "../InstructionsInsufficient/"
       PotentialRiskSource &lt;|-- InstructionsUnsuitable
         click InstructionsUnsuitable href "../InstructionsUnsuitable/"
-      PotentialRiskSource &lt;|-- IntegrityBreach
-        click IntegrityBreach href "../IntegrityBreach/"
       PotentialRiskSource &lt;|-- IntentionalManipulation
         click IntentionalManipulation href "../IntentionalManipulation/"
       PotentialRiskSource &lt;|-- IntentionalMisuse
@@ -642,6 +626,24 @@
         click ResilienceUnknown href "../ResilienceUnknown/"
       PotentialRiskSource &lt;|-- ResilienceUnverified
         click ResilienceUnverified href "../ResilienceUnverified/"
+      PotentialRiskSource &lt;|-- RiskAvailabilityBreach
+        click RiskAvailabilityBreach href "../RiskAvailabilityBreach/"
+      PotentialRiskSource &lt;|-- RiskConfidentialityBreach
+        click RiskConfidentialityBreach href "../RiskConfidentialityBreach/"
+      PotentialRiskSource &lt;|-- RiskDataAggregationBias
+        click RiskDataAggregationBias href "../RiskDataAggregationBias/"
+      PotentialRiskSource &lt;|-- RiskDataBias
+        click RiskDataBias href "../RiskDataBias/"
+      PotentialRiskSource &lt;|-- RiskDataBreach
+        click RiskDataBreach href "../RiskDataBreach/"
+      PotentialRiskSource &lt;|-- RiskDataRisk
+        click RiskDataRisk href "../RiskDataRisk/"
+      PotentialRiskSource &lt;|-- RiskInformativenessBias
+        click RiskInformativenessBias href "../RiskInformativenessBias/"
+      PotentialRiskSource &lt;|-- RiskIntegrityBreach
+        click RiskIntegrityBreach href "../RiskIntegrityBreach/"
+      PotentialRiskSource &lt;|-- RiskSecurityAttack
+        click RiskSecurityAttack href "../RiskSecurityAttack/"
       PotentialRiskSource &lt;|-- RobustnessDegraded
         click RobustnessDegraded href "../RobustnessDegraded/"
       PotentialRiskSource &lt;|-- RobustnessInconsistent
@@ -662,8 +664,6 @@
         click SamplingBias href "../SamplingBias/"
       PotentialRiskSource &lt;|-- Scam
         click Scam href "../Scam/"
-      PotentialRiskSource &lt;|-- SecurityAttack
-        click SecurityAttack href "../SecurityAttack/"
       PotentialRiskSource &lt;|-- SecurityBreach
         click SecurityBreach href "../SecurityBreach/"
       PotentialRiskSource &lt;|-- SecurityQualityDegraded
@@ -785,6 +785,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -873,6 +874,7 @@ ignored if it is not applicable to the use-case</li>
 
 <span class="w">  </span><span class="s">ignored</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">applicable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">use-case'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -908,6 +910,7 @@ ignored if it is not applicable to the use-case</li>
 
 <span class="w">  </span><span class="s">ignored</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">applicable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">use-case'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

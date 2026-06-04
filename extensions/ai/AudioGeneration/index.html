@@ -429,8 +429,8 @@
 <pre class="mermaid"><code> classDiagram
     class AudioGeneration
     click AudioGeneration href "../AudioGeneration/"
-      Capability &lt;|-- AudioGeneration
-        click Capability href "../Capability/"
+      AiCapability &lt;|-- AudioGeneration
+        click AiCapability href "../AiCapability/"
       ContentGeneration &lt;|-- AudioGeneration
         click ContentGeneration href "../ContentGeneration/"
       AudioCapability &lt;|-- AudioGeneration
@@ -439,10 +439,10 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
-<li><a href="../Capability/">Capability</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
+<li><a href="../AiCapability/">AiCapability</a><ul>
 <li><a href="../AudioCapability/">AudioCapability</a><ul>
-<li><strong>AudioGeneration</strong> [ <a href="../Capability/">Capability</a> <a href="../ContentGeneration/">ContentGeneration</a>]</li>
+<li><strong>AudioGeneration</strong> [ <a href="../AiCapability/">AiCapability</a> <a href="../ContentGeneration/">ContentGeneration</a>]</li>
 </ul>
 </li>
 </ul>
@@ -486,6 +486,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCapabilitiesSubset/">AiCapabilitiesSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -553,6 +554,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability to generate audio</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -562,7 +564,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:AudioGeneration</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AudioCapability</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ContentGeneration</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:AudioGeneration</span>
 </code></pre></div>
@@ -579,6 +581,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability to generate audio</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -588,7 +591,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:AudioGeneration</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AudioCapability</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ContentGeneration</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:AudioGeneration</span>
 </code></pre></div>

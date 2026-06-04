@@ -430,8 +430,8 @@
 <pre class="mermaid"><code> classDiagram
     class ComputerVision
     click ComputerVision href "../ComputerVision/"
-      Capability &lt;|-- ComputerVision
-        click Capability href "../Capability/"
+      AiCapability &lt;|-- ComputerVision
+        click AiCapability href "../AiCapability/"
 
 
       ComputerVision &lt;|-- ActionRecognition
@@ -461,17 +461,17 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
-<li><a href="../Capability/">Capability</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
+<li><a href="../AiCapability/">AiCapability</a><ul>
 <li><strong>ComputerVision</strong><ul>
-<li><a href="../ImageClassification/">ImageClassification</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../ImageRecognition/">ImageRecognition</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../MotionAnalysis/">MotionAnalysis</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../ObjectDetection/">ObjectDetection</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../ObjectRecognition/">ObjectRecognition</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../PatternRecognition/">PatternRecognition</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../PerceptionBasedAI/">PerceptionBasedAI</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../VisualRecognition/">VisualRecognition</a> [ <a href="../Capability/">Capability</a>]</li>
+<li><a href="../ImageClassification/">ImageClassification</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../ImageRecognition/">ImageRecognition</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../MotionAnalysis/">MotionAnalysis</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../ObjectDetection/">ObjectDetection</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../ObjectRecognition/">ObjectRecognition</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../PatternRecognition/">PatternRecognition</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../PerceptionBasedAI/">PerceptionBasedAI</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../VisualRecognition/">VisualRecognition</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
 </ul>
 </li>
 </ul>
@@ -515,6 +515,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCapabilitiesSubset/">AiCapabilitiesSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -591,6 +592,7 @@
 
 <span class="w">  </span><span class="s">representing</span><span class="nv"> </span><span class="s">images</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">video'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -598,7 +600,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:ComputerVision</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:ComputerVision</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:ComputerVision</span>
 </code></pre></div>
 </details>
@@ -619,6 +621,7 @@
 
 <span class="w">  </span><span class="s">representing</span><span class="nv"> </span><span class="s">images</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">video'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -626,7 +629,7 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:ComputerVision</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:ComputerVision</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:ComputerVision</span>
 </code></pre></div>
 </details>

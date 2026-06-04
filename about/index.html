@@ -678,10 +678,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#per-extension-documentation" class="md-nav__link">
+  <a href="#per-extension-documentation-possible-reusable-pattern" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Per-extension documentation
+        Per-extension documentation (possible reusable pattern)
       
     </span>
   </a>
@@ -873,10 +873,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#per-extension-documentation" class="md-nav__link">
+  <a href="#per-extension-documentation-possible-reusable-pattern" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Per-extension documentation
+        Per-extension documentation (possible reusable pattern)
       
     </span>
   </a>
@@ -1187,41 +1187,21 @@
 </tbody>
 </table>
 <p>All extensions import only <code>linkml:types</code> and <code>dpv:schema/dpv_core</code> (for the abstract parents they specialise), so they can be consumed standalone or aggregated.</p>
-<blockquote>
-<p><strong>Known gap (2026-06-03)</strong>: After the core was decomposed into semantic groups, the
-aggregate <code>dpv_core.yaml</code> no longer exists. Extension imports of <code>dpv:schema/dpv_core</code>
-are therefore currently dangling and need to be rewritten to import the appropriate
-semantic-group schemas (e.g. <code>dpv:schema/dpv_common</code>) or the umbrella <code>dpv:schema/dpv</code>.
-The core build (<code>just gen-project</code>) is unaffected because the umbrella does not
-import any extension. The documentation build sidesteps the gap by staging each
-extension through <a href="https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py">scripts/strip_sibling_imports.py</a>
-(see <a href="#build-pipeline">Build pipeline</a>).</p>
-</blockquote>
-<h4 id="per-extension-documentation">Per-extension documentation</h4>
+<h4 id="per-extension-documentation-possible-reusable-pattern">Per-extension documentation (possible reusable pattern)</h4>
 <p>The top-level 6 extensions (<code>ai</code>, <code>justifications</code>, <code>loc</code>, <code>pd</code>, <code>risk</code>, <code>tech</code>) are
 rendered as standalone documentation trees under <a href="https://github.com/lmodel/dpv/tree/main/docs/extensions">docs/extensions/</a>, grouped under a single <strong>Extensions</strong> entry in the site navigation. Each tree is
 produced by an isolated <code>gen-doc</code> invocation against a self-contained staged copy of
 the extension schema.</p>
-<p>The documentation staging step (<a href="https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py">scripts/strip_sibling_imports.py</a>) rewrites each extension so SchemaView can load it without sibling-schema context:</p>
+<p>The staging step (<a href="https://github.com/lmodel/dpv/blob/main/scripts/linkml_import_tools.py">scripts/linkml_import_tools.py <code>strip-siblings</code></a>) rewrites each extension so SchemaView can load it without sibling-schema context:</p>
 <ul>
 <li>
-<p>Drops every <code>imports:</code> entry except <code>linkml:types</code> (avoids <code>Conflicting URIs</code> errors
-  caused by genuine cross-extension name collisions, e.g. <code>DataAggregationBias</code> in
-  both <code>ai</code> and <code>risk</code>, or <code>DpvData</code> in <code>ai</code> vs. <code>dpv_personal_data</code>).</p>
+<p>Drops every <code>imports:</code> entry except <code>linkml:types</code> (avoids <code>Conflicting URIs</code> errors caused by genuine cross-extension name collisions, e.g. <code>DataAggregationBias</code> in both <code>ai</code> and <code>risk</code>, or <code>DpvData</code> in <code>ai</code> vs. <code>dpv_personal_data</code>).</p>
 </li>
 <li>
-<p>Drops dangling <code>is_a</code> parents and filters <code>mixins</code> lists to only those defined
-  locally, so the resulting schema validates standalone.</p>
+<p>Drops dangling <code>is_a</code> parents and filters <code>mixins</code> lists to only those defined locally, so the resulting schema validates standalone.</p>
 </li>
 </ul>
-<p>The document orchestration recipe (<code>just gen-doc-extensions</code>) iterates
-<code>src/dpv/schema/extensions/*.yaml</code>, stages each into <code>tmp/extensions/&lt;slug&gt;.yaml</code>,
-and runs <code>gen-doc</code> into <code>docs/extensions/&lt;slug&gt;/</code>. It is wired as a dependency of
-the top-level <code>just gen-doc</code>, so a single command produces both the core element
-pages (<code>docs/elements/</code>) and the per-extension trees. Per-jurisdiction <code>legal/</code>
-schemas and <code>sector/</code>, <code>standards/</code> trees are intentionally <strong>not</strong> rendered
-(they re-slice the same core terms and would multiply build time without adding
-distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/extensions/index.md">docs/extensions/index.md</a> landing page notes this and points readers to the source YAML.</p>
+<p>The orchestration recipe (<code>just gen-doc-extensions</code>) iterates <code>src/dpv/schema/extensions/*.yaml</code>, stages each into <code>tmp/extensions/&lt;slug&gt;.yaml</code>, and runs <code>gen-doc</code> into <code>docs/extensions/&lt;slug&gt;/</code>. It is wired as a dependency of the top-level <code>just gen-doc</code>, so a single command produces both the core element pages (<code>docs/elements/</code>) and the per-extension trees. Per-jurisdiction <code>legal/</code> schemas and <code>sector/</code>, <code>standards/</code> trees are intentionally <strong>not</strong> rendered (they re-slice the same core terms and would multiply build time without adding distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/extensions/index.md">docs/extensions/index.md</a> landing page notes this and points readers to the source YAML.</p>
 <h3 id="open-world-modelling">Open-world modelling</h3>
 <p>DPV is intrinsically open-world: most properties are declared on the top-level <code>DpvThing</code> rather than pinned to a specific class, so any instance may carry any DPV property that makes sense for it. This is preserved in dpv:</p>
 <ul>
@@ -1234,8 +1214,8 @@ distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/e
 </li>
 </ul>
 <h3 id="mappings">Mappings</h3>
-<p>Cross-walks live under <a href="https://github.com/lmodel/dpv/tree/main/src/dpv/mappings">src/dpv/mappings/</a> as <a href="https://mapping-commons.github.io/sssom/">SSSOM</a> TSVs and are merged into the schema as <code>exact_mappings</code>, <code>close_mappings</code>, <code>related_mappings</code>, etc. by the <a href="https://github.com/lmodel/dpv/blob/main/scripts/apply_sssom_overlay.py">apply_sssom_overlay.py</a> script.</p>
-<p>Current cross-walks (26 total - 17 hand-curated- LLM-seeded candidate sets are pending human review):</p>
+<p>Cross-walks live under <a href="https://github.com/lmodel/dpv/tree/main/src/dpv/mappings">src/dpv/mappings/</a> as <a href="https://mapping-commons.github.io/sssom/">SSSOM</a> TSVs and are merged into the schema as <code>exact_mappings</code>, <code>close_mappings</code>, <code>related_mappings</code>, etc. by the <a href="https://github.com/lmodel/dpv/blob/main/scripts/sssom_mappings.py">sssom_mappings.py <code>overlay</code></a> subcommand.</p>
+<p>Current cross-walks (26 total - LLM-seeded sets are pending human review):</p>
 <table>
 <thead>
 <tr>
@@ -1347,16 +1327,17 @@ distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/e
 </tbody>
 </table>
 <p><strong>LLM-seeded</strong> mapping sets provide candidate alignments where every row carries <code>mapping_justification: semapv:LLMBasedMatching</code> per the <a href="https://mapping-commons.github.io/semantic-mapping-vocabulary/">Semantic Mapping Vocabulary</a>. They are not curated mappings - they require human review before promotion to <code>semapv:ManualMappingCuration</code>. Per-jurisdiction <code>legal/&lt;cc&gt;</code> extensions intentionally do not ship cross-walks (low cross-vocabulary leverage).</p>
-<p>Mappings are verified by <a href="https://github.com/lmodel/dpv/blob/main/scripts/verify_mappings.py">scripts/verify_mappings.py</a>, which project-agnostically auto-discovers schemas by <code>default_prefix</code> and checks that every <code>subject_id</code> resolves to an element in some schema.</p>
+<p>Mappings are verified by <a href="https://github.com/lmodel/dpv/blob/main/scripts/sssom_mappings.py">sssom_mappings.py <code>verify</code></a>, which project-agnostically auto-discovers schemas by <code>default_prefix</code> and checks that every <code>subject_id</code> resolves to an element in some schema.</p>
 <h3 id="examples-and-tests">Examples and tests</h3>
 <ul>
-<li><a href="https://github.com/lmodel/dpv/tree/main/tests/data">tests/data/</a> contains hand-authored and vendored YAML fixtures split into <code>valid/</code> and <code>invalid/</code> subtrees. The <code>dpvcg/</code> subtree carries the upstream DPV CG examples converted to LinkML YAML by <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_turtle_to_yaml.py">scripts/dpvcg_turtle_to_yaml.py</a>.</li>
+<li><a href="https://github.com/lmodel/dpv/tree/main/tests/data">tests/data/</a> contains hand-authored and vendored YAML fixtures split into <code>valid/</code> and <code>invalid/</code> subtrees. The <code>dpvcg/</code> subtree carries the upstream DPV CG examples converted to LinkML YAML by <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_examples.py">scripts/dpvcg_examples.py</a> (<code>to-yaml</code> subcommand).</li>
 <li><a href="https://github.com/lmodel/dpv/blob/main/tests/test_data.py">tests/test_data.py</a> validates each fixture against the pre-merged schema at <code>tmp/dpv.yaml</code> using <code>linkml.validator.Validator</code> with <code>JsonschemaValidationPlugin</code> (explicit; the linkml <code>Validator</code> performs no validation at all when <code>validation_plugins</code> is omitted). The merged schema is used so no import-map is needed at test time.</li>
 <li><a href="https://github.com/lmodel/dpv/blob/main/tests/test_schema_imports.py">tests/test_schema_imports.py</a> is a regression test guarding against class/slot name collisions.</li>
 </ul>
 <h4 id="static-fixtures">Static fixtures</h4>
-<p>64 <a href="https://github.com/lmodel/dpv/tree/main/tests/data/valid">tests/data/valid/</a> exercises classes across core, extension, and legal modules.</p>
-<p>48 <a href="https://github.com/lmodel/dpv/tree/main/tests/data/invalid">tests/data/invalid/</a> asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".</p>
+<p>Over 100 unit tests:</p>
+<p><a href="https://github.com/lmodel/dpv/tree/main/tests/data/valid">tests/data/valid/</a> exercises classes across core, extension, and legal modules.</p>
+<p><a href="https://github.com/lmodel/dpv/tree/main/tests/data/invalid">tests/data/invalid/</a> asserts that the validator rejects the following error classes - "missing id", "null id", and "integer id".</p>
 <blockquote>
 <p><strong>Note</strong>: The dpv schema enforces only one constraint: <code>id</code> is a required string (<code>uriorcurie</code>). All other DPV properties are domainless open-world slots. Fixtures that were originally designed to test enum, date-format, cardinality, or referential constraints were rewritten to test <code>id</code>-type violations; their original intent is captured in fixture comments as a roadmap for schema tightening.</p>
 </blockquote>
@@ -1367,15 +1348,15 @@ distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/e
 </li>
 <li>
 <p><code>_extract-example-ttls</code> -
-     <a href="https://github.com/lmodel/dpv/blob/main/scripts/gen_dpvcg_turtle.py">scripts/gen_dpvcg_turtle.py</a> parses <code>upstream-releases/dpv/examples/dex.html</code> and writes one <code>examples/E####.ttl</code> per embedded <code>&lt;pre&gt;</code> block. The upstream release does not ship stand-alone <code>E*.ttl</code> files; the Turtle content lives only in the HTML documentation page.</p>
+     <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_examples.py">scripts/dpvcg_examples.py <code>extract</code></a> parses <code>upstream-releases/dpv/examples/dex.html</code> and writes one <code>examples/E####.ttl</code> per embedded <code>&lt;pre&gt;</code> block. The upstream release does not ship stand-alone <code>E*.ttl</code> files; the Turtle content lives only in the HTML documentation page.</p>
 </li>
 <li>
 <p><code>_load-ttl-fixtures</code> -
-     <a href="https://github.com/lmodel/dpv/blob/main/scripts/load_dpvcg_turtle.py">scripts/load_dpvcg_turtle.py</a> wraps each <code>examples/E*.ttl</code> in a self-contained Turtle document (prepending the standard DPV prefix preamble) and routes it to <code>tests/data/dpvcg/valid/</code> or <code>problem/</code> based on rdflib parse success.</p>
+     <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_examples.py">scripts/dpvcg_examples.py <code>load</code></a> wraps each <code>examples/E*.ttl</code> in a self-contained Turtle document (prepending the standard DPV prefix preamble) and routes it to <code>tests/data/dpvcg/valid/</code> or <code>problem/</code> based on rdflib parse success.</p>
 </li>
 <li>
 <p><code>_gen-fixtures</code> -
-     <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_turtle_to_yaml.py">scripts/dpvcg_turtle_to_yaml.py</a> converts each typed root subject into a <code>&lt;ClassName&gt;-&lt;stem&gt;-&lt;n&gt;.yaml</code> fixture that <code>test_data.py</code> picks up automatically via its glob. Idempotent: re-running with unchanged inputs produces byte-identical output.</p>
+     <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_examples.py">scripts/dpvcg_examples.py <code>to-yaml</code></a> converts each typed root subject into a <code>&lt;ClassName&gt;-&lt;stem&gt;-&lt;n&gt;.yaml</code> fixture that <code>test_data.py</code> picks up automatically via its glob. Idempotent: re-running with unchanged inputs produces byte-identical output.</p>
 </li>
 <li><code>just _test-examples</code> runs the same fixtures through <code>linkml-run-examples</code> for CLI parity.</li>
 </ul>
@@ -1388,7 +1369,7 @@ distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/e
 <p>URI imports are resolved at build time via an import map. The source-of-truth <a href="https://github.com/lmodel/dpv/blob/main/importmap.json"><code>importmap.json</code></a> uses relative paths for portability and IDE consumption; the <code>_importmap</code> recipe materialises an absolute-path copy at <code>tmp/importmap.json</code> (required because <code>SchemaLoader</code> joins import-map values with the importing schema's directory). Set <code>LINKML_IMPORT_MAP=</code> (empty) to fall back to HTTP resolution against <code>w3id.org</code>.</p>
 </li>
 <li>
-<p><a href="https://github.com/lmodel/dpv/blob/main/scripts/merge_linkml_schema.py">scripts/merge_linkml_schema.py</a> flattens the schema into a self-contained YAML before feeding it to <code>gen-project</code>. This works around a LinkML upstream bug (raised upstream) where SchemaLoader-based sub-generators (<code>python</code>, <code>sqltable</code>, <code>excel</code>) construct a secondary <code>SchemaView</code> without propagating <code>--importmap</code> and therefore HTTP-fetch URI imports they cannot resolve.</p>
+<p><a href="https://github.com/lmodel/dpv/blob/main/scripts/linkml_import_tools.py">scripts/linkml_import_tools.py <code>merge</code></a> flattens the schema into a self-contained YAML before feeding it to <code>gen-project</code>. This works around a LinkML upstream bug (raised upstream) where SchemaLoader-based sub-generators (<code>python</code>, <code>sqltable</code>, <code>excel</code>) construct a secondary <code>SchemaView</code> without propagating <code>--importmap</code> and therefore HTTP-fetch URI imports they cannot resolve.</p>
 </li>
 <li>
 <p><code>dpv_27560_to_linkml.py</code> and the <code>gen_*_patched.py</code> scripts work around several LinkML generator edge-cases that surface on a schema this large (DBML, Pandera, RDF, SPARQL, Markdown data-dictionary).</p>
@@ -1400,7 +1381,7 @@ distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/e
 <p><a href="https://github.com/lmodel/dpv/blob/main/scripts/dpv_extensions_to_linkml.py">scripts/dpv_extensions_to_linkml.py</a> regenerates all extension schemas under <code>src/dpv/schema/extensions/</code> from the same vendored upstream release. Invoked via <code>just gen-linkml-extensions</code>; must run after <code>dpv_core_to_linkml.py</code> because it imports that module for shared utilities.</p>
 </li>
 <li>
-<p><a href="https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py">scripts/strip_sibling_imports.py</a> produces self-contained per-extension YAML for the documentation build by dropping all non-<code>linkml:types</code> imports and stripping dangling <code>is_a</code> / <code>mixins</code> references. Driven by the <code>gen-doc-extensions</code> recipe, which is itself a dependency of top-level <code>gen-doc</code> so <code>just gen-doc</code> produces both <code>docs/elements/</code> and <code>docs/extensions/&lt;slug&gt;/</code> in one pass.</p>
+<p><a href="https://github.com/lmodel/dpv/blob/main/scripts/linkml_import_tools.py">scripts/linkml_import_tools.py <code>strip-siblings</code></a> produces self-contained per-extension YAML for the documentation build by dropping all non-<code>linkml:types</code> imports and stripping dangling <code>is_a</code> / <code>mixins</code> references. Driven by the <code>gen-doc-extensions</code> recipe, which is itself a dependency of top-level <code>gen-doc</code> so <code>just gen-doc</code> produces both <code>docs/elements/</code> and <code>docs/extensions/&lt;slug&gt;/</code> in one pass.</p>
 </li>
 </ul>
 <h2 id="status">Status</h2>
@@ -1414,13 +1395,13 @@ distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/e
 </li>
 <li>
 <p>✅ Open-world validation honored by <code>tests/test_data.py</code> and the
-  <code>linkml-run-examples</code> CLI path; the open-world drop-in runner (<a href="https://github.com/lmodel/dpv/blob/main/scripts/run_examples_open_world.py">scripts/run_examples_open_world.py</a>) and pytest now share a schema-aware target-class resolver that maps filename targets via class names, <code>class_uri</code> and aliases, falling back to <code>DpvThing</code> when the upstream example references a concept outside the merged schema.</p>
+  <code>linkml-run-examples</code> CLI path; the open-world drop-in runner (<a href="https://github.com/lmodel/dpv/blob/main/tests/run_examples_open_world.py">tests/run_examples_open_world.py</a>) and pytest now share a schema-aware target-class resolver that maps filename targets via class names, <code>class_uri</code> and aliases, falling back to <code>DpvThing</code> when the upstream example references a concept outside the merged schema.</p>
 </li>
 <li>
 <p>✅ 26 SSSOM cross-walks present (17 hand-curated + 9 LLM-seeded candidate sets marked <code>semapv:LLMBasedMatching</code> and pending human review); verifier checks every row against the schema.</p>
 </li>
 <li>
-<p>✅ Upstream DPV CG examples round-tripped from TTL into LinkML YAML and exercised in CI; unmapped predicates preserved as <code># __unmapped__:</code> provenance comments so nothing is silently dropped. The upstream release ships only a monolithic HTML page (<code>dex.html</code>); <a href="https://github.com/lmodel/dpv/blob/main/scripts/gen_dpvcg_turtle.py">scripts/gen_dpvcg_turtle.py</a> extracts 88 individual <code>E####.ttl</code> snippets from it. The full pipeline (HTML -&gt; TTL -&gt; wrapped TTL -&gt; 5 valid YAML fixtures, with 6 examples routed to <code>problem/</code>) is wired into <code>just test</code> via <code>_gen-fixtures</code> - no manual step required.</p>
+<p>✅ Upstream DPV CG examples round-tripped from TTL into LinkML YAML and exercised in CI; unmapped predicates preserved as <code># __unmapped__:</code> provenance comments so nothing is silently dropped. The upstream release ships only a monolithic HTML page (<code>dex.html</code>); <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_examples.py">scripts/dpvcg_examples.py <code>extract</code></a> extracts 88 individual <code>E####.ttl</code> snippets from it. The full pipeline (HTML -&gt; TTL -&gt; wrapped TTL -&gt; 5 valid YAML fixtures, with 6 examples routed to <code>problem/</code>) is wired into <code>just test</code> via <code>_gen-fixtures</code> - no manual step required.</p>
 </li>
 <li>
 <p>✅ 64 hand-authored valid fixtures covering 52 distinct classes (core, risk, AI, legal/EU, loc, tech, and sector modules) and 48 hand-authored invalid fixtures all exercising the one schema-enforced constraint — <code>id</code> must be a required <code>uriorcurie</code> string — across violation modes (missing <code>id</code>, null <code>id</code>, integer <code>id</code>). Fixtures carry comments recording the originally-intended semantic constraint (enum values, date formats, cardinality, referential integrity) as a roadmap for future schema tightening. Plus 5 generated YAML fixtures from the upstream DPV CG examples. All exercised by <code>tests/test_data.py</code> (117 passed) and <code>just _test-examples</code>.</p>

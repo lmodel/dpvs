@@ -435,8 +435,8 @@
         click PotentialImpact href "../PotentialImpact/"
       PotentialRisk &lt;|-- PhysicalHarm
         click PotentialRisk href "../PotentialRisk/"
-      PhysicalHealth &lt;|-- PhysicalHarm
-        click PhysicalHealth href "../PhysicalHealth/"
+      RiskPhysicalHealth &lt;|-- PhysicalHarm
+        click RiskPhysicalHealth href "../RiskPhysicalHealth/"
       Harm &lt;|-- PhysicalHarm
         click Harm href "../Harm/"
 
@@ -447,7 +447,7 @@
 <li><a href="../IndividualRisk/">IndividualRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]<ul>
 <li><a href="../HealthSafety/">HealthSafety</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]<ul>
 <li><a href="../Harm/">Harm</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../IndividualRisk/">IndividualRisk</a>]<ul>
-<li><strong>PhysicalHarm</strong> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../PhysicalHealth/">PhysicalHealth</a>]</li>
+<li><strong>PhysicalHarm</strong> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../RiskPhysicalHealth/">RiskPhysicalHealth</a>]</li>
 </ul>
 </li>
 </ul>
@@ -493,6 +493,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -560,6 +561,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concept representing physical harm to an individual or individual(s)</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -572,7 +574,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialConsequence</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialImpact</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialRisk</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhysicalHealth</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskPhysicalHealth</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk:PhysicalHarm</span>
 </code></pre></div>
 </details>
@@ -588,6 +590,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concept representing physical harm to an individual or individual(s)</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -600,7 +603,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialConsequence</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialImpact</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PotentialRisk</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PhysicalHealth</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskPhysicalHealth</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk:PhysicalHarm</span>
 </code></pre></div>
 </details>

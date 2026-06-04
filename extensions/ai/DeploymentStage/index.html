@@ -430,13 +430,13 @@
 <pre class="mermaid"><code> classDiagram
     class DeploymentStage
     click DeploymentStage href "../DeploymentStage/"
-      LifecycleStage &lt;|-- DeploymentStage
-        click LifecycleStage href "../LifecycleStage/"
+      AiLifecycleStage &lt;|-- DeploymentStage
+        click AiLifecycleStage href "../AiLifecycleStage/"
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../LifecycleStage/">LifecycleStage</a><ul>
+<li><a href="../AiLifecycleStage/">AiLifecycleStage</a><ul>
 <li><strong>DeploymentStage</strong></li>
 </ul>
 </li>
@@ -477,6 +477,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiLifecycleSubset/">AiLifecycleSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -558,6 +559,7 @@
 
 <span class="w">  </span><span class="s">configured</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">deployment</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">environment'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -567,7 +569,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:DeploymentStage</span>
 <span class="nt">close_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIReferenceControl</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DeploymentStage</span>
 </code></pre></div>
 </details>
@@ -589,6 +591,7 @@
 
 <span class="w">  </span><span class="s">configured</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">deployment</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">environment'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -598,7 +601,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:DeploymentStage</span>
 <span class="nt">close_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIReferenceControl</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DeploymentStage</span>
 </code></pre></div>
 </details>

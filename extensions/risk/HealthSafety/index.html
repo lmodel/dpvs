@@ -444,12 +444,12 @@
         click GroupHealthSafety href "../GroupHealthSafety/"
       HealthSafety &lt;|-- Harm
         click Harm href "../Harm/"
-      HealthSafety &lt;|-- Health
-        click Health href "../Health/"
       HealthSafety &lt;|-- IndividualHealthSafety
         click IndividualHealthSafety href "../IndividualHealthSafety/"
       HealthSafety &lt;|-- PublicHealthSafety
         click PublicHealthSafety href "../PublicHealthSafety/"
+      HealthSafety &lt;|-- RiskHealth
+        click RiskHealth href "../RiskHealth/"
       HealthSafety &lt;|-- Safety
         click Safety href "../Safety/"
       HealthSafety &lt;|-- Wellbeing
@@ -463,9 +463,9 @@
 <li><a href="../IndividualRisk/">IndividualRisk</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]<ul>
 <li><strong>HealthSafety</strong> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]<ul>
 <li><a href="../Harm/">Harm</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../IndividualRisk/">IndividualRisk</a>]</li>
-<li><a href="../Health/">Health</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../IndividualHealthSafety/">IndividualHealthSafety</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a> <a href="../IndividualRisk/">IndividualRisk</a>]</li>
 <li><a href="../PublicHealthSafety/">PublicHealthSafety</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
+<li><a href="../RiskHealth/">RiskHealth</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../Safety/">Safety</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../Wellbeing/">Wellbeing</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 </ul>
@@ -511,6 +511,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -581,6 +582,7 @@
 
 <span class="w">  </span><span class="s">society</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">large'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -611,6 +613,7 @@
 
 <span class="w">  </span><span class="s">society</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">large'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

@@ -439,8 +439,8 @@
 <pre class="mermaid"><code> classDiagram
     class Technique
     click Technique href "../Technique/"
-      AI &lt;|-- Technique
-        click AI href "../AI/"
+      AiAI &lt;|-- Technique
+        click AiAI href "../AiAI/"
 
 
       Technique &lt;|-- AudioProcessing
@@ -482,7 +482,7 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
 <li><strong>Technique</strong><ul>
 <li><a href="../AudioProcessing/">AudioProcessing</a></li>
 <li><a href="../KnowledgeTechnique/">KnowledgeTechnique</a></li>
@@ -531,6 +531,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCoreSubset/">AiCoreSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -612,6 +613,7 @@ is necessary to distinguish the 'algorithm' (ai:Technique) from the
 
 <span class="w">  </span><span class="se">''</span><span class="s">application</span><span class="se">''</span><span class="nv"> </span><span class="s">(ai:Capability)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="se">''</span><span class="s">goal</span><span class="se">''</span><span class="nv"> </span><span class="s">(dpv:Purpose)'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_core_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -619,7 +621,7 @@ is necessary to distinguish the 'algorithm' (ai:Technique) from the
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:Technique</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:Technique</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiAI</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:Technique</span>
 </code></pre></div>
 </details>
@@ -643,6 +645,7 @@ is necessary to distinguish the 'algorithm' (ai:Technique) from the
 
 <span class="w">  </span><span class="se">''</span><span class="s">application</span><span class="se">''</span><span class="nv"> </span><span class="s">(ai:Capability)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="se">''</span><span class="s">goal</span><span class="se">''</span><span class="nv"> </span><span class="s">(dpv:Purpose)'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_core_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -650,7 +653,7 @@ is necessary to distinguish the 'algorithm' (ai:Technique) from the
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:Technique</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:Technique</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiAI</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:Technique</span>
 </code></pre></div>
 </details>

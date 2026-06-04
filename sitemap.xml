@@ -4641,7 +4641,27 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiAI/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiAISystem/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiBiometricCategorisation/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiBiometricIdentification/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiCapabilitiesSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiCapability/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -4653,6 +4673,18 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiDataAggregationBias/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiDataBias/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiDataRisk/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiDataSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -4661,11 +4693,31 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiEmotionRecognition/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiGPAIModel/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiInformativenessBias/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiLifecycleStage/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiLifecycleSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiMeasuresSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiModel/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -4681,6 +4733,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiSecurityAttack/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -4690,6 +4746,18 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/AiTechniquesSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiTestingData/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiTrainingData/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/AiValidationData/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -5657,6 +5725,18 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/ai_has_capability/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/ai_has_data/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/ai/ai_has_model/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/ai/dpv_ai/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -5870,6 +5950,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/justifications/JudicialProceedingsImpaired/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/justifications/JustificationsIdentityVerificationFailure/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -17637,6 +17721,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/loc/LocAI/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/loc/LocInverseSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -27941,11 +28029,23 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdHealth/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/pd/PdIdentifier/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/pd/PdLocation/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdMentalHealth/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdPhysicalHealth/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -27962,6 +28062,14 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/pd/PdTracking/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdUserAgent/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/pd/PdVulnerability/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -29945,6 +30053,14 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskAvailabilityBreach/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskConfidentialityBreach/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskControl/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -29953,11 +30069,39 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskDataAggregationBias/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskDataBias/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskDataBreach/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskDataRisk/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskEvaluation/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskHealth/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskIdentification/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskIdentityVerificationFailure/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskIncidentAssessmentReport/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -29966,6 +30110,14 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskIncidentSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskInformativenessBias/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskIntegrityBreach/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -29989,11 +30141,19 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskMentalHealth/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskOwner/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskPerception/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskPhysicalHealth/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -30021,6 +30181,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskSecurityAttack/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskSource/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -30030,6 +30194,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/RiskTreatment/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/RiskVulnerability/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -30625,6 +30793,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/risk/risk_has_risk_assessment/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/risk/shares/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -31205,6 +31377,10 @@
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/TechCapability/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/dpv/extensions/tech/TechCommsSubset/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
@@ -31234,6 +31410,18 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/tech/TechIoSubset/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/TechLifecycleStage/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/TechMarketAvailabilityStatus/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/TechModel/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -31282,6 +31470,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/tech/TechUser/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/TechUserAgent/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
     <url>
@@ -31542,6 +31734,18 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/dpv/extensions/tech/is_component_of/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/tech_has_capability/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/tech_has_model/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/dpv/extensions/tech/tech_has_service/</loc>
          <lastmod>2026-06-04</lastmod>
     </url>
 </urlset>

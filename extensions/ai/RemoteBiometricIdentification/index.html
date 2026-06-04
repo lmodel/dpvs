@@ -429,20 +429,20 @@
 <pre class="mermaid"><code> classDiagram
     class RemoteBiometricIdentification
     click RemoteBiometricIdentification href "../RemoteBiometricIdentification/"
-      Capability &lt;|-- RemoteBiometricIdentification
-        click Capability href "../Capability/"
-      BiometricIdentification &lt;|-- RemoteBiometricIdentification
-        click BiometricIdentification href "../BiometricIdentification/"
+      AiCapability &lt;|-- RemoteBiometricIdentification
+        click AiCapability href "../AiCapability/"
+      AiBiometricIdentification &lt;|-- RemoteBiometricIdentification
+        click AiBiometricIdentification href "../AiBiometricIdentification/"
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
-<li><a href="../Capability/">Capability</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
+<li><a href="../AiCapability/">AiCapability</a><ul>
 <li><a href="../HumanOrientedCapability/">HumanOrientedCapability</a><ul>
-<li><a href="../BiometricCapability/">BiometricCapability</a> [ <a href="../Capability/">Capability</a>]<ul>
-<li><a href="../BiometricIdentification/">BiometricIdentification</a> [ <a href="../Capability/">Capability</a> <a href="../HumanIdentification/">HumanIdentification</a>]<ul>
-<li><strong>RemoteBiometricIdentification</strong> [ <a href="../Capability/">Capability</a>]</li>
+<li><a href="../BiometricCapability/">BiometricCapability</a> [ <a href="../AiCapability/">AiCapability</a>]<ul>
+<li><a href="../AiBiometricIdentification/">AiBiometricIdentification</a> [ <a href="../AiCapability/">AiCapability</a> <a href="../HumanIdentification/">HumanIdentification</a>]<ul>
+<li><strong>RemoteBiometricIdentification</strong> [ <a href="../AiCapability/">AiCapability</a>]</li>
 </ul>
 </li>
 </ul>
@@ -490,6 +490,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCapabilitiesSubset/">AiCapabilitiesSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -557,6 +558,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability involving biometric identification carried out remotely</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -564,9 +566,9 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:RemoteBiometricIdentification</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RemoteBiometricIdentification</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BiometricIdentification</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiBiometricIdentification</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RemoteBiometricIdentification</span>
 </code></pre></div>
 </details>
@@ -582,6 +584,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability involving biometric identification carried out remotely</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -589,9 +592,9 @@
 <span class="nt">exact_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai:RemoteBiometricIdentification</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RemoteBiometricIdentification</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BiometricIdentification</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiBiometricIdentification</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RemoteBiometricIdentification</span>
 </code></pre></div>
 </details>

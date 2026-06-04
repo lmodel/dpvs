@@ -430,18 +430,18 @@
 <pre class="mermaid"><code> classDiagram
     class BiometricCapability
     click BiometricCapability href "../BiometricCapability/"
-      Capability &lt;|-- BiometricCapability
-        click Capability href "../Capability/"
+      AiCapability &lt;|-- BiometricCapability
+        click AiCapability href "../AiCapability/"
       HumanOrientedCapability &lt;|-- BiometricCapability
         click HumanOrientedCapability href "../HumanOrientedCapability/"
 
 
       BiometricCapability &lt;|-- ActionRecognition
         click ActionRecognition href "../ActionRecognition/"
-      BiometricCapability &lt;|-- BiometricCategorisation
-        click BiometricCategorisation href "../BiometricCategorisation/"
-      BiometricCapability &lt;|-- BiometricIdentification
-        click BiometricIdentification href "../BiometricIdentification/"
+      BiometricCapability &lt;|-- AiBiometricCategorisation
+        click AiBiometricCategorisation href "../AiBiometricCategorisation/"
+      BiometricCapability &lt;|-- AiBiometricIdentification
+        click AiBiometricIdentification href "../AiBiometricIdentification/"
       BiometricCapability &lt;|-- FaceRecognition
         click FaceRecognition href "../FaceRecognition/"
       BiometricCapability &lt;|-- GestureRecognition
@@ -451,15 +451,15 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AI/">AI</a><ul>
-<li><a href="../Capability/">Capability</a><ul>
+<li><a href="../AiAI/">AiAI</a><ul>
+<li><a href="../AiCapability/">AiCapability</a><ul>
 <li><a href="../HumanOrientedCapability/">HumanOrientedCapability</a><ul>
-<li><strong>BiometricCapability</strong> [ <a href="../Capability/">Capability</a>]<ul>
-<li><a href="../ActionRecognition/">ActionRecognition</a> [ <a href="../Capability/">Capability</a> <a href="../ComputerVision/">ComputerVision</a>]</li>
-<li><a href="../BiometricCategorisation/">BiometricCategorisation</a> [ <a href="../Capability/">Capability</a>]</li>
-<li><a href="../BiometricIdentification/">BiometricIdentification</a> [ <a href="../Capability/">Capability</a> <a href="../HumanIdentification/">HumanIdentification</a>]</li>
-<li><a href="../FaceRecognition/">FaceRecognition</a> [ <a href="../Capability/">Capability</a> <a href="../ComputerVision/">ComputerVision</a>]</li>
-<li><a href="../GestureRecognition/">GestureRecognition</a> [ <a href="../Capability/">Capability</a> <a href="../ComputerVision/">ComputerVision</a>]</li>
+<li><strong>BiometricCapability</strong> [ <a href="../AiCapability/">AiCapability</a>]<ul>
+<li><a href="../ActionRecognition/">ActionRecognition</a> [ <a href="../AiCapability/">AiCapability</a> <a href="../ComputerVision/">ComputerVision</a>]</li>
+<li><a href="../AiBiometricCategorisation/">AiBiometricCategorisation</a> [ <a href="../AiCapability/">AiCapability</a>]</li>
+<li><a href="../AiBiometricIdentification/">AiBiometricIdentification</a> [ <a href="../AiCapability/">AiCapability</a> <a href="../HumanIdentification/">HumanIdentification</a>]</li>
+<li><a href="../FaceRecognition/">FaceRecognition</a> [ <a href="../AiCapability/">AiCapability</a> <a href="../ComputerVision/">ComputerVision</a>]</li>
+<li><a href="../GestureRecognition/">GestureRecognition</a> [ <a href="../AiCapability/">AiCapability</a> <a href="../ComputerVision/">ComputerVision</a>]</li>
 </ul>
 </li>
 </ul>
@@ -505,6 +505,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiCapabilitiesSubset/">AiCapabilitiesSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -574,6 +575,7 @@
 
 <span class="w">  </span><span class="s">biometrics'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -583,7 +585,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:BiometricCapability</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HumanOrientedCapability</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:BiometricCapability</span>
 </code></pre></div>
 </details>
@@ -601,6 +603,7 @@
 
 <span class="w">  </span><span class="s">biometrics'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_capabilities_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -610,7 +613,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:BiometricCapability</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HumanOrientedCapability</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiCapability</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:BiometricCapability</span>
 </code></pre></div>
 </details>

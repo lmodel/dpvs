@@ -430,8 +430,8 @@
 <pre class="mermaid"><code> classDiagram
     class DataRisk
     click DataRisk href "../DataRisk/"
-      AiRiskConcept &lt;|-- DataRisk
-        click AiRiskConcept href "../AiRiskConcept/"
+      RiskConcept &lt;|-- DataRisk
+        click RiskConcept href "../RiskConcept/"
 
 
       DataRisk &lt;|-- InputDataRisk
@@ -445,11 +445,11 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AiRiskConcept/">AiRiskConcept</a><ul>
+<li><a href="../RiskConcept/">RiskConcept</a><ul>
 <li><strong>DataRisk</strong><ul>
-<li><a href="../InputDataRisk/">InputDataRisk</a></li>
-<li><a href="../TestingDataRisk/">TestingDataRisk</a></li>
-<li><a href="../ValidationDataRisk/">ValidationDataRisk</a></li>
+<li><a href="../InputDataRisk/">InputDataRisk</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><a href="../TestingDataRisk/">TestingDataRisk</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><a href="../ValidationDataRisk/">ValidationDataRisk</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
 </ul>
 </li>
 </ul>
@@ -574,7 +574,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:DataRisk</span>
 <span class="nt">related_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIRisk</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiRiskConcept</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DataRisk</span>
 </code></pre></div>
 </details>
@@ -602,7 +602,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:DataRisk</span>
 <span class="nt">related_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIRisk</span>
-<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiRiskConcept</span>
+<span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DataRisk</span>
 </code></pre></div>
 </details>

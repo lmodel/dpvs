@@ -430,6 +430,8 @@
 <pre class="mermaid"><code> classDiagram
     class DataBias
     click DataBias href "../DataBias/"
+      RiskConcept &lt;|-- DataBias
+        click RiskConcept href "../RiskConcept/"
       AIBias &lt;|-- DataBias
         click AIBias href "../AIBias/"
 
@@ -449,14 +451,14 @@
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../AiRiskConcept/">AiRiskConcept</a><ul>
+<li><a href="../RiskConcept/">RiskConcept</a><ul>
 <li><a href="../AIBias/">AIBias</a><ul>
-<li><strong>DataBias</strong><ul>
-<li><a href="../DataAggregationBias/">DataAggregationBias</a></li>
-<li><a href="../DataLabellingProcessBias/">DataLabellingProcessBias</a></li>
-<li><a href="../DistributedTrainingBias/">DistributedTrainingBias</a></li>
-<li><a href="../MissingFeaturesBias/">MissingFeaturesBias</a></li>
-<li><a href="../NonRepresentativeSamplingBias/">NonRepresentativeSamplingBias</a></li>
+<li><strong>DataBias</strong> [ <a href="../RiskConcept/">RiskConcept</a>]<ul>
+<li><a href="../DataAggregationBias/">DataAggregationBias</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><a href="../DataLabellingProcessBias/">DataLabellingProcessBias</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><a href="../DistributedTrainingBias/">DistributedTrainingBias</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><a href="../MissingFeaturesBias/">MissingFeaturesBias</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
+<li><a href="../NonRepresentativeSamplingBias/">NonRepresentativeSamplingBias</a> [ <a href="../RiskConcept/">RiskConcept</a>]</li>
 </ul>
 </li>
 </ul>
@@ -590,6 +592,8 @@
 <span class="nt">related_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIRisk</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AIBias</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DataBias</span>
 </code></pre></div>
 </details>
@@ -620,6 +624,8 @@
 <span class="nt">related_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIRisk</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AIBias</span>
+<span class="nt">mixins</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DataBias</span>
 </code></pre></div>
 </details>

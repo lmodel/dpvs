@@ -443,8 +443,6 @@
         click CustomerSupportLimited href "../CustomerSupportLimited/"
       ServiceRelatedConsequence &lt;|-- DelayedApplicationProcessing
         click DelayedApplicationProcessing href "../DelayedApplicationProcessing/"
-      ServiceRelatedConsequence &lt;|-- IdentityVerificationFailure
-        click IdentityVerificationFailure href "../IdentityVerificationFailure/"
       ServiceRelatedConsequence &lt;|-- InabilityToEnterIntoContract
         click InabilityToEnterIntoContract href "../InabilityToEnterIntoContract/"
       ServiceRelatedConsequence &lt;|-- InabilityToEstablishLegalClaims
@@ -467,6 +465,8 @@
         click PersonalisationEnabled href "../PersonalisationEnabled/"
       ServiceRelatedConsequence &lt;|-- PublicServicesExclusion
         click PublicServicesExclusion href "../PublicServicesExclusion/"
+      ServiceRelatedConsequence &lt;|-- RiskIdentityVerificationFailure
+        click RiskIdentityVerificationFailure href "../RiskIdentityVerificationFailure/"
       ServiceRelatedConsequence &lt;|-- ServiceAlternativeOffered
         click ServiceAlternativeOffered href "../ServiceAlternativeOffered/"
       ServiceRelatedConsequence &lt;|-- ServiceCostIncreased
@@ -498,7 +498,6 @@
 <li><strong>ServiceRelatedConsequence</strong> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]<ul>
 <li><a href="../CustomerSupportLimited/">CustomerSupportLimited</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../DelayedApplicationProcessing/">DelayedApplicationProcessing</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
-<li><a href="../IdentityVerificationFailure/">IdentityVerificationFailure</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../InabilityToEnterIntoContract/">InabilityToEnterIntoContract</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../InabilityToEstablishLegalClaims/">InabilityToEstablishLegalClaims</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../InabilityToFulfilLegalObligations/">InabilityToFulfilLegalObligations</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
@@ -510,6 +509,7 @@
 <li><a href="../PersonalisationDisabled/">PersonalisationDisabled</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../PersonalisationEnabled/">PersonalisationEnabled</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../PublicServicesExclusion/">PublicServicesExclusion</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
+<li><a href="../RiskIdentityVerificationFailure/">RiskIdentityVerificationFailure</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../ServiceAlternativeOffered/">ServiceAlternativeOffered</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../ServiceCostIncreased/">ServiceCostIncreased</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
 <li><a href="../ServiceDenied/">ServiceDenied</a> [ <a href="../PotentialConsequence/">PotentialConsequence</a> <a href="../PotentialImpact/">PotentialImpact</a> <a href="../PotentialRisk/">PotentialRisk</a>]</li>
@@ -562,6 +562,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -629,6 +630,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A consequence related to the provision of a service</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -656,6 +658,7 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A consequence related to the provision of a service</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

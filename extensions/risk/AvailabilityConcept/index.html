@@ -429,8 +429,6 @@
 <pre class="mermaid"><code> classDiagram
     class AvailabilityConcept
     click AvailabilityConcept href "../AvailabilityConcept/"
-      AvailabilityConcept &lt;|-- AvailabilityBreach
-        click AvailabilityBreach href "../AvailabilityBreach/"
       AvailabilityConcept &lt;|-- ComponentFailure
         click ComponentFailure href "../ComponentFailure/"
       AvailabilityConcept &lt;|-- ComponentMalfunction
@@ -439,8 +437,6 @@
         click CompromiseAccount href "../CompromiseAccount/"
       AvailabilityConcept &lt;|-- Cryptojacking
         click Cryptojacking href "../Cryptojacking/"
-      AvailabilityConcept &lt;|-- DataBreach
-        click DataBreach href "../DataBreach/"
       AvailabilityConcept &lt;|-- DenialServiceAttack
         click DenialServiceAttack href "../DenialServiceAttack/"
       AvailabilityConcept &lt;|-- DistributedDenialServiceAttack
@@ -453,10 +449,14 @@
         click MaliciousCodeAttack href "../MaliciousCodeAttack/"
       AvailabilityConcept &lt;|-- MalwareAttack
         click MalwareAttack href "../MalwareAttack/"
+      AvailabilityConcept &lt;|-- RiskAvailabilityBreach
+        click RiskAvailabilityBreach href "../RiskAvailabilityBreach/"
+      AvailabilityConcept &lt;|-- RiskDataBreach
+        click RiskDataBreach href "../RiskDataBreach/"
+      AvailabilityConcept &lt;|-- RiskSecurityAttack
+        click RiskSecurityAttack href "../RiskSecurityAttack/"
       AvailabilityConcept &lt;|-- Sabotage
         click Sabotage href "../Sabotage/"
-      AvailabilityConcept &lt;|-- SecurityAttack
-        click SecurityAttack href "../SecurityAttack/"
       AvailabilityConcept &lt;|-- SecurityBreach
         click SecurityBreach href "../SecurityBreach/"
       AvailabilityConcept &lt;|-- SystemFailure
@@ -520,6 +520,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../RiskRiskTaxonomySubset/">RiskRiskTaxonomySubset</a></li>
 <li><a href="../RiskSubset/">RiskSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -596,6 +597,7 @@ concepts whether they are a risk source, risk, consequence, or impact</li>
 
 <span class="w">  </span><span class="s">concepts</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">they</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">risk</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">risk,</span><span class="nv"> </span><span class="s">consequence,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">impact'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -622,6 +624,7 @@ concepts whether they are a risk source, risk, consequence, or impact</li>
 
 <span class="w">  </span><span class="s">concepts</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">they</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">risk</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">risk,</span><span class="nv"> </span><span class="s">consequence,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">impact'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_risk_taxonomy_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/risk</span>
 <span class="nt">aliases</span><span class="p">:</span>

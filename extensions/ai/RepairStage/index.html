@@ -430,17 +430,17 @@
 <pre class="mermaid"><code> classDiagram
     class RepairStage
     click RepairStage href "../RepairStage/"
-      LifecycleStage &lt;|-- RepairStage
-        click LifecycleStage href "../LifecycleStage/"
+      AiLifecycleStage &lt;|-- RepairStage
+        click AiLifecycleStage href "../AiLifecycleStage/"
       OperationStage &lt;|-- RepairStage
         click OperationStage href "../OperationStage/"
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../LifecycleStage/">LifecycleStage</a><ul>
+<li><a href="../AiLifecycleStage/">AiLifecycleStage</a><ul>
 <li><a href="../OperationStage/">OperationStage</a><ul>
-<li><strong>RepairStage</strong> [ <a href="../LifecycleStage/">LifecycleStage</a>]</li>
+<li><strong>RepairStage</strong> [ <a href="../AiLifecycleStage/">AiLifecycleStage</a>]</li>
 </ul>
 </li>
 </ul>
@@ -482,6 +482,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiLifecycleSubset/">AiLifecycleSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -559,6 +560,7 @@
 
 <span class="w">  </span><span class="s">suspected</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">incidents'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -568,7 +570,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RepairStage</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OperationStage</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RepairStage</span>
 </code></pre></div>
 </details>
@@ -590,6 +592,7 @@
 
 <span class="w">  </span><span class="s">suspected</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">incidents'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -599,7 +602,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_ai_owl:RepairStage</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OperationStage</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:RepairStage</span>
 </code></pre></div>
 </details>

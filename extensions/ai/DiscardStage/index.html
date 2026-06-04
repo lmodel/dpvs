@@ -430,17 +430,17 @@
 <pre class="mermaid"><code> classDiagram
     class DiscardStage
     click DiscardStage href "../DiscardStage/"
-      LifecycleStage &lt;|-- DiscardStage
-        click LifecycleStage href "../LifecycleStage/"
+      AiLifecycleStage &lt;|-- DiscardStage
+        click AiLifecycleStage href "../AiLifecycleStage/"
       RetirementStage &lt;|-- DiscardStage
         click RetirementStage href "../RetirementStage/"
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../LifecycleStage/">LifecycleStage</a><ul>
+<li><a href="../AiLifecycleStage/">AiLifecycleStage</a><ul>
 <li><a href="../RetirementStage/">RetirementStage</a><ul>
-<li><strong>DiscardStage</strong> [ <a href="../LifecycleStage/">LifecycleStage</a>]</li>
+<li><strong>DiscardStage</strong> [ <a href="../AiLifecycleStage/">AiLifecycleStage</a>]</li>
 </ul>
 </li>
 </ul>
@@ -482,6 +482,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
+<li><a href="../AiLifecycleSubset/">AiLifecycleSubset</a></li>
 <li><a href="../AiSubset/">AiSubset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
@@ -562,6 +563,7 @@
 
 <span class="w">  </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">retirement'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -573,7 +575,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIReferenceControl</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RetirementStage</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DiscardStage</span>
 </code></pre></div>
 </details>
@@ -594,6 +596,7 @@
 
 <span class="w">  </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">retirement'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_lifecycle_subset</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/dpv/ai</span>
 <span class="nt">aliases</span><span class="p">:</span>
@@ -605,7 +608,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso42001:AIReferenceControl</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RetirementStage</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LifecycleStage</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiLifecycleStage</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai:DiscardStage</span>
 </code></pre></div>
 </details>
