@@ -262,70 +262,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#DataSubject
       dpv_extension_slug: legal/eu/gdpr
 
-  DpvController:
-    is_a: DataController
-    class_uri: legal_eu_gdpr:Controller
-    description: |-
-      ‘Controller’ means the natural or legal person, public authority, agency
-      or other body which, alone or jointly with others, determines the
-      purposes and means of the processing of personal data; where the
-      purposes and means of such processing are determined by Union or Member
-      State law, the controller or the specific criteria for its nomination
-      may be provided for by Union or Member State law
-    aliases:
-      - Controller
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Controller
-      - dpv_legal_eu_gdpr_owl:Controller
-    close_mappings:
-      - iso27701:PIIController
-    annotations:
-      dct_source: GDPR Art.4-7
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Controller
-      dpv_extension_slug: legal/eu/gdpr
-
-  DpvProcessor:
-    is_a: DataProcessor
-    class_uri: legal_eu_gdpr:Processor
-    description: |-
-      ‘Processor’ means a natural or legal person, public authority, agency or
-      other body which processes personal data on behalf of the controller
-    aliases:
-      - Processor
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Processor
-      - dpv_legal_eu_gdpr_owl:Processor
-    close_mappings:
-      - iso27701:PIIProcessor
-    annotations:
-      dct_source: GDPR Art.4-8
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processor
-      dpv_extension_slug: legal/eu/gdpr
-
-  DpvRecipient:
-    class_uri: legal_eu_gdpr:Recipient
-    description: |-
-      ‘Recipient’ means a natural or legal person, public authority, agency or
-      another body, to which the personal data are disclosed, whether a third
-      party or not
-    aliases:
-      - Recipient
-    in_subset:
-      - legal_eu_gdpr_entities_subset
-    exact_mappings:
-      - dpv_legal_eu_gdpr:Recipient
-      - dpv_legal_eu_gdpr_owl:Recipient
-    related_mappings:
-      - iso27701:ThirdParty
-    annotations:
-      dct_source: GDPR Art.4-9
-      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Recipient
-      dpv_extension_slug: legal/eu/gdpr
-
   Establishment:
     is_a: DpvOrganisation
     class_uri: legal_eu_gdpr:Establishment
@@ -382,6 +318,65 @@ classes:
          Guidelines 3/2018 on the territorial scope of the GDPR (Article 3)
         Version 2.1
       upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#LeadSupervisoryAuthority
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprController:
+    is_a: DataController
+    class_uri: legal_eu_gdpr:Controller
+    description: |-
+      ‘Controller’ means the natural or legal person, public authority, agency
+      or other body which, alone or jointly with others, determines the
+      purposes and means of the processing of personal data; where the
+      purposes and means of such processing are determined by Union or Member
+      State law, the controller or the specific criteria for its nomination
+      may be provided for by Union or Member State law
+    aliases:
+      - Controller
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Controller
+      - dpv_legal_eu_gdpr_owl:Controller
+    annotations:
+      dct_source: GDPR Art.4-7
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Controller
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprProcessor:
+    is_a: DataProcessor
+    class_uri: legal_eu_gdpr:Processor
+    description: |-
+      ‘Processor’ means a natural or legal person, public authority, agency or
+      other body which processes personal data on behalf of the controller
+    aliases:
+      - Processor
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Processor
+      - dpv_legal_eu_gdpr_owl:Processor
+    annotations:
+      dct_source: GDPR Art.4-8
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Processor
+      dpv_extension_slug: legal/eu/gdpr
+
+  LegalEuGdprRecipient:
+    is_a: DpvRecipient
+    class_uri: legal_eu_gdpr:Recipient
+    description: |-
+      ‘Recipient’ means a natural or legal person, public authority, agency or
+      another body, to which the personal data are disclosed, whether a third
+      party or not
+    aliases:
+      - Recipient
+    in_subset:
+      - legal_eu_gdpr_entities_subset
+    exact_mappings:
+      - dpv_legal_eu_gdpr:Recipient
+      - dpv_legal_eu_gdpr_owl:Recipient
+    annotations:
+      dct_source: GDPR Art.4-9
+      upstream_iri: https://w3id.org/dpv/legal/eu/gdpr/owl#Recipient
       dpv_extension_slug: legal/eu/gdpr
 
   LocalSupervisoryAuthority:

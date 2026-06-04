@@ -172,7 +172,37 @@ slots:
 
 classes:
 
-  DpvAgent:
+  EntityAgent:
+    is_a: StandardsIeee7012Agent
+    class_uri: standards_ieee_7012:EntityAgent
+    description: An Agent that represents the Entity
+    aliases:
+      - Entity Agent
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:EntityAgent
+      - dpv_standards_ieee_7012_owl:EntityAgent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#EntityAgent
+      dpv_extension_slug: standards/ieee/7012
+
+  PersonAgent:
+    is_a: StandardsIeee7012Agent
+    class_uri: standards_ieee_7012:PersonAgent
+    description: An Agent that represents the Person
+    aliases:
+      - Person Agent
+    in_subset:
+      - standards_ieee_7012_entities_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:PersonAgent
+      - dpv_standards_ieee_7012_owl:PersonAgent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#PersonAgent
+      dpv_extension_slug: standards/ieee/7012
+
+  StandardsIeee7012Agent:
     is_a: DpvEntity
     class_uri: standards_ieee_7012:Agent
     description: |-
@@ -191,7 +221,7 @@ classes:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Agent
       dpv_extension_slug: standards/ieee/7012
 
-  DpvEntity:
+  StandardsIeee7012Entity:
     is_a: DpvOrganisation
     class_uri: standards_ieee_7012:Entity
     description: |-
@@ -209,7 +239,7 @@ classes:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Entity
       dpv_extension_slug: standards/ieee/7012
 
-  DpvPerson:
+  StandardsIeee7012Person:
     is_a: NaturalPerson
     class_uri: standards_ieee_7012:Person
     description: |-
@@ -224,36 +254,6 @@ classes:
       - dpv_standards_ieee_7012_owl:Person
     annotations:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Person
-      dpv_extension_slug: standards/ieee/7012
-
-  EntityAgent:
-    is_a: DpvAgent
-    class_uri: standards_ieee_7012:EntityAgent
-    description: An Agent that represents the Entity
-    aliases:
-      - Entity Agent
-    in_subset:
-      - standards_ieee_7012_entities_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:EntityAgent
-      - dpv_standards_ieee_7012_owl:EntityAgent
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#EntityAgent
-      dpv_extension_slug: standards/ieee/7012
-
-  PersonAgent:
-    is_a: DpvAgent
-    class_uri: standards_ieee_7012:PersonAgent
-    description: An Agent that represents the Person
-    aliases:
-      - Person Agent
-    in_subset:
-      - standards_ieee_7012_entities_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:PersonAgent
-      - dpv_standards_ieee_7012_owl:PersonAgent
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#PersonAgent
       dpv_extension_slug: standards/ieee/7012
 
   ThirdParty:

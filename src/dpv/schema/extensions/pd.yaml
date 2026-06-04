@@ -4,9 +4,9 @@ title: DPV - Pd
 description: |-
   LinkML schema generated from the DPV 2.3 extension `pd` (`pd-owl.ttl`),
   enriched with canonical SKOS metadata. Imports the semantic-group
-  schema(s) `dpv:schema/dpv_personal_data` for the abstract parent classes
-  this extension specialises (instead of the full umbrella
-  `dpv:schema/dpv`).
+  schema(s) `dpv:schema/dpv_legal_basis`, `dpv:schema/dpv_personal_data`
+  for the abstract parent classes this extension specialises (instead of
+  the full umbrella `dpv:schema/dpv`).
 license: CC-BY-4.0
 see_also:
   - https://w3id.org/dpv/pd
@@ -65,6 +65,7 @@ id_prefixes:
 
 imports:
   - linkml:types
+  - dpv:schema/dpv_legal_basis
   - dpv:schema/dpv_personal_data
 
 subsets:
@@ -342,7 +343,7 @@ classes:
     mixins:
       - DpvLocation
       - PersonalData
-      - DpvCountry
+      - PdCountry
     class_uri: pd:BirthCountry
     description: Information about country of birth
     aliases:
@@ -374,8 +375,9 @@ classes:
       dpv_extension_slug: pd
 
   BirthPlace:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:BirthPlace
     description: Information about birth place
@@ -876,8 +878,9 @@ classes:
       dpv_extension_slug: pd
 
   CurrentLocation:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:CurrentLocation
     description: |-
@@ -1127,8 +1130,9 @@ classes:
       dpv_extension_slug: pd
 
   Domicile:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:Domicile
     description: |-
@@ -1145,81 +1149,6 @@ classes:
       - dpv_pd_owl:Domicile
     annotations:
       upstream_iri: https://w3id.org/dpv/pd/owl#Domicile
-      dpv_extension_slug: pd
-
-  DpvCountry:
-    is_a: DpvLocation
-    mixins:
-      - PersonalData
-    class_uri: pd:Country
-    description: Information about country e.g. residence, travel
-    aliases:
-      - Country
-    in_subset:
-      - pd_subset
-    exact_mappings:
-      - dpv_pd:Country
-      - dpv_pd_owl:Country
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#Country
-      dpv_extension_slug: pd
-
-  DpvIdentifier:
-    is_a: Tracking
-    mixins:
-      - PersonalData
-    class_uri: pd:Identifier
-    description: Information about an identifier or name used for identification
-    aliases:
-      - Identifier
-    in_subset:
-      - pd_subset
-    exact_mappings:
-      - dpv_pd:Identifier
-      - dpv_pd_owl:Identifier
-    close_mappings:
-      - iso29100:PersonallyIdentifiableInformation
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#Identifier
-      dpv_extension_slug: pd
-
-  DpvLocation:
-    is_a: Tracking
-    mixins:
-      - PersonalData
-    class_uri: pd:Location
-    description: Information about location
-    aliases:
-      - Location
-    in_subset:
-      - pd_subset
-    exact_mappings:
-      - dpv_pd:Location
-      - dpv_pd_owl:Location
-    close_mappings:
-      - iso29100:PersonallyIdentifiableInformation
-    related_mappings:
-      - svd:Location
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#Location
-      dpv_extension_slug: pd
-
-  DpvRegion:
-    is_a: PhysicalAddress
-    mixins:
-      - DpvLocation
-      - PersonalData
-    class_uri: pd:Region
-    description: Information about region as a location
-    aliases:
-      - Region
-    in_subset:
-      - pd_subset
-    exact_mappings:
-      - dpv_pd:Region
-      - dpv_pd_owl:Region
-    annotations:
-      upstream_iri: https://w3id.org/dpv/pd/owl#Region
       dpv_extension_slug: pd
 
   DrugTestResult:
@@ -1990,8 +1919,9 @@ classes:
       dpv_extension_slug: pd
 
   HomeLocation:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:HomeLocation
     description: |-
@@ -2760,6 +2690,79 @@ classes:
       upstream_iri: https://w3id.org/dpv/pd/owl#PaymentCardNumber
       dpv_extension_slug: pd
 
+  PdCountry:
+    is_a: PdLocation
+    mixins:
+      - DpvLocation
+      - PersonalData
+    class_uri: pd:Country
+    description: Information about country e.g. residence, travel
+    aliases:
+      - Country
+    in_subset:
+      - pd_subset
+    exact_mappings:
+      - dpv_pd:Country
+      - dpv_pd_owl:Country
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Country
+      dpv_extension_slug: pd
+
+  PdIdentifier:
+    is_a: Tracking
+    mixins:
+      - PersonalData
+    class_uri: pd:Identifier
+    description: Information about an identifier or name used for identification
+    aliases:
+      - Identifier
+    in_subset:
+      - pd_subset
+    exact_mappings:
+      - dpv_pd:Identifier
+      - dpv_pd_owl:Identifier
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Identifier
+      dpv_extension_slug: pd
+
+  PdLocation:
+    is_a: Tracking
+    mixins:
+      - DpvLocation
+      - PersonalData
+    class_uri: pd:Location
+    description: Information about location
+    aliases:
+      - Location
+    in_subset:
+      - pd_subset
+    exact_mappings:
+      - dpv_pd:Location
+      - dpv_pd_owl:Location
+    related_mappings:
+      - svd:Location
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Location
+      dpv_extension_slug: pd
+
+  PdRegion:
+    is_a: PhysicalAddress
+    mixins:
+      - DpvLocation
+      - PersonalData
+    class_uri: pd:Region
+    description: Information about region as a location
+    aliases:
+      - Region
+    in_subset:
+      - pd_subset
+    exact_mappings:
+      - dpv_pd:Region
+      - dpv_pd_owl:Region
+    annotations:
+      upstream_iri: https://w3id.org/dpv/pd/owl#Region
+      dpv_extension_slug: pd
+
   PerformanceAtWork:
     is_a: Behavioural
     mixins:
@@ -2856,6 +2859,7 @@ classes:
     mixins:
       - DpvLocation
       - PersonalData
+      - PdLocation
     class_uri: pd:PhysicalAddress
     description: Information about physical address
     aliases:
@@ -3388,8 +3392,9 @@ classes:
       dpv_extension_slug: pd
 
   Residency:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:Residency
     description: |-
@@ -3924,8 +3929,9 @@ classes:
       dpv_extension_slug: pd
 
   TravelHistory:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:TravelHistory
     description: Information about travel history
@@ -4198,8 +4204,9 @@ classes:
       dpv_extension_slug: pd
 
   WorkLocation:
-    is_a: DpvLocation
+    is_a: PdLocation
     mixins:
+      - DpvLocation
       - PersonalData
     class_uri: pd:WorkLocation
     description: |-

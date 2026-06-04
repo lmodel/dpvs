@@ -66,6 +66,7 @@ id_prefixes:
 
 imports:
   - linkml:types
+  - dpv:schema/dpv_personal_data
   - dpv:schema/extensions/ai
   - dpv:schema/extensions/tech
 
@@ -141,7 +142,8 @@ slots:
 
 classes:
 
-  DpvData:
+  AiData:
+    is_a: DpvData
     mixins:
       - InputOutput
     class_uri: ai:Data
@@ -159,7 +161,7 @@ classes:
       dpv_extension_slug: ai
 
   TestingData:
-    is_a: DpvData
+    is_a: AiData
     class_uri: ai:TestingData
     description: Data involved in the testing of an AI system or model
     aliases:
@@ -174,7 +176,7 @@ classes:
       dpv_extension_slug: ai
 
   TrainingData:
-    is_a: DpvData
+    is_a: AiData
     class_uri: ai:TrainingData
     description: Data involved in the training of an AI system or model
     aliases:
@@ -189,7 +191,7 @@ classes:
       dpv_extension_slug: ai
 
   ValidationData:
-    is_a: DpvData
+    is_a: AiData
     class_uri: ai:ValidationData
     description: Data involved in the validation of an AI system or model
     aliases:

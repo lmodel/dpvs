@@ -300,7 +300,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   SafetyComponent:
-    is_a: DpvComponent
+    is_a: TechComponent
     class_uri: legal_eu_aiact:SafetyComponent
     description: |-
       A component of a product or of an AI system which fulfils a safety

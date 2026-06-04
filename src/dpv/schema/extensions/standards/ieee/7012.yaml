@@ -1229,60 +1229,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#DeonticInterpretationTerm
       dpv_extension_slug: standards/ieee/7012
 
-  DpvAgent:
-    is_a: DpvEntity
-    class_uri: standards_ieee_7012:Agent
-    description: |-
-      An Agent is any software or a combination of software and hardware that
-      works exclusively for its party, and which may be provided by a third
-      party but must be controlled and be responsible to the party it
-      represents
-    aliases:
-      - Agent
-    in_subset:
-      - standards_ieee_7012_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:Agent
-      - dpv_standards_ieee_7012_owl:Agent
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Agent
-      dpv_extension_slug: standards/ieee/7012
-
-  DpvEntity:
-    is_a: DpvOrganisation
-    class_uri: standards_ieee_7012:Entity
-    description: |-
-      An entity is any organisation with which a person makes or intends to
-      make a contractual agreement, and which is the second party in a
-      contract
-    aliases:
-      - Entity
-    in_subset:
-      - standards_ieee_7012_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:Entity
-      - dpv_standards_ieee_7012_owl:Entity
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Entity
-      dpv_extension_slug: standards/ieee/7012
-
-  DpvPerson:
-    is_a: NaturalPerson
-    class_uri: standards_ieee_7012:Person
-    description: |-
-      The human individual or person whose personal data or privacy is
-      involved, and which is the first party in a contract
-    aliases:
-      - Person
-    in_subset:
-      - standards_ieee_7012_subset
-    exact_mappings:
-      - dpv_standards_ieee_7012:Person
-      - dpv_standards_ieee_7012_owl:Person
-    annotations:
-      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Person
-      dpv_extension_slug: standards/ieee/7012
-
   Endpoint:
     is_a: DpvLocation
     class_uri: standards_ieee_7012:Endpoint
@@ -1301,7 +1247,7 @@ classes:
       dpv_extension_slug: standards/ieee/7012
 
   EntityAgent:
-    is_a: DpvAgent
+    is_a: StandardsIeee7012Agent
     class_uri: standards_ieee_7012:EntityAgent
     description: An Agent that represents the Entity
     aliases:
@@ -1545,7 +1491,7 @@ classes:
       dpv_extension_slug: standards/ieee/7012
 
   PersonAgent:
-    is_a: DpvAgent
+    is_a: StandardsIeee7012Agent
     class_uri: standards_ieee_7012:PersonAgent
     description: An Agent that represents the Person
     aliases:
@@ -2605,6 +2551,60 @@ classes:
     annotations:
       upstream_iri: |-
         https://w3id.org/dpv/standards/ieee/7012/owl#SharingDataNonAnonymisedDisallowed
+      dpv_extension_slug: standards/ieee/7012
+
+  StandardsIeee7012Agent:
+    is_a: DpvEntity
+    class_uri: standards_ieee_7012:Agent
+    description: |-
+      An Agent is any software or a combination of software and hardware that
+      works exclusively for its party, and which may be provided by a third
+      party but must be controlled and be responsible to the party it
+      represents
+    aliases:
+      - Agent
+    in_subset:
+      - standards_ieee_7012_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Agent
+      - dpv_standards_ieee_7012_owl:Agent
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Agent
+      dpv_extension_slug: standards/ieee/7012
+
+  StandardsIeee7012Entity:
+    is_a: DpvOrganisation
+    class_uri: standards_ieee_7012:Entity
+    description: |-
+      An entity is any organisation with which a person makes or intends to
+      make a contractual agreement, and which is the second party in a
+      contract
+    aliases:
+      - Entity
+    in_subset:
+      - standards_ieee_7012_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Entity
+      - dpv_standards_ieee_7012_owl:Entity
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Entity
+      dpv_extension_slug: standards/ieee/7012
+
+  StandardsIeee7012Person:
+    is_a: NaturalPerson
+    class_uri: standards_ieee_7012:Person
+    description: |-
+      The human individual or person whose personal data or privacy is
+      involved, and which is the first party in a contract
+    aliases:
+      - Person
+    in_subset:
+      - standards_ieee_7012_subset
+    exact_mappings:
+      - dpv_standards_ieee_7012:Person
+      - dpv_standards_ieee_7012_owl:Person
+    annotations:
+      upstream_iri: https://w3id.org/dpv/standards/ieee/7012/owl#Person
       dpv_extension_slug: standards/ieee/7012
 
   TPR:

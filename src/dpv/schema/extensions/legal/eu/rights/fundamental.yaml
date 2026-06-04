@@ -53,9 +53,6 @@ prefixes:
   legal_eu_rights: https://w3id.org/lmodel/dpv/legal/eu/rights/
   dpv_legal_eu_rights: https://w3id.org/dpv/rights/eu#
   dpv_legal_eu_rights_owl: https://w3id.org/dpv/rights/eu/owl#
-  rights_eu: https://w3id.org/lmodel/dpv/rights/eu/
-  dpv_rights_eu: https://w3id.org/dpv/rights/eu#
-  dpv_rights_eu_owl: https://w3id.org/dpv/rights/eu/owl#
 
   cfreu: http://data.europa.eu/eli/treaty/char_2012/art_
   cfreu_title: http://data.europa.eu/eli/treaty/char_2012/tit_
@@ -70,7 +67,6 @@ imports:
   - linkml:types
   - dpv:schema/dpv_rights
   - dpv:schema/extensions/legal/eu/rights
-  - dpv:schema/extensions/rights/eu
 
 subsets:
 

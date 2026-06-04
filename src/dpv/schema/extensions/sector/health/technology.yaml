@@ -77,29 +77,8 @@ subsets:
 
 classes:
 
-  DpvSystem:
-    mixins:
-      - Technology
-    class_uri: sector_health:System
-    description: |-
-      A system whereby the software and/or hardware allows personal electronic
-      health data to be collected and processed, to be used by healthcare
-      providers when providing patient care or by patients when accessing
-      their electronic health data
-    aliases:
-      - System
-      - Electronic Health Record System
-    in_subset:
-      - sector_health_technology_subset
-    exact_mappings:
-      - dpv_sector_health:System
-      - dpv_sector_health_owl:System
-    annotations:
-      upstream_iri: https://w3id.org/dpv/sector/health/owl#System
-      dpv_extension_slug: sector/health
-
   EHRSystem:
-    is_a: DpvSystem
+    is_a: SectorHealthSystem
     mixins:
       - Technology
     class_uri: sector_health:EHRSystem
@@ -120,7 +99,7 @@ classes:
       dpv_extension_slug: sector/health
 
   ElectronicHealthDataAccessService:
-    is_a: DpvService
+    is_a: TechService
     mixins:
       - Technology
     class_uri: sector_health:ElectronicHealthDataAccessService
@@ -142,7 +121,7 @@ classes:
       dpv_extension_slug: sector/health
 
   HealthApplication:
-    is_a: DpvApplication
+    is_a: TechApplication
     mixins:
       - Technology
     class_uri: sector_health:HealthApplication
@@ -163,7 +142,7 @@ classes:
       dpv_extension_slug: sector/health
 
   HealthProfessionalAccessService:
-    is_a: DpvService
+    is_a: TechService
     mixins:
       - Technology
     class_uri: sector_health:HealthProfessionalAccessService
@@ -221,6 +200,28 @@ classes:
       - dpv_sector_health_owl:LoggingSoftwareForEHRSystem
     annotations:
       upstream_iri: https://w3id.org/dpv/sector/health/owl#LoggingSoftwareForEHRSystem
+      dpv_extension_slug: sector/health
+
+  SectorHealthSystem:
+    is_a: TechSystem
+    mixins:
+      - Technology
+    class_uri: sector_health:System
+    description: |-
+      A system whereby the software and/or hardware allows personal electronic
+      health data to be collected and processed, to be used by healthcare
+      providers when providing patient care or by patients when accessing
+      their electronic health data
+    aliases:
+      - System
+      - Electronic Health Record System
+    in_subset:
+      - sector_health_technology_subset
+    exact_mappings:
+      - dpv_sector_health:System
+      - dpv_sector_health_owl:System
+    annotations:
+      upstream_iri: https://w3id.org/dpv/sector/health/owl#System
       dpv_extension_slug: sector/health
 
   WellnessApplication:

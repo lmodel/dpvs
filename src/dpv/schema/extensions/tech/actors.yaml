@@ -399,7 +399,7 @@ classes:
       dpv_extension_slug: tech
 
   Developer:
-    is_a: DpvProducer
+    is_a: TechProducer
     mixins:
       - Actor
     class_uri: tech:Developer
@@ -431,143 +431,6 @@ classes:
       - dpv_tech_owl:Distributor
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Distributor
-      dpv_extension_slug: tech
-
-  DpvAuditor:
-    is_a: Partner
-    mixins:
-      - Actor
-    class_uri: tech:Auditor
-    description: |-
-      Actor that audits Technology for conformance to policies, standards, or
-      legal requirements
-    aliases:
-      - Auditor
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:Auditor
-      - dpv_tech_owl:Auditor
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Auditor
-      dpv_extension_slug: tech
-
-  DpvCustomer:
-    is_a: Actor
-    class_uri: tech:Customer
-    description: |-
-      Actor that uses Technology directly or indirectly by providing it to
-      Users
-    aliases:
-      - Customer
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:Customer
-      - dpv_tech_owl:Customer
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Customer
-      dpv_extension_slug: tech
-
-  DpvOperator:
-    is_a: Actor
-    class_uri: tech:Operator
-    description: Actor that operates the Technology
-    aliases:
-      - Operator
-    comments:
-      - |-
-        Operator and User are similar concepts but may refer to different
-        actors, for example in the scenario where the user determines what
-        actions to perform on the technology and the operator executes these
-        actions by operating the technology
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:Operator
-      - dpv_tech_owl:Operator
-    close_mappings:
-      - iso22989:Stakeholder
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Operator
-      dpv_extension_slug: tech
-
-  DpvProducer:
-    is_a: Actor
-    class_uri: tech:Producer
-    description: Actor that produces Technology
-    aliases:
-      - Producer
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:Producer
-      - dpv_tech_owl:Producer
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Producer
-      dpv_extension_slug: tech
-
-  DpvProvider:
-    is_a: Actor
-    class_uri: tech:Provider
-    description: Actor that provides Technology
-    aliases:
-      - Provider
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:Provider
-      - dpv_tech_owl:Provider
-    close_mappings:
-      - iso22989:Stakeholder
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Provider
-      dpv_extension_slug: tech
-
-  DpvSubject:
-    is_a: Actor
-    class_uri: tech:Subject
-    description: Actor that is subjected to the use or impact of Technology
-    aliases:
-      - Subject
-    comments:
-      - |-
-        Subject can be a human or non-human entity. To explicitly indicate that
-        the subject is a human, and to reuse DPV's human subject taxonomy, the
-        tech:Subject should also be defined as an instance or category of
-        dpv:HumanSubject
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:Subject
-      - dpv_tech_owl:Subject
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Subject
-      dpv_extension_slug: tech
-
-  DpvUser:
-    is_a: DpvCustomer
-    mixins:
-      - Actor
-    class_uri: tech:User
-    description: Actor that uses Technology
-    aliases:
-      - User
-    in_subset:
-      - tech_actors_subset
-    exact_mappings:
-      - dpv_tech:User
-      - dpv_tech_owl:User
-    close_mappings:
-      - iso22989:Stakeholder
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#User
       dpv_extension_slug: tech
 
   Evaluator:
@@ -738,4 +601,135 @@ classes:
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#SystemIntegrator
+      dpv_extension_slug: tech
+
+  TechAuditor:
+    is_a: Partner
+    mixins:
+      - Actor
+    class_uri: tech:Auditor
+    description: |-
+      Actor that audits Technology for conformance to policies, standards, or
+      legal requirements
+    aliases:
+      - Auditor
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:Auditor
+      - dpv_tech_owl:Auditor
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Auditor
+      dpv_extension_slug: tech
+
+  TechCustomer:
+    is_a: Actor
+    class_uri: tech:Customer
+    description: |-
+      Actor that uses Technology directly or indirectly by providing it to
+      Users
+    aliases:
+      - Customer
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:Customer
+      - dpv_tech_owl:Customer
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Customer
+      dpv_extension_slug: tech
+
+  TechOperator:
+    is_a: Actor
+    class_uri: tech:Operator
+    description: Actor that operates the Technology
+    aliases:
+      - Operator
+    comments:
+      - |-
+        Operator and User are similar concepts but may refer to different
+        actors, for example in the scenario where the user determines what
+        actions to perform on the technology and the operator executes these
+        actions by operating the technology
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:Operator
+      - dpv_tech_owl:Operator
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Operator
+      dpv_extension_slug: tech
+
+  TechProducer:
+    is_a: Actor
+    class_uri: tech:Producer
+    description: Actor that produces Technology
+    aliases:
+      - Producer
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:Producer
+      - dpv_tech_owl:Producer
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Producer
+      dpv_extension_slug: tech
+
+  TechProvider:
+    is_a: Actor
+    class_uri: tech:Provider
+    description: Actor that provides Technology
+    aliases:
+      - Provider
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:Provider
+      - dpv_tech_owl:Provider
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Provider
+      dpv_extension_slug: tech
+
+  TechSubject:
+    is_a: Actor
+    class_uri: tech:Subject
+    description: Actor that is subjected to the use or impact of Technology
+    aliases:
+      - Subject
+    comments:
+      - |-
+        Subject can be a human or non-human entity. To explicitly indicate that
+        the subject is a human, and to reuse DPV's human subject taxonomy, the
+        tech:Subject should also be defined as an instance or category of
+        dpv:HumanSubject
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:Subject
+      - dpv_tech_owl:Subject
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Subject
+      dpv_extension_slug: tech
+
+  TechUser:
+    is_a: TechCustomer
+    mixins:
+      - Actor
+    class_uri: tech:User
+    description: Actor that uses Technology
+    aliases:
+      - User
+    in_subset:
+      - tech_actors_subset
+    exact_mappings:
+      - dpv_tech:User
+      - dpv_tech_owl:User
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#User
       dpv_extension_slug: tech

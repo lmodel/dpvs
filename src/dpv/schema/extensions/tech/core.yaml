@@ -438,27 +438,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/tech/owl#Documentation
       dpv_extension_slug: tech
 
-  DpvFunction:
-    class_uri: tech:Function
-    description: |-
-      Expression of what goals or purposes the technology's capabilities are
-      being used towards or developed for
-    aliases:
-      - Function
-    comments:
-      - |-
-        Function is a broad concept that can include purposes such as identify
-        verification, capability such as image recognition, or specific security
-        measures such as encryption
-    in_subset:
-      - tech_core_subset
-    exact_mappings:
-      - dpv_tech:Function
-      - dpv_tech_owl:Function
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Function
-      dpv_extension_slug: tech
-
   InputOutput:
     class_uri: tech:InputOutput
     description: Forms of inputs and outputs associated with a technology
@@ -594,4 +573,25 @@ classes:
       - dpv_tech_owl:ProvisionMethod
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#ProvisionMethod
+      dpv_extension_slug: tech
+
+  TechFunction:
+    class_uri: tech:Function
+    description: |-
+      Expression of what goals or purposes the technology's capabilities are
+      being used towards or developed for
+    aliases:
+      - Function
+    comments:
+      - |-
+        Function is a broad concept that can include purposes such as identify
+        verification, capability such as image recognition, or specific security
+        measures such as encryption
+    in_subset:
+      - tech_core_subset
+    exact_mappings:
+      - dpv_tech:Function
+      - dpv_tech_owl:Function
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Function
       dpv_extension_slug: tech

@@ -217,7 +217,7 @@ def camel_to_snake(name: str) -> str:
     return re.sub(r"([a-z\d])([A-Z])", r"\1_\2", s1).lower()
 
 
-def sanitise_class_name(local: str) -> str:
+def sanitise_class_name(local: str, owner_prefix: str = "Dpv") -> str:
     """Make a DPV local name a valid LinkML NCName and avoid collisions.
 
     Two transforms are applied (in order):
@@ -228,8 +228,11 @@ def sanitise_class_name(local: str) -> str:
        prefers PascalCase.
     2. **Collision avoidance** - local names that collide with classes
        commonly defined by other LinkML schemas (see
-       ``_COLLISION_PRONE_CLASSES``) are prefixed with ``Dpv``
-       (``Person`` -> ``DpvPerson``).
+       ``_COLLISION_PRONE_CLASSES``) are prefixed with ``owner_prefix``
+       (default ``Dpv``; pass a per-extension PascalCase prefix such as
+       ``Ai`` or ``Pd`` when emitting an extension schema so that
+       ``ai:Data`` becomes ``AiData`` rather than colliding with core
+       ``DpvData``).
 
     Upstream identity is preserved in ``exact_mappings`` (as
     ``dpv_upstream:<original-local>`` and ``dpv_owl:<original-local>``) and in
@@ -241,7 +244,7 @@ def sanitise_class_name(local: str) -> str:
     """
     base = ascii_safe_local(local).replace("-", "")
     if base in _COLLISION_PRONE_CLASSES:
-        return f"Dpv{base}"
+        return f"{owner_prefix}{base}"
     return base
 
 

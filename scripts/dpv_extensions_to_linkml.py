@@ -144,6 +144,12 @@ class ExtensionSpec:
     # Sibling extensions referenced from this extension's TTL (computed
     # post-hoc by scanning subClassOf / domain / range URIs).
     foreign_refs: set[str] = field(default_factory=set)
+    # When the ontology IRI namespace differs from the filesystem path
+    # (namespace-fallback case), this stores the slug derived from the IRI.
+    # E.g., legal/eu/rights has ontology_iri_slug="rights/eu". Used to filter
+    # self-referential foreign imports so the extension doesn't try to import
+    # a non-existent sibling that is actually itself.
+    ontology_iri_slug: str | None = None
 
     @property
     def name(self) -> str:
@@ -154,6 +160,26 @@ class ExtensionSpec:
     def prefix(self) -> str:
         """Default prefix for this extension (NCName)."""
         return self.slug.replace("/", "_").replace("-", "_")
+
+    @property
+    def pascal_prefix(self) -> str:
+        """PascalCase owner prefix for collision-prone class renaming.
+
+        Derived from the slug by splitting on ``/`` and ``-`` and capitalising
+        each segment. Examples:
+
+        >>> ExtensionSpec("ai", ...).pascal_prefix          # "Ai"
+        >>> ExtensionSpec("pd", ...).pascal_prefix          # "Pd"
+        >>> ExtensionSpec("legal/eu/gdpr", ...).pascal_prefix  # "LegalEuGdpr"
+        >>> ExtensionSpec("standards/ieee/7012", ...).pascal_prefix
+        ... # "StandardsIeee7012"
+
+        Used so that e.g. ``ai:Data`` becomes the LinkML class ``AiData`` and
+        does not collide with core ``DpvData`` (``dpv:Data``) when both
+        schemas are imported into the same SchemaView.
+        """
+        parts = re.split(r"[/_-]+", self.slug)
+        return "".join(p[:1].upper() + p[1:] for p in parts if p)
 
     @property
     def lmodel_id(self) -> str:
@@ -263,6 +289,7 @@ def discover_extensions(input_dir: Path) -> list[ExtensionSpec]:
         # that happens, fall back to the actual `owl:Ontology` IRI so
         # extraction still finds the file's classes/properties.
         g = _parse_ttl(owl_path)
+        ontology_iri_slug = None
         if not any(str(s).startswith(ns) for s in g.subjects() if isinstance(s, URIRef)):
             actual_ns = _ontology_namespace(g)
             if actual_ns and any(
@@ -271,6 +298,10 @@ def discover_extensions(input_dir: Path) -> list[ExtensionSpec]:
             ):
                 ns = actual_ns
                 can_ns = actual_ns.replace("/owl#", "#")
+                # Record the actual ontology IRI slug so we can filter it from
+                # foreign imports later (it's really an alias for this extension,
+                # not a foreign one).
+                ontology_iri_slug = _slug_from_owl_iri(ns)
                 print(
                     f"   [namespace-fallback] {owl_path.relative_to(input_dir)}: "
                     f"path-ns mismatched, using ontology IRI {ns}",
@@ -290,6 +321,7 @@ def discover_extensions(input_dir: Path) -> list[ExtensionSpec]:
             can_ns=can_ns,
             aggregate_owl=owl_path,
             aggregate_can=canonical_path,
+            ontology_iri_slug=ontology_iri_slug,
         )
 
         modules_dir = owl_path.parent / "modules"
@@ -371,6 +403,40 @@ def _uri_to_curie_for(ext: ExtensionSpec, uri: URIRef) -> str | None:
     return core.uri_to_curie(uri)
 
 
+def _slug_to_pascal(slug: str) -> str:
+    """Convert a DPV slug ('ai', 'legal/eu/gdpr') to PascalCase owner prefix.
+
+    Mirrors ``ExtensionSpec.pascal_prefix`` for the foreign-slug case where
+    we only have the slug string (no ExtensionSpec in scope).
+    """
+    parts = re.split(r"[/_-]+", slug)
+    return "".join(p[:1].upper() + p[1:] for p in parts if p)
+
+
+def _owner_prefix_for(slug: str, ext: ExtensionSpec) -> str:
+    """Return the PascalCase ``owner_prefix`` for a class owned by ``slug``.
+
+    ``slug == ext.slug`` -> this extension's own pascal prefix.
+    ``slug == ""``       -> core ``dpv`` namespace, owner prefix ``Dpv``.
+    Any other slug       -> the sibling extension's pascal prefix derived
+                            mechanically from the slug.
+    """
+    if slug == ext.slug:
+        return ext.pascal_prefix
+    if not slug:
+        return "Dpv"
+    return _slug_to_pascal(slug)
+
+
+def _class_name_for(slug: str, local: str, ext: ExtensionSpec) -> str:
+    """Resolve a (slug, local) reference to its LinkML class name.
+
+    Encapsulates the collision-prone rename: e.g. (``"ai"``, ``"Data"``) ->
+    ``AiData`` when ``ext.slug == "ai"``; (``""``, ``"Data"``) -> ``DpvData``.
+    """
+    return core.sanitise_class_name(local, owner_prefix=_owner_prefix_for(slug, ext))
+
+
 def _extract_classes_ns(
     g_owl: Graph,
     g_can: Graph | None,
@@ -401,7 +467,7 @@ def _extract_classes_ns(
         # ``cls_local`` is retained for canonical-NS URI reconstruction
         # (RDF graph lookup) and for traceability via ``aliases``.
         cls_local_safe = core.ascii_safe_local(cls_local)
-        cls_name = core.sanitise_class_name(cls_local)
+        cls_name = core.sanitise_class_name(cls_local, owner_prefix=ext.pascal_prefix)
         entry: dict[str, Any] = {}
 
         # ---- description -----------------------------------------------
@@ -424,7 +490,8 @@ def _extract_classes_ns(
                 foreign_log.add(slug)
 
         if named_parents:
-            parent_name = core.sanitise_class_name(named_parents[0][1])
+            parent_slug, parent_local = named_parents[0]
+            parent_name = _class_name_for(parent_slug, parent_local, ext)
             # Guard: a class can never be its own parent.
             if parent_name and parent_name != cls_name:
                 entry["is_a"] = parent_name
@@ -438,7 +505,7 @@ def _extract_classes_ns(
             if fl is None:
                 continue
             slug, local = fl
-            type_mixins.append(core.sanitise_class_name(local))
+            type_mixins.append(_class_name_for(slug, local, ext))
             if slug != ext.slug:
                 foreign_log.add(slug)
 
@@ -449,8 +516,8 @@ def _extract_classes_ns(
                 dedup_mixins.append(m)
                 seen.add(m)
         if len(named_parents) > 1:
-            for _, local in named_parents[1:]:
-                m = core.sanitise_class_name(local)
+            for parent_slug2, local in named_parents[1:]:
+                m = _class_name_for(parent_slug2, local, ext)
                 if m and m not in seen and m != cls_name:
                     dedup_mixins.append(m)
                     seen.add(m)
@@ -594,7 +661,7 @@ def _extract_slots_ns(
             if isinstance(o, URIRef):
                 fl = _family_local(o)
                 if fl:
-                    domains.append(core.sanitise_class_name(fl[1]))
+                    domains.append(_class_name_for(fl[0], fl[1], ext))
                     if fl[0] != ext.slug:
                         foreign_log.add(fl[0])
         if domains:
@@ -613,7 +680,7 @@ def _extract_slots_ns(
             for o in range_uris:
                 fl = _family_local(o)
                 if fl:
-                    dpv_ranges.append(core.sanitise_class_name(fl[1]))
+                    dpv_ranges.append(_class_name_for(fl[0], fl[1], ext))
                     if fl[0] != ext.slug:
                         foreign_log.add(fl[0])
             if len(dpv_ranges) == 1:
@@ -1032,6 +1099,9 @@ def generate(
                   file=sys.stderr)
         # Strip the slug for the *own* extension; only foreign refs matter.
         foreign.discard(ext.slug)
+        if ext.ontology_iri_slug:
+            # Also discard the ontology IRI slug alias (it's really self-referential)
+            foreign.discard(ext.ontology_iri_slug)
         foreign.discard("")  # core "dpv" slug is implicit via the dpv umbrella import
 
         if not classes and not slots:
@@ -1076,6 +1146,9 @@ def generate(
                 sub_classes, sub_slots,
             )
             sub_foreign.discard(ext.slug)
+            if ext.ontology_iri_slug:
+                # Also discard the ontology IRI slug alias for submodules
+                sub_foreign.discard(ext.ontology_iri_slug)
             sub_foreign.discard("")
             if not sub_classes and not sub_slots:
                 continue

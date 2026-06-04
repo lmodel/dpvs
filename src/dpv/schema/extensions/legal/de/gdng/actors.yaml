@@ -197,21 +197,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DataSubject
       dpv_extension_slug: legal/de/gdng
 
-  DpvController:
-    class_uri: legal_de_gdng:Controller
-    aliases:
-      - Controller
-      - Datenschutzrechtlich verantwortliche Stelle
-    in_subset:
-      - legal_de_gdng_actors_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:Controller
-      - dpv_legal_de_gdng_owl:Controller
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Controller
-      dpv_extension_slug: legal/de/gdng
-
   FederalStateCentresForCancerRegistryData:
     is_a: HealthDataHolder
     class_uri: legal_de_gdng:FederalStateCentresForCancerRegistryData
@@ -299,6 +284,21 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 2'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthDataUser
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngController:
+    class_uri: legal_de_gdng:Controller
+    aliases:
+      - Controller
+      - Datenschutzrechtlich verantwortliche Stelle
+    in_subset:
+      - legal_de_gdng_actors_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:Controller
+      - dpv_legal_de_gdng_owl:Controller
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Controller
       dpv_extension_slug: legal/de/gdng
 
   ModelProjectGenomeSequencingPlatform:

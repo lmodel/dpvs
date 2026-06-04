@@ -53,9 +53,6 @@ prefixes:
   legal_eu_rights: https://w3id.org/lmodel/dpv/legal/eu/rights/
   dpv_legal_eu_rights: https://w3id.org/dpv/rights/eu#
   dpv_legal_eu_rights_owl: https://w3id.org/dpv/rights/eu/owl#
-  rights_eu: https://w3id.org/lmodel/dpv/rights/eu/
-  dpv_rights_eu: https://w3id.org/dpv/rights/eu#
-  dpv_rights_eu_owl: https://w3id.org/dpv/rights/eu/owl#
   risk: https://w3id.org/lmodel/dpv/risk/
   dpv_risk: https://w3id.org/dpv/risk#
   dpv_risk_owl: https://w3id.org/dpv/risk/owl#
@@ -71,7 +68,6 @@ imports:
   - linkml:types
   - dpv:schema/dpv_risk_notice
   - dpv:schema/extensions/legal/eu/rights
-  - dpv:schema/extensions/rights/eu
   - dpv:schema/extensions/risk
 
 subsets:

@@ -389,7 +389,7 @@ classes:
   AISystem:
     is_a: AI
     mixins:
-      - DpvSystem
+      - TechSystem
     class_uri: ai:AISystem
     description: |-
       An engineered system that generates outputs such as content, forecasts,
@@ -476,6 +476,24 @@ classes:
       - iso42001:AIIncident
     annotations:
       upstream_iri: https://w3id.org/dpv/ai/owl#AdversarialAttack
+      dpv_extension_slug: ai
+
+  AiData:
+    is_a: DpvData
+    mixins:
+      - InputOutput
+    class_uri: ai:Data
+    description: Data involved in the development and use of an AI system or model
+    aliases:
+      - Data
+      - AI Data
+    in_subset:
+      - ai_subset
+    exact_mappings:
+      - dpv_ai:Data
+      - dpv_ai_owl:Data
+    annotations:
+      upstream_iri: https://w3id.org/dpv/ai/owl#Data
       dpv_extension_slug: ai
 
   AlgorithmSelectionBias:
@@ -1543,23 +1561,6 @@ classes:
     annotations:
       dct_source: ISO/IEC 24027:2021
       upstream_iri: https://w3id.org/dpv/ai/owl#DistributedTrainingBias
-      dpv_extension_slug: ai
-
-  DpvData:
-    mixins:
-      - InputOutput
-    class_uri: ai:Data
-    description: Data involved in the development and use of an AI system or model
-    aliases:
-      - Data
-      - AI Data
-    in_subset:
-      - ai_subset
-    exact_mappings:
-      - dpv_ai:Data
-      - dpv_ai_owl:Data
-    annotations:
-      upstream_iri: https://w3id.org/dpv/ai/owl#Data
       dpv_extension_slug: ai
 
   EdgeAI:
@@ -3952,7 +3953,7 @@ classes:
       dpv_extension_slug: ai
 
   TestingData:
-    is_a: DpvData
+    is_a: AiData
     class_uri: ai:TestingData
     description: Data involved in the testing of an AI system or model
     aliases:
@@ -4309,7 +4310,7 @@ classes:
       dpv_extension_slug: ai
 
   TrainingData:
-    is_a: DpvData
+    is_a: AiData
     class_uri: ai:TrainingData
     description: Data involved in the training of an AI system or model
     aliases:
@@ -4440,7 +4441,7 @@ classes:
       dpv_extension_slug: ai
 
   ValidationData:
-    is_a: DpvData
+    is_a: AiData
     class_uri: ai:ValidationData
     description: Data involved in the validation of an AI system or model
     aliases:

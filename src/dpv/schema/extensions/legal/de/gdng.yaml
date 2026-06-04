@@ -329,21 +329,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#DeletionPolicy
       dpv_extension_slug: legal/de/gdng
 
-  DpvController:
-    class_uri: legal_de_gdng:Controller
-    aliases:
-      - Controller
-      - Datenschutzrechtlich verantwortliche Stelle
-    in_subset:
-      - legal_de_gdng_subset
-    exact_mappings:
-      - dpv_legal_de_gdng:Controller
-      - dpv_legal_de_gdng_owl:Controller
-    annotations:
-      dct_source: '[[GDNG]] § 6(3)'
-      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Controller
-      dpv_extension_slug: legal/de/gdng
-
   DutyToInform:
     class_uri: legal_de_gdng:DutyToInform
     description: Informationspflicht datenverarbeitender Gesundheitseinrichtungen
@@ -573,6 +558,21 @@ classes:
     annotations:
       dct_source: '[[GDNG]] § 6'
       upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#HealthcareDataProcessing
+      dpv_extension_slug: legal/de/gdng
+
+  LegalDeGdngController:
+    class_uri: legal_de_gdng:Controller
+    aliases:
+      - Controller
+      - Datenschutzrechtlich verantwortliche Stelle
+    in_subset:
+      - legal_de_gdng_subset
+    exact_mappings:
+      - dpv_legal_de_gdng:Controller
+      - dpv_legal_de_gdng_owl:Controller
+    annotations:
+      dct_source: '[[GDNG]] § 6(3)'
+      upstream_iri: https://w3id.org/dpv/legal/de/gdng/owl#Controller
       dpv_extension_slug: legal/de/gdng
 
   LegitimateInterest:

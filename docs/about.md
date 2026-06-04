@@ -71,39 +71,36 @@ All extensions import only `linkml:types` and `dpv:schema/dpv_core` (for the abs
 #### Per-extension documentation
 
 The top-level 6 extensions (`ai`, `justifications`, `loc`, `pd`, `risk`, `tech`) are
-rendered as standalone documentation trees under [docs/extensions/](https://github.com/lmodel/dpv/tree/main/docs/extensions),
-grouped under a single **Extensions** entry in the site navigation. Each tree is
+rendered as standalone documentation trees under [docs/extensions/](https://github.com/lmodel/dpv/tree/main/docs/extensions), grouped under a single **Extensions** entry in the site navigation. Each tree is
 produced by an isolated `gen-doc` invocation against a self-contained staged copy of
 the extension schema.
 
-The staging step ([scripts/strip_sibling_imports.py](https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py))
-rewrites each extension so SchemaView can load it without sibling-schema context:
+The documentation staging step ([scripts/strip_sibling_imports.py](https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py)) rewrites each extension so SchemaView can load it without sibling-schema context:
 
 - Drops every `imports:` entry except `linkml:types` (avoids `Conflicting URIs` errors
   caused by genuine cross-extension name collisions, e.g. `DataAggregationBias` in
   both `ai` and `risk`, or `DpvData` in `ai` vs. `dpv_personal_data`).
+
 - Drops dangling `is_a` parents and filters `mixins` lists to only those defined
   locally, so the resulting schema validates standalone.
 
-The orchestration recipe (`just gen-doc-extensions`) iterates
+The document orchestration recipe (`just gen-doc-extensions`) iterates
 `src/dpv/schema/extensions/*.yaml`, stages each into `tmp/extensions/<slug>.yaml`,
 and runs `gen-doc` into `docs/extensions/<slug>/`. It is wired as a dependency of
 the top-level `just gen-doc`, so a single command produces both the core element
 pages (`docs/elements/`) and the per-extension trees. Per-jurisdiction `legal/`
 schemas and `sector/`, `standards/` trees are intentionally **not** rendered
 (they re-slice the same core terms and would multiply build time without adding
-distinct semantics); the [docs/extensions/index.md](https://github.com/lmodel/dpv/blob/main/docs/extensions/index.md)
-landing page notes this and points readers to the source YAML.
+distinct semantics); the [docs/extensions/index.md](https://github.com/lmodel/dpv/blob/main/docs/extensions/index.md) landing page notes this and points readers to the source YAML.
 
 ### Open-world modelling
 
 DPV is intrinsically open-world: most properties are declared on the top-level `DpvThing` rather than pinned to a specific class, so any instance may carry any DPV property that makes sense for it. This is preserved in dpv:
 
 - `DpvThing` is the abstract base and declares only `id`.
-
 - DPV properties are domainless slots that can apply to any descendant.
 
-- Validation is therefore done via `linkml.validator.Validator` against the merged schema (JSON-Schema semantics), **not** by instantiating  the generated closed-world dataclasses. The closed-world Pydantic classes are still emitted for use cases where a stricter contract is desired.
+- Validation is therefore done via `linkml.validator.Validator` against the merged schema (JSON-Schema semantics), **not** by instantiating the generated closed-world dataclasses. The closed-world Pydantic classes are still emitted for use cases where a stricter contract is desired.
 
 ### Mappings
 
@@ -147,6 +144,7 @@ Mappings are verified by [scripts/verify_mappings.py](https://github.com/lmodel/
 
 - [tests/data/](https://github.com/lmodel/dpv/tree/main/tests/data) contains hand-authored and vendored YAML fixtures split into `valid/` and `invalid/` subtrees. The `dpvcg/` subtree carries the upstream DPV CG examples converted to LinkML YAML by [scripts/dpvcg_turtle_to_yaml.py](https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_turtle_to_yaml.py).
 - [tests/test_data.py](https://github.com/lmodel/dpv/blob/main/tests/test_data.py) validates each fixture against the pre-merged schema at `tmp/dpv.yaml` using `linkml.validator.Validator` with `JsonschemaValidationPlugin` (explicit; the linkml `Validator` performs no validation at all when `validation_plugins` is omitted). The merged schema is used so no import-map is needed at test time.
+- [tests/test_schema_imports.py](https://github.com/lmodel/dpv/blob/main/tests/test_schema_imports.py) is a regression test guarding against class/slot name collisions.
 
 #### Static fixtures
 

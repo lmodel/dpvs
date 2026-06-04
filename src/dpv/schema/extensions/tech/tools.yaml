@@ -329,7 +329,7 @@ classes:
       dpv_extension_slug: tech
 
   AppStore:
-    is_a: DpvApplication
+    is_a: TechApplication
     mixins:
       - Technology
     class_uri: tech:AppStore
@@ -500,80 +500,6 @@ classes:
       upstream_iri: https://w3id.org/dpv/tech/owl#Device
       dpv_extension_slug: tech
 
-  DpvApplication:
-    is_a: LocalLocation
-    mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Software
-    class_uri: tech:Application
-    description: Application or Application Software
-    aliases:
-      - Application
-    in_subset:
-      - tech_tools_subset
-    exact_mappings:
-      - dpv_tech:Application
-      - dpv_tech_owl:Application
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Application
-      dpv_extension_slug: tech
-
-  DpvComponent:
-    is_a: Technology
-    class_uri: tech:Component
-    description: |-
-      A self-contained part of a system that performs a specific function and
-      interacts with other components
-    aliases:
-      - Component
-    in_subset:
-      - tech_tools_subset
-    exact_mappings:
-      - dpv_tech:Component
-      - dpv_tech_owl:Component
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Component
-      dpv_extension_slug: tech
-
-  DpvService:
-    is_a: Technology
-    class_uri: tech:Service
-    description: The carrying out of a specific task or set of tasks as a service
-    aliases:
-      - Service
-    comments:
-      - |-
-        This concept is distinct from dpv:Service as it represents the notion of
-        a technical service whereas dpv:Service can also refer to
-        organisational, legal, social, and other meanings of service
-    in_subset:
-      - tech_tools_subset
-    exact_mappings:
-      - dpv_tech:Service
-      - dpv_tech_owl:Service
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Service
-      dpv_extension_slug: tech
-
-  DpvSystem:
-    is_a: Technology
-    class_uri: tech:System
-    description: |-
-      A collection of components that interact to achieve a specific goal or
-      function
-    aliases:
-      - System
-    in_subset:
-      - tech_tools_subset
-    exact_mappings:
-      - dpv_tech:System
-      - dpv_tech_owl:System
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#System
-      dpv_extension_slug: tech
-
   GNULinux:
     is_a: OS
     mixins:
@@ -703,7 +629,7 @@ classes:
       - Technology
       - ProcessingLocation
       - IoT
-      - DpvSystem
+      - TechSystem
     class_uri: tech:IoTSystem
     description: |-
       A specific system that is an implementation or application of the IoT
@@ -903,7 +829,7 @@ classes:
       - DpvLocation
       - Technology
       - ProcessingLocation
-      - DpvApplication
+      - TechApplication
     class_uri: tech:SmartphoneApplication
     description: A computing or digital program on a smartphone device
     aliases:
@@ -989,6 +915,80 @@ classes:
       - dpv_tech_owl:SoftwareLibrary
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#SoftwareLibrary
+      dpv_extension_slug: tech
+
+  TechApplication:
+    is_a: LocalLocation
+    mixins:
+      - DpvLocation
+      - Technology
+      - ProcessingLocation
+      - Software
+    class_uri: tech:Application
+    description: Application or Application Software
+    aliases:
+      - Application
+    in_subset:
+      - tech_tools_subset
+    exact_mappings:
+      - dpv_tech:Application
+      - dpv_tech_owl:Application
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Application
+      dpv_extension_slug: tech
+
+  TechComponent:
+    is_a: Technology
+    class_uri: tech:Component
+    description: |-
+      A self-contained part of a system that performs a specific function and
+      interacts with other components
+    aliases:
+      - Component
+    in_subset:
+      - tech_tools_subset
+    exact_mappings:
+      - dpv_tech:Component
+      - dpv_tech_owl:Component
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Component
+      dpv_extension_slug: tech
+
+  TechService:
+    is_a: Technology
+    class_uri: tech:Service
+    description: The carrying out of a specific task or set of tasks as a service
+    aliases:
+      - Service
+    comments:
+      - |-
+        This concept is distinct from dpv:Service as it represents the notion of
+        a technical service whereas dpv:Service can also refer to
+        organisational, legal, social, and other meanings of service
+    in_subset:
+      - tech_tools_subset
+    exact_mappings:
+      - dpv_tech:Service
+      - dpv_tech_owl:Service
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Service
+      dpv_extension_slug: tech
+
+  TechSystem:
+    is_a: Technology
+    class_uri: tech:System
+    description: |-
+      A collection of components that interact to achieve a specific goal or
+      function
+    aliases:
+      - System
+    in_subset:
+      - tech_tools_subset
+    exact_mappings:
+      - dpv_tech:System
+      - dpv_tech_owl:System
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#System
       dpv_extension_slug: tech
 
   Telephone:

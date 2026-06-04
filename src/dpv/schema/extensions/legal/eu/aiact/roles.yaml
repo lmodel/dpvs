@@ -169,7 +169,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   AIOperator:
-    is_a: DpvOperator
+    is_a: TechOperator
     class_uri: legal_eu_aiact:AIOperator
     description: |-
       A provider, product manufacturer, deployer, authorised representative,
@@ -210,7 +210,7 @@ classes:
   AIProvider:
     is_a: AIOperator
     mixins:
-      - DpvProvider
+      - TechProvider
     class_uri: legal_eu_aiact:AIProvider
     description: |-
       A natural or legal person, public authority, agency or other body that
@@ -257,7 +257,7 @@ classes:
       dpv_extension_slug: legal/eu/aiact
 
   ConformityAssessmentBody:
-    is_a: DpvAuditor
+    is_a: TechAuditor
     class_uri: legal_eu_aiact:ConformityAssessmentBody
     description: |-
       A body that performs third-party conformity assessment activities,

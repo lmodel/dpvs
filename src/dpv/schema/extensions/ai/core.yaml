@@ -251,7 +251,7 @@ classes:
   AISystem:
     is_a: AI
     mixins:
-      - DpvSystem
+      - TechSystem
     class_uri: ai:AISystem
     description: |-
       An engineered system that generates outputs such as content, forecasts,

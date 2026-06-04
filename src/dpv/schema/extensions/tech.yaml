@@ -987,7 +987,7 @@ classes:
       dpv_extension_slug: tech
 
   AppStore:
-    is_a: DpvApplication
+    is_a: TechApplication
     mixins:
       - Technology
     class_uri: tech:AppStore
@@ -1295,7 +1295,7 @@ classes:
       dpv_extension_slug: tech
 
   Developer:
-    is_a: DpvProducer
+    is_a: TechProducer
     mixins:
       - Actor
     class_uri: tech:Developer
@@ -1382,278 +1382,6 @@ classes:
       - iso22989:Documentation
     annotations:
       upstream_iri: https://w3id.org/dpv/tech/owl#Documentation
-      dpv_extension_slug: tech
-
-  DpvAction:
-    is_a: InputOutput
-    class_uri: tech:Action
-    description: A process or activity, which could be physical or virtual
-    aliases:
-      - Action
-    comments:
-      - |-
-        Action is a concept referring to activities or tasks in the context of
-        technologies producing or using them as inputs or outputs
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Action
-      - dpv_tech_owl:Action
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Action
-      dpv_extension_slug: tech
-
-  DpvApplication:
-    is_a: LocalLocation
-    mixins:
-      - DpvLocation
-      - Technology
-      - ProcessingLocation
-      - Software
-    class_uri: tech:Application
-    description: Application or Application Software
-    aliases:
-      - Application
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Application
-      - dpv_tech_owl:Application
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Application
-      dpv_extension_slug: tech
-
-  DpvAuditor:
-    is_a: Partner
-    mixins:
-      - Actor
-    class_uri: tech:Auditor
-    description: |-
-      Actor that audits Technology for conformance to policies, standards, or
-      legal requirements
-    aliases:
-      - Auditor
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Auditor
-      - dpv_tech_owl:Auditor
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Auditor
-      dpv_extension_slug: tech
-
-  DpvComponent:
-    is_a: Technology
-    class_uri: tech:Component
-    description: |-
-      A self-contained part of a system that performs a specific function and
-      interacts with other components
-    aliases:
-      - Component
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Component
-      - dpv_tech_owl:Component
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Component
-      dpv_extension_slug: tech
-
-  DpvCustomer:
-    is_a: Actor
-    class_uri: tech:Customer
-    description: |-
-      Actor that uses Technology directly or indirectly by providing it to
-      Users
-    aliases:
-      - Customer
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Customer
-      - dpv_tech_owl:Customer
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Customer
-      dpv_extension_slug: tech
-
-  DpvDecision:
-    is_a: InputOutput
-    class_uri: tech:Decision
-    description: |-
-      A conclusion or determination of an action or choice in the context of
-      technologies
-    aliases:
-      - Decision
-    comments:
-      - |-
-        Decision is a concept referring to activities or tasks in the context of
-        technologies producing or using them as inputs or outputs
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Decision
-      - dpv_tech_owl:Decision
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Decision
-      dpv_extension_slug: tech
-
-  DpvFunction:
-    class_uri: tech:Function
-    description: |-
-      Expression of what goals or purposes the technology's capabilities are
-      being used towards or developed for
-    aliases:
-      - Function
-    comments:
-      - |-
-        Function is a broad concept that can include purposes such as identify
-        verification, capability such as image recognition, or specific security
-        measures such as encryption
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Function
-      - dpv_tech_owl:Function
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Function
-      dpv_extension_slug: tech
-
-  DpvOperator:
-    is_a: Actor
-    class_uri: tech:Operator
-    description: Actor that operates the Technology
-    aliases:
-      - Operator
-    comments:
-      - |-
-        Operator and User are similar concepts but may refer to different
-        actors, for example in the scenario where the user determines what
-        actions to perform on the technology and the operator executes these
-        actions by operating the technology
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Operator
-      - dpv_tech_owl:Operator
-    close_mappings:
-      - iso22989:Stakeholder
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Operator
-      dpv_extension_slug: tech
-
-  DpvProducer:
-    is_a: Actor
-    class_uri: tech:Producer
-    description: Actor that produces Technology
-    aliases:
-      - Producer
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Producer
-      - dpv_tech_owl:Producer
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Producer
-      dpv_extension_slug: tech
-
-  DpvProvider:
-    is_a: Actor
-    class_uri: tech:Provider
-    description: Actor that provides Technology
-    aliases:
-      - Provider
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Provider
-      - dpv_tech_owl:Provider
-    close_mappings:
-      - iso22989:Stakeholder
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Provider
-      dpv_extension_slug: tech
-
-  DpvService:
-    is_a: Technology
-    class_uri: tech:Service
-    description: The carrying out of a specific task or set of tasks as a service
-    aliases:
-      - Service
-    comments:
-      - |-
-        This concept is distinct from dpv:Service as it represents the notion of
-        a technical service whereas dpv:Service can also refer to
-        organisational, legal, social, and other meanings of service
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Service
-      - dpv_tech_owl:Service
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#Service
-      dpv_extension_slug: tech
-
-  DpvSubject:
-    is_a: Actor
-    class_uri: tech:Subject
-    description: Actor that is subjected to the use or impact of Technology
-    aliases:
-      - Subject
-    comments:
-      - |-
-        Subject can be a human or non-human entity. To explicitly indicate that
-        the subject is a human, and to reuse DPV's human subject taxonomy, the
-        tech:Subject should also be defined as an instance or category of
-        dpv:HumanSubject
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:Subject
-      - dpv_tech_owl:Subject
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#Subject
-      dpv_extension_slug: tech
-
-  DpvSystem:
-    is_a: Technology
-    class_uri: tech:System
-    description: |-
-      A collection of components that interact to achieve a specific goal or
-      function
-    aliases:
-      - System
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:System
-      - dpv_tech_owl:System
-    annotations:
-      upstream_iri: https://w3id.org/dpv/tech/owl#System
-      dpv_extension_slug: tech
-
-  DpvUser:
-    is_a: DpvCustomer
-    mixins:
-      - Actor
-    class_uri: tech:User
-    description: Actor that uses Technology
-    aliases:
-      - User
-    in_subset:
-      - tech_subset
-    exact_mappings:
-      - dpv_tech:User
-      - dpv_tech_owl:User
-    close_mappings:
-      - iso22989:Stakeholder
-    annotations:
-      dct_source: ISO/IEC 22989:2022
-      upstream_iri: https://w3id.org/dpv/tech/owl#User
       dpv_extension_slug: tech
 
   Evaluator:
@@ -1808,7 +1536,7 @@ classes:
       dpv_extension_slug: tech
 
   InputAction:
-    is_a: DpvAction
+    is_a: TechAction
     mixins:
       - Input
     class_uri: tech:InputAction
@@ -2011,7 +1739,7 @@ classes:
       - Technology
       - ProcessingLocation
       - IoT
-      - DpvSystem
+      - TechSystem
     class_uri: tech:IoTSystem
     description: |-
       A specific system that is an implementation or application of the IoT
@@ -2384,7 +2112,7 @@ classes:
       dpv_extension_slug: tech
 
   OutputAction:
-    is_a: DpvAction
+    is_a: TechAction
     mixins:
       - Output
     class_uri: tech:OutputAction
@@ -2957,7 +2685,7 @@ classes:
       - DpvLocation
       - Technology
       - ProcessingLocation
-      - DpvApplication
+      - TechApplication
     class_uri: tech:SmartphoneApplication
     description: A computing or digital program on a smartphone device
     aliases:
@@ -3094,6 +2822,272 @@ classes:
     annotations:
       dct_source: ISO/IEC 22989:2022
       upstream_iri: https://w3id.org/dpv/tech/owl#SystemIntegrator
+      dpv_extension_slug: tech
+
+  TechAction:
+    is_a: InputOutput
+    class_uri: tech:Action
+    description: A process or activity, which could be physical or virtual
+    aliases:
+      - Action
+    comments:
+      - |-
+        Action is a concept referring to activities or tasks in the context of
+        technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Action
+      - dpv_tech_owl:Action
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Action
+      dpv_extension_slug: tech
+
+  TechApplication:
+    is_a: LocalLocation
+    mixins:
+      - DpvLocation
+      - Technology
+      - ProcessingLocation
+      - Software
+    class_uri: tech:Application
+    description: Application or Application Software
+    aliases:
+      - Application
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Application
+      - dpv_tech_owl:Application
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Application
+      dpv_extension_slug: tech
+
+  TechAuditor:
+    is_a: Partner
+    mixins:
+      - Actor
+    class_uri: tech:Auditor
+    description: |-
+      Actor that audits Technology for conformance to policies, standards, or
+      legal requirements
+    aliases:
+      - Auditor
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Auditor
+      - dpv_tech_owl:Auditor
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Auditor
+      dpv_extension_slug: tech
+
+  TechComponent:
+    is_a: Technology
+    class_uri: tech:Component
+    description: |-
+      A self-contained part of a system that performs a specific function and
+      interacts with other components
+    aliases:
+      - Component
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Component
+      - dpv_tech_owl:Component
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Component
+      dpv_extension_slug: tech
+
+  TechCustomer:
+    is_a: Actor
+    class_uri: tech:Customer
+    description: |-
+      Actor that uses Technology directly or indirectly by providing it to
+      Users
+    aliases:
+      - Customer
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Customer
+      - dpv_tech_owl:Customer
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Customer
+      dpv_extension_slug: tech
+
+  TechDecision:
+    is_a: InputOutput
+    class_uri: tech:Decision
+    description: |-
+      A conclusion or determination of an action or choice in the context of
+      technologies
+    aliases:
+      - Decision
+    comments:
+      - |-
+        Decision is a concept referring to activities or tasks in the context of
+        technologies producing or using them as inputs or outputs
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Decision
+      - dpv_tech_owl:Decision
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Decision
+      dpv_extension_slug: tech
+
+  TechFunction:
+    class_uri: tech:Function
+    description: |-
+      Expression of what goals or purposes the technology's capabilities are
+      being used towards or developed for
+    aliases:
+      - Function
+    comments:
+      - |-
+        Function is a broad concept that can include purposes such as identify
+        verification, capability such as image recognition, or specific security
+        measures such as encryption
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Function
+      - dpv_tech_owl:Function
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Function
+      dpv_extension_slug: tech
+
+  TechOperator:
+    is_a: Actor
+    class_uri: tech:Operator
+    description: Actor that operates the Technology
+    aliases:
+      - Operator
+    comments:
+      - |-
+        Operator and User are similar concepts but may refer to different
+        actors, for example in the scenario where the user determines what
+        actions to perform on the technology and the operator executes these
+        actions by operating the technology
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Operator
+      - dpv_tech_owl:Operator
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Operator
+      dpv_extension_slug: tech
+
+  TechProducer:
+    is_a: Actor
+    class_uri: tech:Producer
+    description: Actor that produces Technology
+    aliases:
+      - Producer
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Producer
+      - dpv_tech_owl:Producer
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Producer
+      dpv_extension_slug: tech
+
+  TechProvider:
+    is_a: Actor
+    class_uri: tech:Provider
+    description: Actor that provides Technology
+    aliases:
+      - Provider
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Provider
+      - dpv_tech_owl:Provider
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Provider
+      dpv_extension_slug: tech
+
+  TechService:
+    is_a: Technology
+    class_uri: tech:Service
+    description: The carrying out of a specific task or set of tasks as a service
+    aliases:
+      - Service
+    comments:
+      - |-
+        This concept is distinct from dpv:Service as it represents the notion of
+        a technical service whereas dpv:Service can also refer to
+        organisational, legal, social, and other meanings of service
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Service
+      - dpv_tech_owl:Service
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#Service
+      dpv_extension_slug: tech
+
+  TechSubject:
+    is_a: Actor
+    class_uri: tech:Subject
+    description: Actor that is subjected to the use or impact of Technology
+    aliases:
+      - Subject
+    comments:
+      - |-
+        Subject can be a human or non-human entity. To explicitly indicate that
+        the subject is a human, and to reuse DPV's human subject taxonomy, the
+        tech:Subject should also be defined as an instance or category of
+        dpv:HumanSubject
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:Subject
+      - dpv_tech_owl:Subject
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#Subject
+      dpv_extension_slug: tech
+
+  TechSystem:
+    is_a: Technology
+    class_uri: tech:System
+    description: |-
+      A collection of components that interact to achieve a specific goal or
+      function
+    aliases:
+      - System
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:System
+      - dpv_tech_owl:System
+    annotations:
+      upstream_iri: https://w3id.org/dpv/tech/owl#System
+      dpv_extension_slug: tech
+
+  TechUser:
+    is_a: TechCustomer
+    mixins:
+      - Actor
+    class_uri: tech:User
+    description: Actor that uses Technology
+    aliases:
+      - User
+    in_subset:
+      - tech_subset
+    exact_mappings:
+      - dpv_tech:User
+      - dpv_tech_owl:User
+    annotations:
+      dct_source: ISO/IEC 22989:2022
+      upstream_iri: https://w3id.org/dpv/tech/owl#User
       dpv_extension_slug: tech
 
   TechnologyReadinessLevel:
