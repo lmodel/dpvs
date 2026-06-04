@@ -429,20 +429,20 @@
 <pre class="mermaid"><code> classDiagram
     class PhysicalAddress
     click PhysicalAddress href "../PhysicalAddress/"
-      DpvLocation &lt;|-- PhysicalAddress
-        click DpvLocation href "../DpvLocation/"
+      PdLocation &lt;|-- PhysicalAddress
+        click PdLocation href "../PdLocation/"
       Contact &lt;|-- PhysicalAddress
         click Contact href "../Contact/"
 
 
       PhysicalAddress &lt;|-- City
         click City href "../City/"
-      PhysicalAddress &lt;|-- DpvRegion
-        click DpvRegion href "../DpvRegion/"
       PhysicalAddress &lt;|-- HouseNumber
         click HouseNumber href "../HouseNumber/"
       PhysicalAddress &lt;|-- Locality
         click Locality href "../Locality/"
+      PhysicalAddress &lt;|-- PdRegion
+        click PdRegion href "../PdRegion/"
       PhysicalAddress &lt;|-- PostalCode
         click PostalCode href "../PostalCode/"
       PhysicalAddress &lt;|-- RoomNumber
@@ -456,14 +456,14 @@
 <ul>
 <li><a href="../Tracking/">Tracking</a><ul>
 <li><a href="../Contact/">Contact</a><ul>
-<li><strong>PhysicalAddress</strong> [ <a href="../DpvLocation/">DpvLocation</a>]<ul>
-<li><a href="../City/">City</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
-<li><a href="../DpvRegion/">DpvRegion</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
-<li><a href="../HouseNumber/">HouseNumber</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
-<li><a href="../Locality/">Locality</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
-<li><a href="../PostalCode/">PostalCode</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
-<li><a href="../RoomNumber/">RoomNumber</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
-<li><a href="../Street/">Street</a> [ <a href="../DpvLocation/">DpvLocation</a>]</li>
+<li><strong>PhysicalAddress</strong> [ <a href="../PdLocation/">PdLocation</a>]<ul>
+<li><a href="../City/">City</a></li>
+<li><a href="../HouseNumber/">HouseNumber</a></li>
+<li><a href="../Locality/">Locality</a></li>
+<li><a href="../PdRegion/">PdRegion</a></li>
+<li><a href="../PostalCode/">PostalCode</a></li>
+<li><a href="../RoomNumber/">RoomNumber</a></li>
+<li><a href="../Street/">Street</a></li>
 </ul>
 </li>
 </ul>
@@ -589,7 +589,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso29100:PersonallyIdentifiableInformation</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Contact</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvLocation</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PdLocation</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pd:PhysicalAddress</span>
 </code></pre></div>
 </details>
@@ -616,7 +616,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iso29100:PersonallyIdentifiableInformation</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Contact</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvLocation</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PdLocation</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pd:PhysicalAddress</span>
 </code></pre></div>
 </details>

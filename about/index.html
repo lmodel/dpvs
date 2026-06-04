@@ -1199,39 +1199,38 @@ extension through <a href="https://github.com/lmodel/dpv/blob/main/scripts/strip
 </blockquote>
 <h4 id="per-extension-documentation">Per-extension documentation</h4>
 <p>The top-level 6 extensions (<code>ai</code>, <code>justifications</code>, <code>loc</code>, <code>pd</code>, <code>risk</code>, <code>tech</code>) are
-rendered as standalone documentation trees under <a href="https://github.com/lmodel/dpv/tree/main/docs/extensions">docs/extensions/</a>,
-grouped under a single <strong>Extensions</strong> entry in the site navigation. Each tree is
+rendered as standalone documentation trees under <a href="https://github.com/lmodel/dpv/tree/main/docs/extensions">docs/extensions/</a>, grouped under a single <strong>Extensions</strong> entry in the site navigation. Each tree is
 produced by an isolated <code>gen-doc</code> invocation against a self-contained staged copy of
 the extension schema.</p>
-<p>The staging step (<a href="https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py">scripts/strip_sibling_imports.py</a>)
-rewrites each extension so SchemaView can load it without sibling-schema context:</p>
+<p>The documentation staging step (<a href="https://github.com/lmodel/dpv/blob/main/scripts/strip_sibling_imports.py">scripts/strip_sibling_imports.py</a>) rewrites each extension so SchemaView can load it without sibling-schema context:</p>
 <ul>
-<li>Drops every <code>imports:</code> entry except <code>linkml:types</code> (avoids <code>Conflicting URIs</code> errors
+<li>
+<p>Drops every <code>imports:</code> entry except <code>linkml:types</code> (avoids <code>Conflicting URIs</code> errors
   caused by genuine cross-extension name collisions, e.g. <code>DataAggregationBias</code> in
-  both <code>ai</code> and <code>risk</code>, or <code>DpvData</code> in <code>ai</code> vs. <code>dpv_personal_data</code>).</li>
-<li>Drops dangling <code>is_a</code> parents and filters <code>mixins</code> lists to only those defined
-  locally, so the resulting schema validates standalone.</li>
+  both <code>ai</code> and <code>risk</code>, or <code>DpvData</code> in <code>ai</code> vs. <code>dpv_personal_data</code>).</p>
+</li>
+<li>
+<p>Drops dangling <code>is_a</code> parents and filters <code>mixins</code> lists to only those defined
+  locally, so the resulting schema validates standalone.</p>
+</li>
 </ul>
-<p>The orchestration recipe (<code>just gen-doc-extensions</code>) iterates
+<p>The document orchestration recipe (<code>just gen-doc-extensions</code>) iterates
 <code>src/dpv/schema/extensions/*.yaml</code>, stages each into <code>tmp/extensions/&lt;slug&gt;.yaml</code>,
 and runs <code>gen-doc</code> into <code>docs/extensions/&lt;slug&gt;/</code>. It is wired as a dependency of
 the top-level <code>just gen-doc</code>, so a single command produces both the core element
 pages (<code>docs/elements/</code>) and the per-extension trees. Per-jurisdiction <code>legal/</code>
 schemas and <code>sector/</code>, <code>standards/</code> trees are intentionally <strong>not</strong> rendered
 (they re-slice the same core terms and would multiply build time without adding
-distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/extensions/index.md">docs/extensions/index.md</a>
-landing page notes this and points readers to the source YAML.</p>
+distinct semantics); the <a href="https://github.com/lmodel/dpv/blob/main/docs/extensions/index.md">docs/extensions/index.md</a> landing page notes this and points readers to the source YAML.</p>
 <h3 id="open-world-modelling">Open-world modelling</h3>
 <p>DPV is intrinsically open-world: most properties are declared on the top-level <code>DpvThing</code> rather than pinned to a specific class, so any instance may carry any DPV property that makes sense for it. This is preserved in dpv:</p>
 <ul>
-<li>
-<p><code>DpvThing</code> is the abstract base and declares only <code>id</code>.</p>
-</li>
+<li><code>DpvThing</code> is the abstract base and declares only <code>id</code>.</li>
 <li>
 <p>DPV properties are domainless slots that can apply to any descendant.</p>
 </li>
 <li>
-<p>Validation is therefore done via <code>linkml.validator.Validator</code> against the merged schema (JSON-Schema semantics), <strong>not</strong> by instantiating  the generated closed-world dataclasses. The closed-world Pydantic classes are still emitted for use cases where a stricter contract is desired.</p>
+<p>Validation is therefore done via <code>linkml.validator.Validator</code> against the merged schema (JSON-Schema semantics), <strong>not</strong> by instantiating the generated closed-world dataclasses. The closed-world Pydantic classes are still emitted for use cases where a stricter contract is desired.</p>
 </li>
 </ul>
 <h3 id="mappings">Mappings</h3>
@@ -1353,6 +1352,7 @@ landing page notes this and points readers to the source YAML.</p>
 <ul>
 <li><a href="https://github.com/lmodel/dpv/tree/main/tests/data">tests/data/</a> contains hand-authored and vendored YAML fixtures split into <code>valid/</code> and <code>invalid/</code> subtrees. The <code>dpvcg/</code> subtree carries the upstream DPV CG examples converted to LinkML YAML by <a href="https://github.com/lmodel/dpv/blob/main/scripts/dpvcg_turtle_to_yaml.py">scripts/dpvcg_turtle_to_yaml.py</a>.</li>
 <li><a href="https://github.com/lmodel/dpv/blob/main/tests/test_data.py">tests/test_data.py</a> validates each fixture against the pre-merged schema at <code>tmp/dpv.yaml</code> using <code>linkml.validator.Validator</code> with <code>JsonschemaValidationPlugin</code> (explicit; the linkml <code>Validator</code> performs no validation at all when <code>validation_plugins</code> is omitted). The merged schema is used so no import-map is needed at test time.</li>
+<li><a href="https://github.com/lmodel/dpv/blob/main/tests/test_schema_imports.py">tests/test_schema_imports.py</a> is a regression test guarding against class/slot name collisions.</li>
 </ul>
 <h4 id="static-fixtures">Static fixtures</h4>
 <p>64 <a href="https://github.com/lmodel/dpv/tree/main/tests/data/valid">tests/data/valid/</a> exercises classes across core, extension, and legal modules.</p>

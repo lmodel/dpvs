@@ -429,10 +429,8 @@
 <pre class="mermaid"><code> classDiagram
     class BirthCountry
     click BirthCountry href "../BirthCountry/"
-      DpvLocation &lt;|-- BirthCountry
-        click DpvLocation href "../DpvLocation/"
-      DpvCountry &lt;|-- BirthCountry
-        click DpvCountry href "../DpvCountry/"
+      PdCountry &lt;|-- BirthCountry
+        click PdCountry href "../PdCountry/"
       BirthPlace &lt;|-- BirthCountry
         click BirthPlace href "../BirthPlace/"
 
@@ -440,9 +438,9 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Tracking/">Tracking</a><ul>
-<li><a href="../DpvLocation/">DpvLocation</a><ul>
+<li><a href="../PdLocation/">PdLocation</a><ul>
 <li><a href="../BirthPlace/">BirthPlace</a><ul>
-<li><strong>BirthCountry</strong> [ <a href="../DpvLocation/">DpvLocation</a> <a href="../DpvCountry/">DpvCountry</a>]</li>
+<li><strong>BirthCountry</strong> [ <a href="../PdCountry/">PdCountry</a>]</li>
 </ul>
 </li>
 </ul>
@@ -562,8 +560,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_pd_owl:BirthCountry</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BirthPlace</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvLocation</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvCountry</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PdCountry</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pd:BirthCountry</span>
 </code></pre></div>
 </details>
@@ -588,8 +585,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv_pd_owl:BirthCountry</span>
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BirthPlace</span>
 <span class="nt">mixins</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvLocation</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DpvCountry</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PdCountry</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pd:BirthCountry</span>
 </code></pre></div>
 </details>

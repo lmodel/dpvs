@@ -834,34 +834,6 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <td>Actor that distributes the Technology</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvCustomer/">DpvCustomer</a></td>
-<td>Actor that uses Technology directly or indirectly by providing it to</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvUser/">DpvUser</a></td>
-<td>Actor that uses Technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvOperator/">DpvOperator</a></td>
-<td>Actor that operates the Technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvProducer/">DpvProducer</a></td>
-<td>Actor that produces Technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Developer/">Developer</a></td>
-<td>Actor that develops Technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvProvider/">DpvProvider</a></td>
-<td>Actor that provides Technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvSubject/">DpvSubject</a></td>
-<td>Actor that is subjected to the use or impact of Technology</td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Importer/">Importer</a></td>
 <td>Actor that imports the Technology within a jurisdiction</td>
 </tr>
@@ -886,10 +858,6 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <td>Actor that provides services in the context of Technology</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvAuditor/">DpvAuditor</a></td>
-<td>Actor that audits Technology for conformance to policies, standards, or</td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Evaluator/">Evaluator</a></td>
 <td>Actor that evaluates the performance of Technology</td>
 </tr>
@@ -898,12 +866,44 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <td>Actor that integrates Technology in to (larger) systems</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechAuditor/">TechAuditor</a></td>
+<td>Actor that audits Technology for conformance to policies, standards, or</td>
+</tr>
+<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Purchaser/">Purchaser</a></td>
 <td>Actor that purchases Technology</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Supplier/">Supplier</a></td>
 <td>Actor that supplies Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechCustomer/">TechCustomer</a></td>
+<td>Actor that uses Technology directly or indirectly by providing it to</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechUser/">TechUser</a></td>
+<td>Actor that uses Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechOperator/">TechOperator</a></td>
+<td>Actor that operates the Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechProducer/">TechProducer</a></td>
+<td>Actor that produces Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Developer/">Developer</a></td>
+<td>Actor that develops Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechProvider/">TechProvider</a></td>
+<td>Actor that provides Technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechSubject/">TechSubject</a></td>
+<td>Actor that is subjected to the use or impact of Technology</td>
 </tr>
 <tr>
 <td><a href="Algorithm/">Algorithm</a></td>
@@ -1038,30 +1038,6 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <td>Documentation that specifies requirements that must be satisfied by the</td>
 </tr>
 <tr>
-<td><a href="DpvApplication/">DpvApplication</a></td>
-<td>Application or Application Software</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AppStore/">AppStore</a></td>
-<td>An application or platform for distribution of other applications</td>
-</tr>
-<tr>
-<td><a href="DpvComponent/">DpvComponent</a></td>
-<td>A self-contained part of a system that performs a specific function and</td>
-</tr>
-<tr>
-<td><a href="DpvFunction/">DpvFunction</a></td>
-<td>Expression of what goals or purposes the technology's capabilities are</td>
-</tr>
-<tr>
-<td><a href="DpvService/">DpvService</a></td>
-<td>The carrying out of a specific task or set of tasks as a service</td>
-</tr>
-<tr>
-<td><a href="DpvSystem/">DpvSystem</a></td>
-<td>A collection of components that interact to achieve a specific goal or</td>
-</tr>
-<tr>
 <td><a href="Hardware/">Hardware</a></td>
 <td>Physical parts or components of the technology</td>
 </tr>
@@ -1086,22 +1062,6 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <td>Forms of inputs and outputs associated with a technology</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvAction/">DpvAction</a></td>
-<td>A process or activity, which could be physical or virtual</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="InputAction/">InputAction</a></td>
-<td>Action provided as an input to a technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="OutputAction/">OutputAction</a></td>
-<td>Action produced as an output from a technology</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvDecision/">DpvDecision</a></td>
-<td>A conclusion or determination of an action or choice in the context of</td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Input/">Input</a></td>
 <td>Input to a technology</td>
 </tr>
@@ -1116,6 +1076,22 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Recommendation/">Recommendation</a></td>
 <td>A recommendation or suggestion of an action or decision or choice in the</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechAction/">TechAction</a></td>
+<td>A process or activity, which could be physical or virtual</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="InputAction/">InputAction</a></td>
+<td>Action provided as an input to a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="OutputAction/">OutputAction</a></td>
+<td>Action produced as an output from a technology</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechDecision/">TechDecision</a></td>
+<td>A conclusion or determination of an action or choice in the context of</td>
 </tr>
 <tr>
 <td><a href="IntendedUse/">IntendedUse</a></td>
@@ -1306,6 +1282,22 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <td>A software agent that represents a person (i</td>
 </tr>
 <tr>
+<td><a href="TechApplication/">TechApplication</a></td>
+<td>Application or Application Software</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AppStore/">AppStore</a></td>
+<td>An application or platform for distribution of other applications</td>
+</tr>
+<tr>
+<td><a href="TechComponent/">TechComponent</a></td>
+<td>A self-contained part of a system that performs a specific function and</td>
+</tr>
+<tr>
+<td><a href="TechFunction/">TechFunction</a></td>
+<td>Expression of what goals or purposes the technology's capabilities are</td>
+</tr>
+<tr>
 <td><a href="TechnologyStatus/">TechnologyStatus</a></td>
 <td>Status associated with development, deployment, and use of technology</td>
 </tr>
@@ -1336,6 +1328,14 @@ specialises (instead of the full umbrella <code>dpv:schema/dpv</code>).</p>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TechnologyReadinessLevel/">TechnologyReadinessLevel</a></td>
 <td>Indication of maturity of Technology (ISO 16290:2013)</td>
+</tr>
+<tr>
+<td><a href="TechService/">TechService</a></td>
+<td>The carrying out of a specific task or set of tasks as a service</td>
+</tr>
+<tr>
+<td><a href="TechSystem/">TechSystem</a></td>
+<td>A collection of components that interact to achieve a specific goal or</td>
 </tr>
 </tbody>
 </table>

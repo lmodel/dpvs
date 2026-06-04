@@ -801,9 +801,9 @@
 <h1 id="dpv-pd">DPV - Pd</h1>
 <p>LinkML schema generated from the DPV 2.3 extension <code>pd</code> (<code>pd-owl.ttl</code>),
 enriched with canonical SKOS metadata. Imports the semantic-group
-schema(s) <code>dpv:schema/dpv_personal_data</code> for the abstract parent classes
-this extension specialises (instead of the full umbrella
-<code>dpv:schema/dpv</code>).</p>
+schema(s) <code>dpv:schema/dpv_legal_basis</code>, <code>dpv:schema/dpv_personal_data</code>
+for the abstract parent classes this extension specialises (instead of
+the full umbrella <code>dpv:schema/dpv</code>).</p>
 <p>URI: <a href="https://w3id.org/lmodel/dpv/pd">https://w3id.org/lmodel/dpv/pd</a></p>
 <p>Name: dpv_pd</p>
 <h2 id="classes">Classes</h2>
@@ -1620,16 +1620,16 @@ this extension specialises (instead of the full umbrella
 <td>Information about city as a location</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvRegion/">DpvRegion</a></td>
-<td>Information about region as a location</td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="HouseNumber/">HouseNumber</a></td>
 <td>Information about house or apartment number as a location</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Locality/">Locality</a></td>
 <td>Information about locality e</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PdRegion/">PdRegion</a></td>
+<td>Information about region as a location</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PostalCode/">PostalCode</a></td>
@@ -1680,11 +1680,11 @@ this extension specialises (instead of the full umbrella
 <td>Information about a 'digital fingerprint' created for identification</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvIdentifier/">DpvIdentifier</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PdIdentifier/">PdIdentifier</a></td>
 <td>Information about an identifier or name used for identification</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvLocation/">DpvLocation</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PdLocation/">PdLocation</a></td>
 <td>Information about location</td>
 </tr>
 <tr>
@@ -1708,12 +1708,12 @@ this extension specialises (instead of the full umbrella
 <td>Information about domicile status e</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DpvCountry/">DpvCountry</a></td>
-<td>Information about country e</td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="HomeLocation/">HomeLocation</a></td>
 <td>Information about a person's home place, including their location,</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="PdCountry/">PdCountry</a></td>
+<td>Information about country e</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Residency/">Residency</a></td>
